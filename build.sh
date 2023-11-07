@@ -1,13 +1,16 @@
 #!/bin/bash
 
-# Download the Quarto binary
-wget -qO- "https://github.com/quarto-dev/quarto-cli/releases/download/v1.0.32/quarto-1.0.32-linux-amd64.deb" > quarto.deb
+# Specify the Quarto version
+QUARTO_VERSION="0.9.532"
 
-# Install Quarto without sudo
-dpkg -x quarto.deb $HOME
+# Download the Quarto tarball for Linux
+wget "https://github.com/quarto-dev/quarto-cli/releases/download/v$QUARTO_VERSION/quarto-$QUARTO_VERSION-linux-amd64.tar.gz"
 
-# Add Quarto to PATH
-export PATH=$HOME/usr/bin:$PATH
+# Extract the Quarto tarball
+tar -xzf "quarto-$QUARTO_VERSION-linux-amd64.tar.gz"
+
+# Add the Quarto bin directory to the PATH
+export PATH=$PWD/quarto-$QUARTO_VERSION/bin:$PATH
 
 # Verify Quarto installation
 quarto --version
