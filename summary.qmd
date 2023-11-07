@@ -2,7 +2,7 @@
 
 In summary, this book has no content whatsoever.
 
-Testing testing testing
+Testing testing testing testing
 
 ```{r}
 1 + 1
