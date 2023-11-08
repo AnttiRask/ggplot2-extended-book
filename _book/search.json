@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "ggplot2 extended",
     "section": "",
-    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2"
+    "text": "Welcome\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books."
   },
   {
     "objectID": "intro.html",
@@ -26,5 +26,26 @@
     "title": "References",
     "section": "",
     "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "preface.html",
+    "href": "preface.html",
+    "title": "Preface",
+    "section": "",
+    "text": "“The tidyverse is an opinionated collection of R packages designed for data science.” https://www.tidyverse.org/.\nThis book is an opinionated compendium of R packages that extend the original ggplot2 by Hadley Wickham. It doesn’t try to be complete as the ecosystem is both wide and deep. The aim instead is to celebrate the great community that is constantly creating fun and useful new ways to visualize data. And since we’re talking about data visualization, show what all is possible."
+  },
+  {
+    "objectID": "getting_started.html",
+    "href": "getting_started.html",
+    "title": "Getting Started",
+    "section": "",
+    "text": "ggplot2\nInstalling Packages"
+  },
+  {
+    "objectID": "maps.html",
+    "href": "maps.html",
+    "title": "ggplot2 extended",
+    "section": "",
+    "text": "Maps"
   }
 ]

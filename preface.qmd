@@ -1,0 +1,5 @@
+# Preface {.unnumbered}
+
+“The tidyverse is an opinionated collection of R packages designed for data science.” [https://www.tidyverse.org/](https://www.tidyverse.org/).
+
+This book is an opinionated compendium of R packages that extend the original ggplot2 by Hadley Wickham. It doesn’t try to be complete as the ecosystem is both wide and deep. The aim instead is to celebrate the great community that is constantly creating fun and useful new ways to visualize data. And since we’re talking about data visualization, show what all is possible.

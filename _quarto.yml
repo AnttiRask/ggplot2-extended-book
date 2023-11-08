@@ -7,8 +7,35 @@ book:
   date: "2023-11-07"
   chapters:
     - index.qmd
-    - intro.qmd
-    - summary.qmd
+    - preface.qmd
+    - getting_started.qmd
+    - ggplot2.qmd
+    - installing_packages.qmd
+    - layers.qmd
+    - data.qmd
+    - geoms.qmd
+    - stats.qmd
+    - annotations.qmd
+    - scales_and_guides.qmd
+    - coords.qmd
+    - facets.qmd
+    - themes.qmd
+    - special_cases.qmd
+    - maps.qmd
+    - networks.qmd
+    - interactive_plots.qmd
+    - animation.qmd
+    - shortcuts.qmd
+    - helpers.qmd
+    - interactive_tools.qmd
+    - getting_ready_to_publish.qmd
+    - finishing_touches.qmd
+    - arranging_plots.qmd
+    - beyond_r.qmd
+    - bi_tools.qmd
+    - large_language_models.qmd
+    - python.qmd
+    - case_studies.qmd
     - references.qmd
 
 bibliography: references.bib
