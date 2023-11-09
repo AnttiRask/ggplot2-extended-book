@@ -2,7 +2,7 @@
 
 This is the website for my book **ggplot2 extended**. As the name suggests, the book is about extending the already great functionality of the [ggplot2](https://ggplot2.tidyverse.org/) R package by **Hadley Wickham** with some of the most interesting extension packages that the great community has put together since the release of ggplot2.
 
-While I will go through the basics of how ggplot2 works in [Chapter 1](https://ggplot2-extended-book.com/ggplot2), this book is primarily meant to be read after you have some basic understanding about how ggplot2 works. For learning the basics, I would suggest Hadley's book **ggplot2: Elegant Graphics for Data Analysis** [@wickham2016]. The work-in-progress 3rd edition can be read [online](https://ggplot2-book.org/).
+While I will go through the basics of how ggplot2 works in @sec-ggplot2, this book is primarily meant to be read after you have some basic understanding about how ggplot2 works. For learning the basics, I would suggest Hadley's book **ggplot2: Elegant Graphics for Data Analysis** [@wickham2016]. The work-in-progress 3rd edition can be read [online](https://ggplot2-book.org/).
 
 But this book will teach you how to get the most out of ggplot2 and the ecosystem that has been built around it.
 
