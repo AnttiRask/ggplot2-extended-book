@@ -63,6 +63,8 @@ book:
         - python.qmd
         
     - part: case_studies.qmd
+    
+    - references.qmd
 
 bibliography: references.bib
 
