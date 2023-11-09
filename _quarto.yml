@@ -71,7 +71,7 @@ format:
     code-link: true
   
     author-meta: "Antti Rask"
-    include-in-header: "goathunter.html"
+    include-in-header: "goatcounter.html"
     callout-appearance: simple
 
 editor: visual
