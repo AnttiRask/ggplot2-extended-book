@@ -12,7 +12,7 @@ book:
     left: |
       ggplot2 extended was written by Antti Rask.
     right: |
-      This book was built with <a href="https://quarto.org/">Quarto</a>.
+      This book was built with <a href="https://quarto.org/">Quarto</a> and is hosted on <a href="https://www.netlify.com>Netlify</a>.
   cover-image: cover.jpg
   favicon: cover.jpg
   site-url: https://https://ggplot2-extended-book.com/
