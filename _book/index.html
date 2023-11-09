@@ -21,7 +21,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -316,6 +335,12 @@ ul.task-list li input[type="checkbox"] {
       <span class="sidebar-item-text sidebar-link text-start">
  <span class="menu-text">Case Studies</span></span>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -354,12 +379,17 @@ ul.task-list li input[type="checkbox"] {
 <section id="welcome" class="level1 unnumbered">
 <h1 class="unnumbered">Welcome</h1><p><img src="cover.jpg" title="ggplot2 extended" class="quarto-cover-image img-fluid"></p>
 <p>This is the website for my book <strong>ggplot2 extended</strong>. As the name suggests, the book is about extending the already great functionality of the <a href="https://ggplot2.tidyverse.org/">ggplot2</a> R package by <strong>Hadley Wickham</strong> with some of the most interesting extension packages that the great community has put together since the release of ggplot2.</p>
-<p>While I will go through the basics of how ggplot2 works in <a href="https://ggplot2-extended-book.com/ggplot2">Chapter 1</a>, this book is primarily meant to be read after you have some basic understanding about how ggplot2 works. For learning the basics, I would suggest Hadley’s book <a href="https://ggplot2-book.org/">ggplot2: Elegant Graphics for Data Analysis</a>. And of course, using ggplot2 in the wild.</p>
+<p>While I will go through the basics of how ggplot2 works in <a href="https://ggplot2-extended-book.com/ggplot2">Chapter 1</a>, this book is primarily meant to be read after you have some basic understanding about how ggplot2 works. For learning the basics, I would suggest Hadley’s book <strong>ggplot2: Elegant Graphics for Data Analysis</strong> <span class="citation" data-cites="wickham2016">(<a href="references.html#ref-wickham2016" role="doc-biblioref">Wickham 2016</a>)</span>. The work-in-progress 3rd edition can be read <a href="https://ggplot2-book.org/">online</a>.</p>
 <p>But this book will teach you how to get the most out of ggplot2 and the ecosystem that has been built around it.</p>
-<p>This website is and will always be free, licensed under the CC BY-NC-ND 4.0 DEED license. There will be a physical copy of the book, eventually. Stay tuned!</p>
+<p>This website is and will always be free, licensed under the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0 DEED license</a>. There will be a physical copy of the book, eventually. Stay tuned!</p>
 <p>Please note that ggplot2 extended uses a <a href="https://www.contributor-covenant.org/version/2/1/code_of_conduct/">Contributor Code of Conduct</a>. By contributing to this book, you agree to abide by its terms.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-wickham2016" class="csl-entry" role="listitem">
+Wickham, Hadley. 2016. <em>Ggplot2: Elegant Graphics for Data Analysis</em>. 2nd ed. Springer.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

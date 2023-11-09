@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "ggplot2 extended",
     "section": "",
-    "text": "Welcome\nThis is the website for my book ggplot2 extended. As the name suggests, the book is about extending the already great functionality of the ggplot2 R package by Hadley Wickham with some of the most interesting extension packages that the great community has put together since the release of ggplot2.\nWhile I will go through the basics of how ggplot2 works in Chapter 1, this book is primarily meant to be read after you have some basic understanding about how ggplot2 works. For learning the basics, I would suggest Hadley’s book ggplot2: Elegant Graphics for Data Analysis. And of course, using ggplot2 in the wild.\nBut this book will teach you how to get the most out of ggplot2 and the ecosystem that has been built around it.\nThis website is and will always be free, licensed under the CC BY-NC-ND 4.0 DEED license. There will be a physical copy of the book, eventually. Stay tuned!\nPlease note that ggplot2 extended uses a Contributor Code of Conduct. By contributing to this book, you agree to abide by its terms."
+    "text": "Welcome\nThis is the website for my book ggplot2 extended. As the name suggests, the book is about extending the already great functionality of the ggplot2 R package by Hadley Wickham with some of the most interesting extension packages that the great community has put together since the release of ggplot2.\nWhile I will go through the basics of how ggplot2 works in Chapter 1, this book is primarily meant to be read after you have some basic understanding about how ggplot2 works. For learning the basics, I would suggest Hadley’s book ggplot2: Elegant Graphics for Data Analysis (Wickham 2016). The work-in-progress 3rd edition can be read online.\nBut this book will teach you how to get the most out of ggplot2 and the ecosystem that has been built around it.\nThis website is and will always be free, licensed under the CC BY-NC-ND 4.0 DEED license. There will be a physical copy of the book, eventually. Stay tuned!\nPlease note that ggplot2 extended uses a Contributor Code of Conduct. By contributing to this book, you agree to abide by its terms.\n\n\n\n\nWickham, Hadley. 2016. Ggplot2: Elegant Graphics for Data Analysis. 2nd ed. Springer."
   },
   {
     "objectID": "intro.html",
@@ -25,7 +25,7 @@
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "Wickham, Hadley. 2016. Ggplot2: Elegant Graphics for Data\nAnalysis. 2nd ed. Springer."
   },
   {
     "objectID": "preface.html",
@@ -39,12 +39,12 @@
     "href": "getting_started.html",
     "title": "Getting Started",
     "section": "",
-    "text": "ggplot2\nInstalling Packages"
+    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
   },
   {
     "objectID": "maps.html",
     "href": "maps.html",
-    "title": "\n11  Maps\n",
+    "title": "11  Maps",
     "section": "",
     "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
   },
@@ -58,56 +58,56 @@
   {
     "objectID": "data.html",
     "href": "data.html",
-    "title": "\n3  Data\n",
+    "title": "3  Data",
     "section": "",
     "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
   },
   {
     "objectID": "geoms.html",
     "href": "geoms.html",
-    "title": "\n4  Geoms\n",
+    "title": "4  Geoms",
     "section": "",
     "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
   },
   {
     "objectID": "stats.html",
     "href": "stats.html",
-    "title": "\n5  Stats\n",
+    "title": "5  Stats",
     "section": "",
     "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
   },
   {
     "objectID": "annotations.html",
     "href": "annotations.html",
-    "title": "\n6  Annotations\n",
+    "title": "6  Annotations",
     "section": "",
     "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
   },
   {
     "objectID": "scales_and_guides.html",
     "href": "scales_and_guides.html",
-    "title": "\n7  Scales and Guides\n",
+    "title": "7  Scales and Guides",
     "section": "",
     "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
   },
   {
     "objectID": "coords.html",
     "href": "coords.html",
-    "title": "\n8  Coords\n",
+    "title": "8  Coords",
     "section": "",
     "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
   },
   {
     "objectID": "facets.html",
     "href": "facets.html",
-    "title": "\n9  Facets\n",
+    "title": "9  Facets",
     "section": "",
     "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
   },
   {
     "objectID": "themes.html",
     "href": "themes.html",
-    "title": "\n10  Themes\n",
+    "title": "10  Themes",
     "section": "",
     "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
   },
@@ -121,21 +121,21 @@
   {
     "objectID": "networks.html",
     "href": "networks.html",
-    "title": "\n12  Networks\n",
+    "title": "12  Networks",
     "section": "",
     "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
   },
   {
     "objectID": "interactive_plots.html",
     "href": "interactive_plots.html",
-    "title": "\n13  Interactive Plots\n",
+    "title": "13  Interactive Plots",
     "section": "",
     "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
   },
   {
     "objectID": "animation.html",
     "href": "animation.html",
-    "title": "\n14  Animation\n",
+    "title": "14  Animation",
     "section": "",
     "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
   },
@@ -149,14 +149,14 @@
   {
     "objectID": "helpers.html",
     "href": "helpers.html",
-    "title": "\n15  Helpers\n",
+    "title": "15  Helpers",
     "section": "",
     "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
   },
   {
     "objectID": "interactive_tools.html",
     "href": "interactive_tools.html",
-    "title": "\n16  Interactive Tools\n",
+    "title": "16  Interactive Tools",
     "section": "",
     "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
   },
@@ -170,14 +170,14 @@
   {
     "objectID": "finishing_touches.html",
     "href": "finishing_touches.html",
-    "title": "\n17  Finishing Touches\n",
+    "title": "17  Finishing Touches",
     "section": "",
     "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
   },
   {
     "objectID": "arranging_plots.html",
     "href": "arranging_plots.html",
-    "title": "\n18  Arranging Plots\n",
+    "title": "18  Arranging Plots",
     "section": "",
     "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
   },
@@ -191,21 +191,21 @@
   {
     "objectID": "bi_tools.html",
     "href": "bi_tools.html",
-    "title": "\n19  BI Tools\n",
+    "title": "19  BI Tools",
     "section": "",
     "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
   },
   {
     "objectID": "large_language_models.html",
     "href": "large_language_models.html",
-    "title": "\n20  Large Language Models\n",
+    "title": "20  Large Language Models",
     "section": "",
     "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
   },
   {
     "objectID": "python.html",
     "href": "python.html",
-    "title": "\n21  Python\n",
+    "title": "21  Python",
     "section": "",
     "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
   },
@@ -213,6 +213,20 @@
     "objectID": "case_studies.html",
     "href": "case_studies.html",
     "title": "Case Studies",
+    "section": "",
+    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
+  },
+  {
+    "objectID": "ggplot2.html",
+    "href": "ggplot2.html",
+    "title": "1  ggplot2",
+    "section": "",
+    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
+  },
+  {
+    "objectID": "installing_packages.html",
+    "href": "installing_packages.html",
+    "title": "2  Installing Packages",
     "section": "",
     "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
   }
