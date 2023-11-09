@@ -1,12 +1,5 @@
 # Welcome {.unnumbered}
 
-```{r}
-#| echo: false
-#| message: false
-#| results: asis
-source("warning.R")
-```
-
 This is the website for my book **ggplot2 extended**. As the name suggests, the book is about extending the already great functionality of the [ggplot2](https://ggplot2.tidyverse.org/) R package by **Hadley Wickham** with some
 of the most interesting extension packages that the great community has put together since the release of ggplot2.
 

@@ -1,4 +1,8 @@
 # Getting Started {.unnumbered}
 
-* ggplot2
-* Installing Packages
+```{r}
+#| echo: false
+#| message: false
+#| results: asis
+source("warning.R")
+```

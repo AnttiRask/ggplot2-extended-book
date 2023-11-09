@@ -1,1 +1,8 @@
 # Annotations
+
+```{r}
+#| echo: false
+#| message: false
+#| results: asis
+source("warning.R")
+```

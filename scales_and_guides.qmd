@@ -1,1 +1,8 @@
 # Scales and Guides
+
+```{r}
+#| echo: false
+#| message: false
+#| results: asis
+source("warning.R")
+```

@@ -1,1 +1,8 @@
 # Getting Ready to Publish {.unnumbered}
+
+```{r}
+#| echo: false
+#| message: false
+#| results: asis
+source("warning.R")
+```

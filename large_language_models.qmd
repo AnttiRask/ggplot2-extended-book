@@ -1,1 +1,8 @@
 # Large Language Models
+
+```{r}
+#| echo: false
+#| message: false
+#| results: asis
+source("warning.R")
+```
