@@ -21,7 +21,6 @@ book:
   repo-actions: [edit, issue]
   chapters:
     - index.qmd
-
     - preface.qmd
 
     - part: getting_started.qmd
