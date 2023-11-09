@@ -67,7 +67,9 @@ bibliography: references.bib
 
 format:
   html:
-    theme: cosmo
+    theme: 
+      - cosmo
+      - g2e.scss
     code-link: true
   
     author-meta: "Antti Rask"
