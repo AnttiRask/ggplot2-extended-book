@@ -1,50 +1,77 @@
 project:
   type: book
+  output-dir: _book
+
+engine: knitr
 
 book:
   title: "ggplot2 extended"
-  author: "Antti Rask"
-  date: "2023-11-07"
+  reader-mode: true
+  
+  page-footer:
+    left: |
+      ggplot2 extended was written by Antti Rask.
+    right: |
+      This book was built with <a href="https://quarto.org/">Quarto</a>.
+  cover-image: cover.jpg
+  favicon: cover.jpg
+  site-url: https://https://ggplot2-extended-book.com/
+  repo-url: https://github.com/AnttiRask/ggplot2-extended-book/
+  repo-branch: main
+  repo-actions: [edit, issue]
   chapters:
     - index.qmd
+    
     - preface.qmd
-    - getting_started.qmd
-    - ggplot2.qmd
-    - installing_packages.qmd
-    - layers.qmd
-    - data.qmd
-    - geoms.qmd
-    - stats.qmd
-    - annotations.qmd
-    - scales_and_guides.qmd
-    - coords.qmd
-    - facets.qmd
-    - themes.qmd
-    - special_cases.qmd
-    - maps.qmd
-    - networks.qmd
-    - interactive_plots.qmd
-    - animation.qmd
-    - shortcuts.qmd
-    - helpers.qmd
-    - interactive_tools.qmd
-    - getting_ready_to_publish.qmd
-    - finishing_touches.qmd
-    - arranging_plots.qmd
-    - beyond_r.qmd
-    - bi_tools.qmd
-    - large_language_models.qmd
-    - python.qmd
-    - case_studies.qmd
-    - references.qmd
+    
+    - part: getting_started.qmd
+      chapters:
+        - ggplot2.qmd
+        - installing_packages.qmd
+    
+    - part: layers.qmd
+      chapters:
+        - data.qmd
+        - geoms.qmd
+        - stats.qmd
+        - annotations.qmd
+        - scales_and_guides.qmd
+        - coords.qmd
+        - facets.qmd
+        - themes.qmd
+        
+    - part: special_cases.qmd
+      chapters:
+        - maps.qmd
+        - networks.qmd
+        - interactive_plots.qmd
+        - animation.qmd
+    
+    - part: shortcuts.qmd
+      chapters:
+        - helpers.qmd
+        - interactive_tools.qmd
+    
+    - part: getting_ready_to_publish.qmd
+      chapters:
+        - finishing_touches.qmd
+        - arranging_plots.qmd
+    - part: beyond_r.qmd
+        - bi_tools.qmd
+        - large_language_models.qmd
+        - python.qmd
+        
+    - part: case_studies.qmd
 
 bibliography: references.bib
 
 format:
   html:
     theme: cosmo
-  pdf:
-    documentclass: scrreprt
+    code-link: true
+  
+    author-meta: "Antti Rask"
+    include-in-header: "goathunter.html"
+    callout-appearance: simple
 
 editor: visual
-
