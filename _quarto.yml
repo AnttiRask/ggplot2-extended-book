@@ -21,14 +21,14 @@ book:
   repo-actions: [edit, issue]
   chapters:
     - index.qmd
-    
+
     - preface.qmd
-    
+
     - part: getting_started.qmd
       chapters:
         - ggplot2.qmd
         - installing_packages.qmd
-    
+
     - part: layers.qmd
       chapters:
         - data.qmd
@@ -39,24 +39,26 @@ book:
         - coords.qmd
         - facets.qmd
         - themes.qmd
-        
+
     - part: special_cases.qmd
       chapters:
         - maps.qmd
         - networks.qmd
         - interactive_plots.qmd
         - animation.qmd
-    
+
     - part: shortcuts.qmd
       chapters:
         - helpers.qmd
         - interactive_tools.qmd
-    
+
     - part: getting_ready_to_publish.qmd
       chapters:
         - finishing_touches.qmd
         - arranging_plots.qmd
+
     - part: beyond_r.qmd
+      chapters:
         - bi_tools.qmd
         - large_language_models.qmd
         - python.qmd
