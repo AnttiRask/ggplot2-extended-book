@@ -1,4 +1,4 @@
-# Interactive Tools
+# Interactive Tools {#sec-interactive-tools}
 
 ```{r}
 #| echo: false

@@ -1,4 +1,4 @@
-# Shortcuts {.unnumbered}
+# Shortcuts {#sec-shortcuts-intro .unnumbered}
 
 ```{r}
 #| echo: false

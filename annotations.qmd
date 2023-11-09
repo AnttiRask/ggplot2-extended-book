@@ -1,4 +1,4 @@
-# Annotations
+# Annotations {#sec-annotations}
 
 ```{r}
 #| echo: false

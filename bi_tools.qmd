@@ -1,4 +1,4 @@
-# BI Tools
+# BI Tools {#sec-bi-tools}
 
 ```{r}
 #| echo: false

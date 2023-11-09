@@ -1,4 +1,4 @@
-# Maps
+# Maps {#sec-maps}
 
 ```{r}
 #| echo: false

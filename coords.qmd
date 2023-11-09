@@ -1,4 +1,4 @@
-# Coords
+# Coords {#sec-coords}
 
 ```{r}
 #| echo: false

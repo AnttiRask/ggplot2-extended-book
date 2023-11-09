@@ -1,4 +1,4 @@
-# Arranging Plots
+# Arranging Plots {#sec-arranging-plots}
 
 ```{r}
 #| echo: false

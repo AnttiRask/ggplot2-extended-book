@@ -1,4 +1,4 @@
-# Facets
+# Facets {#sec-facets}
 
 ```{r}
 #| echo: false

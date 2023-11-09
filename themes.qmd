@@ -1,4 +1,4 @@
-# Themes
+# Themes {#sec-themes}
 
 ```{r}
 #| echo: false

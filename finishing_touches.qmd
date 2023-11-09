@@ -1,4 +1,4 @@
-# Finishing Touches
+# Finishing Touches {#sec-finishing-touches}
 
 ```{r}
 #| echo: false

@@ -1,4 +1,4 @@
-# Geoms
+# Geoms {#sec-geoms}
 
 ```{r}
 #| echo: false

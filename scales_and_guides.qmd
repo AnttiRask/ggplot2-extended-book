@@ -1,4 +1,4 @@
-# Scales and Guides
+# Scales and Guides {#sec-scales-and-guides}
 
 ```{r}
 #| echo: false

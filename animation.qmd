@@ -1,4 +1,4 @@
-# Animation
+# Animation {#sec-animation}
 
 ```{r}
 #| echo: false

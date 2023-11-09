@@ -1,4 +1,4 @@
-# Special Cases {.unnumbered}
+# Special Cases {#sec-special-cases-intro .unnumbered}
 
 ```{r}
 #| echo: false

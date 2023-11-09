@@ -1,4 +1,4 @@
-# Getting Started {.unnumbered}
+# Getting Started {#sec-getting-started-intro .unnumbered}
 
 ```{r}
 #| echo: false

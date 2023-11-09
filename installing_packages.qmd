@@ -1,4 +1,4 @@
-# Installing Packages
+# Installing Packages {#sec-installing-packages}
 
 ```{r}
 #| echo: false

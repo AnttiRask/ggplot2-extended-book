@@ -1,4 +1,4 @@
-# Layers {.unnumbered}
+# Layers {#sec-layers-intro .unnumbered}
 
 ```{r}
 #| echo: false
