@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "ggplot2 extended",
     "section": "",
-    "text": "Welcome\nThis is the website for my book ggplot2 extended. As the name suggests, the book is about extending the already great functionality of the ggplot2 R package by Hadley Wickham with some of the most interesting extension packages that the great community has put together since the release of ggplot2.\nWhile I will go through the basics of how ggplot2 works in Chapter 1, this book is primarily meant to be read after you have some basic understanding about how ggplot2 works. For learning the basics, I would suggest Hadley’s book ggplot2: Elegant Graphics for Data Analysis (Wickham 2016). The work-in-progress 3rd edition can be read online.\nBut this book will teach you how to get the most out of ggplot2 and the ecosystem that has been built around it.\nThis website is and will always be free, licensed under the CC BY-NC-ND 4.0 DEED license. There will be a physical copy of the book, eventually. Stay tuned!\nPlease note that ggplot2 extended uses a Contributor Code of Conduct. By contributing to this book, you agree to abide by its terms.\n\n\n\n\nWickham, Hadley. 2016. Ggplot2: Elegant Graphics for Data Analysis. 2nd ed. Springer."
+    "text": "Welcome\nThis is the website for my book ggplot2 extended. It is about extending the functionality of the ggplot2 R package by Hadley Wickham. There are many extension packages that have come out since the release of ggplot2. This book is about the best most useful out of them.\nI will go through the basics of how ggplot2 works in Chapter 1. However, this book is primarily for you if you have some basic understanding of how ggplot2 works. I would suggest you first read Hadley’s book ggplot2: Elegant Graphics for Data Analysis (Wickham 2016). The work-in-progress 3rd edition is online.\nR for Data Science (Wickham, Çetinkaya-Rundel, and Grolemund 2023) also has three chapters that will get you started.\nThis book will then teach you how to get the most out of ggplot2 and the ecosystem around it.\nThis website is and will always be free, licensed under the CC BY-NC-ND 4.0 DEED license. There will be a physical copy of the book, eventually. Stay tuned!\nPlease note that ggplot2 extended uses a Contributor Code of Conduct. By contributing to this book, you agree to abide by its terms.\nThis book is written by Antti Rask.\n\n\n\n\nWickham, Hadley. 2016. Ggplot2: Elegant Graphics for Data Analysis. 2nd ed. Springer.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023. R for Data Science: Import, Tidy, Transform, Visualize, and Model Data. 2nd ed. O’Reilly."
   },
   {
     "objectID": "intro.html",
@@ -32,7 +32,7 @@
     "href": "preface.html",
     "title": "Preface",
     "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title\n\n\n“The tidyverse is an opinionated collection of R packages designed for data science.” https://www.tidyverse.org/.\nThis book is an opinionated compendium of R packages that extend the original ggplot2 by Hadley Wickham. It doesn’t try to be complete as the ecosystem is both wide and deep. The aim instead is to celebrate the great community that is constantly creating fun and useful new ways to visualize data. And since we’re talking about data visualization, show what all is possible."
+    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title\n\n\n“The tidyverse is an opinionated collection of R packages designed for data science.” https://www.tidyverse.org/.\nThis book is an opinionated compendium of R packages that extend ggplot2 (part of the tidyverse). It doesn’t try to be complete as the ecosystem is both wide and deep. The aim is to celebrate the great community that is creating fun and useful new ways to visualize data. And since we’re talking about data visualization, show what all is possible.\nThe book is about ggplot2 extension packages. But it has been important to me that I design the structure and contents concept(s) first, and package(s) second."
   },
   {
     "objectID": "getting_started.html",
@@ -227,6 +227,13 @@
     "objectID": "installing_packages.html",
     "href": "installing_packages.html",
     "title": "2  Installing Packages",
+    "section": "",
+    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
+  },
+  {
+    "objectID": "introduction.html",
+    "href": "introduction.html",
+    "title": "Introduction",
     "section": "",
     "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
   }
