@@ -22,6 +22,7 @@ book:
   chapters:
     - index.qmd
     - preface.qmd
+    - introduction.qmd
 
     - part: getting_started.qmd
       chapters:
