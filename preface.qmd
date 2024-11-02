@@ -7,7 +7,8 @@
 source("warning.R")
 ```
 
-"The tidyverse is an opinionated collection of R packages designed for data science." <https://www.tidyverse.org/>.
+"The tidyverse is an opinionated collection of R packages designed for data science." 
+<https://www.tidyverse.org/>
 
 This book is an opinionated compendium of R packages that extend ggplot2 (part of the tidyverse). It doesn’t try to be complete as the ecosystem is both wide and deep. The aim is to celebrate the great community that is creating fun and useful new ways to visualize data. And since we’re talking about data visualization, show what all is possible.
 

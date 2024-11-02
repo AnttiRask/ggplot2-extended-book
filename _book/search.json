@@ -32,7 +32,10 @@
     "href": "preface.html",
     "title": "Preface",
     "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title\n\n\n“The tidyverse is an opinionated collection of R packages designed for data science.” https://www.tidyverse.org/.\nThis book is an opinionated compendium of R packages that extend ggplot2 (part of the tidyverse). It doesn’t try to be complete as the ecosystem is both wide and deep. The aim is to celebrate the great community that is creating fun and useful new ways to visualize data. And since we’re talking about data visualization, show what all is possible.\nThe book is about ggplot2 extension packages. But it has been important to me that I design the structure and contents concept(s) first, and package(s) second."
+    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title\n\n\n“The tidyverse is an opinionated collection of R packages designed for data science.” https://www.tidyverse.org/\nThis book is an opinionated compendium of R packages that extend ggplot2 (part of the tidyverse). It doesn’t try to be complete as the ecosystem is both wide and deep. The aim is to celebrate the great community that is creating fun and useful new ways to visualize data. And since we’re talking about data visualization, show what all is possible.\nThe book is about ggplot2 extension packages. But it has been important to me that I design the structure and contents concept(s) first, and package(s) second.",
+    "crumbs": [
+      "Preface"
+    ]
   },
   {
     "objectID": "getting_started.html",
