@@ -25,7 +25,10 @@
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Wickham, Hadley. 2016. Ggplot2: Elegant Graphics for Data\nAnalysis. 2nd ed. Springer."
+    "text": "Wickham, Hadley. 2016. Ggplot2: Elegant Graphics for Data\nAnalysis. 2nd ed. Springer.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023.\nR for Data Science: Import, Tidy, Transform, Visualize, and Model\nData. 2nd ed. O’Reilly.",
+    "crumbs": [
+      "References"
+    ]
   },
   {
     "objectID": "preface.html",
