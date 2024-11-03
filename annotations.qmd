@@ -6,3 +6,39 @@
 #| results: asis
 source("warning.R")
 ```
+
+## Add P-Values
+
+## Annotate Areas with…
+
+### Circles
+
+### Ellipses
+
+### Hulls
+
+### Rectangles
+
+## Curved Text Labeling
+
+## Direct Labeling
+
+## Fitted-Model-Based Annotations
+
+## Highlight Geoms
+
+## Highlighting Points
+
+## Inset Plots
+
+## Inset Tables
+
+## Repel Overlapping Text & Labels
+
+### Label
+
+### Text
+
+## Shadow Text
+
+## Significance Brackets

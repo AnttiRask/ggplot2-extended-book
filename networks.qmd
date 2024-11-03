@@ -6,3 +6,15 @@
 #| results: asis
 source("warning.R")
 ```
+
+## Alluvial Plot
+
+## Flowchart
+
+## Networks
+
+## Sankey Diagram
+
+### Sankey Diagram
+
+### Sankey Bump Plot

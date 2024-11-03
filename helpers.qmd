@@ -6,3 +6,9 @@
 #| results: asis
 source("warning.R")
 ```
+
+## Combining Layers
+
+## Debugging ggplot2 Internals
+
+## I'm Feeling Lucky!

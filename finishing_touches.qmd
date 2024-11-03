@@ -6,3 +6,15 @@
 #| results: asis
 source("warning.R")
 ```
+
+## Blending, Copying, Adjusting, and Compositing Layers
+
+## Color Manipulation
+
+## Magnified Inset
+
+## Point Shapes (Improved)
+
+## Save Incremental Builds of Plots
+
+## Shadow Effect

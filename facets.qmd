@@ -6,3 +6,21 @@
 #| results: asis
 source("warning.R")
 ```
+
+## Facet by Different Data Columns
+
+## Facet Calendar
+
+## Facet Data for Zoom with Context
+
+## Facet Wrap (Improved)
+
+## Manual Facets
+
+## Nested Facets
+
+## One-Dimensional Facets
+
+## Ragged Grids
+
+## Split a Facetted Plot Over Multiple Pages

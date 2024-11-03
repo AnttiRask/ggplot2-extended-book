@@ -6,3 +6,15 @@
 #| results: asis
 source("warning.R")
 ```
+
+## Data Sets
+
+### RDatasets
+
+## EDA
+
+### Pairwise Plot Matrix
+
+### Correlation Matrix
+
+### Automated EDA App

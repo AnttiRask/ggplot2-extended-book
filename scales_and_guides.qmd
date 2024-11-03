@@ -6,3 +6,23 @@
 #| results: asis
 source("warning.R")
 ```
+
+## Color Scales
+
+### paletteer
+
+### see
+
+### R Color Palette Finder
+
+## Color Blindness
+
+### Color Vision Deficiency Simulator
+
+## Cyclical Scales
+
+## Focus Scales
+
+## Multiple Scales
+
+## Wrap Plot

@@ -6,3 +6,19 @@
 #| results: asis
 source("warning.R")
 ```
+
+## 3D Maps
+
+## Geofaceting
+
+## North Symbols and Scale Bars
+
+## Parliament Plot
+
+## Stamen Maps
+
+## Tidy Map
+
+## Zoomed Inset Panels
+
+## Interactive Maps

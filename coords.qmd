@@ -6,3 +6,7 @@
 #| results: asis
 source("warning.R")
 ```
+
+## Capping Axis Lines
+
+## Serial Axes Coordinates

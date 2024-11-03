@@ -6,3 +6,61 @@
 #| results: asis
 source("warning.R")
 ```
+
+## Combining Data Visualization and Statistical Modeling
+
+## Convex Hull
+
+## Inferential Statistical Tests
+
+### F-test
+
+### Pearson's Chi-Squared Test
+
+### Test for Association Between Paired Samples
+
+### Test of Equal or Given Proportions
+
+### T-test
+
+## Interaction Plot
+
+### CGPfunctions
+
+## Linear Regression
+
+### Diagnostic Plots
+
+### Regression Line Equation and R-Square
+
+## Lorenz Curve
+
+## Markov Chain Monte Carlo
+
+## Multi-Stat Binning Layer
+
+## Overlay Normal Density Plot
+
+## P-Values
+
+## P-P Plot
+
+## Q-Q Plot
+
+## Quality Control Chart
+
+## Proportions According to Custom Denominator
+
+## Random Forests
+
+## ROC Curves
+
+## Sample Data and Distribution Vectors
+
+## Seasonal Adjustment
+
+## Statistics for Reporting the Results of Model Fits
+
+## Survival Analysis
+
+## Tornado Plot

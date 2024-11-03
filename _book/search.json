@@ -49,7 +49,11 @@
     "href": "maps.html",
     "title": "11  Maps",
     "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
+    "text": "11.1 3D Maps",
+    "crumbs": [
+      "Special Cases",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Maps</span>"
+    ]
   },
   {
     "objectID": "layers.html",
@@ -63,56 +67,88 @@
     "href": "data.html",
     "title": "3  Data",
     "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
+    "text": "3.1 Data Sets",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data</span>"
+    ]
   },
   {
     "objectID": "geoms.html",
     "href": "geoms.html",
     "title": "4  Geoms",
     "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
+    "text": "4.1 Area Plots",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Geoms</span>"
+    ]
   },
   {
     "objectID": "stats.html",
     "href": "stats.html",
     "title": "5  Stats",
     "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
+    "text": "5.1 Combining Data Visualization and Statistical Modeling",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stats</span>"
+    ]
   },
   {
     "objectID": "annotations.html",
     "href": "annotations.html",
     "title": "6  Annotations",
     "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
+    "text": "6.1 Add P-Values",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Annotations</span>"
+    ]
   },
   {
     "objectID": "scales_and_guides.html",
     "href": "scales_and_guides.html",
     "title": "7  Scales and Guides",
     "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
+    "text": "7.1 Color Scales",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Scales and Guides</span>"
+    ]
   },
   {
     "objectID": "coords.html",
     "href": "coords.html",
     "title": "8  Coords",
     "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
+    "text": "8.1 Capping Axis Lines",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Coords</span>"
+    ]
   },
   {
     "objectID": "facets.html",
     "href": "facets.html",
     "title": "9  Facets",
     "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
+    "text": "9.1 Facet by Different Data Columns",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Facets</span>"
+    ]
   },
   {
     "objectID": "themes.html",
     "href": "themes.html",
     "title": "10  Themes",
     "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
+    "text": "10.1 Complete Themes",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Themes</span>"
+    ]
   },
   {
     "objectID": "special_cases.html",
@@ -126,42 +162,65 @@
     "href": "networks.html",
     "title": "12  Networks",
     "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
+    "text": "12.1 Alluvial Plot",
+    "crumbs": [
+      "Special Cases",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Networks</span>"
+    ]
   },
   {
     "objectID": "interactive_plots.html",
     "href": "interactive_plots.html",
     "title": "13  Interactive Plots",
     "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
+    "text": "13.1 ggiraph",
+    "crumbs": [
+      "Special Cases",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Interactive Plots</span>"
+    ]
   },
   {
     "objectID": "animation.html",
     "href": "animation.html",
     "title": "14  Animation",
     "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
+    "text": "14.1 Animation",
+    "crumbs": [
+      "Special Cases",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Animation</span>"
+    ]
   },
   {
     "objectID": "shortcuts.html",
     "href": "shortcuts.html",
     "title": "Shortcuts",
     "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
+    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title",
+    "crumbs": [
+      "Shortcuts"
+    ]
   },
   {
     "objectID": "helpers.html",
     "href": "helpers.html",
     "title": "15  Helpers",
     "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
+    "text": "15.1 Combining Layers",
+    "crumbs": [
+      "Shortcuts",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Helpers</span>"
+    ]
   },
   {
     "objectID": "interactive_tools.html",
     "href": "interactive_tools.html",
     "title": "16  Interactive Tools",
     "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
+    "text": "16.1 Interactive Interface to Plot Data and Perform Statistical Tests",
+    "crumbs": [
+      "Shortcuts",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Interactive Tools</span>"
+    ]
   },
   {
     "objectID": "getting_ready_to_publish.html",
@@ -175,14 +234,22 @@
     "href": "finishing_touches.html",
     "title": "17  Finishing Touches",
     "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
+    "text": "17.1 Blending, Copying, Adjusting, and Compositing Layers",
+    "crumbs": [
+      "Getting Ready to Publish",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Finishing Touches</span>"
+    ]
   },
   {
     "objectID": "arranging_plots.html",
     "href": "arranging_plots.html",
     "title": "18  Arranging Plots",
     "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
+    "text": "18.1 Arranging Multiple Plots",
+    "crumbs": [
+      "Getting Ready to Publish",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Arranging Plots</span>"
+    ]
   },
   {
     "objectID": "beyond_r.html",
@@ -196,21 +263,33 @@
     "href": "bi_tools.html",
     "title": "19  BI Tools",
     "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
+    "text": "19.1 Power BI",
+    "crumbs": [
+      "Beyond R",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>BI Tools</span>"
+    ]
   },
   {
     "objectID": "large_language_models.html",
     "href": "large_language_models.html",
     "title": "20  Large Language Models",
     "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
+    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title",
+    "crumbs": [
+      "Beyond R",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Large Language Models</span>"
+    ]
   },
   {
     "objectID": "python.html",
     "href": "python.html",
     "title": "21  Python",
     "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
+    "text": "21.1 ggplot2’s Descendants",
+    "crumbs": [
+      "Beyond R",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Python</span>"
+    ]
   },
   {
     "objectID": "case_studies.html",
@@ -239,5 +318,1081 @@
     "title": "Introduction",
     "section": "",
     "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
+  },
+  {
+    "objectID": "data.html#eda",
+    "href": "data.html#eda",
+    "title": "3  Data",
+    "section": "3.2 EDA",
+    "text": "3.2 EDA\n\n3.2.1 Pairwise Plot Matrix\n\n\n3.2.2 Correlation Matrix\n\n\n3.2.3 Automated EDA App",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data</span>"
+    ]
+  },
+  {
+    "objectID": "geoms.html#area-plots",
+    "href": "geoms.html#area-plots",
+    "title": "4  Geoms",
+    "section": "",
+    "text": "4.1.1 Horizon Chart\n\n\n4.1.2 Ribbon Plot (Improved)\n\n\n4.1.3 Streamgraph",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Geoms</span>"
+    ]
+  },
+  {
+    "objectID": "geoms.html#bar-charts",
+    "href": "geoms.html#bar-charts",
+    "title": "4  Geoms",
+    "section": "4.2 Bar Charts",
+    "text": "4.2 Bar Charts\n\n4.2.1 Likert Plot\n\n\n4.2.2 Mosaic Plot",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Geoms</span>"
+    ]
+  },
+  {
+    "objectID": "geoms.html#density-plots",
+    "href": "geoms.html#density-plots",
+    "title": "4  Geoms",
+    "section": "4.3 Density Plots",
+    "text": "4.3 Density Plots\n\n4.3.1 Raincloud Plot\n\n\n4.3.2 Ridgeline Plot",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Geoms</span>"
+    ]
+  },
+  {
+    "objectID": "geoms.html#geometric-shapes",
+    "href": "geoms.html#geometric-shapes",
+    "title": "4  Geoms",
+    "section": "4.4 Geometric Shapes",
+    "text": "4.4 Geometric Shapes\n\n4.4.1 Arc\n\n\n4.4.2 B-spline Curve\n\n\n4.4.3 Bézier Curve\n\n\n4.4.4 Circle\n\n\n4.4.5 Ellipse",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Geoms</span>"
+    ]
+  },
+  {
+    "objectID": "geoms.html#heatmaps",
+    "href": "geoms.html#heatmaps",
+    "title": "4  Geoms",
+    "section": "4.5 Heatmaps",
+    "text": "4.5 Heatmaps\n\n4.5.1 Calendar Heatmap",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Geoms</span>"
+    ]
+  },
+  {
+    "objectID": "geoms.html#intersection-plots",
+    "href": "geoms.html#intersection-plots",
+    "title": "4  Geoms",
+    "section": "4.6 Intersection Plots",
+    "text": "4.6 Intersection Plots\n\n4.6.1 Upset Plot\n\n\n4.6.2 Venn Diagram",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Geoms</span>"
+    ]
+  },
+  {
+    "objectID": "geoms.html#line-charts",
+    "href": "geoms.html#line-charts",
+    "title": "4  Geoms",
+    "section": "4.7 Line Charts",
+    "text": "4.7 Line Charts\n\n4.7.1 Bump Chart\n\n\n4.7.2 Dumbbell and Lollipop Plot\n\n\n4.7.3 Line Chart with Neon Glow or Shadow Effects\n\n\n4.7.4 Slope Chart",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Geoms</span>"
+    ]
+  },
+  {
+    "objectID": "geoms.html#multivariate-graphs",
+    "href": "geoms.html#multivariate-graphs",
+    "title": "4  Geoms",
+    "section": "4.8 Multivariate Graphs",
+    "text": "4.8 Multivariate Graphs\n\n4.8.1 Parallel Coordinates Plot (Improved)\n\n\n4.8.2 Radar Chart",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Geoms</span>"
+    ]
+  },
+  {
+    "objectID": "geoms.html#pie-charts",
+    "href": "geoms.html#pie-charts",
+    "title": "4  Geoms",
+    "section": "4.9 Pie Charts",
+    "text": "4.9 Pie Charts\n\n4.9.1 Pie Chart (Improved)\n\n\n4.9.2 Moon Chart\n\n\n4.9.3 Square Chart / Waffle Chart",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Geoms</span>"
+    ]
+  },
+  {
+    "objectID": "geoms.html#scatter-plots",
+    "href": "geoms.html#scatter-plots",
+    "title": "4  Geoms",
+    "section": "4.10 Scatter Plots",
+    "text": "4.10 Scatter Plots\n\n4.10.1 Beeswarm Plot\n\n\n4.10.2 Point Density Plot",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Geoms</span>"
+    ]
+  },
+  {
+    "objectID": "geoms.html#text-visualization",
+    "href": "geoms.html#text-visualization",
+    "title": "4  Geoms",
+    "section": "4.11 Text Visualization",
+    "text": "4.11 Text Visualization\n\n4.11.1 Page Layout Visualization\n\n\n4.11.2 Word Cloud",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Geoms</span>"
+    ]
+  },
+  {
+    "objectID": "geoms.html#tree-based-graphs",
+    "href": "geoms.html#tree-based-graphs",
+    "title": "4  Geoms",
+    "section": "4.12 Tree-based Graphs",
+    "text": "4.12 Tree-based Graphs\n\n4.12.1 Dendrogram\n\n\n4.12.2 Treemap\n\n\n4.12.3 Voronoi Diagram",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Geoms</span>"
+    ]
+  },
+  {
+    "objectID": "data.html#data-sets",
+    "href": "data.html#data-sets",
+    "title": "3  Data",
+    "section": "",
+    "text": "3.1.1 RDatasets\n\n\n3.1.2 ggplot2movies",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data</span>"
+    ]
+  },
+  {
+    "objectID": "stats.html#combining-data-visualization-and-statistical-modeling",
+    "href": "stats.html#combining-data-visualization-and-statistical-modeling",
+    "title": "5  Stats",
+    "section": "",
+    "text": "5.1.1 ggstatsplot",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stats</span>"
+    ]
+  },
+  {
+    "objectID": "stats.html#convex-hull",
+    "href": "stats.html#convex-hull",
+    "title": "5  Stats",
+    "section": "5.2 Convex Hull",
+    "text": "5.2 Convex Hull",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stats</span>"
+    ]
+  },
+  {
+    "objectID": "stats.html#inferential-statistical-tests",
+    "href": "stats.html#inferential-statistical-tests",
+    "title": "5  Stats",
+    "section": "5.3 Inferential Statistical Tests",
+    "text": "5.3 Inferential Statistical Tests\n\n5.3.1 F-test\n\n\n5.3.2 Pearson’s Chi-Squared Test\n\n\n5.3.3 Test for Association Between Paired Samples\n\n\n5.3.4 Test of Equal or Given Proportions\n\n\n5.3.5 T-test",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stats</span>"
+    ]
+  },
+  {
+    "objectID": "stats.html#interaction-plot",
+    "href": "stats.html#interaction-plot",
+    "title": "5  Stats",
+    "section": "5.4 Interaction Plot",
+    "text": "5.4 Interaction Plot\n\n5.4.1 CGPfunctions",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stats</span>"
+    ]
+  },
+  {
+    "objectID": "stats.html#linear-regression",
+    "href": "stats.html#linear-regression",
+    "title": "5  Stats",
+    "section": "5.5 Linear Regression",
+    "text": "5.5 Linear Regression\n\n5.5.1 Diagnostic Plots\n\n\n5.5.2 Regression Line Equation and R-Square",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stats</span>"
+    ]
+  },
+  {
+    "objectID": "stats.html#lorenz-curve",
+    "href": "stats.html#lorenz-curve",
+    "title": "5  Stats",
+    "section": "5.6 Lorenz Curve",
+    "text": "5.6 Lorenz Curve",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stats</span>"
+    ]
+  },
+  {
+    "objectID": "stats.html#markov-chain-monte-carlo",
+    "href": "stats.html#markov-chain-monte-carlo",
+    "title": "5  Stats",
+    "section": "5.7 Markov Chain Monte Carlo",
+    "text": "5.7 Markov Chain Monte Carlo",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stats</span>"
+    ]
+  },
+  {
+    "objectID": "stats.html#multi-stat-binning-layer",
+    "href": "stats.html#multi-stat-binning-layer",
+    "title": "5  Stats",
+    "section": "5.8 Multi-Stat Binning Layer",
+    "text": "5.8 Multi-Stat Binning Layer",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stats</span>"
+    ]
+  },
+  {
+    "objectID": "stats.html#overlay-normal-density-plot",
+    "href": "stats.html#overlay-normal-density-plot",
+    "title": "5  Stats",
+    "section": "5.9 Overlay Normal Density Plot",
+    "text": "5.9 Overlay Normal Density Plot",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stats</span>"
+    ]
+  },
+  {
+    "objectID": "stats.html#p-p-plot",
+    "href": "stats.html#p-p-plot",
+    "title": "5  Stats",
+    "section": "5.11 P-P Plot",
+    "text": "5.11 P-P Plot",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stats</span>"
+    ]
+  },
+  {
+    "objectID": "stats.html#q-q-plot",
+    "href": "stats.html#q-q-plot",
+    "title": "5  Stats",
+    "section": "5.12 Q-Q Plot",
+    "text": "5.12 Q-Q Plot",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stats</span>"
+    ]
+  },
+  {
+    "objectID": "stats.html#quality-control-chart",
+    "href": "stats.html#quality-control-chart",
+    "title": "5  Stats",
+    "section": "5.13 Quality Control Chart",
+    "text": "5.13 Quality Control Chart",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stats</span>"
+    ]
+  },
+  {
+    "objectID": "stats.html#proportions-according-to-custom-denominator",
+    "href": "stats.html#proportions-according-to-custom-denominator",
+    "title": "5  Stats",
+    "section": "5.14 Proportions According to Custom Denominator",
+    "text": "5.14 Proportions According to Custom Denominator",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stats</span>"
+    ]
+  },
+  {
+    "objectID": "stats.html#random-forests",
+    "href": "stats.html#random-forests",
+    "title": "5  Stats",
+    "section": "5.15 Random Forests",
+    "text": "5.15 Random Forests",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stats</span>"
+    ]
+  },
+  {
+    "objectID": "stats.html#roc-curves",
+    "href": "stats.html#roc-curves",
+    "title": "5  Stats",
+    "section": "5.16 ROC Curves",
+    "text": "5.16 ROC Curves",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stats</span>"
+    ]
+  },
+  {
+    "objectID": "stats.html#sample-data-and-distribution-vectors",
+    "href": "stats.html#sample-data-and-distribution-vectors",
+    "title": "5  Stats",
+    "section": "5.17 Sample Data and Distribution Vectors",
+    "text": "5.17 Sample Data and Distribution Vectors",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stats</span>"
+    ]
+  },
+  {
+    "objectID": "stats.html#seasonal-adjustment",
+    "href": "stats.html#seasonal-adjustment",
+    "title": "5  Stats",
+    "section": "5.18 Seasonal Adjustment",
+    "text": "5.18 Seasonal Adjustment",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stats</span>"
+    ]
+  },
+  {
+    "objectID": "stats.html#statistics-for-reporting-the-results-of-model-fits",
+    "href": "stats.html#statistics-for-reporting-the-results-of-model-fits",
+    "title": "5  Stats",
+    "section": "5.19 Statistics for Reporting the Results of Model Fits",
+    "text": "5.19 Statistics for Reporting the Results of Model Fits",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stats</span>"
+    ]
+  },
+  {
+    "objectID": "stats.html#survival-analysis",
+    "href": "stats.html#survival-analysis",
+    "title": "5  Stats",
+    "section": "5.20 Survival Analysis",
+    "text": "5.20 Survival Analysis",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stats</span>"
+    ]
+  },
+  {
+    "objectID": "stats.html#tornado-plot",
+    "href": "stats.html#tornado-plot",
+    "title": "5  Stats",
+    "section": "5.21 Tornado Plot",
+    "text": "5.21 Tornado Plot",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stats</span>"
+    ]
+  },
+  {
+    "objectID": "stats.html#p-values",
+    "href": "stats.html#p-values",
+    "title": "5  Stats",
+    "section": "5.10 P-Values",
+    "text": "5.10 P-Values",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stats</span>"
+    ]
+  },
+  {
+    "objectID": "annotations.html#add-p-values",
+    "href": "annotations.html#add-p-values",
+    "title": "6  Annotations",
+    "section": "",
+    "text": "6.1.1 ggpval",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Annotations</span>"
+    ]
+  },
+  {
+    "objectID": "annotations.html#annotate-areas-with",
+    "href": "annotations.html#annotate-areas-with",
+    "title": "6  Annotations",
+    "section": "6.2 Annotate Areas with…",
+    "text": "6.2 Annotate Areas with…\n\n6.2.1 Circles\n\n\n6.2.2 Ellipses\n\n\n6.2.3 Hulls\n\n\n6.2.4 Rectangles",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Annotations</span>"
+    ]
+  },
+  {
+    "objectID": "annotations.html#curved-text-labeling",
+    "href": "annotations.html#curved-text-labeling",
+    "title": "6  Annotations",
+    "section": "6.3 Curved Text Labeling",
+    "text": "6.3 Curved Text Labeling",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Annotations</span>"
+    ]
+  },
+  {
+    "objectID": "annotations.html#direct-labeling",
+    "href": "annotations.html#direct-labeling",
+    "title": "6  Annotations",
+    "section": "6.4 Direct Labeling",
+    "text": "6.4 Direct Labeling",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Annotations</span>"
+    ]
+  },
+  {
+    "objectID": "annotations.html#fitted-model-based-annotations",
+    "href": "annotations.html#fitted-model-based-annotations",
+    "title": "6  Annotations",
+    "section": "6.5 Fitted-Model-Based Annotations",
+    "text": "6.5 Fitted-Model-Based Annotations",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Annotations</span>"
+    ]
+  },
+  {
+    "objectID": "annotations.html#highlight-geoms",
+    "href": "annotations.html#highlight-geoms",
+    "title": "6  Annotations",
+    "section": "6.6 Highlight Geoms",
+    "text": "6.6 Highlight Geoms",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Annotations</span>"
+    ]
+  },
+  {
+    "objectID": "annotations.html#highlighting-points",
+    "href": "annotations.html#highlighting-points",
+    "title": "6  Annotations",
+    "section": "6.7 Highlighting Points",
+    "text": "6.7 Highlighting Points",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Annotations</span>"
+    ]
+  },
+  {
+    "objectID": "annotations.html#inset-plots",
+    "href": "annotations.html#inset-plots",
+    "title": "6  Annotations",
+    "section": "6.8 Inset Plots",
+    "text": "6.8 Inset Plots",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Annotations</span>"
+    ]
+  },
+  {
+    "objectID": "annotations.html#inset-tables",
+    "href": "annotations.html#inset-tables",
+    "title": "6  Annotations",
+    "section": "6.9 Inset Tables",
+    "text": "6.9 Inset Tables",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Annotations</span>"
+    ]
+  },
+  {
+    "objectID": "annotations.html#repel-overlapping-text-labels",
+    "href": "annotations.html#repel-overlapping-text-labels",
+    "title": "6  Annotations",
+    "section": "6.10 Repel Overlapping Text & Labels",
+    "text": "6.10 Repel Overlapping Text & Labels\n\n6.10.1 Label\n\n\n6.10.2 Text",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Annotations</span>"
+    ]
+  },
+  {
+    "objectID": "annotations.html#shadow-text",
+    "href": "annotations.html#shadow-text",
+    "title": "6  Annotations",
+    "section": "6.11 Shadow Text",
+    "text": "6.11 Shadow Text",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Annotations</span>"
+    ]
+  },
+  {
+    "objectID": "annotations.html#significance-brackets",
+    "href": "annotations.html#significance-brackets",
+    "title": "6  Annotations",
+    "section": "6.12 Significance Brackets",
+    "text": "6.12 Significance Brackets",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Annotations</span>"
+    ]
+  },
+  {
+    "objectID": "scales_and_guides.html#color-scales",
+    "href": "scales_and_guides.html#color-scales",
+    "title": "7  Scales and Guides",
+    "section": "",
+    "text": "7.1.1 paletteer\n\n\n7.1.2 see\n\n\n7.1.3 R Color Palette Finder",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Scales and Guides</span>"
+    ]
+  },
+  {
+    "objectID": "scales_and_guides.html#color-blindness",
+    "href": "scales_and_guides.html#color-blindness",
+    "title": "7  Scales and Guides",
+    "section": "7.2 Color Blindness",
+    "text": "7.2 Color Blindness\n\n7.2.1 Color Vision Deficiency Simulator",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Scales and Guides</span>"
+    ]
+  },
+  {
+    "objectID": "scales_and_guides.html#cyclical-scales",
+    "href": "scales_and_guides.html#cyclical-scales",
+    "title": "7  Scales and Guides",
+    "section": "7.3 Cyclical Scales",
+    "text": "7.3 Cyclical Scales",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Scales and Guides</span>"
+    ]
+  },
+  {
+    "objectID": "scales_and_guides.html#focus-scales",
+    "href": "scales_and_guides.html#focus-scales",
+    "title": "7  Scales and Guides",
+    "section": "7.4 Focus Scales",
+    "text": "7.4 Focus Scales",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Scales and Guides</span>"
+    ]
+  },
+  {
+    "objectID": "scales_and_guides.html#multiple-scales",
+    "href": "scales_and_guides.html#multiple-scales",
+    "title": "7  Scales and Guides",
+    "section": "7.5 Multiple Scales",
+    "text": "7.5 Multiple Scales",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Scales and Guides</span>"
+    ]
+  },
+  {
+    "objectID": "scales_and_guides.html#wrap-plot",
+    "href": "scales_and_guides.html#wrap-plot",
+    "title": "7  Scales and Guides",
+    "section": "7.6 Wrap Plot",
+    "text": "7.6 Wrap Plot",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Scales and Guides</span>"
+    ]
+  },
+  {
+    "objectID": "coords.html#capping-axis-lines",
+    "href": "coords.html#capping-axis-lines",
+    "title": "8  Coords",
+    "section": "",
+    "text": "8.1.1 lemon",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Coords</span>"
+    ]
+  },
+  {
+    "objectID": "coords.html#serial-axes-coordinates",
+    "href": "coords.html#serial-axes-coordinates",
+    "title": "8  Coords",
+    "section": "8.2 Serial Axes Coordinates",
+    "text": "8.2 Serial Axes Coordinates",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Coords</span>"
+    ]
+  },
+  {
+    "objectID": "facets.html#facet-by-different-data-columns",
+    "href": "facets.html#facet-by-different-data-columns",
+    "title": "9  Facets",
+    "section": "",
+    "text": "9.1.1 ggforce",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Facets</span>"
+    ]
+  },
+  {
+    "objectID": "facets.html#facet-calendar",
+    "href": "facets.html#facet-calendar",
+    "title": "9  Facets",
+    "section": "9.2 Facet Calendar",
+    "text": "9.2 Facet Calendar",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Facets</span>"
+    ]
+  },
+  {
+    "objectID": "facets.html#facet-data-for-zoom-with-context",
+    "href": "facets.html#facet-data-for-zoom-with-context",
+    "title": "9  Facets",
+    "section": "9.3 Facet Data for Zoom with Context",
+    "text": "9.3 Facet Data for Zoom with Context",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Facets</span>"
+    ]
+  },
+  {
+    "objectID": "facets.html#facet-wrap-improved",
+    "href": "facets.html#facet-wrap-improved",
+    "title": "9  Facets",
+    "section": "9.4 Facet Wrap (Improved)",
+    "text": "9.4 Facet Wrap (Improved)",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Facets</span>"
+    ]
+  },
+  {
+    "objectID": "facets.html#manual-facets",
+    "href": "facets.html#manual-facets",
+    "title": "9  Facets",
+    "section": "9.5 Manual Facets",
+    "text": "9.5 Manual Facets",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Facets</span>"
+    ]
+  },
+  {
+    "objectID": "facets.html#nested-facets",
+    "href": "facets.html#nested-facets",
+    "title": "9  Facets",
+    "section": "9.6 Nested Facets",
+    "text": "9.6 Nested Facets",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Facets</span>"
+    ]
+  },
+  {
+    "objectID": "facets.html#one-dimensional-facets",
+    "href": "facets.html#one-dimensional-facets",
+    "title": "9  Facets",
+    "section": "9.7 One-Dimensional Facets",
+    "text": "9.7 One-Dimensional Facets",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Facets</span>"
+    ]
+  },
+  {
+    "objectID": "facets.html#ragged-grids",
+    "href": "facets.html#ragged-grids",
+    "title": "9  Facets",
+    "section": "9.8 Ragged Grids",
+    "text": "9.8 Ragged Grids",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Facets</span>"
+    ]
+  },
+  {
+    "objectID": "facets.html#split-a-facetted-plot-over-multiple-pages",
+    "href": "facets.html#split-a-facetted-plot-over-multiple-pages",
+    "title": "9  Facets",
+    "section": "9.9 Split a Facetted Plot Over Multiple Pages",
+    "text": "9.9 Split a Facetted Plot Over Multiple Pages",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Facets</span>"
+    ]
+  },
+  {
+    "objectID": "themes.html#dark-themes",
+    "href": "themes.html#dark-themes",
+    "title": "10  Themes",
+    "section": "10.2 Dark Themes",
+    "text": "10.2 Dark Themes",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Themes</span>"
+    ]
+  },
+  {
+    "objectID": "themes.html#graphpad-prism",
+    "href": "themes.html#graphpad-prism",
+    "title": "10  Themes",
+    "section": "10.3 GraphPad Prism",
+    "text": "10.3 GraphPad Prism",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Themes</span>"
+    ]
+  },
+  {
+    "objectID": "themes.html#theme-elements",
+    "href": "themes.html#theme-elements",
+    "title": "10  Themes",
+    "section": "10.4 Theme Elements",
+    "text": "10.4 Theme Elements\n\n10.4.1 Element Markdown",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Themes</span>"
+    ]
+  },
+  {
+    "objectID": "themes.html#typography-centric-themes",
+    "href": "themes.html#typography-centric-themes",
+    "title": "10  Themes",
+    "section": "10.5 Typography-Centric Themes",
+    "text": "10.5 Typography-Centric Themes",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Themes</span>"
+    ]
+  },
+  {
+    "objectID": "themes.html#using-extra-fonts",
+    "href": "themes.html#using-extra-fonts",
+    "title": "10  Themes",
+    "section": "10.6 Using Extra Fonts",
+    "text": "10.6 Using Extra Fonts",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Themes</span>"
+    ]
+  },
+  {
+    "objectID": "maps.html#geofaceting",
+    "href": "maps.html#geofaceting",
+    "title": "11  Maps",
+    "section": "11.2 Geofaceting",
+    "text": "11.2 Geofaceting",
+    "crumbs": [
+      "Special Cases",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Maps</span>"
+    ]
+  },
+  {
+    "objectID": "maps.html#north-symbols-and-scale-bars",
+    "href": "maps.html#north-symbols-and-scale-bars",
+    "title": "11  Maps",
+    "section": "11.3 North Symbols and Scale Bars",
+    "text": "11.3 North Symbols and Scale Bars",
+    "crumbs": [
+      "Special Cases",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Maps</span>"
+    ]
+  },
+  {
+    "objectID": "maps.html#parliament-plot",
+    "href": "maps.html#parliament-plot",
+    "title": "11  Maps",
+    "section": "11.4 Parliament Plot",
+    "text": "11.4 Parliament Plot",
+    "crumbs": [
+      "Special Cases",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Maps</span>"
+    ]
+  },
+  {
+    "objectID": "maps.html#stamen-maps",
+    "href": "maps.html#stamen-maps",
+    "title": "11  Maps",
+    "section": "11.5 Stamen Maps",
+    "text": "11.5 Stamen Maps",
+    "crumbs": [
+      "Special Cases",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Maps</span>"
+    ]
+  },
+  {
+    "objectID": "maps.html#tidy-map",
+    "href": "maps.html#tidy-map",
+    "title": "11  Maps",
+    "section": "11.6 Tidy Map",
+    "text": "11.6 Tidy Map",
+    "crumbs": [
+      "Special Cases",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Maps</span>"
+    ]
+  },
+  {
+    "objectID": "maps.html#zoomed-inset-panels",
+    "href": "maps.html#zoomed-inset-panels",
+    "title": "11  Maps",
+    "section": "11.7 Zoomed Inset Panels",
+    "text": "11.7 Zoomed Inset Panels",
+    "crumbs": [
+      "Special Cases",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Maps</span>"
+    ]
+  },
+  {
+    "objectID": "maps.html#interactive-maps",
+    "href": "maps.html#interactive-maps",
+    "title": "11  Maps",
+    "section": "11.8 Interactive Maps",
+    "text": "11.8 Interactive Maps",
+    "crumbs": [
+      "Special Cases",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Maps</span>"
+    ]
+  },
+  {
+    "objectID": "networks.html#flowchart",
+    "href": "networks.html#flowchart",
+    "title": "12  Networks",
+    "section": "12.2 Flowchart",
+    "text": "12.2 Flowchart",
+    "crumbs": [
+      "Special Cases",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Networks</span>"
+    ]
+  },
+  {
+    "objectID": "networks.html#networks",
+    "href": "networks.html#networks",
+    "title": "12  Networks",
+    "section": "12.3 Networks",
+    "text": "12.3 Networks",
+    "crumbs": [
+      "Special Cases",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Networks</span>"
+    ]
+  },
+  {
+    "objectID": "networks.html#sankey-diagram",
+    "href": "networks.html#sankey-diagram",
+    "title": "12  Networks",
+    "section": "12.4 Sankey Diagram",
+    "text": "12.4 Sankey Diagram\n\n12.4.1 Sankey Diagram\n\n\n12.4.2 Sankey Bump Plot",
+    "crumbs": [
+      "Special Cases",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Networks</span>"
+    ]
+  },
+  {
+    "objectID": "interactive_plots.html#plotly",
+    "href": "interactive_plots.html#plotly",
+    "title": "13  Interactive Plots",
+    "section": "13.2 Plotly",
+    "text": "13.2 Plotly",
+    "crumbs": [
+      "Special Cases",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Interactive Plots</span>"
+    ]
+  },
+  {
+    "objectID": "interactive_plots.html#streamgraph",
+    "href": "interactive_plots.html#streamgraph",
+    "title": "13  Interactive Plots",
+    "section": "13.3 Streamgraph",
+    "text": "13.3 Streamgraph",
+    "crumbs": [
+      "Special Cases",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Interactive Plots</span>"
+    ]
+  },
+  {
+    "objectID": "interactive_plots.html#trelliscope",
+    "href": "interactive_plots.html#trelliscope",
+    "title": "13  Interactive Plots",
+    "section": "13.4 Trelliscope",
+    "text": "13.4 Trelliscope",
+    "crumbs": [
+      "Special Cases",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Interactive Plots</span>"
+    ]
+  },
+  {
+    "objectID": "animation.html#creating-a-gif",
+    "href": "animation.html#creating-a-gif",
+    "title": "14  Animation",
+    "section": "14.2 Creating a GIF",
+    "text": "14.2 Creating a GIF",
+    "crumbs": [
+      "Special Cases",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Animation</span>"
+    ]
+  },
+  {
+    "objectID": "shortcuts.html#debugging-ggplot2-internals",
+    "href": "shortcuts.html#debugging-ggplot2-internals",
+    "title": "Shortcuts",
+    "section": "Debugging ggplot2 Internals",
+    "text": "Debugging ggplot2 Internals",
+    "crumbs": [
+      "Shortcuts"
+    ]
+  },
+  {
+    "objectID": "shortcuts.html#im-feeling-lucky",
+    "href": "shortcuts.html#im-feeling-lucky",
+    "title": "Shortcuts",
+    "section": "I’m Feeling Lucky!",
+    "text": "I’m Feeling Lucky!",
+    "crumbs": [
+      "Shortcuts"
+    ]
+  },
+  {
+    "objectID": "helpers.html#debugging-ggplot2-internals",
+    "href": "helpers.html#debugging-ggplot2-internals",
+    "title": "15  Helpers",
+    "section": "15.2 Debugging ggplot2 Internals",
+    "text": "15.2 Debugging ggplot2 Internals",
+    "crumbs": [
+      "Shortcuts",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Helpers</span>"
+    ]
+  },
+  {
+    "objectID": "helpers.html#im-feeling-lucky",
+    "href": "helpers.html#im-feeling-lucky",
+    "title": "15  Helpers",
+    "section": "15.3 I’m Feeling Lucky!",
+    "text": "15.3 I’m Feeling Lucky!",
+    "crumbs": [
+      "Shortcuts",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Helpers</span>"
+    ]
+  },
+  {
+    "objectID": "interactive_tools.html#shiny",
+    "href": "interactive_tools.html#shiny",
+    "title": "16  Interactive Tools",
+    "section": "16.2 Shiny",
+    "text": "16.2 Shiny\n\n16.2.1 Auto Theming\n\n\n16.2.2 Choosing Color Palettes Interactively\n\n\n16.2.3 Color Picker\n\n\n16.2.4 Editing Layers\n\n\n16.2.5 Editing Themes\n\n\n16.2.6 Interactive Layers\n\n\n16.2.7 Marginal Plots\n\n\n16.2.8 Theme Preview",
+    "crumbs": [
+      "Shortcuts",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Interactive Tools</span>"
+    ]
+  },
+  {
+    "objectID": "finishing_touches.html#color-manipulation",
+    "href": "finishing_touches.html#color-manipulation",
+    "title": "17  Finishing Touches",
+    "section": "17.2 Color Manipulation",
+    "text": "17.2 Color Manipulation",
+    "crumbs": [
+      "Getting Ready to Publish",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Finishing Touches</span>"
+    ]
+  },
+  {
+    "objectID": "finishing_touches.html#magnified-inset",
+    "href": "finishing_touches.html#magnified-inset",
+    "title": "17  Finishing Touches",
+    "section": "17.3 Magnified Inset",
+    "text": "17.3 Magnified Inset",
+    "crumbs": [
+      "Getting Ready to Publish",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Finishing Touches</span>"
+    ]
+  },
+  {
+    "objectID": "finishing_touches.html#point-shapes-improved",
+    "href": "finishing_touches.html#point-shapes-improved",
+    "title": "17  Finishing Touches",
+    "section": "17.4 Point Shapes (Improved)",
+    "text": "17.4 Point Shapes (Improved)",
+    "crumbs": [
+      "Getting Ready to Publish",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Finishing Touches</span>"
+    ]
+  },
+  {
+    "objectID": "finishing_touches.html#save-incremental-builds-of-plots",
+    "href": "finishing_touches.html#save-incremental-builds-of-plots",
+    "title": "17  Finishing Touches",
+    "section": "17.5 Save Incremental Builds of Plots",
+    "text": "17.5 Save Incremental Builds of Plots",
+    "crumbs": [
+      "Getting Ready to Publish",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Finishing Touches</span>"
+    ]
+  },
+  {
+    "objectID": "finishing_touches.html#shadow-effect",
+    "href": "finishing_touches.html#shadow-effect",
+    "title": "17  Finishing Touches",
+    "section": "17.6 Shadow Effect",
+    "text": "17.6 Shadow Effect",
+    "crumbs": [
+      "Getting Ready to Publish",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Finishing Touches</span>"
+    ]
+  },
+  {
+    "objectID": "arranging_plots.html#side-panels",
+    "href": "arranging_plots.html#side-panels",
+    "title": "18  Arranging Plots",
+    "section": "18.2 Side Panels",
+    "text": "18.2 Side Panels",
+    "crumbs": [
+      "Getting Ready to Publish",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Arranging Plots</span>"
+    ]
+  },
+  {
+    "objectID": "arranging_plots.html#converting-base-r-plots-to-ggplot2",
+    "href": "arranging_plots.html#converting-base-r-plots-to-ggplot2",
+    "title": "18  Arranging Plots",
+    "section": "18.3 Converting Base R Plots to ggplot2",
+    "text": "18.3 Converting Base R Plots to ggplot2",
+    "crumbs": [
+      "Getting Ready to Publish",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Arranging Plots</span>"
+    ]
+  },
+  {
+    "objectID": "bi_tools.html#tableau",
+    "href": "bi_tools.html#tableau",
+    "title": "19  BI Tools",
+    "section": "19.2 Tableau",
+    "text": "19.2 Tableau",
+    "crumbs": [
+      "Beyond R",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>BI Tools</span>"
+    ]
+  },
+  {
+    "objectID": "bi_tools.html#others",
+    "href": "bi_tools.html#others",
+    "title": "19  BI Tools",
+    "section": "19.3 Others?",
+    "text": "19.3 Others?",
+    "crumbs": [
+      "Beyond R",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>BI Tools</span>"
+    ]
+  },
+  {
+    "objectID": "python.html#borrowing-from-python-with-reticulate",
+    "href": "python.html#borrowing-from-python-with-reticulate",
+    "title": "21  Python",
+    "section": "21.2 Borrowing from Python with reticulate",
+    "text": "21.2 Borrowing from Python with reticulate\n\n21.2.1 Sunburst Plot",
+    "crumbs": [
+      "Beyond R",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Python</span>"
+    ]
   }
 ]

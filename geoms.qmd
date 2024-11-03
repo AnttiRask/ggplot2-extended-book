@@ -6,3 +6,89 @@
 #| results: asis
 source("warning.R")
 ```
+
+## Area Plots
+
+### Horizon Chart
+
+### Ribbon Plot (Improved)
+
+### Streamgraph
+
+## Bar Charts
+
+### Likert Plot
+
+### Mosaic Plot
+
+## Density Plots
+
+### Raincloud Plot
+
+### Ridgeline Plot
+
+## Geometric Shapes
+
+### Arc
+
+### B-spline Curve
+
+### Bézier Curve
+
+### Circle
+
+### Ellipse
+
+## Heatmaps
+
+### Calendar Heatmap
+
+## Intersection Plots
+
+### Upset Plot
+
+### Venn Diagram
+
+## Line Charts
+
+### Bump Chart
+
+### Dumbbell and Lollipop Plot
+
+### Line Chart with Neon Glow or Shadow Effects
+
+### Slope Chart
+
+## Multivariate Graphs
+
+### Parallel Coordinates Plot (Improved)
+
+### Radar Chart
+
+## Pie Charts
+
+### Pie Chart (Improved)
+
+### Moon Chart
+
+### Square Chart / Waffle Chart
+
+## Scatter Plots
+
+### Beeswarm Plot
+
+### Point Density Plot
+
+## Text Visualization
+
+### Page Layout Visualization
+
+### Word Cloud
+
+## Tree-based Graphs
+
+### Dendrogram
+
+### Treemap
+
+### Voronoi Diagram

@@ -6,3 +6,23 @@
 #| results: asis
 source("warning.R")
 ```
+
+## Interactive Interface to Plot Data and Perform Statistical Tests
+
+## Shiny
+
+### Auto Theming
+
+### Choosing Color Palettes Interactively
+
+### Color Picker
+
+### Editing Layers
+
+### Editing Themes
+
+### Interactive Layers
+
+### Marginal Plots
+
+### Theme Preview
