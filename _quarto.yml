@@ -75,6 +75,7 @@ format:
       - cosmo
       - g2e.scss
     code-link: true
+    paged-print: true
   
     author-meta: "Antti Rask"
     include-in-header: "goatcounter.html"

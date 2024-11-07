@@ -70,7 +70,7 @@
     "href": "data.html",
     "title": "3  Data",
     "section": "",
-    "text": "3.1 Data Sets",
+    "text": "3.1 Data Sets\nThis book is about tools for creating visualizations. But to visualize data you first need data. So let’s start by taking a look at some of the data sets available to us without much hassle.",
     "crumbs": [
       "Layers",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data</span>"
@@ -313,7 +313,11 @@
     "href": "installing_packages.html",
     "title": "2  Installing Packages",
     "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
+    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title",
+    "crumbs": [
+      "Getting Started",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Installing Packages</span>"
+    ]
   },
   {
     "objectID": "introduction.html",
@@ -326,8 +330,8 @@
     "objectID": "data.html#eda",
     "href": "data.html#eda",
     "title": "3  Data",
-    "section": "3.2 EDA",
-    "text": "3.2 EDA\n\n3.2.1 Pairwise Plot Matrix\n\n\n3.2.2 Correlation Matrix\n\n\n3.2.3 Automated EDA App",
+    "section": "\n3.2 EDA",
+    "text": "3.2 EDA\n\n3.2.1 Pairwise Plot Matrix\n\n3.2.2 Correlation Matrix\n\n3.2.3 Automated EDA App",
     "crumbs": [
       "Layers",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data</span>"
@@ -470,7 +474,7 @@
     "href": "data.html#data-sets",
     "title": "3  Data",
     "section": "",
-    "text": "3.1.1 RDatasets\n\n\n3.1.2 ggplot2movies",
+    "text": "3.1.1 {datasets}\nBase R comes with a bunch of data sets ready to use. There are classics like ‘iris’ and ‘mtcars’, but there are many more to choose from:\n\n\n\n  \n\n\n\nSince the {datasets} package is from base R, the data is not always immediately ready to be used with {ggplot2}. Luckily we have the {tidyverse} packages that make it easy to make the necessary changes.\nHere is an example using the USArrests (‘Violent Crime Rates by US State’) data set. We can start by loading the data set by using the data() function:\n\ndata(USArrests)\n\nLet’s take a quick look at what the first couple of rows of the data set looks like:\n\nhead(USArrests)\n\n           Murder Assault UrbanPop Rape\nAlabama      13.2     236       58 21.2\nAlaska       10.0     263       48 44.5\nArizona       8.1     294       80 31.0\nArkansas      8.8     190       50 19.5\nCalifornia    9.0     276       91 40.6\nColorado      7.9     204       78 38.7\n\n\nAs you can see, USArrests is a data frame. It has four columns and the names of the US states are row names. We would like to see them as the fifth column instead. We can use the {tibble} package to do that. While we’re at it, let’s also change the data frame into a tibble:\n\nlibrary(tibble)\n\nusarrests_tbl &lt;- USArrests %&gt;%\n  rownames_to_column(var = \"State\") %&gt;%\n  as_tibble()\n\n\n\n\n  \n\n\n\nWe can then use the new tibble to create a simple visualization with {ggplot2}:\n\nlibrary(ggplot2)\n\nusarrests_tbl %&gt;%\n  slice_max(Murder, n = 10) %&gt;% \n  ggplot(aes(Murder, UrbanPop)) +\n  geom_point() +\n  geom_label(aes(label = State))\n\n\n\n\n\n\n\n\n3.1.2 {ggplot2movies}\n\n3.1.3 {RDatasets}",
     "crumbs": [
       "Layers",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data</span>"

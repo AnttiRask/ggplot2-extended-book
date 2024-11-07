@@ -9,7 +9,70 @@ source("warning.R")
 
 ## Data Sets
 
-### RDatasets
+This book is about tools for creating visualizations. But to visualize data you first need data. So let's start by taking a look at some of the data sets available to us without much hassle.
+
+### {datasets}
+
+Base R comes with a bunch of data sets ready to use. There are classics like 'iris' and 'mtcars', but there are many more to choose from:
+
+```{r, echo=FALSE, message=FALSE}
+library(dplyr)
+library(purrr)
+library(rmarkdown)
+
+data() %>%
+  pluck(3) %>%
+  as_tibble() %>%
+  filter(Package == "datasets") %>%
+  select(Item, Title) %>%
+  arrange(Item, .locale = "en") %>% 
+  paged_table()
+```
+
+Since the {datasets} package is from base R, the data is not always immediately ready to be used with {ggplot2}. Luckily we have the {tidyverse} packages that make it easy to make the necessary changes.
+
+Here is an example using the USArrests ('Violent Crime Rates by US State') data set. We can start by loading the data set by using the data() function:
+
+```{r}
+data(USArrests)
+```
+
+Let's take a quick look at what the first couple of rows of the data set looks like:
+
+```{r}
+head(USArrests)
+```
+
+As you can see, USArrests is a data frame. It has four columns and the names of the US states are row names. We would like to see them as the fifth column instead. We can use the {tibble} package to do that. While we're at it, let's also change the data frame into a tibble:
+
+```{r}
+library(tibble)
+
+usarrests_tbl <- USArrests %>%
+  rownames_to_column(var = "State") %>%
+  as_tibble()
+```
+
+```{r, echo=FALSE, message=FALSE}
+usarrests_tbl %>%
+  paged_table()
+```
+
+We can then use the new tibble to create a simple visualization with {ggplot2}:
+
+```{r}
+library(ggplot2)
+
+usarrests_tbl %>%
+  slice_max(Murder, n = 10) %>% 
+  ggplot(aes(Murder, UrbanPop)) +
+  geom_point() +
+  geom_label(aes(label = State))
+```
+
+### {ggplot2movies}
+
+### {RDatasets}
 
 ## EDA
 

@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.4.555">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Antti Rask">
-
 <title>ggplot2 extended - 3&nbsp; Data</title>
 <style>
 code{white-space: pre-wrap;}
@@ -21,8 +18,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
-
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
@@ -42,8 +72,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -69,18 +98,13 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-<script data-goatcounter="https://ggplot2-extended-book.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
-
-
+}</script><script data-goatcounter="https://ggplot2-extended-book.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
 </head>
-
 <body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
@@ -91,13 +115,9 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">ggplot2 extended</a> 
         <div class="sidebar-tools-main">
@@ -117,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Welcome</span></a>
@@ -143,8 +163,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ggplot2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">ggplot2</span></span></a>
@@ -157,7 +177,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./layers.html" class="sidebar-item-text sidebar-link">
@@ -166,8 +186,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./data.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data</span></span></a>
@@ -216,7 +236,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./special_cases.html" class="sidebar-item-text sidebar-link">
@@ -225,8 +245,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./maps.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Maps</span></span></a>
@@ -251,7 +271,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./shortcuts.html" class="sidebar-item-text sidebar-link">
@@ -260,8 +280,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./helpers.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Helpers</span></span></a>
@@ -274,7 +294,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./getting_ready_to_publish.html" class="sidebar-item-text sidebar-link">
@@ -283,8 +303,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./finishing_touches.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Finishing Touches</span></span></a>
@@ -297,7 +317,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./beyond_r.html" class="sidebar-item-text sidebar-link">
@@ -306,8 +326,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bi_tools.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">BI Tools</span></span></a>
@@ -326,7 +346,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <span class="sidebar-item-text sidebar-link text-start">
  <span class="menu-text">Case Studies</span></span>
@@ -338,34 +358,33 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#data-sets" id="toc-data-sets" class="nav-link active" data-scroll-target="#data-sets"><span class="header-section-number">3.1</span> Data Sets</a>
+<li>
+<a href="#data-sets" id="toc-data-sets" class="nav-link active" data-scroll-target="#data-sets"><span class="header-section-number">3.1</span> Data Sets</a>
   <ul class="collapse">
-  <li><a href="#rdatasets" id="toc-rdatasets" class="nav-link" data-scroll-target="#rdatasets"><span class="header-section-number">3.1.1</span> RDatasets</a></li>
-  <li><a href="#ggplot2movies" id="toc-ggplot2movies" class="nav-link" data-scroll-target="#ggplot2movies"><span class="header-section-number">3.1.2</span> ggplot2movies</a></li>
-  </ul></li>
-  <li><a href="#eda" id="toc-eda" class="nav-link" data-scroll-target="#eda"><span class="header-section-number">3.2</span> EDA</a>
+<li><a href="#datasets" id="toc-datasets" class="nav-link" data-scroll-target="#datasets"><span class="header-section-number">3.1.1</span> {datasets}</a></li>
+  <li><a href="#ggplot2movies" id="toc-ggplot2movies" class="nav-link" data-scroll-target="#ggplot2movies"><span class="header-section-number">3.1.2</span> {ggplot2movies}</a></li>
+  <li><a href="#rdatasets" id="toc-rdatasets" class="nav-link" data-scroll-target="#rdatasets"><span class="header-section-number">3.1.3</span> {RDatasets}</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#eda" id="toc-eda" class="nav-link" data-scroll-target="#eda"><span class="header-section-number">3.2</span> EDA</a>
   <ul class="collapse">
-  <li><a href="#pairwise-plot-matrix" id="toc-pairwise-plot-matrix" class="nav-link" data-scroll-target="#pairwise-plot-matrix"><span class="header-section-number">3.2.1</span> Pairwise Plot Matrix</a></li>
+<li><a href="#pairwise-plot-matrix" id="toc-pairwise-plot-matrix" class="nav-link" data-scroll-target="#pairwise-plot-matrix"><span class="header-section-number">3.2.1</span> Pairwise Plot Matrix</a></li>
   <li><a href="#correlation-matrix" id="toc-correlation-matrix" class="nav-link" data-scroll-target="#correlation-matrix"><span class="header-section-number">3.2.2</span> Correlation Matrix</a></li>
   <li><a href="#automated-eda-app" id="toc-automated-eda-app" class="nav-link" data-scroll-target="#automated-eda-app"><span class="header-section-number">3.2.3</span> Automated EDA App</a></li>
-  </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/edit/main/data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+</li>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/edit/main/data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./layers.html">Layers</a></li><li class="breadcrumb-item"><a href="./data.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data</span></a></li></ol></nav>
-<div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./layers.html">Layers</a></li><li class="breadcrumb-item"><a href="./data.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data</span></a></li></ol></nav><div class="quarto-title">
 <h1 class="title"><span id="sec-data" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data</span></span></h1>
 </div>
 
@@ -380,10 +399,7 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-</header>
-
-
-<div class="callout callout-style-simple callout-warning callout-titled">
+</header><div class="callout callout-style-simple callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -396,32 +412,87 @@ This book/site is under construction
 <p>Everything is liable to change, even the title</p>
 </div>
 </div>
-<section id="data-sets" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="data-sets"><span class="header-section-number">3.1</span> Data Sets</h2>
-<section id="rdatasets" class="level3" data-number="3.1.1">
-<h3 data-number="3.1.1" class="anchored" data-anchor-id="rdatasets"><span class="header-section-number">3.1.1</span> RDatasets</h3>
-</section>
-<section id="ggplot2movies" class="level3" data-number="3.1.2">
-<h3 data-number="3.1.2" class="anchored" data-anchor-id="ggplot2movies"><span class="header-section-number">3.1.2</span> ggplot2movies</h3>
-</section>
-</section>
-<section id="eda" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="eda"><span class="header-section-number">3.2</span> EDA</h2>
-<section id="pairwise-plot-matrix" class="level3" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="pairwise-plot-matrix"><span class="header-section-number">3.2.1</span> Pairwise Plot Matrix</h3>
-</section>
-<section id="correlation-matrix" class="level3" data-number="3.2.2">
-<h3 data-number="3.2.2" class="anchored" data-anchor-id="correlation-matrix"><span class="header-section-number">3.2.2</span> Correlation Matrix</h3>
-</section>
-<section id="automated-eda-app" class="level3" data-number="3.2.3">
-<h3 data-number="3.2.3" class="anchored" data-anchor-id="automated-eda-app"><span class="header-section-number">3.2.3</span> Automated EDA App</h3>
+<section id="data-sets" class="level2" data-number="3.1"><h2 data-number="3.1" class="anchored" data-anchor-id="data-sets">
+<span class="header-section-number">3.1</span> Data Sets</h2>
+<p>This book is about tools for creating visualizations. But to visualize data you first need data. So let’s start by taking a look at some of the data sets available to us without much hassle.</p>
+<section id="datasets" class="level3" data-number="3.1.1"><h3 data-number="3.1.1" class="anchored" data-anchor-id="datasets">
+<span class="header-section-number">3.1.1</span> {datasets}</h3>
+<p>Base R comes with a bunch of data sets ready to use. There are classics like ‘iris’ and ‘mtcars’, but there are many more to choose from:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["Item"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Title"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"ability.cov","2":"Ability and Intelligence Tests"},{"1":"airmiles","2":"Passenger Miles on Commercial US Airlines, 1937-1960"},{"1":"AirPassengers","2":"Monthly Airline Passenger Numbers 1949-1960"},{"1":"airquality","2":"New York Air Quality Measurements"},{"1":"anscombe","2":"Anscombe's Quartet of 'Identical' Simple Linear Regressions"},{"1":"attenu","2":"The Joyner-Boore Attenuation Data"},{"1":"attitude","2":"The Chatterjee-Price Attitude Data"},{"1":"austres","2":"Quarterly Time Series of the Number of Australian Residents"},{"1":"beaver1 (beavers)","2":"Body Temperature Series of Two Beavers"},{"1":"beaver2 (beavers)","2":"Body Temperature Series of Two Beavers"},{"1":"BJsales","2":"Sales Data with Leading Indicator"},{"1":"BJsales.lead (BJsales)","2":"Sales Data with Leading Indicator"},{"1":"BOD","2":"Biochemical Oxygen Demand"},{"1":"cars","2":"Speed and Stopping Distances of Cars"},{"1":"ChickWeight","2":"Weight versus age of chicks on different diets"},{"1":"chickwts","2":"Chicken Weights by Feed Type"},{"1":"co2","2":"Mauna Loa Atmospheric CO2 Concentration"},{"1":"CO2","2":"Carbon Dioxide Uptake in Grass Plants"},{"1":"crimtab","2":"Student's 3000 Criminals Data"},{"1":"discoveries","2":"Yearly Numbers of Important Discoveries"},{"1":"DNase","2":"Elisa assay of DNase"},{"1":"esoph","2":"Smoking, Alcohol and (O)esophageal Cancer"},{"1":"euro","2":"Conversion Rates of Euro Currencies"},{"1":"euro.cross (euro)","2":"Conversion Rates of Euro Currencies"},{"1":"eurodist","2":"Distances Between European Cities and Between US Cities"},{"1":"EuStockMarkets","2":"Daily Closing Prices of Major European Stock Indices, 1991-1998"},{"1":"faithful","2":"Old Faithful Geyser Data"},{"1":"fdeaths (UKLungDeaths)","2":"Monthly Deaths from Lung Diseases in the UK"},{"1":"Formaldehyde","2":"Determination of Formaldehyde"},{"1":"freeny","2":"Freeny's Revenue Data"},{"1":"freeny.x (freeny)","2":"Freeny's Revenue Data"},{"1":"freeny.y (freeny)","2":"Freeny's Revenue Data"},{"1":"HairEyeColor","2":"Hair and Eye Color of Statistics Students"},{"1":"Harman23.cor","2":"Harman Example 2.3"},{"1":"Harman74.cor","2":"Harman Example 7.4"},{"1":"Indometh","2":"Pharmacokinetics of Indomethacin"},{"1":"infert","2":"Infertility after Spontaneous and Induced Abortion"},{"1":"InsectSprays","2":"Effectiveness of Insect Sprays"},{"1":"iris","2":"Edgar Anderson's Iris Data"},{"1":"iris3","2":"Edgar Anderson's Iris Data"},{"1":"islands","2":"Areas of the World's Major Landmasses"},{"1":"JohnsonJohnson","2":"Quarterly Earnings per Johnson & Johnson Share"},{"1":"LakeHuron","2":"Level of Lake Huron 1875-1972"},{"1":"ldeaths (UKLungDeaths)","2":"Monthly Deaths from Lung Diseases in the UK"},{"1":"lh","2":"Luteinizing Hormone in Blood Samples"},{"1":"LifeCycleSavings","2":"Intercountry Life-Cycle Savings Data"},{"1":"Loblolly","2":"Growth of Loblolly Pine Trees"},{"1":"longley","2":"Longley's Economic Regression Data"},{"1":"lynx","2":"Annual Canadian Lynx trappings 1821-1934"},{"1":"mdeaths (UKLungDeaths)","2":"Monthly Deaths from Lung Diseases in the UK"},{"1":"morley","2":"Michelson Speed of Light Data"},{"1":"mtcars","2":"Motor Trend Car Road Tests"},{"1":"nhtemp","2":"Average Yearly Temperatures in New Haven"},{"1":"Nile","2":"Flow of the River Nile"},{"1":"nottem","2":"Average Monthly Temperatures at Nottingham, 1920-1939"},{"1":"npk","2":"Classical N, P, K Factorial Experiment"},{"1":"occupationalStatus","2":"Occupational Status of Fathers and their Sons"},{"1":"Orange","2":"Growth of Orange Trees"},{"1":"OrchardSprays","2":"Potency of Orchard Sprays"},{"1":"PlantGrowth","2":"Results from an Experiment on Plant Growth"},{"1":"precip","2":"Annual Precipitation in US Cities"},{"1":"presidents","2":"Quarterly Approval Ratings of US Presidents"},{"1":"pressure","2":"Vapor Pressure of Mercury as a Function of Temperature"},{"1":"Puromycin","2":"Reaction Velocity of an Enzymatic Reaction"},{"1":"quakes","2":"Locations of Earthquakes off Fiji"},{"1":"randu","2":"Random Numbers from Congruential Generator RANDU"},{"1":"rivers","2":"Lengths of Major North American Rivers"},{"1":"rock","2":"Measurements on Petroleum Rock Samples"},{"1":"Seatbelts","2":"Road Casualties in Great Britain 1969-84"},{"1":"sleep","2":"Student's Sleep Data"},{"1":"stack.loss (stackloss)","2":"Brownlee's Stack Loss Plant Data"},{"1":"stack.x (stackloss)","2":"Brownlee's Stack Loss Plant Data"},{"1":"stackloss","2":"Brownlee's Stack Loss Plant Data"},{"1":"state.abb (state)","2":"US State Facts and Figures"},{"1":"state.area (state)","2":"US State Facts and Figures"},{"1":"state.center (state)","2":"US State Facts and Figures"},{"1":"state.division (state)","2":"US State Facts and Figures"},{"1":"state.name (state)","2":"US State Facts and Figures"},{"1":"state.region (state)","2":"US State Facts and Figures"},{"1":"state.x77 (state)","2":"US State Facts and Figures"},{"1":"sunspot.month","2":"Monthly Sunspot Data, from 1749 to \"Present\""},{"1":"sunspot.year","2":"Yearly Sunspot Data, 1700-1988"},{"1":"sunspots","2":"Monthly Sunspot Numbers, 1749-1983"},{"1":"swiss","2":"Swiss Fertility and Socioeconomic Indicators (1888) Data"},{"1":"Theoph","2":"Pharmacokinetics of Theophylline"},{"1":"Titanic","2":"Survival of passengers on the Titanic"},{"1":"ToothGrowth","2":"The Effect of Vitamin C on Tooth Growth in Guinea Pigs"},{"1":"treering","2":"Yearly Tree-Ring Data, -6000-1979"},{"1":"trees","2":"Diameter, Height and Volume for Black Cherry Trees"},{"1":"UCBAdmissions","2":"Student Admissions at UC Berkeley"},{"1":"UKDriverDeaths","2":"Road Casualties in Great Britain 1969-84"},{"1":"UKgas","2":"UK Quarterly Gas Consumption"},{"1":"USAccDeaths","2":"Accidental Deaths in the US 1973-1978"},{"1":"USArrests","2":"Violent Crime Rates by US State"},{"1":"UScitiesD","2":"Distances Between European Cities and Between US Cities"},{"1":"USJudgeRatings","2":"Lawyers' Ratings of State Judges in the US Superior Court"},{"1":"USPersonalExpenditure","2":"Personal Expenditure Data"},{"1":"uspop","2":"Populations Recorded by the US Census"},{"1":"VADeaths","2":"Death Rates in Virginia (1940)"},{"1":"volcano","2":"Topographic Information on Auckland's Maunga Whau Volcano"},{"1":"warpbreaks","2":"The Number of Breaks in Yarn during Weaving"},{"1":"women","2":"Average Heights and Weights for American Women"},{"1":"WorldPhones","2":"The World's Telephones"},{"1":"WWWusage","2":"Internet Usage per Minute"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+<p>Since the {datasets} package is from base R, the data is not always immediately ready to be used with {ggplot2}. Luckily we have the {tidyverse} packages that make it easy to make the necessary changes.</p>
+<p>Here is an example using the USArrests (‘Violent Crime Rates by US State’) data set. We can start by loading the data set by using the data() function:</p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">USArrests</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Let’s take a quick look at what the first couple of rows of the data set looks like:</p>
+<div class="cell">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">USArrests</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>           Murder Assault UrbanPop Rape
+Alabama      13.2     236       58 21.2
+Alaska       10.0     263       48 44.5
+Arizona       8.1     294       80 31.0
+Arkansas      8.8     190       50 19.5
+California    9.0     276       91 40.6
+Colorado      7.9     204       78 38.7</code></pre>
+</div>
+</div>
+<p>As you can see, USArrests is a data frame. It has four columns and the names of the US states are row names. We would like to see them as the fifth column instead. We can use the {tibble} package to do that. While we’re at it, let’s also change the data frame into a tibble:</p>
+<div class="cell">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tibble.tidyverse.org/">tibble</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">usarrests_tbl</span> <span class="op">&lt;-</span> <span class="va">USArrests</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://tibble.tidyverse.org/reference/rownames.html">rownames_to_column</a></span><span class="op">(</span>var <span class="op">=</span> <span class="st">"State"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://tibble.tidyverse.org/reference/as_tibble.html">as_tibble</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["State"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Murder"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Assault"],"name":[3],"type":["int"],"align":["right"]},{"label":["UrbanPop"],"name":[4],"type":["int"],"align":["right"]},{"label":["Rape"],"name":[5],"type":["dbl"],"align":["right"]}],"data":[{"1":"Alabama","2":"13.2","3":"236","4":"58","5":"21.2"},{"1":"Alaska","2":"10.0","3":"263","4":"48","5":"44.5"},{"1":"Arizona","2":"8.1","3":"294","4":"80","5":"31.0"},{"1":"Arkansas","2":"8.8","3":"190","4":"50","5":"19.5"},{"1":"California","2":"9.0","3":"276","4":"91","5":"40.6"},{"1":"Colorado","2":"7.9","3":"204","4":"78","5":"38.7"},{"1":"Connecticut","2":"3.3","3":"110","4":"77","5":"11.1"},{"1":"Delaware","2":"5.9","3":"238","4":"72","5":"15.8"},{"1":"Florida","2":"15.4","3":"335","4":"80","5":"31.9"},{"1":"Georgia","2":"17.4","3":"211","4":"60","5":"25.8"},{"1":"Hawaii","2":"5.3","3":"46","4":"83","5":"20.2"},{"1":"Idaho","2":"2.6","3":"120","4":"54","5":"14.2"},{"1":"Illinois","2":"10.4","3":"249","4":"83","5":"24.0"},{"1":"Indiana","2":"7.2","3":"113","4":"65","5":"21.0"},{"1":"Iowa","2":"2.2","3":"56","4":"57","5":"11.3"},{"1":"Kansas","2":"6.0","3":"115","4":"66","5":"18.0"},{"1":"Kentucky","2":"9.7","3":"109","4":"52","5":"16.3"},{"1":"Louisiana","2":"15.4","3":"249","4":"66","5":"22.2"},{"1":"Maine","2":"2.1","3":"83","4":"51","5":"7.8"},{"1":"Maryland","2":"11.3","3":"300","4":"67","5":"27.8"},{"1":"Massachusetts","2":"4.4","3":"149","4":"85","5":"16.3"},{"1":"Michigan","2":"12.1","3":"255","4":"74","5":"35.1"},{"1":"Minnesota","2":"2.7","3":"72","4":"66","5":"14.9"},{"1":"Mississippi","2":"16.1","3":"259","4":"44","5":"17.1"},{"1":"Missouri","2":"9.0","3":"178","4":"70","5":"28.2"},{"1":"Montana","2":"6.0","3":"109","4":"53","5":"16.4"},{"1":"Nebraska","2":"4.3","3":"102","4":"62","5":"16.5"},{"1":"Nevada","2":"12.2","3":"252","4":"81","5":"46.0"},{"1":"New Hampshire","2":"2.1","3":"57","4":"56","5":"9.5"},{"1":"New Jersey","2":"7.4","3":"159","4":"89","5":"18.8"},{"1":"New Mexico","2":"11.4","3":"285","4":"70","5":"32.1"},{"1":"New York","2":"11.1","3":"254","4":"86","5":"26.1"},{"1":"North Carolina","2":"13.0","3":"337","4":"45","5":"16.1"},{"1":"North Dakota","2":"0.8","3":"45","4":"44","5":"7.3"},{"1":"Ohio","2":"7.3","3":"120","4":"75","5":"21.4"},{"1":"Oklahoma","2":"6.6","3":"151","4":"68","5":"20.0"},{"1":"Oregon","2":"4.9","3":"159","4":"67","5":"29.3"},{"1":"Pennsylvania","2":"6.3","3":"106","4":"72","5":"14.9"},{"1":"Rhode Island","2":"3.4","3":"174","4":"87","5":"8.3"},{"1":"South Carolina","2":"14.4","3":"279","4":"48","5":"22.5"},{"1":"South Dakota","2":"3.8","3":"86","4":"45","5":"12.8"},{"1":"Tennessee","2":"13.2","3":"188","4":"59","5":"26.9"},{"1":"Texas","2":"12.7","3":"201","4":"80","5":"25.5"},{"1":"Utah","2":"3.2","3":"120","4":"80","5":"22.9"},{"1":"Vermont","2":"2.2","3":"48","4":"32","5":"11.2"},{"1":"Virginia","2":"8.5","3":"156","4":"63","5":"20.7"},{"1":"Washington","2":"4.0","3":"145","4":"73","5":"26.2"},{"1":"West Virginia","2":"5.7","3":"81","4":"39","5":"9.3"},{"1":"Wisconsin","2":"2.6","3":"53","4":"66","5":"10.8"},{"1":"Wyoming","2":"6.8","3":"161","4":"60","5":"15.6"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+<p>We can then use the new tibble to create a simple visualization with {ggplot2}:</p>
+<div class="cell">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">usarrests_tbl</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">slice_max</span><span class="op">(</span><span class="va">Murder</span>, n <span class="op">=</span> <span class="fl">10</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">Murder</span>, <span class="va">UrbanPop</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_text.html">geom_label</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>label <span class="op">=</span> <span class="va">State</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="data_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="ggplot2movies" class="level3" data-number="3.1.2"><h3 data-number="3.1.2" class="anchored" data-anchor-id="ggplot2movies">
+<span class="header-section-number">3.1.2</span> {ggplot2movies}</h3>
+</section><section id="rdatasets" class="level3" data-number="3.1.3"><h3 data-number="3.1.3" class="anchored" data-anchor-id="rdatasets">
+<span class="header-section-number">3.1.3</span> {RDatasets}</h3>
+</section></section><section id="eda" class="level2" data-number="3.2"><h2 data-number="3.2" class="anchored" data-anchor-id="eda">
+<span class="header-section-number">3.2</span> EDA</h2>
+<section id="pairwise-plot-matrix" class="level3" data-number="3.2.1"><h3 data-number="3.2.1" class="anchored" data-anchor-id="pairwise-plot-matrix">
+<span class="header-section-number">3.2.1</span> Pairwise Plot Matrix</h3>
+</section><section id="correlation-matrix" class="level3" data-number="3.2.2"><h3 data-number="3.2.2" class="anchored" data-anchor-id="correlation-matrix">
+<span class="header-section-number">3.2.2</span> Correlation Matrix</h3>
+</section><section id="automated-eda-app" class="level3" data-number="3.2.3"><h3 data-number="3.2.3" class="anchored" data-anchor-id="automated-eda-app">
+<span class="header-section-number">3.2.3</span> Automated EDA App</h3>
 
 
-</section>
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -829,9 +900,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
+</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="./layers.html" class="pagination-link" aria-label="Layers">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Layers</span>
       </a>          
@@ -843,8 +912,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
 <p>ggplot2 extended was written by Antti Rask.</p>
 </div>   
@@ -856,8 +924,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
   </div>
 </footer>
-
-
 
 
 </body></html>
