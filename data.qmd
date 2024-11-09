@@ -130,11 +130,11 @@ tribble(
   paged_table()
 ```
 
-Here are some of the reasons why __Movies__ is a good example data set:
+Here are some of the reasons why __Movies__ is a good example data set because it includes:
 
-- There's a goldilocks amount of data. Not too little, not too much
-- There are _categorical_ data of both _nominal_ (title, genre) and _ordinal_ (mpaa) kind
-- There are _numerical_ data of both _continuous_ (budget, length, rating) and _discrete_ (year, votes) kind
+- A goldilocks amount of data. Not too little, not too much
+- _Categorical_ data of both _nominal_ (title, genre) and _ordinal_ (mpaa) kind
+- _Numerical_ data of both _continuous_ (budget, length, rating) and _discrete_ (year, votes) kind
 
 We can use two of those columns, __year__ and __rating__ to create a simple visualization with __ggplot2__:
 
