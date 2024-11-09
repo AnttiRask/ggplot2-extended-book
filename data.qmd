@@ -11,7 +11,7 @@ source("warning.R")
 
 This book is about tools for creating visualizations. But to visualize data you first need data. So let's start by taking a look at some of the data sets available to us without much hassle.
 
-### {datasets}
+### base R
 
 Base R comes with a bunch of data sets ready to use. There are classics like 'iris' and 'mtcars', but there are many more to choose from:
 
@@ -29,9 +29,9 @@ data() %>%
   paged_table()
 ```
 
-Since the {datasets} package is from base R, the data is not always immediately ready to be used with {ggplot2}. Luckily we have the {tidyverse} packages that make it easy to make the necessary changes.
+Since the __datasets__ package is from base R, the data is not always immediately ready to use with __ggplot2__ [@wickham2024]. Luckily we have the __tidyverse__ [@wickham2023b] packages that make it easy to make the necessary changes.
 
-Here is an example using the USArrests ('Violent Crime Rates by US State') data set. We can start by loading the data set by using the data() function:
+Here is an example using the __USArrests__ ('Violent Crime Rates by US State') data set. We can start by loading the data set by using the [data()](https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/data) function:
 
 ```{r}
 data(USArrests)
@@ -43,7 +43,7 @@ Let's take a quick look at what the first couple of rows of the data set looks l
 head(USArrests)
 ```
 
-As you can see, USArrests is a data frame. It has four columns and the names of the US states are row names. We would like to see them as the fifth column instead. We can use the {tibble} package to do that. While we're at it, let's also change the data frame into a tibble:
+As you can see, __USArrests__ is a data frame. It has four columns and the names of the US states are row names. We would like to see them as the fifth column instead. We can use the __tibble__ [@müller2023] package to do that. While we're at it, let's also change the data frame into a tibble:
 
 ```{r}
 library(tibble)
@@ -58,7 +58,7 @@ usarrests_tbl %>%
   paged_table()
 ```
 
-We can then use the new tibble to create a simple visualization with {ggplot2}:
+We can then use the new tibble to create a simple visualization with __ggplot2__:
 
 ```{r}
 library(ggplot2)
@@ -70,14 +70,90 @@ usarrests_tbl %>%
   geom_label(aes(label = State))
 ```
 
-### {ggplot2movies}
+### IMDb movies (1893-2005)
 
-### {RDatasets}
+__ggplot2movies__ [@wickham2015] used to be a part of the __ggplot2__ package itself. It’s now its own package to make __ggplot2__ lighter.
+
+But it’s a cool little package. It has [Internet Movie Database (IMDb)](https://www.imdb.com/) data about movies from between 1893 and 2005. The selected movies have "a known length and had been rated by at least one \[IMDb\] user." [@wickham2015].
+
+The __Movies__ data set has qualities that make it good for our needs. Let’s start by loading it:
+
+```{r}
+library(ggplot2movies)
+
+data(movies)
+```
+
+Let's take a quick look at what some of the data looks like:
+
+```{r, eval=FALSE}
+head(movies)
+```
+
+```{r, echo=FALSE, message=FALSE}
+head(movies) %>%
+  paged_table()
+```
+
+__Movies__ is already a tibble. It consists of 58788 rows (observations) and 24 columns (variables).
+
+When starting to work with a new data set it's always good to take a look at the documentation. To understand what is in those rows and columns (and what is not):
+
+```{r, echo=FALSE}
+tribble(
+  ~Variable,     ~Description,
+  "title",       "Title of the movie",
+  "year",        "Year of release",
+  "budget",      "Total budget (if known) in US dollars",
+  "length",      "Length in minutes",
+  "rating",      "Average IMDB user rating",
+  "votes",       "Number of IMDB users who rated this movie",
+  "r1",          "Multiplying by ten gives percentile (to nearest 10%) of users who rated this movie a 1",
+  "r2",          "Multiplying by ten gives percentile (to nearest 10%) of users who rated this movie a 2",
+  "r3",          "Multiplying by ten gives percentile (to nearest 10%) of users who rated this movie a 3",
+  "r4",          "Multiplying by ten gives percentile (to nearest 10%) of users who rated this movie a 4",
+  "r5",          "Multiplying by ten gives percentile (to nearest 10%) of users who rated this movie a 5",
+  "r6",          "Multiplying by ten gives percentile (to nearest 10%) of users who rated this movie a 6",
+  "r7",          "Multiplying by ten gives percentile (to nearest 10%) of users who rated this movie a 7",
+  "r8",          "Multiplying by ten gives percentile (to nearest 10%) of users who rated this movie a 8",
+  "r9",          "Multiplying by ten gives percentile (to nearest 10%) of users who rated this movie a 9",
+  "r10",         "Multiplying by ten gives percentile (to nearest 10%) of users who rated this movie a 10",
+  "mpaa",        "MPAA rating",
+  "action",      "Binary variable representing if movie was classified as belonging to that genre",
+  "animation",   "Binary variable representing if movie was classified as belonging to that genre",
+  "comedy",      "Binary variable representing if movie was classified as belonging to that genre",
+  "drama",       "Binary variable representing if movie was classified as belonging to that genre",
+  "documentary", "Binary variable representing if movie was classified as belonging to that genre",
+  "romance",     "Binary variable representing if movie was classified as belonging to that genre",
+  "short",       "Binary variable representing if movie was classified as belonging to that genre"
+) %>%
+  paged_table()
+```
+
+Here are some of the reasons why __Movies__ is a good example data set:
+
+- There's a goldilocks amount of data. Not too little, not too much
+- There are _categorical_ data of both _nominal_ (title, genre) and _ordinal_ (mpaa) kind
+- There are _numerical_ data of both _continuous_ (budget, length, rating) and _discrete_ (year, votes) kind
+
+We can use two of those columns, __year__ and __rating__ to create a simple visualization with __ggplot2__:
+
+```{r}
+library(ggplot2)
+
+movies %>%
+  ggplot(aes(year, rating)) +
+  geom_point()
+```
+
+As mentioned earlier, __Movies__ is already a tibble. But, it doesn't mean that the data is in an optimal format for all kinds of visualization. But we'll do all the necessary data wrangling within the chapter where we use the data.
+
+### RDatasets
 
 ## EDA
 
-### Pairwise Plot Matrix
+### Pairwise plot matrix
 
-### Correlation Matrix
+### Correlation matrix
 
-### Automated EDA App
+### Automated EDA app

@@ -4,7 +4,7 @@ This is the website for my book **ggplot2 extended**. It is about extending the 
 
 I will go through the basics of how ggplot2 works in @sec-ggplot2. However, this book is primarily for you if you have some basic understanding of how ggplot2 works. I would suggest you first read Hadley’s book **ggplot2: Elegant Graphics for Data Analysis** [@wickham2016]. The work-in-progress 3rd edition is [online](https://ggplot2-book.org/).
 
-**R for Data Science** [@wickham2023] also has [three chapters](https://r4ds.hadley.nz/visualize) that will get you started.
+**R for Data Science** [@wickham2023a] also has [three chapters](https://r4ds.hadley.nz/visualize) that will get you started.
 
 This book will then teach you how to get the most out of ggplot2 and the ecosystem around it.
 

@@ -258,6 +258,16 @@
       ],
       "Hash": "44c6a2f8202d5b7e878ea274b1092426"
     },
+    "ggplot2movies": {
+      "Package": "ggplot2movies",
+      "Version": "0.0.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R"
+      ],
+      "Hash": "df2c648760e7d07c45249c73ad5b95f9"
+    },
     "glue": {
       "Package": "glue",
       "Version": "1.8.0",

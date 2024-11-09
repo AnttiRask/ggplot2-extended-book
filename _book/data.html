@@ -52,7 +52,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
@@ -368,17 +388,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>
 <a href="#data-sets" id="toc-data-sets" class="nav-link active" data-scroll-target="#data-sets"><span class="header-section-number">3.1</span> Data Sets</a>
   <ul class="collapse">
-<li><a href="#datasets" id="toc-datasets" class="nav-link" data-scroll-target="#datasets"><span class="header-section-number">3.1.1</span> {datasets}</a></li>
-  <li><a href="#ggplot2movies" id="toc-ggplot2movies" class="nav-link" data-scroll-target="#ggplot2movies"><span class="header-section-number">3.1.2</span> {ggplot2movies}</a></li>
-  <li><a href="#rdatasets" id="toc-rdatasets" class="nav-link" data-scroll-target="#rdatasets"><span class="header-section-number">3.1.3</span> {RDatasets}</a></li>
+<li><a href="#base-r" id="toc-base-r" class="nav-link" data-scroll-target="#base-r"><span class="header-section-number">3.1.1</span> base R</a></li>
+  <li><a href="#imdb-movies-1893-2005" id="toc-imdb-movies-1893-2005" class="nav-link" data-scroll-target="#imdb-movies-1893-2005"><span class="header-section-number">3.1.2</span> IMDb movies (1893-2005)</a></li>
+  <li><a href="#rdatasets" id="toc-rdatasets" class="nav-link" data-scroll-target="#rdatasets"><span class="header-section-number">3.1.3</span> RDatasets</a></li>
   </ul>
 </li>
   <li>
 <a href="#eda" id="toc-eda" class="nav-link" data-scroll-target="#eda"><span class="header-section-number">3.2</span> EDA</a>
   <ul class="collapse">
-<li><a href="#pairwise-plot-matrix" id="toc-pairwise-plot-matrix" class="nav-link" data-scroll-target="#pairwise-plot-matrix"><span class="header-section-number">3.2.1</span> Pairwise Plot Matrix</a></li>
-  <li><a href="#correlation-matrix" id="toc-correlation-matrix" class="nav-link" data-scroll-target="#correlation-matrix"><span class="header-section-number">3.2.2</span> Correlation Matrix</a></li>
-  <li><a href="#automated-eda-app" id="toc-automated-eda-app" class="nav-link" data-scroll-target="#automated-eda-app"><span class="header-section-number">3.2.3</span> Automated EDA App</a></li>
+<li><a href="#pairwise-plot-matrix" id="toc-pairwise-plot-matrix" class="nav-link" data-scroll-target="#pairwise-plot-matrix"><span class="header-section-number">3.2.1</span> Pairwise plot matrix</a></li>
+  <li><a href="#correlation-matrix" id="toc-correlation-matrix" class="nav-link" data-scroll-target="#correlation-matrix"><span class="header-section-number">3.2.2</span> Correlation matrix</a></li>
+  <li><a href="#automated-eda-app" id="toc-automated-eda-app" class="nav-link" data-scroll-target="#automated-eda-app"><span class="header-section-number">3.2.3</span> Automated EDA app</a></li>
   </ul>
 </li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/edit/main/data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -415,8 +435,8 @@ This book/site is under construction
 <section id="data-sets" class="level2" data-number="3.1"><h2 data-number="3.1" class="anchored" data-anchor-id="data-sets">
 <span class="header-section-number">3.1</span> Data Sets</h2>
 <p>This book is about tools for creating visualizations. But to visualize data you first need data. So let’s start by taking a look at some of the data sets available to us without much hassle.</p>
-<section id="datasets" class="level3" data-number="3.1.1"><h3 data-number="3.1.1" class="anchored" data-anchor-id="datasets">
-<span class="header-section-number">3.1.1</span> {datasets}</h3>
+<section id="base-r" class="level3" data-number="3.1.1"><h3 data-number="3.1.1" class="anchored" data-anchor-id="base-r">
+<span class="header-section-number">3.1.1</span> base R</h3>
 <p>Base R comes with a bunch of data sets ready to use. There are classics like ‘iris’ and ‘mtcars’, but there are many more to choose from:</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -427,8 +447,8 @@ This book/site is under construction
 </div>
 </div>
 </div>
-<p>Since the {datasets} package is from base R, the data is not always immediately ready to be used with {ggplot2}. Luckily we have the {tidyverse} packages that make it easy to make the necessary changes.</p>
-<p>Here is an example using the USArrests (‘Violent Crime Rates by US State’) data set. We can start by loading the data set by using the data() function:</p>
+<p>Since the <strong>datasets</strong> package is from base R, the data is not always immediately ready to use with <strong>ggplot2</strong> <span class="citation" data-cites="wickham2024">(<a href="references.html#ref-wickham2024" role="doc-biblioref">Wickham 2024</a>)</span>. Luckily we have the <strong>tidyverse</strong> <span class="citation" data-cites="wickham2023b">(<a href="references.html#ref-wickham2023b" role="doc-biblioref">Wickham et al. 2023</a>)</span> packages that make it easy to make the necessary changes.</p>
+<p>Here is an example using the <strong>USArrests</strong> (‘Violent Crime Rates by US State’) data set. We can start by loading the data set by using the <a href="https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/data">data()</a> function:</p>
 <div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">USArrests</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -445,7 +465,7 @@ California    9.0     276       91 40.6
 Colorado      7.9     204       78 38.7</code></pre>
 </div>
 </div>
-<p>As you can see, USArrests is a data frame. It has four columns and the names of the US states are row names. We would like to see them as the fifth column instead. We can use the {tibble} package to do that. While we’re at it, let’s also change the data frame into a tibble:</p>
+<p>As you can see, <strong>USArrests</strong> is a data frame. It has four columns and the names of the US states are row names. We would like to see them as the fifth column instead. We can use the <strong>tibble</strong> <span class="citation" data-cites="müller2023">(<a href="references.html#ref-m%C3%BCller2023" role="doc-biblioref">Müller and Wickham 2023</a>)</span> package to do that. While we’re at it, let’s also change the data frame into a tibble:</p>
 <div class="cell">
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tibble.tidyverse.org/">tibble</a></span><span class="op">)</span></span>
 <span></span>
@@ -462,7 +482,7 @@ Colorado      7.9     204       78 38.7</code></pre>
 </div>
 </div>
 </div>
-<p>We can then use the new tibble to create a simple visualization with {ggplot2}:</p>
+<p>We can then use the new tibble to create a simple visualization with <strong>ggplot2</strong>:</p>
 <div class="cell">
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
 <span></span>
@@ -478,20 +498,87 @@ Colorado      7.9     204       78 38.7</code></pre>
 </div>
 </div>
 </div>
-</section><section id="ggplot2movies" class="level3" data-number="3.1.2"><h3 data-number="3.1.2" class="anchored" data-anchor-id="ggplot2movies">
-<span class="header-section-number">3.1.2</span> {ggplot2movies}</h3>
+</section><section id="imdb-movies-1893-2005" class="level3" data-number="3.1.2"><h3 data-number="3.1.2" class="anchored" data-anchor-id="imdb-movies-1893-2005">
+<span class="header-section-number">3.1.2</span> IMDb movies (1893-2005)</h3>
+<p><strong>ggplot2movies</strong> <span class="citation" data-cites="wickham2015">(<a href="references.html#ref-wickham2015" role="doc-biblioref">Wickham 2015</a>)</span> used to be a part of the <strong>ggplot2</strong> package itself. It’s now its own package to make <strong>ggplot2</strong> lighter.</p>
+<p>But it’s a cool little package. It has <a href="https://www.imdb.com/">Internet Movie Database (IMDb)</a> data about movies from between 1893 and 2005. The selected movies have “a known length and had been rated by at least one [IMDb] user.” <span class="citation" data-cites="wickham2015">(<a href="references.html#ref-wickham2015" role="doc-biblioref">Wickham 2015</a>)</span>.</p>
+<p>The <strong>Movies</strong> data set has qualities that make it good for our needs. Let’s start by loading it:</p>
+<div class="cell">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">ggplot2movies</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">movies</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Let’s take a quick look at what some of the data looks like:</p>
+<div class="cell">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">movies</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["title"],"name":[1],"type":["chr"],"align":["left"]},{"label":["year"],"name":[2],"type":["int"],"align":["right"]},{"label":["length"],"name":[3],"type":["int"],"align":["right"]},{"label":["budget"],"name":[4],"type":["int"],"align":["right"]},{"label":["rating"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["votes"],"name":[6],"type":["int"],"align":["right"]},{"label":["r1"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["r2"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["r3"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["r4"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["r5"],"name":[11],"type":["dbl"],"align":["right"]},{"label":["r6"],"name":[12],"type":["dbl"],"align":["right"]},{"label":["r7"],"name":[13],"type":["dbl"],"align":["right"]},{"label":["r8"],"name":[14],"type":["dbl"],"align":["right"]},{"label":["r9"],"name":[15],"type":["dbl"],"align":["right"]},{"label":["r10"],"name":[16],"type":["dbl"],"align":["right"]},{"label":["mpaa"],"name":[17],"type":["chr"],"align":["left"]},{"label":["Action"],"name":[18],"type":["int"],"align":["right"]},{"label":["Animation"],"name":[19],"type":["int"],"align":["right"]},{"label":["Comedy"],"name":[20],"type":["int"],"align":["right"]},{"label":["Drama"],"name":[21],"type":["int"],"align":["right"]},{"label":["Documentary"],"name":[22],"type":["int"],"align":["right"]},{"label":["Romance"],"name":[23],"type":["int"],"align":["right"]},{"label":["Short"],"name":[24],"type":["int"],"align":["right"]}],"data":[{"1":"$","2":"1971","3":"121","4":"NA","5":"6.4","6":"348","7":"4.5","8":"4.5","9":"4.5","10":"4.5","11":"14.5","12":"24.5","13":"24.5","14":"14.5","15":"4.5","16":"4.5","17":"","18":"0","19":"0","20":"1","21":"1","22":"0","23":"0","24":"0"},{"1":"$1000 a Touchdown","2":"1939","3":"71","4":"NA","5":"6.0","6":"20","7":"0.0","8":"14.5","9":"4.5","10":"24.5","11":"14.5","12":"14.5","13":"14.5","14":"4.5","15":"4.5","16":"14.5","17":"","18":"0","19":"0","20":"1","21":"0","22":"0","23":"0","24":"0"},{"1":"$21 a Day Once a Month","2":"1941","3":"7","4":"NA","5":"8.2","6":"5","7":"0.0","8":"0.0","9":"0.0","10":"0.0","11":"0.0","12":"24.5","13":"0.0","14":"44.5","15":"24.5","16":"24.5","17":"","18":"0","19":"1","20":"0","21":"0","22":"0","23":"0","24":"1"},{"1":"$40,000","2":"1996","3":"70","4":"NA","5":"8.2","6":"6","7":"14.5","8":"0.0","9":"0.0","10":"0.0","11":"0.0","12":"0.0","13":"0.0","14":"0.0","15":"34.5","16":"45.5","17":"","18":"0","19":"0","20":"1","21":"0","22":"0","23":"0","24":"0"},{"1":"$50,000 Climax Show, The","2":"1975","3":"71","4":"NA","5":"3.4","6":"17","7":"24.5","8":"4.5","9":"0.0","10":"14.5","11":"14.5","12":"4.5","13":"0.0","14":"0.0","15":"0.0","16":"24.5","17":"","18":"0","19":"0","20":"0","21":"0","22":"0","23":"0","24":"0"},{"1":"$pent","2":"2000","3":"91","4":"NA","5":"4.3","6":"45","7":"4.5","8":"4.5","9":"4.5","10":"14.5","11":"14.5","12":"14.5","13":"4.5","14":"4.5","15":"14.5","16":"14.5","17":"","18":"0","19":"0","20":"0","21":"1","22":"0","23":"0","24":"0"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+<p><strong>Movies</strong> is already a tibble. It consists of 58788 rows (observations) and 24 columns (variables).</p>
+<p>When starting to work with a new data set it’s always good to take a look at the documentation. To understand what is in those rows and columns (and what is not):</p>
+<div class="cell">
+<div class="cell-output-display">
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["Variable"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Description"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"title","2":"Title of the movie"},{"1":"year","2":"Year of release"},{"1":"budget","2":"Total budget (if known) in US dollars"},{"1":"length","2":"Length in minutes"},{"1":"rating","2":"Average IMDB user rating"},{"1":"votes","2":"Number of IMDB users who rated this movie"},{"1":"r1","2":"Multiplying by ten gives percentile (to nearest 10%) of users who rated this movie a 1"},{"1":"r2","2":"Multiplying by ten gives percentile (to nearest 10%) of users who rated this movie a 2"},{"1":"r3","2":"Multiplying by ten gives percentile (to nearest 10%) of users who rated this movie a 3"},{"1":"r4","2":"Multiplying by ten gives percentile (to nearest 10%) of users who rated this movie a 4"},{"1":"r5","2":"Multiplying by ten gives percentile (to nearest 10%) of users who rated this movie a 5"},{"1":"r6","2":"Multiplying by ten gives percentile (to nearest 10%) of users who rated this movie a 6"},{"1":"r7","2":"Multiplying by ten gives percentile (to nearest 10%) of users who rated this movie a 7"},{"1":"r8","2":"Multiplying by ten gives percentile (to nearest 10%) of users who rated this movie a 8"},{"1":"r9","2":"Multiplying by ten gives percentile (to nearest 10%) of users who rated this movie a 9"},{"1":"r10","2":"Multiplying by ten gives percentile (to nearest 10%) of users who rated this movie a 10"},{"1":"mpaa","2":"MPAA rating"},{"1":"action","2":"Binary variable representing if movie was classified as belonging to that genre"},{"1":"animation","2":"Binary variable representing if movie was classified as belonging to that genre"},{"1":"comedy","2":"Binary variable representing if movie was classified as belonging to that genre"},{"1":"drama","2":"Binary variable representing if movie was classified as belonging to that genre"},{"1":"documentary","2":"Binary variable representing if movie was classified as belonging to that genre"},{"1":"romance","2":"Binary variable representing if movie was classified as belonging to that genre"},{"1":"short","2":"Binary variable representing if movie was classified as belonging to that genre"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+<p>Here are some of the reasons why <strong>Movies</strong> is a good example data set:</p>
+<ul>
+<li>There’s a goldilocks amount of data. Not too little, not too much</li>
+<li>There are <em>categorical</em> data of both <em>nominal</em> (title, genre) and <em>ordinal</em> (mpaa) kind</li>
+<li>There are <em>numerical</em> data of both <em>continuous</em> (budget, length, rating) and <em>discrete</em> (year, votes) kind</li>
+</ul>
+<p>We can use two of those columns, <strong>year</strong> and <strong>rating</strong> to create a simple visualization with <strong>ggplot2</strong>:</p>
+<div class="cell">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">year</span>, <span class="va">rating</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="data_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>As mentioned earlier, <strong>Movies</strong> is already a tibble. But, it doesn’t mean that the data is in an optimal format for all kinds of visualization. But we’ll do all the necessary data wrangling within the chapter where we use the data.</p>
 </section><section id="rdatasets" class="level3" data-number="3.1.3"><h3 data-number="3.1.3" class="anchored" data-anchor-id="rdatasets">
-<span class="header-section-number">3.1.3</span> {RDatasets}</h3>
+<span class="header-section-number">3.1.3</span> RDatasets</h3>
 </section></section><section id="eda" class="level2" data-number="3.2"><h2 data-number="3.2" class="anchored" data-anchor-id="eda">
 <span class="header-section-number">3.2</span> EDA</h2>
 <section id="pairwise-plot-matrix" class="level3" data-number="3.2.1"><h3 data-number="3.2.1" class="anchored" data-anchor-id="pairwise-plot-matrix">
-<span class="header-section-number">3.2.1</span> Pairwise Plot Matrix</h3>
+<span class="header-section-number">3.2.1</span> Pairwise plot matrix</h3>
 </section><section id="correlation-matrix" class="level3" data-number="3.2.2"><h3 data-number="3.2.2" class="anchored" data-anchor-id="correlation-matrix">
-<span class="header-section-number">3.2.2</span> Correlation Matrix</h3>
+<span class="header-section-number">3.2.2</span> Correlation matrix</h3>
 </section><section id="automated-eda-app" class="level3" data-number="3.2.3"><h3 data-number="3.2.3" class="anchored" data-anchor-id="automated-eda-app">
-<span class="header-section-number">3.2.3</span> Automated EDA App</h3>
+<span class="header-section-number">3.2.3</span> Automated EDA app</h3>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-müller2023" class="csl-entry" role="listitem">
+Müller, Kirill, and Hadley Wickham. 2023. <em>Tibble: Simple Data Frames. R Package Version 3.2.1</em>.
+</div>
+<div id="ref-wickham2015" class="csl-entry" role="listitem">
+Wickham, Hadley. 2015. <em>Ggplot2movies: Movies Data. R Package Version 0.0.1</em>.
+</div>
+<div id="ref-wickham2024" class="csl-entry" role="listitem">
+———. 2024. <em>Ggplot2: Elegant Graphics for Data Analysis. R Package Version 3.5.1</em>.
+</div>
+<div id="ref-wickham2023b" class="csl-entry" role="listitem">
+Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2023. <em>Tidyverse: Welcome to the Tidyverse. R Package Version 2.0.0</em>.
+</div>
+</div>
 </section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
