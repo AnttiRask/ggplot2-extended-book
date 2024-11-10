@@ -1,0 +1,2338 @@
+ID;Package;Item;Title;CSV;Doc;Rows;Cols;n_binary;n_character;n_factor;n_logical;n_numeric
+1;AER;Affairs;Fair's Extramarital Affairs Data;CSV;Doc;601;9;2;0;2;0;7
+2;AER;ArgentinaCPI;Consumer Price Index in Argentina;CSV;Doc;80;2;0;0;0;0;2
+3;AER;BankWages;Bank Wages;CSV;Doc;474;4;2;0;3;0;1
+4;AER;BenderlyZwick;Benderly and Zwick Data: Inflation, Growth and Stock Returns;CSV;Doc;31;5;0;0;0;0;5
+5;AER;BondYield;Bond Yield Data;CSV;Doc;60;2;0;0;0;0;2
+6;AER;CartelStability;CartelStability;CSV;Doc;328;5;2;0;3;0;2
+7;AER;CASchools;California Test Score Data;CSV;Doc;420;14;1;2;2;0;10
+8;AER;ChinaIncome;Chinese Real National Income Data;CSV;Doc;37;5;0;0;0;0;5
+9;AER;CigarettesB;Cigarette Consumption Data;CSV;Doc;46;3;0;0;0;0;3
+10;AER;CigarettesSW;Cigarette Consumption Panel Data;CSV;Doc;96;9;2;0;2;0;7
+11;AER;CollegeDistance;College Distance Data;CSV;Doc;4739;14;7;0;8;0;6
+12;AER;ConsumerGood;Properties of a Fast-Moving Consumer Good;CSV;Doc;108;3;0;0;0;0;3
+13;AER;CPS1985;Determinants of Wages Data (CPS 1985);CSV;Doc;534;11;4;0;7;0;4
+14;AER;CPS1988;Determinants of Wages Data (CPS 1988);CSV;Doc;28155;7;3;0;4;0;3
+15;AER;CPSSW04;Stock and Watson CPS Data Sets;CSV;Doc;7986;4;2;0;2;0;2
+16;AER;CPSSW3;Stock and Watson CPS Data Sets;CSV;Doc;20999;3;1;0;2;0;1
+17;AER;CPSSW8;Stock and Watson CPS Data Sets;CSV;Doc;61395;5;1;0;2;0;3
+18;AER;CPSSW9204;Stock and Watson CPS Data Sets;CSV;Doc;15588;5;3;0;3;0;2
+19;AER;CPSSW9298;Stock and Watson CPS Data Sets;CSV;Doc;13501;5;3;0;3;0;2
+20;AER;CPSSWEducation;Stock and Watson CPS Data Sets;CSV;Doc;2950;4;2;0;1;0;3
+21;AER;CreditCard;Expenditure and Default Data;CSV;Doc;1319;12;4;0;3;0;9
+22;AER;DJFranses;Dow Jones Index Data (Franses);CSV;Doc;770;2;0;0;0;0;2
+23;AER;DJIA8012;Dow Jones Industrial Average (DJIA) index;CSV;Doc;8610;1;0;0;0;0;1
+24;AER;DoctorVisits;Australian Health Service Utilization Data;CSV;Doc;5190;12;6;0;6;0;6
+25;AER;DutchAdvert;TV and Radio Advertising Expenditures Data;CSV;Doc;221;2;0;0;0;0;2
+26;AER;DutchSales;Dutch Retail Sales Index Data;CSV;Doc;425;2;0;0;0;0;2
+27;AER;Electricity1955;Cost Function of Electricity Producers (1955, Nerlove Data);CSV;Doc;159;8;0;0;0;0;8
+28;AER;Electricity1970;Cost Function of Electricity Producers 1970;CSV;Doc;158;8;0;0;0;0;8
+29;AER;EquationCitations;Number of Equations and Citations for Evolutionary Biology Publications;CSV;Doc;649;13;0;1;1;0;11
+30;AER;Equipment;Transportation Equipment Manufacturing Data;CSV;Doc;25;4;0;0;0;0;4
+31;AER;EuroEnergy;European Energy Consumption Data;CSV;Doc;20;2;0;0;0;0;2
+32;AER;Fatalities;US Traffic Fatalities;CSV;Doc;336;34;3;0;5;0;29
+33;AER;Fertility;Fertility and Women's Labor Supply;CSV;Doc;254654;8;6;0;6;0;2
+34;AER;Fertility2;Fertility and Women's Labor Supply;CSV;Doc;30000;8;6;0;6;0;2
+35;AER;FrozenJuice;Price of Frozen Orange Juice;CSV;Doc;612;3;0;0;0;0;3
+36;AER;GermanUnemployment;Unemployment in Germany Data;CSV;Doc;120;2;0;0;0;0;2
+37;AER;GoldSilver;Gold and Silver Prices;CSV;Doc;9132;2;0;0;0;0;2
+38;AER;GrowthDJ;Determinants of Economic Growth;CSV;Doc;121;10;3;0;3;0;7
+39;AER;GrowthSW;Determinants of Economic Growth;CSV;Doc;65;6;0;0;0;0;6
+40;AER;Grunfeld;Grunfeld's Investment Data;CSV;Doc;220;5;0;0;1;0;4
+41;AER;GSOEP9402;German Socio-Economic Panel 1994-2002;CSV;Doc;675;12;1;0;5;0;7
+42;AER;GSS7402;US General Social Survey 1974-2002;CSV;Doc;9120;10;4;0;4;0;6
+43;AER;Guns;More Guns, Less Crime?;CSV;Doc;1173;13;1;0;3;0;10
+44;AER;HealthInsurance;Medical Expenditure Panel Survey Data;CSV;Doc;8802;11;6;0;9;0;2
+45;AER;HMDA;Home Mortgage Disclosure Act Data;CSV;Doc;2380;14;8;0;10;0;4
+46;AER;HousePrices;House Prices in the City of Windsor, Canada;CSV;Doc;546;12;6;0;6;0;6
+47;AER;Journals;Economics Journal Subscription Data;CSV;Doc;180;10;1;1;3;0;6
+48;AER;KleinI;Klein Model I;CSV;Doc;22;9;0;0;0;0;9
+49;AER;Longley;Longley's Regression Data;CSV;Doc;16;4;0;0;0;0;4
+50;AER;ManufactCosts;Manufacturing Costs Data;CSV;Doc;25;9;0;0;0;0;9
+51;AER;MarkDollar;DEM/USD Exchange Rate Returns;CSV;Doc;518;2;0;0;0;0;2
+52;AER;MarkPound;DEM/GBP Exchange Rate Returns;CSV;Doc;1974;2;0;0;0;0;2
+53;AER;MASchools;Massachusetts Test Score Data;CSV;Doc;220;16;0;2;0;0;14
+54;AER;Medicaid1986;Medicaid Utilization Data;CSV;Doc;996;14;5;0;5;0;9
+55;AER;Mortgage;Fixed versus Adjustable Mortgages;CSV;Doc;78;16;5;0;5;0;11
+56;AER;MotorCycles;Motor Cycles in The Netherlands;CSV;Doc;48;2;0;0;0;0;2
+57;AER;MotorCycles2;Motor Cycles in The Netherlands;CSV;Doc;67;2;0;0;0;0;2
+58;AER;MSCISwitzerland;MSCI Switzerland Index;CSV;Doc;4697;1;0;0;0;0;1
+59;AER;Municipalities;Municipal Expenditure Data;CSV;Doc;2385;5;0;0;2;0;3
+60;AER;MurderRates;Determinants of Murder Rates in the United States;CSV;Doc;44;8;1;0;1;0;7
+61;AER;NaturalGas;Natural Gas Data;CSV;Doc;138;10;0;0;3;0;7
+62;AER;NMES1988;Demand for Medical Care in NMES 1988;CSV;Doc;4406;19;7;0;9;0;10
+63;AER;NYSESW;Daily NYSE Composite Index;CSV;Doc;4003;1;0;0;0;0;1
+64;AER;OECDGas;Gasoline Consumption Data;CSV;Doc;342;6;0;0;1;0;5
+65;AER;OECDGrowth;OECD Macroeconomic Data;CSV;Doc;22;6;0;0;0;0;6
+66;AER;OlympicTV;Television Rights for Olympic Games;CSV;Doc;10;2;0;0;1;0;1
+67;AER;OrangeCounty;Orange County Employment;CSV;Doc;76;2;0;0;0;0;2
+68;AER;Parade2005;Parade Magazine 2005 Earnings Data;CSV;Doc;130;5;2;0;3;0;2
+69;AER;PepperPrice;Black and White Pepper Prices;CSV;Doc;271;2;0;0;0;0;2
+70;AER;PhDPublications;Doctoral Publications;CSV;Doc;915;6;2;0;2;0;4
+71;AER;ProgramEffectiveness;Program Effectiveness Data;CSV;Doc;32;4;2;0;2;0;2
+72;AER;PSID1976;Labor Force Participation Data;CSV;Doc;753;21;4;0;4;0;17
+73;AER;PSID1982;PSID Earnings Data 1982;CSV;Doc;595;12;8;0;8;0;4
+74;AER;PSID7682;PSID Earnings Panel Data (1976-1982);CSV;Doc;4165;14;8;0;10;0;4
+75;AER;RecreationDemand;Recreation Demand Data;CSV;Doc;659;8;2;0;2;0;6
+76;AER;ResumeNames;Are Emily and Greg More Employable Than Lakisha and Jamal?;CSV;Doc;4870;27;21;0;25;0;2
+77;AER;ShipAccidents;Ship Accidents;CSV;Doc;40;5;1;0;3;0;2
+78;AER;SIC33;SIC33 Production Data;CSV;Doc;27;3;0;0;0;0;3
+79;AER;SmokeBan;Do Workplace Smoking Bans Reduce Smoking?;CSV;Doc;10000;7;5;0;6;0;1
+80;AER;SportsCards;Endowment Effect for Sports Cards;CSV;Doc;148;9;4;0;6;0;3
+81;AER;STAR;Project STAR: Student-Teacher Achievement Ratio;CSV;Doc;11598;47;8;0;34;0;12
+82;AER;StrikeDuration;Strike Durations;CSV;Doc;62;2;0;0;0;0;2
+83;AER;SwissLabor;Swiss Labor Market Participation Data;CSV;Doc;872;7;2;0;2;0;5
+84;AER;TeachingRatings;Impact of Beauty on Instructor's Teaching Ratings;CSV;Doc;463;12;6;0;7;0;5
+85;AER;TechChange;Technological Change Data;CSV;Doc;41;3;0;0;0;0;3
+86;AER;TradeCredit;Trade Credit and the Money Market;CSV;Doc;21;7;0;0;0;0;7
+87;AER;TravelMode;Travel Mode Choice Data;CSV;Doc;840;9;1;0;3;0;6
+88;AER;UKInflation;UK Manufacturing Inflation Data;CSV;Doc;54;2;0;0;0;0;2
+89;AER;UKNonDurables;Consumption of Non-Durables in the UK;CSV;Doc;136;2;0;0;0;0;2
+90;AER;USAirlines;Cost Data for US Airlines;CSV;Doc;90;6;0;0;2;0;4
+91;AER;USConsump1950;US Consumption Data (1940-1950);CSV;Doc;11;3;1;0;0;0;3
+92;AER;USConsump1979;US Consumption Data (1970-1979);CSV;Doc;10;2;0;0;0;0;2
+93;AER;USConsump1993;US Consumption Data (1950-1993);CSV;Doc;44;2;0;0;0;0;2
+94;AER;USCrudes;US Crudes Data;CSV;Doc;99;3;0;0;0;0;3
+95;AER;USGasB;US Gasoline Market Data (1950-1987, Baltagi);CSV;Doc;38;6;0;0;0;0;6
+96;AER;USGasG;US Gasoline Market Data (1960-1995, Greene);CSV;Doc;36;10;0;0;0;0;10
+97;AER;USInvest;US Investment Data;CSV;Doc;15;4;0;0;0;0;4
+98;AER;USMacroB;US Macroeconomic Data (1959-1995, Baltagi);CSV;Doc;146;3;0;0;0;0;3
+99;AER;USMacroG;US Macroeconomic Data (1950-2000, Greene);CSV;Doc;204;12;0;0;0;0;12
+100;AER;USMacroSW;US Macroeconomic Data (1957-2005, Stock & Watson);CSV;Doc;193;7;0;0;0;0;7
+101;AER;USMacroSWM;Monthly US Macroeconomic Data (1947-2004, Stock & Watson);CSV;Doc;696;4;0;0;0;0;4
+102;AER;USMacroSWQ;Quarterly US Macroeconomic Data (1947-2004, Stock & Watson);CSV;Doc;232;2;0;0;0;0;2
+103;AER;USMoney;USMoney;CSV;Doc;136;3;0;0;0;0;3
+104;AER;USProdIndex;Index of US Industrial Production;CSV;Doc;128;2;0;0;0;0;2
+105;AER;USSeatBelts;Effects of Mandatory Seat Belt Laws in the US;CSV;Doc;765;12;4;0;7;0;5
+106;AER;USStocksSW;Monthly US Stock Returns (1931-2002, Stock & Watson);CSV;Doc;864;2;0;0;0;0;2
+107;AER;WeakInstrument;Artificial Weak Instrument Data;CSV;Doc;200;3;0;0;0;0;3
+108;aod;antibio;Antibiotics against Shipping Fever in Calves;CSV;Doc;24;3;0;0;0;0;3
+109;aod;cohorts;Age, Period and Cohort Effects for Vital Rates;CSV;Doc;49;4;0;0;2;0;2
+110;aod;dja;Mortality of Djallonke Lambs in Senegal;CSV;Doc;75;6;1;0;3;0;3
+111;aod;lizards;A Comparison of Site Preferences of Two Species of Lizard;CSV;Doc;24;6;3;0;4;0;2
+112;aod;mice;Pregnant Female Mice Experiment;CSV;Doc;20;3;1;0;1;0;2
+113;aod;orob1;Germination Data;CSV;Doc;16;3;0;0;1;0;2
+114;aod;orob2;Germination Data;CSV;Doc;21;4;2;0;2;0;2
+115;aod;rabbits;Rabbits Foetuses Survival Experiment;CSV;Doc;84;3;0;0;1;0;2
+116;aod;rats;Rats Diet Experiment;CSV;Doc;32;3;1;0;1;0;2
+117;aod;salmonella;Salmonella Reverse Mutagenicity Assay;CSV;Doc;18;2;0;0;0;0;2
+118;asaur;ashkenazi;ashkenazi;CSV;Doc;3920;4;2;0;0;0;4
+119;asaur;ChanningHouse;Channing House Data;CSV;Doc;457;5;2;0;1;0;4
+120;asaur;gastricXelox;gasticXelox;CSV;Doc;48;2;1;0;0;0;2
+121;asaur;hepatoCellular;hepatoCellular;CSV;Doc;227;48;15;0;0;0;48
+122;asaur;pancreatic;pancreatic;CSV;Doc;41;4;1;0;4;0;0
+123;asaur;pancreatic2;pancreatic2;CSV;Doc;41;4;1;0;1;0;3
+124;asaur;pharmacoSmoking;pharmacoSmoking;CSV;Doc;125;14;5;0;7;0;7
+125;asaur;prostateSurvival;prostateSurvival;CSV;Doc;14294;5;1;0;3;0;2
+126;bakeoff;bakers (data);Bakers;CSV;Doc;120;24;1;6;0;0;14
+127;bakeoff;bakers_raw (data);Bakers (raw);CSV;Doc;120;8;0;6;1;0;1
+128;bakeoff;bakes_raw (data);Bakes (raw);CSV;Doc;548;6;0;3;0;0;3
+129;bakeoff;challenges (data);Challenges;CSV;Doc;1136;7;0;4;0;0;3
+130;bakeoff;episodes (data);Episodes;CSV;Doc;94;10;1;3;0;0;7
+131;bakeoff;episodes_raw (data);Each episodes' challenges (raw);CSV;Doc;704;6;0;3;2;0;1
+132;bakeoff;ratings (data);Ratings;CSV;Doc;94;11;0;1;0;0;9
+133;bakeoff;ratings_raw (data);Each episode's ratings (raw);CSV;Doc;94;9;0;0;2;0;6
+134;bakeoff;results_raw (data);Each baker's results by episode (raw);CSV;Doc;1136;4;0;1;3;0;0
+135;bakeoff;seasons_raw (data);Data about each season aired in the US (raw);CSV;Doc;50;4;0;0;0;0;3
+136;bakeoff;series_raw (data);Data about each series aired in the UK (raw);CSV;Doc;10;11;1;6;1;0;2
+137;bakeoff;spice_test_wide (data);Spice Test;CSV;Doc;4;7;5;4;0;0;3
+138;betareg;CarTask;Partition-primed Probability Judgement Task for Car Dealership;CSV;Doc;155;3;1;0;1;0;2
+139;betareg;FoodExpenditure;Proportion of Household Income Spent on Food;CSV;Doc;38;3;0;0;0;0;3
+140;betareg;GasolineYield;Estimation of Gasoline Yields from Crude Oil;CSV;Doc;32;6;0;0;1;0;5
+141;betareg;ImpreciseTask;Imprecise Probabilities for Sunday Weather and Boeing Stock Task;CSV;Doc;242;3;1;0;1;0;2
+142;betareg;LossAversion;(No) Myopic Loss Aversion in Adolescents;CSV;Doc;570;7;4;0;5;0;2
+143;betareg;MockJurors;Confidence of Mock Jurors in Their Verdicts;CSV;Doc;104;3;2;0;2;0;1
+144;betareg;ReadingSkills;Dyslexia and IQ Predicting Reading Accuracy;CSV;Doc;44;4;1;0;1;0;3
+145;betareg;StressAnxiety;Dependency of Anxiety on Stress;CSV;Doc;166;2;0;0;0;0;2
+146;betareg;WeatherTask;Weather Task With Priming and Precise and Imprecise Probabilities;CSV;Doc;345;3;2;0;2;0;1
+147;boot;acme;Monthly Excess Returns;CSV;Doc;60;3;0;1;0;0;2
+148;boot;aids;Delay in AIDS Reporting in England and Wales;CSV;Doc;570;6;1;0;0;0;6
+149;boot;aircondit;Failures of Air-conditioning Equipment;CSV;Doc;12;1;0;0;0;0;1
+150;boot;aircondit7;Failures of Air-conditioning Equipment;CSV;Doc;24;1;0;0;0;0;1
+151;boot;amis;Car Speeding and Warning Signs;CSV;Doc;8437;4;1;0;0;0;4
+152;boot;aml;Remission Times for Acute Myelogenous Leukaemia;CSV;Doc;23;3;2;0;0;0;3
+153;boot;beaver;Beaver Body Temperature Data;CSV;Doc;100;4;2;0;0;0;4
+154;boot;bigcity;Population of U.S. Cities;CSV;Doc;49;2;0;0;0;0;2
+155;boot;brambles;Spatial Location of Bramble Canes;CSV;Doc;823;3;0;0;0;0;3
+156;boot;breslow;Smoking Deaths Among Doctors;CSV;Doc;10;5;1;0;1;0;4
+157;boot;calcium;Calcium Uptake Data;CSV;Doc;27;2;0;0;0;0;2
+158;boot;cane;Sugar-cane Disease Data;CSV;Doc;180;5;0;0;2;0;3
+159;boot;capability;Simulated Manufacturing Process Data;CSV;Doc;75;1;0;0;0;0;1
+160;boot;catsM;Weight Data for Domestic Cats;CSV;Doc;97;3;0;0;1;0;2
+161;boot;cav;Position of Muscle Caveolae;CSV;Doc;138;2;0;0;0;0;2
+162;boot;cd4;CD4 Counts for HIV-Positive Patients;CSV;Doc;20;2;0;0;0;0;2
+163;boot;channing;Channing House Data;CSV;Doc;462;5;2;0;1;0;4
+164;boot;city;Population of U.S. Cities;CSV;Doc;10;2;0;0;0;0;2
+165;boot;claridge;Genetic Links to Left-handedness;CSV;Doc;37;2;0;0;0;0;2
+166;boot;cloth;Number of Flaws in Cloth;CSV;Doc;32;2;0;0;0;0;2
+167;boot;co.transfer;Carbon Monoxide Transfer;CSV;Doc;7;2;0;0;0;0;2
+168;boot;coal;Dates of Coal Mining Disasters;CSV;Doc;191;1;0;0;0;0;1
+169;boot;darwin;Darwin's Plant Height Differences;CSV;Doc;15;1;0;0;0;0;1
+170;boot;dogs;Cardiac Data for Domestic Dogs;CSV;Doc;7;2;0;0;0;0;2
+171;boot;downs.bc;Incidence of Down's Syndrome in British Columbia;CSV;Doc;30;3;0;0;0;0;3
+172;boot;ducks;Behavioral and Plumage Characteristics of Hybrid Ducks;CSV;Doc;11;2;0;0;0;0;2
+173;boot;fir;Counts of Balsam-fir Seedlings;CSV;Doc;50;3;0;0;0;0;3
+174;boot;frets;Head Dimensions in Brothers;CSV;Doc;25;4;0;0;0;0;4
+175;boot;grav;Acceleration Due to Gravity;CSV;Doc;26;2;1;0;1;0;1
+176;boot;gravity;Acceleration Due to Gravity;CSV;Doc;81;2;0;0;1;0;1
+177;boot;hirose;Failure Time of PET Film;CSV;Doc;44;3;1;0;0;0;3
+178;boot;islay;Jura Quartzite Azimuths on Islay;CSV;Doc;18;1;0;0;0;0;1
+179;boot;manaus;Average Heights of the Rio Negro river at Manaus;CSV;Doc;1080;2;0;0;0;0;2
+180;boot;melanoma;Survival from Malignant Melanoma;CSV;Doc;205;7;2;0;0;0;7
+181;boot;motor;Data from a Simulated Motorcycle Accident;CSV;Doc;94;4;0;0;0;0;4
+182;boot;neuro;Neurophysiological Point Process Data;CSV;Doc;469;6;0;0;0;0;6
+183;boot;nitrofen;Toxicity of Nitrofen in Aquatic Systems;CSV;Doc;50;5;0;0;0;0;5
+184;boot;nodal;Nodal Involvement in Prostate Cancer;CSV;Doc;53;7;6;0;0;0;7
+185;boot;nuclear;Nuclear Power Station Construction Data;CSV;Doc;32;11;5;0;0;0;11
+186;boot;paulsen;Neurotransmission in Guinea Pig Brains;CSV;Doc;346;1;0;0;0;0;1
+187;boot;poisons;Animal Survival Times;CSV;Doc;48;3;0;0;2;0;1
+188;boot;polar;Pole Positions of New Caledonian Laterites;CSV;Doc;50;2;0;0;0;0;2
+189;boot;remission;Cancer Remission and Cell Activity;CSV;Doc;27;3;1;0;0;0;3
+190;boot;salinity;Water Salinity and River Discharge;CSV;Doc;28;4;0;0;0;0;4
+191;boot;survival;Survival of Rats after Radiation Doses;CSV;Doc;14;2;0;0;0;0;2
+192;boot;tau;Tau Particle Decay Modes;CSV;Doc;60;2;0;0;1;0;1
+193;boot;tuna;Tuna Sighting Data;CSV;Doc;64;1;0;0;0;0;1
+194;boot;urine;Urine Analysis Data;CSV;Doc;79;7;1;0;0;0;7
+195;boot;wool;Australian Relative Wool Prices;CSV;Doc;309;2;0;0;0;0;2
+196;carData;Adler;Experimenter Expectations;CSV;Doc;108;3;1;0;2;0;1
+197;carData;AMSsurvey;American Math Society Survey Data;CSV;Doc;24;5;2;0;3;0;2
+198;carData;Angell;Moral Integration of American Cities;CSV;Doc;43;4;0;0;1;0;3
+199;carData;Anscombe;U. S. State Public-School Expenditures;CSV;Doc;51;4;0;0;0;0;4
+200;carData;Arrests;Arrests for Marijuana Possession;CSV;Doc;5226;8;5;0;5;0;3
+201;carData;Baumann;Methods of Teaching Reading Comprehension;CSV;Doc;66;6;0;0;1;0;5
+202;carData;BEPS;British Election Panel Study;CSV;Doc;1525;10;1;0;2;0;8
+203;carData;Bfox;Canadian Women's Labour-Force Participation;CSV;Doc;30;6;0;0;0;0;6
+204;carData;Blackmore;Exercise Histories of Eating-Disordered and Control Subjects;CSV;Doc;945;4;1;0;2;0;2
+205;carData;Burt;Fraudulent Data on IQs of Twins Raised Apart;CSV;Doc;27;3;0;0;1;0;2
+206;carData;CanPop;Canadian Population Data;CSV;Doc;16;2;0;0;0;0;2
+207;carData;CES11;2011 Canadian National Election Study, With Attitude Toward Abortion;CSV;Doc;2231;9;3;0;6;0;3
+208;carData;Chile;Voting Intentions in the 1988 Chilean Plebiscite;CSV;Doc;2700;8;1;0;4;0;4
+209;carData;Chirot;The 1907 Romanian Peasant Rebellion;CSV;Doc;32;5;0;0;0;0;5
+210;carData;Cowles;Cowles and Davis's Data on Volunteering;CSV;Doc;1421;4;2;0;2;0;2
+211;carData;Davis;Self-Reports of Height and Weight;CSV;Doc;200;5;1;0;1;0;4
+212;carData;DavisThin;Davis's Data on Drive for Thinness;CSV;Doc;191;7;0;0;0;0;7
+213;carData;Depredations;Minnesota Wolf Depredation Data;CSV;Doc;434;5;0;0;0;0;5
+214;carData;Duncan;Duncan's Occupational Prestige Data;CSV;Doc;45;4;0;0;1;0;3
+215;carData;Ericksen;The 1980 U.S. Census Undercount;CSV;Doc;66;9;1;0;1;0;8
+216;carData;Florida;Florida County Voting;CSV;Doc;67;11;0;0;0;0;11
+217;carData;Freedman;Crowding and Crime in U. S. Metropolitan Areas;CSV;Doc;110;4;0;0;0;0;4
+218;carData;Friendly;Format Effects on Recall;CSV;Doc;30;2;0;0;1;0;1
+219;carData;Ginzberg;Data on Depression;CSV;Doc;82;6;0;0;0;0;6
+220;carData;Greene;Refugee Appeals;CSV;Doc;384;7;3;0;6;0;1
+221;carData;GSSvocab;Data from the General Social Survey (GSS) from the National Opinion Research Center of the University of Chicago.;CSV;Doc;28867;8;2;0;5;0;3
+222;carData;Guyer;Anonymity and Cooperation;CSV;Doc;20;3;2;0;2;0;1
+223;carData;Hartnagel;Canadian Crime-Rates Time Series;CSV;Doc;38;8;0;0;0;0;8
+224;carData;Highway1;Highway Accidents;CSV;Doc;39;12;0;0;1;0;11
+225;carData;KosteckiDillon;Treatment of Migraine Headaches;CSV;Doc;4152;9;2;0;4;0;5
+226;carData;Leinhardt;Data on Infant-Mortality;CSV;Doc;105;4;1;0;2;0;2
+227;carData;LoBD;Cancer drug data use to provide an example of the use of the skew power distributions.;CSV;Doc;84;9;0;0;1;0;8
+228;carData;Mandel;Contrived Collinear Data;CSV;Doc;8;3;0;0;0;0;3
+229;carData;Migration;Canadian Interprovincial Migration Data;CSV;Doc;90;8;0;0;2;0;6
+230;carData;Moore;Status, Authoritarianism, and Conformity;CSV;Doc;45;4;1;0;2;0;2
+231;carData;MplsDemo;Minneapolis Demographic Data 2015, by Neighborhood;CSV;Doc;84;8;0;1;0;0;7
+232;carData;MplsStops;Minneapolis Police Department 2017 Stop Data;CSV;Doc;51920;14;5;0;10;0;3
+233;carData;Mroz;U.S. Women's Labor-Force Participation;CSV;Doc;753;8;3;0;3;0;5
+234;carData;OBrienKaiser;O'Brien and Kaiser's Repeated-Measures Data;CSV;Doc;16;17;1;0;2;0;15
+235;carData;OBrienKaiserLong;O'Brien and Kaiser's Repeated-Measures Data in "Long" Format;CSV;Doc;240;6;1;0;4;0;2
+236;carData;Ornstein;Interlocking Directorates Among Major Canadian Firms;CSV;Doc;248;4;0;0;2;0;2
+237;carData;Pottery;Chemical Composition of Pottery;CSV;Doc;26;6;0;0;1;0;5
+238;carData;Prestige;Prestige of Canadian Occupations;CSV;Doc;102;6;0;0;1;0;5
+239;carData;Quartet;Four Regression Datasets;CSV;Doc;11;6;1;0;0;0;6
+240;carData;Robey;Fertility and Contraception;CSV;Doc;50;3;0;0;1;0;2
+241;carData;Rossi;Rossi et al.'s Criminal Recidivism Data;CSV;Doc;432;62;58;0;57;0;5
+242;carData;Sahlins;Agricultural Production in Mazulu Village;CSV;Doc;20;2;0;0;0;0;2
+243;carData;Salaries;Salaries for Professors;CSV;Doc;397;6;2;0;3;0;3
+244;carData;SLID;Survey of Labour and Income Dynamics;CSV;Doc;7425;5;1;0;2;0;3
+245;carData;Soils;Soil Compositions of Physical and Chemical Characteristics;CSV;Doc;48;14;0;0;5;0;9
+246;carData;States;Education and Related Statistics for the U.S. States;CSV;Doc;51;7;0;0;1;0;6
+247;carData;TitanicSurvival;Survival of Passengers on the Titanic;CSV;Doc;1309;4;2;0;3;0;1
+248;carData;Transact;Transaction data;CSV;Doc;261;3;0;0;0;0;3
+249;carData;UN;National Statistics from the United Nations, Mostly From 2009-2011;CSV;Doc;213;7;0;0;2;0;5
+250;carData;UN98;United Nations Social Indicators Data 1998];CSV;Doc;207;13;0;0;1;0;12
+251;carData;USPop;Population of the United States;CSV;Doc;22;2;0;0;0;0;2
+252;carData;Vocab;Vocabulary and Education;CSV;Doc;30351;4;1;0;1;0;3
+253;carData;WeightLoss;Weight Loss Data;CSV;Doc;34;7;0;0;1;0;6
+254;carData;Wells;Well Switching in Bangladesh;CSV;Doc;3020;5;2;0;2;0;3
+255;carData;Womenlf;Canadian Women's Labour-Force Participation;CSV;Doc;263;4;1;0;3;0;1
+256;carData;Wong;Post-Coma Recovery of IQ;CSV;Doc;331;7;1;0;1;0;6
+257;carData;Wool;Wool data;CSV;Doc;27;4;0;0;0;0;4
+258;carData;WVS;World Values Surveys;CSV;Doc;5381;6;3;0;5;0;1
+259;causaldata;abortion;Data on abortion legalization and sexually transmitted infections;CSV;Doc;19584;22;8;0;0;0;22
+260;causaldata;adult_services;Data from a survey of internet-mediated sex workers;CSV;Doc;1787;31;20;0;0;0;31
+261;causaldata;auto;Automobile data from Stata;CSV;Doc;74;12;1;1;0;0;11
+262;causaldata;avocado;Data on avocado sales;CSV;Doc;169;3;0;0;0;0;2
+263;causaldata;black_politicians;Data from "Black Politicians are More Intrinsically Motivated to Advance Blacks' Interests";CSV;Doc;5593;14;7;0;0;0;14
+264;causaldata;castle;Data on castle-doctrine statutes and violent crime;CSV;Doc;550;139;60;0;0;0;139
+265;causaldata;close_college;Data from Card (1995) to estimate the effect of college education on earnings;CSV;Doc;3010;8;4;0;0;0;8
+266;causaldata;close_elections_lmb;A close-elections regression discontinuity study from Lee, Moretti, and Butler (2004);CSV;Doc;13588;9;2;0;0;0;9
+267;causaldata;cps_mixtape;Observational counterpart to nsw_mixtape data;CSV;Doc;15992;11;4;1;0;0;10
+268;causaldata;credit_cards;Data on Taiwanese Credit Card Holders;CSV;Doc;30000;4;2;0;0;2;2
+269;causaldata;gapminder;Gapminder data;CSV;Doc;1704;6;0;0;2;0;4
+270;causaldata;google_stock;Google Stock Data;CSV;Doc;84;3;0;0;0;0;2
+271;causaldata;gov_transfers;Data from "Government Transfers and Political Support";CSV;Doc;1948;5;1;0;0;0;5
+272;causaldata;gov_transfers_density;Data from "Government Transfers and Political Support" for Density Tests;CSV;Doc;52549;1;0;0;0;0;1
+273;causaldata;greek_data;Data from a fictional randomized heart transplant study;CSV;Doc;20;4;3;1;0;0;3
+274;causaldata;mortgages;Data from "How do Mortgage Subsidies Affect Home Ownership? Evidence from the Mid-Century GI Bills";CSV;Doc;214144;6;3;1;0;0;5
+275;causaldata;Mroz;U.S. Women's Labor-Force Participation;CSV;Doc;753;8;3;0;0;3;5
+276;causaldata;nhefs;National Health and Nutrition Examination Survey Data I Epidemiologic Follow-up Study;CSV;Doc;1629;67;27;0;5;0;62
+277;causaldata;nhefs_codebook;NHEFS Codebook;CSV;Doc;64;2;0;2;0;0;0
+278;causaldata;nhefs_complete;Complete-Data National Health and Nutrition Examination Survey Data I Epidemiologic Follow-up Study;CSV;Doc;1566;67;26;0;5;0;62
+279;causaldata;nsw_mixtape;Data from the National Supported Work Demonstration (NSW) job-training program;CSV;Doc;445;11;5;1;0;0;10
+280;causaldata;organ_donations;Organ Donation Data;CSV;Doc;162;4;0;2;0;0;2
+281;causaldata;restaurant_inspections;Data on Restaurant Inspections;CSV;Doc;27178;5;1;1;0;1;3
+282;causaldata;ri;A simple simulated data set for calculating p-values;CSV;Doc;8;5;1;3;0;0;2
+283;causaldata;scorecard;Earnings and Loan Repayment in US Four-Year Colleges;CSV;Doc;48445;8;0;2;0;0;6
+284;causaldata;snow;Data from John Snow's 1855 study of the cause of cholera;CSV;Doc;4;4;3;2;0;0;2
+285;causaldata;social_insure;Data from "Social Networks and the Decision to Insure";CSV;Doc;1410;13;5;2;0;0;11
+286;causaldata;texas;Data on prison capacity expansion in Texas;CSV;Doc;816;12;0;1;0;0;11
+287;causaldata;thornton_hiv;Data from HIV information experiment in Thornton (2008);CSV;Doc;4820;7;2;0;0;0;7
+288;causaldata;titanic;Data from the sinking of the Titanic;CSV;Doc;2201;4;3;0;0;0;4
+289;causaldata;training_bias_reduction;Simulated data from a job training program for a bias reduction method;CSV;Doc;8;4;1;0;0;0;4
+290;causaldata;training_example;Simulated data from a job training program;CSV;Doc;25;9;0;1;0;0;8
+291;causaldata;yule;Data on 19th century English Poverty from Yule (1899);CSV;Doc;32;5;0;1;0;0;4
+292;cluster;agriculture;European Union Agricultural Workforces;CSV;Doc;12;2;0;0;0;0;2
+293;cluster;animals;Attributes of Animals;CSV;Doc;20;6;6;0;0;0;6
+294;cluster;chorSub;Subset of C-horizon of Kola Data;CSV;Doc;61;10;0;0;0;0;10
+295;cluster;flower;Flower Characteristics;CSV;Doc;18;8;3;0;6;0;2
+296;cluster;plantTraits;Plant Species Traits Data;CSV;Doc;136;31;20;0;28;0;3
+297;cluster;pluton;Isotopic Composition Plutonium Batches;CSV;Doc;45;4;0;0;0;0;4
+298;cluster;ruspini;Ruspini Data;CSV;Doc;75;2;0;0;0;0;2
+299;cluster;votes.repub;Votes for Republican Candidate in Presidential Elections;CSV;Doc;50;31;0;0;0;0;31
+300;cluster;xclara;Bivariate Data Set with 3 Clusters;CSV;Doc;3000;2;0;0;0;0;2
+301;collegeScorecard;school;College Scorecard: School Data;CSV;Doc;11300;25;10;5;7;10;3
+302;collegeScorecard;scorecard;College Scorecard: Scorecard Data;CSV;Doc;183306;24;0;1;0;0;23
+303;COUNT;affairs;affairs;CSV;Doc;601;18;17;0;0;0;18
+304;COUNT;azcabgptca;azcabgptca;CSV;Doc;1959;6;4;0;0;0;6
+305;COUNT;azdrg112;azdrg112;CSV;Doc;1798;4;3;0;0;0;4
+306;COUNT;azpro;azpro;CSV;Doc;3589;6;4;0;0;0;6
+307;COUNT;azprocedure;azprocedure;CSV;Doc;3589;6;4;0;0;0;6
+308;COUNT;badhealth;badhealth;CSV;Doc;1127;3;1;0;0;0;3
+309;COUNT;fasttrakg;fasttrakg;CSV;Doc;15;9;6;0;0;0;9
+310;COUNT;fishing;fishing;CSV;Doc;147;7;1;0;1;0;6
+311;COUNT;lbw;lbw;CSV;Doc;189;10;4;0;0;0;10
+312;COUNT;lbwgrp;lbwgrp;CSV;Doc;6;7;5;0;0;0;7
+313;COUNT;loomis;loomis;CSV;Doc;410;11;8;0;0;0;11
+314;COUNT;mdvis;mdvis;CSV;Doc;2227;13;8;0;0;0;13
+315;COUNT;medpar;medpar;CSV;Doc;1495;10;7;1;0;0;9
+316;COUNT;nuts;nuts;CSV;Doc;52;8;0;0;0;0;8
+317;COUNT;rwm;rwm;CSV;Doc;27326;4;0;0;0;0;4
+318;COUNT;rwm1984;rwm1984;CSV;Doc;3874;15;9;0;0;0;15
+319;COUNT;rwm5yr;rwm5yr;CSV;Doc;19609;17;9;0;0;0;17
+320;COUNT;ships;ships;CSV;Doc;40;7;4;0;0;0;7
+321;COUNT;smoking;smoking;CSV;Doc;6;4;2;0;0;0;4
+322;COUNT;titanic;titanic;CSV;Doc;1316;4;3;0;4;0;0
+323;COUNT;titanicgrp;titanicgrp;CSV;Doc;12;5;2;0;0;0;5
+324;crch;RainIbk;Precipitation Observations and Forecasts for Innsbruck;CSV;Doc;4971;12;0;0;0;0;12
+325;DAAG;ACF1;Aberrant Crypt Foci in Rat Colons;CSV;Doc;22;2;0;0;0;0;2
+326;DAAG;ais;Australian athletes data set;CSV;Doc;202;13;1;0;2;0;11
+327;DAAG;alc2018;Alcohol consumption in Australia and New Zealand;CSV;Doc;28;5;1;1;0;0;4
+328;DAAG;allbacks;Measurements on a Selection of Books;CSV;Doc;15;4;1;0;1;0;3
+329;DAAG;anesthetic;Anesthetic Effectiveness;CSV;Doc;30;4;2;0;0;0;4
+330;DAAG;ant111b;Averages by block of yields for the Antigua Corn data;CSV;Doc;32;9;0;0;2;0;7
+331;DAAG;antigua;Averages by block of yields for the Antigua Corn data;CSV;Doc;288;7;0;0;3;0;4
+332;DAAG;appletaste;Tasting experiment that compared four apple varieties;CSV;Doc;60;3;0;0;2;0;1
+333;DAAG;audists;Road distances between 10 Australian cities;CSV;Doc;45;1;0;0;0;0;1
+334;DAAG;aulatlong;Latitudes and longitudes for ten Australian cities;CSV;Doc;10;2;0;0;0;0;2
+335;DAAG;austpop;Population figures for Australian States and Territories;CSV;Doc;9;10;0;0;0;0;10
+336;DAAG;biomass;Biomass Data;CSV;Doc;153;8;0;0;2;0;6
+337;DAAG;bomregions;Australian and Related Historical Annual Climate Data, by Region;CSV;Doc;109;34;0;0;0;0;34
+338;DAAG;bomregions2018;Australian and Related Historical Annual Climate Data, by Region;CSV;Doc;119;35;0;0;0;0;35
+339;DAAG;bomregions2021;Australian and Related Historical Annual Climate Data, by Region;CSV;Doc;122;35;0;0;0;0;35
+340;DAAG;bomsoi;Southern Oscillation Index Data;CSV;Doc;106;21;0;0;0;0;21
+341;DAAG;bostonc;Boston Housing Data - Corrected;CSV;Doc;517;1;0;1;0;0;0
+342;DAAG;carprice;US Car Price Data;CSV;Doc;48;9;0;0;1;0;8
+343;DAAG;Cars93.summary;A Summary of the Cars93 Data set;CSV;Doc;6;4;0;0;1;0;3
+344;DAAG;cerealsugar;Percentage of Sugar in Breakfast Cereal;CSV;Doc;100;1;0;0;0;0;1
+345;DAAG;cfseal;Cape Fur Seal Data;CSV;Doc;30;11;0;0;0;0;11
+346;DAAG;cities;Populations of Major Canadian Cities (1992-96);CSV;Doc;25;7;0;0;2;0;5
+347;DAAG;codling;Dose-mortality data, for fumigation of codling moth with methyl bromide;CSV;Doc;99;10;1;1;1;0;8
+348;DAAG;coralPval;P-values from biological expression array data;CSV;Doc;3072;1;0;0;0;0;1
+349;DAAG;cottonworkers;Occupation and wage profiles of British cotton workers;CSV;Doc;14;3;0;0;0;0;3
+350;DAAG;cps1;Labour Training Evaluation Data;CSV;Doc;15992;10;4;0;0;0;10
+351;DAAG;cps2;Labour Training Evaluation Data;CSV;Doc;2369;10;4;0;0;0;10
+352;DAAG;cps3;Labour Training Evaluation Data;CSV;Doc;429;10;4;0;0;0;10
+353;DAAG;cricketer;Lifespans of UK 1st class cricketers born 1840-1960;CSV;Doc;5960;8;5;0;2;0;6
+354;DAAG;cuckoohosts;Comparison of cuckoo eggs with host eggs;CSV;Doc;10;12;0;0;0;0;12
+355;DAAG;cuckoos;Cuckoo Eggs Data;CSV;Doc;120;4;0;0;1;0;3
+356;DAAG;dengue;Dengue prevalence, by administrative region;CSV;Doc;2000;13;1;0;0;0;13
+357;DAAG;dewpoint;Dewpoint Data;CSV;Doc;72;3;0;0;0;0;3
+358;DAAG;droughts;Periods Between Rain Events;CSV;Doc;2042;2;0;0;1;0;1
+359;DAAG;edcCO2;EPICA Dome C Ice Core 800KYr Carbon Dioxide Data;CSV;Doc;1096;2;0;0;0;0;2
+360;DAAG;edcT;EPICA Dome C Ice Core 800KYr Temperature Estimates;CSV;Doc;5788;5;0;0;0;0;5
+361;DAAG;elastic1;Elastic Band Data Replicated;CSV;Doc;7;2;0;0;0;0;2
+362;DAAG;elastic2;Elastic Band Data Replicated;CSV;Doc;9;2;0;0;0;0;2
+363;DAAG;elasticband;Elastic Band Data;CSV;Doc;7;2;0;0;0;0;2
+364;DAAG;fossilfuel;Fossil Fuel Data;CSV;Doc;5;2;0;0;0;0;2
+365;DAAG;fossum;Possum Measurements;CSV;Doc;43;14;1;0;2;0;12
+366;DAAG;frogs;Frogs Data;CSV;Doc;212;10;1;0;0;0;10
+367;DAAG;frostedflakes;Frosted Flakes data;CSV;Doc;100;2;0;0;0;0;2
+368;DAAG;fruitohms;Electrical Resistance of Kiwi Fruit;CSV;Doc;128;2;0;0;0;0;2
+369;DAAG;gaba;Effect of pentazocine on post-operative pain (average VAS scores);CSV;Doc;9;7;0;0;0;0;7
+370;DAAG;geophones;Seismic Timing Data;CSV;Doc;56;2;0;0;0;0;2
+371;DAAG;greatLakes;Yearly averages of Great Lake heights: 1918 - 2009;CSV;Doc;92;4;0;0;0;0;4
+372;DAAG;grog;Alcohol consumption in Australia and New Zealand;CSV;Doc;18;5;1;0;1;0;4
+373;DAAG;headInjury;Minor Head Injury (Simulated) Data;CSV;Doc;3121;11;11;0;0;0;11
+374;DAAG;hills;Scottish Hill Races Data;CSV;Doc;35;3;0;0;0;0;3
+375;DAAG;hills2000;Scottish Hill Races Data;CSV;Doc;56;4;0;0;0;0;4
+376;DAAG;hotspots;Hawaian island chain hotspot Potassium-Argon ages;CSV;Doc;35;6;0;3;0;0;3
+377;DAAG;hotspots2006;Hawaian island chain hotspot Argon-Argon ages;CSV;Doc;10;6;1;0;0;0;6
+378;DAAG;houseprices;Aranda House Prices;CSV;Doc;15;3;0;0;0;0;3
+379;DAAG;humanpower1;Oxygen uptake versus mechanical power, for humans;CSV;Doc;28;3;0;0;1;0;2
+380;DAAG;humanpower2;Oxygen uptake versus mechanical power, for humans;CSV;Doc;26;3;0;0;1;0;2
+381;DAAG;hurricNamed;Named US Atlantic Hurricanes;CSV;Doc;94;12;1;2;1;0;8
+382;DAAG;intersalt;Blood pressure versus Salt; inter-population data;CSV;Doc;52;4;0;1;0;0;3
+383;DAAG;ironslag;Iron Content Measurements;CSV;Doc;53;2;0;0;0;0;2
+384;DAAG;jobs;Canadian Labour Force Summary Data (1995-96);CSV;Doc;24;7;0;0;0;0;7
+385;DAAG;kiwishade;Kiwi Shading Data;CSV;Doc;48;4;0;0;3;0;1
+386;DAAG;leafshape;Full Leaf Shape Data Set;CSV;Doc;286;9;1;0;1;0;8
+387;DAAG;leafshape17;Full Leaf Shape Data Set;CSV;Doc;61;8;1;0;0;0;8
+388;DAAG;leaftemp;Leaf and Air Temperature Data;CSV;Doc;62;4;0;0;1;0;3
+389;DAAG;leaftemp.all;Full Leaf and Air Temperature Data Set;CSV;Doc;62;9;0;0;3;0;6
+390;DAAG;litters;Mouse Litters;CSV;Doc;20;3;0;0;0;0;3
+391;DAAG;lognihills;Record times for Northern Ireland mountain running events;CSV;Doc;23;4;0;0;0;0;4
+392;DAAG;Lottario;Ontario Lottery Data;CSV;Doc;39;2;0;0;0;0;2
+393;DAAG;lung;Cape Fur Seal Lung Measurements;CSV;Doc;30;1;0;0;0;0;1
+394;DAAG;Manitoba.lakes;The Nine Largest Lakes in Manitoba;CSV;Doc;9;2;0;0;0;0;2
+395;DAAG;mdbAVtJtoD;Murray-Darling basin monthly temperatures;CSV;Doc;867;2;0;0;0;0;2
+396;DAAG;measles;Deaths in London from measles;CSV;Doc;311;2;0;0;0;0;2
+397;DAAG;medExpenses;Family Medical Expenses;CSV;Doc;33;2;0;0;0;0;2
+398;DAAG;mifem;WHO Monica Data;CSV;Doc;1295;10;1;0;8;0;2
+399;DAAG;mignonette;Darwin's Wild Mignonette Data;CSV;Doc;24;2;0;0;0;0;2
+400;DAAG;milk;Milk Sweetness Study;CSV;Doc;17;2;0;0;0;0;2
+401;DAAG;modelcars;Model Car Data;CSV;Doc;12;2;0;0;0;0;2
+402;DAAG;monica;WHO Monica Data;CSV;Doc;6367;12;3;0;10;0;2
+403;DAAG;moths;Moths Data;CSV;Doc;41;4;0;0;1;0;3
+404;DAAG;nassCDS;Airbag and other influences on accident fatalities;CSV;Doc;26217;15;7;3;5;0;7
+405;DAAG;nasshead;Documentation of names of columns in nass9702cor;CSV;Doc;56;3;0;3;0;0;0
+406;DAAG;nihills;Record times for Northern Ireland mountain running events;CSV;Doc;23;4;0;0;0;0;4
+407;DAAG;nsw74demo;Labour Training Evaluation Data;CSV;Doc;445;10;5;0;0;0;10
+408;DAAG;nsw74psid1;Labour Training Evaluation Data;CSV;Doc;2675;10;5;0;0;0;10
+409;DAAG;nsw74psid3;Labour Training Evaluation Data;CSV;Doc;313;10;5;0;0;0;10
+410;DAAG;nsw74psidA;Labour Training Evaluation Data;CSV;Doc;252;10;5;0;0;0;10
+411;DAAG;nswdemo;Labour Training Evaluation Data;CSV;Doc;722;10;5;0;0;0;10
+412;DAAG;nswpsid1;Labour Training Evaluation Data;CSV;Doc;2787;10;5;0;0;0;10
+413;DAAG;oddbooks;Measurements on 12 books;CSV;Doc;12;4;0;0;0;0;4
+414;DAAG;orings;Challenger O-rings Data;CSV;Doc;23;4;1;0;0;0;4
+415;DAAG;ozone;Ozone Data;CSV;Doc;45;11;0;0;0;0;11
+416;DAAG;pair65;Heated Elastic Bands;CSV;Doc;9;2;0;0;0;0;2
+417;DAAG;possum;Possum Measurements;CSV;Doc;104;14;2;0;2;0;12
+418;DAAG;possumsites;Possum Sites;CSV;Doc;7;3;0;0;0;0;3
+419;DAAG;poxetc;Deaths from various causes, in London from 1629 till 1881, with gaps;CSV;Doc;253;5;0;0;0;0;5
+420;DAAG;primates;Primate Body and Brain Weights;CSV;Doc;5;2;0;0;0;0;2
+421;DAAG;progression;Progression of Record times for track races, 1912 - 2008;CSV;Doc;227;4;0;1;0;0;3
+422;DAAG;psid1;Labour Training Evaluation Data;CSV;Doc;2490;10;4;0;0;0;10
+423;DAAG;psid2;Labour Training Evaluation Data;CSV;Doc;253;10;4;0;0;0;10
+424;DAAG;psid3;Labour Training Evaluation Data;CSV;Doc;128;10;4;0;0;0;10
+425;DAAG;races2000;Scottish Hill Races Data - 2000;CSV;Doc;77;5;0;1;0;0;4
+426;DAAG;rainforest;Rainforest Data;CSV;Doc;65;7;0;0;1;0;6
+427;DAAG;rareplants;Rare and Endangered Plant Species;CSV;Doc;4;3;0;0;0;0;3
+428;DAAG;repPsych;Summary results from Reproducibility Study: Psychology;CSV;Doc;97;11;2;6;0;1;4
+429;DAAG;rice;Genetically Modified and Wild Type Rice Data;CSV;Doc;72;7;2;0;3;0;4
+430;DAAG;rockArt;Pacific Rock Art features;CSV;Doc;103;641;624;13;0;0;628
+431;DAAG;roller;Lawn Roller Data;CSV;Doc;10;2;0;0;0;0;2
+432;DAAG;science;School Science Survey Data;CSV;Doc;1385;7;3;0;6;0;1
+433;DAAG;seedrates;Barley Seeding Rate Data;CSV;Doc;5;2;0;0;0;0;2
+434;DAAG;socsupport;Social Support Data;CSV;Doc;95;20;3;0;8;0;12
+435;DAAG;softbacks;Measurements on a Selection of Paperback Books;CSV;Doc;8;2;0;0;0;0;2
+436;DAAG;sorption;sorption data set;CSV;Doc;192;14;0;0;5;0;9
+437;DAAG;SP500close;Closing Numbers for S and P 500 Index;CSV;Doc;2780;1;0;0;0;0;1
+438;DAAG;SP500W90;Closing Numbers for S and P 500 Index - First 100 Days of 1990;CSV;Doc;100;2;0;0;0;0;2
+439;DAAG;spam7;Spam E-mail Data;CSV;Doc;4601;7;1;0;1;0;6
+440;DAAG;stVincent;Averages by block of yields for the St. Vincent Corn data;CSV;Doc;324;8;0;0;2;0;6
+441;DAAG;sugar;Sugar Data;CSV;Doc;12;2;0;0;1;0;1
+442;DAAG;tinting;Car Window Tinting Experiment Data;CSV;Doc;182;9;3;0;4;0;5
+443;DAAG;tomato;Root weights of tomato plants exposed to 4 different treatments;CSV;Doc;24;2;0;0;1;0;1
+444;DAAG;toycars;Toy Cars Data;CSV;Doc;27;3;0;0;0;0;3
+445;DAAG;vince111b;Averages by block of corn yields, for treatment 111 only;CSV;Doc;36;8;0;0;2;0;6
+446;DAAG;vlt;Video Lottery Terminal Data;CSV;Doc;345;5;1;0;0;0;5
+447;DAAG;wages1833;Wages of Lancashire Cotton Factory Workers in 1833;CSV;Doc;51;5;0;0;0;0;5
+448;DAAG;whoops;Deaths from whooping cough, in London;CSV;Doc;142;3;0;0;0;0;3
+449;DAAG;worldRecords;Record times for track and road races, at August 9th 2006;CSV;Doc;40;5;1;1;1;0;2
+450;datasets;ability.cov;Ability and Intelligence Tests;CSV;Doc;6;8;0;0;0;0;8
+451;datasets;airmiles;Passenger Miles on Commercial US Airlines, 1937-1960;CSV;Doc;24;2;0;0;0;0;2
+452;datasets;AirPassengers;Monthly Airline Passenger Numbers 1949-1960;CSV;Doc;144;2;0;0;0;0;2
+453;datasets;airquality;New York Air Quality Measurements;CSV;Doc;153;6;0;0;0;0;6
+454;datasets;anscombe;Anscombe's Quartet of 'Identical' Simple Linear Regressions;CSV;Doc;11;8;1;0;0;0;8
+455;datasets;attenu;The Joyner-Boore Attenuation Data;CSV;Doc;182;5;0;0;1;0;4
+456;datasets;attitude;The Chatterjee-Price Attitude Data;CSV;Doc;30;7;0;0;0;0;7
+457;datasets;austres;Quarterly Time Series of the Number of Australian Residents;CSV;Doc;89;2;0;0;0;0;2
+458;datasets;beaver1 (beavers);Body Temperature Series of Two Beavers;CSV;Doc;114;4;2;0;0;0;4
+459;datasets;beaver2 (beavers);Body Temperature Series of Two Beavers;CSV;Doc;100;4;2;0;0;0;4
+460;datasets;BJsales;Sales Data with Leading Indicator;CSV;Doc;150;2;0;0;0;0;2
+461;datasets;BJsales.lead (BJsales);Sales Data with Leading Indicator;CSV;Doc;150;2;0;0;0;0;2
+462;datasets;BOD;Biochemical Oxygen Demand;CSV;Doc;6;2;0;0;0;0;2
+463;datasets;cars;Speed and Stopping Distances of Cars;CSV;Doc;50;2;0;0;0;0;2
+464;datasets;ChickWeight;Weight versus age of chicks on different diets;CSV;Doc;578;4;0;0;2;0;2
+465;datasets;chickwts;Chicken Weights by Feed Type;CSV;Doc;71;2;0;0;1;0;1
+466;datasets;CO2;Carbon Dioxide Uptake in Grass Plants;CSV;Doc;84;5;2;0;3;0;2
+467;datasets;co2;Mauna Loa Atmospheric CO2 Concentration;CSV;Doc;468;2;0;0;0;0;2
+468;datasets;crimtab;Student's 3000 Criminals Data;CSV;Doc;924;3;0;0;2;0;1
+469;datasets;discoveries;Yearly Numbers of Important Discoveries;CSV;Doc;100;2;0;0;0;0;2
+470;datasets;DNase;Elisa assay of DNase;CSV;Doc;176;3;0;0;1;0;2
+471;datasets;esoph;Smoking, Alcohol and (O)esophageal Cancer;CSV;Doc;88;5;0;0;3;0;2
+472;datasets;euro;Conversion Rates of Euro Currencies;CSV;Doc;11;1;0;0;0;0;1
+473;datasets;euro.cross (euro);Conversion Rates of Euro Currencies;CSV;Doc;11;11;0;0;0;0;11
+474;datasets;eurodist;Distances Between European Cities and Between US Cities;CSV;Doc;210;1;0;0;0;0;1
+475;datasets;EuStockMarkets;Daily Closing Prices of Major European Stock Indices, 1991-1998;CSV;Doc;1860;4;0;0;0;0;4
+476;datasets;faithful;Old Faithful Geyser Data;CSV;Doc;272;2;0;0;0;0;2
+477;datasets;fdeaths (UKLungDeaths);Monthly Deaths from Lung Diseases in the UK;CSV;Doc;72;2;0;0;0;0;2
+478;datasets;Formaldehyde;Determination of Formaldehyde;CSV;Doc;6;2;0;0;0;0;2
+479;datasets;freeny;Freeny's Revenue Data;CSV;Doc;39;5;0;0;0;0;5
+480;datasets;freeny.x (freeny);Freeny's Revenue Data;CSV;Doc;39;4;0;0;0;0;4
+481;datasets;freeny.y (freeny);Freeny's Revenue Data;CSV;Doc;39;2;0;0;0;0;2
+482;datasets;HairEyeColor;Hair and Eye Color of Statistics Students;CSV;Doc;32;4;1;0;3;0;1
+483;datasets;Harman23.cor;Harman Example 2.3;CSV;Doc;8;10;0;0;0;0;10
+484;datasets;Harman74.cor;Harman Example 7.4;CSV;Doc;24;26;0;0;0;0;26
+485;datasets;Indometh;Pharmacokinetics of Indomethacin;CSV;Doc;66;3;0;0;1;0;2
+486;datasets;infert;Infertility after Spontaneous and Induced Abortion;CSV;Doc;248;8;1;0;1;0;7
+487;datasets;InsectSprays;Effectiveness of Insect Sprays;CSV;Doc;72;2;0;0;1;0;1
+488;datasets;iris;Edgar Anderson's Iris Data;CSV;Doc;150;5;0;0;1;0;4
+489;datasets;iris3;Edgar Anderson's Iris Data;CSV;Doc;50;12;0;0;0;0;12
+490;datasets;islands;Areas of the World's Major Landmasses;CSV;Doc;48;1;0;0;0;0;1
+491;datasets;JohnsonJohnson;Quarterly Earnings per Johnson & Johnson Share;CSV;Doc;84;2;0;0;0;0;2
+492;datasets;LakeHuron;Level of Lake Huron 1875-1972;CSV;Doc;98;2;0;0;0;0;2
+493;datasets;ldeaths (UKLungDeaths);Monthly Deaths from Lung Diseases in the UK;CSV;Doc;72;2;0;0;0;0;2
+494;datasets;lh;Luteinizing Hormone in Blood Samples;CSV;Doc;48;2;0;0;0;0;2
+495;datasets;LifeCycleSavings;Intercountry Life-Cycle Savings Data;CSV;Doc;50;5;0;0;0;0;5
+496;datasets;Loblolly;Growth of Loblolly Pine Trees;CSV;Doc;84;3;0;0;1;0;2
+497;datasets;longley;Longley's Economic Regression Data;CSV;Doc;16;7;0;0;0;0;7
+498;datasets;lynx;Annual Canadian Lynx trappings 1821-1934;CSV;Doc;114;2;0;0;0;0;2
+499;datasets;mdeaths (UKLungDeaths);Monthly Deaths from Lung Diseases in the UK;CSV;Doc;72;2;0;0;0;0;2
+500;datasets;morley;Michelson Speed of Light Data;CSV;Doc;100;3;0;0;0;0;3
+501;datasets;mtcars;Motor Trend Car Road Tests;CSV;Doc;32;11;2;0;0;0;11
+502;datasets;nhtemp;Average Yearly Temperatures in New Haven;CSV;Doc;60;2;0;0;0;0;2
+503;datasets;Nile;Flow of the River Nile;CSV;Doc;100;2;0;0;0;0;2
+504;datasets;nottem;Average Monthly Temperatures at Nottingham, 1920-1939;CSV;Doc;240;2;0;0;0;0;2
+505;datasets;npk;Classical N, P, K Factorial Experiment;CSV;Doc;24;5;3;0;4;0;1
+506;datasets;occupationalStatus;Occupational Status of Fathers and their Sons;CSV;Doc;64;3;0;0;2;0;1
+507;datasets;Orange;Growth of Orange Trees;CSV;Doc;35;3;0;0;1;0;2
+508;datasets;OrchardSprays;Potency of Orchard Sprays;CSV;Doc;64;4;0;0;1;0;3
+509;datasets;PlantGrowth;Results from an Experiment on Plant Growth;CSV;Doc;30;2;0;0;1;0;1
+510;datasets;precip;Annual Precipitation in US Cities;CSV;Doc;70;1;0;0;0;0;1
+511;datasets;presidents;Quarterly Approval Ratings of US Presidents;CSV;Doc;120;2;0;0;0;0;2
+512;datasets;pressure;Vapor Pressure of Mercury as a Function of Temperature;CSV;Doc;19;2;0;0;0;0;2
+513;datasets;Puromycin;Reaction Velocity of an Enzymatic Reaction;CSV;Doc;23;3;1;0;1;0;2
+514;datasets;quakes;Locations of Earthquakes off Fiji;CSV;Doc;1000;5;0;0;0;0;5
+515;datasets;randu;Random Numbers from Congruential Generator RANDU;CSV;Doc;400;3;0;0;0;0;3
+516;datasets;rivers;Lengths of Major North American Rivers;CSV;Doc;141;1;0;0;0;0;1
+517;datasets;rock;Measurements on Petroleum Rock Samples;CSV;Doc;48;4;0;0;0;0;4
+518;datasets;Seatbelts;Road Casualties in Great Britain 1969-84;CSV;Doc;192;8;1;0;0;0;8
+519;datasets;sleep;Student's Sleep Data;CSV;Doc;20;3;1;0;2;0;1
+520;datasets;stack.loss (stackloss);Brownlee's Stack Loss Plant Data;CSV;Doc;21;1;0;0;0;0;1
+521;datasets;stack.x (stackloss);Brownlee's Stack Loss Plant Data;CSV;Doc;21;3;0;0;0;0;3
+522;datasets;stackloss;Brownlee's Stack Loss Plant Data;CSV;Doc;21;4;0;0;0;0;4
+523;datasets;state.abb (state);US State Facts and Figures;CSV;Doc;50;1;0;1;0;0;0
+524;datasets;state.area (state);US State Facts and Figures;CSV;Doc;50;1;0;0;0;0;1
+525;datasets;state.center (state);US State Facts and Figures;CSV;Doc;50;2;0;0;0;0;2
+526;datasets;state.division (state);US State Facts and Figures;CSV;Doc;50;1;0;0;1;0;0
+527;datasets;state.name (state);US State Facts and Figures;CSV;Doc;50;1;0;1;0;0;0
+528;datasets;state.region (state);US State Facts and Figures;CSV;Doc;50;1;0;0;1;0;0
+529;datasets;state.x77 (state);US State Facts and Figures;CSV;Doc;50;8;0;0;0;0;8
+530;datasets;sunspot.month;Monthly Sunspot Data, from 1749 to "Present";CSV;Doc;3177;2;0;0;0;0;2
+531;datasets;sunspot.year;Yearly Sunspot Data, 1700-1988;CSV;Doc;289;2;0;0;0;0;2
+532;datasets;sunspots;Monthly Sunspot Numbers, 1749-1983;CSV;Doc;2820;2;0;0;0;0;2
+533;datasets;swiss;Swiss Fertility and Socioeconomic Indicators (1888) Data;CSV;Doc;47;6;0;0;0;0;6
+534;datasets;Theoph;Pharmacokinetics of Theophylline;CSV;Doc;132;5;0;0;1;0;4
+535;datasets;Titanic;Survival of passengers on the Titanic;CSV;Doc;32;5;3;0;4;0;1
+536;datasets;ToothGrowth;The Effect of Vitamin C on Tooth Growth in Guinea Pigs;CSV;Doc;60;3;1;0;1;0;2
+537;datasets;treering;Yearly Tree-Ring Data, -6000-1979;CSV;Doc;7980;2;0;0;0;0;2
+538;datasets;trees;Diameter, Height and Volume for Black Cherry Trees;CSV;Doc;31;3;0;0;0;0;3
+539;datasets;UCBAdmissions;Student Admissions at UC Berkeley;CSV;Doc;24;4;2;0;3;0;1
+540;datasets;UKDriverDeaths;Road Casualties in Great Britain 1969-84;CSV;Doc;192;2;0;0;0;0;2
+541;datasets;UKgas;UK Quarterly Gas Consumption;CSV;Doc;108;2;0;0;0;0;2
+542;datasets;USAccDeaths;Accidental Deaths in the US 1973-1978;CSV;Doc;72;2;0;0;0;0;2
+543;datasets;USArrests;Violent Crime Rates by US State;CSV;Doc;50;4;0;0;0;0;4
+544;datasets;UScitiesD;Distances Between European Cities and Between US Cities;CSV;Doc;45;1;0;0;0;0;1
+545;datasets;USJudgeRatings;Lawyers' Ratings of State Judges in the US Superior Court;CSV;Doc;43;12;0;0;0;0;12
+546;datasets;USPersonalExpenditure;Personal Expenditure Data;CSV;Doc;5;5;0;0;0;0;5
+547;datasets;uspop;Populations Recorded by the US Census;CSV;Doc;19;2;0;0;0;0;2
+548;datasets;VADeaths;Death Rates in Virginia (1940);CSV;Doc;5;4;0;0;0;0;4
+549;datasets;volcano;Topographic Information on Auckland's Maunga Whau Volcano;CSV;Doc;87;61;0;0;0;0;61
+550;datasets;warpbreaks;The Number of Breaks in Yarn during Weaving;CSV;Doc;54;3;1;0;2;0;1
+551;datasets;women;Average Heights and Weights for American Women;CSV;Doc;15;2;0;0;0;0;2
+552;datasets;WorldPhones;The World's Telephones;CSV;Doc;7;7;0;0;0;0;7
+553;datasets;WWWusage;Internet Usage per Minute;CSV;Doc;100;2;0;0;0;0;2
+554;dplyr;band_instruments;Band membership;CSV;Doc;3;2;1;2;0;0;0
+555;dplyr;band_instruments2;Band membership;CSV;Doc;3;2;1;2;0;0;0
+556;dplyr;band_members;Band membership;CSV;Doc;3;2;1;2;0;0;0
+557;dplyr;starwars;Starwars characters;CSV;Doc;87;11;1;8;0;0;3
+558;dplyr;storms;Storm tracks data;CSV;Doc;19537;13;0;1;1;0;11
+559;dragracer;rpdr_contep;RuPaul's Drag Race Episode-Contestant Data;CSV;Doc;2320;11;6;7;0;0;4
+560;dragracer;rpdr_contestants;RuPaul's Drag Race Contestant Data;CSV;Doc;184;5;0;3;0;0;1
+561;dragracer;rpdr_ep;RuPaul's Drag Race Episode Data;CSV;Doc;191;24;5;19;0;0;4
+562;drc;acidiq;Acifluorfen and diquat tested on Lemna minor.;CSV;Doc;180;3;0;0;0;0;3
+563;drc;algae;Volume of algae as function of increasing concentrations of a herbicide;CSV;Doc;14;2;0;0;0;0;2
+564;drc;auxins;Effect of technical grade and commercially formulated auxin herbicides;CSV;Doc;150;5;0;0;0;0;5
+565;drc;chickweed;Germination of common chickweed (_Stellaria media_);CSV;Doc;35;3;0;0;0;0;3
+566;drc;chickweed0;Germination of common chickweed (_Stellaria media_);CSV;Doc;34;2;0;0;0;0;2
+567;drc;daphnids;Daphnia test;CSV;Doc;16;4;1;0;1;0;3
+568;drc;decontaminants;Performance of decontaminants used in the culturing of a micro-organism;CSV;Doc;128;3;1;0;1;0;2
+569;drc;deguelin;Deguelin applied to chrysanthemum aphis;CSV;Doc;6;4;0;0;0;0;4
+570;drc;earthworms;Earthworm toxicity test;CSV;Doc;35;3;0;0;0;0;3
+571;drc;etmotc;Effect of erythromycin on mixed sewage microorganisms;CSV;Doc;57;4;0;0;0;0;4
+572;drc;finney71;Example from Finney (1971);CSV;Doc;6;3;0;0;0;0;3
+573;drc;G.aparine;Herbicide applied to Galium aparine;CSV;Doc;240;3;1;0;1;0;2
+574;drc;germination;Germination of three crops;CSV;Doc;192;5;0;0;1;0;4
+575;drc;glymet;Glyphosate and metsulfuron-methyl tested on algae.;CSV;Doc;113;3;0;0;0;0;3
+576;drc;H.virescens;Mortality of tobacco budworms;CSV;Doc;12;4;1;0;1;0;3
+577;drc;heartrate;Heart rate baroreflexes for rabbits;CSV;Doc;18;2;0;0;0;0;2
+578;drc;leaflength;Leaf length of barley;CSV;Doc;42;2;0;0;0;0;2
+579;drc;lepidium;Dose-response profile of degradation of agrochemical using lepidium;CSV;Doc;42;2;0;0;0;0;2
+580;drc;lettuce;Hormesis in lettuce plants;CSV;Doc;14;2;0;0;0;0;2
+581;drc;M.bahia;Effect of an effluent on the growth of mysid shrimp;CSV;Doc;40;2;0;0;0;0;2
+582;drc;mecter;Mechlorprop and terbythylazine tested on Lemna minor;CSV;Doc;102;3;0;0;0;0;3
+583;drc;metals;Data from heavy metal mixture experiments;CSV;Doc;543;3;0;0;1;0;2
+584;drc;methionine;Weight gain for different methionine sources;CSV;Doc;9;3;0;0;1;0;2
+585;drc;nasturtium;Dose-response profile of degradation of agrochemical using nasturtium;CSV;Doc;42;2;0;0;0;0;2
+586;drc;O.mykiss;Test data from a 21 day fish test;CSV;Doc;70;2;0;0;0;0;2
+587;drc;P.promelas;Effect of sodium pentachlorophenate on growth of fathead minnow;CSV;Doc;24;2;0;0;0;0;2
+588;drc;RScompetition;Competition between two biotypes;CSV;Doc;49;3;0;0;0;0;3
+589;drc;ryegrass;Effect of ferulic acid on growth of ryegrass;CSV;Doc;24;2;0;0;0;0;2
+590;drc;S.alba;Potency of two herbicides;CSV;Doc;68;3;1;0;1;0;2
+591;drc;S.capricornutum;Effect of cadmium on growth of green alga;CSV;Doc;18;2;0;0;0;0;2
+592;drc;secalonic;Root length measurements;CSV;Doc;7;2;0;0;0;0;2
+593;drc;selenium;Data from toxicology experiments with selenium;CSV;Doc;25;4;0;0;0;0;4
+594;drc;spinach;Inhibition of photosynthesis;CSV;Doc;105;4;1;0;1;0;3
+595;drc;terbuthylazin;The effect of terbuthylazin on growth rate;CSV;Doc;30;2;0;0;0;0;2
+596;drc;vinclozolin;Vinclozolin from AR in vitro assay;CSV;Doc;53;3;0;0;1;0;2
+597;dslabs;admissions;Gender bias among graduate school admissions to UC Berkeley.;CSV;Doc;12;4;1;2;0;0;2
+598;dslabs;brca;Breast Cancer Wisconsin Diagnostic Dataset from UCI Machine Learning Repository;CSV;Doc;569;31;1;0;1;0;30
+599;dslabs;brexit_polls;Brexit Poll Data;CSV;Doc;127;9;1;0;2;0;5
+600;dslabs;death_prob;2015 US Period Life Table;CSV;Doc;240;3;1;0;1;0;2
+601;dslabs;divorce_margarine;Divorce rate and margarine consumption data;CSV;Doc;10;3;0;0;0;0;3
+602;dslabs;gapminder;Gapminder Data;CSV;Doc;10545;9;0;0;3;0;6
+603;dslabs;greenhouse_gases;Greenhouse gas concentrations over 2000 years;CSV;Doc;300;3;0;1;0;0;2
+604;dslabs;heights;Self-reported Heights in Inches;CSV;Doc;1050;2;1;0;1;0;1
+605;dslabs;historic_co2;Atmospheric carbon dioxide concentration over 800,000 years;CSV;Doc;694;3;1;1;0;0;2
+606;dslabs;mice_weights (mice_weigths);Mice weights;CSV;Doc;780;7;3;0;4;0;3
+607;dslabs;movielens;Movie ratings;CSV;Doc;100004;7;0;1;1;0;5
+608;dslabs;murders;US gun murders by state for 2010;CSV;Doc;51;5;0;2;1;0;2
+609;dslabs;na_example;Count data with some missing values;CSV;Doc;1000;1;0;0;0;0;1
+610;dslabs;nyc_regents_scores;NYC Regents exams scores 2010;CSV;Doc;102;6;0;0;0;0;6
+611;dslabs;oecd (gapminder);Gapminder Data;CSV;Doc;35;1;0;1;0;0;0
+612;dslabs;olive;Italian olive;CSV;Doc;572;10;0;0;2;0;8
+613;dslabs;opec (gapminder);Gapminder Data;CSV;Doc;12;1;0;1;0;0;0
+614;dslabs;outlier_example;Adult male heights in feet with outliers;CSV;Doc;500;1;0;0;0;0;1
+615;dslabs;polls_2008;Poll data for popular vote in 2008 presidential election;CSV;Doc;131;2;0;0;0;0;2
+616;dslabs;polls_us_election_2016;Fivethirtyeight 2016 Poll Data;CSV;Doc;4208;15;0;1;3;0;9
+617;dslabs;pr_death_counts (pr-death-counts);Puerto Rico daily mortality;CSV;Doc;1201;2;0;0;0;0;1
+618;dslabs;raw_data_research_funding_rates;Gender bias in research funding in the Netherlands;CSV;Doc;1;1;0;1;0;0;0
+619;dslabs;reported_heights;Self-reported Heights;CSV;Doc;1095;3;1;3;0;0;0
+620;dslabs;research_funding_rates;Gender bias in research funding in the Netherlands;CSV;Doc;9;10;0;1;0;0;9
+621;dslabs;results_us_election_2016 (polls_us_election_2016);Fivethirtyeight 2016 Poll Data;CSV;Doc;51;5;0;1;0;0;4
+622;dslabs;sentiment_counts (trump_tweets);Trump Tweets from2009 to 2017;CSV;Doc;11;3;0;1;0;0;2
+623;dslabs;stars;Physical Properties of Stars;CSV;Doc;96;4;0;1;1;0;2
+624;dslabs;temp_carbon;Global temperature anomaly and carbon emissions, 1751-2018;CSV;Doc;268;5;0;0;0;0;5
+625;dslabs;tissue_gene_expression;Gene expression profiles for 189 biological samples taken from seven different tissue types.;CSV;Doc;189;501;0;0;1;0;500
+626;dslabs;trump_tweets;Trump Tweets from2009 to 2017;CSV;Doc;20761;8;0;4;0;1;2
+627;dslabs;us_contagious_diseases;Contagious disease data for US states;CSV;Doc;16065;6;0;0;2;0;4
+628;Ecdat;Accident;Ship Accidents;CSV;Doc;40;5;1;0;3;0;2
+629;Ecdat;AccountantsAuditorsPct;Accountants and Auditors in the US 1850-2016;CSV;Doc;31;1;0;0;0;0;1
+630;Ecdat;Airline;Cost for U.S. Airlines;CSV;Doc;90;6;0;0;0;0;6
+631;Ecdat;Airq;Air Quality for Californian Metropolitan Areas;CSV;Doc;30;6;1;0;1;0;5
+632;Ecdat;bankingCrises;Countries in Banking Crises;CSV;Doc;211;71;69;0;0;0;71
+633;Ecdat;Benefits;Unemployment of Blue Collar Workers;CSV;Doc;4877;18;9;0;11;0;7
+634;Ecdat;Bids;Bids Received By U.S. Firms;CSV;Doc;126;12;5;0;0;0;12
+635;Ecdat;breaches;Cyber Security Breaches;CSV;Doc;1055;13;0;2;5;0;3
+636;Ecdat;BudgetFood;Budget Share of Food for Spanish Households;CSV;Doc;23972;6;1;0;1;0;5
+637;Ecdat;BudgetItaly;Budget Shares for Italian Households;CSV;Doc;1729;11;0;0;0;0;11
+638;Ecdat;BudgetUK;Budget Shares of British Households;CSV;Doc;1519;10;1;0;0;0;10
+639;Ecdat;Bwages;Wages in Belgium;CSV;Doc;1472;4;0;0;1;0;3
+640;Ecdat;Capm;Stock Market Data;CSV;Doc;516;5;0;0;0;0;5
+641;Ecdat;Car;Stated Preferences for Car Choice;CSV;Doc;4654;70;13;0;13;0;57
+642;Ecdat;Caschool;The California Test Score Data Set;CSV;Doc;420;17;1;0;3;0;14
+643;Ecdat;Catsup;Choice of Brand for Catsup;CSV;Doc;2798;14;8;0;1;0;13
+644;Ecdat;Cigar;Cigarette Consumption;CSV;Doc;1380;9;0;0;0;0;9
+645;Ecdat;Cigarette;The Cigarette Consumption Panel Data Set;CSV;Doc;528;9;0;0;1;0;8
+646;Ecdat;Clothing;Sales Data of Men's Fashion Stores;CSV;Doc;400;13;0;0;0;0;13
+647;Ecdat;Computers;Prices of Personal Computers;CSV;Doc;6259;10;3;0;3;0;7
+648;Ecdat;Consumption;Quarterly Data on Consumption and Expenditure;CSV;Doc;200;2;0;0;0;0;2
+649;Ecdat;coolingFromNuclearWar;Global cooling from a nuclear war;CSV;Doc;4;5;0;0;0;0;5
+650;Ecdat;CPSch3;Earnings from the Current Population Survey;CSV;Doc;11130;3;1;0;1;0;2
+651;Ecdat;Cracker;Choice of Brand for Crackers;CSV;Doc;3292;14;8;0;1;0;13
+652;Ecdat;CRANpackages;Growth of CRAN;CSV;Doc;29;4;0;0;2;0;1
+653;Ecdat;Crime;Crime in North Carolina;CSV;Doc;630;24;1;0;2;0;22
+654;Ecdat;CRSPday;Daily Returns from the CRSP Database;CSV;Doc;2528;7;0;0;0;0;7
+655;Ecdat;CRSPmon;Monthly Returns from the CRSP Database;CSV;Doc;360;4;0;0;0;0;4
+656;Ecdat;Diamond;Pricing the C's of Diamond Stones;CSV;Doc;308;5;0;0;3;0;2
+657;Ecdat;DM;DM Dollar Exchange Rate;CSV;Doc;778;4;0;0;0;0;4
+658;Ecdat;Doctor;Number of Doctor Visits;CSV;Doc;485;4;0;0;0;0;4
+659;Ecdat;DoctorAUS;Doctor Visits in Australia;CSV;Doc;5190;15;1;0;2;0;13
+660;Ecdat;DoctorContacts;Contacts With Medical Doctor;CSV;Doc;20186;15;5;0;2;4;9
+661;Ecdat;Earnings;Earnings for Three Age Groups;CSV;Doc;4266;2;0;0;1;0;1
+662;Ecdat;Electricity;Cost Function for Electricity Producers;CSV;Doc;158;8;0;0;0;0;8
+663;Ecdat;Fair;Extramarital Affairs Data;CSV;Doc;601;9;2;0;2;0;7
+664;Ecdat;Fatality;Drunk Driving Laws and Traffic Deaths;CSV;Doc;336;10;2;0;2;0;8
+665;Ecdat;Fishing;Choice of Fishing Mode;CSV;Doc;1182;12;0;0;1;0;11
+666;Ecdat;Forward;Exchange Rates of US Dollar Against Other Currencies;CSV;Doc;276;9;0;0;0;0;9
+667;Ecdat;FriendFoe;Data from the Television Game Show Friend Or Foe ?;CSV;Doc;227;13;7;0;8;0;5
+668;Ecdat;Garch;Daily Observations on Exchange Rates of the US Dollar Against Other Currencies;CSV;Doc;1867;8;0;1;0;0;7
+669;Ecdat;Gasoline;Gasoline Consumption;CSV;Doc;342;6;0;0;1;0;5
+670;Ecdat;Griliches;Wage Data;CSV;Doc;758;20;6;0;6;0;14
+671;Ecdat;Grunfeld;Grunfeld Investment Data;CSV;Doc;200;5;0;0;0;0;5
+672;Ecdat;HC;Heating and Cooling System Choice in Newly Built Houses in California;CSV;Doc;250;18;0;0;1;0;17
+673;Ecdat;Hdma;The Boston HMDA Data Set;CSV;Doc;2381;13;7;0;6;0;7
+674;Ecdat;Heating;Heating System Choice in California Houses;CSV;Doc;900;21;0;0;2;0;19
+675;Ecdat;Hedonic;Hedonic Prices of Census Tracts in Boston;CSV;Doc;506;15;1;0;1;0;14
+676;Ecdat;HHSCyberSecurityBreaches;Cybersecurity breaches reported to the US Department of Health and Human Services;CSV;Doc;1151;9;1;2;4;1;1
+677;Ecdat;HI;Health Insurance and Hours Worked By Wives;CSV;Doc;22272;13;4;0;7;0;6
+678;Ecdat;Hmda;The Boston HMDA Data Set;CSV;Doc;2381;13;7;0;6;0;7
+679;Ecdat;Housing;Sales Prices of Houses in the City of Windsor;CSV;Doc;546;12;6;0;6;0;6
+680;Ecdat;Hstarts;Housing Starts;CSV;Doc;168;2;0;0;0;0;2
+681;Ecdat;Icecream;Ice Cream Consumption;CSV;Doc;30;4;0;0;0;0;4
+682;Ecdat;incidents.byCountryYr;Global Terrorism Database yearly summaries;CSV;Doc;10200;3;0;0;2;0;1
+683;Ecdat;incomeInequality;Income Inequality in the US;CSV;Doc;66;22;0;0;0;0;22
+684;Ecdat;IncomeUK;Seasonally Unadjusted Quarterly Data on Disposable Income and Expenditure;CSV;Doc;58;2;0;0;0;0;2
+685;Ecdat;Irates;Monthly Interest Rates;CSV;Doc;531;10;0;0;0;0;10
+686;Ecdat;Journals;Economic Journals Data Set;CSV;Doc;180;10;1;0;4;0;6
+687;Ecdat;Kakadu;Willingness to Pay for the Preservation of the Kakadu National Park;CSV;Doc;1827;22;5;0;6;0;16
+688;Ecdat;Ketchup;Choice of Brand for Ketchup;CSV;Doc;4956;7;0;0;1;0;6
+689;Ecdat;Klein;Klein's Model I;CSV;Doc;22;9;0;0;0;0;9
+690;Ecdat;LaborSupply;Wages and Hours Worked;CSV;Doc;5320;7;1;0;0;0;7
+691;Ecdat;Labour;Belgian Firms;CSV;Doc;569;4;0;0;0;0;4
+692;Ecdat;Longley;The Longley Data;CSV;Doc;16;4;0;0;0;0;4
+693;Ecdat;LT;Dollar Sterling Exchange Rate;CSV;Doc;200;3;0;0;0;0;3
+694;Ecdat;Macrodat;Macroeconomic Time Series for the United States;CSV;Doc;168;7;0;0;0;0;7
+695;Ecdat;Males;Wages and Education of Young Males;CSV;Doc;4360;12;3;0;7;0;5
+696;Ecdat;ManufCost;Manufacturing Costs;CSV;Doc;25;9;0;0;0;0;9
+697;Ecdat;Mathlevel;Level of Calculus Attained for Students Taking Advanced Micro-economics;CSV;Doc;609;8;2;0;4;0;4
+698;Ecdat;MCAS;The Massachusetts Test Score Data Set;CSV;Doc;220;17;0;0;2;0;15
+699;Ecdat;MedExp;Structure of Demand for Medical Care;CSV;Doc;5574;15;5;0;6;0;9
+700;Ecdat;Metal;Production for SIC 33;CSV;Doc;27;3;0;0;0;0;3
+701;Ecdat;Mishkin;Inflation and Interest Rates;CSV;Doc;491;5;0;0;0;0;5
+702;Ecdat;Mode;Mode Choice;CSV;Doc;453;9;0;0;1;0;8
+703;Ecdat;ModeChoice;Data to Study Travel Mode Choice;CSV;Doc;840;7;1;0;0;0;7
+704;Ecdat;Mofa;International Expansion of U.S. MOFAs (majority-owned Foreign Affiliates in Fire (finance, Insurance and Real Estate);CSV;Doc;50;5;0;0;1;0;4
+705;Ecdat;Money;Money, GDP and Interest Rate in Canada;CSV;Doc;128;4;0;0;0;0;4
+706;Ecdat;MoneyUS;Macroeconomic Series for the United States;CSV;Doc;164;5;0;0;0;0;5
+707;Ecdat;Mpyr;Money, National Product and Interest Rate;CSV;Doc;90;4;0;0;0;0;4
+708;Ecdat;Mroz;Labor Supply Data;CSV;Doc;753;18;2;0;2;0;16
+709;Ecdat;MunExp;Municipal Expenditure Data;CSV;Doc;2385;5;0;0;0;0;5
+710;Ecdat;MW;Growth of Disposable Income and Treasury Bill Rate;CSV;Doc;50;2;0;0;0;0;2
+711;Ecdat;NaturalPark;Willingness to Pay for the Preservation of the Alentejo Natural Park;CSV;Doc;312;7;1;0;2;0;5
+712;Ecdat;Nerlove;Cost Function for Electricity Producers, 1955;CSV;Doc;159;8;0;0;0;0;8
+713;Ecdat;nkill.byCountryYr;Global Terrorism Database yearly summaries;CSV;Doc;204;50;0;0;0;0;50
+714;Ecdat;nonEnglishNames;Names with Character Set Problems;CSV;Doc;11;2;0;2;0;0;0
+715;Ecdat;nuclearWeaponStates;Nations with nuclear weapons;CSV;Doc;9;17;1;3;0;0;12
+716;Ecdat;OCC1950;Evolution of occupational distribution in the US;CSV;Doc;281;31;0;0;0;0;31
+717;Ecdat;OFP;Visits to Physician Office;CSV;Doc;4406;19;7;0;8;0;11
+718;Ecdat;Oil;Oil Investment;CSV;Doc;53;11;0;0;0;0;11
+719;Ecdat;Orange;The Orange Juice Data Set;CSV;Doc;642;3;0;0;0;0;3
+720;Ecdat;Participation;Labor Force Participation;CSV;Doc;872;7;2;0;2;0;5
+721;Ecdat;PatentsHGH;Dynamic Relation Between Patents and R&D;CSV;Doc;1730;18;1;0;1;0;17
+722;Ecdat;PatentsRD;Patents, R&D and Technological Spillovers for a Panel of Firms;CSV;Doc;1629;7;0;0;0;0;7
+723;Ecdat;PE;Price and Earnings Index;CSV;Doc;132;2;0;0;0;0;2
+724;Ecdat;politicalKnowledge;Political knowledge in the US and Europe;CSV;Doc;4;12;0;1;0;0;11
+725;Ecdat;Pound;Pound-dollar Exchange Rate;CSV;Doc;778;4;0;0;0;0;4
+726;Ecdat;PPP;Exchange Rates and Price Indices for France and Italy;CSV;Doc;186;5;0;0;0;0;5
+727;Ecdat;Pricing;Returns of Size-based Portfolios;CSV;Doc;418;12;0;0;0;0;12
+728;Ecdat;Produc;Us States Production;CSV;Doc;816;10;0;0;1;0;9
+729;Ecdat;PSID;Panel Survey of Income Dynamics;CSV;Doc;4856;8;0;0;1;0;7
+730;Ecdat;RetSchool;Return to Schooling;CSV;Doc;5225;17;9;0;0;0;17
+731;Ecdat;Schooling;Wages and Schooling;CSV;Doc;3010;28;16;0;17;0;11
+732;Ecdat;Solow;Solow's Technological Change Data;CSV;Doc;41;3;0;0;0;0;3
+733;Ecdat;Somerville;Visits to Lake Somerville;CSV;Doc;659;8;2;0;2;0;6
+734;Ecdat;SP500;Returns on Standard & Poor's 500 Index;CSV;Doc;2783;1;0;0;0;0;1
+735;Ecdat;Star;Effects on Learning of Small Class Sizes;CSV;Doc;5748;8;2;0;4;0;4
+736;Ecdat;Strike;Strike Duration Data;CSV;Doc;62;2;0;0;0;0;2
+737;Ecdat;StrikeDur;Strikes Duration;CSV;Doc;566;2;0;0;0;0;2
+738;Ecdat;StrikeNb;Number of Strikes in Us Manufacturing;CSV;Doc;108;3;0;0;0;0;3
+739;Ecdat;SumHes;The Penn Table;CSV;Doc;3250;7;2;0;3;0;4
+740;Ecdat;Tbrate;Interest Rate, GDP and Inflation;CSV;Doc;188;3;0;0;0;0;3
+741;Ecdat;terrorism;Global Terrorism Database yearly summaries;CSV;Doc;51;25;0;1;1;0;23
+742;Ecdat;Tobacco;Households Tobacco Budget Share;CSV;Doc;2724;9;0;0;2;0;7
+743;Ecdat;Train;Stated Preferences for Train Traveling;CSV;Doc;2929;11;1;0;1;0;10
+744;Ecdat;TranspEq;Statewide Data on Transportation Equipment Manufacturing;CSV;Doc;25;5;0;0;1;0;4
+745;Ecdat;Treatment;Evaluating Treatment Effect of Training on Earnings;CSV;Doc;2675;10;4;0;1;4;5
+746;Ecdat;Tuna;Choice of Brand for Tuna;CSV;Doc;13705;8;0;0;1;0;7
+747;Ecdat;UnempDur;Unemployment Duration;CSV;Doc;3343;11;5;0;1;0;10
+748;Ecdat;Unemployment;Unemployment Duration;CSV;Doc;452;12;9;0;5;0;7
+749;Ecdat;University;Provision of University Teaching and Research;CSV;Doc;62;17;0;0;0;0;17
+750;Ecdat;USclassifiedDocuments;Official Secrecy of the United States Government;CSV;Doc;29;5;0;0;0;0;5
+751;Ecdat;USFinanceIndustry;US Finance Industry Profits;CSV;Doc;84;7;0;0;0;0;7
+752;Ecdat;USGDPpresidents;US GDP per capita with presidents and wars;CSV;Doc;265;20;1;0;3;0;17
+753;Ecdat;USincarcerations;US incarcerations 1925 onward;CSV;Doc;95;7;0;0;0;0;7
+754;Ecdat;USnewspapers;US newspaper revenue 1956 - 2020;CSV;Doc;65;15;0;0;0;0;15
+755;Ecdat;USPS;US Postal Service;CSV;Doc;233;18;0;0;0;0;18
+756;Ecdat;USstateAbbreviations;Standard abbreviations for states of the United States;CSV;Doc;76;10;0;10;0;0;0
+757;Ecdat;UStaxWords;Number of Words in US Tax Law;CSV;Doc;7;10;0;0;0;0;10
+758;Ecdat;VietNamH;Medical Expenses in Vietnam (household Level);CSV;Doc;5999;11;3;0;4;0;7
+759;Ecdat;VietNamI;Medical Expenses in Vietnam (individual Level);CSV;Doc;27765;12;4;0;1;0;11
+760;Ecdat;Wages;Panel Data of Individual Wages;CSV;Doc;4165;12;8;0;7;0;5
+761;Ecdat;Wages1;Wages, Experience and Schooling;CSV;Doc;3294;4;1;0;1;0;3
+762;Ecdat;Workinghours;Wife Working Hours;CSV;Doc;3382;12;3;0;1;0;11
+763;Ecdat;Yen;Yen-dollar Exchange Rate;CSV;Doc;778;4;0;0;0;0;4
+764;Ecdat;Yogurt;Choice of Brand for Yogurts;CSV;Doc;2412;10;4;0;1;0;9
+765;evir;bmw;Daily Log Returns on BMW Share Price;CSV;Doc;6146;1;0;0;0;0;1
+766;evir;danish;Danish Fire Insurance Claims;CSV;Doc;2167;1;0;0;0;0;1
+767;evir;nidd.annual;The River Nidd Data;CSV;Doc;35;1;0;0;0;0;1
+768;evir;nidd.thresh;The River Nidd Data;CSV;Doc;154;1;0;0;0;0;1
+769;evir;siemens;Daily Log Returns on Siemens Share Price;CSV;Doc;6146;1;0;0;0;0;1
+770;evir;sp.raw;SP Data to June 1993;CSV;Doc;8415;1;0;0;0;0;1
+771;evir;spto87;SP Return Data to October 1987;CSV;Doc;6985;1;0;0;0;0;1
+772;forecast;gas;Australian monthly gas production;CSV;Doc;476;2;0;0;0;0;2
+773;forecast;gold;Daily morning gold prices;CSV;Doc;1108;2;0;0;0;0;2
+774;forecast;taylor;Half-hourly electricity demand;CSV;Doc;4032;1;0;0;0;0;1
+775;forecast;wineind;Australian total wine sales;CSV;Doc;176;2;0;0;0;0;2
+776;forecast;woolyrnq;Quarterly production of woollen yarn in Australia;CSV;Doc;119;2;0;0;0;0;2
+777;fpp2;a10;Monthly anti-diabetic drug subsidy in Australia from 1991 to 2008.;CSV;Doc;204;2;0;0;0;0;2
+778;fpp2;arrivals;International Arrivals to Australia;CSV;Doc;127;4;0;0;0;0;4
+779;fpp2;ausair;Air Transport Passengers Australia;CSV;Doc;47;2;0;0;0;0;2
+780;fpp2;ausbeer;Quarterly Australian Beer production;CSV;Doc;218;2;0;0;0;0;2
+781;fpp2;auscafe;Monthly expenditure on eating out in Australia;CSV;Doc;426;2;0;0;0;0;2
+782;fpp2;austa;International visitors to Australia;CSV;Doc;36;2;0;0;0;0;2
+783;fpp2;austourists;International Tourists to Australia: Total visitor nights.;CSV;Doc;68;2;0;0;0;0;2
+784;fpp2;calls;Call volume for a large North American bank;CSV;Doc;27716;1;0;0;0;0;1
+785;fpp2;debitcards;Retail debit card usage in Iceland.;CSV;Doc;164;2;0;0;0;0;2
+786;fpp2;departures;Total monthly departures from Australia;CSV;Doc;498;5;0;0;0;0;5
+787;fpp2;elecdaily;Half-hourly and daily electricity demand for Victoria, Australia, in 2014;CSV;Doc;365;3;1;0;0;0;3
+788;fpp2;elecdemand;Half-hourly and daily electricity demand for Victoria, Australia, in 2014;CSV;Doc;17520;3;1;0;0;0;3
+789;fpp2;elecequip;Electrical equipment manufactured in the Euro area.;CSV;Doc;195;2;0;0;0;0;2
+790;fpp2;elecsales;Electricity sales to residential customers in South Australia.;CSV;Doc;20;2;0;0;0;0;2
+791;fpp2;euretail;Quarterly retail trade: Euro area.;CSV;Doc;64;2;0;0;0;0;2
+792;fpp2;gasoline;US finished motor gasoline product supplied.;CSV;Doc;1355;2;0;0;0;0;2
+793;fpp2;goog;Daily closing stock prices of Google Inc;CSV;Doc;1000;2;0;0;0;0;2
+794;fpp2;goog200;Daily closing stock prices of Google Inc;CSV;Doc;200;2;0;0;0;0;2
+795;fpp2;guinearice;Rice production (Guinea);CSV;Doc;42;2;0;0;0;0;2
+796;fpp2;h02;Monthly corticosteroid drug subsidy in Australia from 1991 to 2008.;CSV;Doc;204;2;0;0;0;0;2
+797;fpp2;hyndsight;Daily pageviews for the Hyndsight blog. 30 April 2014 to 29 April 2015.;CSV;Doc;365;2;0;0;0;0;2
+798;fpp2;insurance;Insurance quotations and advertising expenditure.;CSV;Doc;40;2;0;0;0;0;2
+799;fpp2;livestock;Livestock (sheep) in Asia, 1961-2007.;CSV;Doc;47;2;0;0;0;0;2
+800;fpp2;marathon;Boston marathon winning times since 1897;CSV;Doc;120;2;0;0;0;0;2
+801;fpp2;maxtemp;Maximum annual temperatures at Moorabbin Airport, Melbourne;CSV;Doc;46;2;0;0;0;0;2
+802;fpp2;melsyd;Total weekly air passenger numbers on Ansett airline flights between Melbourne and Sydney, 1987-1992.;CSV;Doc;283;3;0;0;0;0;3
+803;fpp2;mens400;Winning times in Olympic men's 400m track final. 1896-2016.;CSV;Doc;31;2;0;0;0;0;2
+804;fpp2;oil;Annual oil production in Saudi Arabia;CSV;Doc;49;2;0;0;0;0;2
+805;fpp2;prison;prison;CSV;Doc;48;32;0;0;0;0;32
+806;fpp2;prisonLF;prison;CSV;Doc;1536;5;2;0;3;0;1
+807;fpp2;qauselec;Quarterly Australian Electricity production;CSV;Doc;218;2;0;0;0;0;2
+808;fpp2;qcement;Quarterly Australian Portland Cement production;CSV;Doc;233;2;0;0;0;0;2
+809;fpp2;qgas;Quarterly Australian Gas Production;CSV;Doc;218;2;0;0;0;0;2
+810;fpp2;sunspotarea;Annual average sunspot area (1875-2015);CSV;Doc;141;2;0;0;0;0;2
+811;fpp2;uschange;Growth rates of personal consumption and personal income in the USA.;CSV;Doc;187;5;0;0;0;0;5
+812;fpp2;usmelec;Electricity monthly total net generation. January 1973 - June 2013.;CSV;Doc;486;2;0;0;0;0;2
+813;fpp2;visnights;Quarterly visitor nights for various regions of Australia.;CSV;Doc;76;20;0;0;0;0;20
+814;fpp2;wmurders;Annual female murder rate (per 100,000 standard population) in the USA. 1950-2004.;CSV;Doc;55;2;0;0;0;0;2
+815;fpp3;aus_accommodation;Australian accommodation data;CSV;Doc;592;5;0;1;0;0;3
+816;fpp3;aus_airpassengers;Air Transport Passengers Australia;CSV;Doc;47;2;0;0;0;0;2
+817;fpp3;aus_arrivals;International Arrivals to Australia;CSV;Doc;508;3;0;1;0;0;1
+818;fpp3;aus_births;Australian births data;CSV;Doc;4512;3;0;1;0;0;1
+819;fpp3;aus_fertility;Australian fertility rates;CSV;Doc;15120;4;0;2;0;0;2
+820;fpp3;aus_inbound;Monthly short term (<1 year) visitor arrivals to Australia;CSV;Doc;20748;4;0;2;0;0;1
+821;fpp3;aus_migration;Australian migration data;CSV;Doc;1360;3;0;1;0;0;1
+822;fpp3;aus_mortality;Australian mortality data;CSV;Doc;7740;5;0;2;0;0;2
+823;fpp3;aus_outbound;Monthly short term (<1 year) resident departures in Australia;CSV;Doc;11700;4;0;2;0;0;1
+824;fpp3;aus_tobacco;Australian cigarette and tobacco expenditure;CSV;Doc;1232;3;0;1;0;0;1
+825;fpp3;aus_vehicle_sales;Australian vehicle sales;CSV;Doc;864;3;0;1;0;0;1
+826;fpp3;bank_calls;Call volume for a large North American commercial bank;CSV;Doc;27716;2;0;0;0;0;1
+827;fpp3;boston_marathon;Boston marathon winning times since 1897;CSV;Doc;265;5;0;2;1;0;1
+828;fpp3;canadian_gas;Monthly Canadian gas production;CSV;Doc;542;2;0;0;0;0;1
+829;fpp3;guinea_rice;Rice production (Guinea);CSV;Doc;42;2;0;0;0;0;2
+830;fpp3;insurance;Insurance quotations and advertising expenditure;CSV;Doc;40;3;0;0;0;0;2
+831;fpp3;melb_walkers;Average daily total pedestrian count in Melbourne;CSV;Doc;1976;2;0;0;0;0;1
+832;fpp3;nsw_offences;Monthly offences in NSW;CSV;Doc;7308;3;0;1;0;0;1
+833;fpp3;ny_childcare;New York childcare data;CSV;Doc;412;2;0;0;0;0;1
+834;fpp3;otexts_views;OTexts page views;CSV;Doc;1561;2;0;0;0;0;1
+835;fpp3;prices;Price series for various commodities;CSV;Doc;198;7;0;0;0;0;7
+836;fpp3;souvenirs;Sales for a souvenir shop;CSV;Doc;84;2;0;0;0;0;1
+837;fpp3;us_change;Percentage changes in economic variables in the USA.;CSV;Doc;198;6;0;0;0;0;5
+838;fpp3;us_employment;US monthly employment data;CSV;Doc;143412;4;0;2;0;0;1
+839;fpp3;us_gasoline;US finished motor gasoline product supplied.;CSV;Doc;1355;2;0;0;0;0;1
+840;gap;hg18;Chromosomal lengths for build 36;CSV;Doc;24;1;0;0;0;0;1
+841;gap;hg19;Chromosomal lengths for build 37;CSV;Doc;24;1;0;0;0;0;1
+842;gap;hg38;Chromosomal lengths for build 38;CSV;Doc;24;1;0;0;0;0;1
+843;gapminder;continent_colors;Gapminder color schemes.;CSV;Doc;5;1;0;1;0;0;0
+844;gapminder;country_codes;Country codes;CSV;Doc;187;3;0;2;0;0;1
+845;gapminder;country_colors;Gapminder color schemes.;CSV;Doc;142;1;0;1;0;0;0
+846;gapminder;gapminder;Gapminder data;CSV;Doc;1704;6;0;0;2;0;4
+847;gapminder;gapminder_unfiltered;Gapminder data, unfiltered.;CSV;Doc;3313;6;0;0;2;0;4
+848;geepack;dietox;Growth curves of pigs in a 3x3 factorial experiment;CSV;Doc;861;8;0;0;4;0;4
+849;geepack;koch;Ordinal Data from Koch;CSV;Doc;288;4;1;0;0;0;4
+850;geepack;muscatine;Data on Obesity from the Muscatine Coronary Risk Factor Study.;CSV;Doc;14568;7;3;0;2;0;5
+851;geepack;ohio;Ohio Children Wheeze Status;CSV;Doc;2148;4;2;0;0;0;4
+852;geepack;respdis;Clustered Ordinal Respiratory Disorder;CSV;Doc;111;5;1;0;0;0;5
+853;geepack;respiratory;Data from a clinical trial comparing two treatments for a respiratory illness;CSV;Doc;444;8;5;0;2;0;6
+854;geepack;seizure;Epiliptic Seizures;CSV;Doc;59;7;1;0;0;0;7
+855;geepack;sitka89;Growth of Sitka Spruce Trees;CSV;Doc;632;4;1;0;1;0;3
+856;geepack;spruce;Log-size of 79 Sitka spruce trees;CSV;Doc;1027;6;1;0;1;0;5
+857;ggplot2;diamonds;Prices of over 50,000 round cut diamonds;CSV;Doc;53940;10;0;0;3;0;7
+858;ggplot2;economics;US economic time series;CSV;Doc;574;6;0;0;0;0;5
+859;ggplot2;economics_long;US economic time series;CSV;Doc;2870;4;0;1;0;0;2
+860;ggplot2;faithfuld;2d density estimate of Old Faithful data;CSV;Doc;5625;3;0;0;0;0;3
+861;ggplot2;luv_colours;'colors()' in Luv space;CSV;Doc;657;4;0;1;0;0;3
+862;ggplot2;midwest;Midwest demographics;CSV;Doc;437;28;1;3;0;0;25
+863;ggplot2;mpg;Fuel economy data from 1999 to 2008 for 38 popular models of cars;CSV;Doc;234;11;1;6;0;0;5
+864;ggplot2;msleep;An updated and expanded version of the mammals sleep dataset;CSV;Doc;83;11;0;5;0;0;6
+865;ggplot2;presidential;Terms of 12 presidents from Eisenhower to Trump;CSV;Doc;12;4;1;2;0;0;0
+866;ggplot2;seals;Vector field of seal movements;CSV;Doc;1155;4;0;0;0;0;4
+867;ggplot2;txhousing;Housing sales in TX;CSV;Doc;8602;9;0;1;0;0;8
+868;ggplot2movies;movies;Movie information and user ratings from IMDB.com.;CSV;Doc;58788;24;7;2;0;0;22
+869;gt;constants;The fundamental physical constants;CSV;Doc;354;6;1;2;0;0;4
+870;gt;countrypops;Yearly populations of countries from 1960 to 2022;CSV;Doc;13545;5;0;3;0;0;2
+871;gt;exibble;A toy example tibble for testing with gt: exibble;CSV;Doc;8;9;1;6;1;0;2
+872;gt;films;Feature films in competition at the Cannes Film Festival;CSV;Doc;1851;8;0;7;0;0;1
+873;gt;gibraltar;Weather conditions in Gibraltar, May 2023;CSV;Doc;1431;10;0;3;0;0;6
+874;gt;gtcars;Deluxe automobiles from the 2014-2017 period;CSV;Doc;47;15;1;7;0;0;8
+875;gt;illness;Lab tests for one suffering from an illness;CSV;Doc;39;11;0;2;0;0;9
+876;gt;metro;The stations of the Paris Metro;CSV;Doc;314;11;0;8;0;0;3
+877;gt;nuclides;Nuclide data;CSV;Doc;3383;29;1;6;0;1;22
+878;gt;peeps;A table of personal information for people all over the world;CSV;Doc;100;14;1;10;0;0;3
+879;gt;photolysis;Data on photolysis rates for gas-phase organic compounds;CSV;Doc;34;10;0;6;0;0;4
+880;gt;pizzaplace;A year of pizza sales from a pizza place;CSV;Doc;49574;7;0;6;0;0;1
+881;gt;reactions;Reaction rates for gas-phase atmospheric reactions of organic compounds;CSV;Doc;1683;39;0;6;0;0;33
+882;gt;rx_addv;An ADDV-flavored clinical trial toy dataset;CSV;Doc;291;20;7;10;6;0;4
+883;gt;rx_adsl;An ADSL-flavored clinical trial toy dataset;CSV;Doc;182;14;4;7;4;0;3
+884;gt;sp500;Daily S&P 500 Index data from 1950 to 2015;CSV;Doc;16607;7;0;0;0;0;6
+885;gt;sza;Twice hourly solar zenith angles by month & latitude;CSV;Doc;816;4;0;1;1;0;2
+886;gt;towny;Populations of all municipalities in Ontario from 1996 to 2021;CSV;Doc;414;25;1;5;0;0;20
+887;heplots;AddHealth;Adolescent Mental Health Data;CSV;Doc;4344;3;0;0;1;0;2
+888;heplots;Adopted;Adopted Children;CSV;Doc;62;6;0;0;0;0;6
+889;heplots;Bees;Captive and maltreated bees;CSV;Doc;246;6;2;0;4;0;2
+890;heplots;Diabetes;Diabetes Dataset;CSV;Doc;145;6;0;0;1;0;5
+891;heplots;FootHead;Head measurements of football players;CSV;Doc;90;7;0;0;1;0;6
+892;heplots;Headache;Treatment of Headache Sufferers for Sensitivity to Noise;CSV;Doc;98;6;1;0;2;0;4
+893;heplots;Hernior;Recovery from Elective Herniorrhaphy;CSV;Doc;32;9;1;0;1;0;8
+894;heplots;Iwasaki_Big_Five;Personality Traits of Cultural Groups;CSV;Doc;203;7;0;0;1;0;6
+895;heplots;mathscore;Math scores for basic math and word problems;CSV;Doc;12;3;1;0;1;0;2
+896;heplots;MockJury;Effects Of Physical Attractiveness Upon Mock Jury Decisions;CSV;Doc;114;17;1;0;2;0;15
+897;heplots;NeuroCog;Neurocognitive Measures in Psychiatric Groups;CSV;Doc;242;10;1;0;2;0;8
+898;heplots;NLSY;National Longitudinal Survey of Youth Data;CSV;Doc;243;6;0;0;0;0;6
+899;heplots;Oslo;Oslo Transect Subset Data;CSV;Doc;332;14;0;0;4;0;10
+900;heplots;Overdose;Overdose of Amitriptyline;CSV;Doc;17;7;1;0;1;0;6
+901;heplots;Parenting;Father Parenting Competence;CSV;Doc;60;4;0;0;1;0;3
+902;heplots;peng;Size measurements for penguins near Palmer Station, Antarctica;CSV;Doc;333;8;1;0;3;0;5
+903;heplots;Plastic;Plastic Film Data;CSV;Doc;20;5;2;0;2;0;3
+904;heplots;Pottery2;Chemical Analysis of Romano-British Pottery;CSV;Doc;48;12;0;0;3;0;9
+905;heplots;Probe1;Response Speed in a Probe Experiment;CSV;Doc;11;5;0;0;0;0;5
+906;heplots;Probe2;Response Speed in a Probe Experiment;CSV;Doc;20;6;1;0;1;0;5
+907;heplots;RatWeight;Weight Gain in Rats Exposed to Thiouracil and Thyroxin;CSV;Doc;27;6;0;0;1;0;5
+908;heplots;ReactTime;Reaction Time Data;CSV;Doc;10;6;0;0;0;0;6
+909;heplots;Rohwer;Rohwer Data Set;CSV;Doc;69;10;2;0;1;0;9
+910;heplots;RootStock;Growth of Apple Trees from Different Root Stocks;CSV;Doc;48;5;0;0;1;0;4
+911;heplots;Sake;Taste Ratings of Japanese Rice Wine (Sake);CSV;Doc;30;10;0;0;0;0;10
+912;heplots;schooldata;School Data;CSV;Doc;70;8;0;0;0;0;8
+913;heplots;Skulls;Egyptian Skulls;CSV;Doc;150;5;0;0;1;0;4
+914;heplots;SocGrades;Grades in a Sociology Course;CSV;Doc;40;10;2;0;3;0;7
+915;heplots;SocialCog;Social Cognitive Measures in Psychiatric Groups;CSV;Doc;139;5;0;0;1;0;4
+916;heplots;TIPI;Data on the Ten Item Personality Inventory;CSV;Doc;1799;16;3;0;9;0;7
+917;heplots;VocabGrowth;Vocabulary growth data;CSV;Doc;64;4;0;0;0;0;4
+918;heplots;WeightLoss;Weight Loss Data;CSV;Doc;34;7;0;0;1;0;6
+919;HistData;Arbuthnot;Arbuthnot's data on male and female birth ratios in London from 1629-1710.;CSV;Doc;82;7;0;0;0;0;7
+920;HistData;Armada;La Felicisima Armada;CSV;Doc;10;11;0;0;1;0;10
+921;HistData;Bowley;Bowley's data on values of British and Irish trade, 1855-1899;CSV;Doc;45;2;0;0;0;0;2
+922;HistData;Breslau;Halley's Breslau Life Table;CSV;Doc;100;8;0;0;0;0;8
+923;HistData;Cavendish;Cavendish's Determinations of the Density of the Earth;CSV;Doc;29;3;0;0;0;0;3
+924;HistData;ChestSizes;Chest measurements of Scottish Militiamen;CSV;Doc;16;2;0;0;0;0;2
+925;HistData;ChestStigler;Chest measurements of Scottish Militiamen;CSV;Doc;16;2;0;0;0;0;2
+926;HistData;Cholera;William Farr's Data on Cholera in London, 1849;CSV;Doc;38;15;0;1;2;0;12
+927;HistData;CholeraDeaths1849;Daily Deaths from Cholera and Diarrhaea in England, 1849;CSV;Doc;730;6;1;2;2;0;1
+928;HistData;CushnyPeebles;Cushny-Peebles Data: Soporific Effects of Scopolamine Derivatives;CSV;Doc;11;4;0;0;0;0;4
+929;HistData;CushnyPeeblesN;Cushny-Peebles Data: Soporific Effects of Scopolamine Derivatives;CSV;Doc;11;4;0;0;0;0;4
+930;HistData;Dactyl;Edgeworth's counts of dactyls in Virgil's Aeneid;CSV;Doc;60;3;0;0;2;0;1
+931;HistData;DrinksWages;Elderton and Pearson's (1910) data on drinking and wages;CSV;Doc;70;6;0;0;2;0;4
+932;HistData;EdgeworthDeaths;Edgeworth's Data on Death Rates in British Counties;CSV;Doc;42;3;0;0;2;0;1
+933;HistData;Fingerprints;Waite's data on Patterns in Fingerprints;CSV;Doc;36;3;0;0;2;0;1
+934;HistData;Galton;Galton's data on the heights of parents and their children;CSV;Doc;928;2;0;0;0;0;2
+935;HistData;GaltonFamilies;Galton's data on the heights of parents and their children, by child;CSV;Doc;934;8;1;0;2;0;6
+936;HistData;Guerry;Data from A.-M. Guerry, "Essay on the Moral Statistics of France";CSV;Doc;86;23;0;0;3;0;20
+937;HistData;HalleyLifeTable;Halley's Life Table;CSV;Doc;84;4;0;0;0;0;4
+938;HistData;Jevons;W. Stanley Jevons' data on numerical discrimination;CSV;Doc;50;4;0;0;0;0;4
+939;HistData;Langren.all;van Langren's Data on Longitude Distance between Toledo and Rome;CSV;Doc;61;4;1;0;2;0;2
+940;HistData;Langren1644;van Langren's Data on Longitude Distance between Toledo and Rome;CSV;Doc;12;9;2;0;5;0;4
+941;HistData;Macdonell;Macdonell's Data on Height and Finger Length of Criminals, used by Gosset (1908);CSV;Doc;924;3;0;0;0;0;3
+942;HistData;MacdonellDF;Macdonell's Data on Height and Finger Length of Criminals, used by Gosset (1908);CSV;Doc;3000;2;0;0;0;0;2
+943;HistData;Mayer;Mayer's Data on the Libration of the Moon.;CSV;Doc;27;6;0;1;0;0;5
+944;HistData;Michelson;Michelson's Determinations of the Velocity of Light;CSV;Doc;100;1;0;0;0;0;1
+945;HistData;MichelsonSets;Michelson's Determinations of the Velocity of Light;CSV;Doc;20;5;0;0;0;0;5
+946;HistData;Minard.cities;Data from Minard's famous graphic map of Napoleon's march on Moscow;CSV;Doc;20;3;0;0;1;0;2
+947;HistData;Minard.temp;Data from Minard's famous graphic map of Napoleon's march on Moscow;CSV;Doc;9;4;0;0;1;0;3
+948;HistData;Minard.troops;Data from Minard's famous graphic map of Napoleon's march on Moscow;CSV;Doc;51;5;1;0;1;0;4
+949;HistData;Nightingale;Florence Nightingale's data on deaths from various causes in the Crimean War;CSV;Doc;24;10;0;0;1;0;8
+950;HistData;OldMaps;Latitudes and Longitudes of 39 Points in 11 Old Maps;CSV;Doc;468;6;0;0;1;0;5
+951;HistData;PearsonLee;Pearson and Lee's data on the heights of parents and children classified by gender;CSV;Doc;746;6;2;0;3;0;3
+952;HistData;PolioTrials;Polio Field Trials Data;CSV;Doc;8;6;1;0;2;0;4
+953;HistData;Pollen;Pollen Data Challenge;CSV;Doc;3848;5;0;0;0;0;5
+954;HistData;Prostitutes;Parent-Duchatelet's time-series data on the number of prostitutes in Paris;CSV;Doc;516;5;0;0;1;0;3
+955;HistData;Pyx;Trial of the Pyx;CSV;Doc;72;4;0;0;3;0;1
+956;HistData;Quarrels;Statistics of Deadly Quarrels;CSV;Doc;779;84;50;0;64;0;20
+957;HistData;Saturn;Laplace's Saturn data.;CSV;Doc;24;6;0;0;0;0;6
+958;HistData;Snow.dates;John Snow's Map and Data on the 1854 London Cholera Outbreak;CSV;Doc;44;3;0;0;0;0;2
+959;HistData;Snow.deaths;John Snow's Map and Data on the 1854 London Cholera Outbreak;CSV;Doc;578;3;0;0;0;0;3
+960;HistData;Snow.deaths2;John Snow's Map and Data on the 1854 London Cholera Outbreak;CSV;Doc;578;3;0;0;0;0;3
+961;HistData;Snow.pumps;John Snow's Map and Data on the 1854 London Cholera Outbreak;CSV;Doc;13;4;0;1;0;0;3
+962;HistData;Snow.streets;John Snow's Map and Data on the 1854 London Cholera Outbreak;CSV;Doc;1241;4;0;0;0;0;4
+963;HistData;Virginis;John F. W. Herschel's Data on the Orbit of the Twin Stars gamma _Virginis_;CSV;Doc;18;6;0;2;0;0;4
+964;HistData;Virginis.interp;John F. W. Herschel's Data on the Orbit of the Twin Stars gamma _Virginis_;CSV;Doc;14;4;0;0;0;0;4
+965;HistData;Wheat;Playfair's Data on Wages and the Price of Wheat;CSV;Doc;53;3;0;0;0;0;3
+966;HistData;Wheat.monarchs;Playfair's Data on Wages and the Price of Wheat;CSV;Doc;12;4;1;0;1;0;3
+967;HistData;Yeast;Student's (1906) Yeast Cell Counts;CSV;Doc;36;3;0;0;1;0;2
+968;HistData;YeastD.mat;Student's (1906) Yeast Cell Counts;CSV;Doc;20;20;0;0;0;0;20
+969;HistData;ZeaMays;Darwin's Heights of Cross- and Self-fertilized Zea May Pairs;CSV;Doc;15;5;0;0;1;0;4
+970;HLMdiag;ahd;Methylprednisolone data;CSV;Doc;330;5;1;0;2;0;3
+971;HLMdiag;autism;Autism data;CSV;Doc;604;7;3;0;4;0;3
+972;HLMdiag;radon;Radon data;CSV;Doc;919;5;1;0;1;0;4
+973;HLMdiag;wages;Wages for male high school dropouts;CSV;Doc;6402;15;3;0;3;0;12
+974;HSAUR;agefat;Total Body Composision Data;CSV;Doc;25;3;1;0;1;0;2
+975;HSAUR;aspirin;Aspirin Data;CSV;Doc;7;4;0;0;0;0;4
+976;HSAUR;BCG;BCG Vaccine Data;CSV;Doc;13;7;0;0;0;0;7
+977;HSAUR;birthdeathrates;Birth and Death Rates Data;CSV;Doc;69;2;0;0;0;0;2
+978;HSAUR;bladdercancer;Bladder Cancer Data;CSV;Doc;31;3;1;0;1;0;2
+979;HSAUR;BtheB;Beat the Blues Data;CSV;Doc;100;8;3;0;3;0;5
+980;HSAUR;clouds;Cloud Seeding Data;CSV;Doc;24;7;2;0;2;0;5
+981;HSAUR;CYGOB1;CYG OB1 Star Cluster Data;CSV;Doc;47;2;0;0;0;0;2
+982;HSAUR;epilepsy;Epilepsy Data;CSV;Doc;236;6;1;0;3;0;3
+983;HSAUR;Forbes2000;The Forbes 2000 Ranking of the World's Biggest Companies (Year 2004);CSV;Doc;2000;8;0;1;2;0;5
+984;HSAUR;foster;Foster Feeding Experiment;CSV;Doc;61;3;0;0;2;0;1
+985;HSAUR;gardenflowers;Garden Flowers;CSV;Doc;153;1;0;0;0;0;1
+986;HSAUR;GHQ;General Health Questionnaire;CSV;Doc;22;4;1;0;1;0;3
+987;HSAUR;heptathlon;Olympic Heptathlon Seoul 1988;CSV;Doc;25;8;0;0;0;0;8
+988;HSAUR;Lanza;Prevention of Gastointestinal Damages;CSV;Doc;198;3;1;0;3;0;0
+989;HSAUR;mastectomy;Survival Times after Mastectomy of Breast Cancer Patients;CSV;Doc;44;3;2;0;1;1;1
+990;HSAUR;meteo;Meteorological Measurements for 11 Years;CSV;Doc;11;6;0;0;1;0;5
+991;HSAUR;orallesions;Oral Lesions in Rural India;CSV;Doc;24;3;0;0;2;0;1
+992;HSAUR;phosphate;Phosphate Level Data;CSV;Doc;33;9;1;0;1;0;8
+993;HSAUR;pistonrings;Piston Rings Failures;CSV;Doc;12;3;0;0;2;0;1
+994;HSAUR;planets;Exoplanets Data;CSV;Doc;101;3;0;0;0;0;3
+995;HSAUR;plasma;Blood Screening Data;CSV;Doc;32;3;1;0;1;0;2
+996;HSAUR;polyps;Familial Andenomatous Polyposis;CSV;Doc;20;3;1;0;1;0;2
+997;HSAUR;polyps3;Familial Andenomatous Polyposis;CSV;Doc;22;5;2;0;2;0;3
+998;HSAUR;pottery;Romano-British Pottery Data;CSV;Doc;45;9;0;0;0;0;9
+999;HSAUR;rearrests;Rearrests of Juvenile Felons;CSV;Doc;4;3;2;0;2;0;1
+1000;HSAUR;respiratory;Respiratory Illness Data;CSV;Doc;555;7;4;0;6;0;1
+1001;HSAUR;roomwidth;Students Estimates of Lecture Room Width;CSV;Doc;113;2;1;0;1;0;1
+1002;HSAUR;schizophrenia;Age of Onset of Schizophrenia Data;CSV;Doc;251;2;1;0;1;0;1
+1003;HSAUR;schizophrenia2;Schizophrenia Data;CSV;Doc;220;4;2;0;3;0;1
+1004;HSAUR;schooldays;Days not Spent at School;CSV;Doc;154;5;3;0;4;0;1
+1005;HSAUR;skulls;Egyptian Skulls;CSV;Doc;150;5;0;0;1;0;4
+1006;HSAUR;smoking;Nicotine Gum and Smoking Cessation;CSV;Doc;26;4;0;0;0;0;4
+1007;HSAUR;students;Student Risk Taking;CSV;Doc;35;3;0;0;1;0;2
+1008;HSAUR;suicides;Crowd Baiting Behaviour and Suicides;CSV;Doc;4;3;2;0;2;0;1
+1009;HSAUR;toothpaste;Toothpaste Data;CSV;Doc;9;7;0;0;0;0;7
+1010;HSAUR;voting;House of Representatives Voting Data;CSV;Doc;15;15;0;0;0;0;15
+1011;HSAUR;water;Mortality and Water Hardness;CSV;Doc;61;4;1;1;1;0;2
+1012;HSAUR;watervoles;Water Voles Data;CSV;Doc;14;14;0;0;0;0;14
+1013;HSAUR;waves;Electricity from Wave Power at Sea;CSV;Doc;18;2;0;0;0;0;2
+1014;HSAUR;weightgain;Gain in Weight of Rats;CSV;Doc;40;3;2;0;2;0;1
+1015;HSAUR;womensrole;Womens Role in Society;CSV;Doc;42;4;1;0;1;0;3
+1016;hwde;IndianIrish;Observed genotype frequencies at MN and S loci, for 2 populations;CSV;Doc;18;4;1;0;3;0;1
+1017;hwde;mendelABC;Mendel's F2 trifactorial data for seed shape (A: round or wrinkled), cotyledon color (B: albumen yellow or green), and seed coat color (C: grey-brown or white);CSV;Doc;27;4;0;1;2;0;1
+1018;ISLR;Auto;Auto Data Set;CSV;Doc;392;9;0;0;1;0;8
+1019;ISLR;Caravan;The Insurance Company (TIC) Benchmark;CSV;Doc;5822;86;6;0;1;0;85
+1020;ISLR;Carseats;Sales of Child Car Seats;CSV;Doc;400;11;2;0;3;0;8
+1021;ISLR;College;U.S. News and World Report's College Data;CSV;Doc;777;18;1;0;1;0;17
+1022;ISLR;Credit;Credit Card Balance Data;CSV;Doc;400;12;3;0;4;0;8
+1023;ISLR;Default;Credit Card Default Data;CSV;Doc;10000;4;2;0;2;0;2
+1024;ISLR;Hitters;Baseball Data;CSV;Doc;322;20;3;0;3;0;17
+1025;ISLR;NCI60;NCI 60 Data;CSV;Doc;64;6831;0;1;0;0;6830
+1026;ISLR;OJ;Orange Juice Data;CSV;Doc;1070;18;4;0;2;0;16
+1027;ISLR;Portfolio;Portfolio Data;CSV;Doc;100;2;0;0;0;0;2
+1028;ISLR;Smarket;S&P Stock Market Data;CSV;Doc;1250;9;1;0;1;0;8
+1029;ISLR;Wage;Mid-Atlantic Wage Data;CSV;Doc;3000;11;3;0;7;0;4
+1030;ISLR;Weekly;Weekly S&P Stock Market Data;CSV;Doc;1089;9;1;0;1;0;8
+1031;itsadug;eeg;Raw EEG data, single trial, 50Hz.;CSV;Doc;1504;5;0;1;0;0;4
+1032;itsadug;simdat;Simulated time series data.;CSV;Doc;75600;6;1;0;2;0;4
+1033;KMsurv;aids;data from Section 1.19;CSV;Doc;295;3;1;0;0;0;3
+1034;KMsurv;alloauto;data from Section 1.9;CSV;Doc;101;3;2;0;0;0;3
+1035;KMsurv;allograft;data from Exercise 13.1, p418;CSV;Doc;34;4;2;0;0;0;4
+1036;KMsurv;azt;data from Exercise 4.7, p122;CSV;Doc;45;4;1;0;0;0;4
+1037;KMsurv;baboon;data from Exercise 5.8, p147;CSV;Doc;152;3;1;0;1;0;2
+1038;KMsurv;bcdeter;data from Section 1.18;CSV;Doc;95;3;1;0;0;0;3
+1039;KMsurv;bfeed;data from Section 1.14;CSV;Doc;927;10;5;0;0;0;10
+1040;KMsurv;bmt;data from Section 1.3;CSV;Doc;137;22;12;0;0;0;22
+1041;KMsurv;bnct;data from Exercise 7.7, p223;CSV;Doc;30;3;1;0;0;0;3
+1042;KMsurv;btrial;data from Section 1.5;CSV;Doc;45;3;2;0;0;0;3
+1043;KMsurv;burn;data from Section 1.6;CSV;Doc;154;18;12;0;0;0;18
+1044;KMsurv;channing;data from Section 1.16;CSV;Doc;462;6;2;0;0;0;6
+1045;KMsurv;drug6mp;data from Section 1.2;CSV;Doc;21;5;2;0;0;0;5
+1046;KMsurv;drughiv;data from Exercise 7.6, p222;CSV;Doc;34;3;2;0;0;0;3
+1047;KMsurv;hodg;data from Section 1.10;CSV;Doc;43;6;3;0;0;0;6
+1048;KMsurv;kidney;data from Section 1.4;CSV;Doc;119;3;2;0;0;0;3
+1049;KMsurv;kidrecurr;Data on 38 individuals using a kidney dialysis machine;CSV;Doc;38;10;6;0;0;0;10
+1050;KMsurv;kidtran;data from Section 1.7;CSV;Doc;863;6;3;0;0;0;6
+1051;KMsurv;larynx;data from Section 1.8;CSV;Doc;90;5;1;0;0;0;5
+1052;KMsurv;lung;data from Exercise 4.4, p120;CSV;Doc;25;4;1;0;0;0;4
+1053;KMsurv;pneumon;data from Section 1.13;CSV;Doc;3470;15;4;0;0;0;15
+1054;KMsurv;psych;data from Section 1.15;CSV;Doc;26;4;2;0;0;0;4
+1055;KMsurv;rats;data from Exercise 7.13, p225;CSV;Doc;150;4;2;0;0;0;4
+1056;KMsurv;std;data from Section 1.12;CSV;Doc;877;24;16;0;2;0;22
+1057;KMsurv;stddiag;data from Exercise 5.6, p146;CSV;Doc;25;2;0;0;0;0;2
+1058;KMsurv;tongue;data from Section 1.11;CSV;Doc;80;3;2;0;0;0;3
+1059;KMsurv;twins;data from Exercise 7.14, p225;CSV;Doc;24;4;2;0;0;0;4
+1060;lattice;barley;Yield data from a Minnesota barley trial;CSV;Doc;120;4;1;0;3;0;1
+1061;lattice;environmental;Atmospheric environmental conditions in New York City;CSV;Doc;111;4;0;0;0;0;4
+1062;lattice;ethanol;Engine exhaust fumes from burning ethanol;CSV;Doc;88;3;0;0;0;0;3
+1063;lattice;melanoma;Melanoma skin cancer incidence;CSV;Doc;37;2;0;0;0;0;2
+1064;lattice;singer;Heights of New York Choral Society singers;CSV;Doc;235;2;0;0;1;0;1
+1065;lattice;USMortality;Mortality Rates in US by Cause and Gender;CSV;Doc;40;5;2;0;3;0;2
+1066;lattice;USRegionalMortality;Mortality Rates in US by Cause and Gender;CSV;Doc;400;6;2;0;4;0;2
+1067;lme4;Arabidopsis;Arabidopsis clipping/fertilization data;CSV;Doc;625;8;3;0;4;0;4
+1068;lme4;cake;Breakage Angle of Chocolate Cakes;CSV;Doc;270;5;0;0;3;0;2
+1069;lme4;cbpp;Contagious bovine pleuropneumonia;CSV;Doc;56;4;0;0;2;0;2
+1070;lme4;Dyestuff;Yield of dyestuff by batch;CSV;Doc;30;2;0;0;1;0;1
+1071;lme4;Dyestuff2;Yield of dyestuff by batch;CSV;Doc;30;2;0;0;1;0;1
+1072;lme4;grouseticks;Data on red grouse ticks from Elston et al. 2001;CSV;Doc;403;7;0;0;4;0;3
+1073;lme4;grouseticks_agg (grouseticks);Data on red grouse ticks from Elston et al. 2001;CSV;Doc;118;7;0;0;3;0;4
+1074;lme4;InstEval;University Lecture/Instructor Evaluations by Students at ETH;CSV;Doc;73421;7;1;0;6;0;1
+1075;lme4;Pastes;Paste strength by batch and cask;CSV;Doc;60;4;0;0;3;0;1
+1076;lme4;Penicillin;Variation in penicillin testing;CSV;Doc;144;3;0;0;2;0;1
+1077;lme4;sleepstudy;Reaction times in a sleep deprivation study;CSV;Doc;180;3;0;0;1;0;2
+1078;lme4;VerbAgg;Verbal Aggression item responses;CSV;Doc;7584;9;4;0;8;0;1
+1079;MASS;abbey;Determinations of Nickel Content;CSV;Doc;31;1;0;0;0;0;1
+1080;MASS;accdeaths;Accidental Deaths in the US 1973-1978;CSV;Doc;72;2;0;0;0;0;2
+1081;MASS;Aids2;Australian AIDS Survival Data;CSV;Doc;2843;7;2;0;4;0;3
+1082;MASS;Animals;Brain and Body Weights for 28 Species;CSV;Doc;28;2;0;0;0;0;2
+1083;MASS;anorexia;Anorexia Data on Weight Change;CSV;Doc;72;3;0;0;1;0;2
+1084;MASS;bacteria;Presence of Bacteria after Drug Treatments;CSV;Doc;220;6;3;0;5;0;1
+1085;MASS;beav1;Body Temperature Series of Beaver 1;CSV;Doc;114;4;2;0;0;0;4
+1086;MASS;beav2;Body Temperature Series of Beaver 2;CSV;Doc;100;4;2;0;0;0;4
+1087;MASS;biopsy;Biopsy Data on Breast Cancer Patients;CSV;Doc;699;11;1;1;1;0;9
+1088;MASS;birthwt;Risk Factors Associated with Low Infant Birth Weight;CSV;Doc;189;10;4;0;0;0;10
+1089;MASS;Boston;Housing Values in Suburbs of Boston;CSV;Doc;506;14;1;0;0;0;14
+1090;MASS;cabbages;Data from a cabbage field trial;CSV;Doc;60;4;1;0;2;0;2
+1091;MASS;caith;Colours of Eyes and Hair of People in Caithness;CSV;Doc;4;5;0;0;0;0;5
+1092;MASS;Cars93;Data from 93 Cars on Sale in the USA in 1993;CSV;Doc;93;27;2;0;9;0;18
+1093;MASS;cats;Anatomical Data from Domestic Cats;CSV;Doc;144;3;1;0;1;0;2
+1094;MASS;cement;Heat Evolved by Setting Cements;CSV;Doc;13;5;0;0;0;0;5
+1095;MASS;chem;Copper in Wholemeal Flour;CSV;Doc;24;1;0;0;0;0;1
+1096;MASS;coop;Co-operative Trial in Analytical Chemistry;CSV;Doc;252;4;0;0;3;0;1
+1097;MASS;cpus;Performance of Computer CPUs;CSV;Doc;209;9;0;0;1;0;8
+1098;MASS;crabs;Morphological Measurements on Leptograpsus Crabs;CSV;Doc;200;8;2;0;2;0;6
+1099;MASS;Cushings;Diagnostic Tests on Patients with Cushing's Syndrome;CSV;Doc;27;3;0;0;1;0;2
+1100;MASS;DDT;DDT in Kale;CSV;Doc;15;1;0;0;0;0;1
+1101;MASS;deaths;Monthly Deaths from Lung Diseases in the UK;CSV;Doc;72;2;0;0;0;0;2
+1102;MASS;drivers;Deaths of Car Drivers in Great Britain 1969-84;CSV;Doc;192;2;0;0;0;0;2
+1103;MASS;eagles;Foraging Ecology of Bald Eagles;CSV;Doc;8;5;3;0;3;0;2
+1104;MASS;epil;Seizure Counts for Epileptics;CSV;Doc;236;9;2;0;1;0;8
+1105;MASS;farms;Ecological Factors in Farm Management;CSV;Doc;20;4;0;0;4;0;0
+1106;MASS;fgl;Measurements of Forensic Glass Fragments;CSV;Doc;214;10;0;0;1;0;9
+1107;MASS;forbes;Forbes' Data on Boiling Points in the Alps;CSV;Doc;17;2;0;0;0;0;2
+1108;MASS;GAGurine;Level of GAG in Urine of Children;CSV;Doc;314;2;0;0;0;0;2
+1109;MASS;galaxies;Velocities for 82 Galaxies;CSV;Doc;82;1;0;0;0;0;1
+1110;MASS;gehan;Remission Times of Leukaemia Patients;CSV;Doc;42;4;2;0;1;0;3
+1111;MASS;genotype;Rat Genotype Data;CSV;Doc;61;3;0;0;2;0;1
+1112;MASS;geyser;Old Faithful Geyser Data;CSV;Doc;299;2;0;0;0;0;2
+1113;MASS;gilgais;Line Transect of Soil in Gilgai Territory;CSV;Doc;365;9;0;0;0;0;9
+1114;MASS;hills;Record Times in Scottish Hill Races;CSV;Doc;35;3;0;0;0;0;3
+1115;MASS;housing;Frequency Table from a Copenhagen Housing Conditions Survey;CSV;Doc;72;5;1;0;4;0;1
+1116;MASS;immer;Yields from a Barley Field Trial;CSV;Doc;30;4;0;0;2;0;2
+1117;MASS;Insurance;Numbers of Car Insurance claims;CSV;Doc;64;5;0;0;3;0;2
+1118;MASS;leuk;Survival Times and White Blood Counts for Leukaemia Patients;CSV;Doc;33;3;1;0;1;0;2
+1119;MASS;mammals;Brain and Body Weights for 62 Species of Land Mammals;CSV;Doc;62;2;0;0;0;0;2
+1120;MASS;mcycle;Data from a Simulated Motorcycle Accident;CSV;Doc;133;2;0;0;0;0;2
+1121;MASS;Melanoma;Survival from Malignant Melanoma;CSV;Doc;205;7;2;0;0;0;7
+1122;MASS;menarche;Age of Menarche in Warsaw;CSV;Doc;25;3;0;0;0;0;3
+1123;MASS;michelson;Michelson's Speed of Light Data;CSV;Doc;100;3;0;0;2;0;1
+1124;MASS;minn38;Minnesota High School Graduates of 1938;CSV;Doc;168;5;1;0;4;0;1
+1125;MASS;motors;Accelerated Life Testing of Motorettes;CSV;Doc;40;3;1;0;0;0;3
+1126;MASS;muscle;Effect of Calcium Chloride on Muscle Contraction in Rat Hearts;CSV;Doc;60;3;0;0;1;0;2
+1127;MASS;newcomb;Newcomb's Measurements of the Passage Time of Light;CSV;Doc;66;1;0;0;0;0;1
+1128;MASS;nlschools;Eighth-Grade Pupils in the Netherlands;CSV;Doc;2287;6;1;0;2;0;4
+1129;MASS;npk;Classical N, P, K Factorial Experiment;CSV;Doc;24;5;3;0;4;0;1
+1130;MASS;npr1;US Naval Petroleum Reserve No. 1 data;CSV;Doc;104;4;0;0;0;0;4
+1131;MASS;oats;Data from an Oats Field Trial;CSV;Doc;72;4;0;0;3;0;1
+1132;MASS;OME;Tests of Auditory Perception in Children with OME;CSV;Doc;1097;7;1;0;2;0;5
+1133;MASS;painters;The Painter's Data of de Piles;CSV;Doc;54;5;0;0;1;0;4
+1134;MASS;petrol;N. L. Prater's Petrol Refinery Data;CSV;Doc;32;6;0;0;1;0;5
+1135;MASS;phones;Belgium Phone Calls 1950-1973;CSV;Doc;24;2;0;0;0;0;2
+1136;MASS;Pima.te;Diabetes in Pima Indian Women;CSV;Doc;332;8;1;0;1;0;7
+1137;MASS;Pima.tr;Diabetes in Pima Indian Women;CSV;Doc;200;8;1;0;1;0;7
+1138;MASS;Pima.tr2;Diabetes in Pima Indian Women;CSV;Doc;300;8;1;0;1;0;7
+1139;MASS;quine;Absenteeism from School in Rural New South Wales;CSV;Doc;146;5;3;0;4;0;1
+1140;MASS;Rabbit;Blood Pressure in Rabbits;CSV;Doc;60;5;1;0;3;0;2
+1141;MASS;road;Road Accident Deaths in US States;CSV;Doc;26;6;0;0;0;0;6
+1142;MASS;rotifer;Numbers of Rotifers by Fluid Density;CSV;Doc;20;5;0;0;0;0;5
+1143;MASS;Rubber;Accelerated Testing of Tyre Rubber;CSV;Doc;30;3;0;0;0;0;3
+1144;MASS;ships;Ships Damage Data;CSV;Doc;40;5;1;0;1;0;4
+1145;MASS;shoes;Shoe wear data of Box, Hunter and Hunter;CSV;Doc;10;2;0;0;0;0;2
+1146;MASS;shrimp;Percentage of Shrimp in Shrimp Cocktail;CSV;Doc;18;1;0;0;0;0;1
+1147;MASS;shuttle;Space Shuttle Autolander Problem;CSV;Doc;256;7;5;0;7;0;0
+1148;MASS;Sitka;Growth Curves for Sitka Spruce Trees in 1988;CSV;Doc;395;4;1;0;1;0;3
+1149;MASS;Sitka89;Growth Curves for Sitka Spruce Trees in 1989;CSV;Doc;632;4;1;0;1;0;3
+1150;MASS;Skye;AFM Compositions of Aphyric Skye Lavas;CSV;Doc;23;3;0;0;0;0;3
+1151;MASS;snails;Snail Mortality Data;CSV;Doc;96;6;1;0;1;0;5
+1152;MASS;SP500;Returns of the Standard and Poors 500;CSV;Doc;2780;1;0;0;0;0;1
+1153;MASS;steam;The Saturated Steam Pressure Data;CSV;Doc;14;2;0;0;0;0;2
+1154;MASS;stormer;The Stormer Viscometer Data;CSV;Doc;23;3;0;0;0;0;3
+1155;MASS;survey;Student Survey Data;CSV;Doc;237;12;3;0;7;0;5
+1156;MASS;synth.te;Synthetic Classification Problem;CSV;Doc;1000;3;1;0;0;0;3
+1157;MASS;synth.tr;Synthetic Classification Problem;CSV;Doc;250;3;1;0;0;0;3
+1158;MASS;topo;Spatial Topographic Data;CSV;Doc;52;3;0;0;0;0;3
+1159;MASS;Traffic;Effect of Swedish Speed Limits on Accidents;CSV;Doc;184;4;2;0;1;0;3
+1160;MASS;UScereal;Nutritional and Marketing Information on US Cereals;CSV;Doc;65;11;0;0;2;0;9
+1161;MASS;UScrime;The Effect of Punishment Regimes on Crime Rates;CSV;Doc;47;16;1;0;0;0;16
+1162;MASS;VA;Veteran's Administration Lung Cancer Trial;CSV;Doc;137;8;3;0;3;0;5
+1163;MASS;waders;Counts of Waders at 15 Sites in South Africa;CSV;Doc;15;19;0;0;0;0;19
+1164;MASS;whiteside;House Insulation: Whiteside's Data;CSV;Doc;56;3;1;0;1;0;2
+1165;MASS;wtloss;Weight Loss Data from an Obese Patient;CSV;Doc;52;2;0;0;0;0;2
+1166;MatchIt;lalonde;Data from National Supported Work Demonstration and PSID, as analyzed by Dehejia and Wahba (1999).;CSV;Doc;614;9;3;0;1;0;8
+1167;mediation;boundsdata;Example Data for the Design Functions;CSV;Doc;1000;7;6;0;0;0;7
+1168;mediation;CEDdata;Example Data for the Crossover Encouragement Design;CSV;Doc;2000;7;7;0;0;0;7
+1169;mediation;framing;Brader, Valentino and Suhay (2008) Framing Experiment Data;CSV;Doc;265;15;6;0;5;0;10
+1170;mediation;jobs;JOBS II data;CSV;Doc;899;17;7;0;7;0;10
+1171;mediation;school;School-level data;CSV;Doc;568;5;2;0;0;0;5
+1172;mediation;student;Hypothetical student-level data;CSV;Doc;9679;13;7;0;0;0;13
+1173;medicaldata;blood_storage;Retrospective Cohort Study of the Effects of Blood Storage on Prostate Cancer;CSV;Doc;316;20;10;0;0;0;20
+1174;medicaldata;covid_testing;Deidentified Results of COVID-19 testing at the Children's Hospital of Pennsylvania (CHOP) in 2020;CSV;Doc;15524;17;4;9;0;0;8
+1175;medicaldata;cytomegalovirus;Retrospective Cohort Study of the Effects of Donor KIR genotype on the reactivation of cytomegalovirus (CMV) after myeloablative allogeneic hematopoietic stem cell transplant.;CSV;Doc;64;26;13;1;0;0;25
+1176;medicaldata;esoph_ca;esoph_ca: Esophageal Cancer dataset;CSV;Doc;88;5;0;0;3;0;2
+1177;medicaldata;indo_rct;RCT of Indomethacin for Prevention of Post-ERCP Pancreatitis;CSV;Doc;602;33;25;0;29;0;4
+1178;medicaldata;indometh;Cohort Study of the Pharmacokinetics of Intravenous Indomethacin;CSV;Doc;66;3;0;0;1;0;2
+1179;medicaldata;laryngoscope;Randomized, Comparison Trial of Video vs. Standard Laryngoscope;CSV;Doc;99;22;9;0;0;0;22
+1180;medicaldata;licorice_gargle;Randomized, Controlled Trial of Licorice Gargle before Intubation for Elective Thoracic Surgery;CSV;Doc;235;19;3;0;0;0;19
+1181;medicaldata;opt;Obstetrics and Periodontal Therapy Dataset;CSV;Doc;823;171;29;0;73;0;98
+1182;medicaldata;polyps;RCT of Sulindac for Polyp Prevention in Familial Adenomatous Polyposis;CSV;Doc;22;7;2;1;2;0;4
+1183;medicaldata;scurvy;Randomized Trial of Six Therapies for Scurvy;CSV;Doc;12;8;1;2;6;0;0
+1184;medicaldata;smartpill;Prospective Cohort Study of Intestinal Transit using a SmartPill to Compare Trauma Patients to Healthy Volunteers;CSV;Doc;95;22;2;0;0;0;22
+1185;medicaldata;strep_tb;RCT of Streptomycin Therapy for Tuberculosis;CSV;Doc;107;13;5;1;8;1;3
+1186;medicaldata;supraclavicular;Study of Supraclavicular Anesthesia;CSV;Doc;103;17;4;0;0;0;17
+1187;medicaldata;theoph;Cohort Study of the Pharmacokinetics of Oral Theophylline;CSV;Doc;132;5;0;0;1;0;4
+1188;mi;CHAIN;Subset of variables from the CHAIN project;CSV;Doc;532;7;1;0;0;0;7
+1189;mi;nlsyV;National Longitudinal Survey of Youth Extract;CSV;Doc;400;7;2;0;0;0;7
+1190;mlmRev;bdf;Language Scores of 8-Graders in The Netherlands;CSV;Doc;2287;28;4;0;8;0;20
+1191;mlmRev;Chem97;Scores on A-level Chemistry in 1997;CSV;Doc;31022;8;1;0;4;0;4
+1192;mlmRev;Contraception;Contraceptive use in Bangladesh;CSV;Doc;1934;6;2;0;5;0;1
+1193;mlmRev;Early;Early childhood intervention study;CSV;Doc;309;4;1;0;2;0;2
+1194;mlmRev;egsingle;US Sustaining Effects study;CSV;Doc;7230;12;4;0;6;0;6
+1195;mlmRev;Exam;Exam scores from inner London;CSV;Doc;4059;10;2;0;7;0;3
+1196;mlmRev;Gcsemv;GCSE exam score;CSV;Doc;1905;5;1;0;3;0;2
+1197;mlmRev;guImmun;Immunization in Guatemala;CSV;Doc;2159;13;5;0;12;0;1
+1198;mlmRev;guPrenat;Prenatal care in Guatemala;CSV;Doc;2449;15;4;0;13;0;2
+1199;mlmRev;Hsb82;High School and Beyond - 1982;CSV;Doc;7185;8;3;0;4;0;4
+1200;mlmRev;Mmmec;Malignant melanoma deaths in Europe;CSV;Doc;354;6;0;0;3;0;3
+1201;mlmRev;Oxboys;Heights of Boys in Oxford;CSV;Doc;234;4;0;0;2;0;2
+1202;mlmRev;s3bbx;Covariates in the Rodriguez and Goldman simulation;CSV;Doc;2449;6;0;0;2;0;4
+1203;mlmRev;s3bby;Responses simulated by Rodriguez and Goldman;CSV;Doc;2449;100;100;0;0;0;100
+1204;mlmRev;ScotsSec;Scottish secondary school scores;CSV;Doc;3435;6;1;0;3;0;3
+1205;mlmRev;Socatt;Social Attitudes Survey;CSV;Doc;1056;9;1;0;8;0;1
+1206;mlmRev;star;Student Teacher Achievement Ratio (STAR) project data;CSV;Doc;26796;18;2;0;14;0;4
+1207;modeldata;ad_data;Alzheimer's disease data;CSV;Doc;333;131;2;0;2;0;129
+1208;modeldata;ames;Ames Housing Data;CSV;Doc;2930;74;2;0;40;0;34
+1209;modeldata;attrition;Job attrition;CSV;Doc;1470;31;4;0;15;0;16
+1210;modeldata;biomass;Biomass data;CSV;Doc;536;8;1;2;0;0;6
+1211;modeldata;bivariate_test (bivariate);Example bivariate classification data;CSV;Doc;710;3;1;0;1;0;2
+1212;modeldata;bivariate_train (bivariate);Example bivariate classification data;CSV;Doc;1009;3;1;0;1;0;2
+1213;modeldata;bivariate_val (bivariate);Example bivariate classification data;CSV;Doc;300;3;1;0;1;0;2
+1214;modeldata;car_prices;Kelly Blue Book resale data for 2005 model year GM cars;CSV;Doc;804;18;15;0;0;0;18
+1215;modeldata;cat_adoption;Cat Adoption;CSV;Doc;2257;20;13;0;4;0;16
+1216;modeldata;cells;Cell body segmentation;CSV;Doc;2019;58;2;0;2;0;56
+1217;modeldata;check_times;Execution time data;CSV;Doc;13626;25;4;1;0;0;24
+1218;modeldata;chem_proc_yield;Chemical manufacturing process data set;CSV;Doc;176;58;5;0;0;0;58
+1219;modeldata;Chicago;Chicago ridership data;CSV;Doc;5698;50;10;0;0;0;49
+1220;modeldata;concrete;Compressive strength of concrete mixtures;CSV;Doc;1030;9;0;0;0;0;9
+1221;modeldata;covers;Raw cover type data;CSV;Doc;40;1;0;1;0;0;0
+1222;modeldata;credit_data;Credit data;CSV;Doc;4454;14;2;0;5;0;9
+1223;modeldata;crickets;Rates of Cricket Chirps;CSV;Doc;31;3;1;0;1;0;2
+1224;modeldata;deliveries;Food Delivery Time Data;CSV;Doc;10012;31;0;0;1;0;30
+1225;modeldata;drinks;Sample time series data;CSV;Doc;309;2;0;0;0;0;1
+1226;modeldata;grants_2008 (grants);Grant acceptance data;CSV;Doc;6633;1;0;0;0;0;1
+1227;modeldata;grants_other (grants);Grant acceptance data;CSV;Doc;8190;1503;1331;0;6;0;1497
+1228;modeldata;grants_test (grants);Grant acceptance data;CSV;Doc;518;1503;583;0;6;0;1497
+1229;modeldata;hepatic_injury_qsar;Predicting hepatic injury from chemical information;CSV;Doc;281;377;40;0;1;0;376
+1230;modeldata;hotel_rates;Daily Hotel Rate Data;CSV;Doc;15402;28;3;0;9;0;18
+1231;modeldata;hpc_cv;Class probability predictions;CSV;Doc;3467;7;0;1;2;0;4
+1232;modeldata;hpc_data;High-performance computing system data;CSV;Doc;4331;8;0;0;3;0;5
+1233;modeldata;ischemic_stroke;Clinical data used to predict ischemic stroke;CSV;Doc;126;29;9;0;1;0;28
+1234;modeldata;leaf_id_flavia;Leaf identification data (Flavia);CSV;Doc;1907;59;5;0;9;0;50
+1235;modeldata;lending_club;Loan data;CSV;Doc;9857;23;2;0;6;0;17
+1236;modeldata;meats;Fat, water and protein content of meat samples;CSV;Doc;215;103;0;0;0;0;103
+1237;modeldata;mlc_churn;Customer churn data;CSV;Doc;5000;20;3;0;5;0;15
+1238;modeldata;oils;Fatty acid composition of commercial oils;CSV;Doc;96;8;0;0;1;0;7
+1239;modeldata;parabolic;Parabolic class boundary data;CSV;Doc;500;3;1;0;1;0;2
+1240;modeldata;pathology;Liver pathology data;CSV;Doc;344;2;2;0;2;0;0
+1241;modeldata;pd_speech;Parkinson's disease speech classification data set;CSV;Doc;252;752;2;0;1;0;751
+1242;modeldata;penguins;Palmer Station penguin data;CSV;Doc;344;7;1;0;3;0;4
+1243;modeldata;permeability_qsar;Predicting permeability from chemical information;CSV;Doc;165;1108;1069;0;0;0;1108
+1244;modeldata;Sacramento;Sacramento CA home prices;CSV;Doc;932;9;0;0;3;0;6
+1245;modeldata;scat;Morphometric data on scat;CSV;Doc;110;19;5;0;4;0;15
+1246;modeldata;Smithsonian;Smithsonian museums;CSV;Doc;20;3;0;1;0;0;2
+1247;modeldata;solubility_test;Solubility predictions from MARS model;CSV;Doc;316;2;0;0;0;0;2
+1248;modeldata;stackoverflow;Annual Stack Overflow Developer Survey Data;CSV;Doc;5594;21;16;0;2;0;19
+1249;modeldata;stations (Chicago);Chicago ridership data;CSV;Doc;20;1;0;1;0;0;0
+1250;modeldata;steroidogenic_toxicity;Predicting steroidogenic toxicity with assay data;CSV;Doc;162;13;1;0;1;0;12
+1251;modeldata;tate_text;Tate Gallery modern artwork metadata;CSV;Doc;4284;5;0;1;2;0;2
+1252;modeldata;taxi;Chicago taxi data set;CSV;Doc;10000;7;2;0;5;0;2
+1253;modeldata;testing_data (small_fine_foods);Fine foods example data;CSV;Doc;1000;3;1;2;1;0;0
+1254;modeldata;training_data (small_fine_foods);Fine foods example data;CSV;Doc;4000;3;1;2;1;0;0
+1255;modeldata;two_class_dat;Two class data;CSV;Doc;791;3;1;0;1;0;2
+1256;modeldata;two_class_example;Two class predictions;CSV;Doc;500;4;2;0;2;0;2
+1257;modeldata;wa_churn;Watson churn data;CSV;Doc;7043;20;7;0;11;0;9
+1258;mosaicData;Alcohol;Alcohol Consumption per Capita;CSV;Doc;411;3;0;1;0;0;2
+1259;mosaicData;Birthdays;US Births in 1969 - 1988;CSV;Doc;372864;7;0;1;1;0;4
+1260;mosaicData;Births;US Births;CSV;Doc;7305;8;0;0;1;0;6
+1261;mosaicData;Births2015;US Births;CSV;Doc;365;8;0;0;1;0;6
+1262;mosaicData;Births78;US Births;CSV;Doc;365;8;0;0;1;0;6
+1263;mosaicData;BirthsCDC;US Births;CSV;Doc;3652;8;0;0;1;0;6
+1264;mosaicData;BirthsSSA;US Births;CSV;Doc;5479;8;0;0;1;0;6
+1265;mosaicData;Cards;Standard Deck of Cards;CSV;Doc;52;1;0;1;0;0;0
+1266;mosaicData;CoolingWater;CoolingWater;CSV;Doc;222;2;0;0;0;0;2
+1267;mosaicData;Countries;Countries;CSV;Doc;288;3;0;3;0;0;0
+1268;mosaicData;CPS85;Data from the 1985 Current Population Survey (CPS85);CSV;Doc;534;11;6;0;7;0;4
+1269;mosaicData;Dimes;Weight of dimes;CSV;Doc;30;2;0;0;0;0;2
+1270;mosaicData;Galton;Galton's dataset of parent and child heights;CSV;Doc;898;6;1;0;2;0;4
+1271;mosaicData;Gestation;Data from the Child Health and Development Studies;CSV;Doc;1236;23;0;12;0;0;10
+1272;mosaicData;GoosePermits;Goose Permit Study;CSV;Doc;11;3;0;0;0;0;3
+1273;mosaicData;HeatX;Data from a heat exchanger laboratory;CSV;Doc;6;7;1;0;0;0;7
+1274;mosaicData;HELPfull;Health Evaluation and Linkage to Primary Care;CSV;Doc;1472;788;329;0;6;0;782
+1275;mosaicData;HELPmiss;Health Evaluation and Linkage to Primary Care;CSV;Doc;470;28;8;0;9;0;19
+1276;mosaicData;HELPrct;Health Evaluation and Linkage to Primary Care;CSV;Doc;453;30;10;0;9;0;21
+1277;mosaicData;KidsFeet;Foot measurements in children;CSV;Doc;39;8;4;0;4;0;4
+1278;mosaicData;Marriage;Marriage records;CSV;Doc;98;15;2;0;6;0;6
+1279;mosaicData;Mites;Mites and Wilt Disease;CSV;Doc;47;2;2;0;2;0;0
+1280;mosaicData;RailTrail;Volume of Users of a Rail Trail;CSV;Doc;90;11;5;1;0;1;9
+1281;mosaicData;Riders;Volume of Users of a Massachusetts Rail Trail;CSV;Doc;90;12;2;0;3;0;8
+1282;mosaicData;SaratogaHouses;Houses in Saratoga County (2006);CSV;Doc;1728;16;3;0;6;0;10
+1283;mosaicData;SAT;State by State SAT data;CSV;Doc;50;8;0;0;1;0;7
+1284;mosaicData;SnowGR;Snowfall data for Grand Rapids, MI;CSV;Doc;119;15;0;0;0;0;15
+1285;mosaicData;SwimRecords;100 m Swimming World Records;CSV;Doc;62;3;1;0;1;0;2
+1286;mosaicData;TenMileRace;Cherry Blossom Race;CSV;Doc;8636;5;1;0;2;0;3
+1287;mosaicData;Utilities;Utility bills;CSV;Doc;117;12;0;0;1;0;11
+1288;mosaicData;Utilities2;Utility bills;CSV;Doc;117;19;0;0;1;0;18
+1289;mosaicData;Weather;Weather;CSV;Doc;3655;25;1;3;0;0;21
+1290;mosaicData;Whickham;Data from the Whickham survey;CSV;Doc;1314;3;2;0;2;0;1
+1291;mstate;aidssi;Data from the Amsterdam Cohort Studies on HIV infection and AIDS;CSV;Doc;329;5;1;0;2;0;3
+1292;mstate;aidssi2;Data from the Amsterdam Cohort Studies on HIV infection and AIDS;CSV;Doc;329;10;4;0;1;0;9
+1293;mstate;bmt;BMT data from Klein and Moeschberger;CSV;Doc;137;22;12;0;0;0;22
+1294;mstate;ebmt1;Data from the European Society for Blood and Marrow Transplantation (EBMT);CSV;Doc;1977;8;2;0;2;0;6
+1295;mstate;ebmt2;Data from the European Society for Blood and Marrow Transplantation (EBMT);CSV;Doc;8966;9;1;0;6;0;3
+1296;mstate;ebmt3;Data from the European Society for Blood and Marrow Transplantation (EBMT);CSV;Doc;2204;9;4;0;4;0;5
+1297;mstate;ebmt4;Data from the European Society for Blood and Marrow Transplantation (EBMT);CSV;Doc;2279;15;7;0;4;0;11
+1298;mstate;prothr;Abnormal prothrombin levels in liver cirrhosis;CSV;Doc;2152;8;3;0;1;0;7
+1299;multgee;arthritis;Rheumatoid Arthritis Clinical Trial;CSV;Doc;906;7;2;0;0;0;7
+1300;multgee;housing;Homeless Data;CSV;Doc;1448;4;1;0;0;0;4
+1301;nlme;Alfalfa;Split-Plot Experiment on Varieties of Alfalfa;CSV;Doc;72;4;0;0;3;0;1
+1302;nlme;Assay;Bioassay on Cell Culture Plate;CSV;Doc;60;4;1;0;3;0;1
+1303;nlme;bdf;Language scores;CSV;Doc;2287;28;4;0;8;0;20
+1304;nlme;BodyWeight;Rat weight over time for different diets;CSV;Doc;176;4;0;0;2;0;2
+1305;nlme;Cefamandole;Pharmacokinetics of Cefamandole;CSV;Doc;84;3;0;0;1;0;2
+1306;nlme;Dialyzer;High-Flux Hemodialyzer;CSV;Doc;140;5;1;0;2;0;3
+1307;nlme;Earthquake;Earthquake Intensity;CSV;Doc;182;5;1;0;2;0;3
+1308;nlme;ergoStool;Ergometrics experiment with stool types;CSV;Doc;36;3;0;0;2;0;1
+1309;nlme;Fatigue;Cracks caused by metal fatigue;CSV;Doc;262;3;0;0;1;0;2
+1310;nlme;Gasoline;Refinery yield of gasoline;CSV;Doc;32;6;0;0;1;0;5
+1311;nlme;Glucose;Glucose levels over time;CSV;Doc;378;4;0;0;2;0;2
+1312;nlme;Glucose2;Glucose Levels Following Alcohol Ingestion;CSV;Doc;196;4;1;0;2;0;2
+1313;nlme;Gun;Methods for firing naval guns;CSV;Doc;36;4;1;0;3;0;1
+1314;nlme;IGF;Radioimmunoassay of IGF-I Protein;CSV;Doc;237;3;0;0;1;0;2
+1315;nlme;Machines;Productivity Scores for Machines and Workers;CSV;Doc;54;3;0;0;2;0;1
+1316;nlme;MathAchieve;Mathematics achievement scores;CSV;Doc;7185;6;2;0;3;0;3
+1317;nlme;MathAchSchool;School demographic data for MathAchieve;CSV;Doc;160;7;2;0;3;0;4
+1318;nlme;Meat;Tenderness of meat;CSV;Doc;30;4;0;0;3;0;1
+1319;nlme;Milk;Protein content of cows' milk;CSV;Doc;1337;4;0;0;2;0;2
+1320;nlme;Muscle;Contraction of heart muscle sections;CSV;Doc;60;3;0;0;1;0;2
+1321;nlme;Nitrendipene;Assay of nitrendipene;CSV;Doc;89;4;0;0;1;0;3
+1322;nlme;Oats;Split-plot Experiment on Varieties of Oats;CSV;Doc;72;4;0;0;2;0;2
+1323;nlme;Orthodont;Growth curve data on an orthdontic measurement;CSV;Doc;108;4;1;0;2;0;2
+1324;nlme;Ovary;Counts of Ovarian Follicles;CSV;Doc;308;3;0;0;1;0;2
+1325;nlme;Oxboys;Heights of Boys in Oxford;CSV;Doc;234;4;0;0;2;0;2
+1326;nlme;Oxide;Variability in Semiconductor Manufacturing;CSV;Doc;72;5;1;0;4;0;1
+1327;nlme;PBG;Effect of Phenylbiguanide on Blood Pressure;CSV;Doc;60;5;1;0;3;0;2
+1328;nlme;Phenobarb;Phenobarbitol Kinetics;CSV;Doc;744;7;1;0;3;0;4
+1329;nlme;Pixel;X-ray pixel intensities over time;CSV;Doc;102;4;1;0;2;0;2
+1330;nlme;Quinidine;Quinidine Kinetics;CSV;Doc;1471;14;2;0;6;0;8
+1331;nlme;Rail;Evaluation of Stress in Railway Rails;CSV;Doc;18;2;0;0;1;0;1
+1332;nlme;RatPupWeight;The weight of rat pups;CSV;Doc;322;5;1;0;3;0;2
+1333;nlme;Relaxin;Assay for Relaxin;CSV;Doc;198;3;0;0;1;0;2
+1334;nlme;Remifentanil;Pharmacokinetics of Remifentanil;CSV;Doc;2107;12;1;0;2;0;10
+1335;nlme;Soybean;Growth of soybean plants;CSV;Doc;412;5;1;0;3;0;2
+1336;nlme;Spruce;Growth of Spruce Trees;CSV;Doc;1027;4;0;0;2;0;2
+1337;nlme;Tetracycline1;Pharmacokinetics of tetracycline;CSV;Doc;40;4;1;0;2;0;2
+1338;nlme;Tetracycline2;Pharmacokinetics of tetracycline;CSV;Doc;40;4;1;0;2;0;2
+1339;nlme;Wafer;Modeling of Analog MOS Circuits;CSV;Doc;400;4;0;0;2;0;2
+1340;nlme;Wheat;Yields by growing conditions;CSV;Doc;48;4;0;0;1;0;3
+1341;nlme;Wheat2;Wheat Yield Trials;CSV;Doc;224;5;0;0;2;0;3
+1342;nycflights13;airlines;Airline names.;CSV;Doc;16;2;0;2;0;0;0
+1343;nycflights13;airports;Airport metadata;CSV;Doc;1458;8;0;4;0;0;4
+1344;nycflights13;flights;Flights data;CSV;Doc;336776;19;0;4;0;0;14
+1345;nycflights13;planes;Plane metadata.;CSV;Doc;3322;9;0;5;0;0;4
+1346;nycflights13;weather;Hourly weather data;CSV;Doc;26115;15;0;1;0;0;13
+1347;openintro;absenteeism;Absenteeism from school in New South Wales;CSV;Doc;146;5;3;0;4;0;1
+1348;openintro;acs12;American Community Survey, 2012;CSV;Doc;2000;13;5;0;9;0;4
+1349;openintro;age_at_mar;Age at first marriage of 5,534 US women.;CSV;Doc;5534;1;0;0;0;0;1
+1350;openintro;ames;Housing prices in Ames, Iowa;CSV;Doc;2930;82;3;0;43;0;39
+1351;openintro;ami_occurrences;Acute Myocardial Infarction (Heart Attack) Events;CSV;Doc;365;1;0;0;0;0;1
+1352;openintro;antibiotics;Pre-existing conditions in 92 children;CSV;Doc;92;1;0;0;1;0;0
+1353;openintro;arbuthnot;Male and female births in London;CSV;Doc;82;3;0;0;0;0;3
+1354;openintro;ask;How important is it to ask pointed questions?;CSV;Doc;219;3;1;3;0;0;0
+1355;openintro;association;Simulated data for association plots;CSV;Doc;121;15;0;0;0;0;15
+1356;openintro;assortative_mating;Eye color of couples;CSV;Doc;204;2;0;0;2;0;0
+1357;openintro;assortive_mating;Eye color of couples;CSV;Doc;204;2;0;0;2;0;0
+1358;openintro;avandia;Cardiovascular problems for two types of Diabetes medicines;CSV;Doc;227571;2;2;0;2;0;0
+1359;openintro;babies;The Child Health and Development Studies;CSV;Doc;1236;8;2;0;0;0;8
+1360;openintro;babies_crawl;Crawling age;CSV;Doc;12;5;0;0;1;0;4
+1361;openintro;bac;Beer and blood alcohol content;CSV;Doc;16;3;0;0;0;0;3
+1362;openintro;ball_bearing;Lifespan of ball bearings;CSV;Doc;75;1;0;0;0;0;1
+1363;openintro;bdims;Body measurements of 507 physically active individuals.;CSV;Doc;507;25;1;0;0;0;25
+1364;openintro;biontech_adolescents;Efficacy of Pfizer-BioNTech COVID-19 vaccine on adolescents;CSV;Doc;2260;2;2;0;2;0;0
+1365;openintro;birds;Aircraft-Wildlife Collisions;CSV;Doc;19302;17;0;2;11;0;4
+1366;openintro;births;North Carolina births, 100 cases;CSV;Doc;150;9;3;0;3;0;6
+1367;openintro;births14;US births;CSV;Doc;1000;13;7;7;0;0;6
+1368;openintro;blizzard_salary;Blizzard Employee Voluntary Salary Info.;CSV;Doc;466;9;1;7;0;0;2
+1369;openintro;books;Sample of books on a shelf;CSV;Doc;95;2;2;0;2;0;0
+1370;openintro;burger;Burger preferences;CSV;Doc;500;2;1;0;2;0;0
+1371;openintro;cancer_in_dogs;Cancer in dogs;CSV;Doc;1436;2;2;0;2;0;0
+1372;openintro;cards;Deck of cards;CSV;Doc;52;4;2;0;3;1;0
+1373;openintro;cars04;cars04;CSV;Doc;428;19;7;1;0;7;11
+1374;openintro;cars93;cars93;CSV;Doc;54;6;0;0;2;0;4
+1375;openintro;cchousing;Community college housing (simulated data);CSV;Doc;75;1;0;0;0;0;1
+1376;openintro;census;Random sample of 2000 U.S. Census Data;CSV;Doc;500;8;1;0;4;0;4
+1377;openintro;cherry;Summary information for 31 cherry trees;CSV;Doc;31;3;0;0;0;0;3
+1378;openintro;china;Child care hours;CSV;Doc;9788;3;1;0;0;0;3
+1379;openintro;cia_factbook;CIA Factbook Details on Countries;CSV;Doc;259;11;0;0;1;0;10
+1380;openintro;classdata;Simulated class data;CSV;Doc;164;2;0;0;1;0;1
+1381;openintro;cle_sac;Cleveland and Sacramento;CSV;Doc;500;8;3;3;2;0;3
+1382;openintro;climate70;Temperature Summary Data, Geography Limited;CSV;Doc;197;7;0;0;1;0;6
+1383;openintro;climber_drugs;Climber Drugs Data.;CSV;Doc;211;6;3;4;0;0;2
+1384;openintro;coast_starlight;Coast Starlight Amtrak train;CSV;Doc;16;3;0;0;1;0;2
+1385;openintro;COL;OpenIntro Statistics colors;CSV;Doc;7;13;0;13;0;0;0
+1386;openintro;comics;comics;CSV;Doc;21821;11;2;10;0;0;1
+1387;openintro;corr_match;Sample datasets for correlation problems;CSV;Doc;121;9;0;0;0;0;9
+1388;openintro;country_iso;Country ISO information;CSV;Doc;249;4;0;0;3;0;1
+1389;openintro;cpr;CPR dataset;CSV;Doc;90;2;2;0;2;0;0
+1390;openintro;cpu;CPU's Released between 2010 and 2020.;CSV;Doc;875;12;1;4;0;0;7
+1391;openintro;credits;College credits.;CSV;Doc;100;1;0;0;0;0;1
+1392;openintro;daycare_fines;Daycare fines;CSV;Doc;200;7;1;1;2;0;4
+1393;openintro;diabetes2;Type 2 Diabetes Clinical Trial for Patients 10-17 Years Old;CSV;Doc;699;2;1;0;2;0;0
+1394;openintro;dream;Survey on views of the DREAM Act;CSV;Doc;910;2;0;0;2;0;0
+1395;openintro;drone_blades;Quadcopter Drone Blades;CSV;Doc;2000;2;2;0;2;0;0
+1396;openintro;drug_use;Drug use of students and parents;CSV;Doc;445;2;2;0;2;0;0
+1397;openintro;duke_forest;Sale prices of houses in Duke Forest, Durham, NC;CSV;Doc;98;13;1;6;1;0;6
+1398;openintro;earthquakes;Earthquakes;CSV;Doc;123;7;0;3;0;0;4
+1399;openintro;ebola_survey;Survey on Ebola quarantine;CSV;Doc;1042;1;1;0;1;0;0
+1400;openintro;elmhurst;Elmhurst College gift aid;CSV;Doc;50;3;0;0;0;0;3
+1401;openintro;email;Data frame representing information about a collection of emails;CSV;Doc;3921;21;10;0;9;0;11
+1402;openintro;email_test;Data frame representing information about a collection of emails;CSV;Doc;1252;21;9;0;2;0;18
+1403;openintro;email50;Sample of 50 emails;CSV;Doc;50;21;7;0;9;0;11
+1404;openintro;env_regulation;American Adults on Regulation and Renewable Energy;CSV;Doc;705;1;0;1;0;0;0
+1405;openintro;epa2012;Vehicle info from the EPA for 2012;CSV;Doc;1129;28;4;0;19;0;8
+1406;openintro;epa2021;Vehicle info from the EPA for 2021;CSV;Doc;1108;28;3;0;19;0;8
+1407;openintro;esi;Environmental Sustainability Index 2005;CSV;Doc;146;29;0;0;2;0;27
+1408;openintro;ethanol;Ethanol Treatment for Tumors Experiment;CSV;Doc;24;2;1;0;2;0;0
+1409;openintro;evals;Professor evaluations and beauty;CSV;Doc;463;23;8;0;9;0;14
+1410;openintro;exam_grades;Exam and course grades for statistics students;CSV;Doc;233;6;1;2;0;0;4
+1411;openintro;exams;Exam scores;CSV;Doc;19;1;0;0;0;0;1
+1412;openintro;exclusive_relationship;Number of Exclusive Relationships;CSV;Doc;218;1;0;0;0;0;1
+1413;openintro;fact_opinion;Can Americans categorize facts and opinions?;CSV;Doc;5035;3;1;1;0;0;2
+1414;openintro;family_college;Simulated sample of parent / teen college attendance;CSV;Doc;792;2;2;0;2;0;0
+1415;openintro;fastfood;Nutrition in fast food;CSV;Doc;515;17;0;3;0;0;14
+1416;openintro;fcid;Summary of male heights from USDA Food Commodity Intake Database;CSV;Doc;100;2;0;0;0;0;2
+1417;openintro;fheights;Female college student heights, in inches;CSV;Doc;24;1;0;0;0;0;1
+1418;openintro;fish_age;Young fish in the North Sea.;CSV;Doc;300;3;2;2;0;0;1
+1419;openintro;fish_oil_18;Findings on n-3 Fatty Acid Supplement Health Benefits;CSV;Doc;2;48;46;0;0;0;48
+1420;openintro;flow_rates;River flow data;CSV;Doc;31;3;0;1;0;0;1
+1421;openintro;friday;Friday the 13th;CSV;Doc;61;6;0;0;3;0;3
+1422;openintro;full_body_scan;Poll about use of full-body airport scanners;CSV;Doc;1137;2;0;0;2;0;0
+1423;openintro;gdp_countries;GDP Countries Data.;CSV;Doc;654;9;0;2;0;0;7
+1424;openintro;gear_company;Fake data for a gear company example;CSV;Doc;2000;2;2;0;2;0;0
+1425;openintro;gender_discrimination;Bank manager recommendations based on gender;CSV;Doc;48;2;2;0;2;0;0
+1426;openintro;get_it_dunn_run;Get it Dunn Run, Race Times;CSV;Doc;978;10;3;7;0;0;3
+1427;openintro;gifted;Analytical skills of young gifted children;CSV;Doc;36;8;0;0;0;0;8
+1428;openintro;global_warming_pew;Pew survey on global warming;CSV;Doc;2253;2;0;0;2;0;0
+1429;openintro;goog;Google stock data;CSV;Doc;98;7;0;0;1;0;6
+1430;openintro;gov_poll;Pew Research poll on government approval ratings;CSV;Doc;4223;2;1;0;2;0;0
+1431;openintro;gpa;Survey of Duke students on GPA, studying, and more;CSV;Doc;55;5;1;0;1;0;4
+1432;openintro;gpa_iq;Sample of students and their GPA and IQ;CSV;Doc;78;5;1;0;0;0;5
+1433;openintro;gpa_study_hours;gpa_study_hours;CSV;Doc;193;2;0;0;0;0;2
+1434;openintro;gradestv;Simulated data for analyzing the relationship between watching TV and grades;CSV;Doc;25;2;0;0;0;0;2
+1435;openintro;gsearch;Simulated Google search experiment;CSV;Doc;10000;2;1;0;2;0;0
+1436;openintro;gss_wordsum_class;gss_wordsum_class;CSV;Doc;795;2;0;1;0;0;1
+1437;openintro;gss2010;2010 General Social Survey;CSV;Doc;2044;5;1;0;2;0;3
+1438;openintro;health_coverage;Health Coverage and Health Status;CSV;Doc;20000;2;1;0;2;0;0
+1439;openintro;healthcare_law_survey;Pew Research Center poll on health care, including question variants;CSV;Doc;1503;2;1;0;2;0;0
+1440;openintro;heart_transplant;Heart Transplant Data;CSV;Doc;103;8;3;0;3;0;5
+1441;openintro;helium;Helium football;CSV;Doc;39;3;0;0;0;0;3
+1442;openintro;helmet;Socioeconomic status and reduced-fee school lunches;CSV;Doc;12;2;0;0;0;0;2
+1443;openintro;hfi;Human Freedom Index;CSV;Doc;1458;123;0;3;0;0;120
+1444;openintro;house;United States House of Representatives historical make-up;CSV;Doc;116;12;0;2;0;0;10
+1445;openintro;housing;Simulated dataset on student housing;CSV;Doc;75;1;0;0;0;0;1
+1446;openintro;hsb2;High School and Beyond survey;CSV;Doc;200;11;2;2;3;0;6
+1447;openintro;husbands_wives;Great Britain: husband and wife pairs;CSV;Doc;199;7;0;0;0;0;7
+1448;openintro;immigration;Poll on illegal workers in the US;CSV;Doc;910;2;0;0;2;0;0
+1449;openintro;IMSCOL;Introduction to Modern Statistics (IMS) Colors;CSV;Doc;8;13;0;13;0;0;0
+1450;openintro;infmortrate;Infant Mortality Rates, 2012;CSV;Doc;222;2;0;0;1;0;1
+1451;openintro;iowa;iowa;CSV;Doc;1386;5;0;4;0;0;1
+1452;openintro;ipod;Length of songs on an iPod;CSV;Doc;3000;1;0;0;0;0;1
+1453;openintro;iran;iran;CSV;Doc;366;9;0;2;0;0;7
+1454;openintro;jury;Simulated juror dataset;CSV;Doc;275;1;0;0;1;0;0
+1455;openintro;kobe_basket;Kobe Bryant basketball performance;CSV;Doc;133;6;1;1;4;0;1
+1456;openintro;labor_market_discrimination;Are Emily and Greg More Employable Than Lakisha and Jamal?;CSV;Doc;4870;63;37;8;0;0;55
+1457;openintro;LAhomes;LAhomes;CSV;Doc;1594;8;2;3;0;0;5
+1458;openintro;law_resume;Gender, Socioeconomic Class, and Interview Invites;CSV;Doc;316;3;3;3;0;0;0
+1459;openintro;lecture_learning;Lecture Delivery Method and Learning Outcomes;CSV;Doc;552;8;2;5;0;0;3
+1460;openintro;leg_mari;Legalization of Marijuana Support in 2010 California Survey;CSV;Doc;119;1;1;0;1;0;0
+1461;openintro;lego_population;Population of Lego Sets for Sale between Jan. 1, 2018 and Sept. 11, 2020.;CSV;Doc;1304;14;1;6;0;0;8
+1462;openintro;lego_sample;Sample of Lego Sets;CSV;Doc;75;14;1;6;0;0;8
+1463;openintro;life_exp;life_exp;CSV;Doc;3142;4;0;2;0;0;2
+1464;openintro;lizard_habitat;Field data on lizards observed in their natural habitat;CSV;Doc;332;2;0;0;2;0;0
+1465;openintro;lizard_run;Lizard speeds;CSV;Doc;48;3;2;2;0;0;1
+1466;openintro;loan50;Loan data from Lending Club;CSV;Doc;50;18;4;0;6;1;11
+1467;openintro;loans_full_schema;Loan data from Lending Club;CSV;Doc;10000;55;6;1;12;0;42
+1468;openintro;london_boroughs;London Borough Boundaries;CSV;Doc;45341;3;0;0;1;0;2
+1469;openintro;london_murders;London Murders, 2006-2011;CSV;Doc;838;5;0;0;2;0;2
+1470;openintro;mail_me;Influence of a Good Mood on Helpfulness;CSV;Doc;42;4;4;0;4;0;0
+1471;openintro;major_survey;Survey of Duke students and the area of their major;CSV;Doc;218;2;0;0;1;0;1
+1472;openintro;malaria;Malaria Vaccine Trial;CSV;Doc;20;2;2;0;2;0;0
+1473;openintro;male_heights;Sample of 100 male heights;CSV;Doc;100;1;0;0;0;0;1
+1474;openintro;male_heights_fcid;Random sample of adult male heights;CSV;Doc;100;1;0;0;0;0;1
+1475;openintro;mammals;Sleep in Mammals;CSV;Doc;62;11;0;0;1;0;10
+1476;openintro;mammogram;Experiment with Mammogram Randomized;CSV;Doc;89835;2;2;0;2;0;0
+1477;openintro;manhattan;manhattan;CSV;Doc;20;1;0;0;0;0;1
+1478;openintro;marathon;New York City Marathon Times (outdated);CSV;Doc;59;3;1;0;1;0;2
+1479;openintro;mariokart;Wii Mario Kart auctions from Ebay;CSV;Doc;143;12;2;0;4;0;8
+1480;openintro;mcu_films;Marvel Cinematic Universe films;CSV;Doc;23;7;0;2;0;0;5
+1481;openintro;midterms_house;President's party performance and unemployment rate;CSV;Doc;31;5;1;0;2;0;3
+1482;openintro;migraine;Migraines and acupuncture;CSV;Doc;89;2;2;0;2;0;0
+1483;openintro;military;US Military Demographics;CSV;Doc;1414593;6;2;0;4;1;1
+1484;openintro;mlb;Salary data for Major League Baseball (2010);CSV;Doc;828;4;0;0;3;0;1
+1485;openintro;mlb_players_18;Batter Statistics for 2018 Major League Baseball (MLB) Season;CSV;Doc;1270;19;0;3;0;0;16
+1486;openintro;mlb_teams;Major League Baseball Teams Data.;CSV;Doc;2784;41;1;8;0;0;33
+1487;openintro;mlbbat10;Major League Baseball Player Hitting Statistics for 2010;CSV;Doc;1199;19;0;0;3;0;16
+1488;openintro;mn_police_use_of_force;Minneapolis police use of force data.;CSV;Doc;12925;13;2;12;0;0;1
+1489;openintro;movies;movies;CSV;Doc;140;5;0;3;0;0;2
+1490;openintro;mtl;Medial temporal lobe (MTL) and other data for 26 participants;CSV;Doc;35;23;4;4;0;0;19
+1491;openintro;murders;Data for 20 metropolitan areas;CSV;Doc;20;4;0;0;0;0;4
+1492;openintro;nba_finals;NBA Finals History;CSV;Doc;73;9;1;8;0;0;1
+1493;openintro;nba_finals_teams;NBA Finals Team Summary;CSV;Doc;33;7;0;3;0;0;4
+1494;openintro;nba_heights;NBA Player heights from 2008-9;CSV;Doc;435;4;0;2;0;0;2
+1495;openintro;nba_players_19;NBA Players for the 2018-2019 season;CSV;Doc;494;7;0;6;0;0;1
+1496;openintro;ncbirths;North Carolina births, 1000 cases;CSV;Doc;1000;13;7;0;7;0;6
+1497;openintro;nuclear_survey;Nuclear Arms Reduction Survey;CSV;Doc;1028;1;1;0;1;0;0
+1498;openintro;nyc;nyc;CSV;Doc;168;6;1;1;0;0;5
+1499;openintro;nyc_marathon;New York City Marathon Times;CSV;Doc;108;7;1;4;0;0;2
+1500;openintro;nycflights;Flights data;CSV;Doc;32735;16;0;4;0;0;12
+1501;openintro;offshore_drilling;California poll on drilling off the California coast;CSV;Doc;828;2;0;0;2;0;0
+1502;openintro;openintro_colors;OpenIntro colors;CSV;Doc;8;1;0;1;0;0;0
+1503;openintro;opportunity_cost;Opportunity cost of purchases;CSV;Doc;150;2;2;0;2;0;0
+1504;openintro;orings;1986 Challenger disaster and O-rings;CSV;Doc;23;4;0;0;0;0;4
+1505;openintro;oscars;Oscar winners, 1929 to 2018;CSV;Doc;184;11;1;4;0;0;6
+1506;openintro;outliers;Simulated datasets for different types of outliers;CSV;Doc;50;5;0;0;0;0;5
+1507;openintro;paralympic_1500;Race time for Olympic and Paralympic 1500m.;CSV;Doc;82;9;1;7;0;0;2
+1508;openintro;penelope;Guesses at the weight of Penelope (a cow);CSV;Doc;17184;1;0;0;0;0;1
+1509;openintro;penetrating_oil;What's the best way to loosen a rusty bolt?;CSV;Doc;30;2;0;1;0;0;1
+1510;openintro;penny_ages;Penny Ages;CSV;Doc;648;2;0;0;0;0;2
+1511;openintro;pew_energy_2018;Pew Survey on Energy Sources in 2018;CSV;Doc;2541;6;6;6;0;0;0
+1512;openintro;photo_classify;Photo classifications: fashion or not;CSV;Doc;1822;2;2;0;2;0;0
+1513;openintro;piracy;Piracy and PIPA/SOPA;CSV;Doc;534;8;1;1;4;0;3
+1514;openintro;playing_cards;Table of Playing Cards in 52-Card Deck;CSV;Doc;52;3;1;1;2;0;0
+1515;openintro;pm25_2011_durham;Air quality for Durham, NC;CSV;Doc;449;20;3;6;1;0;12
+1516;openintro;pm25_2022_durham;Air quality for Durham, NC;CSV;Doc;356;19;0;6;1;0;11
+1517;openintro;poker;Poker winnings during 50 sessions;CSV;Doc;50;1;0;0;0;0;1
+1518;openintro;possum;Possums in Australia and New Guinea;CSV;Doc;104;8;2;0;2;0;6
+1519;openintro;ppp_201503;US Poll on who it is better to raise taxes on;CSV;Doc;691;2;0;0;2;0;0
+1520;openintro;present;Birth counts;CSV;Doc;63;3;0;0;0;0;3
+1521;openintro;president;United States Presidental History;CSV;Doc;67;5;0;0;3;0;2
+1522;openintro;prison;Prison isolation experiment;CSV;Doc;14;6;0;0;0;0;6
+1523;openintro;prius_mpg;User reported fuel efficiency for 2017 Toyota Prius Prime;CSV;Doc;19;5;0;1;0;0;3
+1524;openintro;race_justice;Yahoo! News Race and Justice poll results;CSV;Doc;1059;2;0;0;2;0;0
+1525;openintro;reddit_finance;Reddit Survey on Financial Independence.;CSV;Doc;1998;65;1;29;0;0;36
+1526;openintro;res_demo_1;Simulated data for regression;CSV;Doc;100;3;0;0;0;0;3
+1527;openintro;res_demo_2;Simulated data for regression;CSV;Doc;300;3;0;0;0;0;3
+1528;openintro;resume;Which resume attributes drive job callbacks?;CSV;Doc;4870;30;21;10;0;0;20
+1529;openintro;rosling_responses;Sample Responses to Two Public Health Questions;CSV;Doc;278;3;2;2;0;0;1
+1530;openintro;russian_influence_on_us_election_2016;Russians' Opinions on US Election Influence in 2016;CSV;Doc;506;1;0;1;0;0;0
+1531;openintro;sa_gdp_elec;Sustainability and Economic Indicators for South Africa.;CSV;Doc;16;7;0;0;0;0;7
+1532;openintro;salinity;Salinity in Bimini Lagoon, Bahamas;CSV;Doc;30;2;0;1;0;0;1
+1533;openintro;sat_improve;Simulated data for SAT score improvement;CSV;Doc;30;1;0;0;0;0;1
+1534;openintro;satgpa;SAT and GPA data;CSV;Doc;1000;6;1;0;0;0;6
+1535;openintro;scotus_healthcare;Public Opinion with SCOTUS ruling on American Healthcare Act;CSV;Doc;1012;1;1;0;1;0;0
+1536;openintro;seattlepets;Names of pets in Seattle;CSV;Doc;52519;7;0;6;0;0;0
+1537;openintro;sex_discrimination;Bank manager recommendations based on sex;CSV;Doc;48;2;2;0;2;0;0
+1538;openintro;simpsons_paradox_covid;Simpson's Paradox: Covid;CSV;Doc;268166;3;3;3;0;0;0
+1539;openintro;simulated_normal;Simulated datasets, drawn from a normal distribution.;CSV;Doc;400;3;0;0;0;0;3
+1540;openintro;simulated_scatter;Simulated data for sample scatterplots;CSV;Doc;2033;3;0;0;0;0;3
+1541;openintro;sinusitis;Sinusitis and antibiotic experiment;CSV;Doc;166;2;2;0;2;0;0
+1542;openintro;sleep_deprivation;Survey on sleep deprivation and transportation workers;CSV;Doc;1087;2;0;0;2;0;0
+1543;openintro;smallpox;Smallpox vaccine results;CSV;Doc;6224;2;2;0;2;0;0
+1544;openintro;smoking;UK Smoking Data;CSV;Doc;1691;12;2;0;9;0;3
+1545;openintro;snowfall;Snowfall at Paradise, Mt. Rainier National Park;CSV;Doc;100;3;0;0;0;0;3
+1546;openintro;socialexp;Social experiment;CSV;Doc;45;2;2;0;2;0;0
+1547;openintro;soda;soda;CSV;Doc;60;2;2;2;0;0;0
+1548;openintro;solar;Energy Output From Two Solar Arrays in San Francisco;CSV;Doc;284;3;1;1;0;0;1
+1549;openintro;sowc_child_mortality;SOWC Child Mortality Data.;CSV;Doc;195;18;0;2;0;0;16
+1550;openintro;sowc_demographics;SOWC Demographics Data.;CSV;Doc;202;18;0;1;0;0;17
+1551;openintro;sowc_maternal_newborn;SOWC Maternal and Newborn Health Data.;CSV;Doc;202;18;0;1;0;0;17
+1552;openintro;sp500;Financial information for 50 S&P 500 companies;CSV;Doc;50;12;0;0;1;0;11
+1553;openintro;sp500_1950_2018;Daily observations for the S&P 500;CSV;Doc;17346;7;0;0;1;0;6
+1554;openintro;sp500_seq;S&P 500 stock data;CSV;Doc;2948;1;0;0;1;0;0
+1555;openintro;speed_gender_height;Speed, gender, and height of 1325 students;CSV;Doc;1325;3;1;0;1;0;2
+1556;openintro;ssd_speed;SSD read and write speeds;CSV;Doc;54;7;1;3;0;0;4
+1557;openintro;starbucks;Starbucks nutrition;CSV;Doc;77;7;0;1;1;0;5
+1558;openintro;stats_scores;Final exam scores for twenty students;CSV;Doc;20;1;0;0;0;0;1
+1559;openintro;stem_cell;Embryonic stem cells to treat heart attack (in sheep);CSV;Doc;18;3;1;0;1;0;2
+1560;openintro;stent30;Stents for the treatment of stroke;CSV;Doc;451;2;2;0;2;0;0
+1561;openintro;stent365;Stents for the treatment of stroke;CSV;Doc;451;2;2;0;2;0;0
+1562;openintro;stocks_18;Monthly Returns for a few stocks;CSV;Doc;36;4;0;0;0;0;3
+1563;openintro;student_housing;Community college housing (simulated data, 2015);CSV;Doc;175;1;0;0;0;0;1
+1564;openintro;student_sleep;Sleep for 110 students (simulated);CSV;Doc;110;1;0;0;0;0;1
+1565;openintro;sulphinpyrazone;Treating heart attacks;CSV;Doc;1475;2;2;0;2;0;0
+1566;openintro;supreme_court;Supreme Court approval rating;CSV;Doc;976;1;1;0;1;0;0
+1567;openintro;teacher;Teacher Salaries in St. Louis, Michigan;CSV;Doc;71;8;2;0;3;0;5
+1568;openintro;textbooks;Textbook data for UCLA Bookstore and Amazon;CSV;Doc;73;7;1;0;4;0;3
+1569;openintro;thanksgiving_spend;Thanksgiving spending, simulated based on Gallup poll.;CSV;Doc;436;1;0;0;0;0;1
+1570;openintro;tips;Tip data;CSV;Doc;95;5;1;0;1;0;4
+1571;openintro;toohey;Simulated polling dataset;CSV;Doc;500;1;1;0;1;0;0
+1572;openintro;tourism;Turkey tourism;CSV;Doc;47;3;0;0;0;0;3
+1573;openintro;toy_anova;Simulated dataset for ANOVA;CSV;Doc;140;2;0;1;0;0;1
+1574;openintro;transplant;Transplant consultant success rate (fake data);CSV;Doc;62;1;1;0;1;0;0
+1575;openintro;twins;twins;CSV;Doc;27;2;0;0;0;0;2
+1576;openintro;ucb_admit;ucb_admit;CSV;Doc;4526;3;2;3;0;0;0
+1577;openintro;ucla_f18;UCLA courses in Fall 2018;CSV;Doc;3950;14;7;5;0;7;2
+1578;openintro;ucla_textbooks_f18;Sample of UCLA course textbooks for Fall 2018;CSV;Doc;201;20;2;1;6;7;6
+1579;openintro;ukdemo;United Kingdom Demographic Data;CSV;Doc;12;6;0;0;1;0;5
+1580;openintro;unempl;Annual unemployment since 1890;CSV;Doc;121;3;1;0;0;0;3
+1581;openintro;unemploy_pres;President's party performance and unemployment rate;CSV;Doc;29;5;1;0;2;0;3
+1582;openintro;us_temperature;US temperatures in 1950 and 2022;CSV;Doc;18759;9;1;2;0;0;6
+1583;openintro;winery_cars;Time Between Gondola Cars at Sterling Winery;CSV;Doc;52;2;0;0;0;0;2
+1584;openintro;world_pop;World Population Data.;CSV;Doc;216;62;0;1;0;0;61
+1585;openintro;xom;Exxon Mobile stock data;CSV;Doc;98;7;0;0;1;0;6
+1586;openintro;yawn;Contagiousness of yawning;CSV;Doc;50;2;2;0;2;0;0
+1587;openintro;yrbss;Youth Risk Behavior Surveillance System (YRBSS);CSV;Doc;13583;13;2;8;0;0;5
+1588;openintro;yrbss_samp;Sample of Youth Risk Behavior Surveillance System (YRBSS);CSV;Doc;100;13;2;8;0;0;5
+1589;ordinal;income;Income distribution (percentages) in the Northeast US;CSV;Doc;14;3;1;0;2;0;1
+1590;ordinal;soup;Discrimination study of packet soup;CSV;Doc;1847;12;4;0;12;0;0
+1591;ordinal;wine;Bitterness of wine;CSV;Doc;72;6;2;0;5;0;1
+1592;palmerpenguins;penguins;Size measurements for adult foraging penguins near Palmer Station, Antarctica;CSV;Doc;344;8;1;0;3;0;5
+1593;palmerpenguins;penguins_raw (penguins);Penguin size, clutch, and blood isotope data for foraging adults near Palmer Station, Antarctica;CSV;Doc;344;17;2;9;0;0;7
+1594;plm;Cigar;Cigarette Consumption;CSV;Doc;1380;9;0;0;0;0;9
+1595;plm;Crime;Crime in North Carolina;CSV;Doc;630;44;1;0;2;0;42
+1596;plm;EmplUK;Employment and Wages in the United Kingdom;CSV;Doc;1031;7;0;0;0;0;7
+1597;plm;Gasoline;Gasoline Consumption;CSV;Doc;342;6;0;0;1;0;5
+1598;plm;Grunfeld;Grunfeld's Investment Data;CSV;Doc;200;5;0;0;0;0;5
+1599;plm;Hedonic;Hedonic Prices of Census Tracts in the Boston Area;CSV;Doc;506;15;1;0;1;0;14
+1600;plm;LaborSupply;Wages and Hours Worked;CSV;Doc;5320;7;1;0;0;0;7
+1601;plm;Males;Wages and Education of Young Males;CSV;Doc;4360;12;3;0;7;0;5
+1602;plm;Parity;Purchasing Power Parity and other parity relationships;CSV;Doc;1768;9;0;0;1;0;8
+1603;plm;Produc;US States Production;CSV;Doc;816;11;0;0;2;0;9
+1604;plm;RiceFarms;Production of Rice in Indonesia;CSV;Doc;1026;20;0;0;4;0;16
+1605;plm;Snmesp;Employment and Wages in Spain;CSV;Doc;5904;8;0;0;0;0;8
+1606;plm;SumHes;The Penn World Table, v. 5;CSV;Doc;3250;7;2;0;3;0;4
+1607;plm;Wages;Panel Data of Individual Wages;CSV;Doc;4165;12;8;0;7;0;5
+1608;plyr;baseball;Yearly batting records for all major league baseball players;CSV;Doc;21699;22;0;3;0;0;19
+1609;plyr;ozone;Monthly ozone measurements over Central America.;CSV;Doc;24;1728;0;0;0;0;1728
+1610;pscl;absentee;Absentee and Machine Ballots in Pennsylvania State Senate Races;CSV;Doc;22;8;0;0;0;0;8
+1611;pscl;admit;Applications to a Political Science PhD Program;CSV;Doc;106;6;3;0;1;0;5
+1612;pscl;AustralianElectionPolling;Political opinion polls in Australia, 2004-07;CSV;Doc;239;14;0;2;1;0;9
+1613;pscl;AustralianElections;elections to Australian House of Representatives, 1949-2016;CSV;Doc;27;19;0;0;0;0;18
+1614;pscl;bioChemists;article production by graduate students in biochemistry Ph.D. programs;CSV;Doc;915;6;2;0;2;0;4
+1615;pscl;ca2006;California Congressional Districts in 2006;CSV;Doc;53;13;3;2;0;2;9
+1616;pscl;EfronMorris;Batting Averages for 18 major league baseball players, 1970;CSV;Doc;18;7;1;0;3;0;4
+1617;pscl;iraqVote;U.S. Senate vote on the use of force against Iraq, 2002.;CSV;Doc;100;6;2;1;2;1;2
+1618;pscl;partycodes;political parties appearing in the U.S. Congress;CSV;Doc;85;2;0;1;0;0;1
+1619;pscl;politicalInformation;Interviewer ratings of respondent levels of political information;CSV;Doc;1807;8;4;0;6;0;2
+1620;pscl;presidentialElections;elections for U.S. President, 1932-2016, by state;CSV;Doc;1097;4;1;1;0;1;2
+1621;pscl;prussian;Prussian army horse kick data;CSV;Doc;280;3;0;0;1;0;2
+1622;pscl;RockTheVote;Voter turnout experiment, using Rock The Vote ads;CSV;Doc;85;6;1;0;0;0;6
+1623;pscl;state.info;information about the American states needed for U.S. Congress;CSV;Doc;51;3;0;1;0;0;2
+1624;pscl;UKHouseOfCommons;1992 United Kingdom electoral returns;CSV;Doc;521;12;3;2;0;0;10
+1625;pscl;unionDensity;cross national rates of trade union density;CSV;Doc;20;4;0;0;0;0;4
+1626;pscl;vote92;Reports of voting in the 1992 U.S. Presidential election.;CSV;Doc;909;9;3;0;1;0;8
+1627;psych;Bechtoldt;Seven data sets showing a bifactor solution.;CSV;Doc;17;17;0;0;0;0;17
+1628;psych;Bechtoldt.1;Seven data sets showing a bifactor solution.;CSV;Doc;17;17;0;0;0;0;17
+1629;psych;Bechtoldt.2;Seven data sets showing a bifactor solution.;CSV;Doc;17;17;0;0;0;0;17
+1630;psych;bfi;25 Personality items representing 5 factors;CSV;Doc;2800;28;1;0;0;0;28
+1631;psych;bfi.dictionary;25 Personality items representing 5 factors;CSV;Doc;28;7;1;0;6;0;1
+1632;psych;bfi.keys (bfi);25 Personality items representing 5 factors;CSV;Doc;5;5;0;5;0;0;0
+1633;psych;bock.table (bock);Bock and Liberman (1970) data set of 1000 observations of the LSAT;CSV;Doc;32;8;5;0;0;0;8
+1634;psych;cattell;12 cognitive variables from Cattell (1963);CSV;Doc;12;12;0;0;0;0;12
+1635;psych;Chen (Schmid);12 variables created by Schmid and Leiman to show the Schmid-Leiman Transformation;CSV;Doc;18;18;0;0;0;0;18
+1636;psych;Dwyer;8 cognitive variables used by Dwyer for an example.;CSV;Doc;8;8;0;0;0;0;8
+1637;psych;Garcia (GSBE);Data from the sexism (protest) study of Garcia, Schmitt, Branscome, and Ellemers (2010);CSV;Doc;129;6;1;0;0;0;6
+1638;psych;Gleser;Example data from Gleser, Cronbach and Rajaratnam (1965) to show basic principles of generalizability theory.;CSV;Doc;12;12;0;0;0;0;12
+1639;psych;Gorsuch;Example data set from Gorsuch (1997) for an example factor extension.;CSV;Doc;10;10;0;0;0;0;10
+1640;psych;Harman.5;Five data sets from Harman (1967). 9 cognitive variables from Holzinger and 8 emotional variables from Burt;CSV;Doc;12;5;0;0;0;0;5
+1641;psych;Harman.8;Five data sets from Harman (1967). 9 cognitive variables from Holzinger and 8 emotional variables from Burt;CSV;Doc;8;8;0;0;0;0;8
+1642;psych;Harman.Burt (Harman);Five data sets from Harman (1967). 9 cognitive variables from Holzinger and 8 emotional variables from Burt;CSV;Doc;8;8;0;0;0;0;8
+1643;psych;Harman.Holzinger (Harman);Five data sets from Harman (1967). 9 cognitive variables from Holzinger and 8 emotional variables from Burt;CSV;Doc;9;9;0;0;0;0;9
+1644;psych;Harman.political;Five data sets from Harman (1967). 9 cognitive variables from Holzinger and 8 emotional variables from Burt;CSV;Doc;8;8;0;0;0;0;8
+1645;psych;Holzinger;Seven data sets showing a bifactor solution.;CSV;Doc;14;14;0;0;0;0;14
+1646;psych;Holzinger.9;Seven data sets showing a bifactor solution.;CSV;Doc;9;9;0;0;0;0;9
+1647;psych;lsat6 (bock);Bock and Liberman (1970) data set of 1000 observations of the LSAT;CSV;Doc;1000;5;5;0;0;0;5
+1648;psych;lsat7 (bock);Bock and Liberman (1970) data set of 1000 observations of the LSAT;CSV;Doc;1000;5;5;0;0;0;5
+1649;psych;Reise;Seven data sets showing a bifactor solution.;CSV;Doc;16;16;0;0;0;0;16
+1650;psych;sat.act;3 Measures of ability: SATV, SATQ, ACT;CSV;Doc;700;6;1;0;0;0;6
+1651;psych;Schmid;12 variables created by Schmid and Leiman to show the Schmid-Leiman Transformation;CSV;Doc;12;12;0;0;0;0;12
+1652;psych;schmid.leiman (Schmid);12 variables created by Schmid and Leiman to show the Schmid-Leiman Transformation;CSV;Doc;12;12;0;0;0;0;12
+1653;psych;small.msq;A small example data set taken from a larger data set;CSV;Doc;200;14;2;0;0;0;14
+1654;psych;Tal_Or (tal_or);Data set testing causal direction in presumed media influence;CSV;Doc;123;6;2;0;0;0;6
+1655;psych;Tal.Or;Data set testing causal direction in presumed media influence;CSV;Doc;123;6;2;0;0;0;6
+1656;psych;Thurstone;Seven data sets showing a bifactor solution.;CSV;Doc;9;9;0;0;0;0;9
+1657;psych;Thurstone.33;Seven data sets showing a bifactor solution.;CSV;Doc;9;9;0;0;0;0;9
+1658;psych;Thurstone.33G;Seven data sets showing a bifactor solution.;CSV;Doc;9;9;0;0;0;0;9
+1659;psych;Thurstone.9;Seven data sets showing a bifactor solution.;CSV;Doc;9;9;0;0;0;0;9
+1660;psych;Tucker;9 Cognitive variables discussed by Tucker and Lewis (1973);CSV;Doc;9;9;0;0;0;0;9
+1661;psych;West (Schmid);12 variables created by Schmid and Leiman to show the Schmid-Leiman Transformation;CSV;Doc;16;16;0;0;0;0;16
+1662;psych;withinBetween;An example of the distinction between within group and between group correlations;CSV;Doc;16;10;0;0;1;0;9
+1663;quantreg;barro;Barro Data;CSV;Doc;161;14;0;0;0;0;14
+1664;quantreg;Bosco;Boscovich Data;CSV;Doc;5;2;0;0;0;0;2
+1665;quantreg;CobarOre;Cobar Ore data;CSV;Doc;38;3;0;0;0;0;3
+1666;quantreg;engel;Engel Data;CSV;Doc;235;2;0;0;0;0;2
+1667;quantreg;gasprice;Time Series of US Gasoline Prices;CSV;Doc;695;2;0;0;0;0;2
+1668;quantreg;Mammals;Garland(1983) Data on Running Speed of Mammals;CSV;Doc;107;4;2;0;0;2;2
+1669;quantreg;MelTemp;Daily maximum temperatures in Melbourne, Australia;CSV;Doc;3650;2;0;0;0;0;2
+1670;quantreg;uis;UIS Drug Treatment study data;CSV;Doc;575;18;5;0;0;0;18
+1671;ratdat;complete;Complete survey data.;CSV;Doc;35549;13;0;6;0;0;7
+1672;ratdat;complete_old;Complete survey data from 1977 to 1989.;CSV;Doc;16878;13;0;6;0;0;7
+1673;ratdat;plots;Plots data.;CSV;Doc;24;2;0;1;0;0;1
+1674;ratdat;species;Species data.;CSV;Doc;54;4;0;4;0;0;0
+1675;ratdat;surveys;Survey data.;CSV;Doc;35549;9;0;2;0;0;7
+1676;reshape2;french_fries;Sensory data from a french fries experiment.;CSV;Doc;696;9;1;0;3;0;6
+1677;reshape2;smiths;Demo data describing the Smiths.;CSV;Doc;2;5;2;0;1;0;4
+1678;reshape2;tips;Tipping data;CSV;Doc;244;7;3;0;4;0;3
+1679;robustbase;aircraft;Aircraft Data;CSV;Doc;23;5;0;0;0;0;5
+1680;robustbase;airmay;Air Quality Data;CSV;Doc;31;4;0;0;0;0;4
+1681;robustbase;alcohol;Alcohol Solubility in Water Data;CSV;Doc;44;7;0;0;0;0;7
+1682;robustbase;ambientNOxCH;Daily Means of NOx (mono-nitrogen oxides) in air;CSV;Doc;366;14;0;0;0;0;13
+1683;robustbase;Animals2;Brain and Body Weights for 65 Species of Land Animals;CSV;Doc;65;2;0;0;0;0;2
+1684;robustbase;biomassTill;Biomass Tillage Data;CSV;Doc;58;4;0;0;1;0;3
+1685;robustbase;bushfire;Campbell Bushfire Data;CSV;Doc;38;5;0;0;0;0;5
+1686;robustbase;carrots;Insect Damages on Carrots;CSV;Doc;24;4;0;0;1;0;3
+1687;robustbase;cloud;Cloud point of a Liquid;CSV;Doc;19;2;0;0;0;0;2
+1688;robustbase;coleman;Coleman Data Set;CSV;Doc;20;6;0;0;0;0;6
+1689;robustbase;condroz;Condroz Data;CSV;Doc;428;2;0;0;0;0;2
+1690;robustbase;CrohnD;Crohn's Disease Adverse Events Data;CSV;Doc;117;9;2;0;3;0;6
+1691;robustbase;cushny;Cushny and Peebles Prolongation of Sleep Data;CSV;Doc;10;1;0;0;0;0;1
+1692;robustbase;delivery;Delivery Time Data;CSV;Doc;25;3;0;0;0;0;3
+1693;robustbase;education;Education Expenditure Data;CSV;Doc;50;6;0;0;1;0;5
+1694;robustbase;epilepsy;Epilepsy Attacks Data Set;CSV;Doc;59;11;1;0;1;0;10
+1695;robustbase;exAM;Example Data of Antille and May - for Simple Regression;CSV;Doc;12;2;0;0;0;0;2
+1696;robustbase;foodstamp;Food Stamp Program Participation;CSV;Doc;150;4;3;0;0;0;4
+1697;robustbase;hbk;Hawkins, Bradu, Kass's Artificial Data;CSV;Doc;75;4;0;0;0;0;4
+1698;robustbase;heart;Heart Catherization Data;CSV;Doc;12;3;0;0;0;0;3
+1699;robustbase;kootenay;Waterflow Measurements of Kootenay River in Libby and Newgate;CSV;Doc;13;2;0;0;0;0;2
+1700;robustbase;lactic;Lactic Acid Concentration Measurement Data;CSV;Doc;20;2;0;0;0;0;2
+1701;robustbase;los;Length of Stay Data;CSV;Doc;201;1;0;0;0;0;1
+1702;robustbase;milk;Daudin's Milk Composition Data;CSV;Doc;86;8;0;0;0;0;8
+1703;robustbase;NOxEmissions;NOx Air Pollution Data;CSV;Doc;8088;4;0;0;1;0;3
+1704;robustbase;pension;Pension Funds Data;CSV;Doc;18;2;0;0;0;0;2
+1705;robustbase;phosphor;Phosphorus Content Data;CSV;Doc;18;3;0;0;0;0;3
+1706;robustbase;pilot;Pilot-Plant Data;CSV;Doc;20;2;0;0;0;0;2
+1707;robustbase;possum.mat (possumDiv);Possum Diversity Data;CSV;Doc;151;14;8;0;0;0;14
+1708;robustbase;possumDiv;Possum Diversity Data;CSV;Doc;151;9;1;0;2;0;7
+1709;robustbase;pulpfiber;Pulp Fiber and Paper Data;CSV;Doc;62;8;0;0;0;0;8
+1710;robustbase;radarImage;Satellite Radar Image Data from near Munich;CSV;Doc;1573;5;0;0;0;0;5
+1711;robustbase;salinity;Salinity Data;CSV;Doc;28;4;0;0;0;0;4
+1712;robustbase;SiegelsEx;Siegel's Exact Fit Example Data;CSV;Doc;9;2;0;0;0;0;2
+1713;robustbase;starsCYG;Hertzsprung-Russell Diagram Data of Star Cluster CYG OB1;CSV;Doc;47;2;0;0;0;0;2
+1714;robustbase;steamUse;Steam Usage Data (Excerpt);CSV;Doc;25;9;0;0;0;0;9
+1715;robustbase;telef;Number of International Calls from Belgium;CSV;Doc;24;2;0;0;0;0;2
+1716;robustbase;toxicity;Toxicity of Carboxylic Acids Data;CSV;Doc;38;10;0;0;0;0;10
+1717;robustbase;vaso;Vaso Constriction Skin Data Set;CSV;Doc;39;3;1;0;0;0;3
+1718;robustbase;wagnerGrowth;Wagner's Hannover Employment Growth Data;CSV;Doc;63;7;0;0;2;0;5
+1719;robustbase;wood;Modified Data on Wood Specific Gravity;CSV;Doc;20;6;0;0;0;0;6
+1720;robustbase;x30o50;Extreme Data examples;CSV;Doc;50;1;0;0;0;0;1
+1721;rpart;car.test.frame;Automobile Data from 'Consumer Reports' 1990;CSV;Doc;60;8;0;0;2;0;6
+1722;rpart;car90;Automobile Data from 'Consumer Reports' 1990;CSV;Doc;111;34;0;0;9;0;25
+1723;rpart;cu.summary;Automobile Data from 'Consumer Reports' 1990;CSV;Doc;117;5;0;0;3;0;2
+1724;rpart;kyphosis;Data on Children who have had Corrective Spinal Surgery;CSV;Doc;81;4;1;0;1;0;3
+1725;rpart;solder;Soldering of Components on Printed-Circuit Boards;CSV;Doc;900;6;1;0;5;0;1
+1726;rpart;solder.balance (solder);Soldering of Components on Printed-Circuit Boards;CSV;Doc;720;6;1;0;4;0;2
+1727;rpart;stagec;Stage C Prostate Cancer;CSV;Doc;146;8;2;0;1;0;7
+1728;sampleSelection;Mroz87;U.S. Women's Labor Force Participation;CSV;Doc;753;22;4;0;2;0;20
+1729;sampleSelection;nlswork;National Longitudinal Survey of Young Working Women;CSV;Doc;28534;21;7;0;0;0;21
+1730;sampleSelection;RandHIE;RAND Health Insurance Experiment;CSV;Doc;20190;45;10;0;0;0;45
+1731;sampleSelection;Smoke;Survey Responses on Smoking Behaviour;CSV;Doc;807;8;2;0;0;0;8
+1732;sandwich;InstInnovation;Innovation and Institutional Ownership;CSV;Doc;6208;25;4;0;7;0;18
+1733;sandwich;Investment;US Investment Data;CSV;Doc;20;7;0;0;0;0;7
+1734;sandwich;PetersenCL;Petersen's Simulated Data for Assessing Clustered Standard Errors;CSV;Doc;5000;4;0;0;0;0;4
+1735;sandwich;PublicSchools;US Expenditures for Public Schools;CSV;Doc;51;2;0;0;0;0;2
+1736;sem;Bollen;Bollen's Data on Industrialization and Political Democracy;CSV;Doc;75;11;0;0;0;0;11
+1737;sem;CNES;Variables from the 1997 Canadian National Election Study;CSV;Doc;1529;4;0;0;4;0;0
+1738;sem;HS.data;Holizinger and Swineford's Data;CSV;Doc;301;32;3;0;2;0;30
+1739;sem;Klein;Klein's Data on the U. S. Economy;CSV;Doc;22;10;0;0;0;0;10
+1740;sem;Kmenta;Partly Artificial Data on the U. S. Economy;CSV;Doc;20;5;0;0;0;0;5
+1741;sem;Tests;Six Mental Tests;CSV;Doc;32;6;0;0;0;0;6
+1742;Stat2Data;AccordPrice;Prices of Used Honda Accords (in 2017);CSV;Doc;30;3;0;0;0;0;3
+1743;Stat2Data;AHCAvote2017;Congressional Votes on American Health Care Act (in 2017);CSV;Doc;430;11;5;0;4;0;7
+1744;Stat2Data;Airlines;Ontime Records for Two Airlines at Two Airports;CSV;Doc;10333;5;5;0;3;0;2
+1745;Stat2Data;Alfalfa;Alfalfa Growth;CSV;Doc;15;3;0;0;2;0;1
+1746;Stat2Data;AlitoConfirmation;US Senate Votes on Samuel Alito for the Supreme Court;CSV;Doc;100;6;3;0;4;0;2
+1747;Stat2Data;Amyloid;Amyloid-beta and Cognitive Impairment;CSV;Doc;57;2;0;0;1;0;1
+1748;Stat2Data;AppleStock;Daily Price and Volume of Apple Stock;CSV;Doc;66;4;0;0;1;0;3
+1749;Stat2Data;ArcheryData;Scores in an Archery Class;CSV;Doc;18;7;2;0;1;0;6
+1750;Stat2Data;AthleteGrad;Athletic Participation, Race, and Graduation;CSV;Doc;214555;3;3;0;2;0;1
+1751;Stat2Data;AudioVisual;Reaction Times to Audio and Visual Stimuli;CSV;Doc;72;4;2;0;3;0;1
+1752;Stat2Data;AutoPollution;Noise Levels of Filters to Reduce Automobile Pollution;CSV;Doc;36;4;2;0;0;0;4
+1753;Stat2Data;Backpack;Weights of College Student Backpacks;CSV;Doc;100;9;3;0;3;0;6
+1754;Stat2Data;BaseballTimes;Baseball Game Times of One Day in 2008;CSV;Doc;15;7;1;0;2;0;5
+1755;Stat2Data;BaseballTimes2017;Baseball Game Times of One Day in 2017;CSV;Doc;14;7;0;0;2;0;5
+1756;Stat2Data;BeeStings;Do Bee Stings Depend on Previous Stings?;CSV;Doc;18;3;1;0;2;0;1
+1757;Stat2Data;BirdCalcium;Effect of a Hormone on Bird Calcium Levels;CSV;Doc;20;5;2;0;3;0;2
+1758;Stat2Data;BirdNest;Nest Characteristics for Different Bird Species;CSV;Doc;84;12;2;0;4;0;8
+1759;Stat2Data;Blood1;Blood Pressure, Weight, and Smoking Status;CSV;Doc;500;3;1;0;0;0;3
+1760;Stat2Data;BlueJays;Blue Jay Measurements;CSV;Doc;123;9;2;0;2;0;7
+1761;Stat2Data;BrainpH;Brain pH Measurements;CSV;Doc;54;5;1;0;3;0;2
+1762;Stat2Data;BreesPass;Drew Brees Passing Statistics (2016);CSV;Doc;16;5;0;0;1;0;4
+1763;Stat2Data;BritishUnions;Attitudes Towards British Trade Unions;CSV;Doc;17;7;1;0;1;0;6
+1764;Stat2Data;ButterfliesBc;Butterfly (Boloria chariclea) Measurements;CSV;Doc;32;4;1;0;2;0;2
+1765;Stat2Data;CAFE;US Senate Votes on Corporate Average Fuel Economy Bill;CSV;Doc;100;7;2;0;3;0;4
+1766;Stat2Data;CalciumBP;Do Calcium Supplements Lower Blood Pressure?;CSV;Doc;21;2;1;0;1;0;1
+1767;Stat2Data;CanadianDrugs;Canadian Drugs Senate Vote;CSV;Doc;94;6;3;0;5;0;1
+1768;Stat2Data;CancerSurvival;Survival Times for Different Cancers;CSV;Doc;64;2;0;0;1;0;1
+1769;Stat2Data;Caterpillars;Measurements of Manduca Sexta Caterpillars;CSV;Doc;267;18;3;0;3;0;15
+1770;Stat2Data;CavsShooting;Cleveland Cavalier's Shooting (2016-2017);CSV;Doc;1940;3;3;0;2;0;1
+1771;Stat2Data;Cereal;Nutrition Content of Breakfast Cereals;CSV;Doc;36;4;0;0;1;0;3
+1772;Stat2Data;ChemoTHC;THC for Antinausea Treatment in Chemotherapy;CSV;Doc;2;4;4;0;1;0;3
+1773;Stat2Data;ChildSpeaks;Age at First Speaking;CSV;Doc;21;3;0;0;0;0;3
+1774;Stat2Data;ClintonSanders;Clinton/Sanders Primary Results (2016);CSV;Doc;31;5;1;0;2;0;3
+1775;Stat2Data;Clothing;Sales for a Clothing Retailer;CSV;Doc;60;8;1;0;0;0;8
+1776;Stat2Data;CloudSeeding;Cloud Seeding Experiment (Winter Only);CSV;Doc;28;7;1;0;2;0;5
+1777;Stat2Data;CloudSeeding2;Cloud Seeding Experiment (Four Seasons);CSV;Doc;108;8;1;0;2;0;6
+1778;Stat2Data;CO2;Daily CO2 Measurements in Germany;CSV;Doc;237;2;0;0;0;0;2
+1779;Stat2Data;CO2Germany;Daily CO2 Measurements in Germany;CSV;Doc;237;2;0;0;0;0;2
+1780;Stat2Data;CO2Hawaii;CO2 Readings in Hawaii;CSV;Doc;360;4;0;0;0;0;4
+1781;Stat2Data;CO2SouthPole;CO2 Readings at the South Pole;CSV;Doc;348;4;0;0;0;0;4
+1782;Stat2Data;Contraceptives;Drug Interaction with Contraceptives;CSV;Doc;44;6;2;0;1;0;5
+1783;Stat2Data;CountyHealth;County Health Resources;CSV;Doc;53;4;0;0;1;0;3
+1784;Stat2Data;CrabShip;Crab Oxygen Intake;CSV;Doc;34;3;1;0;1;0;2
+1785;Stat2Data;CrackerFiber;Effects of Cracker Fiber on Digested Calories;CSV;Doc;48;3;0;0;2;0;1
+1786;Stat2Data;CreditRisk;Overdrawn Checking Account?;CSV;Doc;450;4;2;0;0;0;4
+1787;Stat2Data;Cuckoo;Measurements of Cuckoo Eggs;CSV;Doc;120;2;0;0;1;0;1
+1788;Stat2Data;Day1Survey;First Day Survey of Statistics Students;CSV;Doc;43;13;2;0;3;0;10
+1789;Stat2Data;DiabeticDogs;Lactic Acid Turnover in Dogs;CSV;Doc;20;4;2;0;3;0;1
+1790;Stat2Data;Diamonds;Characteristics of a Sample of Diamonds;CSV;Doc;351;6;0;0;2;0;4
+1791;Stat2Data;Diamonds2;Characteristics of a Subset of the Diamond Sample;CSV;Doc;307;6;0;0;2;0;4
+1792;Stat2Data;Dinosaurs;Iridium Levels in Rock Layers to Investigate Dinosaur Extinction;CSV;Doc;28;4;1;0;1;0;3
+1793;Stat2Data;Election08;2008 U.S. Presidential Election;CSV;Doc;51;7;1;0;2;0;5
+1794;Stat2Data;Election16;2016 U.S. Presidential Election;CSV;Doc;50;8;1;0;2;0;6
+1795;Stat2Data;ElephantsFB;Measurements of Male African Elephants;CSV;Doc;138;3;1;0;0;0;3
+1796;Stat2Data;ElephantsMF;Measurements of African Elephants;CSV;Doc;288;3;1;0;1;0;2
+1797;Stat2Data;Ethanol;Effects of Oxygen on Sugar Metabolism;CSV;Doc;16;3;1;0;1;0;2
+1798;Stat2Data;Eyes;Pupil Dilation and Sexual Orientation;CSV;Doc;106;4;3;0;1;0;3
+1799;Stat2Data;Faces;Facial Attractiveness of Men;CSV;Doc;38;5;0;0;0;0;5
+1800;Stat2Data;FaithfulFaces;Faithfulness from a Photo?;CSV;Doc;170;7;3;0;2;0;5
+1801;Stat2Data;FantasyBaseball;Selection Times in a Fantasy Baseball Draft;CSV;Doc;24;9;0;0;0;0;9
+1802;Stat2Data;FatRats;Diet and Weight of Rats;CSV;Doc;60;3;1;0;2;0;1
+1803;Stat2Data;Fertility;Fertility Data for Women Having Trouble Getting Pregnant;CSV;Doc;333;10;0;0;0;0;10
+1804;Stat2Data;FGByDistance;Results of NFL Field Goal Attempts;CSV;Doc;51;7;0;0;0;0;7
+1805;Stat2Data;Film;Film Data from Leonard Maltin's Guide;CSV;Doc;100;9;2;0;2;0;7
+1806;Stat2Data;FinalFourIzzo;NCAA Final Four by Seed and Tom Izzo (through 2010);CSV;Doc;1664;4;2;0;0;0;4
+1807;Stat2Data;FinalFourIzzo17;NCAA Final Four by Seed and Tom Izzo (through 2017);CSV;Doc;2112;4;2;0;0;0;4
+1808;Stat2Data;FinalFourLong;NCAA Final Four by Seed (Long Version through 2010);CSV;Doc;2048;3;1;0;0;0;3
+1809;Stat2Data;FinalFourLong17;NCAA Final Four by Seed (Long Version through 2017);CSV;Doc;2496;3;1;0;0;0;3
+1810;Stat2Data;FinalFourShort;CAA Final Four by Seed (Short Version through 2010);CSV;Doc;512;4;0;0;0;0;4
+1811;Stat2Data;FinalFourShort17;NCAA Final Four by Seed (Short Version through 2017);CSV;Doc;624;4;0;0;0;0;4
+1812;Stat2Data;Fingers;Finger Tap Rates;CSV;Doc;12;3;0;0;2;0;1
+1813;Stat2Data;FirstYearGPA;First Year GPA for College Students;CSV;Doc;219;10;4;0;0;0;10
+1814;Stat2Data;FishEggs;Fertility of Fish Eggs;CSV;Doc;35;4;2;0;1;0;3
+1815;Stat2Data;Fitch;Body Measurements of Mammal Species;CSV;Doc;28;5;1;0;2;0;3
+1816;Stat2Data;FlightResponse;Response of Migratory Geese to Helicopter Overflights;CSV;Doc;464;7;1;0;1;0;6
+1817;Stat2Data;FloridaDP;Florida Death Penalty Cases;CSV;Doc;326;4;4;0;2;0;2
+1818;Stat2Data;Fluorescence;Measuring Calcium Binding to Proteins;CSV;Doc;51;2;0;0;0;0;2
+1819;Stat2Data;FranticFingers;Finger Tap Rates;CSV;Doc;12;4;0;0;2;0;2
+1820;Stat2Data;FruitFlies;Fruit Fly Sexual Activity and Longevity;CSV;Doc;125;7;0;0;1;0;6
+1821;Stat2Data;FruitFlies2;Fruit Fly Sexual Activity and Male Competition;CSV;Doc;201;7;2;0;2;0;5
+1822;Stat2Data;FunnelDrop;Funnel Drop Times;CSV;Doc;120;3;0;0;0;0;3
+1823;Stat2Data;GlowWorms;Female Glow-worms;CSV;Doc;26;2;0;0;0;0;2
+1824;Stat2Data;Goldenrod;Goldenrod Galls;CSV;Doc;1055;9;1;0;3;0;6
+1825;Stat2Data;GrinnellHouses;House Sales in Grinnell, Iowa;CSV;Doc;929;15;0;0;1;0;14
+1826;Stat2Data;Grocery;Grocery Sales and Discounts;CSV;Doc;36;5;0;0;2;0;3
+1827;Stat2Data;Gunnels;Are Gunnels Present at Shoreline?;CSV;Doc;1592;10;4;0;0;0;10
+1828;Stat2Data;Handwriting;Guess Author's Sex from Handwriting?;CSV;Doc;204;8;1;0;0;0;8
+1829;Stat2Data;Hawks;Measurements on Three Hawk Species;CSV;Doc;908;19;1;0;6;0;13
+1830;Stat2Data;HawkTail;Tail Lengths of Hawks;CSV;Doc;838;2;1;0;1;0;1
+1831;Stat2Data;HawkTail2;Tail Lengths of Hawks (Unstacked);CSV;Doc;577;2;0;0;0;0;2
+1832;Stat2Data;HearingTest;Correctly Identified Words in a Hearing Test;CSV;Doc;96;3;0;0;1;0;2
+1833;Stat2Data;HeatingOil;Heating Oil Consumption;CSV;Doc;408;4;0;0;0;0;4
+1834;Stat2Data;HighPeaks;Characteristics of Adirondack Hiking Trails;CSV;Doc;46;6;0;0;1;0;5
+1835;Stat2Data;Hoops;Grinnell College Basketball Games;CSV;Doc;147;22;4;0;1;0;21
+1836;Stat2Data;HorsePrices;Prices of Horses;CSV;Doc;50;5;1;0;1;0;4
+1837;Stat2Data;Houses;House Prices, Sizes, and Lot Areas;CSV;Doc;20;3;0;0;0;0;3
+1838;Stat2Data;HousesNY;House Prices in Rural NY;CSV;Doc;53;5;0;0;0;0;5
+1839;Stat2Data;ICU;Intensive Care Unit Patients;CSV;Doc;200;9;4;0;0;0;9
+1840;Stat2Data;InfantMortality2010;Infant Mortality Rates;CSV;Doc;10;2;0;0;0;0;2
+1841;Stat2Data;Inflation;Monthly Consumer Price Index (2009-2016);CSV;Doc;96;5;0;0;0;0;5
+1842;Stat2Data;InsuranceVote;Congressional Votes on a Health Insurance Bill;CSV;Doc;435;9;5;0;2;0;7
+1843;Stat2Data;IQGuessing;Guess IQ from a Photo?;CSV;Doc;40;3;0;0;0;0;3
+1844;Stat2Data;Jurors;Reporting Rates for Jurors;CSV;Doc;52;4;2;0;0;0;4
+1845;Stat2Data;Kershaw;Kershaw Pitch Data;CSV;Doc;3402;24;4;0;11;0;13
+1846;Stat2Data;KeyWestWater;Key West Water Temperatures;CSV;Doc;6572;3;0;0;1;0;2
+1847;Stat2Data;Kids198;Body Measurements of Children;CSV;Doc;198;5;2;0;0;0;5
+1848;Stat2Data;Leafhoppers;Leafhopper Diet and Longevity;CSV;Doc;8;3;0;0;1;0;2
+1849;Stat2Data;LeafWidth;Leaf Measurements;CSV;Doc;252;5;0;0;0;0;5
+1850;Stat2Data;Leukemia;Responses to Treatment for Leukemia;CSV;Doc;51;9;2;0;0;0;9
+1851;Stat2Data;LeveeFailures;Levee Failures along the Mississippi River;CSV;Doc;82;14;4;0;0;0;14
+1852;Stat2Data;LewyBody2Groups;Lewy Bodies and Dimentia;CSV;Doc;39;3;1;0;1;0;2
+1853;Stat2Data;LewyDLBad;Lewy Bodies and Dimentia with Alzheimer's;CSV;Doc;20;3;0;0;1;0;2
+1854;Stat2Data;LongJumpOlympics;Olympic Men's Long Jump Gold Medal Distance (1900 - 2008);CSV;Doc;26;2;0;0;0;0;2
+1855;Stat2Data;LongJumpOlympics2016;Olympic Men's Long Jump Gold Medal Distance (1900 - 2016);CSV;Doc;28;2;0;0;0;0;2
+1856;Stat2Data;LosingSleep;Sleep Hours for Teenagers;CSV;Doc;446;3;1;0;0;0;3
+1857;Stat2Data;LostLetter;Return Rates for "Lost" Letters;CSV;Doc;140;8;7;0;2;0;6
+1858;Stat2Data;Marathon;Daily Training for a Marathon Runner;CSV;Doc;1127;9;2;0;4;0;5
+1859;Stat2Data;Markets;Daily Change in Dow Jones and Nikkei Stock Market Indices;CSV;Doc;56;5;1;0;1;0;4
+1860;Stat2Data;MathEnrollment;Enrollments in Math Courses;CSV;Doc;11;3;0;0;0;0;3
+1861;Stat2Data;MathPlacement;Math Placement Exam Results;CSV;Doc;2696;16;5;0;2;0;14
+1862;Stat2Data;MedGPA;GPA and Medical School Admission;CSV;Doc;55;11;3;0;2;0;9
+1863;Stat2Data;Meniscus;Meniscus Repair Methods;CSV;Doc;18;4;0;0;0;0;4
+1864;Stat2Data;MentalHealth;Mental Health Admissions;CSV;Doc;36;3;0;0;2;0;1
+1865;Stat2Data;MetabolicRate;Metabolic Rate of Caterpillars;CSV;Doc;305;7;0;0;0;0;7
+1866;Stat2Data;MetroCommutes;Commute Times;CSV;Doc;2000;3;0;0;1;0;2
+1867;Stat2Data;MetroHealth83;Health Services in Metropolitan Areas;CSV;Doc;83;16;0;0;1;0;15
+1868;Stat2Data;Migraines;Migraines and TMS;CSV;Doc;2;4;3;0;1;0;3
+1869;Stat2Data;Milgram;Ethics and a Milgram Experiment;CSV;Doc;37;2;0;0;1;0;1
+1870;Stat2Data;MLB2007Standings;Standings and Team Statistics from the 2007 Baseball Season;CSV;Doc;30;21;1;0;2;0;19
+1871;Stat2Data;MLBStandings2016;MLB Standings in 2016;CSV;Doc;30;21;1;0;2;0;19
+1872;Stat2Data;MothEggs;Moth Eggs;CSV;Doc;39;2;0;0;0;0;2
+1873;Stat2Data;MouseBrain;Effects of Serotonin in Mice;CSV;Doc;48;3;1;0;2;0;1
+1874;Stat2Data;MusicTime;Estimating Time with Different Music Playing;CSV;Doc;60;6;2;0;4;0;2
+1875;Stat2Data;NCbirths;North Carolina Birth Records;CSV;Doc;1450;15;5;0;2;0;13
+1876;Stat2Data;NFL2007Standings;NFL Standings for 2007 Regular Season;CSV;Doc;32;10;1;0;3;0;7
+1877;Stat2Data;NFLStandings2016;NFL Standings for 2016 Regular Season;CSV;Doc;32;11;1;0;1;0;10
+1878;Stat2Data;Nursing;Nursing Homes;CSV;Doc;52;7;1;0;0;0;7
+1879;Stat2Data;OilDeapsorbtion;Effect of Ultrasound on Oil Deapsorbtion;CSV;Doc;40;4;3;0;0;0;4
+1880;Stat2Data;Olives;Fenthion in Olive Oil;CSV;Doc;18;7;1;0;0;0;7
+1881;Stat2Data;Orings;Space Shuttle O-Rings;CSV;Doc;24;2;1;0;1;0;1
+1882;Stat2Data;Overdrawn;Overdrawn Checking Account?;CSV;Doc;450;4;2;0;0;0;4
+1883;Stat2Data;Oysters;Size of Oysters;CSV;Doc;30;5;0;0;0;0;5
+1884;Stat2Data;PalmBeach;Palm Beach Butterfly Ballot;CSV;Doc;67;3;0;0;1;0;2
+1885;Stat2Data;PeaceBridge2003;Monthly Peace Bridge Traffic ( 2003-2015);CSV;Doc;156;4;0;0;0;0;4
+1886;Stat2Data;PeaceBridge2012;Monthly Peace Bridge Traffic ( 2012-2015);CSV;Doc;48;4;0;0;0;0;4
+1887;Stat2Data;Pedometer;Pedometer Walking Data;CSV;Doc;68;8;1;0;3;0;5
+1888;Stat2Data;Perch;Perch Sizes;CSV;Doc;56;4;0;0;0;0;4
+1889;Stat2Data;PigFeed;Additives in Pig Feed;CSV;Doc;12;3;2;0;2;0;1
+1890;Stat2Data;Pines;Measurements of Pine Tree Seedlings;CSV;Doc;1000;15;4;0;0;0;15
+1891;Stat2Data;PKU;Dopamine levels with PKU in diets;CSV;Doc;20;4;2;0;3;0;1
+1892;Stat2Data;Political;Political Behavior of College Students;CSV;Doc;59;9;3;0;0;0;9
+1893;Stat2Data;Pollster08;2008 U.S. Presidential Election Polls;CSV;Doc;102;11;2;0;4;0;7
+1894;Stat2Data;Popcorn;Popcorn Popping Success;CSV;Doc;12;3;1;0;1;0;2
+1895;Stat2Data;PorscheJaguar;Porsche and Jaguar Prices;CSV;Doc;60;5;2;0;1;0;4
+1896;Stat2Data;PorschePrice;Porsche Prices;CSV;Doc;30;3;0;0;0;0;3
+1897;Stat2Data;Pulse;Pulse Rates and Exercise;CSV;Doc;232;7;2;0;0;0;7
+1898;Stat2Data;Putts1;Putting Success by Length (Long Form);CSV;Doc;587;2;1;0;0;0;2
+1899;Stat2Data;Putts2;Putting Success by Length (Short Form);CSV;Doc;5;4;0;0;0;0;4
+1900;Stat2Data;Putts3;Hypothetical Putting Data (Short Form);CSV;Doc;5;4;0;0;0;0;4
+1901;Stat2Data;RacialAnimus;Racial Animus and City Demgraphics;CSV;Doc;196;7;0;0;1;0;6
+1902;Stat2Data;RadioactiveTwins;Comparing Twins Ability to Clear Radioactive Particles;CSV;Doc;30;3;1;0;1;0;2
+1903;Stat2Data;RailsTrails;Homes in Northampton MA Near Rail Trails;CSV;Doc;104;30;6;0;6;0;24
+1904;Stat2Data;Rectangles;Measurements of Rectangles;CSV;Doc;9;5;0;0;0;0;5
+1905;Stat2Data;ReligionGDP;Religion and GDP for Countries;CSV;Doc;44;9;6;0;1;0;8
+1906;Stat2Data;RepeatedPulse;Pulse Rates at Various Times of Day;CSV;Doc;104;3;0;0;2;0;1
+1907;Stat2Data;ResidualOil;US Residual Oil Production (Quarterly 1983-2016);CSV;Doc;136;5;0;0;0;0;5
+1908;Stat2Data;Retirement;Yearly Contributions to a Supplemental Retirement Account;CSV;Doc;16;2;0;0;0;0;2
+1909;Stat2Data;Ricci;Firefighter Promotion Exam Scores;CSV;Doc;118;5;1;0;2;0;3
+1910;Stat2Data;RiverElements;Elements in River Water Samples;CSV;Doc;12;27;0;0;1;0;26
+1911;Stat2Data;RiverIron;Iron in River Water Samples;CSV;Doc;12;4;0;0;2;0;2
+1912;Stat2Data;SampleFG;Field Goal Attempts in the NFL;CSV;Doc;30;13;1;0;4;0;9
+1913;Stat2Data;SandwichAnts;Ants on Sandwiches;CSV;Doc;48;5;1;0;3;0;2
+1914;Stat2Data;SATGPA;SAT Scores and GPA;CSV;Doc;24;3;0;0;0;0;3
+1915;Stat2Data;SeaIce;Arctic Sea Ice (1979-2015);CSV;Doc;37;4;0;0;0;0;4
+1916;Stat2Data;SeaSlugs;Sea Slug Larvae;CSV;Doc;36;2;0;0;0;0;2
+1917;Stat2Data;SleepingShrews;Shrew Heart Rates at Stages of Sleep;CSV;Doc;18;4;0;0;2;0;2
+1918;Stat2Data;Sparrows;Sparrow Measurements;CSV;Doc;116;3;0;0;1;0;2
+1919;Stat2Data;SpeciesArea;Land Area and Mammal Species;CSV;Doc;14;5;0;0;1;0;4
+1920;Stat2Data;Speed;Highway Fatality Rates (Yearly);CSV;Doc;21;3;1;0;0;0;3
+1921;Stat2Data;SugarEthanol;Effects of Oxygen on Sugar Metabolism;CSV;Doc;16;3;1;0;1;0;2
+1922;Stat2Data;SuicideChina;Suicide Attempts in Shandong, China;CSV;Doc;2571;11;3;0;7;0;4
+1923;Stat2Data;Swahili;Attitudes Towards Swahili in Kenyan Schools;CSV;Doc;480;4;2;0;3;0;1
+1924;Stat2Data;Tadpoles;Effects of a Fungus on Tadpoles;CSV;Doc;27;4;1;0;1;0;3
+1925;Stat2Data;TechStocks;Daily Prices of Three Tech Stocks;CSV;Doc;504;5;0;0;1;0;4
+1926;Stat2Data;TeenPregnancy;State Teen Pregnancy Rates;CSV;Doc;50;4;0;0;2;0;2
+1927;Stat2Data;TextPrices;Textbook Prices;CSV;Doc;30;2;0;0;0;0;2
+1928;Stat2Data;ThomasConfirmation;US Senate Votes on Clarence Thomas Confirmation;CSV;Doc;100;6;3;0;4;0;2
+1929;Stat2Data;ThreeCars;Prices of Three Used Car Models (2007);CSV;Doc;90;8;3;0;1;0;7
+1930;Stat2Data;ThreeCars2017;Price, Age, and Mileage of Three Used Car Models;CSV;Doc;90;7;3;0;1;0;6
+1931;Stat2Data;TipJoke;Improve Chances of Getting a Tip?;CSV;Doc;211;5;4;0;1;0;4
+1932;Stat2Data;Titanic;Passengers on the Titanic;CSV;Doc;1313;6;3;0;3;0;3
+1933;Stat2Data;TMS;Migraines and TMS;CSV;Doc;2;4;3;0;1;0;3
+1934;Stat2Data;TomlinsonRush;LaDainian Tomlinson Rushing Yards;CSV;Doc;16;4;0;0;1;0;3
+1935;Stat2Data;TwinsLungs;Comparing Twins Ability to Clear Radioactive Particles;CSV;Doc;14;3;1;0;2;0;1
+1936;Stat2Data;Undoing;Defense of Undoing OCD Symptoms in Psychotherapy;CSV;Doc;44;3;1;0;1;0;2
+1937;Stat2Data;USstamps;Price of US Stamps;CSV;Doc;25;2;0;0;0;0;2
+1938;Stat2Data;VisualVerbal;Visual versus Verbal Performance;CSV;Doc;80;5;2;0;4;0;1
+1939;Stat2Data;Volts;Voltage Drop for a Discharging Capacitor;CSV;Doc;50;2;0;0;0;0;2
+1940;Stat2Data;WalkingBabies;Effects of Exercise on First Walking;CSV;Doc;24;2;0;0;1;0;1
+1941;Stat2Data;WalkTheDogs;Did the Author Walk the Dogs Today?;CSV;Doc;223;7;1;0;2;0;5
+1942;Stat2Data;WeightLossIncentive;Do Financial Incentives Improve Weight Loss?;CSV;Doc;38;3;1;0;1;0;2
+1943;Stat2Data;WeightLossIncentive4;Do Financial Incentives Improve Weight Loss? (4 Months);CSV;Doc;36;2;1;0;1;0;1
+1944;Stat2Data;WeightLossIncentive7;Do Financial Incentives Improve Weight Loss? (7 Months);CSV;Doc;33;2;1;0;1;0;1
+1945;Stat2Data;Whickham2;Whickham Health Study;CSV;Doc;1314;5;4;0;3;0;2
+1946;Stat2Data;WordMemory;Experiment on Word Memory;CSV;Doc;40;4;2;0;3;0;1
+1947;Stat2Data;WordsWithFriends;Words with Friends Scores;CSV;Doc;444;11;5;0;2;0;9
+1948;Stat2Data;Wrinkle;Moving Wet Objects with Wrinkled Fingers;CSV;Doc;80;7;4;0;4;0;3
+1949;Stat2Data;YouthRisk;Annual survey of health-risk youth behaviors;CSV;Doc;13387;6;4;0;0;0;6
+1950;Stat2Data;YouthRisk2007;Riding with a Driver Who Has Been Drinking;CSV;Doc;13387;6;4;0;0;0;6
+1951;Stat2Data;YouthRisk2009;Youth Risk Survey;CSV;Doc;500;6;2;0;3;0;3
+1952;Stat2Data;Zimmerman;Stand Your Ground Simpson's Paradox;CSV;Doc;220;5;5;0;3;0;2
+1953;stevedata;af_crime93;Statewide Crime Data (1993);CSV;Doc;51;8;0;1;0;0;7
+1954;stevedata;african_coups;Modeling Coups in Africa, 1960 to 1975 (1982);CSV;Doc;45;11;0;2;0;0;9
+1955;stevedata;aluminum_premiums;LME Aluminum Premiums Data;CSV;Doc;3664;3;0;0;1;0;1
+1956;stevedata;anes_partytherms;Major Party (Democrat, Republican) Thermometer Index Data (1978-2012);CSV;Doc;33830;19;2;1;0;0;18
+1957;stevedata;anes_prochoice;Abortion Attitudes (ANES, 2012);CSV;Doc;5914;14;1;1;0;0;13
+1958;stevedata;anes_vote84;Simple Data for a Simple Model of Individual Voter Turnout (ANES, 1984);CSV;Doc;2257;9;4;1;0;0;8
+1959;stevedata;Arca;NYSE Arca Steel Index data, 2017–present;CSV;Doc;966;5;0;0;0;0;4
+1960;stevedata;arcticseaice;Arctic Sea Ice Extent Data, 1901-2015;CSV;Doc;115;4;0;0;0;0;4
+1961;stevedata;arg_tariff;Simple Mean Tariff Rate for Argentina;CSV;Doc;39;3;0;1;0;0;2
+1962;stevedata;asn_stats;Aviation Safety Network Statistics, 1942-2019;CSV;Doc;78;7;0;0;0;0;7
+1963;stevedata;CFT15;Randomization Inference in the Regression Discontinuity Design: An Application to Party Advantages in the U.S. Senate;CSV;Doc;1390;9;1;0;0;0;9
+1964;stevedata;clemson_temps;Daily Clemson Temperature Data;CSV;Doc;33148;3;0;0;0;0;2
+1965;stevedata;co2emissions;Carbon Dioxide Emissions Data;CSV;Doc;3099;2;0;0;0;0;2
+1966;stevedata;coffee_imports;Coffee Imports for Select Importing Countries;CSV;Doc;4530;4;1;1;0;0;3
+1967;stevedata;coffee_price;The Primary Commodity Price for Coffee (Arabica, Robustas);CSV;Doc;499;3;0;0;0;0;2
+1968;stevedata;commodity_prices;Select World Bank Commodity Price Data (Monthly);CSV;Doc;756;11;0;0;0;0;10
+1969;stevedata;CP77;Education Expenditure Data (Chatterjee and Price, 1977);CSV;Doc;50;6;0;2;0;0;4
+1970;stevedata;DAPO;Determinants of Arab Public Opinion;CSV;Doc;91;11;3;2;0;0;9
+1971;stevedata;Datasaurus;The Datasaurus Dozen;CSV;Doc;1846;3;0;1;0;0;2
+1972;stevedata;DCE12;Domestic Conflict Events, 2012;CSV;Doc;198;19;1;2;0;0;17
+1973;stevedata;Dee04;Are There Civics Returns to Education?;CSV;Doc;9227;8;6;0;0;0;8
+1974;stevedata;DJIA;Dow Jones Industrial Average, 1885-Present;CSV;Doc;37931;2;0;0;0;0;1
+1975;stevedata;DST;Casualties/Fatalities in the U.S. for Drunk-Driving, Suicide, and Terrorism;CSV;Doc;49;5;0;0;0;0;5
+1976;stevedata;EBJ;The Economic Benefits of Justice;CSV;Doc;95;12;1;0;0;0;12
+1977;stevedata;eight_schools;The Effect of Special Preparation on SAT-V Scores in Eight Randomized Experiments;CSV;Doc;8;6;0;1;0;0;5
+1978;stevedata;election_turnout;State-Level Education and Voter Turnout in 2016;CSV;Doc;51;14;2;3;0;0;11
+1979;stevedata;eq_passengercars;Export Quality Data for Passenger Cars, 1963-2014;CSV;Doc;60424;6;0;1;2;0;3
+1980;stevedata;ESS10NO;Norwegian Attitudes toward European Integration (2021-2022);CSV;Doc;1411;24;4;3;0;0;19
+1981;stevedata;ESS9GB;British Attitudes Toward Immigration (2018-19);CSV;Doc;1905;19;2;4;0;0;13
+1982;stevedata;ESSBE5;Trust in the Police in Belgium (European Social Survey, Round 5);CSV;Doc;1704;10;1;2;0;0;8
+1983;stevedata;eurostat_codes;Eurostat Country Codes;CSV;Doc;56;3;0;3;0;0;0
+1984;stevedata;eustates;EU Member States (Current as of 2019);CSV;Doc;28;3;0;2;0;0;0
+1985;stevedata;fakeAPI;Hypothetical (Fake) Data on Academic Performance;CSV;Doc;10000;11;0;3;0;0;8
+1986;stevedata;fakeHappiness;Fake Data on Happiness;CSV;Doc;1000;8;3;0;0;0;8
+1987;stevedata;fakeLogit;Fake Data for a Logistic Regression;CSV;Doc;10000;2;1;0;0;0;2
+1988;stevedata;fakeTSCS;Fake Data for a Time-Series Cross-Section;CSV;Doc;2500;8;1;1;0;0;7
+1989;stevedata;fakeTSD;Fake Data for a Time-Series;CSV;Doc;100;5;1;0;0;0;5
+1990;stevedata;ghp100k;Gun Homicide Rate per 100,000 People, by Country;CSV;Doc;561;3;0;1;0;0;2
+1991;stevedata;GHR04;Comparative Public Health: The Political Economy of Human Misery and Well-Being;CSV;Doc;182;15;2;2;0;0;13
+1992;stevedata;gss_abortion;Abortion Opinions in the General Social Survey;CSV;Doc;64814;18;9;3;0;0;15
+1993;stevedata;gss_spending;Attitudes Toward National Spending in the General Social Survey (2018);CSV;Doc;2348;33;1;0;0;0;33
+1994;stevedata;gss_wages;The Gender Pay Gap in the General Social Survey;CSV;Doc;61697;11;1;5;0;0;6
+1995;stevedata;Guber99;School Expenditures and Test Scores for 50 States, 1994-95;CSV;Doc;50;8;0;1;0;0;7
+1996;stevedata;illiteracy30;Illiteracy in the Population 10 Years Old and Over, 1930;CSV;Doc;49;11;0;1;0;0;10
+1997;stevedata;inglehart03;"How Solid is Mass Support for Democracy-And How Can We Measure It?";CSV;Doc;77;4;1;1;0;0;3
+1998;stevedata;Lipset59;Democracy and Economic Development (Around) 1949-50;CSV;Doc;48;11;0;3;0;0;8
+1999;stevedata;LOTI;Land-Ocean Temperature Index, 1880-2022;CSV;Doc;1716;2;0;0;0;0;1
+2000;stevedata;LTPT;Long-Term Price Trends for Computers, TVs, and Related Items;CSV;Doc;1704;3;0;1;0;0;1
+2001;stevedata;LTWT;"Let Them Watch TV";CSV;Doc;2377;3;0;0;1;0;1
+2002;stevedata;min_wage;History of Federal Minimum Wage Rates Under the Fair Labor Standards Act, 1938-2009;CSV;Doc;23;2;0;0;0;0;1
+2003;stevedata;mm_mlda;Minimum Legal Drinking Age Fatalities Data;CSV;Doc;50;19;0;0;0;0;19
+2004;stevedata;mm_nhis;Data from the 2009 National Health Interview Survey (NHIS);CSV;Doc;18790;10;4;0;0;0;10
+2005;stevedata;mvprod;Motor Vehicle Production by Country, 1950-2019;CSV;Doc;1206;3;0;1;0;0;2
+2006;stevedata;nesarc_drinkspd;The Usual Daily Drinking Habits of Americans (NESARC, 2001-2);CSV;Doc;43093;8;1;0;0;0;8
+2007;stevedata;Newhouse77;Medical-Care Expenditure: A Cross-National Survey (Newhouse, 1977);CSV;Doc;13;5;0;1;0;0;4
+2008;stevedata;ODGI;Ozone Depleting Gas Index Data, 1992-2022;CSV;Doc;62;16;1;1;0;0;15
+2009;stevedata;OODTPT;Data for "Optimal Obfuscation: Democracy and Trade Policy Transparency";CSV;Doc;75;16;1;2;0;0;14
+2010;stevedata;PPGE;Partisan Politics in the Global Economy;CSV;Doc;1020;9;0;2;0;0;7
+2011;stevedata;PRDEG;Property Rights, Democracy, and Economic Growth;CSV;Doc;147;10;0;1;0;0;9
+2012;stevedata;Presidents;U.S. Presidents and Their Terms in Office;CSV;Doc;45;3;0;1;0;0;0
+2013;stevedata;pwt_sample;Penn World Table (10.0) Macroeconomic Data for Select Countries, 1950-2019;CSV;Doc;1540;12;0;2;0;0;10
+2014;stevedata;quartets;Anscombe's (1973) Quartets;CSV;Doc;44;3;0;1;0;0;2
+2015;stevedata;recessions;United States Recessions, 1855-present;CSV;Doc;35;8;0;0;0;0;6
+2016;stevedata;SBCD;Systemic Banking Crises Database II;CSV;Doc;547;4;0;2;0;0;2
+2017;stevedata;scb_regions;Region Codes in the Central Bureau of Statistics ("Statistiska centralbyrån") in Sweden;CSV;Doc;312;2;0;2;0;0;0
+2018;stevedata;SCP16;South Carolina County GOP/Democratic Primary Data, 2016;CSV;Doc;46;15;0;1;0;0;14
+2019;stevedata;sealevels;Global Average Absolute Sea Level Change, 1880–2015;CSV;Doc;136;5;0;0;0;0;5
+2020;stevedata;so2concentrations;Sulfur Dioxide Emissions, 1980-2020;CSV;Doc;41;4;0;0;0;0;4
+2021;stevedata;states_war;State Performance in Inter-State Wars;CSV;Doc;284;23;2;2;0;0;21
+2022;stevedata;steves_clothes;Steve's (Professional) Clothes, as of March 20, 2022;CSV;Doc;86;4;0;4;0;0;0
+2023;stevedata;sugar_price;IMF Primary Commodity Price Data for Sugar;CSV;Doc;1316;3;0;1;0;0;1
+2024;stevedata;sweden_counties;The Counties of Sweden;CSV;Doc;21;6;0;4;0;0;2
+2025;stevedata;thatcher_approval;Margaret Thatcher Satisfaction Ratings, 1980-1990;CSV;Doc;125;8;0;1;0;0;6
+2026;stevedata;therms;Thermometer Ratings for Donald Trump and Barack Obama;CSV;Doc;3080;2;0;0;0;0;2
+2027;stevedata;turnips;Turnip prices in Animal Crossing (New Horizons);CSV;Doc;1429;3;0;1;0;0;1
+2028;stevedata;TV16;The Individual Correlates of the Trump Vote in 2016;CSV;Doc;64600;21;4;2;0;0;19
+2029;stevedata;ukg_eeri;United Kingdom Effective Exchange Rate Index Data, 1990-2022;CSV;Doc;8340;2;0;0;0;0;1
+2030;stevedata;uniondensity;Cross-National Rates of Trade Union Density;CSV;Doc;20;5;0;1;0;0;4
+2031;stevedata;usa_chn_gdp_forecasts;United States-China GDP and GDP Forecasts, 1960-2050;CSV;Doc;182;12;1;1;0;0;11
+2032;stevedata;usa_computers;Percentage of U.S. Households with Computer Access, by Year;CSV;Doc;19;2;0;0;0;0;2
+2033;stevedata;usa_migration;U.S. Inbound/Outbound Migration Data, 1990-2017;CSV;Doc;3535;5;1;3;0;0;2
+2034;stevedata;usa_states;State Abbreviations, Names, and Regions/Divisions;CSV;Doc;51;4;0;4;0;0;0
+2035;stevedata;usa_tradegdp;U.S. Trade and GDP, 1790-2018;CSV;Doc;229;5;0;0;0;0;5
+2036;stevedata;USFAHR;U.S. Foreign Aid and Human Rights in Assorted Years;CSV;Doc;1654;18;0;2;0;0;16
+2037;stevedata;voteincome;Sample Turnout and Demographic Data from the 2000 Current Population Survey;CSV;Doc;1500;7;3;1;0;0;6
+2038;stevedata;wbd_example;A Simple Panel drawn from World Bank Open Data;CSV;Doc;4537;7;0;3;0;0;4
+2039;stevedata;wvs_ccodes;Syncing Word Values Survey Country Codes with CoW Codes;CSV;Doc;112;3;0;1;0;0;2
+2040;stevedata;wvs_immig;Attitudes about Immigration in the World Values Survey;CSV;Doc;310388;6;0;1;0;0;5
+2041;stevedata;wvs_justifbribe;Attitudes about the Justifiability of Bribe-Taking in the World Values Survey;CSV;Doc;348532;6;0;1;0;0;5
+2042;stevedata;wvs_usa_abortion;Attitudes on the Justifiability of Abortion in the United States (World Values Survey, 1982-2011);CSV;Doc;10387;16;5;0;0;0;16
+2043;stevedata;wvs_usa_educat;Education Categories for the United States in the World Values Survey;CSV;Doc;42;6;0;3;0;0;3
+2044;stevedata;wvs_usa_regions;Region Categories for the United States in the World Values Survey;CSV;Doc;63;6;0;5;0;0;1
+2045;stevedata;yugo_sales;Yugo Sales in the United States, 1985-1992;CSV;Doc;24;3;0;1;0;0;2
+2046;survival;aml (cancer);Acute Myelogenous Leukemia survival data;CSV;Doc;23;3;2;0;0;0;3
+2047;survival;bladder (cancer);Bladder Cancer Recurrences;CSV;Doc;340;7;2;0;0;0;7
+2048;survival;bladder1 (cancer);Bladder Cancer Recurrences;CSV;Doc;294;11;0;2;1;0;8
+2049;survival;bladder2 (cancer);Bladder Cancer Recurrences;CSV;Doc;178;8;2;0;0;0;8
+2050;survival;cancer;NCCTG Lung Cancer Data;CSV;Doc;228;10;2;0;0;0;10
+2051;survival;capacitor (reliability);Reliability data sets;CSV;Doc;64;5;2;0;0;1;4
+2052;survival;cgd;Chronic Granulotamous Disease data;CSV;Doc;203;16;6;0;5;0;10
+2053;survival;cgd0 (cgd);Chronic Granulotomous Disease data;CSV;Doc;128;20;6;0;0;0;20
+2054;survival;colon (cancer);Chemotherapy for Stage B/C colon cancer;CSV;Doc;1858;16;8;0;1;0;15
+2055;survival;cracks (reliability);Reliability data sets;CSV;Doc;8;2;0;0;0;0;2
+2056;survival;diabetic;Ddiabetic retinopathy;CSV;Doc;394;8;4;0;2;0;6
+2057;survival;flchain;Assay of serum free light chain for 7874 subjects.;CSV;Doc;7874;11;3;0;2;0;9
+2058;survival;gbsg (cancer);Breast cancer data sets used in Royston and Altman (2013);CSV;Doc;686;11;3;0;0;0;11
+2059;survival;genfan (reliability);Reliability data sets;CSV;Doc;70;2;1;0;0;0;2
+2060;survival;heart;Stanford Heart Transplant data;CSV;Doc;172;8;3;0;1;0;7
+2061;survival;hoel (cancer);Mouse cancer data;CSV;Doc;181;4;1;0;2;0;2
+2062;survival;ifluid (reliability);Reliability data sets;CSV;Doc;41;2;0;0;0;0;2
+2063;survival;imotor (reliability);Reliability data sets;CSV;Doc;40;3;1;0;0;0;3
+2064;survival;jasa (heart);Stanford Heart Transplant data;CSV;Doc;103;14;5;0;0;0;10
+2065;survival;jasa1 (heart);Stanford Heart Transplant data;CSV;Doc;170;8;3;0;0;0;8
+2066;survival;kidney (cancer);Kidney catheter data;CSV;Doc;76;7;2;0;1;0;6
+2067;survival;leukemia (cancer);Acute Myelogenous Leukemia survival data;CSV;Doc;23;3;2;0;1;0;2
+2068;survival;logan;Data from the 1972-78 GSS data used by Logan;CSV;Doc;838;4;1;0;3;0;1
+2069;survival;lung (cancer);NCCTG Lung Cancer Data;CSV;Doc;30;1;0;0;0;0;1
+2070;survival;mgus (cancer);Monoclonal gammopathy data;CSV;Doc;241;12;2;0;2;0;10
+2071;survival;mgus1 (cancer);Monoclonal gammopathy data;CSV;Doc;305;14;3;0;3;0;11
+2072;survival;mgus2 (cancer);Monoclonal gammopathy data;CSV;Doc;1384;11;3;0;1;0;10
+2073;survival;myeloid (cancer);Acute myeloid leukemia;CSV;Doc;646;9;3;1;2;0;6
+2074;survival;myeloma (cancer);Survival times of patients with multiple myeloma;CSV;Doc;3882;5;1;0;0;0;5
+2075;survival;nafld1 (nafld);Non-alcoholic fatty liver disease;CSV;Doc;17549;9;2;0;0;0;9
+2076;survival;nafld2 (nafld);Non-alcoholic fatty liver disease;CSV;Doc;400123;4;0;1;0;0;3
+2077;survival;nafld3 (nafld);Non-alcoholic fatty liver disease;CSV;Doc;34340;3;0;0;1;0;2
+2078;survival;nwtco;Data from the National Wilm's Tumor Study;CSV;Doc;4028;9;5;0;0;1;8
+2079;survival;ovarian (cancer);Ovarian Cancer Survival Data;CSV;Doc;26;6;4;0;0;0;6
+2080;survival;pbc;Mayo Clinic Primary Biliary Cholangitis Data;CSV;Doc;418;20;5;0;1;0;19
+2081;survival;pbcseq (pbc);Mayo Clinic Primary Biliary Cirrhosis, sequential data;CSV;Doc;1945;19;5;0;1;0;18
+2082;survival;rats (cancer);Rat treatment data from Mantel et al;CSV;Doc;32;3;1;0;1;0;2
+2083;survival;rats2 (cancer);Rat data from Gail et al.;CSV;Doc;253;6;2;0;0;0;6
+2084;survival;retinopathy;Diabetic Retinopathy;CSV;Doc;394;9;5;0;3;0;6
+2085;survival;rhDNase;rhDNASE data set;CSV;Doc;767;8;1;0;0;0;6
+2086;survival;rotterdam (cancer);Breast cancer data set used in Royston and Altman (2013);CSV;Doc;2982;15;6;0;1;0;14
+2087;survival;solder;Data from a soldering experiment;CSV;Doc;900;6;1;0;5;0;1
+2088;survival;stanford2 (heart);More Stanford Heart Transplant data;CSV;Doc;184;5;1;0;0;0;5
+2089;survival;survexp.mn (survexp);Census Data Sets for the Expected Survival and Person Years Functions;CSV;Doc;11220;1;0;0;0;0;1
+2090;survival;survexp.us (survexp);Census Data Sets for the Expected Survival and Person Years Functions;CSV;Doc;17820;1;0;0;0;0;1
+2091;survival;survexp.usr (survexp);Census Data Sets for the Expected Survival and Person Years Functions;CSV;Doc;35640;1;0;0;0;0;1
+2092;survival;tobin;Tobin's Tobit data;CSV;Doc;20;3;0;0;0;0;3
+2093;survival;transplant;Liver transplant waiting list;CSV;Doc;815;6;1;0;3;0;3
+2094;survival;turbine (reliability);Reliability data sets;CSV;Doc;11;3;0;0;0;0;3
+2095;survival;udca;Data from a trial of usrodeoxycholic acid;CSV;Doc;170;15;2;0;0;0;5
+2096;survival;udca1 (udca);Data from a trial of usrodeoxycholic acid;CSV;Doc;170;7;3;0;0;0;7
+2097;survival;udca2 (udca);Data from a trial of usrodeoxycholic acid;CSV;Doc;1360;8;3;1;0;0;7
+2098;survival;uspop2 (survexp);Projected US Population;CSV;Doc;101;42;0;0;0;0;42
+2099;survival;valveSeat (reliability);Reliability data sets;CSV;Doc;89;3;1;0;0;0;3
+2100;survival;veteran (cancer);Veterans' Administration Lung Cancer study;CSV;Doc;137;8;3;0;1;0;7
+2101;texmex;liver;Liver related laboratory data;CSV;Doc;606;9;0;0;1;0;8
+2102;texmex;nidd;Rain, wavesurge, portpirie and nidd datasets.;CSV;Doc;154;1;0;0;0;0;1
+2103;texmex;portpirie;Rain, wavesurge, portpirie and nidd datasets.;CSV;Doc;65;2;0;0;0;0;2
+2104;texmex;rain;Rain, wavesurge, portpirie and nidd datasets.;CSV;Doc;17531;1;0;0;0;0;1
+2105;texmex;summer;Air pollution data, separately for summer and winter months;CSV;Doc;578;5;0;0;0;0;5
+2106;texmex;wavesurge;Rain, wavesurge, portpirie and nidd datasets.;CSV;Doc;2894;2;0;0;0;0;2
+2107;texmex;winter;Air pollution data, separately for summer and winter months;CSV;Doc;532;5;0;0;0;0;5
+2108;tidyr;billboard;Song rankings for Billboard top 100 in the year 2000;CSV;Doc;317;79;10;2;0;11;65
+2109;tidyr;cms_patient_care;Data from the Centers for Medicare & Medicaid Services;CSV;Doc;252;5;1;4;0;0;1
+2110;tidyr;cms_patient_experience;Data from the Centers for Medicare & Medicaid Services;CSV;Doc;500;5;0;4;0;0;1
+2111;tidyr;construction;Completed construction in the US in 2018;CSV;Doc;9;9;0;1;0;1;7
+2112;tidyr;fish_encounters;Fish encounters;CSV;Doc;114;3;0;0;2;0;1
+2113;tidyr;household;Household data;CSV;Doc;5;5;0;2;0;0;1
+2114;tidyr;population;World Health Organization TB data;CSV;Doc;4060;3;0;1;0;0;2
+2115;tidyr;relig_income;Pew religion and income survey;CSV;Doc;18;11;0;1;0;0;10
+2116;tidyr;smiths;Some data about the Smith family;CSV;Doc;2;5;2;1;0;0;4
+2117;tidyr;table1;Example tabular representations;CSV;Doc;6;4;1;1;0;0;3
+2118;tidyr;table2;Example tabular representations;CSV;Doc;12;4;2;2;0;0;2
+2119;tidyr;table3;Example tabular representations;CSV;Doc;6;3;1;2;0;0;1
+2120;tidyr;table4a;Example tabular representations;CSV;Doc;3;3;0;1;0;0;2
+2121;tidyr;table4b;Example tabular representations;CSV;Doc;3;3;0;1;0;0;2
+2122;tidyr;table5;Example tabular representations;CSV;Doc;6;4;2;4;0;0;0
+2123;tidyr;us_rent_income;US rent and income data;CSV;Doc;104;5;1;3;0;0;2
+2124;tidyr;who;World Health Organization TB data;CSV;Doc;7240;60;0;3;0;0;57
+2125;tidyr;who2;World Health Organization TB data;CSV;Doc;7240;58;0;1;0;0;57
+2126;tidyr;world_bank_pop;Population data from the World Bank;CSV;Doc;1064;20;0;2;0;0;18
+2127;tsibble;pedestrian;Pedestrian counts in the city of Melbourne;CSV;Doc;66037;5;0;1;0;0;2
+2128;tsibble;tourism;Australian domestic overnight trips;CSV;Doc;24320;5;0;3;0;0;1
+2129;tsibbledata;ansett;Passenger numbers on Ansett airline flights;CSV;Doc;7407;4;0;2;0;0;1
+2130;tsibbledata;aus_livestock;Australian livestock slaughter;CSV;Doc;29364;4;0;0;2;0;1
+2131;tsibbledata;aus_production;Quarterly production of selected commodities in Australia.;CSV;Doc;218;7;0;0;0;0;6
+2132;tsibbledata;aus_retail;Australian retail trade turnover;CSV;Doc;64532;5;0;3;0;0;1
+2133;tsibbledata;gafa_stock;GAFA stock prices;CSV;Doc;5032;8;0;1;0;0;6
+2134;tsibbledata;global_economy;Global economic indicators;CSV;Doc;15150;9;0;0;2;0;7
+2135;tsibbledata;hh_budget;Household budget characteristics;CSV;Doc;88;8;0;1;0;0;7
+2136;tsibbledata;nyc_bikes;NYC Citi Bike trips;CSV;Doc;4268;12;1;0;5;0;5
+2137;tsibbledata;olympic_running;Fastest running times for Olympic races;CSV;Doc;312;4;1;1;0;0;3
+2138;tsibbledata;PBS;Monthly Medicare Australia prescription data;CSV;Doc;67596;9;2;6;0;0;2
+2139;tsibbledata;pelt;Pelt trading records;CSV;Doc;91;3;0;0;0;0;3
+2140;tsibbledata;vic_elec;Half-hourly electricity demand for Victoria, Australia;CSV;Doc;52608;5;1;0;0;1;2
+2141;validate;nace_rev2;NACE classification code table;CSV;Doc;996;10;0;0;8;0;2
+2142;validate;retailers;data on Dutch supermarkets;CSV;Doc;60;10;0;0;1;0;9
+2143;validate;samplonomy;Economic data on Samplonia;CSV;Doc;1199;5;1;4;0;0;1
+2144;validate;SBS2000;data on Dutch supermarkets;CSV;Doc;60;11;0;0;2;0;9
+2145;vcd;Arthritis;Arthritis Treatment Data;CSV;Doc;84;5;2;0;3;0;2
+2146;vcd;Baseball;Baseball Data;CSV;Doc;322;25;3;2;6;0;17
+2147;vcd;BrokenMarriage;Broken Marriage Data;CSV;Doc;20;4;2;0;3;0;1
+2148;vcd;Bundesliga;Ergebnisse der Fussball-Bundesliga;CSV;Doc;14018;7;0;0;2;0;4
+2149;vcd;Bundestag2005;Votes in German Bundestag Election 2005;CSV;Doc;80;3;0;0;2;0;1
+2150;vcd;Butterfly;Butterfly Species in Malaya;CSV;Doc;24;2;0;0;1;0;1
+2151;vcd;CoalMiners;Breathlessness and Wheeze in Coal Miners;CSV;Doc;36;4;2;0;3;0;1
+2152;vcd;DanishWelfare;Danish Welfare Study Data;CSV;Doc;180;5;0;0;4;0;1
+2153;vcd;Employment;Employment Status;CSV;Doc;24;4;2;0;3;0;1
+2154;vcd;Federalist;'May' in Federalist Papers;CSV;Doc;7;2;0;0;1;0;1
+2155;vcd;Hitters;Hitters Data;CSV;Doc;154;4;0;0;1;0;3
+2156;vcd;HorseKicks;Death by Horse Kicks;CSV;Doc;5;2;0;0;1;0;1
+2157;vcd;Hospital;Hospital data;CSV;Doc;9;3;0;0;2;0;1
+2158;vcd;JobSatisfaction;Job Satisfaction Data;CSV;Doc;8;4;3;0;3;0;1
+2159;vcd;JointSports;Opinions About Joint Sports;CSV;Doc;40;5;3;0;4;0;1
+2160;vcd;Lifeboats;Lifeboats on the Titanic;CSV;Doc;18;8;1;0;2;0;5
+2161;vcd;MSPatients;Diagnosis of Multiple Sclerosis;CSV;Doc;4;8;0;0;0;0;8
+2162;vcd;NonResponse;Non-Response Survey Data;CSV;Doc;12;4;2;0;3;0;1
+2163;vcd;OvaryCancer;Ovary Cancer Data;CSV;Doc;16;5;4;0;4;0;1
+2164;vcd;PreSex;Pre-marital Sex and Divorce;CSV;Doc;16;5;4;0;4;0;1
+2165;vcd;Punishment;Corporal Punishment Data;CSV;Doc;36;5;2;0;4;0;1
+2166;vcd;RepVict;Repeat Victimization Data;CSV;Doc;64;3;0;0;2;0;1
+2167;vcd;Rochdale;Rochdale Data;CSV;Doc;256;9;8;0;8;0;1
+2168;vcd;Saxony;Families in Saxony;CSV;Doc;13;2;0;0;1;0;1
+2169;vcd;SexualFun;Sex is Fun;CSV;Doc;16;3;0;0;2;0;1
+2170;vcd;SpaceShuttle;Space Shuttle O-ring Failures;CSV;Doc;24;6;1;0;2;0;4
+2171;vcd;Suicide;Suicide Rates in Germany;CSV;Doc;306;6;1;0;4;0;2
+2172;vcd;Trucks;Truck Accidents Data;CSV;Doc;24;5;3;0;4;0;1
+2173;vcd;UKSoccer;UK Soccer Scores;CSV;Doc;25;3;0;0;2;0;1
+2174;vcd;VisualAcuity;Visual Acuity in Left and Right Eyes;CSV;Doc;32;4;1;0;3;0;1
+2175;vcd;VonBort;Von Bortkiewicz Horse Kicks Data;CSV;Doc;280;4;1;0;2;0;2
+2176;vcd;WeldonDice;Weldon's Dice Data;CSV;Doc;11;2;0;0;1;0;1
+2177;vcd;WomenQueue;Women in Queues;CSV;Doc;11;2;0;0;1;0;1
+2178;vcdExtra;Abortion;Abortion Opinion Data;CSV;Doc;8;4;3;0;3;0;1
+2179;vcdExtra;Accident;Traffic Accident Victims in France in 1958;CSV;Doc;80;5;2;0;4;0;1
+2180;vcdExtra;AirCrash;Air Crash Data;CSV;Doc;439;5;0;0;2;0;2
+2181;vcdExtra;Alligator;Alligator Food Choice;CSV;Doc;80;5;2;0;4;0;1
+2182;vcdExtra;Asbestos;Effect of Exposure to Asbestos;CSV;Doc;5;4;0;0;0;0;4
+2183;vcdExtra;Bartlett;Bartlett Data on Plum Root Cuttings;CSV;Doc;8;4;3;0;3;0;1
+2184;vcdExtra;Burt;Burt (1950) Data on Hair, Eyes, Head and Stature;CSV;Doc;36;5;2;0;4;0;1
+2185;vcdExtra;Caesar;Risk Factors for Infection in Caesarian Births;CSV;Doc;24;5;3;0;4;0;1
+2186;vcdExtra;Cancer;Survival of Breast Cancer Patients;CSV;Doc;8;4;3;0;3;0;1
+2187;vcdExtra;Cormorants;Advertising Behavior by Males Cormorants;CSV;Doc;343;8;2;0;6;0;2
+2188;vcdExtra;CyclingDeaths;London Cycling Deaths;CSV;Doc;208;2;0;0;0;0;1
+2189;vcdExtra;DaytonSurvey;Dayton Student Survey on Substance Use;CSV;Doc;32;6;5;0;5;0;1
+2190;vcdExtra;Depends;Dependencies of R Packages;CSV;Doc;15;2;0;0;1;0;1
+2191;vcdExtra;Detergent;Detergent preference data;CSV;Doc;24;5;3;0;4;0;1
+2192;vcdExtra;Donner;Survival in the Donner Party;CSV;Doc;90;5;2;0;2;0;2
+2193;vcdExtra;Draft1970;USA 1970 Draft Lottery Data;CSV;Doc;366;3;0;0;1;0;2
+2194;vcdExtra;Draft1970table;USA 1970 Draft Lottery Table;CSV;Doc;36;3;0;0;2;0;1
+2195;vcdExtra;Dyke;Sources of Knowledge of Cancer;CSV;Doc;32;6;5;0;5;0;1
+2196;vcdExtra;Fungicide;Carcinogenic Effects of a Fungicide;CSV;Doc;2;8;8;0;0;0;8
+2197;vcdExtra;Geissler;Geissler's Data on the Human Sex Ratio;CSV;Doc;90;4;0;0;0;0;4
+2198;vcdExtra;Gilby;Clothing and Intelligence Rating of Children;CSV;Doc;24;3;0;0;2;0;1
+2199;vcdExtra;Glass;British Social Mobility from Glass(1954);CSV;Doc;25;3;0;0;2;0;1
+2200;vcdExtra;GSS;General Social Survey- Sex and Party affiliation;CSV;Doc;6;3;1;0;2;0;1
+2201;vcdExtra;HairEyePlace;Hair Color and Eye Color in Caithness and Aberdeen;CSV;Doc;4;10;0;0;0;0;10
+2202;vcdExtra;Hauser79;Hauser (1979) Data on Social Mobility;CSV;Doc;25;3;0;0;2;0;1
+2203;vcdExtra;Heart;Sex, Occupation and Heart Disease;CSV;Doc;12;4;2;0;3;0;1
+2204;vcdExtra;Heckman;Labour Force Participation of Married Women 1967-1971;CSV;Doc;32;6;5;0;5;0;1
+2205;vcdExtra;HospVisits;Hospital Visits Data;CSV;Doc;9;3;0;0;2;0;1
+2206;vcdExtra;HouseTasks;Household Tasks Performed by Husbands and Wives;CSV;Doc;52;3;0;0;2;0;1
+2207;vcdExtra;Hoyt;Minnesota High School Graduates;CSV;Doc;168;5;1;0;4;0;1
+2208;vcdExtra;ICU;ICU data set;CSV;Doc;200;22;17;0;19;0;3
+2209;vcdExtra;JobSat;Cross-classification of job satisfaction by income;CSV;Doc;16;3;0;0;2;0;1
+2210;vcdExtra;Mammograms;Mammogram Ratings;CSV;Doc;4;4;0;0;0;0;4
+2211;vcdExtra;Mental;Mental Impairment and Parents SES;CSV;Doc;24;3;0;0;2;0;1
+2212;vcdExtra;Mice;Mice Depletion Data;CSV;Doc;30;4;1;0;2;0;2
+2213;vcdExtra;Mobility;Social Mobility data;CSV;Doc;25;3;0;0;2;0;1
+2214;vcdExtra;PhdPubs;Publications of PhD Candidates;CSV;Doc;915;6;2;0;0;0;6
+2215;vcdExtra;ShakeWords;Shakespeare's Word Type Frequencies;CSV;Doc;100;2;0;0;0;0;2
+2216;vcdExtra;Titanicp;Passengers on the Titanic;CSV;Doc;1309;6;2;0;3;0;3
+2217;vcdExtra;Toxaemia;Toxaemia Symptoms in Pregnancy;CSV;Doc;60;5;2;0;4;0;1
+2218;vcdExtra;TV;TV Viewing Data;CSV;Doc;5;33;0;0;0;0;33
+2219;vcdExtra;Vietnam;Student Opinion about the Vietnam War;CSV;Doc;40;4;1;0;2;0;2
+2220;vcdExtra;Vote1980;Race and Politics in the 1980 Presidential Vote;CSV;Doc;28;4;2;0;3;0;1
+2221;vcdExtra;WorkerSat;Worker Satisfaction Data;CSV;Doc;8;4;3;0;3;0;1
+2222;vcdExtra;Yamaguchi87;Occupational Mobility in Three Countries;CSV;Doc;75;4;0;0;3;0;1
+2223;wooldridge;admnrev;admnrev;CSV;Doc;153;5;1;1;0;0;4
+2224;wooldridge;affairs;affairs;CSV;Doc;601;19;11;0;0;0;19
+2225;wooldridge;airfare;airfare;CSV;Doc;4596;14;3;0;0;0;14
+2226;wooldridge;alcohol;alcohol;CSV;Doc;9822;33;20;0;0;0;33
+2227;wooldridge;apple;apple;CSV;Doc;660;17;2;2;0;0;15
+2228;wooldridge;approval;approval;CSV;Doc;78;16;3;0;0;0;16
+2229;wooldridge;athlet1;athlet1;CSV;Doc;118;23;6;1;0;0;22
+2230;wooldridge;athlet2;athlet2;CSV;Doc;30;10;4;0;0;0;10
+2231;wooldridge;attend;attend;CSV;Doc;680;11;2;0;0;0;11
+2232;wooldridge;audit;audit;CSV;Doc;241;3;2;0;0;0;3
+2233;wooldridge;barium;barium;CSV;Doc;131;31;20;0;0;0;31
+2234;wooldridge;beauty;beauty;CSV;Doc;1260;17;11;0;0;0;17
+2235;wooldridge;benefits;benefits;CSV;Doc;1848;18;0;0;0;0;18
+2236;wooldridge;beveridge;beveridge;CSV;Doc;135;8;0;0;0;0;7
+2237;wooldridge;big9salary;big9salary;CSV;Doc;786;30;19;0;0;0;30
+2238;wooldridge;bwght;bwght;CSV;Doc;1388;14;2;0;0;0;14
+2239;wooldridge;bwght2;bwght2;CSV;Doc;1832;23;9;0;0;0;23
+2240;wooldridge;campus;campus;CSV;Doc;97;7;1;0;0;0;7
+2241;wooldridge;card;card;CSV;Doc;3010;34;21;0;0;0;34
+2242;wooldridge;catholic;catholic;CSV;Doc;7430;13;7;0;0;0;13
+2243;wooldridge;cement;cement;CSV;Doc;312;30;12;0;0;0;30
+2244;wooldridge;census2000;census2000;CSV;Doc;29501;6;0;0;1;0;5
+2245;wooldridge;ceosal1;ceosal1;CSV;Doc;209;12;4;0;0;0;12
+2246;wooldridge;ceosal2;ceosal2;CSV;Doc;177;15;2;0;0;0;15
+2247;wooldridge;charity;charity;CSV;Doc;4268;8;2;0;0;0;8
+2248;wooldridge;consump;consump;CSV;Doc;37;24;0;0;0;0;24
+2249;wooldridge;corn;corn;CSV;Doc;37;5;0;0;0;0;5
+2250;wooldridge;countymurders;countymurders;CSV;Doc;37349;20;0;0;0;0;20
+2251;wooldridge;cps78_85;cps78_85;CSV;Doc;1084;15;9;0;0;0;15
+2252;wooldridge;cps91;cps91;CSV;Doc;5634;24;9;0;0;0;24
+2253;wooldridge;crime1;crime1;CSV;Doc;2725;16;3;0;0;0;16
+2254;wooldridge;crime2;crime2;CSV;Doc;92;34;5;0;0;0;34
+2255;wooldridge;crime3;crime3;CSV;Doc;106;12;2;0;0;0;12
+2256;wooldridge;crime4;crime4;CSV;Doc;630;59;9;0;0;0;59
+2257;wooldridge;discrim;discrim;CSV;Doc;410;37;6;0;0;0;37
+2258;wooldridge;driving;driving;CSV;Doc;1200;56;27;0;0;0;56
+2259;wooldridge;earns;earns;CSV;Doc;41;14;0;0;0;0;14
+2260;wooldridge;econmath;econmath;CSV;Doc;856;17;7;0;0;0;17
+2261;wooldridge;elem94_95;elem94_95;CSV;Doc;1848;14;0;0;0;0;14
+2262;wooldridge;engin;engin;CSV;Doc;403;17;6;0;0;0;17
+2263;wooldridge;expendshares;expendshares;CSV;Doc;1519;13;1;0;0;0;13
+2264;wooldridge;ezanders;ezanders;CSV;Doc;108;25;21;1;0;0;24
+2265;wooldridge;ezunem;ezunem;CSV;Doc;198;37;32;0;0;0;37
+2266;wooldridge;fair;fair;CSV;Doc;21;28;5;0;0;0;28
+2267;wooldridge;fertil1;fertil1;CSV;Doc;1129;27;14;0;0;0;27
+2268;wooldridge;fertil2;fertil2;CSV;Doc;4361;27;13;0;0;0;27
+2269;wooldridge;fertil3;fertil3;CSV;Doc;72;24;2;0;0;0;24
+2270;wooldridge;fish;fish;CSV;Doc;97;20;4;0;0;0;20
+2271;wooldridge;fringe;fringe;CSV;Doc;616;39;17;0;0;0;39
+2272;wooldridge;gpa1;gpa1;CSV;Doc;141;29;23;0;0;0;29
+2273;wooldridge;gpa2;gpa2;CSV;Doc;4137;12;4;0;0;0;12
+2274;wooldridge;gpa3;gpa3;CSV;Doc;732;23;8;0;0;0;23
+2275;wooldridge;happiness;happiness;CSV;Doc;17137;33;20;0;9;0;24
+2276;wooldridge;hprice1;hprice1;CSV;Doc;88;10;1;0;0;0;10
+2277;wooldridge;hprice2;hprice2;CSV;Doc;506;12;0;0;0;0;12
+2278;wooldridge;hprice3;hprice3;CSV;Doc;321;19;2;0;0;0;19
+2279;wooldridge;hseinv;hseinv;CSV;Doc;42;14;0;0;0;0;14
+2280;wooldridge;htv;htv;CSV;Doc;1230;23;11;0;0;0;23
+2281;wooldridge;infmrt;infmrt;CSV;Doc;102;12;3;0;0;0;12
+2282;wooldridge;injury;injury;CSV;Doc;7150;30;17;0;0;0;30
+2283;wooldridge;intdef;intdef;CSV;Doc;56;13;1;0;0;0;13
+2284;wooldridge;intqrt;intqrt;CSV;Doc;124;23;0;0;0;0;23
+2285;wooldridge;inven;inven;CSV;Doc;37;13;0;0;0;0;13
+2286;wooldridge;jtrain;jtrain;CSV;Doc;471;30;6;0;0;0;30
+2287;wooldridge;jtrain2;jtrain2;CSV;Doc;445;19;8;0;0;0;19
+2288;wooldridge;jtrain3;jtrain3;CSV;Doc;2675;20;10;0;0;0;20
+2289;wooldridge;jtrain98;jtrain98;CSV;Doc;1130;10;6;0;0;0;10
+2290;wooldridge;k401k;k401k;CSV;Doc;1534;8;1;0;0;0;8
+2291;wooldridge;k401ksubs;k401ksubs;CSV;Doc;9275;11;5;0;0;0;11
+2292;wooldridge;kielmc;kielmc;CSV;Doc;321;25;4;0;0;0;25
+2293;wooldridge;labsup;labsup;CSV;Doc;31857;20;10;0;0;0;20
+2294;wooldridge;lawsch85;lawsch85;CSV;Doc;156;21;8;0;0;0;21
+2295;wooldridge;loanapp;loanapp;CSV;Doc;1989;59;29;0;0;0;59
+2296;wooldridge;lowbrth;lowbrth;CSV;Doc;100;36;2;2;0;0;34
+2297;wooldridge;mathpnl;mathpnl;CSV;Doc;3850;52;7;0;0;0;52
+2298;wooldridge;meap00_01;meap00_01;CSV;Doc;1692;9;0;0;0;0;9
+2299;wooldridge;meap01;meap01;CSV;Doc;1823;11;0;0;0;0;11
+2300;wooldridge;meap93;meap93;CSV;Doc;408;17;0;0;0;0;17
+2301;wooldridge;meapsingle;meapsingle;CSV;Doc;229;18;0;0;0;0;18
+2302;wooldridge;minwage;minwage;CSV;Doc;612;58;0;0;0;0;58
+2303;wooldridge;mlb1;mlb1;CSV;Doc;353;47;9;0;0;0;47
+2304;wooldridge;mroz;mroz;CSV;Doc;753;22;2;0;0;0;22
+2305;wooldridge;murder;murder;CSV;Doc;153;13;2;1;0;0;12
+2306;wooldridge;nbasal;nbasal;CSV;Doc;269;22;8;0;0;0;22
+2307;wooldridge;ncaa_rpi;ncaa_rpi;CSV;Doc;336;14;2;3;0;0;11
+2308;wooldridge;nyse;nyse;CSV;Doc;691;8;0;0;0;0;8
+2309;wooldridge;okun;okun;CSV;Doc;47;4;0;0;0;0;4
+2310;wooldridge;openness;openness;CSV;Doc;114;12;2;0;0;0;12
+2311;wooldridge;pension;pension;CSV;Doc;194;19;13;0;0;0;19
+2312;wooldridge;phillips;phillips;CSV;Doc;56;7;0;0;0;0;7
+2313;wooldridge;pntsprd;pntsprd;CSV;Doc;553;12;6;0;0;0;12
+2314;wooldridge;prison;prison;CSV;Doc;714;45;16;0;0;0;45
+2315;wooldridge;prminwge;prminwge;CSV;Doc;38;25;0;0;0;0;25
+2316;wooldridge;rdchem;rdchem;CSV;Doc;32;8;0;0;0;0;8
+2317;wooldridge;rdtelec;rdtelec;CSV;Doc;29;6;0;0;0;0;6
+2318;wooldridge;recid;recid;CSV;Doc;1445;18;10;0;0;0;18
+2319;wooldridge;rental;rental;CSV;Doc;128;23;2;0;0;0;23
+2320;wooldridge;return;return;CSV;Doc;142;12;0;0;0;0;12
+2321;wooldridge;saving;saving;CSV;Doc;100;7;1;0;0;0;7
+2322;wooldridge;school93_98;school93_98;CSV;Doc;10668;18;6;0;0;0;18
+2323;wooldridge;sleep75;sleep75;CSV;Doc;706;34;12;0;0;0;34
+2324;wooldridge;slp75_81;slp75_81;CSV;Doc;239;20;7;0;0;0;20
+2325;wooldridge;smoke;smoke;CSV;Doc;807;10;2;0;0;0;10
+2326;wooldridge;traffic1;traffic1;CSV;Doc;51;13;7;1;0;0;12
+2327;wooldridge;traffic2;traffic2;CSV;Doc;108;48;13;0;0;0;48
+2328;wooldridge;twoyear;twoyear;CSV;Doc;6763;23;15;0;0;0;23
+2329;wooldridge;volat;volat;CSV;Doc;558;17;0;0;0;0;17
+2330;wooldridge;vote1;vote1;CSV;Doc;173;10;1;1;0;0;9
+2331;wooldridge;vote2;vote2;CSV;Doc;186;26;5;1;0;0;25
+2332;wooldridge;voucher;voucher;CSV;Doc;990;19;13;0;0;0;19
+2333;wooldridge;wage1;wage1;CSV;Doc;526;24;16;0;0;0;24
+2334;wooldridge;wage2;wage2;CSV;Doc;935;17;4;0;0;0;17
+2335;wooldridge;wagepan;wagepan;CSV;Doc;4360;44;37;0;0;0;44
+2336;wooldridge;wageprc;wageprc;CSV;Doc;286;20;0;0;0;0;20
+2337;wooldridge;wine;wine;CSV;Doc;21;5;0;1;0;0;4

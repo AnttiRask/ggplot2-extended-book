@@ -7,7 +7,7 @@
 source("warning.R")
 ```
 
-## Data Sets
+## Data sets
 
 This book is about tools for creating visualizations. But to visualize data you first need data. So let's start by taking a look at some of the data sets available to us without much hassle.
 
@@ -150,7 +150,69 @@ As mentioned earlier, __Movies__ is already a tibble. But, it doesn't mean that 
 
 ### RDatasets
 
-## EDA
+[__RDatasets__](https://vincentarelbundock.github.io/Rdatasets/articles/data.html) is not an R package. But it is an excellent GitHub repo. And a “collection of datasets originally distributed in various R packages" [@arel-bundock2024].
+
+Here listed are the 2337 datasets that were available on 2024-11-11:
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(readr)
+
+read_csv2("data/RDatasets_2024_11_11.csv") %>%
+  select(
+    Package,
+    Item,
+    Title,
+    Rows,
+    Cols,
+    n_binary,
+    n_character,
+    n_factor,
+    n_logical,
+    n_numeric
+  ) %>%
+  paged_table()
+```
+
+The __RDatasets__ repo contains that same list. But there you will also find a .csv file and documentation for each data set.
+
+If I had to choose one fun data set from the list to highlight, it would be __starwars__ from the __dplyr__ package.
+
+You can choose to use the .csv file provided on the website. Another way to use the collection is to choose the dataset from the list and load the package it comes with:
+
+```{r}
+library(dplyr)
+
+data(starwars)
+```
+
+Let's take a quick look at what some of the __starwars__ data looks like:
+
+```{r, eval=FALSE}
+head(starwars)
+```
+
+```{r, echo=FALSE, message=FALSE}
+head(starwars) %>%
+  paged_table()
+```
+
+There are a bunch of Star Wars characters and their stats.
+
+Let's choose two columns, __height__ and __species__ (and filter for six of the more well-known species). We'll use them to create a simple visualization with __ggplot2__:
+
+```{r, warning=FALSE}
+library(ggplot2)
+
+starwars %>%
+  filter(species %in% c("Droid", "Ewok", "Gungan", "Human", "Hutt", "Wookiee")) %>%
+  ggplot(aes(height, species)) +
+  geom_boxplot()
+```
+
+This concludes the section about the different data sets available for every R user. Next, we'll take a look at some of the ggplot2 extensions that make it easier to do exploratory data analysis (EDA).
+
+## Exploratory data analysis (EDA)
 
 ### Pairwise plot matrix
 
