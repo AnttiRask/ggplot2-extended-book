@@ -7,6 +7,6 @@
 source("warning.R")
 ```
 
-## Capping Axis Lines
+## Capping axis lines
 
-## Serial Axes Coordinates
+## Serial axes coordinates

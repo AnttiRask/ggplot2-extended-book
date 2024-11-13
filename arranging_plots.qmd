@@ -1,4 +1,4 @@
-# Arranging Plots {#sec-arranging-plots}
+# Arranging plots {#sec-arranging-plots}
 
 ```{r}
 #| echo: false
@@ -7,8 +7,8 @@
 source("warning.R")
 ```
 
-## Arranging Multiple Plots
+## Arranging multiple plots
 
-## Side Panels
+## Side panels
 
-## Converting Base R Plots to ggplot2
+## Converting base R plots to ggplot2

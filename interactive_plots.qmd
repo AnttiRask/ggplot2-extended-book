@@ -1,4 +1,4 @@
-# Interactive Plots {#sec-interactive-plots}
+# Interactive plots {#sec-interactive-plots}
 
 ```{r}
 #| echo: false

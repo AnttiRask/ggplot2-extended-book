@@ -21,6 +21,14 @@ But that information is quite scattered. There were many great packages I hadn't
 
 ###	What you will learn
 
+This book aims to continue from where __ggplot2: Elegant Graphics for Data Analysis__ by __Hadley Wickham__ [@wickham2016] left off. In his book, Hadley does mention some extension packages by name. But there hasn't been a comprehensive guide to using those extension packages and how to use them together.
+
+__Basics__ works as kind of a "Previously, on ggplot2...". A reminder of the basic functionalities of the core package.
+
+__Layers__ goes through, in a very logical order (established in Hadley's book) the various layers that more or less make up _the grammar of graphics_: __Data__, __Geoms__, __Stats__, __Annotations__, __Scales and guides__, __Coords__, __Facets__, and __Themes__.
+
+__Special cases__ hosts particular kinds of visualization: Maps, Networks, Interactive Plots, and Animation
+
 ###	What you won’t learn
 
 These are some of the interesting topics that I had to leave out out of the book. It's long as it is and I decided to concentrate on the topics and extensions that everyone can use. Regardless of the field you're in.

@@ -1,4 +1,4 @@
-# Interactive Tools {#sec-interactive-tools}
+# Interactive tools {#sec-interactive-tools}
 
 ```{r}
 #| echo: false
@@ -7,22 +7,22 @@
 source("warning.R")
 ```
 
-## Interactive Interface to Plot Data and Perform Statistical Tests
+## Interactive interface to plot data and perform statistical tests
 
 ## Shiny
 
-### Auto Theming
+### Auto theming
 
-### Choosing Color Palettes Interactively
+### Choosing color palettes interactively
 
-### Color Picker
+### Color picker
 
-### Editing Layers
+### Editing layers
 
-### Editing Themes
+### Editing themes
 
-### Interactive Layers
+### Interactive layers
 
-### Marginal Plots
+### Marginal plots
 
-### Theme Preview
+### Theme preview

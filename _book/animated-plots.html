@@ -5,7 +5,7 @@
 <meta name="generator" content="quarto-1.4.555">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Antti Rask">
-<title>ggplot2 extended - 17&nbsp; Arranging plots</title>
+<title>ggplot2 extended - 13&nbsp; Animated plots</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -27,8 +27,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./beyond_r.html" rel="next">
-<link href="./finishing_touches.html" rel="prev">
+<link href="./shortcuts.html" rel="next">
+<link href="./interactive_plots.html" rel="prev">
 <link href="./cover.jpg" rel="icon" type="image/jpeg">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -73,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./getting_ready_to_publish.html">Getting ready to publish</a></li><li class="breadcrumb-item"><a href="./arranging_plots.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Arranging plots</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./special_cases.html">Special cases</a></li><li class="breadcrumb-item"><a href="./animated-plots.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Animated plots</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -225,7 +225,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./animated-plots.html" class="sidebar-item-text sidebar-link">
+  <a href="./animated-plots.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Animated plots</span></span></a>
   </div>
 </li>
@@ -271,7 +271,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./arranging_plots.html" class="sidebar-item-text sidebar-link active">
+  <a href="./arranging_plots.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Arranging plots</span></span></a>
   </div>
 </li>
@@ -312,14 +312,13 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-<li><a href="#arranging-multiple-plots" id="toc-arranging-multiple-plots" class="nav-link active" data-scroll-target="#arranging-multiple-plots"><span class="header-section-number">17.1</span> Arranging multiple plots</a></li>
-  <li><a href="#side-panels" id="toc-side-panels" class="nav-link" data-scroll-target="#side-panels"><span class="header-section-number">17.2</span> Side panels</a></li>
-  <li><a href="#converting-base-r-plots-to-ggplot2" id="toc-converting-base-r-plots-to-ggplot2" class="nav-link" data-scroll-target="#converting-base-r-plots-to-ggplot2"><span class="header-section-number">17.3</span> Converting base R plots to ggplot2</a></li>
-  </ul><div class="toc-actions"><ul><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/edit/main/arranging_plots.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<li><a href="#animation" id="toc-animation" class="nav-link active" data-scroll-target="#animation"><span class="header-section-number">13.1</span> Animation</a></li>
+  <li><a href="#gif" id="toc-gif" class="nav-link" data-scroll-target="#gif"><span class="header-section-number">13.2</span> GIF</a></li>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/edit/main/animated-plots.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./getting_ready_to_publish.html">Getting ready to publish</a></li><li class="breadcrumb-item"><a href="./arranging_plots.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Arranging plots</span></a></li></ol></nav><div class="quarto-title">
-<h1 class="title"><span id="sec-arranging-plots" class="quarto-section-identifier"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Arranging plots</span></span></h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./special_cases.html">Special cases</a></li><li class="breadcrumb-item"><a href="./animated-plots.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Animated plots</span></a></li></ol></nav><div class="quarto-title">
+<h1 class="title"><span id="sec-animated-plots" class="quarto-section-identifier"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Animated plots</span></span></h1>
 </div>
 
 
@@ -346,12 +345,10 @@ This book/site is under construction
 <p>Everything is liable to change, even the title</p>
 </div>
 </div>
-<section id="arranging-multiple-plots" class="level2" data-number="17.1"><h2 data-number="17.1" class="anchored" data-anchor-id="arranging-multiple-plots">
-<span class="header-section-number">17.1</span> Arranging multiple plots</h2>
-</section><section id="side-panels" class="level2" data-number="17.2"><h2 data-number="17.2" class="anchored" data-anchor-id="side-panels">
-<span class="header-section-number">17.2</span> Side panels</h2>
-</section><section id="converting-base-r-plots-to-ggplot2" class="level2" data-number="17.3"><h2 data-number="17.3" class="anchored" data-anchor-id="converting-base-r-plots-to-ggplot2">
-<span class="header-section-number">17.3</span> Converting base R plots to ggplot2</h2>
+<section id="animation" class="level2" data-number="13.1"><h2 data-number="13.1" class="anchored" data-anchor-id="animation">
+<span class="header-section-number">13.1</span> Animation</h2>
+</section><section id="gif" class="level2" data-number="13.2"><h2 data-number="13.2" class="anchored" data-anchor-id="gif">
+<span class="header-section-number">13.2</span> GIF</h2>
 
 
 </section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
@@ -763,13 +760,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="./finishing_touches.html" class="pagination-link" aria-label="Finishing touches">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Finishing touches</span></span>
+      <a href="./interactive_plots.html" class="pagination-link" aria-label="Interactive plots">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Interactive plots</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./beyond_r.html" class="pagination-link" aria-label="Beyond R">
-        <span class="nav-page-text">Beyond R</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./shortcuts.html" class="pagination-link" aria-label="Shortcuts">
+        <span class="nav-page-text">Shortcuts</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -780,7 +777,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/edit/main/arranging_plots.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/edit/main/animated-plots.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a> and is hosted on <a href="https://www.netlify.com">Netlify</a>.</p>
 </div>

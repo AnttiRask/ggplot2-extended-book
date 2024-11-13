@@ -7,9 +7,9 @@
 source("warning.R")
 ```
 
-## Add P-Values
+## Add p-values
 
-## Annotate Areas with…
+## Annotate areas with…
 
 ### Circles
 
@@ -19,26 +19,26 @@ source("warning.R")
 
 ### Rectangles
 
-## Curved Text Labeling
+## Curved text labeling
 
-## Direct Labeling
+## Direct labeling
 
-## Fitted-Model-Based Annotations
+## Fitted-model-based annotations
 
-## Highlight Geoms
+## Highlighting geoms
 
-## Highlighting Points
+## Highlighting points
 
-## Inset Plots
+## Inset plots
 
-## Inset Tables
+## Inset tables
 
-## Repel Overlapping Text & Labels
+## Repel overlapping text & labels
 
 ### Label
 
 ### Text
 
-## Shadow Text
+## Shadow text
 
-## Significance Brackets
+## Significance brackets

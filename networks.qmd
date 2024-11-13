@@ -7,14 +7,14 @@
 source("warning.R")
 ```
 
-## Alluvial Plot
+## Alluvial plot
 
 ## Flowchart
 
 ## Networks
 
-## Sankey Diagram
+## Sankey
 
-### Sankey Diagram
+### Sankey diagram
 
-### Sankey Bump Plot
+### Sankey bump Plot

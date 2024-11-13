@@ -1,4 +1,4 @@
-# Case Studies {#sec-case-studies-intro .unnumbered}
+# Case studies {#sec-case-studies-intro .unnumbered}
 
 ```{r}
 #| echo: false

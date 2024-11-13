@@ -5,7 +5,7 @@
 <meta name="generator" content="quarto-1.4.555">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Antti Rask">
-<title>ggplot2 extended - 6&nbsp; Scales and Guides</title>
+<title>ggplot2 extended - 6&nbsp; Scales and guides</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -73,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./layers.html">Layers</a></li><li class="breadcrumb-item"><a href="./scales_and_guides.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Scales and Guides</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./layers.html">Layers</a></li><li class="breadcrumb-item"><a href="./scales_and_guides.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Scales and guides</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -122,8 +122,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./the_basics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The Basics</span></a>
+            <a href="./basics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Basics</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -173,7 +173,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./scales_and_guides.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Scales and Guides</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Scales and guides</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -199,7 +199,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./special_cases.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Special Cases</span></a>
+ <span class="menu-text">Special cases</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -220,13 +220,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./interactive_plots.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Interactive Plots</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Interactive plots</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./animation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Animation</span></span></a>
+  <a href="./animated-plots.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Animated plots</span></span></a>
   </div>
 </li>
       </ul>
@@ -249,7 +249,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./interactive_tools.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Interactive Tools</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Interactive tools</span></span></a>
   </div>
 </li>
       </ul>
@@ -257,7 +257,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./getting_ready_to_publish.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Getting Ready to Publish</span></a>
+ <span class="menu-text">Getting ready to publish</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -266,13 +266,13 @@ ul.task-list li input[type="checkbox"] {
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./finishing_touches.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Finishing Touches</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Finishing touches</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./arranging_plots.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Arranging Plots</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Arranging plots</span></span></a>
   </div>
 </li>
       </ul>
@@ -296,7 +296,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">Case Studies</span></span>
+ <span class="menu-text">Case studies</span></span>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
@@ -313,28 +313,28 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
 <li>
-<a href="#color-scales" id="toc-color-scales" class="nav-link active" data-scroll-target="#color-scales"><span class="header-section-number">6.1</span> Color Scales</a>
+<a href="#color-scales" id="toc-color-scales" class="nav-link active" data-scroll-target="#color-scales"><span class="header-section-number">6.1</span> Color scales</a>
   <ul class="collapse">
 <li><a href="#paletteer" id="toc-paletteer" class="nav-link" data-scroll-target="#paletteer"><span class="header-section-number">6.1.1</span> paletteer</a></li>
   <li><a href="#see" id="toc-see" class="nav-link" data-scroll-target="#see"><span class="header-section-number">6.1.2</span> see</a></li>
-  <li><a href="#r-color-palette-finder" id="toc-r-color-palette-finder" class="nav-link" data-scroll-target="#r-color-palette-finder"><span class="header-section-number">6.1.3</span> R Color Palette Finder</a></li>
+  <li><a href="#r-color-palette-finder" id="toc-r-color-palette-finder" class="nav-link" data-scroll-target="#r-color-palette-finder"><span class="header-section-number">6.1.3</span> R color palette finder</a></li>
   </ul>
 </li>
   <li>
-<a href="#color-blindness" id="toc-color-blindness" class="nav-link" data-scroll-target="#color-blindness"><span class="header-section-number">6.2</span> Color Blindness</a>
+<a href="#color-blindness" id="toc-color-blindness" class="nav-link" data-scroll-target="#color-blindness"><span class="header-section-number">6.2</span> Color blindness</a>
   <ul class="collapse">
-<li><a href="#color-vision-deficiency-simulator" id="toc-color-vision-deficiency-simulator" class="nav-link" data-scroll-target="#color-vision-deficiency-simulator"><span class="header-section-number">6.2.1</span> Color Vision Deficiency Simulator</a></li>
+<li><a href="#color-vision-deficiency-simulator" id="toc-color-vision-deficiency-simulator" class="nav-link" data-scroll-target="#color-vision-deficiency-simulator"><span class="header-section-number">6.2.1</span> Color vision deficiency simulator</a></li>
   </ul>
 </li>
-  <li><a href="#cyclical-scales" id="toc-cyclical-scales" class="nav-link" data-scroll-target="#cyclical-scales"><span class="header-section-number">6.3</span> Cyclical Scales</a></li>
-  <li><a href="#focus-scales" id="toc-focus-scales" class="nav-link" data-scroll-target="#focus-scales"><span class="header-section-number">6.4</span> Focus Scales</a></li>
-  <li><a href="#multiple-scales" id="toc-multiple-scales" class="nav-link" data-scroll-target="#multiple-scales"><span class="header-section-number">6.5</span> Multiple Scales</a></li>
-  <li><a href="#wrap-plot" id="toc-wrap-plot" class="nav-link" data-scroll-target="#wrap-plot"><span class="header-section-number">6.6</span> Wrap Plot</a></li>
+  <li><a href="#cyclical-scales" id="toc-cyclical-scales" class="nav-link" data-scroll-target="#cyclical-scales"><span class="header-section-number">6.3</span> Cyclical scales</a></li>
+  <li><a href="#focus-scales" id="toc-focus-scales" class="nav-link" data-scroll-target="#focus-scales"><span class="header-section-number">6.4</span> Focus scales</a></li>
+  <li><a href="#multiple-scales" id="toc-multiple-scales" class="nav-link" data-scroll-target="#multiple-scales"><span class="header-section-number">6.5</span> Multiple scales</a></li>
+  <li><a href="#wrap-plot" id="toc-wrap-plot" class="nav-link" data-scroll-target="#wrap-plot"><span class="header-section-number">6.6</span> Wrap plot</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/edit/main/scales_and_guides.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./layers.html">Layers</a></li><li class="breadcrumb-item"><a href="./scales_and_guides.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Scales and Guides</span></a></li></ol></nav><div class="quarto-title">
-<h1 class="title"><span id="sec-scales-and-guides" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Scales and Guides</span></span></h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./layers.html">Layers</a></li><li class="breadcrumb-item"><a href="./scales_and_guides.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Scales and guides</span></a></li></ol></nav><div class="quarto-title">
+<h1 class="title"><span id="sec-scales-and-guides" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Scales and guides</span></span></h1>
 </div>
 
 
@@ -362,25 +362,25 @@ This book/site is under construction
 </div>
 </div>
 <section id="color-scales" class="level2" data-number="6.1"><h2 data-number="6.1" class="anchored" data-anchor-id="color-scales">
-<span class="header-section-number">6.1</span> Color Scales</h2>
+<span class="header-section-number">6.1</span> Color scales</h2>
 <section id="paletteer" class="level3" data-number="6.1.1"><h3 data-number="6.1.1" class="anchored" data-anchor-id="paletteer">
 <span class="header-section-number">6.1.1</span> paletteer</h3>
 </section><section id="see" class="level3" data-number="6.1.2"><h3 data-number="6.1.2" class="anchored" data-anchor-id="see">
 <span class="header-section-number">6.1.2</span> see</h3>
 </section><section id="r-color-palette-finder" class="level3" data-number="6.1.3"><h3 data-number="6.1.3" class="anchored" data-anchor-id="r-color-palette-finder">
-<span class="header-section-number">6.1.3</span> R Color Palette Finder</h3>
+<span class="header-section-number">6.1.3</span> R color palette finder</h3>
 </section></section><section id="color-blindness" class="level2" data-number="6.2"><h2 data-number="6.2" class="anchored" data-anchor-id="color-blindness">
-<span class="header-section-number">6.2</span> Color Blindness</h2>
+<span class="header-section-number">6.2</span> Color blindness</h2>
 <section id="color-vision-deficiency-simulator" class="level3" data-number="6.2.1"><h3 data-number="6.2.1" class="anchored" data-anchor-id="color-vision-deficiency-simulator">
-<span class="header-section-number">6.2.1</span> Color Vision Deficiency Simulator</h3>
+<span class="header-section-number">6.2.1</span> Color vision deficiency simulator</h3>
 </section></section><section id="cyclical-scales" class="level2" data-number="6.3"><h2 data-number="6.3" class="anchored" data-anchor-id="cyclical-scales">
-<span class="header-section-number">6.3</span> Cyclical Scales</h2>
+<span class="header-section-number">6.3</span> Cyclical scales</h2>
 </section><section id="focus-scales" class="level2" data-number="6.4"><h2 data-number="6.4" class="anchored" data-anchor-id="focus-scales">
-<span class="header-section-number">6.4</span> Focus Scales</h2>
+<span class="header-section-number">6.4</span> Focus scales</h2>
 </section><section id="multiple-scales" class="level2" data-number="6.5"><h2 data-number="6.5" class="anchored" data-anchor-id="multiple-scales">
-<span class="header-section-number">6.5</span> Multiple Scales</h2>
+<span class="header-section-number">6.5</span> Multiple scales</h2>
 </section><section id="wrap-plot" class="level2" data-number="6.6"><h2 data-number="6.6" class="anchored" data-anchor-id="wrap-plot">
-<span class="header-section-number">6.6</span> Wrap Plot</h2>
+<span class="header-section-number">6.6</span> Wrap plot</h2>
 
 
 </section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">

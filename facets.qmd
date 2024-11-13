@@ -7,20 +7,20 @@
 source("warning.R")
 ```
 
-## Facet by Different Data Columns
+## Facet by different data columns
 
-## Facet Calendar
+## Facet calendar
 
-## Facet Data for Zoom with Context
+## Facet data for zoom with context
 
-## Facet Wrap (Improved)
+## Facet wrap (improved)
 
-## Manual Facets
+## Manual facets
 
-## Nested Facets
+## Nested facets
 
-## One-Dimensional Facets
+## One-dimensional facets
 
-## Ragged Grids
+## Ragged grids
 
-## Split a Facetted Plot Over Multiple Pages
+## Split a facetted plot over multiple pages

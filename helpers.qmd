@@ -7,8 +7,8 @@
 source("warning.R")
 ```
 
-## Combining Layers
+## Combining layers
 
-## Debugging ggplot2 Internals
+## Debugging ggplot2 internals
 
-## I'm Feeling Lucky!
+## I'm feeling lucky!

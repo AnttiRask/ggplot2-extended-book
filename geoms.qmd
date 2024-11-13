@@ -7,33 +7,33 @@
 source("warning.R")
 ```
 
-## Area Plots
+## Area plots
 
-### Horizon Chart
+### Horizon chart
 
-### Ribbon Plot (Improved)
+### Ribbon plot (improved)
 
 ### Streamgraph
 
-## Bar Charts
+## Bar charts
 
-### Likert Plot
+### Likert plot
 
-### Mosaic Plot
+### Mosaic plot
 
-## Density Plots
+## Density plots
 
-### Raincloud Plot
+### Raincloud plot
 
-### Ridgeline Plot
+### Ridgeline plot
 
-## Geometric Shapes
+## Geometric shapes
 
 ### Arc
 
-### B-spline Curve
+### B-spline curve
 
-### Bézier Curve
+### Bézier curve
 
 ### Circle
 
@@ -41,54 +41,54 @@ source("warning.R")
 
 ## Heatmaps
 
-### Calendar Heatmap
+### Calendar heatmap
 
-## Intersection Plots
+## Intersection plots
 
-### Upset Plot
+### Upset plot
 
-### Venn Diagram
+### Venn diagram
 
-## Line Charts
+## Line charts
 
-### Bump Chart
+### Bump chart
 
-### Dumbbell and Lollipop Plot
+### Dumbbell and lollipop plot
 
-### Line Chart with Neon Glow or Shadow Effects
+### Line chart with neon glow or shadow effects
 
-### Slope Chart
+### Slope chart
 
-## Multivariate Graphs
+## Multivariate graphs
 
-### Parallel Coordinates Plot (Improved)
+### Parallel coordinates plot (improved)
 
-### Radar Chart
+### Radar chart
 
-## Pie Charts
+## Pie charts
 
-### Pie Chart (Improved)
+### Pie chart (improved)
 
-### Moon Chart
+### Moon chart
 
-### Square Chart / Waffle Chart
+### Square chart / waffle chart
 
-## Scatter Plots
+## Scatter plots
 
-### Beeswarm Plot
+### Beeswarm plot
 
-### Point Density Plot
+### Point density plot
 
-## Text Visualization
+## Text visualization
 
-### Page Layout Visualization
+### Page layout visualization
 
-### Word Cloud
+### Word cloud
 
-## Tree-based Graphs
+## Tree-based graphs
 
 ### Dendrogram
 
 ### Treemap
 
-### Voronoi Diagram
+### Voronoi diagram

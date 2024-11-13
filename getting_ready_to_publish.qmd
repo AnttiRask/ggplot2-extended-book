@@ -1,4 +1,4 @@
-# Getting Ready to Publish {#sec-getting-ready-to-publish-intro .unnumbered}
+# Getting ready to publish {#sec-getting-ready-to-publish-intro .unnumbered}
 
 ```{r}
 #| echo: false

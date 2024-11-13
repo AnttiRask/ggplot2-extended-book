@@ -7,18 +7,18 @@
 source("warning.R")
 ```
 
-## 3D Maps
+## 3D maps
 
 ## Geofaceting
 
-## North Symbols and Scale Bars
+## North symbols and scale bars
 
-## Parliament Plot
+## Parliament plot
 
-## Stamen Maps
+## Stamen maps
 
-## Tidy Map
+## Tidy map
 
-## Zoomed Inset Panels
+## Zoomed inset panels
 
-## Interactive Maps
+## Interactive maps

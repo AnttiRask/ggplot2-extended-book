@@ -1,4 +1,4 @@
-# Animation {#sec-animation}
+# Animated plots {#sec-animated-plots}
 
 ```{r}
 #| echo: false
@@ -9,4 +9,4 @@ source("warning.R")
 
 ## Animation
 
-## Creating a GIF
+## GIF

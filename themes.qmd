@@ -7,16 +7,16 @@
 source("warning.R")
 ```
 
-## Complete Themes
+## Complete themes
 
-## Dark Themes
+## Dark themes
 
-## GraphPad Prism
+## GraphPad prism
 
-## Theme Elements
+## Theme elements
 
-### Element Markdown
+### Element markdown
 
-## Typography-Centric Themes
+## Typography-centric themes
 
-## Using Extra Fonts
+## Using extra fonts

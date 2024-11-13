@@ -1,4 +1,4 @@
-# Scales and Guides {#sec-scales-and-guides}
+# Scales and guides {#sec-scales-and-guides}
 
 ```{r}
 #| echo: false
@@ -7,22 +7,22 @@
 source("warning.R")
 ```
 
-## Color Scales
+## Color scales
 
 ### paletteer
 
 ### see
 
-### R Color Palette Finder
+### R color palette finder
 
-## Color Blindness
+## Color blindness
 
-### Color Vision Deficiency Simulator
+### Color vision deficiency simulator
 
-## Cyclical Scales
+## Cyclical scales
 
-## Focus Scales
+## Focus scales
 
-## Multiple Scales
+## Multiple scales
 
-## Wrap Plot
+## Wrap plot

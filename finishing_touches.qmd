@@ -1,4 +1,4 @@
-# Finishing Touches {#sec-finishing-touches}
+# Finishing touches {#sec-finishing-touches}
 
 ```{r}
 #| echo: false
@@ -7,14 +7,14 @@
 source("warning.R")
 ```
 
-## Blending, Copying, Adjusting, and Compositing Layers
+## Blending, copying, adjusting, and compositing layers
 
-## Color Manipulation
+## Color manipulation
 
-## Magnified Inset
+## Magnified inset
 
-## Point Shapes (Improved)
+## Point shapes (improved)
 
-## Save Incremental Builds of Plots
+## Save incremental builds of plots
 
-## Shadow Effect
+## Shadow effect

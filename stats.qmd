@@ -7,60 +7,60 @@
 source("warning.R")
 ```
 
-## Combining Data Visualization and Statistical Modeling
+## Combining data visualization and statistical modeling
 
-## Convex Hull
+## Convex hull
 
-## Inferential Statistical Tests
+## Inferential statistical tests
 
 ### F-test
 
-### Pearson's Chi-Squared Test
+### Pearson's Chi-squared test
 
-### Test for Association Between Paired Samples
+### Test for association between paired samples
 
-### Test of Equal or Given Proportions
+### Test of equal or given proportions
 
 ### T-test
 
-## Interaction Plot
+## Interaction plot
 
 ### CGPfunctions
 
-## Linear Regression
+## Linear regression
 
-### Diagnostic Plots
+### Diagnostic plots
 
-### Regression Line Equation and R-Square
+### Regression line equation and R-square
 
 ## Lorenz Curve
 
-## Markov Chain Monte Carlo
+## Markov chain Monte Carlo
 
-## Multi-Stat Binning Layer
+## Multi-stat binning layer
 
-## Overlay Normal Density Plot
+## Overlay normal density plot
 
-## P-Values
+## P-values
 
-## P-P Plot
+## P-P plot
 
-## Q-Q Plot
+## Q-Q plot
 
-## Quality Control Chart
+## Quality control chart
 
-## Proportions According to Custom Denominator
+## Proportions according to custom denominator
 
-## Random Forests
+## Random rorests
 
-## ROC Curves
+## ROC curves
 
-## Sample Data and Distribution Vectors
+## Sample data and distribution vectors
 
-## Seasonal Adjustment
+## Seasonal adjustment
 
-## Statistics for Reporting the Results of Model Fits
+## Statistics for reporting the results of model fits
 
-## Survival Analysis
+## Survival analysis
 
-## Tornado Plot
+## Tornado plot
