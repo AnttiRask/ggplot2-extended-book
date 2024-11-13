@@ -1,12 +1,12 @@
 # Welcome {.unnumbered}
 
-This is the website for my book **ggplot2 extended**. It is about extending the functionality of the __[ggplot2](https://ggplot2.tidyverse.org/)__ R package by **Hadley Wickham**. Many extension packages have come out since the release of __ggplot2__. This book is about how to use them to make the most out of the whole __ggplot2__ ecosystem. And which of the many extensions to use in the first place.
+This is the website for my book **ggplot2 extended**. It is about extending the functionality of the [**ggplot2**](https://ggplot2.tidyverse.org/) R package by **Hadley Wickham**. Many extension packages have come out since the release of **ggplot2**. This book is about how to use them to make the most out of the whole **ggplot2** ecosystem. And which of the many extensions to use in the first place.
 
-I will go through the very basics of how ggplot2 works in [@sec-ggplot2]. However, this book assumes some basic understanding of R and __ggplot2__.
+I will go through the very basics of how ggplot2 works in [@sec-ggplot2]. However, this book assumes some basic understanding of R and **ggplot2**.
 
-If you're just starting with R, **R for Data Science** [@wickham2023a] is a good first stop. The book even contains [three chapters](https://r4ds.hadley.nz/visualize) on visualizing data with __ggplot2__.
+If you're just starting with R, **R for Data Science** [@wickham2023a] is a good first stop. The book even contains [three chapters](https://r4ds.hadley.nz/visualize) on visualizing data with **ggplot2**.
 
-For a comprehensive look into __ggplot2__ and _the grammar of graphics_ I would suggest Hadley’s book **ggplot2: Elegant Graphics for Data Analysis** [@wickham2016]. You can find the work-in-progress 3rd edition [online](https://ggplot2-book.org/).
+For a comprehensive look into **ggplot2** and *the grammar of graphics* I would suggest Hadley’s book **ggplot2: Elegant Graphics for Data Analysis** [@wickham2016]. You can find the work-in-progress 3rd edition [online](https://ggplot2-book.org/).
 
 This website is and will always be free, licensed under the [CC BY-NC-ND 4.0 DEED license](https://creativecommons.org/licenses/by-nc-nd/4.0/). Once the whole book has been written, there will hopefully be a physical copy of the book available. Stay tuned!
 

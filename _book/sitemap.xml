@@ -2,95 +2,95 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://https://ggplot2-extended-book.com/index.html</loc>
-    <lastmod>2024-11-12T17:38:31.103Z</lastmod>
+    <lastmod>2024-11-13T10:48:52.021Z</lastmod>
   </url>
   <url>
     <loc>https://https://ggplot2-extended-book.com/preface.html</loc>
-    <lastmod>2024-11-12T12:24:31.222Z</lastmod>
+    <lastmod>2024-11-13T10:50:44.319Z</lastmod>
   </url>
   <url>
     <loc>https://https://ggplot2-extended-book.com/layers.html</loc>
-    <lastmod>2024-11-13T08:59:33.897Z</lastmod>
+    <lastmod>2024-11-13T10:49:22.039Z</lastmod>
   </url>
   <url>
     <loc>https://https://ggplot2-extended-book.com/data.html</loc>
-    <lastmod>2024-11-12T12:36:58.654Z</lastmod>
+    <lastmod>2024-11-13T10:47:32.746Z</lastmod>
   </url>
   <url>
     <loc>https://https://ggplot2-extended-book.com/geoms.html</loc>
-    <lastmod>2024-11-03T00:48:04.130Z</lastmod>
+    <lastmod>2024-11-13T10:48:07.586Z</lastmod>
   </url>
   <url>
     <loc>https://https://ggplot2-extended-book.com/stats.html</loc>
-    <lastmod>2024-11-03T00:46:52.478Z</lastmod>
+    <lastmod>2024-11-13T10:45:42.682Z</lastmod>
   </url>
   <url>
     <loc>https://https://ggplot2-extended-book.com/annotations.html</loc>
-    <lastmod>2024-11-03T00:49:40.478Z</lastmod>
+    <lastmod>2024-11-13T10:46:24.093Z</lastmod>
   </url>
   <url>
     <loc>https://https://ggplot2-extended-book.com/scales_and_guides.html</loc>
-    <lastmod>2024-11-03T00:51:13.202Z</lastmod>
+    <lastmod>2024-11-13T10:44:45.098Z</lastmod>
   </url>
   <url>
     <loc>https://https://ggplot2-extended-book.com/coords.html</loc>
-    <lastmod>2024-11-03T00:52:24.367Z</lastmod>
+    <lastmod>2024-11-13T10:47:10.881Z</lastmod>
   </url>
   <url>
     <loc>https://https://ggplot2-extended-book.com/facets.html</loc>
-    <lastmod>2024-11-03T00:53:31.779Z</lastmod>
+    <lastmod>2024-11-13T10:47:42.174Z</lastmod>
   </url>
   <url>
     <loc>https://https://ggplot2-extended-book.com/themes.html</loc>
-    <lastmod>2024-11-03T00:56:15.147Z</lastmod>
+    <lastmod>2024-11-13T10:45:50.865Z</lastmod>
   </url>
   <url>
     <loc>https://https://ggplot2-extended-book.com/special_cases.html</loc>
-    <lastmod>2024-11-13T08:59:55.999Z</lastmod>
+    <lastmod>2024-11-13T10:45:11.135Z</lastmod>
   </url>
   <url>
     <loc>https://https://ggplot2-extended-book.com/maps.html</loc>
-    <lastmod>2024-11-03T00:56:13.310Z</lastmod>
+    <lastmod>2024-11-13T10:49:32.219Z</lastmod>
   </url>
   <url>
     <loc>https://https://ggplot2-extended-book.com/networks.html</loc>
-    <lastmod>2024-11-03T00:56:10.623Z</lastmod>
+    <lastmod>2024-11-13T10:49:42.005Z</lastmod>
   </url>
   <url>
     <loc>https://https://ggplot2-extended-book.com/interactive_plots.html</loc>
-    <lastmod>2024-11-03T00:56:08.920Z</lastmod>
+    <lastmod>2024-11-13T10:49:03.210Z</lastmod>
   </url>
   <url>
     <loc>https://https://ggplot2-extended-book.com/animation.html</loc>
-    <lastmod>2024-11-03T00:56:06.385Z</lastmod>
+    <lastmod>2024-11-13T10:46:10.885Z</lastmod>
   </url>
   <url>
     <loc>https://https://ggplot2-extended-book.com/shortcuts.html</loc>
-    <lastmod>2024-11-03T00:18:47.879Z</lastmod>
+    <lastmod>2024-11-13T10:44:53.562Z</lastmod>
   </url>
   <url>
     <loc>https://https://ggplot2-extended-book.com/helpers.html</loc>
-    <lastmod>2024-11-03T00:56:35.284Z</lastmod>
+    <lastmod>2024-11-13T10:48:42.456Z</lastmod>
   </url>
   <url>
     <loc>https://https://ggplot2-extended-book.com/interactive_tools.html</loc>
-    <lastmod>2024-11-03T00:56:52.443Z</lastmod>
+    <lastmod>2024-11-13T10:49:10.921Z</lastmod>
   </url>
   <url>
     <loc>https://https://ggplot2-extended-book.com/getting_ready_to_publish.html</loc>
-    <lastmod>2023-11-09T12:23:27.066Z</lastmod>
+    <lastmod>2024-11-13T10:48:14.488Z</lastmod>
   </url>
   <url>
     <loc>https://https://ggplot2-extended-book.com/finishing_touches.html</loc>
-    <lastmod>2024-11-03T00:57:16.022Z</lastmod>
+    <lastmod>2024-11-13T10:47:51.676Z</lastmod>
   </url>
   <url>
     <loc>https://https://ggplot2-extended-book.com/arranging_plots.html</loc>
-    <lastmod>2024-11-03T00:57:29.977Z</lastmod>
+    <lastmod>2024-11-13T10:46:31.482Z</lastmod>
   </url>
   <url>
     <loc>https://https://ggplot2-extended-book.com/beyond_r.html</loc>
-    <lastmod>2023-11-09T12:23:27.251Z</lastmod>
+    <lastmod>2024-11-13T10:46:40.186Z</lastmod>
   </url>
   <url>
     <loc>https://https://ggplot2-extended-book.com/bi_tools.html</loc>
@@ -102,11 +102,11 @@
   </url>
   <url>
     <loc>https://https://ggplot2-extended-book.com/python.html</loc>
-    <lastmod>2024-11-03T00:40:54.383Z</lastmod>
+    <lastmod>2024-11-13T10:50:04.023Z</lastmod>
   </url>
   <url>
     <loc>https://https://ggplot2-extended-book.com/case_studies.html</loc>
-    <lastmod>2023-11-09T12:23:27.378Z</lastmod>
+    <lastmod>2024-11-13T10:46:53.824Z</lastmod>
   </url>
   <url>
     <loc>https://https://ggplot2-extended-book.com/getting_started.html</loc>
@@ -114,7 +114,7 @@
   </url>
   <url>
     <loc>https://https://ggplot2-extended-book.com/ggplot2.html</loc>
-    <lastmod>2023-11-09T11:57:27.476Z</lastmod>
+    <lastmod>2024-11-13T10:48:34.578Z</lastmod>
   </url>
   <url>
     <loc>https://https://ggplot2-extended-book.com/installing_packages.html</loc>
@@ -122,7 +122,7 @@
   </url>
   <url>
     <loc>https://https://ggplot2-extended-book.com/references.html</loc>
-    <lastmod>2024-11-03T01:02:41.324Z</lastmod>
+    <lastmod>2024-11-13T10:44:33.928Z</lastmod>
   </url>
   <url>
     <loc>https://https://ggplot2-extended-book.com/introduction.html</loc>
@@ -130,6 +130,6 @@
   </url>
   <url>
     <loc>https://https://ggplot2-extended-book.com/the_basics.html</loc>
-    <lastmod>2024-11-13T08:59:41.944Z</lastmod>
+    <lastmod>2024-11-13T10:48:23.938Z</lastmod>
   </url>
 </urlset>

@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.4.555">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Antti Rask">
-
-<title>ggplot2 extended - 4&nbsp; Geoms</title>
+<title>ggplot2 extended - 3&nbsp; Geoms</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,7 +19,6 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 </style>
-
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
@@ -42,8 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -69,35 +64,25 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-<script data-goatcounter="https://ggplot2-extended-book.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
-
-
+}</script><script data-goatcounter="https://ggplot2-extended-book.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
 </head>
-
 <body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./layers.html">Layers</a></li><li class="breadcrumb-item"><a href="./geoms.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Geoms</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./layers.html">Layers</a></li><li class="breadcrumb-item"><a href="./geoms.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Geoms</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">ggplot2 extended</a> 
         <div class="sidebar-tools-main">
@@ -117,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Welcome</span></a>
@@ -137,27 +122,21 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./getting_started.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Getting Started</span></a>
+            <a href="./the_basics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Basics</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ggplot2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">ggplot2</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./installing_packages.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Installing Packages</span></span></a>
-  </div>
-</li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./layers.html" class="sidebar-item-text sidebar-link">
@@ -166,57 +145,57 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./geoms.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Geoms</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Geoms</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./stats.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Stats</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Stats</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./annotations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Annotations</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Annotations</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./scales_and_guides.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Scales and Guides</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Scales and Guides</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./coords.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Coords</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Coords</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./facets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Facets</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Facets</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./themes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Themes</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Themes</span></span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./special_cases.html" class="sidebar-item-text sidebar-link">
@@ -225,33 +204,33 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./maps.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Maps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Maps</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./networks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Networks</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Networks</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./interactive_plots.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Interactive Plots</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Interactive Plots</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./animation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Animation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Animation</span></span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./shortcuts.html" class="sidebar-item-text sidebar-link">
@@ -260,21 +239,21 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./helpers.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Helpers</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Helpers</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./interactive_tools.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Interactive Tools</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Interactive Tools</span></span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./getting_ready_to_publish.html" class="sidebar-item-text sidebar-link">
@@ -283,21 +262,21 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./finishing_touches.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Finishing Touches</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Finishing Touches</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./arranging_plots.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Arranging Plots</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Arranging Plots</span></span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./beyond_r.html" class="sidebar-item-text sidebar-link">
@@ -306,27 +285,15 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./bi_tools.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">BI Tools</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./large_language_models.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Large Language Models</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./python.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Python</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Python</span></span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <span class="sidebar-item-text sidebar-link text-start">
  <span class="menu-text">Case Studies</span></span>
@@ -338,91 +305,109 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#area-plots" id="toc-area-plots" class="nav-link active" data-scroll-target="#area-plots"><span class="header-section-number">4.1</span> Area Plots</a>
+<li>
+<a href="#area-plots" id="toc-area-plots" class="nav-link active" data-scroll-target="#area-plots"><span class="header-section-number">3.1</span> Area Plots</a>
   <ul class="collapse">
-  <li><a href="#horizon-chart" id="toc-horizon-chart" class="nav-link" data-scroll-target="#horizon-chart"><span class="header-section-number">4.1.1</span> Horizon Chart</a></li>
-  <li><a href="#ribbon-plot-improved" id="toc-ribbon-plot-improved" class="nav-link" data-scroll-target="#ribbon-plot-improved"><span class="header-section-number">4.1.2</span> Ribbon Plot (Improved)</a></li>
-  <li><a href="#streamgraph" id="toc-streamgraph" class="nav-link" data-scroll-target="#streamgraph"><span class="header-section-number">4.1.3</span> Streamgraph</a></li>
-  </ul></li>
-  <li><a href="#bar-charts" id="toc-bar-charts" class="nav-link" data-scroll-target="#bar-charts"><span class="header-section-number">4.2</span> Bar Charts</a>
-  <ul class="collapse">
-  <li><a href="#likert-plot" id="toc-likert-plot" class="nav-link" data-scroll-target="#likert-plot"><span class="header-section-number">4.2.1</span> Likert Plot</a></li>
-  <li><a href="#mosaic-plot" id="toc-mosaic-plot" class="nav-link" data-scroll-target="#mosaic-plot"><span class="header-section-number">4.2.2</span> Mosaic Plot</a></li>
-  </ul></li>
-  <li><a href="#density-plots" id="toc-density-plots" class="nav-link" data-scroll-target="#density-plots"><span class="header-section-number">4.3</span> Density Plots</a>
-  <ul class="collapse">
-  <li><a href="#raincloud-plot" id="toc-raincloud-plot" class="nav-link" data-scroll-target="#raincloud-plot"><span class="header-section-number">4.3.1</span> Raincloud Plot</a></li>
-  <li><a href="#ridgeline-plot" id="toc-ridgeline-plot" class="nav-link" data-scroll-target="#ridgeline-plot"><span class="header-section-number">4.3.2</span> Ridgeline Plot</a></li>
-  </ul></li>
-  <li><a href="#geometric-shapes" id="toc-geometric-shapes" class="nav-link" data-scroll-target="#geometric-shapes"><span class="header-section-number">4.4</span> Geometric Shapes</a>
-  <ul class="collapse">
-  <li><a href="#arc" id="toc-arc" class="nav-link" data-scroll-target="#arc"><span class="header-section-number">4.4.1</span> Arc</a></li>
-  <li><a href="#b-spline-curve" id="toc-b-spline-curve" class="nav-link" data-scroll-target="#b-spline-curve"><span class="header-section-number">4.4.2</span> B-spline Curve</a></li>
-  <li><a href="#bézier-curve" id="toc-bézier-curve" class="nav-link" data-scroll-target="#bézier-curve"><span class="header-section-number">4.4.3</span> Bézier Curve</a></li>
-  <li><a href="#circle" id="toc-circle" class="nav-link" data-scroll-target="#circle"><span class="header-section-number">4.4.4</span> Circle</a></li>
-  <li><a href="#ellipse" id="toc-ellipse" class="nav-link" data-scroll-target="#ellipse"><span class="header-section-number">4.4.5</span> Ellipse</a></li>
-  </ul></li>
-  <li><a href="#heatmaps" id="toc-heatmaps" class="nav-link" data-scroll-target="#heatmaps"><span class="header-section-number">4.5</span> Heatmaps</a>
-  <ul class="collapse">
-  <li><a href="#calendar-heatmap" id="toc-calendar-heatmap" class="nav-link" data-scroll-target="#calendar-heatmap"><span class="header-section-number">4.5.1</span> Calendar Heatmap</a></li>
-  </ul></li>
-  <li><a href="#intersection-plots" id="toc-intersection-plots" class="nav-link" data-scroll-target="#intersection-plots"><span class="header-section-number">4.6</span> Intersection Plots</a>
-  <ul class="collapse">
-  <li><a href="#upset-plot" id="toc-upset-plot" class="nav-link" data-scroll-target="#upset-plot"><span class="header-section-number">4.6.1</span> Upset Plot</a></li>
-  <li><a href="#venn-diagram" id="toc-venn-diagram" class="nav-link" data-scroll-target="#venn-diagram"><span class="header-section-number">4.6.2</span> Venn Diagram</a></li>
-  </ul></li>
-  <li><a href="#line-charts" id="toc-line-charts" class="nav-link" data-scroll-target="#line-charts"><span class="header-section-number">4.7</span> Line Charts</a>
-  <ul class="collapse">
-  <li><a href="#bump-chart" id="toc-bump-chart" class="nav-link" data-scroll-target="#bump-chart"><span class="header-section-number">4.7.1</span> Bump Chart</a></li>
-  <li><a href="#dumbbell-and-lollipop-plot" id="toc-dumbbell-and-lollipop-plot" class="nav-link" data-scroll-target="#dumbbell-and-lollipop-plot"><span class="header-section-number">4.7.2</span> Dumbbell and Lollipop Plot</a></li>
-  <li><a href="#line-chart-with-neon-glow-or-shadow-effects" id="toc-line-chart-with-neon-glow-or-shadow-effects" class="nav-link" data-scroll-target="#line-chart-with-neon-glow-or-shadow-effects"><span class="header-section-number">4.7.3</span> Line Chart with Neon Glow or Shadow Effects</a></li>
-  <li><a href="#slope-chart" id="toc-slope-chart" class="nav-link" data-scroll-target="#slope-chart"><span class="header-section-number">4.7.4</span> Slope Chart</a></li>
-  </ul></li>
-  <li><a href="#multivariate-graphs" id="toc-multivariate-graphs" class="nav-link" data-scroll-target="#multivariate-graphs"><span class="header-section-number">4.8</span> Multivariate Graphs</a>
-  <ul class="collapse">
-  <li><a href="#parallel-coordinates-plot-improved" id="toc-parallel-coordinates-plot-improved" class="nav-link" data-scroll-target="#parallel-coordinates-plot-improved"><span class="header-section-number">4.8.1</span> Parallel Coordinates Plot (Improved)</a></li>
-  <li><a href="#radar-chart" id="toc-radar-chart" class="nav-link" data-scroll-target="#radar-chart"><span class="header-section-number">4.8.2</span> Radar Chart</a></li>
-  </ul></li>
-  <li><a href="#pie-charts" id="toc-pie-charts" class="nav-link" data-scroll-target="#pie-charts"><span class="header-section-number">4.9</span> Pie Charts</a>
-  <ul class="collapse">
-  <li><a href="#pie-chart-improved" id="toc-pie-chart-improved" class="nav-link" data-scroll-target="#pie-chart-improved"><span class="header-section-number">4.9.1</span> Pie Chart (Improved)</a></li>
-  <li><a href="#moon-chart" id="toc-moon-chart" class="nav-link" data-scroll-target="#moon-chart"><span class="header-section-number">4.9.2</span> Moon Chart</a></li>
-  <li><a href="#square-chart-waffle-chart" id="toc-square-chart-waffle-chart" class="nav-link" data-scroll-target="#square-chart-waffle-chart"><span class="header-section-number">4.9.3</span> Square Chart / Waffle Chart</a></li>
-  </ul></li>
-  <li><a href="#scatter-plots" id="toc-scatter-plots" class="nav-link" data-scroll-target="#scatter-plots"><span class="header-section-number">4.10</span> Scatter Plots</a>
-  <ul class="collapse">
-  <li><a href="#beeswarm-plot" id="toc-beeswarm-plot" class="nav-link" data-scroll-target="#beeswarm-plot"><span class="header-section-number">4.10.1</span> Beeswarm Plot</a></li>
-  <li><a href="#point-density-plot" id="toc-point-density-plot" class="nav-link" data-scroll-target="#point-density-plot"><span class="header-section-number">4.10.2</span> Point Density Plot</a></li>
-  </ul></li>
-  <li><a href="#text-visualization" id="toc-text-visualization" class="nav-link" data-scroll-target="#text-visualization"><span class="header-section-number">4.11</span> Text Visualization</a>
-  <ul class="collapse">
-  <li><a href="#page-layout-visualization" id="toc-page-layout-visualization" class="nav-link" data-scroll-target="#page-layout-visualization"><span class="header-section-number">4.11.1</span> Page Layout Visualization</a></li>
-  <li><a href="#word-cloud" id="toc-word-cloud" class="nav-link" data-scroll-target="#word-cloud"><span class="header-section-number">4.11.2</span> Word Cloud</a></li>
-  </ul></li>
-  <li><a href="#tree-based-graphs" id="toc-tree-based-graphs" class="nav-link" data-scroll-target="#tree-based-graphs"><span class="header-section-number">4.12</span> Tree-based Graphs</a>
-  <ul class="collapse">
-  <li><a href="#dendrogram" id="toc-dendrogram" class="nav-link" data-scroll-target="#dendrogram"><span class="header-section-number">4.12.1</span> Dendrogram</a></li>
-  <li><a href="#treemap" id="toc-treemap" class="nav-link" data-scroll-target="#treemap"><span class="header-section-number">4.12.2</span> Treemap</a></li>
-  <li><a href="#voronoi-diagram" id="toc-voronoi-diagram" class="nav-link" data-scroll-target="#voronoi-diagram"><span class="header-section-number">4.12.3</span> Voronoi Diagram</a></li>
-  </ul></li>
+<li><a href="#horizon-chart" id="toc-horizon-chart" class="nav-link" data-scroll-target="#horizon-chart"><span class="header-section-number">3.1.1</span> Horizon Chart</a></li>
+  <li><a href="#ribbon-plot-improved" id="toc-ribbon-plot-improved" class="nav-link" data-scroll-target="#ribbon-plot-improved"><span class="header-section-number">3.1.2</span> Ribbon Plot (Improved)</a></li>
+  <li><a href="#streamgraph" id="toc-streamgraph" class="nav-link" data-scroll-target="#streamgraph"><span class="header-section-number">3.1.3</span> Streamgraph</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/edit/main/geoms.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+</li>
+  <li>
+<a href="#bar-charts" id="toc-bar-charts" class="nav-link" data-scroll-target="#bar-charts"><span class="header-section-number">3.2</span> Bar Charts</a>
+  <ul class="collapse">
+<li><a href="#likert-plot" id="toc-likert-plot" class="nav-link" data-scroll-target="#likert-plot"><span class="header-section-number">3.2.1</span> Likert Plot</a></li>
+  <li><a href="#mosaic-plot" id="toc-mosaic-plot" class="nav-link" data-scroll-target="#mosaic-plot"><span class="header-section-number">3.2.2</span> Mosaic Plot</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#density-plots" id="toc-density-plots" class="nav-link" data-scroll-target="#density-plots"><span class="header-section-number">3.3</span> Density Plots</a>
+  <ul class="collapse">
+<li><a href="#raincloud-plot" id="toc-raincloud-plot" class="nav-link" data-scroll-target="#raincloud-plot"><span class="header-section-number">3.3.1</span> Raincloud Plot</a></li>
+  <li><a href="#ridgeline-plot" id="toc-ridgeline-plot" class="nav-link" data-scroll-target="#ridgeline-plot"><span class="header-section-number">3.3.2</span> Ridgeline Plot</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#geometric-shapes" id="toc-geometric-shapes" class="nav-link" data-scroll-target="#geometric-shapes"><span class="header-section-number">3.4</span> Geometric Shapes</a>
+  <ul class="collapse">
+<li><a href="#arc" id="toc-arc" class="nav-link" data-scroll-target="#arc"><span class="header-section-number">3.4.1</span> Arc</a></li>
+  <li><a href="#b-spline-curve" id="toc-b-spline-curve" class="nav-link" data-scroll-target="#b-spline-curve"><span class="header-section-number">3.4.2</span> B-spline Curve</a></li>
+  <li><a href="#b%C3%A9zier-curve" id="toc-bézier-curve" class="nav-link" data-scroll-target="#b%C3%A9zier-curve"><span class="header-section-number">3.4.3</span> Bézier Curve</a></li>
+  <li><a href="#circle" id="toc-circle" class="nav-link" data-scroll-target="#circle"><span class="header-section-number">3.4.4</span> Circle</a></li>
+  <li><a href="#ellipse" id="toc-ellipse" class="nav-link" data-scroll-target="#ellipse"><span class="header-section-number">3.4.5</span> Ellipse</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#heatmaps" id="toc-heatmaps" class="nav-link" data-scroll-target="#heatmaps"><span class="header-section-number">3.5</span> Heatmaps</a>
+  <ul class="collapse">
+<li><a href="#calendar-heatmap" id="toc-calendar-heatmap" class="nav-link" data-scroll-target="#calendar-heatmap"><span class="header-section-number">3.5.1</span> Calendar Heatmap</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#intersection-plots" id="toc-intersection-plots" class="nav-link" data-scroll-target="#intersection-plots"><span class="header-section-number">3.6</span> Intersection Plots</a>
+  <ul class="collapse">
+<li><a href="#upset-plot" id="toc-upset-plot" class="nav-link" data-scroll-target="#upset-plot"><span class="header-section-number">3.6.1</span> Upset Plot</a></li>
+  <li><a href="#venn-diagram" id="toc-venn-diagram" class="nav-link" data-scroll-target="#venn-diagram"><span class="header-section-number">3.6.2</span> Venn Diagram</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#line-charts" id="toc-line-charts" class="nav-link" data-scroll-target="#line-charts"><span class="header-section-number">3.7</span> Line Charts</a>
+  <ul class="collapse">
+<li><a href="#bump-chart" id="toc-bump-chart" class="nav-link" data-scroll-target="#bump-chart"><span class="header-section-number">3.7.1</span> Bump Chart</a></li>
+  <li><a href="#dumbbell-and-lollipop-plot" id="toc-dumbbell-and-lollipop-plot" class="nav-link" data-scroll-target="#dumbbell-and-lollipop-plot"><span class="header-section-number">3.7.2</span> Dumbbell and Lollipop Plot</a></li>
+  <li><a href="#line-chart-with-neon-glow-or-shadow-effects" id="toc-line-chart-with-neon-glow-or-shadow-effects" class="nav-link" data-scroll-target="#line-chart-with-neon-glow-or-shadow-effects"><span class="header-section-number">3.7.3</span> Line Chart with Neon Glow or Shadow Effects</a></li>
+  <li><a href="#slope-chart" id="toc-slope-chart" class="nav-link" data-scroll-target="#slope-chart"><span class="header-section-number">3.7.4</span> Slope Chart</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#multivariate-graphs" id="toc-multivariate-graphs" class="nav-link" data-scroll-target="#multivariate-graphs"><span class="header-section-number">3.8</span> Multivariate Graphs</a>
+  <ul class="collapse">
+<li><a href="#parallel-coordinates-plot-improved" id="toc-parallel-coordinates-plot-improved" class="nav-link" data-scroll-target="#parallel-coordinates-plot-improved"><span class="header-section-number">3.8.1</span> Parallel Coordinates Plot (Improved)</a></li>
+  <li><a href="#radar-chart" id="toc-radar-chart" class="nav-link" data-scroll-target="#radar-chart"><span class="header-section-number">3.8.2</span> Radar Chart</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#pie-charts" id="toc-pie-charts" class="nav-link" data-scroll-target="#pie-charts"><span class="header-section-number">3.9</span> Pie Charts</a>
+  <ul class="collapse">
+<li><a href="#pie-chart-improved" id="toc-pie-chart-improved" class="nav-link" data-scroll-target="#pie-chart-improved"><span class="header-section-number">3.9.1</span> Pie Chart (Improved)</a></li>
+  <li><a href="#moon-chart" id="toc-moon-chart" class="nav-link" data-scroll-target="#moon-chart"><span class="header-section-number">3.9.2</span> Moon Chart</a></li>
+  <li><a href="#square-chart-waffle-chart" id="toc-square-chart-waffle-chart" class="nav-link" data-scroll-target="#square-chart-waffle-chart"><span class="header-section-number">3.9.3</span> Square Chart / Waffle Chart</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#scatter-plots" id="toc-scatter-plots" class="nav-link" data-scroll-target="#scatter-plots"><span class="header-section-number">3.10</span> Scatter Plots</a>
+  <ul class="collapse">
+<li><a href="#beeswarm-plot" id="toc-beeswarm-plot" class="nav-link" data-scroll-target="#beeswarm-plot"><span class="header-section-number">3.10.1</span> Beeswarm Plot</a></li>
+  <li><a href="#point-density-plot" id="toc-point-density-plot" class="nav-link" data-scroll-target="#point-density-plot"><span class="header-section-number">3.10.2</span> Point Density Plot</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#text-visualization" id="toc-text-visualization" class="nav-link" data-scroll-target="#text-visualization"><span class="header-section-number">3.11</span> Text Visualization</a>
+  <ul class="collapse">
+<li><a href="#page-layout-visualization" id="toc-page-layout-visualization" class="nav-link" data-scroll-target="#page-layout-visualization"><span class="header-section-number">3.11.1</span> Page Layout Visualization</a></li>
+  <li><a href="#word-cloud" id="toc-word-cloud" class="nav-link" data-scroll-target="#word-cloud"><span class="header-section-number">3.11.2</span> Word Cloud</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#tree-based-graphs" id="toc-tree-based-graphs" class="nav-link" data-scroll-target="#tree-based-graphs"><span class="header-section-number">3.12</span> Tree-based Graphs</a>
+  <ul class="collapse">
+<li><a href="#dendrogram" id="toc-dendrogram" class="nav-link" data-scroll-target="#dendrogram"><span class="header-section-number">3.12.1</span> Dendrogram</a></li>
+  <li><a href="#treemap" id="toc-treemap" class="nav-link" data-scroll-target="#treemap"><span class="header-section-number">3.12.2</span> Treemap</a></li>
+  <li><a href="#voronoi-diagram" id="toc-voronoi-diagram" class="nav-link" data-scroll-target="#voronoi-diagram"><span class="header-section-number">3.12.3</span> Voronoi Diagram</a></li>
+  </ul>
+</li>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/edit/main/geoms.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./layers.html">Layers</a></li><li class="breadcrumb-item"><a href="./geoms.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Geoms</span></a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title"><span id="sec-geoms" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Geoms</span></span></h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./layers.html">Layers</a></li><li class="breadcrumb-item"><a href="./geoms.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Geoms</span></a></li></ol></nav><div class="quarto-title">
+<h1 class="title"><span id="sec-geoms" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Geoms</span></span></h1>
 </div>
 
 
@@ -436,10 +421,7 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-</header>
-
-
-<div class="callout callout-style-simple callout-warning callout-titled">
+</header><div class="callout callout-style-simple callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -452,140 +434,95 @@ This book/site is under construction
 <p>Everything is liable to change, even the title</p>
 </div>
 </div>
-<section id="area-plots" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="area-plots"><span class="header-section-number">4.1</span> Area Plots</h2>
-<section id="horizon-chart" class="level3" data-number="4.1.1">
-<h3 data-number="4.1.1" class="anchored" data-anchor-id="horizon-chart"><span class="header-section-number">4.1.1</span> Horizon Chart</h3>
-</section>
-<section id="ribbon-plot-improved" class="level3" data-number="4.1.2">
-<h3 data-number="4.1.2" class="anchored" data-anchor-id="ribbon-plot-improved"><span class="header-section-number">4.1.2</span> Ribbon Plot (Improved)</h3>
-</section>
-<section id="streamgraph" class="level3" data-number="4.1.3">
-<h3 data-number="4.1.3" class="anchored" data-anchor-id="streamgraph"><span class="header-section-number">4.1.3</span> Streamgraph</h3>
-</section>
-</section>
-<section id="bar-charts" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="bar-charts"><span class="header-section-number">4.2</span> Bar Charts</h2>
-<section id="likert-plot" class="level3" data-number="4.2.1">
-<h3 data-number="4.2.1" class="anchored" data-anchor-id="likert-plot"><span class="header-section-number">4.2.1</span> Likert Plot</h3>
-</section>
-<section id="mosaic-plot" class="level3" data-number="4.2.2">
-<h3 data-number="4.2.2" class="anchored" data-anchor-id="mosaic-plot"><span class="header-section-number">4.2.2</span> Mosaic Plot</h3>
-</section>
-</section>
-<section id="density-plots" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="density-plots"><span class="header-section-number">4.3</span> Density Plots</h2>
-<section id="raincloud-plot" class="level3" data-number="4.3.1">
-<h3 data-number="4.3.1" class="anchored" data-anchor-id="raincloud-plot"><span class="header-section-number">4.3.1</span> Raincloud Plot</h3>
-</section>
-<section id="ridgeline-plot" class="level3" data-number="4.3.2">
-<h3 data-number="4.3.2" class="anchored" data-anchor-id="ridgeline-plot"><span class="header-section-number">4.3.2</span> Ridgeline Plot</h3>
-</section>
-</section>
-<section id="geometric-shapes" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="geometric-shapes"><span class="header-section-number">4.4</span> Geometric Shapes</h2>
-<section id="arc" class="level3" data-number="4.4.1">
-<h3 data-number="4.4.1" class="anchored" data-anchor-id="arc"><span class="header-section-number">4.4.1</span> Arc</h3>
-</section>
-<section id="b-spline-curve" class="level3" data-number="4.4.2">
-<h3 data-number="4.4.2" class="anchored" data-anchor-id="b-spline-curve"><span class="header-section-number">4.4.2</span> B-spline Curve</h3>
-</section>
-<section id="bézier-curve" class="level3" data-number="4.4.3">
-<h3 data-number="4.4.3" class="anchored" data-anchor-id="bézier-curve"><span class="header-section-number">4.4.3</span> Bézier Curve</h3>
-</section>
-<section id="circle" class="level3" data-number="4.4.4">
-<h3 data-number="4.4.4" class="anchored" data-anchor-id="circle"><span class="header-section-number">4.4.4</span> Circle</h3>
-</section>
-<section id="ellipse" class="level3" data-number="4.4.5">
-<h3 data-number="4.4.5" class="anchored" data-anchor-id="ellipse"><span class="header-section-number">4.4.5</span> Ellipse</h3>
-</section>
-</section>
-<section id="heatmaps" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="heatmaps"><span class="header-section-number">4.5</span> Heatmaps</h2>
-<section id="calendar-heatmap" class="level3" data-number="4.5.1">
-<h3 data-number="4.5.1" class="anchored" data-anchor-id="calendar-heatmap"><span class="header-section-number">4.5.1</span> Calendar Heatmap</h3>
-</section>
-</section>
-<section id="intersection-plots" class="level2" data-number="4.6">
-<h2 data-number="4.6" class="anchored" data-anchor-id="intersection-plots"><span class="header-section-number">4.6</span> Intersection Plots</h2>
-<section id="upset-plot" class="level3" data-number="4.6.1">
-<h3 data-number="4.6.1" class="anchored" data-anchor-id="upset-plot"><span class="header-section-number">4.6.1</span> Upset Plot</h3>
-</section>
-<section id="venn-diagram" class="level3" data-number="4.6.2">
-<h3 data-number="4.6.2" class="anchored" data-anchor-id="venn-diagram"><span class="header-section-number">4.6.2</span> Venn Diagram</h3>
-</section>
-</section>
-<section id="line-charts" class="level2" data-number="4.7">
-<h2 data-number="4.7" class="anchored" data-anchor-id="line-charts"><span class="header-section-number">4.7</span> Line Charts</h2>
-<section id="bump-chart" class="level3" data-number="4.7.1">
-<h3 data-number="4.7.1" class="anchored" data-anchor-id="bump-chart"><span class="header-section-number">4.7.1</span> Bump Chart</h3>
-</section>
-<section id="dumbbell-and-lollipop-plot" class="level3" data-number="4.7.2">
-<h3 data-number="4.7.2" class="anchored" data-anchor-id="dumbbell-and-lollipop-plot"><span class="header-section-number">4.7.2</span> Dumbbell and Lollipop Plot</h3>
-</section>
-<section id="line-chart-with-neon-glow-or-shadow-effects" class="level3" data-number="4.7.3">
-<h3 data-number="4.7.3" class="anchored" data-anchor-id="line-chart-with-neon-glow-or-shadow-effects"><span class="header-section-number">4.7.3</span> Line Chart with Neon Glow or Shadow Effects</h3>
-</section>
-<section id="slope-chart" class="level3" data-number="4.7.4">
-<h3 data-number="4.7.4" class="anchored" data-anchor-id="slope-chart"><span class="header-section-number">4.7.4</span> Slope Chart</h3>
-</section>
-</section>
-<section id="multivariate-graphs" class="level2" data-number="4.8">
-<h2 data-number="4.8" class="anchored" data-anchor-id="multivariate-graphs"><span class="header-section-number">4.8</span> Multivariate Graphs</h2>
-<section id="parallel-coordinates-plot-improved" class="level3" data-number="4.8.1">
-<h3 data-number="4.8.1" class="anchored" data-anchor-id="parallel-coordinates-plot-improved"><span class="header-section-number">4.8.1</span> Parallel Coordinates Plot (Improved)</h3>
-</section>
-<section id="radar-chart" class="level3" data-number="4.8.2">
-<h3 data-number="4.8.2" class="anchored" data-anchor-id="radar-chart"><span class="header-section-number">4.8.2</span> Radar Chart</h3>
-</section>
-</section>
-<section id="pie-charts" class="level2" data-number="4.9">
-<h2 data-number="4.9" class="anchored" data-anchor-id="pie-charts"><span class="header-section-number">4.9</span> Pie Charts</h2>
-<section id="pie-chart-improved" class="level3" data-number="4.9.1">
-<h3 data-number="4.9.1" class="anchored" data-anchor-id="pie-chart-improved"><span class="header-section-number">4.9.1</span> Pie Chart (Improved)</h3>
-</section>
-<section id="moon-chart" class="level3" data-number="4.9.2">
-<h3 data-number="4.9.2" class="anchored" data-anchor-id="moon-chart"><span class="header-section-number">4.9.2</span> Moon Chart</h3>
-</section>
-<section id="square-chart-waffle-chart" class="level3" data-number="4.9.3">
-<h3 data-number="4.9.3" class="anchored" data-anchor-id="square-chart-waffle-chart"><span class="header-section-number">4.9.3</span> Square Chart / Waffle Chart</h3>
-</section>
-</section>
-<section id="scatter-plots" class="level2" data-number="4.10">
-<h2 data-number="4.10" class="anchored" data-anchor-id="scatter-plots"><span class="header-section-number">4.10</span> Scatter Plots</h2>
-<section id="beeswarm-plot" class="level3" data-number="4.10.1">
-<h3 data-number="4.10.1" class="anchored" data-anchor-id="beeswarm-plot"><span class="header-section-number">4.10.1</span> Beeswarm Plot</h3>
-</section>
-<section id="point-density-plot" class="level3" data-number="4.10.2">
-<h3 data-number="4.10.2" class="anchored" data-anchor-id="point-density-plot"><span class="header-section-number">4.10.2</span> Point Density Plot</h3>
-</section>
-</section>
-<section id="text-visualization" class="level2" data-number="4.11">
-<h2 data-number="4.11" class="anchored" data-anchor-id="text-visualization"><span class="header-section-number">4.11</span> Text Visualization</h2>
-<section id="page-layout-visualization" class="level3" data-number="4.11.1">
-<h3 data-number="4.11.1" class="anchored" data-anchor-id="page-layout-visualization"><span class="header-section-number">4.11.1</span> Page Layout Visualization</h3>
-</section>
-<section id="word-cloud" class="level3" data-number="4.11.2">
-<h3 data-number="4.11.2" class="anchored" data-anchor-id="word-cloud"><span class="header-section-number">4.11.2</span> Word Cloud</h3>
-</section>
-</section>
-<section id="tree-based-graphs" class="level2" data-number="4.12">
-<h2 data-number="4.12" class="anchored" data-anchor-id="tree-based-graphs"><span class="header-section-number">4.12</span> Tree-based Graphs</h2>
-<section id="dendrogram" class="level3" data-number="4.12.1">
-<h3 data-number="4.12.1" class="anchored" data-anchor-id="dendrogram"><span class="header-section-number">4.12.1</span> Dendrogram</h3>
-</section>
-<section id="treemap" class="level3" data-number="4.12.2">
-<h3 data-number="4.12.2" class="anchored" data-anchor-id="treemap"><span class="header-section-number">4.12.2</span> Treemap</h3>
-</section>
-<section id="voronoi-diagram" class="level3" data-number="4.12.3">
-<h3 data-number="4.12.3" class="anchored" data-anchor-id="voronoi-diagram"><span class="header-section-number">4.12.3</span> Voronoi Diagram</h3>
+<section id="area-plots" class="level2" data-number="3.1"><h2 data-number="3.1" class="anchored" data-anchor-id="area-plots">
+<span class="header-section-number">3.1</span> Area Plots</h2>
+<section id="horizon-chart" class="level3" data-number="3.1.1"><h3 data-number="3.1.1" class="anchored" data-anchor-id="horizon-chart">
+<span class="header-section-number">3.1.1</span> Horizon Chart</h3>
+</section><section id="ribbon-plot-improved" class="level3" data-number="3.1.2"><h3 data-number="3.1.2" class="anchored" data-anchor-id="ribbon-plot-improved">
+<span class="header-section-number">3.1.2</span> Ribbon Plot (Improved)</h3>
+</section><section id="streamgraph" class="level3" data-number="3.1.3"><h3 data-number="3.1.3" class="anchored" data-anchor-id="streamgraph">
+<span class="header-section-number">3.1.3</span> Streamgraph</h3>
+</section></section><section id="bar-charts" class="level2" data-number="3.2"><h2 data-number="3.2" class="anchored" data-anchor-id="bar-charts">
+<span class="header-section-number">3.2</span> Bar Charts</h2>
+<section id="likert-plot" class="level3" data-number="3.2.1"><h3 data-number="3.2.1" class="anchored" data-anchor-id="likert-plot">
+<span class="header-section-number">3.2.1</span> Likert Plot</h3>
+</section><section id="mosaic-plot" class="level3" data-number="3.2.2"><h3 data-number="3.2.2" class="anchored" data-anchor-id="mosaic-plot">
+<span class="header-section-number">3.2.2</span> Mosaic Plot</h3>
+</section></section><section id="density-plots" class="level2" data-number="3.3"><h2 data-number="3.3" class="anchored" data-anchor-id="density-plots">
+<span class="header-section-number">3.3</span> Density Plots</h2>
+<section id="raincloud-plot" class="level3" data-number="3.3.1"><h3 data-number="3.3.1" class="anchored" data-anchor-id="raincloud-plot">
+<span class="header-section-number">3.3.1</span> Raincloud Plot</h3>
+</section><section id="ridgeline-plot" class="level3" data-number="3.3.2"><h3 data-number="3.3.2" class="anchored" data-anchor-id="ridgeline-plot">
+<span class="header-section-number">3.3.2</span> Ridgeline Plot</h3>
+</section></section><section id="geometric-shapes" class="level2" data-number="3.4"><h2 data-number="3.4" class="anchored" data-anchor-id="geometric-shapes">
+<span class="header-section-number">3.4</span> Geometric Shapes</h2>
+<section id="arc" class="level3" data-number="3.4.1"><h3 data-number="3.4.1" class="anchored" data-anchor-id="arc">
+<span class="header-section-number">3.4.1</span> Arc</h3>
+</section><section id="b-spline-curve" class="level3" data-number="3.4.2"><h3 data-number="3.4.2" class="anchored" data-anchor-id="b-spline-curve">
+<span class="header-section-number">3.4.2</span> B-spline Curve</h3>
+</section><section id="bézier-curve" class="level3" data-number="3.4.3"><h3 data-number="3.4.3" class="anchored" data-anchor-id="bézier-curve">
+<span class="header-section-number">3.4.3</span> Bézier Curve</h3>
+</section><section id="circle" class="level3" data-number="3.4.4"><h3 data-number="3.4.4" class="anchored" data-anchor-id="circle">
+<span class="header-section-number">3.4.4</span> Circle</h3>
+</section><section id="ellipse" class="level3" data-number="3.4.5"><h3 data-number="3.4.5" class="anchored" data-anchor-id="ellipse">
+<span class="header-section-number">3.4.5</span> Ellipse</h3>
+</section></section><section id="heatmaps" class="level2" data-number="3.5"><h2 data-number="3.5" class="anchored" data-anchor-id="heatmaps">
+<span class="header-section-number">3.5</span> Heatmaps</h2>
+<section id="calendar-heatmap" class="level3" data-number="3.5.1"><h3 data-number="3.5.1" class="anchored" data-anchor-id="calendar-heatmap">
+<span class="header-section-number">3.5.1</span> Calendar Heatmap</h3>
+</section></section><section id="intersection-plots" class="level2" data-number="3.6"><h2 data-number="3.6" class="anchored" data-anchor-id="intersection-plots">
+<span class="header-section-number">3.6</span> Intersection Plots</h2>
+<section id="upset-plot" class="level3" data-number="3.6.1"><h3 data-number="3.6.1" class="anchored" data-anchor-id="upset-plot">
+<span class="header-section-number">3.6.1</span> Upset Plot</h3>
+</section><section id="venn-diagram" class="level3" data-number="3.6.2"><h3 data-number="3.6.2" class="anchored" data-anchor-id="venn-diagram">
+<span class="header-section-number">3.6.2</span> Venn Diagram</h3>
+</section></section><section id="line-charts" class="level2" data-number="3.7"><h2 data-number="3.7" class="anchored" data-anchor-id="line-charts">
+<span class="header-section-number">3.7</span> Line Charts</h2>
+<section id="bump-chart" class="level3" data-number="3.7.1"><h3 data-number="3.7.1" class="anchored" data-anchor-id="bump-chart">
+<span class="header-section-number">3.7.1</span> Bump Chart</h3>
+</section><section id="dumbbell-and-lollipop-plot" class="level3" data-number="3.7.2"><h3 data-number="3.7.2" class="anchored" data-anchor-id="dumbbell-and-lollipop-plot">
+<span class="header-section-number">3.7.2</span> Dumbbell and Lollipop Plot</h3>
+</section><section id="line-chart-with-neon-glow-or-shadow-effects" class="level3" data-number="3.7.3"><h3 data-number="3.7.3" class="anchored" data-anchor-id="line-chart-with-neon-glow-or-shadow-effects">
+<span class="header-section-number">3.7.3</span> Line Chart with Neon Glow or Shadow Effects</h3>
+</section><section id="slope-chart" class="level3" data-number="3.7.4"><h3 data-number="3.7.4" class="anchored" data-anchor-id="slope-chart">
+<span class="header-section-number">3.7.4</span> Slope Chart</h3>
+</section></section><section id="multivariate-graphs" class="level2" data-number="3.8"><h2 data-number="3.8" class="anchored" data-anchor-id="multivariate-graphs">
+<span class="header-section-number">3.8</span> Multivariate Graphs</h2>
+<section id="parallel-coordinates-plot-improved" class="level3" data-number="3.8.1"><h3 data-number="3.8.1" class="anchored" data-anchor-id="parallel-coordinates-plot-improved">
+<span class="header-section-number">3.8.1</span> Parallel Coordinates Plot (Improved)</h3>
+</section><section id="radar-chart" class="level3" data-number="3.8.2"><h3 data-number="3.8.2" class="anchored" data-anchor-id="radar-chart">
+<span class="header-section-number">3.8.2</span> Radar Chart</h3>
+</section></section><section id="pie-charts" class="level2" data-number="3.9"><h2 data-number="3.9" class="anchored" data-anchor-id="pie-charts">
+<span class="header-section-number">3.9</span> Pie Charts</h2>
+<section id="pie-chart-improved" class="level3" data-number="3.9.1"><h3 data-number="3.9.1" class="anchored" data-anchor-id="pie-chart-improved">
+<span class="header-section-number">3.9.1</span> Pie Chart (Improved)</h3>
+</section><section id="moon-chart" class="level3" data-number="3.9.2"><h3 data-number="3.9.2" class="anchored" data-anchor-id="moon-chart">
+<span class="header-section-number">3.9.2</span> Moon Chart</h3>
+</section><section id="square-chart-waffle-chart" class="level3" data-number="3.9.3"><h3 data-number="3.9.3" class="anchored" data-anchor-id="square-chart-waffle-chart">
+<span class="header-section-number">3.9.3</span> Square Chart / Waffle Chart</h3>
+</section></section><section id="scatter-plots" class="level2" data-number="3.10"><h2 data-number="3.10" class="anchored" data-anchor-id="scatter-plots">
+<span class="header-section-number">3.10</span> Scatter Plots</h2>
+<section id="beeswarm-plot" class="level3" data-number="3.10.1"><h3 data-number="3.10.1" class="anchored" data-anchor-id="beeswarm-plot">
+<span class="header-section-number">3.10.1</span> Beeswarm Plot</h3>
+</section><section id="point-density-plot" class="level3" data-number="3.10.2"><h3 data-number="3.10.2" class="anchored" data-anchor-id="point-density-plot">
+<span class="header-section-number">3.10.2</span> Point Density Plot</h3>
+</section></section><section id="text-visualization" class="level2" data-number="3.11"><h2 data-number="3.11" class="anchored" data-anchor-id="text-visualization">
+<span class="header-section-number">3.11</span> Text Visualization</h2>
+<section id="page-layout-visualization" class="level3" data-number="3.11.1"><h3 data-number="3.11.1" class="anchored" data-anchor-id="page-layout-visualization">
+<span class="header-section-number">3.11.1</span> Page Layout Visualization</h3>
+</section><section id="word-cloud" class="level3" data-number="3.11.2"><h3 data-number="3.11.2" class="anchored" data-anchor-id="word-cloud">
+<span class="header-section-number">3.11.2</span> Word Cloud</h3>
+</section></section><section id="tree-based-graphs" class="level2" data-number="3.12"><h2 data-number="3.12" class="anchored" data-anchor-id="tree-based-graphs">
+<span class="header-section-number">3.12</span> Tree-based Graphs</h2>
+<section id="dendrogram" class="level3" data-number="3.12.1"><h3 data-number="3.12.1" class="anchored" data-anchor-id="dendrogram">
+<span class="header-section-number">3.12.1</span> Dendrogram</h3>
+</section><section id="treemap" class="level3" data-number="3.12.2"><h3 data-number="3.12.2" class="anchored" data-anchor-id="treemap">
+<span class="header-section-number">3.12.2</span> Treemap</h3>
+</section><section id="voronoi-diagram" class="level3" data-number="3.12.3"><h3 data-number="3.12.3" class="anchored" data-anchor-id="voronoi-diagram">
+<span class="header-section-number">3.12.3</span> Voronoi Diagram</h3>
 
 
-</section>
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -993,22 +930,19 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
+</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="./data.html" class="pagination-link" aria-label="Data">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./stats.html" class="pagination-link" aria-label="Stats">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Stats</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Stats</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
 <p>ggplot2 extended was written by Antti Rask.</p>
 </div>   
@@ -1020,8 +954,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
   </div>
 </footer>
-
-
 
 
 </body></html>

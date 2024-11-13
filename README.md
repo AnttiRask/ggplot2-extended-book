@@ -5,4 +5,5 @@
 This repository contains the source of the book ggplot2 extended. The book is built using Quarto and deployed on Netlify.
 
 ## Code of Conduct
+
 Please note that ggplot2 extended uses a [Contributor Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/). By contributing to this book, you agree to abide by its terms.
