@@ -386,7 +386,7 @@ div.csl-indent {
    
   <ul>
 <li>
-<a href="#data-sets" id="toc-data-sets" class="nav-link active" data-scroll-target="#data-sets"><span class="header-section-number">3.1</span> Data Sets</a>
+<a href="#data-sets" id="toc-data-sets" class="nav-link active" data-scroll-target="#data-sets"><span class="header-section-number">3.1</span> Data sets</a>
   <ul class="collapse">
 <li><a href="#base-r" id="toc-base-r" class="nav-link" data-scroll-target="#base-r"><span class="header-section-number">3.1.1</span> base R</a></li>
   <li><a href="#imdb-movies-1893-2005" id="toc-imdb-movies-1893-2005" class="nav-link" data-scroll-target="#imdb-movies-1893-2005"><span class="header-section-number">3.1.2</span> IMDb movies (1893-2005)</a></li>
@@ -394,11 +394,13 @@ div.csl-indent {
   </ul>
 </li>
   <li>
-<a href="#eda" id="toc-eda" class="nav-link" data-scroll-target="#eda"><span class="header-section-number">3.2</span> EDA</a>
+<a href="#exploratory-data-analysis-eda" id="toc-exploratory-data-analysis-eda" class="nav-link" data-scroll-target="#exploratory-data-analysis-eda"><span class="header-section-number">3.2</span> Exploratory data analysis (EDA)</a>
   <ul class="collapse">
-<li><a href="#pairwise-plot-matrix" id="toc-pairwise-plot-matrix" class="nav-link" data-scroll-target="#pairwise-plot-matrix"><span class="header-section-number">3.2.1</span> Pairwise plot matrix</a></li>
-  <li><a href="#correlation-matrix" id="toc-correlation-matrix" class="nav-link" data-scroll-target="#correlation-matrix"><span class="header-section-number">3.2.2</span> Correlation matrix</a></li>
-  <li><a href="#automated-eda-app" id="toc-automated-eda-app" class="nav-link" data-scroll-target="#automated-eda-app"><span class="header-section-number">3.2.3</span> Automated EDA app</a></li>
+<li><a href="#missing-values" id="toc-missing-values" class="nav-link" data-scroll-target="#missing-values"><span class="header-section-number">3.2.1</span> Missing values</a></li>
+  <li><a href="#summarizing-data" id="toc-summarizing-data" class="nav-link" data-scroll-target="#summarizing-data"><span class="header-section-number">3.2.2</span> Summarizing data</a></li>
+  <li><a href="#pairwise-plot-matrix" id="toc-pairwise-plot-matrix" class="nav-link" data-scroll-target="#pairwise-plot-matrix"><span class="header-section-number">3.2.3</span> Pairwise plot matrix</a></li>
+  <li><a href="#correlation-matrix" id="toc-correlation-matrix" class="nav-link" data-scroll-target="#correlation-matrix"><span class="header-section-number">3.2.4</span> Correlation matrix</a></li>
+  <li><a href="#automated-eda-app" id="toc-automated-eda-app" class="nav-link" data-scroll-target="#automated-eda-app"><span class="header-section-number">3.2.5</span> Automated EDA app</a></li>
   </ul>
 </li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/edit/main/data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -433,7 +435,7 @@ This book/site is under construction
 </div>
 </div>
 <section id="data-sets" class="level2" data-number="3.1"><h2 data-number="3.1" class="anchored" data-anchor-id="data-sets">
-<span class="header-section-number">3.1</span> Data Sets</h2>
+<span class="header-section-number">3.1</span> Data sets</h2>
 <p>This book is about tools for creating visualizations. But to visualize data you first need data. So let’s start by taking a look at some of the data sets available to us without much hassle.</p>
 <section id="base-r" class="level3" data-number="3.1.1"><h3 data-number="3.1.1" class="anchored" data-anchor-id="base-r">
 <span class="header-section-number">3.1.1</span> base R</h3>
@@ -448,7 +450,7 @@ This book/site is under construction
 </div>
 </div>
 <p>Since the <strong>datasets</strong> package is from base R, the data is not always immediately ready to use with <strong>ggplot2</strong> <span class="citation" data-cites="wickham2024">(<a href="references.html#ref-wickham2024" role="doc-biblioref">Wickham 2024</a>)</span>. Luckily we have the <strong>tidyverse</strong> <span class="citation" data-cites="wickham2023b">(<a href="references.html#ref-wickham2023b" role="doc-biblioref">Wickham et al. 2023</a>)</span> packages that make it easy to make the necessary changes.</p>
-<p>Here is an example using the <strong>USArrests</strong> (‘Violent Crime Rates by US State’) data set. We can start by loading the data set by using the <a href="https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/data">data()</a> function:</p>
+<p>Here is an example using the <strong>USArrests</strong> (‘Violent Crime Rates by US State’) data set. We can start by loading the data set by using the <code><a href="https://rdrr.io/r/utils/data.html">data()</a></code> function:</p>
 <div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">USArrests</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -606,14 +608,18 @@ Colorado      7.9     204       78 38.7</code></pre>
 </div>
 </div>
 <p>This concludes the section about the different data sets available for every R user. Next, we’ll take a look at some of the ggplot2 extensions that make it easier to do exploratory data analysis (EDA).</p>
-</section></section><section id="eda" class="level2" data-number="3.2"><h2 data-number="3.2" class="anchored" data-anchor-id="eda">
-<span class="header-section-number">3.2</span> EDA</h2>
-<section id="pairwise-plot-matrix" class="level3" data-number="3.2.1"><h3 data-number="3.2.1" class="anchored" data-anchor-id="pairwise-plot-matrix">
-<span class="header-section-number">3.2.1</span> Pairwise plot matrix</h3>
-</section><section id="correlation-matrix" class="level3" data-number="3.2.2"><h3 data-number="3.2.2" class="anchored" data-anchor-id="correlation-matrix">
-<span class="header-section-number">3.2.2</span> Correlation matrix</h3>
-</section><section id="automated-eda-app" class="level3" data-number="3.2.3"><h3 data-number="3.2.3" class="anchored" data-anchor-id="automated-eda-app">
-<span class="header-section-number">3.2.3</span> Automated EDA app</h3>
+</section></section><section id="exploratory-data-analysis-eda" class="level2" data-number="3.2"><h2 data-number="3.2" class="anchored" data-anchor-id="exploratory-data-analysis-eda">
+<span class="header-section-number">3.2</span> Exploratory data analysis (EDA)</h2>
+<section id="missing-values" class="level3" data-number="3.2.1"><h3 data-number="3.2.1" class="anchored" data-anchor-id="missing-values">
+<span class="header-section-number">3.2.1</span> Missing values</h3>
+</section><section id="summarizing-data" class="level3" data-number="3.2.2"><h3 data-number="3.2.2" class="anchored" data-anchor-id="summarizing-data">
+<span class="header-section-number">3.2.2</span> Summarizing data</h3>
+</section><section id="pairwise-plot-matrix" class="level3" data-number="3.2.3"><h3 data-number="3.2.3" class="anchored" data-anchor-id="pairwise-plot-matrix">
+<span class="header-section-number">3.2.3</span> Pairwise plot matrix</h3>
+</section><section id="correlation-matrix" class="level3" data-number="3.2.4"><h3 data-number="3.2.4" class="anchored" data-anchor-id="correlation-matrix">
+<span class="header-section-number">3.2.4</span> Correlation matrix</h3>
+</section><section id="automated-eda-app" class="level3" data-number="3.2.5"><h3 data-number="3.2.5" class="anchored" data-anchor-id="automated-eda-app">
+<span class="header-section-number">3.2.5</span> Automated EDA app</h3>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">

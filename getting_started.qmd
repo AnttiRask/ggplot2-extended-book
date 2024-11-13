@@ -1,8 +1,0 @@
-# Getting Started {#sec-getting-started-intro .unnumbered}
-
-```{r}
-#| echo: false
-#| message: false
-#| results: asis
-source("warning.R")
-```

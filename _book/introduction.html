@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.4.555">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Antti Rask">
 <title>ggplot2 extended - Introduction</title>
@@ -18,7 +18,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
@@ -27,7 +47,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./getting_started.html" rel="next">
+<link href="./the_basics.html" rel="next">
 <link href="./preface.html" rel="prev">
 <link href="./cover.jpg" rel="icon" type="image/jpeg">
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -44,7 +64,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -53,8 +79,10 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script><script data-goatcounter="https://ggplot2-extended-book.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
 </head>
@@ -62,19 +90,19 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./introduction.html">Introduction</a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./introduction.html">Introduction</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
   </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">ggplot2 extended</a> 
         <div class="sidebar-tools-main">
@@ -114,8 +142,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./getting_started.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Getting Started</span></a>
+            <a href="./the_basics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Basics</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -125,12 +153,6 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="./ggplot2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">ggplot2</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./installing_packages.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Installing Packages</span></span></a>
   </div>
 </li>
       </ul>
@@ -147,49 +169,49 @@ ul.task-list li input[type="checkbox"] {
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./geoms.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Geoms</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Geoms</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./stats.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Stats</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Stats</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./annotations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Annotations</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Annotations</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./scales_and_guides.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Scales and Guides</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Scales and Guides</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./coords.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Coords</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Coords</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./facets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Facets</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Facets</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./themes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Themes</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Themes</span></span></a>
   </div>
 </li>
       </ul>
@@ -206,25 +228,25 @@ ul.task-list li input[type="checkbox"] {
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./maps.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Maps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Maps</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./networks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Networks</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Networks</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./interactive_plots.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Interactive Plots</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Interactive Plots</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./animation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Animation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Animation</span></span></a>
   </div>
 </li>
       </ul>
@@ -241,13 +263,13 @@ ul.task-list li input[type="checkbox"] {
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./helpers.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Helpers</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Helpers</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./interactive_tools.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Interactive Tools</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Interactive Tools</span></span></a>
   </div>
 </li>
       </ul>
@@ -264,13 +286,13 @@ ul.task-list li input[type="checkbox"] {
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./finishing_touches.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Finishing Touches</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Finishing Touches</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./arranging_plots.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Arranging Plots</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Arranging Plots</span></span></a>
   </div>
 </li>
       </ul>
@@ -286,20 +308,8 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bi_tools.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">BI Tools</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./large_language_models.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Large Language Models</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./python.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Python</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Python</span></span></a>
   </div>
 </li>
       </ul>
@@ -316,14 +326,50 @@ ul.task-list li input[type="checkbox"] {
 </li>
     </ul>
 </div>
-</nav><div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+<li>
+<a href="#purpose-and-scope" id="toc-purpose-and-scope" class="nav-link active" data-scroll-target="#purpose-and-scope">Purpose and scope</a>
+  <ul class="collapse">
+<li><a href="#what-you-will-learn" id="toc-what-you-will-learn" class="nav-link" data-scroll-target="#what-you-will-learn">What you will learn</a></li>
+  <li><a href="#what-you-wont-learn" id="toc-what-you-wont-learn" class="nav-link" data-scroll-target="#what-you-wont-learn">What you won’t learn</a></li>
+  </ul>
+</li>
+  <li><a href="#who-the-book-is-for" id="toc-who-the-book-is-for" class="nav-link" data-scroll-target="#who-the-book-is-for">Who the book is for?</a></li>
+  <li><a href="#about-me" id="toc-about-me" class="nav-link" data-scroll-target="#about-me">About me</a></li>
+  <li>
+<a href="#r" id="toc-r" class="nav-link" data-scroll-target="#r">R</a>
+  <ul class="collapse">
+<li><a href="#programming-language" id="toc-programming-language" class="nav-link" data-scroll-target="#programming-language">Programming language</a></li>
+  <li><a href="#rstudio-alternatives" id="toc-rstudio-alternatives" class="nav-link" data-scroll-target="#rstudio-alternatives">RStudio &amp; alternatives</a></li>
+  <li><a href="#executing-code" id="toc-executing-code" class="nav-link" data-scroll-target="#executing-code">Executing code</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a>
+  <ul class="collapse">
+<li><a href="#ggplot2-tidyverse" id="toc-ggplot2-tidyverse" class="nav-link" data-scroll-target="#ggplot2-tidyverse">ggplot2 &amp; tidyverse</a></li>
+  <li><a href="#others" id="toc-others" class="nav-link" data-scroll-target="#others">Others</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next steps?</a>
+  <ul class="collapse">
+<li><a href="#learning-more-and-getting-help" id="toc-learning-more-and-getting-help" class="nav-link" data-scroll-target="#learning-more-and-getting-help">Learning more and getting help</a></li>
+  <li><a href="#sec-further-resources" id="toc-sec-further-resources" class="nav-link" data-scroll-target="#sec-further-resources">Further resources</a></li>
+  </ul>
+</li>
+  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
+  <li><a href="#colophon" id="toc-colophon" class="nav-link" data-scroll-target="#colophon">Colophon</a></li>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/edit/main/introduction.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">Introduction</h1>
+<h1 class="title"><span id="sec-introduction" class="quarto-section-identifier">Introduction</span></h1>
 </div>
 
 
@@ -335,6 +381,7 @@ ul.task-list li input[type="checkbox"] {
     
   </div>
   
+
 
 </header><div class="callout callout-style-simple callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -349,10 +396,119 @@ This book/site is under construction
 <p>Everything is liable to change, even the title</p>
 </div>
 </div>
+<p>Data visualization is one of those things that can look easy when you see someone doing it well. Then you try it yourself and it’s easy to feel like you know nothing.</p>
+<p>I wanted to share the tools that make it easier to create those beautiful visualizations. And to show you how to use those tools together, not only with <strong>ggplot2</strong>, but with each other.</p>
+<section id="purpose-and-scope" class="level2"><h2 class="anchored" data-anchor-id="purpose-and-scope">Purpose and scope</h2>
+<p>A very basic reason why I started writing this book was the fact that one didn’t already exist. “Someone had to do it”, as they say.</p>
+<p>I know there is information out there about the different <strong>ggplot2</strong> extension packages. There’s the package documentation, but there are also some blogs around (see <a href="#sec-further-resources" class="quarto-xref"><span>Further resources</span></a>).</p>
+<p>But that information is quite scattered. There were many great packages I hadn’t even heard about before I started doing research for the book.</p>
+<section id="what-you-will-learn" class="level3"><h3 class="anchored" data-anchor-id="what-you-will-learn">What you will learn</h3>
+</section><section id="what-you-wont-learn" class="level3"><h3 class="anchored" data-anchor-id="what-you-wont-learn">What you won’t learn</h3>
+<p>These are some of the interesting topics that I had to leave out out of the book. It’s long as it is and I decided to concentrate on the topics and extensions that everyone can use. Regardless of the field you’re in.</p>
+<p><strong>Combining visualizations and BI tools</strong></p>
+<p>Using R in general and <strong>ggplot2</strong> visualizations in specific within BI tools like Power BI is cool. Interested? You can start by reading Luca Zavarella’s book <a href="https://www.packtpub.com/en-us/product/extending-power-bi-with-python-and-r-9781837639533">Extending Power BI with Python and R</a>.</p>
+<p><strong>Generative art</strong></p>
+<p>Creating art with R - color me impressed! It’s called Rtistry or aRt, because why not. There isn’t enough room in the book for a proper chapter on this, but here are some links to get you started on the topic:</p>
+<ul>
+<li><a href="https://meghansaha.github.io/artpack/">artpack by Meghan Harris</a></li>
+<li><a href="https://koenderks.github.io/aRtsy/">aRtsy by Koen Derks</a></li>
+<li><a href="https://nrennie.rbind.io/projects/generative-art/">Generative Art by Nicola Rennie</a></li>
+</ul>
+<p><strong>Large language models (LLM)</strong></p>
+<p>I know, it would be trendy to write about AI. And I do think they can play a part in the data visualization process. But there isn’t anything that meaningful to write about. Whatever you do, whether you use AI or not, do trust your senses!</p>
+<p>A machine doesn’t need to visualize data to use it. So, in a way, data visualization is one of the last bastions of human to human communication. By humans, for humans, am I right?</p>
+<p><strong>Specialized packages in specialized fields like bioinformatics</strong></p>
+<p>This one should be self-evident. “Write what you know”. I know nothing about bioinformatics. I’m not even sure I understand what the term means.</p>
+<p>Are you interested in bioinformatics? I mean, I don’t want to leave you hanging. There is a website and a suite of packages called <a href="https://bioconductor.org/">Bioconductor</a> that should get you started!</p>
+<p><strong>Sports</strong></p>
+<p>It’s the same as with generative art. Interesting topic, but not enough space. Still, here’s another short list of packages related to sports:</p>
+<p><strong>Baseball</strong></p>
+<ul>
+<li><a href="https://billpetti.github.io/baseballr/">baseballr by Saiem Gilani</a></li>
+<li><a href="https://camdenk.github.io/mlbplotR/">mlbplotR by Camden Kay</a></li>
+</ul>
+<p><strong>Football</strong></p>
+<ul>
+<li><a href="https://nflplotr.nflverse.com/">nflplotR by Sebastian Carl</a></li>
+</ul>
+<p><strong>Soccer</strong></p>
+<ul>
+<li><a href="https://abhiamishra.github.io/ggshakeR/">ggshakeR by Abhishek Amol Mishra</a></li>
+<li><a href="https://torvaney.github.io/ggsoccer/">ggsoccer by Ben Torvaney</a></li>
+<li><a href="https://github.com/Dato-Futbol/soccerAnimate">soccerAnimate by Ismael Gómez Schmidt</a></li>
+</ul>
+<p><strong>Various</strong></p>
+<ul>
+<li><a href="https://sportyr.sportsdataverse.org/">sportyR by Ross Drucker</a></li>
+</ul></section></section><section id="who-the-book-is-for" class="level2"><h2 class="anchored" data-anchor-id="who-the-book-is-for">Who the book is for?</h2>
+</section><section id="about-me" class="level2"><h2 class="anchored" data-anchor-id="about-me">About me</h2>
+</section><section id="r" class="level2"><h2 class="anchored" data-anchor-id="r">R</h2>
+<section id="programming-language" class="level3"><h3 class="anchored" data-anchor-id="programming-language">Programming language</h3>
+</section><section id="rstudio-alternatives" class="level3"><h3 class="anchored" data-anchor-id="rstudio-alternatives">RStudio &amp; alternatives</h3>
+</section><section id="executing-code" class="level3"><h3 class="anchored" data-anchor-id="executing-code">Executing code</h3>
+</section></section><section id="packages" class="level2"><h2 class="anchored" data-anchor-id="packages">Packages</h2>
+<section id="ggplot2-tidyverse" class="level3"><h3 class="anchored" data-anchor-id="ggplot2-tidyverse">ggplot2 &amp; tidyverse</h3>
+</section><section id="others" class="level3"><h3 class="anchored" data-anchor-id="others">Others</h3>
+</section></section><section id="next-steps" class="level2"><h2 class="anchored" data-anchor-id="next-steps">Next steps?</h2>
+<section id="learning-more-and-getting-help" class="level3"><h3 class="anchored" data-anchor-id="learning-more-and-getting-help">Learning more and getting help</h3>
+</section><section id="sec-further-resources" class="level3"><h3 class="anchored" data-anchor-id="sec-further-resources">Further resources</h3>
+<p><strong>Blogs</strong></p>
+<ul>
+<li><a href="https://albert-rapp.de/ggplot-series/">Albert Rapp</a></li>
+<li><a href="https://www.brunomioto.com/">Bruno Mioto</a></li>
+<li><a href="https://www.cedricscherer.com/">Cédric Scherer</a></li>
+<li><a href="https://dominicroye.github.io/en/">Dominic Royé</a></li>
+<li><a href="https://karaman.is/">Georgios Karamanis</a></li>
+<li><a href="https://www.business-science.io/blog/index.html">Matt Dancho</a></li>
+<li><a href="https://nrennie.rbind.io/blog/">Nicola Rennie</a></li>
+</ul>
+<p><strong>Books</strong></p>
+<ul>
+<li><a href="https://bbc.github.io/rcookbook/">BBC Visual and Data Journalism cookbook for R graphics</a></li>
+<li><a href="https://psyteachr.github.io/introdataviz/index.html">Data visualisation using R, for researchers who don’t use R by Emily Nordmann et al.</a></li>
+<li><a href="https://ggplot2-book.org/">ggplot2: Elegant Graphics for Data Analysis (3e) by Hadley Wickham et al.</a></li>
+<li><a href="https://bookdown.org/ozancanozdemir/introduction-to-ggplot2/">An Introduction to ggplot2 by Ozancan Ozdemir</a></li>
+<li><a href="https://rkabacoff.github.io/datavis/">Modern Data Visualization with R by Robert Kabacoff</a></li>
+<li><a href="https://bookdown.org/content/b298e479-b1ab-49fa-b83d-a57c2b034d49/">R Gallery Book by Kyle W. Brown</a></li>
+<li><a href="https://r-graphics.org/">R Graphics Cookbook, 2nd edition by Winston Chang</a></li>
+<li><a href="https://ggplot2-book-solutions-3ed.netlify.app/">Solutions to ggplot2: Elegant Graphics for Data Analysis by Howard Baek</a></li>
+</ul>
+<p><strong>GitHub Repos</strong></p>
+<ul>
+<li><a href="https://github.com/erikgahner/awesome-ggplot2/">Awesome ggplot2 by Erik Gahner</a></li>
+<li><a href="https://github.com/krzjoa/awesome-r-dataviz/">Awesome R Dataviz by Krzysztof Joachimiak</a></li>
+<li><a href="https://github.com/teunbrand/ggplot_tricks/">ggplot Tricks by Teun van den Brand</a></li>
+</ul>
+<p><strong>Websites</strong></p>
+<ul>
+<li><a href="https://tinyurl.com/ggplot2packages/">Packages (ggplot2) by Antti Rask</a></li>
+<li><a href="https://r-for-artists.netlify.app/">R for Artists and Designers by Arvind Venkatadri</a></li>
+<li><a href="https://rfortherestofus.com/blog/">R for the Rest of Us by David Keys</a></li>
+<li><a href="https://r-graph-gallery.com/">R Graph Gallery by Yan Holtz</a></li>
+<li><a href="https://statisticsglobe.com/graphics-in-r">Statistics Globe by Joachim Schork</a></li>
+</ul>
+<p><strong>YouTube</strong></p>
+<ul>
+<li><a href="https://www.youtube.com/@rappa753/">Albert Rapp</a></li>
+<li><a href="https://www.youtube.com/@StatisticsGlobe/">Statistics Globe by Joachim Schork</a></li>
+</ul></section></section><section id="acknowledgements" class="level2"><h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
+<p><a href="https://www.linkedin.com/in/eevamaijavirtanen/">Eevamaija Virtanen</a>, <a href="https://www.linkedin.com/in/jkorpela/">Juha Korpela</a>, and <a href="https://www.linkedin.com/in/sade-haveri/">Säde Haveri</a> for founding <a href="https://www.helsinkidataweek.com/">Helsinki Data Week</a> with me. For helping me dream big! And for making me realize a big project like this is possible when you keep making constant progress.</p>
+<p>Marc Eixarch (<a href="https://github.com/Marceix/">@Marceix</a>) and Vicent Boned Riera (<a href="https://github.com/eivicent/">@eivicent</a>) from the <a href="https://www.meetup.com/r-user-group-finland/">R User Group Finland</a>. Learning R has been more fun thanks to your efforts in keeping the local R scene active in Helsinki, Finland.</p>
+<p><a href="https://www.linkedin.com/in/josephreis/">Joe Reis</a>, <a href="https://www.linkedin.com/in/ole-olesen-bagneux/">Ole Olesen-Bagneux</a>, and <a href="https://www.linkedin.com/in/vineetvashishta/">Vin Vashishta</a> for your generosity and time. And for setting a positive example for someone like me to follow.</p>
+<p>Hadley Wickham (<a href="https://github.com/hadley/">@hadley</a>) for all the books and packages. <strong>R for Data Science</strong> <span class="citation" data-cites="wickham2023a">(<a href="references.html#ref-wickham2023a" role="doc-biblioref">Wickham, Çetinkaya-Rundel, and Grolemund 2023</a>)</span> got me started with R. <strong>ggplot2: Elegant Graphics for Data Analysis</strong> <span class="citation" data-cites="wickham2016">(<a href="references.html#ref-wickham2016" role="doc-biblioref">Wickham 2016</a>)</span> helped me understand <strong>ggplot2</strong> and <em>the grammar of graphics</em> on a deeper level.</p>
+<p>To be continued…</p>
+</section><section id="colophon" class="level2"><h2 class="anchored" data-anchor-id="colophon">Colophon</h2>
 
 
-
-</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-wickham2016" class="csl-entry" role="listitem">
+Wickham, Hadley. 2016. <em>Ggplot2: Elegant Graphics for Data Analysis</em>. 2nd ed. Springer-Verlag New York.
+</div>
+<div id="ref-wickham2023a" class="csl-entry" role="listitem">
+Wickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023. <em>R for Data Science: Import, Tidy, Transform, Visualize, and Model Data</em>. 2nd ed. O’Reilly.
+</div>
+</div>
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -431,10 +587,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/https:\/\/ggplot2-extended-book\.com\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -444,8 +617,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -457,7 +639,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -501,6 +806,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -526,6 +832,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -585,23 +917,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="./preface.html" class="pagination-link">
+      <a href="./preface.html" class="pagination-link" aria-label="Preface">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./getting_started.html" class="pagination-link">
-        <span class="nav-page-text">Getting Started</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./the_basics.html" class="pagination-link" aria-label="The Basics">
+        <span class="nav-page-text">The Basics</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
-    <div class="nav-footer-left">ggplot2 extended was written by Antti Rask.</div>   
+    <div class="nav-footer-left">
+<p>ggplot2 extended was written by Antti Rask.</p>
+</div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/AnttiRask/ggplot2-extended-book/edit/main/introduction.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/AnttiRask/ggplot2-extended-book/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
-    <div class="nav-footer-right">This book was built with <a href="https://quarto.org/">Quarto</a> and is hosted on <a href="https://www.netlify.com">Netlify</a>.</div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/edit/main/introduction.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This book was built with <a href="https://quarto.org/">Quarto</a> and is hosted on <a href="https://www.netlify.com">Netlify</a>.</p>
+</div>
   </div>
 </footer>
 

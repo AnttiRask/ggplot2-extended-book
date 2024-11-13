@@ -1,4 +1,4 @@
-# Introduction {.unnumbered}
+# Introduction {#sec-introduction .unnumbered}
 
 ```{r}
 #| echo: false
@@ -6,3 +6,146 @@
 #| results: asis
 source("warning.R")
 ```
+
+Data visualization is one of those things that can look easy when you see someone doing it well. Then you try it yourself and it's easy to feel like you know nothing.
+
+I wanted to share the tools that make it easier to create those beautiful visualizations. And to show you how to use those tools together, not only with __ggplot2__, but with each other.
+
+## Purpose and scope
+
+A very basic reason why I started writing this book was the fact that one didn't already exist. "Someone had to do it", as they say.
+
+I know there is information out there about the different __ggplot2__ extension packages. There's the package documentation, but there are also some blogs around (see @sec-further-resources).
+
+But that information is quite scattered. There were many great packages I hadn't even heard about before I started doing research for the book.
+
+###	What you will learn
+
+###	What you won’t learn
+
+These are some of the interesting topics that I had to leave out out of the book. It's long as it is and I decided to concentrate on the topics and extensions that everyone can use. Regardless of the field you're in.
+
+__Combining visualizations and BI tools__
+
+Using R in general and __ggplot2__ visualizations in specific within BI tools like Power BI is cool. Interested? You can start by reading Luca Zavarella's book [Extending Power BI with Python and R](https://www.packtpub.com/en-us/product/extending-power-bi-with-python-and-r-9781837639533).
+
+__Generative art__
+
+Creating art with R - color me impressed! It's called Rtistry or aRt, because why not. There isn’t enough room in the book for a proper chapter on this, but here are some links to get you started on the topic:
+
+- [artpack by Meghan Harris](https://meghansaha.github.io/artpack/)
+- [aRtsy by Koen Derks](https://koenderks.github.io/aRtsy/)
+- [Generative Art by Nicola Rennie](https://nrennie.rbind.io/projects/generative-art/)
+
+__Large language models (LLM)__
+
+I know, it would be trendy to write about AI. And I do think they can play a part in the data visualization process. But there isn’t anything that meaningful to write about. Whatever you do, whether you use AI or not, do trust your senses!
+
+A machine doesn't need to visualize data to use it. So, in a way, data visualization is one of the last bastions of human to human communication. By humans, for humans, am I right?
+
+__Specialized packages in specialized fields like bioinformatics__
+
+This one should be self-evident. "Write what you know". I know nothing about bioinformatics. I'm not even sure I understand what the term means.
+
+Are you interested in bioinformatics? I mean, I don't want to leave you hanging. There is a website and a suite of packages called [Bioconductor](https://bioconductor.org/) that should get you started!
+
+__Sports__
+
+It's the same as with generative art. Interesting topic, but not enough space. Still, here's another short list of packages related to sports:
+
+__Baseball__
+
+- [baseballr by Saiem Gilani](https://billpetti.github.io/baseballr/)
+- [mlbplotR by Camden Kay](https://camdenk.github.io/mlbplotR/)
+
+__Football__
+
+- [nflplotR by Sebastian Carl](https://nflplotr.nflverse.com/)
+
+__Soccer__
+
+- [ggshakeR by Abhishek Amol Mishra](https://abhiamishra.github.io/ggshakeR/)
+- [ggsoccer by Ben Torvaney](https://torvaney.github.io/ggsoccer/)
+- [soccerAnimate by Ismael Gómez Schmidt](https://github.com/Dato-Futbol/soccerAnimate)
+
+__Various__
+
+- [sportyR by Ross Drucker](https://sportyr.sportsdataverse.org/)
+
+## Who the book is for?
+
+## About me
+
+## R
+
+### Programming language
+
+### RStudio & alternatives
+
+### Executing code
+
+## Packages
+
+### ggplot2 & tidyverse
+
+### Others
+
+## Next steps?
+
+### Learning more and getting help
+
+### Further resources {#sec-further-resources}
+
+__Blogs__
+
+- [Albert Rapp](https://albert-rapp.de/ggplot-series/)
+- [Bruno Mioto](https://www.brunomioto.com/)
+- [Cédric Scherer](https://www.cedricscherer.com/)
+- [Dominic Royé](https://dominicroye.github.io/en/)
+- [Georgios Karamanis](https://karaman.is/)
+- [Matt Dancho](https://www.business-science.io/blog/index.html)
+- [Nicola Rennie](https://nrennie.rbind.io/blog/)
+
+__Books__
+
+- [BBC Visual and Data Journalism cookbook for R graphics](https://bbc.github.io/rcookbook/)
+- [Data visualisation using R, for researchers who don’t use R by Emily Nordmann et al.](https://psyteachr.github.io/introdataviz/index.html)
+- [ggplot2: Elegant Graphics for Data Analysis (3e) by Hadley Wickham et al.](https://ggplot2-book.org/)
+- [An Introduction to ggplot2 by Ozancan Ozdemir](https://bookdown.org/ozancanozdemir/introduction-to-ggplot2/)
+- [Modern Data Visualization with R by Robert Kabacoff](https://rkabacoff.github.io/datavis/)
+- [R Gallery Book by Kyle W. Brown](https://bookdown.org/content/b298e479-b1ab-49fa-b83d-a57c2b034d49/)
+- [R Graphics Cookbook, 2nd edition by Winston Chang](https://r-graphics.org/)
+- [Solutions to ggplot2: Elegant Graphics for Data Analysis by Howard Baek](https://ggplot2-book-solutions-3ed.netlify.app/)
+
+__GitHub Repos__
+
+- [Awesome ggplot2 by Erik Gahner](https://github.com/erikgahner/awesome-ggplot2/)
+- [Awesome R Dataviz by Krzysztof Joachimiak](https://github.com/krzjoa/awesome-r-dataviz/)
+- [ggplot Tricks by Teun van den Brand](https://github.com/teunbrand/ggplot_tricks/)
+
+__Websites__
+
+- [Packages \(ggplot2\) by Antti Rask](https://tinyurl.com/ggplot2packages/)
+- [R for Artists and Designers by Arvind Venkatadri](https://r-for-artists.netlify.app/)
+- [R for the Rest of Us by David Keys](https://rfortherestofus.com/blog/)
+- [R Graph Gallery by Yan Holtz](https://r-graph-gallery.com/)
+- [Statistics Globe by Joachim Schork](https://statisticsglobe.com/graphics-in-r)
+
+__YouTube__
+
+- [Albert Rapp](https://www.youtube.com/@rappa753/)
+- [Statistics Globe by Joachim Schork](https://www.youtube.com/@StatisticsGlobe/)
+
+## Acknowledgements
+
+[Eevamaija Virtanen](https://www.linkedin.com/in/eevamaijavirtanen/), [Juha Korpela](https://www.linkedin.com/in/jkorpela/), and [Säde Haveri](https://www.linkedin.com/in/sade-haveri/) for founding [Helsinki Data Week](https://www.helsinkidataweek.com/) with me. For helping me dream big! And for making me realize a big project like this is possible when you keep making constant progress.
+
+Marc Eixarch ([\@Marceix](https://github.com/Marceix/)) and Vicent Boned Riera ([\@eivicent](https://github.com/eivicent/)) from the [R User Group Finland](https://www.meetup.com/r-user-group-finland/). Learning R has been more fun thanks to your efforts in keeping the local R scene active in Helsinki, Finland.
+
+[Joe Reis](https://www.linkedin.com/in/josephreis/), [Ole Olesen-Bagneux](https://www.linkedin.com/in/ole-olesen-bagneux/), and [Vin Vashishta](https://www.linkedin.com/in/vineetvashishta/) for your generosity and time. And for setting a positive example for someone like me to follow.
+
+Hadley Wickham ([\@hadley](https://github.com/hadley/)) for all the books and packages. __R for Data Science__ [@wickham2023a] got me started with R. __ggplot2: Elegant Graphics for Data Analysis__ [@wickham2016] helped me understand __ggplot2__ and _the grammar of graphics_ on a deeper level.
+
+To be continued...
+
+## Colophon

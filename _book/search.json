@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "ggplot2 extended",
     "section": "",
-    "text": "Welcome\nThis is the website for my book ggplot2 extended. It is about extending the functionality of the ggplot2 R package by Hadley Wickham. There are many extension packages that have come out since the release of ggplot2. This book is about the best most useful out of them.\nI will go through the basics of how ggplot2 works in sec-ggplot2. However, this book is primarily for you if you have some basic understanding of how ggplot2 works. I would suggest you first read Hadley’s book ggplot2: Elegant Graphics for Data Analysis (Wickham 2016). The work-in-progress 3rd edition is online.\nR for Data Science (Wickham, Çetinkaya-Rundel, and Grolemund 2023) also has three chapters that will get you started.\nThis book will then teach you how to get the most out of ggplot2 and the ecosystem around it.\nThis website is and will always be free, licensed under the CC BY-NC-ND 4.0 DEED license. There will be a physical copy of the book, eventually. Stay tuned!\nPlease note that ggplot2 extended uses a Contributor Code of Conduct. By contributing to this book, you agree to abide by its terms.\nThis book is written by Antti Rask.\n\n\n\n\nWickham, Hadley. 2016. Ggplot2: Elegant Graphics for Data Analysis. 2nd ed. Springer-Verlag New York.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023. R for Data Science: Import, Tidy, Transform, Visualize, and Model Data. 2nd ed. O’Reilly.",
+    "text": "Welcome\nThis is the website for my book ggplot2 extended. It is about extending the functionality of the ggplot2 R package by Hadley Wickham. Many extension packages have come out since the release of ggplot2. This book is about how to use them to make the most out of the whole ggplot2 ecosystem. And which of the many extensions to use in the first place.\nI will go through the very basics of how ggplot2 works in 1  ggplot2. However, this book assumes some basic understanding of R and ggplot2.\nIf you’re just starting with R, R for Data Science (Wickham, Çetinkaya-Rundel, and Grolemund 2023) is a good first stop. The book even contains three chapters on visualizing data with ggplot2.\nFor a comprehensive look into ggplot2 and the grammar of graphics I would suggest Hadley’s book ggplot2: Elegant Graphics for Data Analysis (Wickham 2016). You can find the work-in-progress 3rd edition online.\nThis website is and will always be free, licensed under the CC BY-NC-ND 4.0 DEED license. Once the whole book has been written, there will hopefully be a physical copy of the book available. Stay tuned!\nPlease note that ggplot2 extended uses a Contributor Code of Conduct. By contributing to this book, you agree to abide by its terms.\nThis book is written by Antti Rask.",
     "crumbs": [
       "Welcome"
     ]
@@ -66,14 +66,17 @@
     "href": "layers.html",
     "title": "Layers",
     "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
+    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title",
+    "crumbs": [
+      "Layers"
+    ]
   },
   {
     "objectID": "data.html",
     "href": "data.html",
     "title": "3  Data",
     "section": "",
-    "text": "3.1 Data Sets\nThis book is about tools for creating visualizations. But to visualize data you first need data. So let’s start by taking a look at some of the data sets available to us without much hassle.",
+    "text": "3.1 Data sets\nThis book is about tools for creating visualizations. But to visualize data you first need data. So let’s start by taking a look at some of the data sets available to us without much hassle.",
     "crumbs": [
       "Layers",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data</span>"
@@ -161,7 +164,10 @@
     "href": "special_cases.html",
     "title": "Special Cases",
     "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
+    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title",
+    "crumbs": [
+      "Special Cases"
+    ]
   },
   {
     "objectID": "networks.html",
@@ -309,7 +315,11 @@
     "href": "ggplot2.html",
     "title": "1  ggplot2",
     "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
+    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title",
+    "crumbs": [
+      "Getting Started",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>ggplot2</span>"
+    ]
   },
   {
     "objectID": "installing_packages.html",
@@ -327,7 +337,10 @@
     "href": "introduction.html",
     "title": "Introduction",
     "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
+    "text": "Purpose and scope\nA very basic reason why I started writing this book was the fact that one didn’t already exist. “Someone had to do it”, as they say.\nI know there is information out there about the different ggplot2 extension packages. There’s the package documentation, but there are also some blogs around (see Further resources).\nBut that information is quite scattered. There were many great packages I hadn’t even heard about before I started doing research for the book.",
+    "crumbs": [
+      "Introduction"
+    ]
   },
   {
     "objectID": "data.html#eda",
@@ -1403,6 +1416,157 @@
     "crumbs": [
       "Beyond R",
       "<span class='chapter-number'>21</span>  <span class='chapter-title'>Python</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#acknowledgements",
+    "href": "index.html#acknowledgements",
+    "title": "ggplot2 extended",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\nEevamaija Virtanen, Juha Korpela, and Säde Haveri for founding Helsinki Data Week with me. Helping me to dream big and also realize that even a big project like this is possible when you keep making constant progress.\nVicent Boned Riera (@eivicent) and Marc Eixarch (@Marceix) from the R User Group Finland. Learning R has been more fun thanks to your efforts in keeping the local R scene active in Helsinki, Finland.\nHadley Wickham (@hadley) for all the books and packages. R for Data Science got me started with R and ggplot2: Elegant Graphics for Data Analysis made me understand ggplot2 and the grammar of graphics on a deeper level.\nTo be continued…\n\n\n\n\nWickham, Hadley. 2016. Ggplot2: Elegant Graphics for Data Analysis. 2nd ed. Springer-Verlag New York.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023. R for Data Science: Import, Tidy, Transform, Visualize, and Model Data. 2nd ed. O’Reilly.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "data.html#exploratory-data-analysis-eda",
+    "href": "data.html#exploratory-data-analysis-eda",
+    "title": "3  Data",
+    "section": "\n3.2 Exploratory data analysis (EDA)",
+    "text": "3.2 Exploratory data analysis (EDA)\n\n3.2.1 Missing values\n\n3.2.2 Summarizing data\n\n3.2.3 Pairwise plot matrix\n\n3.2.4 Correlation matrix\n\n3.2.5 Automated EDA app\n\n\n\n\nArel-Bundock, Vincent. 2024. Rdatasets: A Collection of Datasets Originally Distributed in Various r Packages.\n\n\nMüller, Kirill, and Hadley Wickham. 2023. Tibble: Simple Data Frames. R Package Version 3.2.1.\n\n\nWickham, Hadley. 2015. Ggplot2movies: Movies Data. R Package Version 0.0.1.\n\n\n———. 2024. Ggplot2: Elegant Graphics for Data Analysis. R Package Version 3.5.1.\n\n\nWickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2023. Tidyverse: Welcome to the Tidyverse. R Package Version 2.0.0.",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data</span>"
+    ]
+  },
+  {
+    "objectID": "introduction.html#purpose-and-scope",
+    "href": "introduction.html#purpose-and-scope",
+    "title": "Introduction",
+    "section": "",
+    "text": "What you will learn\nWhat you won’t learn\nThese are some of the interesting topics that I had to leave out out of the book. It’s long as it is and I decided to concentrate on the topics and extensions that everyone can use. Regardless of the field you’re in.\nCombining visualizations and BI tools\nUsing R in general and ggplot2 visualizations in specific within BI tools like Power BI is cool. Interested? You can start by reading Luca Zavarella’s book Extending Power BI with Python and R.\nGenerative art\nCreating art with R - color me impressed! It’s called Rtistry or aRt, because why not. There isn’t enough room in the book for a proper chapter on this, but here are some links to get you started on the topic:\n\nartpack by Meghan Harris\naRtsy by Koen Derks\nGenerative Art by Nicola Rennie\n\nLarge language models (LLM)\nI know, it would be trendy to write about AI. And I do think they can play a part in the data visualization process. But there isn’t anything that meaningful to write about. Whatever you do, whether you use AI or not, do trust your senses!\nA machine doesn’t need to visualize data to use it. So, in a way, data visualization is one of the last bastions of human to human communication. By humans, for humans, am I right?\nSpecialized packages in specialized fields like bioinformatics\nThis one should be self-evident. “Write what you know”. I know nothing about bioinformatics. I’m not even sure I understand what the term means.\nAre you interested in bioinformatics? I mean, I don’t want to leave you hanging. There is a website and a suite of packages called Bioconductor that should get you started!\nSports\nIt’s the same as with generative art. Interesting topic, but not enough space. Still, here’s another short list of packages related to sports:\nBaseball\n\nbaseballr by Saiem Gilani\nmlbplotR by Camden Kay\n\nFootball\n\nnflplotR by Sebastian Carl\n\nSoccer\n\nggshakeR by Abhishek Amol Mishra\nggsoccer by Ben Torvaney\nsoccerAnimate by Ismael Gómez Schmidt\n\nVarious\n\nsportyR by Ross Drucker",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "introduction.html#who-i-am-to-write-this-book",
+    "href": "introduction.html#who-i-am-to-write-this-book",
+    "title": "Introduction",
+    "section": "Who I am to write this book",
+    "text": "Who I am to write this book",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "introduction.html#prerequisites",
+    "href": "introduction.html#prerequisites",
+    "title": "Introduction",
+    "section": "Prerequisites",
+    "text": "Prerequisites\nR\nProgramming language\nRStudio & alternatives\nExecuting code\nPackages\nggplot2 & tidyverse\nOthers",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "introduction.html#next-steps",
+    "href": "introduction.html#next-steps",
+    "title": "Introduction",
+    "section": "Next steps?",
+    "text": "Next steps?\nLearning more and getting help\nFurther resources\nBlogs\n\nAlbert Rapp\nBruno Mioto\nCédric Scherer\nDominic Royé\nGeorgios Karamanis\nMatt Dancho\nNicola Rennie\n\nBooks\n\nBBC Visual and Data Journalism cookbook for R graphics\nData visualisation using R, for researchers who don’t use R by Emily Nordmann et al.\nggplot2: Elegant Graphics for Data Analysis (3e) by Hadley Wickham et al.\nAn Introduction to ggplot2 by Ozancan Ozdemir\nModern Data Visualization with R by Robert Kabacoff\nR Gallery Book by Kyle W. Brown\nR Graphics Cookbook, 2nd edition by Winston Chang\nSolutions to ggplot2: Elegant Graphics for Data Analysis by Howard Baek\n\nGitHub Repos\n\nAwesome ggplot2 by Erik Gahner\nAwesome R Dataviz by Krzysztof Joachimiak\nggplot Tricks by Teun van den Brand\n\nWebsites\n\nPackages (ggplot2) by Antti Rask\nR for Artists and Designers by Arvind Venkatadri\nR for the Rest of Us by David Keys\nR Graph Gallery by Yan Holtz\nStatistics Globe by Joachim Schork\n\nYouTube\n\nAlbert Rapp\nStatistics Globe by Joachim Schork",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "introduction.html#acknowledgements",
+    "href": "introduction.html#acknowledgements",
+    "title": "Introduction",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\nEevamaija Virtanen, Juha Korpela, and Säde Haveri for founding Helsinki Data Week with me. For helping me dream big! And for making me realize a big project like this is possible when you keep making constant progress.\nMarc Eixarch (@Marceix) and Vicent Boned Riera (@eivicent) from the R User Group Finland. Learning R has been more fun thanks to your efforts in keeping the local R scene active in Helsinki, Finland.\nJoe Reis, Ole Olesen-Bagneux, and Vin Vashishta for your generosity and time. And for setting a positive example for someone like me to follow.\nHadley Wickham (@hadley) for all the books and packages. R for Data Science (Wickham, Çetinkaya-Rundel, and Grolemund 2023) got me started with R. ggplot2: Elegant Graphics for Data Analysis (Wickham 2016) helped me understand ggplot2 and the grammar of graphics on a deeper level.\nTo be continued…",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "introduction.html#colophon",
+    "href": "introduction.html#colophon",
+    "title": "Introduction",
+    "section": "Colophon",
+    "text": "Colophon\n\n\n\n\nWickham, Hadley. 2016. Ggplot2: Elegant Graphics for Data Analysis. 2nd ed. Springer-Verlag New York.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023. R for Data Science: Import, Tidy, Transform, Visualize, and Model Data. 2nd ed. O’Reilly.",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "introduction.html#who-the-book-is-for",
+    "href": "introduction.html#who-the-book-is-for",
+    "title": "Introduction",
+    "section": "Who the book is for?",
+    "text": "Who the book is for?",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "introduction.html#r",
+    "href": "introduction.html#r",
+    "title": "Introduction",
+    "section": "R",
+    "text": "R\nProgramming language\nRStudio & alternatives\nExecuting code",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "introduction.html#packages",
+    "href": "introduction.html#packages",
+    "title": "Introduction",
+    "section": "Packages",
+    "text": "Packages\nggplot2 & tidyverse\nOthers",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "introduction.html#who-am-i-to-write-this-book",
+    "href": "introduction.html#who-am-i-to-write-this-book",
+    "title": "Introduction",
+    "section": "Who am I to write this book?",
+    "text": "Who am I to write this book?",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#acknowledgments",
+    "href": "index.html#acknowledgments",
+    "title": "ggplot2 extended",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\nThis book was built with Quarto and is hosted on Netlify.\n\n\n\n\nWickham, Hadley. 2016. Ggplot2: Elegant Graphics for Data Analysis. 2nd ed. Springer-Verlag New York.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023. R for Data Science: Import, Tidy, Transform, Visualize, and Model Data. 2nd ed. O’Reilly.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "the_basics.html",
+    "href": "the_basics.html",
+    "title": "The Basics",
+    "section": "",
+    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title",
+    "crumbs": [
+      "The Basics"
+    ]
+  },
+  {
+    "objectID": "introduction.html#about-me",
+    "href": "introduction.html#about-me",
+    "title": "Introduction",
+    "section": "About me",
+    "text": "About me",
+    "crumbs": [
+      "Introduction"
     ]
   }
 ]

@@ -1,8 +1,0 @@
-# Large Language Models {#sec-large-language-models}
-
-```{r}
-#| echo: false
-#| message: false
-#| results: asis
-source("warning.R")
-```

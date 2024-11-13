@@ -24,10 +24,9 @@ book:
     - preface.qmd
     - introduction.qmd
 
-    - part: getting_started.qmd
+    - part: the_basics.qmd
       chapters:
         - ggplot2.qmd
-        - installing_packages.qmd
 
     - part: layers.qmd
       chapters:
@@ -59,8 +58,6 @@ book:
 
     - part: beyond_r.qmd
       chapters:
-        - bi_tools.qmd
-        - large_language_models.qmd
         - python.qmd
         
     - part: case_studies.qmd

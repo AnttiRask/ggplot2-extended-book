@@ -1,8 +1,0 @@
-# Installing Packages {#sec-installing-packages}
-
-```{r}
-#| echo: false
-#| message: false
-#| results: asis
-source("warning.R")
-```

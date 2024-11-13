@@ -1,4 +1,4 @@
-# BI Tools {#sec-bi-tools}
+# The Basics {#sec-the-basics-intro .unnumbered}
 
 ```{r}
 #| echo: false
@@ -6,9 +6,3 @@
 #| results: asis
 source("warning.R")
 ```
-
-## Power BI
-
-## Tableau
-
-## Others?

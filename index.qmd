@@ -1,15 +1,19 @@
 # Welcome {.unnumbered}
 
-This is the website for my book **ggplot2 extended**. It is about extending the functionality of the [ggplot2](https://ggplot2.tidyverse.org/) R package by **Hadley Wickham**. There are many extension packages that have come out since the release of ggplot2. This book is about the best most useful out of them.
+This is the website for my book **ggplot2 extended**. It is about extending the functionality of the __[ggplot2](https://ggplot2.tidyverse.org/)__ R package by **Hadley Wickham**. Many extension packages have come out since the release of __ggplot2__. This book is about how to use them to make the most out of the whole __ggplot2__ ecosystem. And which of the many extensions to use in the first place.
 
-I will go through the basics of how ggplot2 works in @sec-ggplot2. However, this book is primarily for you if you have some basic understanding of how ggplot2 works. I would suggest you first read Hadley’s book **ggplot2: Elegant Graphics for Data Analysis** [@wickham2016]. The work-in-progress 3rd edition is [online](https://ggplot2-book.org/).
+I will go through the very basics of how ggplot2 works in [@sec-ggplot2]. However, this book assumes some basic understanding of R and __ggplot2__.
 
-**R for Data Science** [@wickham2023a] also has [three chapters](https://r4ds.hadley.nz/visualize) that will get you started.
+If you're just starting with R, **R for Data Science** [@wickham2023a] is a good first stop. The book even contains [three chapters](https://r4ds.hadley.nz/visualize) on visualizing data with __ggplot2__.
 
-This book will then teach you how to get the most out of ggplot2 and the ecosystem around it.
+For a comprehensive look into __ggplot2__ and _the grammar of graphics_ I would suggest Hadley’s book **ggplot2: Elegant Graphics for Data Analysis** [@wickham2016]. You can find the work-in-progress 3rd edition [online](https://ggplot2-book.org/).
 
-This website is and will always be free, licensed under the [CC BY-NC-ND 4.0 DEED license](https://creativecommons.org/licenses/by-nc-nd/4.0/). There will be a physical copy of the book, eventually. Stay tuned!
+This website is and will always be free, licensed under the [CC BY-NC-ND 4.0 DEED license](https://creativecommons.org/licenses/by-nc-nd/4.0/). Once the whole book has been written, there will hopefully be a physical copy of the book available. Stay tuned!
 
 Please note that ggplot2 extended uses a [Contributor Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/). By contributing to this book, you agree to abide by its terms.
 
 This book is written by [Antti Rask](https://www.linkedin.com/in/anttirask/).
+
+## Acknowledgments
+
+This book was built with [Quarto](https://quarto.org/) and is hosted on [Netlify](https://www.netlify.com/).
