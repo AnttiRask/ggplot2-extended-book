@@ -24,7 +24,7 @@ book:
     - preface.qmd
     - introduction.qmd
 
-    - part: the_basics.qmd
+    - part: basics.qmd
       chapters:
         - ggplot2.qmd
 

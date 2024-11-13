@@ -1,4 +1,4 @@
-# The Basics {#sec-the-basics-intro .unnumbered}
+# Basics {#sec-basics-intro .unnumbered}
 
 ```{r}
 #| echo: false

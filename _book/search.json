@@ -326,7 +326,7 @@
     "section": "",
     "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title",
     "crumbs": [
-      "The Basics",
+      "Basics",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>ggplot2</span>"
     ]
   },
@@ -1576,6 +1576,16 @@
     "text": "About me",
     "crumbs": [
       "Introduction"
+    ]
+  },
+  {
+    "objectID": "basics.html",
+    "href": "basics.html",
+    "title": "Basics",
+    "section": "",
+    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title",
+    "crumbs": [
+      "Basics"
     ]
   }
 ]
