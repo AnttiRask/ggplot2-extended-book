@@ -28,7 +28,7 @@
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Arel-Bundock, Vincent. 2024. Rdatasets: A Collection of Datasets\nOriginally Distributed in Various r Packages.\n\n\nMüller, Kirill, and Hadley Wickham. 2023. Tibble: Simple Data\nFrames. R Package Version 3.2.1.\n\n\nWickham, Hadley. 2015. Ggplot2movies: Movies Data. R Package Version\n0.0.1.\n\n\n———. 2016. Ggplot2: Elegant Graphics for Data Analysis. 2nd ed.\nSpringer-Verlag New York.\n\n\n———. 2024. Ggplot2: Elegant Graphics for Data Analysis. R Package\nVersion 3.5.1.\n\n\nWickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy\nD’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2023.\nTidyverse: Welcome to the Tidyverse. R Package Version 2.0.0.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023.\nR for Data Science: Import, Tidy, Transform, Visualize, and Model\nData. 2nd ed. O’Reilly.",
+    "text": "Arel-Bundock, Vincent. 2024. Rdatasets: A Collection of Datasets\nOriginally Distributed in Various r Packages.\n\n\nMüller, Kirill, and Hadley Wickham. 2023. Tibble: Simple Data\nFrames. R Package Version 3.2.1.\n\n\nWickham, Hadley. 2015. Ggplot2movies: Movies Data. R Package Version\n0.0.1.\n\n\n———. 2016. Ggplot2: Elegant Graphics for Data Analysis. 2nd ed.\nSpringer-Verlag New York.\n\n\n———. 2024. Ggplot2: Elegant Graphics for Data Analysis. R Package\nVersion 3.5.1.\n\n\nWickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy\nD’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2023.\nTidyverse: Welcome to the Tidyverse. R Package Version 2.0.0.\n\n\nWickham, Hadley, and Jennifer Bryan. 2023. R Packages: Organize,\nTest, Document, and Share Your Code. 2nd ed. O’Reilly.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023.\nR for Data Science: Import, Tidy, Transform, Visualize, and Model\nData. 2nd ed. O’Reilly.",
     "crumbs": [
       "References"
     ]
@@ -38,7 +38,7 @@
     "href": "preface.html",
     "title": "Preface",
     "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title\n\n\n“The tidyverse is an opinionated collection of R packages designed for data science.” https://www.tidyverse.org/\nThis book is an opinionated compendium of R packages that extend ggplot2 (part of the tidyverse). It doesn’t try to be complete as the ecosystem is both wide and deep. The aim is to celebrate the great community that is creating fun and useful new ways to visualize data. And since we’re talking about data visualization, show what all is possible.\nThe book is about ggplot2 extension packages. But it has been important to me that I design the structure and contents concept(s) first, and package(s) second.",
+    "text": "Landscape\nLook at the figure. The amount of R packages depending1, importing2, or suggesting3 (Wickham and Bryan 2023) ggplot2 is increasing:\nAmong these thousands of packages are also hundreds of ggplot2 extensions. And these are the ones that are on CRAN (The Comprehensive R Archive Network). There are also packages on GitHub and similar platforms. Packages that no one have yet added to CRAN. Or those that have once been there, but CRAN has since archived for one reason or another.",
     "crumbs": [
       "Preface"
     ]
@@ -346,7 +346,7 @@
     "href": "introduction.html",
     "title": "Introduction",
     "section": "",
-    "text": "Purpose and scope\nA very basic reason why I started writing this book was the fact that one didn’t already exist. “Someone had to do it”, as they say.\nI know there is information out there about the different ggplot2 extension packages. There’s the package documentation, but there are also some blogs around (see Further resources).\nBut that information is quite scattered. There were many great packages I hadn’t even heard about before I started doing research for the book.",
+    "text": "Purpose and scope\nA very basic reason why I started writing this book was the fact that one didn’t already exist. “Someone had to do it”, as they say.\nI know there is information out there about the different ggplot2 extension packages. There’s the package documentation, but there are also some blogs around (see Further resources).\nBut that information is quite scattered. There were many great packages I hadn’t even heard about before I started doing research for the book.\nI’ve tried my best to test and write about the most useful among them. After all, there are hundreds of packages to choose from. And I don’t think everyone should have to go through all of them. Don’t try this at home!",
     "crumbs": [
       "Introduction"
     ]
@@ -1453,7 +1453,7 @@
     "href": "introduction.html#purpose-and-scope",
     "title": "Introduction",
     "section": "",
-    "text": "What you will learn\nThis book aims to continue from where ggplot2: Elegant Graphics for Data Analysis by Hadley Wickham (Wickham 2016) left off. In his book, Hadley does mention some extension packages by name. But there hasn’t been a comprehensive guide to using those extension packages and how to use them together.\nBasics works as kind of a “Previously, on ggplot2…”. A reminder of the basic functionalities of the core package.\nLayers goes through, in a very logical order (established in Hadley’s book) the various layers that more or less make up the grammar of graphics: Data, Geoms, Stats, Annotations, Scales and guides, Coords, Facets, and Themes.\nSpecial cases hosts particular kinds of visualization: Maps, Networks, Interactive Plots, and Animation\nWhat you won’t learn\nThese are some of the interesting topics that I had to leave out out of the book. It’s long as it is and I decided to concentrate on the topics and extensions that everyone can use. Regardless of the field you’re in.\nCombining visualizations and BI tools\nUsing R in general and ggplot2 visualizations in specific within BI tools like Power BI is cool. Interested? You can start by reading Luca Zavarella’s book Extending Power BI with Python and R.\nGenerative art\nCreating art with R - color me impressed! It’s called Rtistry or aRt, because why not. There isn’t enough room in the book for a proper chapter on this, but here are some links to get you started on the topic:\n\nartpack by Meghan Harris\naRtsy by Koen Derks\nGenerative Art by Nicola Rennie\n\nLarge language models (LLM)\nI know, it would be trendy to write about AI. And I do think they can play a part in the data visualization process. But there isn’t anything that meaningful to write about. Whatever you do, whether you use AI or not, do trust your senses!\nA machine doesn’t need to visualize data to use it. So, in a way, data visualization is one of the last bastions of human to human communication. By humans, for humans, am I right?\nSpecialized packages in specialized fields like bioinformatics\nThis one should be self-evident. “Write what you know”. I know nothing about bioinformatics. I’m not even sure I understand what the term means.\nAre you interested in bioinformatics? I mean, I don’t want to leave you hanging. There is a website and a suite of packages called Bioconductor that should get you started!\nSports\nIt’s the same as with generative art. Interesting topic, but not enough space. Still, here’s another short list of packages related to sports:\nBaseball\n\nbaseballr by Saiem Gilani\nmlbplotR by Camden Kay\n\nFootball\n\nnflplotR by Sebastian Carl\n\nSoccer\n\nggshakeR by Abhishek Amol Mishra\nggsoccer by Ben Torvaney\nsoccerAnimate by Ismael Gómez Schmidt\n\nVarious\n\nsportyR by Ross Drucker",
+    "text": "What you will learn\nThis book aims to continue from where ggplot2 by Hadley Wickham (Wickham 2016) left off. In his book, Hadley does mention some extension packages by name. But until now there hasn’t been a comprehensive guide to those extension packages and how to use them together.\nBasics works as kind of a “Previously, on ggplot2…”. A reminder of the basic function(alitie)s of the core package.\nLayers goes through the layers that make up the grammar of graphics: Data, geometric objects (Geoms), statistical transformations (Stats), titles and labels (Annotations), color, position and size of visual elements (Scales and guides), Coordinate systems, small multiples (Facets), and Themes. They, as the rest of the chapters, are in a logical order. The same order that you would build your visualization in.\nSpecial cases hosts particular kinds of visualization: Maps, Networks, Interactive Plots, and Animated Plots.\nShortcuts contains different kinds of Helpers and Interactive tools designed to make it easier to create your visualizations.\nAt some point, we will be Getting ready to publish our visualization. You’ll want to give them Finishing touches, but it’s also good to know about Arranging plots.\nAnd while ggplot2 is an R package, its impact and influence can be felt even Beyond R. So we’ll talk about Python a bit.\nTo finish off, we go through some Case studies. We build visualizations, step-by-step, from data to publication.\nWhat you won’t learn\nThese are some of the interesting topics that I had to leave out of the book. It’s long as it is and I decided to concentrate on the topics and extensions that everyone can use. Regardless of the field you’re in.\nCombining visualizations and BI tools\nUsing R in general and ggplot2 visualizations in specific within BI tools like Power BI is cool. Interested? You can start by reading Luca Zavarella’s book Extending Power BI with Python and R.\nGenerative art\nCreating art with R - color me impressed! It’s called Rtistry or aRt, because why not? There isn’t enough room in the book for a proper chapter on this, but here are some links to get you started on the topic:\n\nartpack by Meghan Harris\naRtsy by Koen Derks\nGenerative Art by Nicola Rennie\n\nLarge language models (LLM)\nI know, it would be trendy to write about AI. And I do think they can play a part in the data visualization process. But there isn’t anything that meaningful to write about. Whatever you do, whether you use AI or not, do trust your senses!\nA machine doesn’t need to visualize data to use it. So, in a way, data visualization is one of the last bastions of human-to-human communication. By humans, for humans, am I right?\nSpecialized packages in specialized fields like bioinformatics\nThis one should be self-evident. “Write what you know”. I know nothing about bioinformatics. I’m not even sure I understand what the term means.\nAre you interested in bioinformatics? I mean, I don’t want to leave you hanging. There is a website and a suite of packages called Bioconductor that should get you started!\nSports\nIt’s the same as with generative art. Interesting topic, but not enough space. Still, here’s another short list of packages related to sports:\nBaseball\n\nbaseballr by Saiem Gilani\nmlbplotR by Camden Kay\n\nFootball\n\nnflplotR by Sebastian Carl\n\nSoccer\n\nggshakeR by Abhishek Amol Mishra\nggsoccer by Ben Torvaney\nsoccerAnimate by Ismael Gómez Schmidt\n\nVarious\n\nsportyR by Ross Drucker",
     "crumbs": [
       "Introduction"
     ]
@@ -1641,6 +1641,48 @@
     "crumbs": [
       "Special cases",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Networks</span>"
+    ]
+  },
+  {
+    "objectID": "coordinate_systems.html",
+    "href": "coordinate_systems.html",
+    "title": "7  Coordinate systems",
+    "section": "",
+    "text": "7.1 Capping axis lines",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Coordinate systems</span>"
+    ]
+  },
+  {
+    "objectID": "coordinate_systems.html#serial-axes-coordinates",
+    "href": "coordinate_systems.html#serial-axes-coordinates",
+    "title": "7  Coordinate systems",
+    "section": "\n7.2 Serial axes coordinates",
+    "text": "7.2 Serial axes coordinates",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Coordinate systems</span>"
+    ]
+  },
+  {
+    "objectID": "preface.html#landscape",
+    "href": "preface.html#landscape",
+    "title": "Preface",
+    "section": "",
+    "text": "ggplot2 dependencies between 2007-2023\n\n\n\n\n\nggplot2 dependencies between 2007-2023\n\n\n\nWickham, Hadley, and Jennifer Bryan. 2023. R Packages: Organize, Test, Document, and Share Your Code. 2nd ed. O’Reilly.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "preface.html#footnotes",
+    "href": "preface.html#footnotes",
+    "title": "Preface",
+    "section": "",
+    "text": "“Depends: Listing a package in […] Depends […] ensures that it’s installed when needed. […] A package you list in Depends will be attached when your package is attached.”↩︎\n“Imports: packages listed here must be present for your package to work. Any time your package is installed, those packages will also be installed, if not already present. devtools::load_all() also checks that all packages in Imports are installed.”↩︎\n“Suggests: your package can use these packages, but doesn’t require them. You might use suggested packages for example datasets, to run tests, build vignettes, or maybe there’s only one function that needs the package.”↩︎",
+    "crumbs": [
+      "Preface"
     ]
   }
 ]

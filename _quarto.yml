@@ -35,7 +35,7 @@ book:
         - stats.qmd
         - annotations.qmd
         - scales_and_guides.qmd
-        - coords.qmd
+        - coordinate_systems.qmd
         - facets.qmd
         - themes.qmd
 

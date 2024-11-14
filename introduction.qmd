@@ -19,19 +19,29 @@ I know there is information out there about the different __ggplot2__ extension 
 
 But that information is quite scattered. There were many great packages I hadn't even heard about before I started doing research for the book.
 
+I've tried my best to test and write about the most useful among them. After all, there are hundreds of packages to choose from. And I don't think everyone should have to go through all of them. Don't try this at home!
+
 ###	What you will learn
 
-This book aims to continue from where __ggplot2: Elegant Graphics for Data Analysis__ by __Hadley Wickham__ [@wickham2016] left off. In his book, Hadley does mention some extension packages by name. But there hasn't been a comprehensive guide to using those extension packages and how to use them together.
+This book aims to continue from where __ggplot2__ by __Hadley Wickham__ [@wickham2016] left off. In his book, Hadley does mention some extension packages by name. But until now there hasn't been a comprehensive guide to those extension packages and how to use them together.
 
-__Basics__ works as kind of a "Previously, on ggplot2...". A reminder of the basic functionalities of the core package.
+__Basics__ works as kind of a "Previously, on __ggplot2__...". A reminder of the basic function(alitie)s of the _core_ package.
 
-__Layers__ goes through, in a very logical order (established in Hadley's book) the various layers that more or less make up _the grammar of graphics_: __Data__, __Geoms__, __Stats__, __Annotations__, __Scales and guides__, __Coords__, __Facets__, and __Themes__.
+__Layers__ goes through the layers that make up _the grammar of graphics_: __Data__, geometric objects (__Geoms__), statistical transformations (__Stats__), titles and labels (__Annotations__), color, position and size of visual elements (__Scales and guides__), __Coordinate systems__, small multiples (__Facets__), and __Themes__. They, as the rest of the chapters, are in a logical order. The same order that you would build your visualization in.
 
-__Special cases__ hosts particular kinds of visualization: Maps, Networks, Interactive Plots, and Animation
+__Special cases__ hosts particular kinds of visualization: __Maps__, __Networks__, __Interactive Plots__, and __Animated Plots__.
+
+__Shortcuts__ contains different kinds of __Helpers__ and __Interactive tools__ designed to make it easier to create your visualizations.
+
+At some point, we will be __Getting ready to publish__ our visualization. You'll want to give them __Finishing touches__, but it's also good to know about __Arranging plots__.
+
+And while __ggplot2__ is an R package, its impact and influence can be felt even __Beyond R__. So we'll talk about __Python__ a bit.
+
+To finish off, we go through some __Case studies__. We build visualizations, step-by-step, from data to publication.
 
 ###	What you won’t learn
 
-These are some of the interesting topics that I had to leave out out of the book. It's long as it is and I decided to concentrate on the topics and extensions that everyone can use. Regardless of the field you're in.
+These are some of the interesting topics that I had to leave out of the book. It's long as it is and I decided to concentrate on the topics and extensions that everyone can use. Regardless of the field you're in.
 
 __Combining visualizations and BI tools__
 
@@ -39,7 +49,7 @@ Using R in general and __ggplot2__ visualizations in specific within BI tools li
 
 __Generative art__
 
-Creating art with R - color me impressed! It's called Rtistry or aRt, because why not. There isn’t enough room in the book for a proper chapter on this, but here are some links to get you started on the topic:
+Creating art with R - color me impressed! It's called Rtistry or aRt, because why not? There isn’t enough room in the book for a proper chapter on this, but here are some links to get you started on the topic:
 
 - [artpack by Meghan Harris](https://meghansaha.github.io/artpack/)
 - [aRtsy by Koen Derks](https://koenderks.github.io/aRtsy/)
@@ -49,7 +59,7 @@ __Large language models (LLM)__
 
 I know, it would be trendy to write about AI. And I do think they can play a part in the data visualization process. But there isn’t anything that meaningful to write about. Whatever you do, whether you use AI or not, do trust your senses!
 
-A machine doesn't need to visualize data to use it. So, in a way, data visualization is one of the last bastions of human to human communication. By humans, for humans, am I right?
+A machine doesn't need to visualize data to use it. So, in a way, data visualization is one of the last bastions of human-to-human communication. By humans, for humans, am I right?
 
 __Specialized packages in specialized fields like bioinformatics__
 
