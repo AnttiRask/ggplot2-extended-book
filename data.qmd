@@ -1,9 +1,10 @@
 # Data {#sec-data}
 
 ```{r}
-#| echo: false
+#| echo:    false
 #| message: false
 #| results: asis
+
 source("warning.R")
 ```
 
@@ -13,9 +14,13 @@ This book is about tools for creating visualizations. But to visualize data you 
 
 ### base R
 
-Base R comes with a bunch of data sets ready to use. There are classics like 'iris' and 'mtcars', but there are many more to choose from:
+Base R comes with a bunch of data sets ready to use. There are classics like __iris__ and __mtcars__, but there are many more to choose from:
 
-```{r, echo=FALSE, message=FALSE}
+```{r}
+#| echo:    false
+#| message: false
+#| results: asis
+
 library(dplyr)
 library(purrr)
 library(rmarkdown)
@@ -29,9 +34,9 @@ data() %>%
   paged_table()
 ```
 
-Since the **datasets** package is from base R, the data is not always immediately ready to use with **ggplot2** [@wickham2024]. Luckily we have the **tidyverse** [@wickham2023b] packages that make it easy to make the necessary changes.
+Since the __datasets__ package comes from base R, the data is not always immediately ready to use with __ggplot2__ [@wickham2024]. Luckily we have the __tidyverse__ [@wickham2023b] packages that make it easy to make the necessary changes.
 
-Here is an example using the **USArrests** ('Violent Crime Rates by US State') data set. We can start by loading the data set by using the `data()` function:
+Here is an example using the __USArrests__ ('Violent Crime Rates by US State') data set. We can start by loading the data set by using the `data()` function:
 
 ```{r}
 data(USArrests)
@@ -43,7 +48,7 @@ Let's take a quick look at what the first couple of rows of the data set looks l
 head(USArrests)
 ```
 
-As you can see, **USArrests** is a data frame. It has four columns and the names of the US states are row names. We would like to see them as the fifth column instead. We can use the **tibble** [@müller2023] package to do that. While we're at it, let's also change the data frame into a tibble:
+As you can see, USArrests is a data frame. It has four columns and the names of the US states are row names. We would like to see them as the fifth column instead. We can use the __tibble__ [@müller2023] package to do that. While we're at it, let's also change the data frame into a tibble:
 
 ```{r}
 library(tibble)
@@ -53,12 +58,16 @@ usarrests_tbl <- USArrests %>%
   as_tibble()
 ```
 
-```{r, echo=FALSE, message=FALSE}
+```{r}
+#| echo: false
+#| message: false
+#| results: asis
+
 usarrests_tbl %>%
   paged_table()
 ```
 
-We can then use the new tibble to create a simple visualization with **ggplot2**:
+We can then use the new tibble to create a simple visualization with ggplot2:
 
 ```{r}
 library(ggplot2)
@@ -72,11 +81,11 @@ usarrests_tbl %>%
 
 ### IMDb movies (1893-2005)
 
-**ggplot2movies** [@wickham2015] used to be a part of the **ggplot2** package itself. It’s now its own package to make **ggplot2** lighter.
+__ggplot2movies__ [@wickham2015] used to be a part of the ggplot2 package itself. It’s now its own package to make ggplot2 lighter.
 
 But it’s a cool little package. It has [Internet Movie Database (IMDb)](https://www.imdb.com/) data about movies from between 1893 and 2005. The selected movies have "a known length and had been rated by at least one \[IMDb\] user." [@wickham2015].
 
-The **Movies** data set has qualities that make it good for our needs. Let’s start by loading it:
+The __Movies__ data set has qualities that make it good for our needs. Let’s start by loading it:
 
 ```{r}
 library(ggplot2movies)
@@ -86,20 +95,43 @@ data(movies)
 
 Let's take a quick look at what some of the data looks like:
 
-```{r, eval=FALSE}
+```{r}
+#| eval: false
+
 head(movies)
 ```
 
-```{r, echo=FALSE, message=FALSE}
+```{r}
+#| echo: false
+#| message: false
+#| results: asis
+
 head(movies) %>%
   paged_table()
 ```
 
-**Movies** is already a tibble. It consists of 58788 rows (observations) and 24 columns (variables).
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+# Get the number of columns
+.movies_ncols <- ncol(movies)
+
+# Get the row count
+.movies_rowcount <- movies %>% 
+  tally()
+```
+
+Movies is already a tibble. It consists of `r .movies_rowcount` rows (observations) and `r .movies_ncols` columns (variables).
 
 When starting to work with a new data set it's always good to take a look at the documentation. To understand what is in those rows and columns (and what is not):
 
-```{r, echo=FALSE}
+```{r}
+#| echo: false
+#| message: false
+#| results: asis
+
 tribble(
   ~Variable,     ~Description,
   "title",       "Title of the movie",
@@ -130,13 +162,13 @@ tribble(
   paged_table()
 ```
 
-Here are some of the reasons why **Movies** is a good example data set because it includes:
+Here are some of the reasons why Movies is a good example data set because it includes:
 
 -   A goldilocks amount of data. Not too little, not too much
 -   *Categorical* data of both *nominal* (title, genre) and *ordinal* (mpaa) kind
 -   *Numerical* data of both *continuous* (budget, length, rating) and *discrete* (year, votes) kind
 
-We can use two of those columns, **year** and **rating** to create a simple visualization with **ggplot2**:
+We can use two of those columns, __year__ and __rating__ to create a simple visualization with ggplot2:
 
 ```{r}
 library(ggplot2)
@@ -146,19 +178,31 @@ movies %>%
   geom_point()
 ```
 
-As mentioned earlier, **Movies** is already a tibble. But, it doesn't mean that the data is in an optimal format for all kinds of visualization. But we'll do all the necessary data wrangling within the chapter where we use the data.
+As mentioned earlier, Movies is already a tibble. But, it doesn't mean that the data is in an optimal format for all kinds of visualization. But we'll do all the necessary data wrangling within the chapter where we use the data.
 
 ### RDatasets
 
-[**RDatasets**](https://vincentarelbundock.github.io/Rdatasets/articles/data.html) is not an R package. But it is an excellent GitHub repo. And a “collection of datasets originally distributed in various R packages" [@arel-bundock2024].
+[__RDatasets__](https://vincentarelbundock.github.io/Rdatasets/articles/data.html) is not an R package. But it is an excellent GitHub repo. And a “collection of datasets originally distributed in various R packages" [@arel-bundock2024].
 
-Here listed are the 2337 datasets that were available on 2024-11-11:
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-library(dplyr)
 library(readr)
+library(stringr)
 
-read_csv2("data/RDatasets_2024_11_11.csv") %>%
+# Get filename
+filename <- list.files(
+  path    = "data",
+  pattern = "RDatasets"
+)
+
+# Extract the date
+.RDatasets_date <- str_extract(filename, "\\d{4}-\\d{2}-\\d{2}")
+
+# Get the data
+.RDatasets <- read_csv2("data/RDatasets-2024-11-11.csv") %>%
   select(
     Package,
     Item,
@@ -170,13 +214,28 @@ read_csv2("data/RDatasets_2024_11_11.csv") %>%
     n_factor,
     n_logical,
     n_numeric
-  ) %>%
+  )
+
+# Get the row count
+.RDatasets_rowcount <- .RDatasets %>% 
+  tally()
+```
+
+Here listed are the `r .RDatasets_rowcount` data sets that were available on `r .RDatasets_date`:
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| results: asis
+
+.RDatasets %>% 
   paged_table()
 ```
 
-The **RDatasets** repo contains that same list. But there you will also find a .csv file and documentation for each data set.
+The RDatasets repo contains that same list. But there you will also find a .csv file and documentation for each data set.
 
-If I had to choose one fun data set from the list to highlight, it would be **starwars** from the **dplyr** package.
+If I had to choose one fun data set from the list to highlight, it would be __starwars__ from the __dplyr__ [@wickham2023c] package.
 
 You can choose to use the .csv file provided on the website. Another way to use the collection is to choose the dataset from the list and load the package it comes with:
 
@@ -186,22 +245,32 @@ library(dplyr)
 data(starwars)
 ```
 
-Let's take a quick look at what some of the **starwars** data looks like:
+Let's take a quick look at what some of the starwars data looks like:
 
-```{r, eval=FALSE}
+```{r}
+#| eval: false
+
 head(starwars)
 ```
 
-```{r, echo=FALSE, message=FALSE}
+```{r}
+#| echo: false
+#| message: false
+#| results: asis
+
 head(starwars) %>%
   paged_table()
 ```
 
 There are a bunch of Star Wars characters and their stats.
 
-Let's choose two columns, **height** and **species** (and filter for six of the more well-known species). We'll use them to create a simple visualization with **ggplot2**:
+Let's choose two columns, **height** and **species** (and filter for six of the more well-known species). We'll use them to create a simple visualization with ggplot2:
 
-```{r, warning=FALSE}
+```{r}
+#| message: false
+#| warning: false
+#| results: asis
+
 library(ggplot2)
 
 starwars %>%

@@ -4,30 +4,33 @@
 #| echo: false
 #| message: false
 #| results: asis
+
 source("warning.R")
+
+library(RandomWalker)
 ```
 
 Data visualization is one of those things that can look easy when you see someone doing it well. Then you try it yourself and it's easy to feel like you know nothing.
 
-I wanted to share the tools that make it easier to create those beautiful visualizations. And to show you how to use those tools together, not only with __ggplot2__, but with each other.
+I wanted to share the tools that make it easier to create those beautiful visualizations. And to show you how to use those tools together, not only with __ggplot2__ [@wickham2024], but with each other.
 
 ## Purpose and scope
 
 A very basic reason why I started writing this book was the fact that one didn't already exist. "Someone had to do it", as they say.
 
-I know there is information out there about the different __ggplot2__ extension packages. There's the package documentation, but there are also some blogs around (see @sec-further-resources).
+I know there is information out there about the different ggplot2 extension packages. There's the package documentation, but there are also some blogs around (see @sec-further-resources).
 
 But that information is quite scattered. There were many great packages I hadn't even heard about before I started doing research for the book.
 
-I've tried my best to test and write about the most useful among them. After all, there are hundreds of packages to choose from. And I don't think everyone should have to go through all of them. Don't try this at home!
+I’ve tried my best to test and write about the most useful among them. After all, there are hundreds of packages to choose from. And I don’t think everyone should have to go through them all. Don’t try this at home!
 
 ###	What you will learn
 
-This book aims to continue from where __ggplot2__ by __Hadley Wickham__ [@wickham2016] left off. In his book, Hadley does mention some extension packages by name. But until now there hasn't been a comprehensive guide to those extension packages and how to use them together.
+This book aims to continue from where __ggplot2: Elegant Graphics for Data Analysis__ [@wickham2016] left off. In his book, Hadley does mention some extension packages by name. But until now there hasn’t been a comprehensive guide to those extension packages. And how to use them together.
 
 __Basics__ works as kind of a "Previously, on __ggplot2__...". A reminder of the basic function(alitie)s of the _core_ package.
 
-__Layers__ goes through the layers that make up _the grammar of graphics_: __Data__, geometric objects (__Geoms__), statistical transformations (__Stats__), titles and labels (__Annotations__), color, position and size of visual elements (__Scales and guides__), __Coordinate systems__, small multiples (__Facets__), and __Themes__. They, as the rest of the chapters, are in a logical order. The same order that you would build your visualization in.
+__Layers__ goes through the layers that make up _the grammar of graphics_: __Data__, geometric objects (__Geoms__), statistical transformations (__Stats__), titles and labels (__Annotations__), color, position and size of visual elements (__Scales and guides__), __Coordinate systems__, small multiples (__Facets__), and __Themes__. They are in a logical order. As are the rest of the chapters. The same order that you would build your visualization in.
 
 __Special cases__ hosts particular kinds of visualization: __Maps__, __Networks__, __Interactive Plots__, and __Animated Plots__.
 
@@ -35,7 +38,7 @@ __Shortcuts__ contains different kinds of __Helpers__ and __Interactive tools__ 
 
 At some point, we will be __Getting ready to publish__ our visualization. You'll want to give them __Finishing touches__, but it's also good to know about __Arranging plots__.
 
-And while __ggplot2__ is an R package, its impact and influence can be felt even __Beyond R__. So we'll talk about __Python__ a bit.
+And while ggplot2 is an R package, its impact and influence go __Beyond R__. So we'll talk about __Python__ a bit.
 
 To finish off, we go through some __Case studies__. We build visualizations, step-by-step, from data to publication.
 
@@ -45,7 +48,7 @@ These are some of the interesting topics that I had to leave out of the book. It
 
 __Combining visualizations and BI tools__
 
-Using R in general and __ggplot2__ visualizations in specific within BI tools like Power BI is cool. Interested? You can start by reading Luca Zavarella's book [Extending Power BI with Python and R](https://www.packtpub.com/en-us/product/extending-power-bi-with-python-and-r-9781837639533).
+Using R in general and ggplot2 visualizations in specific within BI tools like Power BI is cool. Interested? You can start by reading Luca Zavarella's book [Extending Power BI with Python and R](https://www.packtpub.com/en-us/product/extending-power-bi-with-python-and-r-9781837639533).
 
 __Generative art__
 
@@ -90,9 +93,29 @@ __Various__
 
 - [sportyR by Ross Drucker](https://sportyr.sportsdataverse.org/)
 
-## Who the book is for?
+## Who is the book for?
 
-## About me
+I assume that you're reading this because you're interested in data visualization, R, or both.
+
+I already wrote about this in the Welcome section. This book is for people who already have a working knowledge of ggplot2 and _the grammar of graphics_. I'm quite adamant on that. You should learn the foundations first. And there are already excellent books and websites for that.
+
+Other than that, the tools and techniques in the book aren't all that advanced (at least most of them). You don't have to be a visualization wizard to find the book useful. Each of the chapters will contain code that you can use almost verbatim.
+
+It doesn't even matter if R isn't your _native_ language. You might find an inspiring R package and then go on and find a similar package in your preferred language. Or write that package, if one doesn't already exist. It's all good!
+
+## Who am I to write this book?
+
+Hi! I'm Antti Rask, a data analyst if you had to choose one label. I've lived many lives and had many careers before finding my truest calling in data.
+
+I've been interested in data visualization longer than I've been using R (which I started in late 2019/early 2020). My first visualizations I made with Excel. At some point I switched to Power BI. Which is still my main tool for visualization at work.
+
+You could say that I am an artistic type. Music has been the main avenue for my artistic self-expression for most of my life. But I'm also interested in taking photos of street art that I come across on my adventures either in Helsinki, Finland or when I'm abroad.
+
+When it comes to visualizing data, however, I do find myself attracted more towards the __Stephen Few__ school of thought. Less is usually more and [chartjunk](https://en.wikipedia.org/wiki/Chartjunk) should be avoided at all costs. Still, I'm not a purist, by any means.
+
+I've co-authored the __RandomWalker__ [@sanderson2024] R package with Steven Paul Sanderson II ([\@spsanderson](https://github.com/spsanderson)). Specifically the function `visualize_walks()` that uses ggplot2 and some of the extensions found in this book.
+
+I also like to tinker with R Shiny and recently made an app called [TuneTeller](https://youcanbeapirate.shinyapps.io/TuneTeller/). It received an _honorable mention_ in the 2024 [Shiny Contest](https://posit.co/blog/winners-of-the-2024-shiny-contest/).
 
 ## R
 
@@ -162,8 +185,41 @@ Marc Eixarch ([\@Marceix](https://github.com/Marceix/)) and Vicent Boned Riera (
 
 [Joe Reis](https://www.linkedin.com/in/josephreis/), [Ole Olesen-Bagneux](https://www.linkedin.com/in/ole-olesen-bagneux/), and [Vin Vashishta](https://www.linkedin.com/in/vineetvashishta/) for your generosity and time. And for setting a positive example for someone like me to follow.
 
-Hadley Wickham ([\@hadley](https://github.com/hadley/)) for all the books and packages. __R for Data Science__ [@wickham2023a] got me started with R. __ggplot2: Elegant Graphics for Data Analysis__ [@wickham2016] helped me understand __ggplot2__ and _the grammar of graphics_ on a deeper level.
+Hadley Wickham ([\@hadley](https://github.com/hadley/)) for all the books and packages. __R for Data Science__ [@wickham2023a] got me started with R. __ggplot2: Elegant Graphics for Data Analysis__ [@wickham2016] helped me understand ggplot2 and _the grammar of graphics_ on a deeper level.
 
 To be continued...
 
 ## Colophon
+
+This book was written in [RStudio](https://posit.co/products/open-source/rstudio/) using [Quarto](https://quarto.org/). The website is hosted with [Netlify](https://www.netlify.com/), and automatically updated after every commit by [Github Actions](https://github.com/features/actions). The complete source is available from [GitHub](https://github.com/AnttiRask/ggplot2-extended-book/).
+
+This version of the book was built with `r R.version.string` and the following packages:
+
+```{r}
+#| echo: false
+
+pkgs <- c(
+  "dplyr",
+  "ggplot2",
+  "ggplot2movies",
+  "purrr",
+  "readr",
+  "rmarkdown",
+  "tibble"
+)
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| results: asis
+
+library(dplyr)
+library(rmarkdown)
+library(sessioninfo)
+
+package_info(pkgs, dependencies = FALSE) %>% 
+  as_tibble() %>%
+  select(package, version = ondiskversion, source) %>% 
+  paged_table()
+```

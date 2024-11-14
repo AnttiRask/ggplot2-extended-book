@@ -84,7 +84,8 @@ div.csl-indent {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><script data-goatcounter="https://ggplot2-extended-book.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
+}</script><script data-goatcounter="https://ggplot2-extended-book.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
 </head>
 <body class="nav-sidebar floating">
 
@@ -339,8 +340,8 @@ div.csl-indent {
   <li><a href="#what-you-wont-learn" id="toc-what-you-wont-learn" class="nav-link" data-scroll-target="#what-you-wont-learn">What you won’t learn</a></li>
   </ul>
 </li>
-  <li><a href="#who-the-book-is-for" id="toc-who-the-book-is-for" class="nav-link" data-scroll-target="#who-the-book-is-for">Who the book is for?</a></li>
-  <li><a href="#about-me" id="toc-about-me" class="nav-link" data-scroll-target="#about-me">About me</a></li>
+  <li><a href="#who-is-the-book-for" id="toc-who-is-the-book-for" class="nav-link" data-scroll-target="#who-is-the-book-for">Who is the book for?</a></li>
+  <li><a href="#who-am-i-to-write-this-book" id="toc-who-am-i-to-write-this-book" class="nav-link" data-scroll-target="#who-am-i-to-write-this-book">Who am I to write this book?</a></li>
   <li>
 <a href="#r" id="toc-r" class="nav-link" data-scroll-target="#r">R</a>
   <ul class="collapse">
@@ -397,25 +398,25 @@ This book/site is under construction
 </div>
 </div>
 <p>Data visualization is one of those things that can look easy when you see someone doing it well. Then you try it yourself and it’s easy to feel like you know nothing.</p>
-<p>I wanted to share the tools that make it easier to create those beautiful visualizations. And to show you how to use those tools together, not only with <strong>ggplot2</strong>, but with each other.</p>
+<p>I wanted to share the tools that make it easier to create those beautiful visualizations. And to show you how to use those tools together, not only with <strong>ggplot2</strong> <span class="citation" data-cites="wickham2024">(<a href="references.html#ref-wickham2024" role="doc-biblioref">Wickham 2024</a>)</span>, but with each other.</p>
 <section id="purpose-and-scope" class="level2"><h2 class="anchored" data-anchor-id="purpose-and-scope">Purpose and scope</h2>
 <p>A very basic reason why I started writing this book was the fact that one didn’t already exist. “Someone had to do it”, as they say.</p>
-<p>I know there is information out there about the different <strong>ggplot2</strong> extension packages. There’s the package documentation, but there are also some blogs around (see <a href="#sec-further-resources" class="quarto-xref"><span>Further resources</span></a>).</p>
+<p>I know there is information out there about the different ggplot2 extension packages. There’s the package documentation, but there are also some blogs around (see <a href="#sec-further-resources" class="quarto-xref"><span>Further resources</span></a>).</p>
 <p>But that information is quite scattered. There were many great packages I hadn’t even heard about before I started doing research for the book.</p>
-<p>I’ve tried my best to test and write about the most useful among them. After all, there are hundreds of packages to choose from. And I don’t think everyone should have to go through all of them. Don’t try this at home!</p>
+<p>I’ve tried my best to test and write about the most useful among them. After all, there are hundreds of packages to choose from. And I don’t think everyone should have to go through them all. Don’t try this at home!</p>
 <section id="what-you-will-learn" class="level3"><h3 class="anchored" data-anchor-id="what-you-will-learn">What you will learn</h3>
-<p>This book aims to continue from where <strong>ggplot2</strong> by <strong>Hadley Wickham</strong> <span class="citation" data-cites="wickham2016">(<a href="references.html#ref-wickham2016" role="doc-biblioref">Wickham 2016</a>)</span> left off. In his book, Hadley does mention some extension packages by name. But until now there hasn’t been a comprehensive guide to those extension packages and how to use them together.</p>
+<p>This book aims to continue from where <strong>ggplot2: Elegant Graphics for Data Analysis</strong> <span class="citation" data-cites="wickham2016">(<a href="references.html#ref-wickham2016" role="doc-biblioref">Wickham 2016</a>)</span> left off. In his book, Hadley does mention some extension packages by name. But until now there hasn’t been a comprehensive guide to those extension packages. And how to use them together.</p>
 <p><strong>Basics</strong> works as kind of a “Previously, on <strong>ggplot2</strong>…”. A reminder of the basic function(alitie)s of the <em>core</em> package.</p>
-<p><strong>Layers</strong> goes through the layers that make up <em>the grammar of graphics</em>: <strong>Data</strong>, geometric objects (<strong>Geoms</strong>), statistical transformations (<strong>Stats</strong>), titles and labels (<strong>Annotations</strong>), color, position and size of visual elements (<strong>Scales and guides</strong>), <strong>Coordinate systems</strong>, small multiples (<strong>Facets</strong>), and <strong>Themes</strong>. They, as the rest of the chapters, are in a logical order. The same order that you would build your visualization in.</p>
+<p><strong>Layers</strong> goes through the layers that make up <em>the grammar of graphics</em>: <strong>Data</strong>, geometric objects (<strong>Geoms</strong>), statistical transformations (<strong>Stats</strong>), titles and labels (<strong>Annotations</strong>), color, position and size of visual elements (<strong>Scales and guides</strong>), <strong>Coordinate systems</strong>, small multiples (<strong>Facets</strong>), and <strong>Themes</strong>. They are in a logical order. As are the rest of the chapters. The same order that you would build your visualization in.</p>
 <p><strong>Special cases</strong> hosts particular kinds of visualization: <strong>Maps</strong>, <strong>Networks</strong>, <strong>Interactive Plots</strong>, and <strong>Animated Plots</strong>.</p>
 <p><strong>Shortcuts</strong> contains different kinds of <strong>Helpers</strong> and <strong>Interactive tools</strong> designed to make it easier to create your visualizations.</p>
 <p>At some point, we will be <strong>Getting ready to publish</strong> our visualization. You’ll want to give them <strong>Finishing touches</strong>, but it’s also good to know about <strong>Arranging plots</strong>.</p>
-<p>And while <strong>ggplot2</strong> is an R package, its impact and influence can be felt even <strong>Beyond R</strong>. So we’ll talk about <strong>Python</strong> a bit.</p>
+<p>And while ggplot2 is an R package, its impact and influence go <strong>Beyond R</strong>. So we’ll talk about <strong>Python</strong> a bit.</p>
 <p>To finish off, we go through some <strong>Case studies</strong>. We build visualizations, step-by-step, from data to publication.</p>
 </section><section id="what-you-wont-learn" class="level3"><h3 class="anchored" data-anchor-id="what-you-wont-learn">What you won’t learn</h3>
 <p>These are some of the interesting topics that I had to leave out of the book. It’s long as it is and I decided to concentrate on the topics and extensions that everyone can use. Regardless of the field you’re in.</p>
 <p><strong>Combining visualizations and BI tools</strong></p>
-<p>Using R in general and <strong>ggplot2</strong> visualizations in specific within BI tools like Power BI is cool. Interested? You can start by reading Luca Zavarella’s book <a href="https://www.packtpub.com/en-us/product/extending-power-bi-with-python-and-r-9781837639533">Extending Power BI with Python and R</a>.</p>
+<p>Using R in general and ggplot2 visualizations in specific within BI tools like Power BI is cool. Interested? You can start by reading Luca Zavarella’s book <a href="https://www.packtpub.com/en-us/product/extending-power-bi-with-python-and-r-9781837639533">Extending Power BI with Python and R</a>.</p>
 <p><strong>Generative art</strong></p>
 <p>Creating art with R - color me impressed! It’s called Rtistry or aRt, because why not? There isn’t enough room in the book for a proper chapter on this, but here are some links to get you started on the topic:</p>
 <ul>
@@ -449,8 +450,18 @@ This book/site is under construction
 <p><strong>Various</strong></p>
 <ul>
 <li><a href="https://sportyr.sportsdataverse.org/">sportyR by Ross Drucker</a></li>
-</ul></section></section><section id="who-the-book-is-for" class="level2"><h2 class="anchored" data-anchor-id="who-the-book-is-for">Who the book is for?</h2>
-</section><section id="about-me" class="level2"><h2 class="anchored" data-anchor-id="about-me">About me</h2>
+</ul></section></section><section id="who-is-the-book-for" class="level2"><h2 class="anchored" data-anchor-id="who-is-the-book-for">Who is the book for?</h2>
+<p>I assume that you’re reading this because you’re interested in data visualization, R, or both.</p>
+<p>I already wrote about this in the Welcome section. This book is for people who already have a working knowledge of ggplot2 and <em>the grammar of graphics</em>. I’m quite adamant on that. You should learn the foundations first. And there are already excellent books and websites for that.</p>
+<p>Other than that, the tools and techniques in the book aren’t all that advanced (at least most of them). You don’t have to be a visualization wizard to find the book useful. Each of the chapters will contain code that you can use almost verbatim.</p>
+<p>It doesn’t even matter if R isn’t your <em>native</em> language. You might find an inspiring R package and then go on and find a similar package in your preferred language. Or write that package, if one doesn’t already exist. It’s all good!</p>
+</section><section id="who-am-i-to-write-this-book" class="level2"><h2 class="anchored" data-anchor-id="who-am-i-to-write-this-book">Who am I to write this book?</h2>
+<p>Hi! I’m Antti Rask, a data analyst if you had to choose one label. I’ve lived many lives and had many careers before finding my truest calling in data.</p>
+<p>I’ve been interested in data visualization longer than I’ve been using R (which I started in late 2019/early 2020). My first visualizations I made with Excel. At some point I switched to Power BI. Which is still my main tool for visualization at work.</p>
+<p>You could say that I am an artistic type. Music has been the main avenue for my artistic self-expression for most of my life. But I’m also interested in taking photos of street art that I come across on my adventures either in Helsinki, Finland or when I’m abroad.</p>
+<p>When it comes to visualizing data, however, I do find myself attracted more towards the <strong>Stephen Few</strong> school of thought. Less is usually more and <a href="https://en.wikipedia.org/wiki/Chartjunk">chartjunk</a> should be avoided at all costs. Still, I’m not a purist, by any means.</p>
+<p>I’ve co-authored the <strong>RandomWalker</strong> <span class="citation" data-cites="sanderson2024">(<a href="references.html#ref-sanderson2024" role="doc-biblioref">Sanderson and Rask 2024</a>)</span> R package with Steven Paul Sanderson II (<a href="https://github.com/spsanderson">@spsanderson</a>). Specifically the function <code>visualize_walks()</code> that uses ggplot2 and some of the extensions found in this book.</p>
+<p>I also like to tinker with R Shiny and recently made an app called <a href="https://youcanbeapirate.shinyapps.io/TuneTeller/">TuneTeller</a>. It received an <em>honorable mention</em> in the 2024 <a href="https://posit.co/blog/winners-of-the-2024-shiny-contest/">Shiny Contest</a>.</p>
 </section><section id="r" class="level2"><h2 class="anchored" data-anchor-id="r">R</h2>
 <section id="programming-language" class="level3"><h3 class="anchored" data-anchor-id="programming-language">Programming language</h3>
 </section><section id="rstudio-alternatives" class="level3"><h3 class="anchored" data-anchor-id="rstudio-alternatives">RStudio &amp; alternatives</h3>
@@ -504,14 +515,27 @@ This book/site is under construction
 <p><a href="https://www.linkedin.com/in/eevamaijavirtanen/">Eevamaija Virtanen</a>, <a href="https://www.linkedin.com/in/jkorpela/">Juha Korpela</a>, and <a href="https://www.linkedin.com/in/sade-haveri/">Säde Haveri</a> for founding <a href="https://www.helsinkidataweek.com/">Helsinki Data Week</a> with me. For helping me dream big! And for making me realize a big project like this is possible when you keep making constant progress.</p>
 <p>Marc Eixarch (<a href="https://github.com/Marceix/">@Marceix</a>) and Vicent Boned Riera (<a href="https://github.com/eivicent/">@eivicent</a>) from the <a href="https://www.meetup.com/r-user-group-finland/">R User Group Finland</a>. Learning R has been more fun thanks to your efforts in keeping the local R scene active in Helsinki, Finland.</p>
 <p><a href="https://www.linkedin.com/in/josephreis/">Joe Reis</a>, <a href="https://www.linkedin.com/in/ole-olesen-bagneux/">Ole Olesen-Bagneux</a>, and <a href="https://www.linkedin.com/in/vineetvashishta/">Vin Vashishta</a> for your generosity and time. And for setting a positive example for someone like me to follow.</p>
-<p>Hadley Wickham (<a href="https://github.com/hadley/">@hadley</a>) for all the books and packages. <strong>R for Data Science</strong> <span class="citation" data-cites="wickham2023a">(<a href="references.html#ref-wickham2023a" role="doc-biblioref">Wickham, Çetinkaya-Rundel, and Grolemund 2023</a>)</span> got me started with R. <strong>ggplot2: Elegant Graphics for Data Analysis</strong> <span class="citation" data-cites="wickham2016">(<a href="references.html#ref-wickham2016" role="doc-biblioref">Wickham 2016</a>)</span> helped me understand <strong>ggplot2</strong> and <em>the grammar of graphics</em> on a deeper level.</p>
+<p>Hadley Wickham (<a href="https://github.com/hadley/">@hadley</a>) for all the books and packages. <strong>R for Data Science</strong> <span class="citation" data-cites="wickham2023a">(<a href="references.html#ref-wickham2023a" role="doc-biblioref">Wickham, Çetinkaya-Rundel, and Grolemund 2023</a>)</span> got me started with R. <strong>ggplot2: Elegant Graphics for Data Analysis</strong> <span class="citation" data-cites="wickham2016">(<a href="references.html#ref-wickham2016" role="doc-biblioref">Wickham 2016</a>)</span> helped me understand ggplot2 and <em>the grammar of graphics</em> on a deeper level.</p>
 <p>To be continued…</p>
 </section><section id="colophon" class="level2"><h2 class="anchored" data-anchor-id="colophon">Colophon</h2>
+<p>This book was written in <a href="https://posit.co/products/open-source/rstudio/">RStudio</a> using <a href="https://quarto.org/">Quarto</a>. The website is hosted with <a href="https://www.netlify.com/">Netlify</a>, and automatically updated after every commit by <a href="https://github.com/features/actions">Github Actions</a>. The complete source is available from <a href="https://github.com/AnttiRask/ggplot2-extended-book/">GitHub</a>.</p>
+<p>This version of the book was built with R version 4.4.1 (2024-06-14 ucrt) and the following packages:</p>
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["package"],"name":[1],"type":["chr"],"align":["left"]},{"label":["version"],"name":[2],"type":["chr"],"align":["left"]},{"label":["source"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"dplyr","2":"1.1.4","3":"CRAN (R 4.4.0)"},{"1":"ggplot2","2":"3.5.1","3":"CRAN (R 4.4.0)"},{"1":"ggplot2movies","2":"0.0.1","3":"RSPM"},{"1":"purrr","2":"1.0.2","3":"CRAN (R 4.4.0)"},{"1":"readr","2":"2.1.5","3":"CRAN (R 4.4.0)"},{"1":"rmarkdown","2":"2.29","3":"RSPM"},{"1":"tibble","2":"3.2.1","3":"CRAN (R 4.4.0)"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-sanderson2024" class="csl-entry" role="listitem">
+Sanderson, Steven, and Antti Rask. 2024. <em>RandomWalker: Generate Random Walks Compatible with the ’Tidyverse’. R Package Version 0.2.0</em>.
+</div>
 <div id="ref-wickham2016" class="csl-entry" role="listitem">
 Wickham, Hadley. 2016. <em>Ggplot2: Elegant Graphics for Data Analysis</em>. 2nd ed. Springer-Verlag New York.
+</div>
+<div id="ref-wickham2024" class="csl-entry" role="listitem">
+———. 2024. <em>Ggplot2: Elegant Graphics for Data Analysis. R Package Version 3.5.1</em>.
 </div>
 <div id="ref-wickham2023a" class="csl-entry" role="listitem">
 Wickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023. <em>R for Data Science: Import, Tidy, Transform, Visualize, and Model Data</em>. 2nd ed. O’Reilly.
