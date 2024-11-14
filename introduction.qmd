@@ -113,7 +113,7 @@ You could say that I am an artistic type. Music has been the main avenue for my 
 
 When it comes to visualizing data, however, I do find myself attracted more towards the __Stephen Few__ school of thought. Less is usually more and [chartjunk](https://en.wikipedia.org/wiki/Chartjunk) should be avoided at all costs. Still, I'm not a purist, by any means.
 
-I've co-authored the __RandomWalker__ [@sanderson2024] R package with Steven Paul Sanderson II ([\@spsanderson](https://github.com/spsanderson)). Specifically the function `visualize_walks()` that uses ggplot2 and some of the extensions found in this book.
+I've co-authored the __RandomWalker__ [@sanderson2024] R package with __Steven Paul Sanderson II__ ([\@spsanderson](https://github.com/spsanderson)). Specifically the function `visualize_walks()` that uses ggplot2 and some of the extensions found in this book.
 
 I also like to tinker with R Shiny and recently made an app called [TuneTeller](https://youcanbeapirate.shinyapps.io/TuneTeller/). It received an _honorable mention_ in the 2024 [Shiny Contest](https://posit.co/blog/winners-of-the-2024-shiny-contest/).
 
@@ -181,11 +181,11 @@ __YouTube__
 
 [Eevamaija Virtanen](https://www.linkedin.com/in/eevamaijavirtanen/), [Juha Korpela](https://www.linkedin.com/in/jkorpela/), and [Säde Haveri](https://www.linkedin.com/in/sade-haveri/) for founding [Helsinki Data Week](https://www.helsinkidataweek.com/) with me. For helping me dream big! And for making me realize a big project like this is possible when you keep making constant progress.
 
-Marc Eixarch ([\@Marceix](https://github.com/Marceix/)) and Vicent Boned Riera ([\@eivicent](https://github.com/eivicent/)) from the [R User Group Finland](https://www.meetup.com/r-user-group-finland/). Learning R has been more fun thanks to your efforts in keeping the local R scene active in Helsinki, Finland.
+__Marc Eixarch__ ([\@Marceix](https://github.com/Marceix/)) and __Vicent Boned Riera__ ([\@eivicent](https://github.com/eivicent/)) from the [R User Group Finland](https://www.meetup.com/r-user-group-finland/). Learning R has been more fun thanks to your efforts in keeping the local R scene active in Helsinki, Finland.
 
 [Joe Reis](https://www.linkedin.com/in/josephreis/), [Ole Olesen-Bagneux](https://www.linkedin.com/in/ole-olesen-bagneux/), and [Vin Vashishta](https://www.linkedin.com/in/vineetvashishta/) for your generosity and time. And for setting a positive example for someone like me to follow.
 
-Hadley Wickham ([\@hadley](https://github.com/hadley/)) for all the books and packages. __R for Data Science__ [@wickham2023a] got me started with R. __ggplot2: Elegant Graphics for Data Analysis__ [@wickham2016] helped me understand ggplot2 and _the grammar of graphics_ on a deeper level.
+__Hadley Wickham__ ([\@hadley](https://github.com/hadley/)) for all the books and packages. __R for Data Science__ [@wickham2023a] got me started with R. __ggplot2: Elegant Graphics for Data Analysis__ [@wickham2016] helped me understand ggplot2 and _the grammar of graphics_ on a deeper level.
 
 To be continued...
 
