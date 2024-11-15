@@ -163,6 +163,7 @@ __GitHub Repos__
 - [Awesome ggplot2 by Erik Gahner](https://github.com/erikgahner/awesome-ggplot2/)
 - [Awesome R Dataviz by Krzysztof Joachimiak](https://github.com/krzjoa/awesome-r-dataviz/)
 - [ggplot Tricks by Teun van den Brand](https://github.com/teunbrand/ggplot_tricks/)
+- [TidyTuesday by Tom Mock](https://github.com/rfordatascience/tidytuesday)
 
 __Websites__
 
