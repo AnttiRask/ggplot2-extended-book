@@ -10,17 +10,17 @@ source("warning.R")
 library(RandomWalker)
 ```
 
-Data visualization is one of those things that can look easy when you see someone doing it well. Then you try it yourself and it's easy to feel like you know nothing.
+Data visualization is one of those things that can look easy when you see someone doing it well. Then you try it yourself and it’s easy to feel like you know nothing.
 
-I wanted to share the tools that make it easier to create those beautiful visualizations. And to show you how to use those tools together, not only with __ggplot2__ [@wickham2024], but with each other.
+I wanted to share the tools that make it easier to create those beautiful visualizations. And to show you how to use those tools together, not only with __ggplot2__ [@wickham2024] but with each other.
 
 ## Purpose and scope
 
-A very basic reason why I started writing this book was the fact that one didn't already exist. "Someone had to do it", as they say.
+A very basic reason why I started writing this book was the fact that one didn’t already exist. “Someone had to do it”, as they say.
 
 I know there is information out there about the different ggplot2 extension packages. There's the package documentation, but there are also some blogs around (see @sec-further-resources).
 
-But that information is quite scattered. There were many great packages I hadn't even heard about before I started doing research for the book.
+But that information is quite scattered. There were many great packages I hadn’t even heard about before I started doing research for the book.
 
 I’ve tried my best to test and write about the most useful among them. After all, there are hundreds of packages to choose from. And I don’t think everyone should have to go through them all. Don’t try this at home!
 
@@ -95,25 +95,25 @@ __Various__
 
 ## Who is the book for?
 
-I assume that you're reading this because you're interested in data visualization, R, or both.
+I assume that you’re reading this because you’re interested in data visualization, R, or both.
 
-I already wrote about this in the Welcome section. This book is for people who already have a working knowledge of ggplot2 and _the grammar of graphics_. I'm quite adamant on that. You should learn the foundations first. And there are already excellent books and websites for that.
+I already wrote about this in the Welcome section. This book is for people who already have a working knowledge of ggplot2 and _the grammar of graphics_. I’m quite adamant on that. You should learn the foundations first. And there are already excellent books and websites for that.
 
-Other than that, the tools and techniques in the book aren't all that advanced (at least most of them). You don't have to be a visualization wizard to find the book useful. Each of the chapters will contain code that you can use almost verbatim.
+Other than that, the tools and techniques in the book aren’t all that advanced (at least most of them). You don’t have to be a visualization wizard to find the book useful. Each of the chapters will contain code that you can use almost verbatim.
 
-It doesn't even matter if R isn't your _native_ language. You might find an inspiring R package and then go on and find a similar package in your preferred language. Or write that package, if one doesn't already exist. It's all good!
+It doesn’t even matter if R isn’t your _native_ language. You might find an inspiring R package and then go on and find a similar package in your preferred language. Or write that package, if one doesn’t already exist. It’s all good!
 
 ## Who am I to write this book?
 
-Hi! I'm Antti Rask, a data analyst if you had to choose one label. I've lived many lives and had many careers before finding my truest calling in data.
+Hi! I’m Antti Rask, a data analyst if you had to choose one label. I’ve lived many lives and had many careers before finding my truest calling in data.
 
-I've been interested in data visualization longer than I've been using R (which I started in late 2019/early 2020). My first visualizations I made with Excel. At some point I switched to Power BI. Which is still my main tool for visualization at work.
+I’ve been interested in data visualization longer than I’ve been using R (which I started in late 2019/early 2020). I made my first visualizations with Excel. At some point, I switched to Power BI. Which is still my main tool for visualization at work.
 
-You could say that I am an artistic type. Music has been the main avenue for my artistic self-expression for most of my life. But I'm also interested in taking photos of street art that I come across on my adventures either in Helsinki, Finland or when I'm abroad.
+You could say that I am an artistic type. Music has been the main avenue for my artistic self-expression for most of my life. But I’ve also liked to take photos of street art. I come across them on my adventures in Helsinki, or when I’m abroad.
 
-When it comes to visualizing data, however, I do find myself attracted more towards the __Stephen Few__ school of thought. Less is usually more and [chartjunk](https://en.wikipedia.org/wiki/Chartjunk) should be avoided at all costs. Still, I'm not a purist, by any means.
+In visualizing data I find myself leaning more towards the __Stephen Few__ school of thought. Less is usually more and you should avoid [chartjunk](https://en.wikipedia.org/wiki/Chartjunk) at all costs. Still, I’m not a purist, by any means.
 
-I've co-authored the __RandomWalker__ [@sanderson2024] R package with __Steven Paul Sanderson II__ ([\@spsanderson](https://github.com/spsanderson)). Specifically the function `visualize_walks()` that uses ggplot2 and some of the extensions found in this book.
+I’ve co-authored the __RandomWalker__ [@sanderson2024] R package with __Steven Paul Sanderson II__ ([\@spsanderson](https://github.com/spsanderson)). Specifically the function visualize_walks(). It uses ggplot2 and some of the extensions found in this book.
 
 I also like to tinker with R Shiny and recently made an app called [TuneTeller](https://youcanbeapirate.shinyapps.io/TuneTeller/). It received an _honorable mention_ in the 2024 [Shiny Contest](https://posit.co/blog/winners-of-the-2024-shiny-contest/).
 
@@ -191,7 +191,7 @@ To be continued...
 
 ## Colophon
 
-This book was written in [RStudio](https://posit.co/products/open-source/rstudio/) using [Quarto](https://quarto.org/). The website is hosted with [Netlify](https://www.netlify.com/), and automatically updated after every commit by [Github Actions](https://github.com/features/actions). The complete source is available from [GitHub](https://github.com/AnttiRask/ggplot2-extended-book/).
+This book was written in [RStudio](https://posit.co/products/open-source/rstudio/) using [Quarto](https://quarto.org/). The website is hosted with [Netlify](https://www.netlify.com/). And it's automatically updated after every commit by [Github Actions](https://github.com/features/actions). The complete source is available from [GitHub](https://github.com/AnttiRask/ggplot2-extended-book/).
 
 This version of the book was built with `r R.version.string` and the following packages:
 

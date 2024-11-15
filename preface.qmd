@@ -15,12 +15,14 @@ The book is about ggplot2 extension packages. But it has been important to me th
 
 ## Landscape
 
-Look at the figure. The amount of R packages _depending_[^1], _importing_[^2], or _suggesting_[^3] [@wickham2023c] ggplot2 is increasing:
+Look at the figure. The amount of R packages *depending*[^preface-1], *importing*[^preface-2], or *suggesting*[^preface-3] [@wickham2023c] ggplot2 is increasing:
 
-[^1]: "Depends: Listing a package in [...] Depends [...] ensures that it’s installed when needed. [...] A package you list in Depends will be attached when your package is attached."
-[^2]: "Imports: packages listed here must be present for your package to work. Any time your package is installed, those packages will also be installed, if not already present. devtools::load_all() also checks that all packages in Imports are installed."
-[^3]: "Suggests: your package can use these packages, but doesn’t require them. You might use suggested packages for example datasets, to run tests, build vignettes, or maybe there’s only one function that needs the package."
+[^preface-1]: "Depends: Listing a package in \[...\] Depends \[...\] ensures that it’s installed when needed. \[...\] A package you list in Depends will be attached when your package is attached."
 
-![__ggplot2__ dependencies between 2007-2023](img/ggplot2_dependencies_2023-12-31.png){.lightbox}
+[^preface-2]: "Imports: packages listed here must be present for your package to work. Any time your package is installed, those packages will also be installed, if not already present. devtools::load_all() also checks that all packages in Imports are installed."
+
+[^preface-3]: "Suggests: your package can use these packages, but doesn’t require them. You might use suggested packages for example datasets, to run tests, build vignettes, or maybe there’s only one function that needs the package."
+
+![**ggplot2** dependencies between 2007-2023](img/ggplot2_dependencies_2023-12-31.png){.lightbox}
 
 Among these thousands of packages are also hundreds of ggplot2 extensions. And these are the ones that are on [CRAN](https://cran.r-project.org/) (The Comprehensive R Archive Network). There are also packages on [GitHub](https://github.com/) and similar platforms. Packages that no one have yet added to CRAN. Or those that have once been there, but CRAN has since archived for one reason or another.
