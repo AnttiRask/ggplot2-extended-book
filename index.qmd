@@ -14,6 +14,6 @@ Please note that ggplot2 extended uses a [Contributor Code of Conduct](https://w
 
 This book is written by [Antti Rask](https://www.linkedin.com/in/anttirask/).
 
-## Acknowledgments {#sec-index-acknowledgements}
+## Acknowledgments {#sec-index-acknowledgments}
 
 This book was built with [Quarto](https://quarto.org/) and is hosted on [Netlify](https://www.netlify.com/).

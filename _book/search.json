@@ -1832,7 +1832,27 @@
     "href": "introduction.html#sec-further-resources",
     "title": "Introduction",
     "section": "Further resources",
-    "text": "Further resources\nBlogs\n\nAlbert Rapp\nBruno Mioto\nCédric Scherer\nDominic Royé\nGeorgios Karamanis\nMatt Dancho\nNicola Rennie\n\nBooks\n\nBBC Visual and Data Journalism cookbook for R graphics\nData visualisation using R, for researchers who don’t use R by Emily Nordmann et al.\nggplot2: Elegant Graphics for Data Analysis (3e) by Hadley Wickham et al.\nAn Introduction to ggplot2 by Ozancan Ozdemir\nModern Data Visualization with R by Robert Kabacoff\nR Gallery Book by Kyle W. Brown\nR Graphics Cookbook, 2nd edition by Winston Chang\nSolutions to ggplot2: Elegant Graphics for Data Analysis by Howard Baek\n\nGitHub Repos\n\nAwesome ggplot2 by Erik Gahner\nAwesome R Dataviz by Krzysztof Joachimiak\nggplot Tricks by Teun van den Brand\nTidyTuesday by Tom Mock\n\nWebsites\n\nPackages (ggplot2) by Antti Rask\nR for Artists and Designers by Arvind Venkatadri\nR for the Rest of Us by David Keys\nR Graph Gallery by Yan Holtz\nStatistics Globe by Joachim Schork\n\nYouTube\n\nAlbert Rapp\nStatistics Globe by Joachim Schork",
+    "text": "Further resources\nBlogs\n\nAlbert Rapp\nBruno Mioto\nCédric Scherer\nDominic Royé\nGeorgios Karamanis\nMatt Dancho\nNicola Rennie\nBooks\n\nBBC Visual and Data Journalism cookbook for R graphics\nData visualisation using R, for researchers who don’t use R by Emily Nordmann et al.\nggplot2: Elegant Graphics for Data Analysis (3e) by Hadley Wickham et al.\nAn Introduction to ggplot2 by Ozancan Ozdemir\nModern Data Visualization with R by Robert Kabacoff\nR Gallery Book by Kyle W. Brown\nR Graphics Cookbook, 2nd edition by Winston Chang\nSolutions to ggplot2: Elegant Graphics for Data Analysis by Howard Baek\nGitHub Repos\n\nAwesome ggplot2 by Erik Gahner\nAwesome R Dataviz by Krzysztof Joachimiak\nggplot Tricks by Teun van den Brand\nTidyTuesday by Tom Mock\nWebsites\n\nPackages (ggplot2) by Antti Rask\nR for Artists and Designers by Arvind Venkatadri\nR for the Rest of Us by David Keys\nR Graph Gallery by Yan Holtz\nStatistics Globe by Joachim Schork\nYouTube\n\nAlbert Rapp\nStatistics Globe by Joachim Schork",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#sec-index-acknowledgments",
+    "href": "index.html#sec-index-acknowledgments",
+    "title": "ggplot2 extended",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\nThis book was built with Quarto and is hosted on Netlify.\n\n\n\n\nWickham, Hadley. 2016. Ggplot2: Elegant Graphics for Data Analysis. 2nd ed. Springer-Verlag New York.\n\n\n———. 2024. Ggplot2: Elegant Graphics for Data Analysis. R Package Version 3.5.1. https://ggplot2.tidyverse.org.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023. R for Data Science: Import, Tidy, Transform, Visualize, and Model Data. 2nd ed. O’Reilly.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "introduction.html#sec-introduction-acknowledgments",
+    "href": "introduction.html#sec-introduction-acknowledgments",
+    "title": "Introduction",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\nEevamaija Virtanen, Juha Korpela, and Säde Haveri for founding Helsinki Data Week with me. For helping me dream big! And for making me realize a big project like this is possible when you keep making constant progress.\nMarc Eixarch (@Marceix) and Vicent Boned Riera (@eivicent) from the R User Group Finland. Learning R has been more fun thanks to your efforts in keeping the local R scene active in Helsinki, Finland.\nJoe Reis, Ole Olesen-Bagneux, and Vin Vashishta for your generosity and time. And for setting a positive example for someone like me to follow.\nHadley Wickham (@hadley) for all the books and packages. R for Data Science (Wickham, Çetinkaya-Rundel, and Grolemund 2023) got me started with R. ggplot2: Elegant Graphics for Data Analysis (Wickham 2016) helped me understand ggplot2 and the grammar of graphics on a deeper level.\nTo be continued…",
     "crumbs": [
       "Introduction"
     ]

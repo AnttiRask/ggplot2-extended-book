@@ -221,7 +221,7 @@ Next, it's practice, practice, practice. Recreate your favorite data visualizati
 
 ## Further resources {#sec-further-resources}
 
-__Blogs__
+### Blogs {#sec-blogs}
 
 - [Albert Rapp](https://albert-rapp.de/ggplot-series/)
 - [Bruno Mioto](https://www.brunomioto.com/)
@@ -231,7 +231,7 @@ __Blogs__
 - [Matt Dancho](https://www.business-science.io/blog/index.html)
 - [Nicola Rennie](https://nrennie.rbind.io/blog/)
 
-__Books__
+### Books {#sec-books}
 
 - [BBC Visual and Data Journalism cookbook for R graphics](https://bbc.github.io/rcookbook/)
 - [Data visualisation using R, for researchers who don’t use R by Emily Nordmann et al.](https://psyteachr.github.io/introdataviz/index.html)
@@ -242,14 +242,14 @@ __Books__
 - [R Graphics Cookbook, 2nd edition by Winston Chang](https://r-graphics.org/)
 - [Solutions to ggplot2: Elegant Graphics for Data Analysis by Howard Baek](https://ggplot2-book-solutions-3ed.netlify.app/)
 
-__GitHub Repos__
+### GitHub Repos {#sec-github-repos}
 
 - [Awesome ggplot2 by Erik Gahner](https://github.com/erikgahner/awesome-ggplot2/)
 - [Awesome R Dataviz by Krzysztof Joachimiak](https://github.com/krzjoa/awesome-r-dataviz/)
 - [ggplot Tricks by Teun van den Brand](https://github.com/teunbrand/ggplot_tricks/)
 - [TidyTuesday by Tom Mock](https://github.com/rfordatascience/tidytuesday)
 
-__Websites__
+### Websites {#sec-websites}
 
 - [Packages \(ggplot2\) by Antti Rask](https://tinyurl.com/ggplot2packages/)
 - [R for Artists and Designers by Arvind Venkatadri](https://r-for-artists.netlify.app/)
@@ -257,12 +257,12 @@ __Websites__
 - [R Graph Gallery by Yan Holtz](https://r-graph-gallery.com/)
 - [Statistics Globe by Joachim Schork](https://statisticsglobe.com/graphics-in-r)
 
-__YouTube__
+### YouTube {#sec-youtube}
 
 - [Albert Rapp](https://www.youtube.com/@rappa753/)
 - [Statistics Globe by Joachim Schork](https://www.youtube.com/@StatisticsGlobe/)
 
-## Acknowledgements {#sec-introduction-acknowledgements}
+## Acknowledgments {#sec-introduction-acknowledgments}
 
 [Eevamaija Virtanen](https://www.linkedin.com/in/eevamaijavirtanen/), [Juha Korpela](https://www.linkedin.com/in/jkorpela/), and [Säde Haveri](https://www.linkedin.com/in/sade-haveri/) for founding [Helsinki Data Week](https://www.helsinkidataweek.com/) with me. For helping me dream big! And for making me realize a big project like this is possible when you keep making constant progress.
 
