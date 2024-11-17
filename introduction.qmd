@@ -6,8 +6,6 @@
 #| results: asis
 
 source("warning.R")
-
-library(RandomWalker)
 ```
 
 Data visualization is one of those things that can look easy when you see someone doing it well. Then you try it yourself and it’s easy to feel like you know nothing.
@@ -113,23 +111,105 @@ You could say that I am an artistic type. Music has been the main avenue for my 
 
 In visualizing data I find myself leaning more towards the __Stephen Few__ school of thought. Less is usually more and you should avoid [chartjunk](https://en.wikipedia.org/wiki/Chartjunk) at all costs. Still, I’m not a purist, by any means.
 
-I’ve co-authored the __RandomWalker__ [@sanderson2024] R package with __Steven Paul Sanderson II__ ([\@spsanderson](https://github.com/spsanderson)). Specifically the function visualize_walks(). It uses ggplot2 and some of the extensions found in this book.
+I’ve co-authored the __RandomWalker__ [@sanderson2024] R package with __Steven Paul Sanderson II__ ([\@spsanderson](https://github.com/spsanderson)). Specifically the function `RandomWalker::visualize_walks()`. It uses ggplot2 and some of the extensions found in this book.
 
 I also like to tinker with R Shiny and recently made an app called [TuneTeller](https://youcanbeapirate.shinyapps.io/TuneTeller/). It received an _honorable mention_ in the 2024 [Shiny Contest](https://posit.co/blog/winners-of-the-2024-shiny-contest/).
 
 ## R
 
-### Programming language
+Except for @sec-python, all of the code in this book is written in __R__. If you have never used R, [R for Data Science](https://r4ds.hadley.nz/) [@wickham2023a] is a better place to start.
 
-### RStudio & alternatives
+If you haven't downloaded R on your computer, you can get the latest version from __CRAN__ (the comprehensive R archive network): [https://www.r-project.org/](https://www.r-project.org/).
 
-### Executing code
+### IDE
+
+__RStudio__ is my integrated development environment (IDE) of choice. It's free and open-source. It's the environment where you can try out the code you find in this book. And it's also where I wrote this book.
+
+You can download the latest version from the __Posit__ website: [https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/). Posit is the company that develops RStudio and many R packages. Most notably the __tidyverse__ [@wickham2023b] (see [@sec-ggplot2-tidyverse]).
+
+There are other alternatives like [VSCode](https://code.visualstudio.com/), [Positron](https://positron.posit.co/), and [JupyterLab](https://jupyter.org/). This book, however, operates under the assumption that you are using RStudio.
 
 ## Packages
 
-### ggplot2 & tidyverse
+### ggplot2 & tidyverse {#sec-ggplot2-tidyverse}
+
+The tidyverse is a collection of R packages. ggplot2 is one of them. The others are __dplyr__, __forcats__, __lubridate__, __purrr__, __readr__, __stringr__, __tibble__, and __tidyr__.
+
+You could install the packages you need one by one, but you might as well install the whole tidyverse: 
+
+```{r}
+#| eval: false
+
+install.packages("tidyverse")
+```
+
+To highlight each of the packages used, I've decided to load the individual packages in the code examples. If you want to, you can just use the following:
+
+```{r}
+#| results: asis
+
+library(tidyverse)
+```
+
+The previous mentions __conflicted__ [@wickham2023d], which is not part of the _core_ tidyverse. But it's one of my favorite packages. And I do recommend loading it whenever you're writing new code.
+
+It simply checks for conflicting function names and forces you to choose the one you want to use, either use case by use case (for example `dplyr::filter()`) or session-wide (for example `conflicts_prefer(dplyr::filter())`).
+
+To install conflicted:
+
+```{r}
+#| eval: false
+
+install.packages("conflicted")
+```
+
+All you need to do is load the package at the beginning of your script:
+
+```{r}
+#| eval: false
+
+library(conflicted)
+```
+
+It will then let you know if a conflict emerges. One fewer reason to have your code act weird when running it.
+
+### ggplot2 extensions
+
+Here are the main characters of this book.
+
+Some of them you can install from CRAN:
+
+```{r}
+#| eval: false
+
+install.packages(
+  c(
+    "ggplot2movies"
+  )
+)
+```
+
+Others will have to be installed from GitHub:
+
+```{r}
+#| eval: false
+
+
+```
 
 ### Others
+
+Here are the packages that are not part of the tidyverse. They aren't considered to be ggplot2 extensions either. They are still useful for what we want to do and worth highlighting instead of hiding.
+
+```{r}
+#| eval: false
+
+install.packages(
+  c(
+    ""
+  )
+)
+```
 
 ## Next steps?
 
@@ -200,13 +280,14 @@ This version of the book was built with `r R.version.string` and the following p
 #| echo: false
 
 pkgs <- c(
-  "dplyr",
-  "ggplot2",
-  "ggplot2movies",
-  "purrr",
-  "readr",
-  "rmarkdown",
-  "tibble"
+"conflicted",
+"dplyr",
+"ggplot2",
+"ggplot2movies",
+"purrr",
+"readr",
+"rmarkdown",
+"tibble"
 )
 ```
 
@@ -220,7 +301,7 @@ library(rmarkdown)
 library(sessioninfo)
 
 package_info(pkgs, dependencies = FALSE) %>% 
-  as_tibble() %>%
-  select(package, version = ondiskversion, source) %>% 
-  paged_table()
+as_tibble() %>%
+select(package, version = ondiskversion, source) %>% 
+paged_table()
 ```

@@ -18,6 +18,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -345,15 +379,14 @@ div.csl-indent {
   <li>
 <a href="#r" id="toc-r" class="nav-link" data-scroll-target="#r">R</a>
   <ul class="collapse">
-<li><a href="#programming-language" id="toc-programming-language" class="nav-link" data-scroll-target="#programming-language">Programming language</a></li>
-  <li><a href="#rstudio-alternatives" id="toc-rstudio-alternatives" class="nav-link" data-scroll-target="#rstudio-alternatives">RStudio &amp; alternatives</a></li>
-  <li><a href="#executing-code" id="toc-executing-code" class="nav-link" data-scroll-target="#executing-code">Executing code</a></li>
+<li><a href="#ide" id="toc-ide" class="nav-link" data-scroll-target="#ide">IDE</a></li>
   </ul>
 </li>
   <li>
 <a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a>
   <ul class="collapse">
-<li><a href="#ggplot2-tidyverse" id="toc-ggplot2-tidyverse" class="nav-link" data-scroll-target="#ggplot2-tidyverse">ggplot2 &amp; tidyverse</a></li>
+<li><a href="#sec-ggplot2-tidyverse" id="toc-sec-ggplot2-tidyverse" class="nav-link" data-scroll-target="#sec-ggplot2-tidyverse">ggplot2 &amp; tidyverse</a></li>
+  <li><a href="#ggplot2-extensions" id="toc-ggplot2-extensions" class="nav-link" data-scroll-target="#ggplot2-extensions">ggplot2 extensions</a></li>
   <li><a href="#others" id="toc-others" class="nav-link" data-scroll-target="#others">Others</a></li>
   </ul>
 </li>
@@ -460,15 +493,65 @@ This book/site is under construction
 <p>I’ve been interested in data visualization longer than I’ve been using R (which I started in late 2019/early 2020). I made my first visualizations with Excel. At some point, I switched to Power BI. Which is still my main tool for visualization at work.</p>
 <p>You could say that I am an artistic type. Music has been the main avenue for my artistic self-expression for most of my life. But I’ve also liked to take photos of street art. I come across them on my adventures in Helsinki, or when I’m abroad.</p>
 <p>In visualizing data I find myself leaning more towards the <strong>Stephen Few</strong> school of thought. Less is usually more and you should avoid <a href="https://en.wikipedia.org/wiki/Chartjunk">chartjunk</a> at all costs. Still, I’m not a purist, by any means.</p>
-<p>I’ve co-authored the <strong>RandomWalker</strong> <span class="citation" data-cites="sanderson2024">(<a href="references.html#ref-sanderson2024" role="doc-biblioref">Sanderson and Rask 2024</a>)</span> R package with <strong>Steven Paul Sanderson II</strong> (<a href="https://github.com/spsanderson">@spsanderson</a>). Specifically the function visualize_walks(). It uses ggplot2 and some of the extensions found in this book.</p>
+<p>I’ve co-authored the <strong>RandomWalker</strong> <span class="citation" data-cites="sanderson2024">(<a href="references.html#ref-sanderson2024" role="doc-biblioref">Sanderson and Rask 2024</a>)</span> R package with <strong>Steven Paul Sanderson II</strong> (<a href="https://github.com/spsanderson">@spsanderson</a>). Specifically the function <code><a href="https://www.spsanderson.com/RandomWalker/reference/visualize_walks.html">RandomWalker::visualize_walks()</a></code>. It uses ggplot2 and some of the extensions found in this book.</p>
 <p>I also like to tinker with R Shiny and recently made an app called <a href="https://youcanbeapirate.shinyapps.io/TuneTeller/">TuneTeller</a>. It received an <em>honorable mention</em> in the 2024 <a href="https://posit.co/blog/winners-of-the-2024-shiny-contest/">Shiny Contest</a>.</p>
 </section><section id="r" class="level2"><h2 class="anchored" data-anchor-id="r">R</h2>
-<section id="programming-language" class="level3"><h3 class="anchored" data-anchor-id="programming-language">Programming language</h3>
-</section><section id="rstudio-alternatives" class="level3"><h3 class="anchored" data-anchor-id="rstudio-alternatives">RStudio &amp; alternatives</h3>
-</section><section id="executing-code" class="level3"><h3 class="anchored" data-anchor-id="executing-code">Executing code</h3>
+<p>Except for <a href="python.html" class="quarto-xref"><span>18&nbsp; Python</span></a>, all of the code in this book is written in <strong>R</strong>. If you have never used R, <a href="https://r4ds.hadley.nz/">R for Data Science</a> <span class="citation" data-cites="wickham2023a">(<a href="references.html#ref-wickham2023a" role="doc-biblioref">Wickham, Çetinkaya-Rundel, and Grolemund 2023</a>)</span> is a better place to start.</p>
+<p>If you haven’t downloaded R on your computer, you can get the latest version from <strong>CRAN</strong> (the comprehensive R archive network): <a href="https://www.r-project.org/">https://www.r-project.org/</a>.</p>
+<section id="ide" class="level3"><h3 class="anchored" data-anchor-id="ide">IDE</h3>
+<p><strong>RStudio</strong> is my integrated development environment (IDE) of choice. It’s free and open-source. It’s the environment where you can try out the code you find in this book. And it’s also where I wrote this book.</p>
+<p>You can download the latest version from the <strong>Posit</strong> website: <a href="https://posit.co/download/rstudio-desktop/">https://posit.co/download/rstudio-desktop/</a>. Posit is the company that develops RStudio and many R packages. Most notably the <strong>tidyverse</strong> <span class="citation" data-cites="wickham2023b">(<a href="references.html#ref-wickham2023b" role="doc-biblioref">Wickham et al. 2023</a>)</span> (see <a href="#sec-ggplot2-tidyverse" class="quarto-xref"><span>ggplot2 &amp; tidyverse</span></a>).</p>
+<p>There are other alternatives like <a href="https://code.visualstudio.com/">VSCode</a>, <a href="https://positron.posit.co/">Positron</a>, and <a href="https://jupyter.org/">JupyterLab</a>. This book, however, operates under the assumption that you are using RStudio.</p>
 </section></section><section id="packages" class="level2"><h2 class="anchored" data-anchor-id="packages">Packages</h2>
-<section id="ggplot2-tidyverse" class="level3"><h3 class="anchored" data-anchor-id="ggplot2-tidyverse">ggplot2 &amp; tidyverse</h3>
+<section id="sec-ggplot2-tidyverse" class="level3"><h3 class="anchored" data-anchor-id="sec-ggplot2-tidyverse">ggplot2 &amp; tidyverse</h3>
+<p>The tidyverse is a collection of R packages. ggplot2 is one of them. The others are <strong>dplyr</strong>, <strong>forcats</strong>, <strong>lubridate</strong>, <strong>purrr</strong>, <strong>readr</strong>, <strong>stringr</strong>, <strong>tibble</strong>, and <strong>tidyr</strong>.</p>
+<p>You could install the packages you need one by one, but you might as well install the whole tidyverse:</p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"tidyverse"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>To highlight each of the packages used, I’ve decided to load the individual packages in the code examples. If you want to, you can just use the following:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.1     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+<p>The previous mentions <strong>conflicted</strong> <span class="citation" data-cites="wickham2023d">(<a href="references.html#ref-wickham2023d" role="doc-biblioref">Wickham 2023</a>)</span>, which is not part of the <em>core</em> tidyverse. But it’s one of my favorite packages. And I do recommend loading it whenever you’re writing new code.</p>
+<p>It simply checks for conflicting function names and forces you to choose the one you want to use, either use case by use case (for example <code><a href="https://dplyr.tidyverse.org/reference/filter.html">dplyr::filter()</a></code>) or session-wide (for example <code>conflicts_prefer(dplyr::filter())</code>).</p>
+<p>To install conflicted:</p>
+<div class="cell">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"conflicted"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>All you need to do is load the package at the beginning of your script:</p>
+<div class="cell">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://conflicted.r-lib.org/">conflicted</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>It will then let you know if a conflict emerges. One fewer reason to have your code act weird when running it.</p>
+</section><section id="ggplot2-extensions" class="level3"><h3 class="anchored" data-anchor-id="ggplot2-extensions">ggplot2 extensions</h3>
+<p>Here are the main characters of this book.</p>
+<p>Some of them you can install from CRAN:</p>
+<div class="cell">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
+<span>    <span class="st">"ggplot2movies"</span>,</span>
+<span>  <span class="op">)</span></span>
+<span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Others will have to be installed from GitHub:</p>
 </section><section id="others" class="level3"><h3 class="anchored" data-anchor-id="others">Others</h3>
+<p>Here are the packages that are not part of the tidyverse. They aren’t considered to be ggplot2 extensions either. They are still useful for what we want to do and worth highlighting instead of hiding.</p>
+<div class="cell">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
+<span>    <span class="st">""</span>,</span>
+<span>  <span class="op">)</span></span>
+<span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section></section><section id="next-steps" class="level2"><h2 class="anchored" data-anchor-id="next-steps">Next steps?</h2>
 <section id="learning-more-and-getting-help" class="level3"><h3 class="anchored" data-anchor-id="learning-more-and-getting-help">Learning more and getting help</h3>
 </section><section id="sec-further-resources" class="level3"><h3 class="anchored" data-anchor-id="sec-further-resources">Further resources</h3>
@@ -523,20 +606,26 @@ This book/site is under construction
 <p>This version of the book was built with R version 4.4.1 (2024-06-14 ucrt) and the following packages:</p>
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
-{"columns":[{"label":["package"],"name":[1],"type":["chr"],"align":["left"]},{"label":["version"],"name":[2],"type":["chr"],"align":["left"]},{"label":["source"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"dplyr","2":"1.1.4","3":"CRAN (R 4.4.0)"},{"1":"ggplot2","2":"3.5.1","3":"CRAN (R 4.4.0)"},{"1":"ggplot2movies","2":"0.0.1","3":"RSPM"},{"1":"purrr","2":"1.0.2","3":"CRAN (R 4.4.0)"},{"1":"readr","2":"2.1.5","3":"CRAN (R 4.4.0)"},{"1":"rmarkdown","2":"2.29","3":"RSPM"},{"1":"tibble","2":"3.2.1","3":"CRAN (R 4.4.0)"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["package"],"name":[1],"type":["chr"],"align":["left"]},{"label":["version"],"name":[2],"type":["chr"],"align":["left"]},{"label":["source"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"conflicted","2":"1.2.0","3":"CRAN (R 4.4.0)"},{"1":"dplyr","2":"1.1.4","3":"CRAN (R 4.4.0)"},{"1":"ggplot2","2":"3.5.1","3":"CRAN (R 4.4.0)"},{"1":"ggplot2movies","2":"0.0.1","3":"RSPM"},{"1":"purrr","2":"1.0.2","3":"CRAN (R 4.4.0)"},{"1":"readr","2":"2.1.5","3":"CRAN (R 4.4.0)"},{"1":"rmarkdown","2":"2.29","3":"RSPM"},{"1":"tibble","2":"3.2.1","3":"CRAN (R 4.4.0)"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-sanderson2024" class="csl-entry" role="listitem">
-Sanderson, Steven, and Antti Rask. 2024. <em>RandomWalker: Generate Random Walks Compatible with the ’Tidyverse’. R Package Version 0.2.0</em>.
+Sanderson, Steven, and Antti Rask. 2024. <em>RandomWalker: Generate Random Walks Compatible with the ’Tidyverse’. R Package Version 0.2.0</em>. <a href="https://www.spsanderson.com/RandomWalker/">https://www.spsanderson.com/RandomWalker/</a>.
 </div>
 <div id="ref-wickham2016" class="csl-entry" role="listitem">
 Wickham, Hadley. 2016. <em>Ggplot2: Elegant Graphics for Data Analysis</em>. 2nd ed. Springer-Verlag New York.
 </div>
+<div id="ref-wickham2023d" class="csl-entry" role="listitem">
+———. 2023. <em>Conflicted: An Alternative Conflict Resolution Strategy. R Package Version 1.2.0</em>. <a href="https://CRAN.R-project.org/package=conflicted">https://CRAN.R-project.org/package=conflicted</a>.
+</div>
 <div id="ref-wickham2024" class="csl-entry" role="listitem">
-———. 2024. <em>Ggplot2: Elegant Graphics for Data Analysis. R Package Version 3.5.1</em>.
+———. 2024. <em>Ggplot2: Elegant Graphics for Data Analysis. R Package Version 3.5.1</em>. <a href="https://ggplot2.tidyverse.org">https://ggplot2.tidyverse.org</a>.
+</div>
+<div id="ref-wickham2023b" class="csl-entry" role="listitem">
+Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2023. <em>Tidyverse: Welcome to the Tidyverse. R Package Version 2.0.0</em>.
 </div>
 <div id="ref-wickham2023a" class="csl-entry" role="listitem">
 Wickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023. <em>R for Data Science: Import, Tidy, Transform, Visualize, and Model Data</em>. 2nd ed. O’Reilly.
