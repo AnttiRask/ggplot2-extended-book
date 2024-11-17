@@ -12,27 +12,27 @@ Data visualization is one of those things that can look easy when you see someon
 
 I wanted to share the tools that make it easier to create those beautiful visualizations. And to show you how to use those tools together, not only with __ggplot2__ [@wickham2024] but with each other.
 
-## Purpose and scope
+## Purpose and scope {#sec-purpose-and-scope}
 
 A very basic reason why I started writing this book was the fact that one didn’t already exist. “Someone had to do it”, as they say.
 
-I know there is information out there about the different ggplot2 extension packages. There's the package documentation, but there are also some blogs around (see @sec-further-resources).
+I know there is information out there about the different ggplot2 extension packages. There are the package documentation, but there are also some blogs around (see @sec-further-resources).
 
 But that information is quite scattered. There were many great packages I hadn’t even heard about before I started doing research for the book.
 
 I’ve tried my best to test and write about the most useful among them. After all, there are hundreds of packages to choose from. And I don’t think everyone should have to go through them all. Don’t try this at home!
 
-###	What you will learn
+###	What you will learn {#sec-what-you-will-learn}
 
-This book aims to continue from where __ggplot2: Elegant Graphics for Data Analysis__ [@wickham2016] left off. In his book, Hadley does mention some extension packages by name. But until now there hasn’t been a comprehensive guide to those extension packages. And how to use them together.
+This book continues from where __ggplot2: Elegant Graphics for Data Analysis__ [@wickham2016] left off. In his book, Hadley does mention some extension packages by name. But until now there hasn’t been a comprehensive guide to those extension packages. And how to use them together.
 
 __Basics__ works as kind of a "Previously, on __ggplot2__...". A reminder of the basic function(alitie)s of the _core_ package.
 
 __Layers__ goes through the layers that make up _the grammar of graphics_: __Data__, geometric objects (__Geoms__), statistical transformations (__Stats__), titles and labels (__Annotations__), color, position and size of visual elements (__Scales and guides__), __Coordinate systems__, small multiples (__Facets__), and __Themes__. They are in a logical order. As are the rest of the chapters. The same order that you would build your visualization in.
 
-__Special cases__ hosts particular kinds of visualization: __Maps__, __Networks__, __Interactive Plots__, and __Animated Plots__.
+__Special cases__ hosts not-so-typical visualizations: __Maps__, __Networks__, __Interactive Plots__, and __Animated Plots__.
 
-__Shortcuts__ contains different kinds of __Helpers__ and __Interactive tools__ designed to make it easier to create your visualizations.
+__Shortcuts__ contains different kinds of __Helpers__ and __Interactive tools__. Designed to make it easier to create your visualizations.
 
 At some point, we will be __Getting ready to publish__ our visualization. You'll want to give them __Finishing touches__, but it's also good to know about __Arranging plots__.
 
@@ -40,7 +40,7 @@ And while ggplot2 is an R package, its impact and influence go __Beyond R__. So 
 
 To finish off, we go through some __Case studies__. We build visualizations, step-by-step, from data to publication.
 
-###	What you won’t learn
+###	What you won’t learn {#sec-what-you-wont-learn}
 
 These are some of the interesting topics that I had to leave out of the book. It's long as it is and I decided to concentrate on the topics and extensions that everyone can use. Regardless of the field you're in.
 
@@ -91,7 +91,7 @@ __Various__
 
 - [sportyR by Ross Drucker](https://sportyr.sportsdataverse.org/)
 
-## Who is the book for?
+## Who is the book for? {#sec-who-is-the-book-for}
 
 I assume that you’re reading this because you’re interested in data visualization, R, or both.
 
@@ -101,11 +101,11 @@ Other than that, the tools and techniques in the book aren’t all that advanced
 
 It doesn’t even matter if R isn’t your _native_ language. You might find an inspiring R package and then go on and find a similar package in your preferred language. Or write that package, if one doesn’t already exist. It’s all good!
 
-## Who am I to write this book?
+## Who am I to write this book? {#sec-who-am-i-to-write-this-book}
 
 Hi! I’m Antti Rask, a data analyst if you had to choose one label. I’ve lived many lives and had many careers before finding my truest calling in data.
 
-I’ve been interested in data visualization longer than I’ve been using R (which I started in late 2019/early 2020). I made my first visualizations with Excel. At some point, I switched to Power BI. Which is still my main tool for visualization at work.
+I’ve liked data visualizations longer than I’ve been using R (which I started in late 2019/early 2020). I made my first visualizations with Excel. At some point, I switched to Power BI. Which is still my main tool for visualization at work.
 
 You could say that I am an artistic type. Music has been the main avenue for my artistic self-expression for most of my life. But I’ve also liked to take photos of street art. I come across them on my adventures in Helsinki, or when I’m abroad.
 
@@ -115,21 +115,21 @@ I’ve co-authored the __RandomWalker__ [@sanderson2024] R package with __Steven
 
 I also like to tinker with R Shiny and recently made an app called [TuneTeller](https://youcanbeapirate.shinyapps.io/TuneTeller/). It received an _honorable mention_ in the 2024 [Shiny Contest](https://posit.co/blog/winners-of-the-2024-shiny-contest/).
 
-## R
+## R {#sec-r}
 
-Except for @sec-python, all of the code in this book is written in __R__. If you have never used R, [R for Data Science](https://r4ds.hadley.nz/) [@wickham2023a] is a better place to start.
+All the code in this book is in __R__. Except for @sec-python. If you have never used R, [R for Data Science](https://r4ds.hadley.nz/) [@wickham2023a] is a better place to start.
 
-If you haven't downloaded R on your computer, you can get the latest version from __CRAN__ (the comprehensive R archive network): [https://www.r-project.org/](https://www.r-project.org/).
+Don't have R yet? You can get the latest version from __CRAN__ (the comprehensive R archive network): [https://www.r-project.org/](https://www.r-project.org/).
 
-### IDE
+## IDE {#sec-ide}
 
 __RStudio__ is my integrated development environment (IDE) of choice. It's free and open-source. It's the environment where you can try out the code you find in this book. And it's also where I wrote this book.
 
-You can download the latest version from the __Posit__ website: [https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/). Posit is the company that develops RStudio and many R packages. Most notably the __tidyverse__ [@wickham2023b] (see [@sec-ggplot2-tidyverse]).
+You can download the latest version from the __Posit__ website: [https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/). Posit is the company that develops RStudio and many R packages. Like the __tidyverse__ [@wickham2023b] (see [@sec-ggplot2-tidyverse]).
 
-There are other alternatives like [VSCode](https://code.visualstudio.com/), [Positron](https://positron.posit.co/), and [JupyterLab](https://jupyter.org/). This book, however, operates under the assumption that you are using RStudio.
+There are other alternatives like [VSCode](https://code.visualstudio.com/), [Positron](https://positron.posit.co/), and [JupyterLab](https://jupyter.org/). This book does operate under the assumption that you are using RStudio.
 
-## Packages
+## Packages {#sec-packages}
 
 ### ggplot2 & tidyverse {#sec-ggplot2-tidyverse}
 
@@ -143,7 +143,7 @@ You could install the packages you need one by one, but you might as well instal
 install.packages("tidyverse")
 ```
 
-To highlight each of the packages used, I've decided to load the individual packages in the code examples. If you want to, you can just use the following:
+To highlight each of the packages used, I've decided to load the individual packages in the code examples. If you want to, you can use the following:
 
 ```{r}
 #| results: asis
@@ -151,9 +151,9 @@ To highlight each of the packages used, I've decided to load the individual pack
 library(tidyverse)
 ```
 
-The previous mentions __conflicted__ [@wickham2023d], which is not part of the _core_ tidyverse. But it's one of my favorite packages. And I do recommend loading it whenever you're writing new code.
+The previous message mentions __conflicted__ [@wickham2023d]. It's not part of the core tidyverse, but it’s one of my favorite packages. And I do recommend loading it whenever you’re writing new code.
 
-It simply checks for conflicting function names and forces you to choose the one you want to use, either use case by use case (for example `dplyr::filter()`) or session-wide (for example `conflicts_prefer(dplyr::filter())`).
+It checks for conflicting function names and forces you to choose the one you want to use. Either use case by use case (for example `dplyr::filter()`) or session-wide (for example `conflicts_prefer(dplyr::filter())`).
 
 To install conflicted:
 
@@ -173,7 +173,7 @@ library(conflicted)
 
 It will then let you know if a conflict emerges. One fewer reason to have your code act weird when running it.
 
-### ggplot2 extensions
+### ggplot2 extensions {#sec-ggplot2-extensions}
 
 Here are the main characters of this book.
 
@@ -189,7 +189,7 @@ install.packages(
 )
 ```
 
-Others will have to be installed from GitHub:
+Others you will have to install from GitHub:
 
 ```{r}
 #| eval: false
@@ -197,7 +197,7 @@ Others will have to be installed from GitHub:
 
 ```
 
-### Others
+### Others {#sec-others}
 
 Here are the packages that are not part of the tidyverse. They aren't considered to be ggplot2 extensions either. They are still useful for what we want to do and worth highlighting instead of hiding.
 
@@ -211,11 +211,15 @@ install.packages(
 )
 ```
 
-## Next steps?
+## Next steps? {#sec-next-steps}
 
-### Learning more and getting help
+If you are reading these chapters in chronological order, the next step will be to read the rest of the book.
 
-### Further resources {#sec-further-resources}
+Of course, I recommend you don't only  read the book. I've learned the most from reading these technical books when I've also gone through the code examples. Debugged them (of course I hope the code I provide isn't broken...) when needed. Even translated them to another language (Python to R) or _dialect_ (base R to tidyverse).
+
+Next, it's practice, practice, practice. Recreate your favorite data visualizations using only ggplot2 and its extensions. Create something completely new. Either using your data (fitness, music, social media, etc.) or even something from [@sec-data]. There are also concepts like __TidyTuesday__ (see [@sec-further-resources]).
+
+## Further resources {#sec-further-resources}
 
 __Blogs__
 
@@ -258,7 +262,7 @@ __YouTube__
 - [Albert Rapp](https://www.youtube.com/@rappa753/)
 - [Statistics Globe by Joachim Schork](https://www.youtube.com/@StatisticsGlobe/)
 
-## Acknowledgements
+## Acknowledgements {#sec-introduction-acknowledgements}
 
 [Eevamaija Virtanen](https://www.linkedin.com/in/eevamaijavirtanen/), [Juha Korpela](https://www.linkedin.com/in/jkorpela/), and [Säde Haveri](https://www.linkedin.com/in/sade-haveri/) for founding [Helsinki Data Week](https://www.helsinkidataweek.com/) with me. For helping me dream big! And for making me realize a big project like this is possible when you keep making constant progress.
 
@@ -270,7 +274,7 @@ __Hadley Wickham__ ([\@hadley](https://github.com/hadley/)) for all the books an
 
 To be continued...
 
-## Colophon
+## Colophon {#sec-colophon}
 
 This book was written in [RStudio](https://posit.co/products/open-source/rstudio/) using [Quarto](https://quarto.org/). The website is hosted with [Netlify](https://www.netlify.com/). And it's automatically updated after every commit by [Github Actions](https://github.com/features/actions). The complete source is available from [GitHub](https://github.com/AnttiRask/ggplot2-extended-book/).
 

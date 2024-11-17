@@ -1,4 +1,4 @@
-# Welcome {.unnumbered}
+# Welcome {#sec-welcome .unnumbered}
 
 This is the website for my book **ggplot2 extended**. It is about extending the functionality of the [**ggplot2**](https://ggplot2.tidyverse.org/) [@wickham2024] R package by **Hadley Wickham**. Many extension packages have come out since the release of ggplot2. This book is about how to use them to make the most out of the whole ggplot2 ecosystem. And which of the many extensions to use in the first place.
 
@@ -6,7 +6,7 @@ I will go through the very basics of how ggplot2 works in 1  ggplot2. But this 
 
 If you're starting with R, **R for Data Science** [@wickham2023a] is a good first stop. The book even contains [three chapters](https://r4ds.hadley.nz/visualize) on visualizing data with ggplot2.
 
-Want to take a comprehensive look into ggplot2 and _the grammar of graphics_ first? Check out Hadley’s book **ggplot2: Elegant Graphics for Data Analysis** [@wickham2016]. You can find the work-in-progress 3rd edition [online](https://ggplot2-book.org/).
+Want to take a comprehensive look into ggplot2 and *the grammar of graphics* first? Check out Hadley’s book **ggplot2: Elegant Graphics for Data Analysis** [@wickham2016]. You can find the work-in-progress 3rd edition [online](https://ggplot2-book.org/).
 
 This website is and will always be free, licensed under the [CC BY-NC-ND 4.0 DEED license](https://creativecommons.org/licenses/by-nc-nd/4.0/). Once I've finished writing the whole book, there will be a physical copy of the book available. Stay tuned!
 
@@ -14,6 +14,6 @@ Please note that ggplot2 extended uses a [Contributor Code of Conduct](https://w
 
 This book is written by [Antti Rask](https://www.linkedin.com/in/anttirask/).
 
-## Acknowledgments
+## Acknowledgments {#sec-index-acknowledgements}
 
 This book was built with [Quarto](https://quarto.org/) and is hosted on [Netlify](https://www.netlify.com/).

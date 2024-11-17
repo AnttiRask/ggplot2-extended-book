@@ -8,13 +8,13 @@
 source("warning.R")
 ```
 
-## Data sets
+## Data sets {#sec-data-sets}
 
 This book is about tools for creating visualizations. But to visualize data you first need data. So let's start by taking a look at some of the data sets available to us without much hassle.
 
-### base R
+### base R {#sec-base-r}
 
-Base R comes with a bunch of data sets ready to use. There are classics like __iris__ and __mtcars__, but there are many more to choose from:
+Base R comes with a bunch of data sets ready to use. There are classics like **iris** and **mtcars**, but there are many more to choose from:
 
 ```{r}
 #| echo:    false
@@ -34,9 +34,9 @@ data() %>%
   paged_table()
 ```
 
-Since the __datasets__ package comes from base R, the data is not always immediately ready to use with __ggplot2__ [@wickham2024]. Luckily we have the __tidyverse__ [@wickham2023b] packages that make it easy to make the necessary changes.
+Since the **datasets** package comes from base R, the data is not always immediately ready to use with **ggplot2** [@wickham2024]. Luckily we have the **tidyverse** [@wickham2023b] packages that make it easy to make the necessary changes.
 
-Here is an example using the __USArrests__ ('Violent Crime Rates by US State') data set. We can start by loading the data set by using the `data()` function:
+Here is an example using the **USArrests** ('Violent Crime Rates by US State') data set. We can start by loading the data set by using the `data()` function:
 
 ```{r}
 data(USArrests)
@@ -48,7 +48,7 @@ Let's take a quick look at what the first couple of rows of the data set looks l
 head(USArrests)
 ```
 
-As you can see, USArrests is a data frame. It has four columns and the names of the US states are row names. We would like to see them as the fifth column instead. We can use the __tibble__ [@müller2023] package to do that. While we're at it, let's also change the data frame into a tibble:
+As you can see, USArrests is a data frame. It has four columns and the names of the US states are row names. We would like to see them as the fifth column instead. We can use the **tibble** [@müller2023] package to do that. While we're at it, let's also change the data frame into a tibble:
 
 ```{r}
 library(tibble)
@@ -79,13 +79,13 @@ usarrests_tbl %>%
   geom_label(aes(label = State))
 ```
 
-### IMDb movies (1893-2005)
+### IMDb movies (1893-2005) {#sec-imdb-movies-1893-2005}
 
-__ggplot2movies__ [@wickham2015] used to be a part of the ggplot2 package itself. It’s now its own package to make ggplot2 lighter.
+**ggplot2movies** [@wickham2015] used to be a part of the ggplot2 package itself. It’s now its own package to make ggplot2 lighter.
 
 But it’s a cool little package. It has [Internet Movie Database (IMDb)](https://www.imdb.com/) data about movies from between 1893 and 2005. The selected movies have "a known length and had been rated by at least one \[IMDb\] user." [@wickham2015].
 
-The __Movies__ data set has qualities that make it good for our needs. Let’s start by loading it:
+The **Movies** data set has qualities that make it good for our needs. Let’s start by loading it:
 
 ```{r}
 library(ggplot2movies)
@@ -168,7 +168,7 @@ Here are some of the reasons why Movies is a good example data set because it in
 -   *Categorical* data of both *nominal* (title, genre) and *ordinal* (mpaa) kind
 -   *Numerical* data of both *continuous* (budget, length, rating) and *discrete* (year, votes) kind
 
-We can use two of those columns, __year__ and __rating__ to create a simple visualization with ggplot2:
+We can use two of those columns, **year** and **rating** to create a simple visualization with ggplot2:
 
 ```{r}
 library(ggplot2)
@@ -180,9 +180,9 @@ movies %>%
 
 As mentioned earlier, Movies is already a tibble. But, it doesn't mean that the data is in an optimal format for all kinds of visualization. But we'll do all the necessary data wrangling within the chapter where we use the data.
 
-### RDatasets
+### RDatasets {#sec-rdatasets}
 
-[__RDatasets__](https://vincentarelbundock.github.io/Rdatasets/articles/data.html) is not an R package. But it is an excellent GitHub repo. And a “collection of datasets originally distributed in various R packages" [@arel-bundock2024].
+[**RDatasets**](https://vincentarelbundock.github.io/Rdatasets/articles/data.html) is not an R package. But it is an excellent GitHub repo. And a “collection of datasets originally distributed in various R packages" [@arel-bundock2024].
 
 ```{r}
 #| echo: false
@@ -235,7 +235,7 @@ Here listed are the `r .RDatasets_rowcount` data sets that were available on `r 
 
 The RDatasets repo contains that same list. But there you will also find a .csv file and documentation for each data set.
 
-If I had to choose one fun data set from the list to highlight, it would be __starwars__ from the __dplyr__ [@wickham2023c] package.
+If I had to choose one fun data set from the list to highlight, it would be **starwars** from the **dplyr** [@wickham2023c] package.
 
 You can choose to use the .csv file provided on the website. Another way to use the collection is to choose the dataset from the list and load the package it comes with:
 
@@ -281,14 +281,14 @@ starwars %>%
 
 This concludes the section about the different data sets available for every R user. Next, we'll take a look at some of the ggplot2 extensions that make it easier to do exploratory data analysis (EDA).
 
-## Exploratory data analysis (EDA)
+## Exploratory data analysis (EDA) {#sec-exploratory-data-analysis-eda}
 
-### Missing values
+### Missing values {#sec-missing-values}
 
-### Summarizing data
+### Summarizing data {#sec-summarizing-data}
 
-### Pairwise plot matrix
+### Pairwise plot matrix {#sec-pairwise-plot-matrix}
 
-### Correlation matrix
+### Correlation matrix {#sec-correlation-matrix}
 
-### Automated EDA app
+### Automated EDA app {#sec-automated-eda-app}

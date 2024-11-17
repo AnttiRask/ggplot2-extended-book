@@ -13,7 +13,7 @@ This book is an opinionated compendium of R packages that extend **ggplot2** (pa
 
 The book is about ggplot2 extension packages. But it has been important to me that I design the structure and contents concept(s) first, and package(s) second.
 
-## Landscape
+## Landscape {#sec-landscape}
 
 Look at the figure. The amount of R packages *depending*[^preface-1], *importing*[^preface-2], or *suggesting*[^preface-3] [@wickham2023c] ggplot2 is increasing:
 

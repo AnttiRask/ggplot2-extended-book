@@ -335,7 +335,7 @@ div.csl-indent {
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-<li><a href="#landscape" id="toc-landscape" class="nav-link active" data-scroll-target="#landscape">Landscape</a></li>
+<li><a href="#sec-landscape" id="toc-sec-landscape" class="nav-link active" data-scroll-target="#sec-landscape">Landscape</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/edit/main/preface.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
@@ -370,10 +370,10 @@ This book/site is under construction
 <p>“The tidyverse is an opinionated collection of R packages designed for data science.” <a href="https://www.tidyverse.org/" class="uri">https://www.tidyverse.org/</a></p>
 <p>This book is an opinionated compendium of R packages that extend <strong>ggplot2</strong> (part of the <strong>tidyverse</strong>). It doesn’t try to be complete as the ecosystem is both wide and deep. The aim is to celebrate the great community that is creating fun and useful new ways to visualize data. And since we’re talking about data visualization, show what all is possible.</p>
 <p>The book is about ggplot2 extension packages. But it has been important to me that I design the structure and contents concept(s) first, and package(s) second.</p>
-<section id="landscape" class="level2"><h2 class="anchored" data-anchor-id="landscape">Landscape</h2>
+<section id="sec-landscape" class="level2"><h2 class="anchored" data-anchor-id="sec-landscape">Landscape</h2>
 <p>Look at the figure. The amount of R packages <em>depending</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, <em>importing</em><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, or <em>suggesting</em><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> <span class="citation" data-cites="wickham2023c">(<a href="references.html#ref-wickham2023c" role="doc-biblioref">Wickham et al. 2023</a>)</span> ggplot2 is increasing:</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/ggplot2_dependencies_2023-12-31.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="ggplot2 dependencies between 2007-2023"><img src="img/ggplot2_dependencies_2023-12-31.png" class="img-fluid figure-img" alt="ggplot2 dependencies between 2007-2023"></a></p>
+<figure class="figure"><p><a href="img/ggplot2_dependencies_2023-12-31.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="ggplot2 dependencies between 2007-2023"><img src="img/ggplot2_dependencies_2023-12-31.png" class="img-fluid figure-img" alt="ggplot2 dependencies between 2007-2023"></a></p>
 <figcaption><strong>ggplot2</strong> dependencies between 2007-2023</figcaption></figure>
 </div>
 <p>Among these thousands of packages are also hundreds of ggplot2 extensions. And these are the ones that are on <a href="https://cran.r-project.org/">CRAN</a> (The Comprehensive R Archive Network). There are also packages on <a href="https://github.com/">GitHub</a> and similar platforms. Packages that no one have yet added to CRAN. Or those that have once been there, but CRAN has since archived for one reason or another.</p>
@@ -384,7 +384,7 @@ This book/site is under construction
 </div>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-wickham2023c" class="csl-entry" role="listitem">
-Wickham, Hadley, Romain François, Lionel Henry, Kirill Müller, and Davis Vaughan. 2023. <em>Dplyr: A Grammar of Data Manipulation. R Package Version 1.1.4</em>.
+Wickham, Hadley, Romain François, Lionel Henry, Kirill Müller, and Davis Vaughan. 2023. <em>Dplyr: A Grammar of Data Manipulation. R Package Version 1.1.4</em>. <a href="https://CRAN.R-project.org/package=dplyr">https://CRAN.R-project.org/package=dplyr</a>.
 </div>
 </div>
 </section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><hr>
@@ -823,7 +823,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <p>This book was built with <a href="https://quarto.org/">Quarto</a> and is hosted on <a href="https://www.netlify.com">Netlify</a>.</p>
 </div>
   </div>
-</footer><script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom"});
+</footer><script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","loop":false});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
