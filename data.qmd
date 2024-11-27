@@ -283,12 +283,154 @@ This concludes the section about the different data sets available for every R u
 
 ## Exploratory data analysis (EDA) {#sec-exploratory-data-analysis-eda}
 
+Exploratory data analysis (or EDA, which we'll be using from now on) is a process, even if it is a loose one. The Cambridge Dictionary [@mcintosh2013] defines process as "a series of actions that you take in order to achieve a result". So, we a) have a series of actions and b) a result you wish to achieve.
+
+Let's look at the results first. After all, that is why we do things. You might have other, more specific goals depending on your particular field or use case. But in the most general sense, the result we're after is a better understanding of the data (set) we're working on.
+
+What are the series of actions we need to take? As I mentioned earlier, EDA is a loose process. There are as many ways to go about it as there are analysts and data sets. Still, some common steps usually occur: looking at **missing values**, **summarizing data**, and **visualizing data**.
+
+It's good to note these visualizations aren't usually meant for publication. Compared to those you find later on in the book, these are more for your eyes than for the eventual audience.
+
+The last thing we'll look at in this chapter is one way to **automate** the EDA process using an app. Although I must warn you. It's better to use these tools only after you've gained experience from doing EDA without them. It might sound counterintuitive, but trust me. It can be too overwhelming if you don't know what you're doing.
+
 ### Missing values {#sec-missing-values}
+
+Let's first load the data. Looking at the movies data set earlier we noticed the **mpaa** column had many blank values. We don't know if they didn't have a rating in the first place. Or if they did, but the rating is missing. For the sake of this demonstration, let's assume they all should have a rating.
+
+We'll begin by turning all the blank values (of the *character* type) into *NA* (not available).
+
+```{r}
+#| message: false
+#| warning: false
+
+library(dplyr)
+library(ggplot2movies)
+
+movies_na <- movies %>%
+  mutate(
+    # Turn all blank values of the character type into NA
+    across(where(is.character), ~na_if(., "")), 
+    # Create a decade column based on the values in the year column
+    decade = floor(year / 10) * 10
+  )
+```
+
+**Naniar** [@tierney2024] is a package with many functions for visualizing missing (NA) values. It does contain many functions outside of visualization. But that's for another book.
+
+One simple function is `gg_miss_var()`. It creates a lollipop plot (\[INSERT LINK HERE\]). It shows which columns (variables) contain the greatest amount of missing (NA) values.
+
+```{r}
+library(naniar)
+
+movies_na %>% 
+  gg_miss_var()
+```
+
+We can see that _MPAA ratings_ aren't the only thing missing. Almost the same amount of films are missing the budget information. With budget, it's easier to say that if we don't have a number, it is missing. Then again, that column did have NAs in place from the beginning.
+
+We're also interested in seeing if there is overlapping *missingness* between the columns. We'll use an upset plot (\[INSERT LINK HERE\]) for that. Just add `gg_miss_upset()`.
+
+```{r}
+movies_na %>% 
+  gg_miss_upset(
+    # Number of sets to look at. We know there are only two columns with NA
+    nsets = 2 
+  )
+```
+
+More than 3000 movies without an MPAA rating and almost the same amount without a budget. But over 50000 without both. That makes me think there is a consistency in the missingness.
+
+We can also use `geom_miss_point()` to see if there are more patterns between the missing variables. Let's also use `label_number()` from the **scales** [@wickham2023e] package to prettify the x-axis labels.
+
+```{r}
+#| message: false
+#| warning: false
+
+library(ggplot2)
+library(scales)
+
+p <- movies_na %>%
+  ggplot(aes(budget, mpaa)) +
+  geom_point() +
+  geom_miss_point() +
+  scale_x_continuous(
+    labels = label_number(
+      scale  = 1e-6,
+      prefix = "$",
+      suffix = "M"
+    )
+  )
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| results: asis
+
+p
+```
+
+Values seem to be missing in all the MPAA rating categories. NC-17 does not seem to contain that many values in general, but many of them seem to be missing.
+
+Let's confirm this observation by creating a frequency table with the `tabyl()` function. It's from a neat package called **janitor** [@firke2023].
+
+```{r}
+#| message: false
+#| warning: false
+#| results: asis
+
+library(janitor)
+
+movies_na %>% 
+  filter(mpaa == "NC-17") %>% 
+  tabyl(mpaa, budget) %>%
+  paged_table()
+```
+
+So, there are more NC-17 movies that are missing the budget than those that aren't.
+
+We can dig even deeper. We can use `facet_wrap()` from ggplot2 to see how the missing values are distributed throughout the history.
+
+```{r}
+#| message: false
+#| warning: false
+#| results: asis
+
+p +
+  scale_x_continuous(
+    n.breaks = 3,
+    labels   = label_number(
+      scale  = 1e-6,
+      prefix = "$",
+      suffix = "M"
+    )
+  ) +
+  facet_wrap(vars(decade))
+```
+
+Before we move on to the next topic, let's look at one interesting alternative, `vis_miss()`. Naniar imports it from __visdat__ [@tierney2023].
+
+```{r}
+movies_na %>%
+  vis_miss(
+    # TRUE arranges the columns in order of missingness. Default value is FALSE.
+    sort_miss       = TRUE,
+    # Warn if there is large data? Default is TRUE.
+    warn_large_data = FALSE 
+  )
+```
+
+This one packs a punch. You see the amount of NAs in general. Also the amount of NAs in each column. And to top it off, we can "arrange the columns in order of missingness". A great quick overview!
+
+Now that we know where the missing data points are, one next step could be handling that missing data. There are different strategies for that, but this is outside the scope of this book.
 
 ### Summarizing data {#sec-summarizing-data}
 
-### Pairwise plot matrix {#sec-pairwise-plot-matrix}
+### Visualizing data {#sec-visualizing-data}
 
-### Correlation matrix {#sec-correlation-matrix}
+**Pairwise plot matrix**
+
+**Correlation matrix**
 
 ### Automated EDA app {#sec-automated-eda-app}

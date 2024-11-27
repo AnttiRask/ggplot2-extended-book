@@ -380,9 +380,8 @@ div.csl-indent {
   <ul class="collapse">
 <li><a href="#sec-missing-values" id="toc-sec-missing-values" class="nav-link" data-scroll-target="#sec-missing-values"><span class="header-section-number">2.2.1</span> Missing values</a></li>
   <li><a href="#sec-summarizing-data" id="toc-sec-summarizing-data" class="nav-link" data-scroll-target="#sec-summarizing-data"><span class="header-section-number">2.2.2</span> Summarizing data</a></li>
-  <li><a href="#sec-pairwise-plot-matrix" id="toc-sec-pairwise-plot-matrix" class="nav-link" data-scroll-target="#sec-pairwise-plot-matrix"><span class="header-section-number">2.2.3</span> Pairwise plot matrix</a></li>
-  <li><a href="#sec-correlation-matrix" id="toc-sec-correlation-matrix" class="nav-link" data-scroll-target="#sec-correlation-matrix"><span class="header-section-number">2.2.4</span> Correlation matrix</a></li>
-  <li><a href="#sec-automated-eda-app" id="toc-sec-automated-eda-app" class="nav-link" data-scroll-target="#sec-automated-eda-app"><span class="header-section-number">2.2.5</span> Automated EDA app</a></li>
+  <li><a href="#sec-visualizing-data" id="toc-sec-visualizing-data" class="nav-link" data-scroll-target="#sec-visualizing-data"><span class="header-section-number">2.2.3</span> Visualizing data</a></li>
+  <li><a href="#sec-automated-eda-app" id="toc-sec-automated-eda-app" class="nav-link" data-scroll-target="#sec-automated-eda-app"><span class="header-section-number">2.2.4</span> Automated EDA app</a></li>
   </ul>
 </li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/edit/main/data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -561,36 +560,162 @@ Colorado      7.9     204       78 38.7</code></pre>
 <p>This concludes the section about the different data sets available for every R user. Next, we’ll take a look at some of the ggplot2 extensions that make it easier to do exploratory data analysis (EDA).</p>
 </section></section><section id="sec-exploratory-data-analysis-eda" class="level2" data-number="2.2"><h2 data-number="2.2" class="anchored" data-anchor-id="sec-exploratory-data-analysis-eda">
 <span class="header-section-number">2.2</span> Exploratory data analysis (EDA)</h2>
+<p>Exploratory data analysis (or EDA, which we’ll be using from now on) is a process, even if it is a loose one. The Cambridge Dictionary <span class="citation" data-cites="mcintosh2013">(<a href="references.html#ref-mcintosh2013" role="doc-biblioref">(Ed.) 2013</a>)</span> defines process as “a series of actions that you take in order to achieve a result”. So, we a) have a series of actions and b) a result you wish to achieve.</p>
+<p>Let’s look at the results first. After all, that is why we do things. You might have other, more specific goals depending on your particular field or use case. But in the most general sense, the result we’re after is a better understanding of the data (set) we’re working on.</p>
+<p>What are the series of actions we need to take? As I mentioned earlier, EDA is a loose process. There are as many ways to go about it as there are analysts and data sets. Still, some common steps usually occur: looking at <strong>missing values</strong>, <strong>summarizing data</strong>, and <strong>visualizing data</strong>.</p>
+<p>It’s good to note these visualizations aren’t usually meant for publication. Compared to those you find later on in the book, these are more for your eyes than for the eventual audience.</p>
+<p>The last thing we’ll look at in this chapter is one way to <strong>automate</strong> the EDA process using an app. Although I must warn you. It’s better to use these tools only after you’ve gained experience from doing EDA without them. It might sound counterintuitive, but trust me. It can be too overwhelming if you don’t know what you’re doing.</p>
 <section id="sec-missing-values" class="level3" data-number="2.2.1"><h3 data-number="2.2.1" class="anchored" data-anchor-id="sec-missing-values">
 <span class="header-section-number">2.2.1</span> Missing values</h3>
+<p>Let’s first load the data. Looking at the movies data set earlier we noticed the <strong>mpaa</strong> column had many blank values. We don’t know if they didn’t have a rating in the first place. Or if they did, but the rating is missing. For the sake of this demonstration, let’s assume they all should have a rating.</p>
+<p>We’ll begin by turning all the blank values (of the <em>character</em> type) into <em>NA</em> (not available).</p>
+<div class="cell">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">ggplot2movies</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">movies_na</span> <span class="op">&lt;-</span> <span class="va">movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
+<span>    <span class="co"># Turn all blank values of the character type into NA</span></span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/across.html">across</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/where.html">where</a></span><span class="op">(</span><span class="va">is.character</span><span class="op">)</span>, <span class="op">~</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/na_if.html">na_if</a></span><span class="op">(</span><span class="va">.</span>, <span class="st">""</span><span class="op">)</span><span class="op">)</span>, </span>
+<span>    <span class="co"># Create a decade column based on the values in the year column</span></span>
+<span>    decade <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">floor</a></span><span class="op">(</span><span class="va">year</span> <span class="op">/</span> <span class="fl">10</span><span class="op">)</span> <span class="op">*</span> <span class="fl">10</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Naniar</strong> <span class="citation" data-cites="tierney2024">(<a href="references.html#ref-tierney2024" role="doc-biblioref">Tierney et al. 2024</a>)</span> is a package with many functions for visualizing missing (NA) values. It does contain many functions outside of visualization. But that’s for another book.</p>
+<p>One simple function is <code><a href="https://naniar.njtierney.com/reference/gg_miss_var.html">gg_miss_var()</a></code>. It creates a lollipop plot ([INSERT LINK HERE]). It shows which columns (variables) contain the greatest amount of missing (NA) values.</p>
+<div class="cell">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/njtierney/naniar">naniar</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">movies_na</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://naniar.njtierney.com/reference/gg_miss_var.html">gg_miss_var</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="data_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>We can see that <em>MPAA ratings</em> aren’t the only thing missing. Almost the same amount of films are missing the budget information. With budget, it’s easier to say that if we don’t have a number, it is missing. Then again, that column did have NAs in place from the beginning.</p>
+<p>We’re also interested in seeing if there is overlapping <em>missingness</em> between the columns. We’ll use an upset plot ([INSERT LINK HERE]) for that. Just add <code><a href="https://naniar.njtierney.com/reference/gg_miss_upset.html">gg_miss_upset()</a></code>.</p>
+<div class="cell">
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">movies_na</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://naniar.njtierney.com/reference/gg_miss_upset.html">gg_miss_upset</a></span><span class="op">(</span></span>
+<span>    <span class="co"># Number of sets to look at. We know there are only two columns with NA</span></span>
+<span>    nsets <span class="op">=</span> <span class="fl">2</span> </span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="data_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>More than 3000 movies without an MPAA rating and almost the same amount without a budget. But over 50000 without both. That makes me think there is a consistency in the missingness.</p>
+<p>We can also use <code><a href="https://naniar.njtierney.com/reference/geom_miss_point.html">geom_miss_point()</a></code> to see if there are more patterns between the missing variables. Let’s also use <code><a href="https://scales.r-lib.org/reference/label_number.html">label_number()</a></code> from the <strong>scales</strong> <span class="citation" data-cites="wickham2023e">(<a href="references.html#ref-wickham2023e" role="doc-biblioref">Wickham, Pedersen, and Seidel 2023</a>)</span> package to prettify the x-axis labels.</p>
+<div class="cell">
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://scales.r-lib.org">scales</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">p</span> <span class="op">&lt;-</span> <span class="va">movies_na</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">budget</span>, <span class="va">mpaa</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://naniar.njtierney.com/reference/geom_miss_point.html">geom_miss_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span></span>
+<span>    labels <span class="op">=</span> <span class="fu"><a href="https://scales.r-lib.org/reference/label_number.html">label_number</a></span><span class="op">(</span></span>
+<span>      scale  <span class="op">=</span> <span class="fl">1e-6</span>,</span>
+<span>      prefix <span class="op">=</span> <span class="st">"$"</span>,</span>
+<span>      suffix <span class="op">=</span> <span class="st">"M"</span></span>
+<span>    <span class="op">)</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img src="data_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid" width="672"></p>
+<p>Values seem to be missing in all the MPAA rating categories. NC-17 does not seem to contain that many values in general, but many of them seem to be missing.</p>
+<p>Let’s confirm this observation by creating a frequency table with the <code><a href="https://sfirke.github.io/janitor/reference/tabyl.html">tabyl()</a></code> function. It’s from a neat package called <strong>janitor</strong> <span class="citation" data-cites="firke2023">(<a href="references.html#ref-firke2023" role="doc-biblioref">Firke 2023</a>)</span>.</p>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/sfirke/janitor">janitor</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">movies_na</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">mpaa</span> <span class="op">==</span> <span class="st">"NC-17"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://sfirke.github.io/janitor/reference/tabyl.html">tabyl</a></span><span class="op">(</span><span class="va">mpaa</span>, <span class="va">budget</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">paged_table</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["mpaa"],"name":[1],"type":["chr"],"align":["left"]},{"label":["12000"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["25000"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["350000"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["1000000"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["1250000"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["45000000"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["NA_"],"name":[8],"type":["dbl"],"align":["right"]}],"data":[{"1":"NC-17","2":"1","3":"1","4":"1","5":"2","6":"1","7":"1","8":"9"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<p>So, there are more NC-17 movies that are missing the budget than those that aren’t.</p>
+<p>We can dig even deeper. We can use <code><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap()</a></code> from ggplot2 to see how the missing values are distributed throughout the history.</p>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">p</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span></span>
+<span>    n.breaks <span class="op">=</span> <span class="fl">3</span>,</span>
+<span>    labels   <span class="op">=</span> <span class="fu"><a href="https://scales.r-lib.org/reference/label_number.html">label_number</a></span><span class="op">(</span></span>
+<span>      scale  <span class="op">=</span> <span class="fl">1e-6</span>,</span>
+<span>      prefix <span class="op">=</span> <span class="st">"$"</span>,</span>
+<span>      suffix <span class="op">=</span> <span class="st">"M"</span></span>
+<span>    <span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/vars.html">vars</a></span><span class="op">(</span><span class="va">decade</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><img src="data_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid" width="672"></p>
+<p>Before we move on to the next topic, let’s look at one interesting alternative, <code><a href="https://docs.ropensci.org/visdat/reference/vis_miss.html">vis_miss()</a></code>. Naniar imports it from <strong>visdat</strong> <span class="citation" data-cites="tierney2023">(<a href="references.html#ref-tierney2023" role="doc-biblioref">Tierney 2023</a>)</span>.</p>
+<div class="cell">
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">movies_na</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://docs.ropensci.org/visdat/reference/vis_miss.html">vis_miss</a></span><span class="op">(</span></span>
+<span>    <span class="co"># TRUE arranges the columns in order of missingness. Default value is FALSE.</span></span>
+<span>    sort_miss       <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>    <span class="co"># Warn if there is large data? Default is TRUE.</span></span>
+<span>    warn_large_data <span class="op">=</span> <span class="cn">FALSE</span> </span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="data_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This one packs a punch. You see the amount of NAs in general. Also the amount of NAs in each column. And to top it off, we can “arrange the columns in order of missingness”. A great quick overview!</p>
+<p>Now that we know where the missing data points are, one next step could be handling that missing data. There are different strategies for that, but this is outside the scope of this book.</p>
 </section><section id="sec-summarizing-data" class="level3" data-number="2.2.2"><h3 data-number="2.2.2" class="anchored" data-anchor-id="sec-summarizing-data">
 <span class="header-section-number">2.2.2</span> Summarizing data</h3>
-</section><section id="sec-pairwise-plot-matrix" class="level3" data-number="2.2.3"><h3 data-number="2.2.3" class="anchored" data-anchor-id="sec-pairwise-plot-matrix">
-<span class="header-section-number">2.2.3</span> Pairwise plot matrix</h3>
-</section><section id="sec-correlation-matrix" class="level3" data-number="2.2.4"><h3 data-number="2.2.4" class="anchored" data-anchor-id="sec-correlation-matrix">
-<span class="header-section-number">2.2.4</span> Correlation matrix</h3>
-</section><section id="sec-automated-eda-app" class="level3" data-number="2.2.5"><h3 data-number="2.2.5" class="anchored" data-anchor-id="sec-automated-eda-app">
-<span class="header-section-number">2.2.5</span> Automated EDA app</h3>
+</section><section id="sec-visualizing-data" class="level3" data-number="2.2.3"><h3 data-number="2.2.3" class="anchored" data-anchor-id="sec-visualizing-data">
+<span class="header-section-number">2.2.3</span> Visualizing data</h3>
+<p><strong>Pairwise plot matrix</strong></p>
+<p><strong>Correlation matrix</strong></p>
+</section><section id="sec-automated-eda-app" class="level3" data-number="2.2.4"><h3 data-number="2.2.4" class="anchored" data-anchor-id="sec-automated-eda-app">
+<span class="header-section-number">2.2.4</span> Automated EDA app</h3>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-arel-bundock2024" class="csl-entry" role="listitem">
-Arel-Bundock, Vincent. 2024. <em>Rdatasets: A Collection of Datasets Originally Distributed in Various r Packages</em>.
+Arel-Bundock, Vincent. 2024. <em>Rdatasets: A Collection of Datasets Originally Distributed in Various r Packages</em>. <a href="https://vincentarelbundock.github.io/Rdatasets/">https://vincentarelbundock.github.io/Rdatasets/</a>.
+</div>
+<div id="ref-mcintosh2013" class="csl-entry" role="listitem">
+(Ed.), Colin McIntosh. 2013. <em>Cambridge Advanced Learner’s Dictionary</em>. 4th ed. Cambridge University Press.
+</div>
+<div id="ref-firke2023" class="csl-entry" role="listitem">
+Firke, Sam. 2023. <em>Janitor: Simple Tools for Examining and Cleaning Dirty Data. R Package Version 2.2.0</em>. <a href="https://github.com/sfirke/janitor">https://github.com/sfirke/janitor</a>.
 </div>
 <div id="ref-müller2023" class="csl-entry" role="listitem">
 Müller, Kirill, and Hadley Wickham. 2023. <em>Tibble: Simple Data Frames. R Package Version 3.2.1</em>. <a href="https://CRAN.R-project.org/package=tibble">https://CRAN.R-project.org/package=tibble</a>.
 </div>
+<div id="ref-tierney2023" class="csl-entry" role="listitem">
+Tierney, Nicholas. 2023. <em>Visdat: Preliminary Visualisation of Data. R Package Version 0.6.0</em>. <a href="https://CRAN.R-project.org/package=visdat">https://CRAN.R-project.org/package=visdat</a>.
+</div>
+<div id="ref-tierney2024" class="csl-entry" role="listitem">
+Tierney, Nicholas, Dianne Cook, Miles McBain, and Colin Fay. 2024. <em>Naniar: Data Structures, Summaries, and Visualisations for Missing Data. R Package Version 1.1.0</em>. <a href="https://CRAN.R-project.org/package=naniar">https://CRAN.R-project.org/package=naniar</a>.
+</div>
 <div id="ref-wickham2015" class="csl-entry" role="listitem">
-Wickham, Hadley. 2015. <em>Ggplot2movies: Movies Data. R Package Version 0.0.1</em>.
+Wickham, Hadley. 2015. <em>Ggplot2movies: Movies Data. R Package Version 0.0.1</em>. <a href="https://CRAN.R-project.org/package=ggplot2movies">https://CRAN.R-project.org/package=ggplot2movies</a>.
 </div>
 <div id="ref-wickham2024" class="csl-entry" role="listitem">
 ———. 2024. <em>Ggplot2: Elegant Graphics for Data Analysis. R Package Version 3.5.1</em>. <a href="https://ggplot2.tidyverse.org">https://ggplot2.tidyverse.org</a>.
 </div>
 <div id="ref-wickham2023b" class="csl-entry" role="listitem">
-Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2023. <em>Tidyverse: Welcome to the Tidyverse. R Package Version 2.0.0</em>.
+Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2023. <em>Tidyverse: Welcome to the Tidyverse. R Package Version 2.0.0</em>. <a href="https://CRAN.R-project.org/package=tidyverse">https://CRAN.R-project.org/package=tidyverse</a>.
 </div>
 <div id="ref-wickham2023c" class="csl-entry" role="listitem">
 Wickham, Hadley, Romain François, Lionel Henry, Kirill Müller, and Davis Vaughan. 2023. <em>Dplyr: A Grammar of Data Manipulation. R Package Version 1.1.4</em>. <a href="https://CRAN.R-project.org/package=dplyr">https://CRAN.R-project.org/package=dplyr</a>.
+</div>
+<div id="ref-wickham2023e" class="csl-entry" role="listitem">
+Wickham, Hadley, Thomas Lin Pedersen, and Dana Seidel. 2023. <em>Scales: Scale Functions for Visualization. R Package Version 1.3.0</em>. <a href="https://CRAN.R-project.org/package=scales">https://CRAN.R-project.org/package=scales</a>.
 </div>
 </div>
 </section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
