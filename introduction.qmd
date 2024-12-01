@@ -184,9 +184,9 @@ Some of them you can install from CRAN:
 
 install.packages(
   c(
+    "DataExplorer",
     "ggplot2movies",
     "naniar",
-    "visdat"
   )
 )
 ```
@@ -289,6 +289,7 @@ This version of the book was built with `r R.version.string` and the following p
 
 pkgs <- c(
   "conflicted",
+  "DataExplorer",
   "dplyr",
   "ggplot2",
   "ggplot2movies",
@@ -298,8 +299,7 @@ pkgs <- c(
   "readr",
   "rmarkdown",
   "scales",
-  "tibble",
-  "visdat"
+  "tibble"
 )
 ```
 

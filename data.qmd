@@ -287,7 +287,7 @@ Exploratory data analysis (or EDA, which we'll be using from now on) is a proces
 
 Let's look at the results first. After all, that is why we do things. You might have other, more specific goals depending on your particular field or use case. But in the most general sense, the result we're after is a better understanding of the data (set) we're working on.
 
-What are the series of actions we need to take? As I mentioned earlier, EDA is a loose process. There are as many ways to go about it as there are analysts and data sets. Still, some common steps usually occur: looking at **missing values**, **summarizing data**, and **visualizing data**.
+What are the series of actions we need to take? As I mentioned earlier, EDA is a loose process. There are as many ways to go about it as there are analysts and data sets. Still, some common steps usually occur: looking at **missing values**, **summarizing data**, and **visualizing relationships** between variables.
 
 It's good to note these visualizations aren't usually meant for publication. Compared to those you find later on in the book, these are more for your eyes than for the eventual audience.
 
@@ -409,25 +409,29 @@ p +
   facet_wrap(vars(decade))
 ```
 
-Before we move on to the next topic, let's look at one interesting alternative, `vis_miss()`. Naniar imports it from __visdat__ [@tierney2023].
+Before moving on, let's first look at one interesting alternative for visualizing missing values: `plot_missing()`. It comes from the __DataExplorer__ [@cui2024] package.
 
 ```{r}
+#| message: false
+#| warning: false
+#| results: asis
+
+library(DataExplorer)
+
 movies_na %>%
-  vis_miss(
-    # TRUE arranges the columns in order of missingness. Default value is FALSE.
-    sort_miss       = TRUE,
-    # Warn if there is large data? Default is TRUE.
-    warn_large_data = FALSE 
-  )
+  # Let's only visualize the missing values
+  plot_missing(missing_only = TRUE)
 ```
 
-This one packs a punch. You see the amount of NAs in general. Also the amount of NAs in each column. And to top it off, we can "arrange the columns in order of missingness". A great quick overview!
+You see the amount and percentage of NAs per column, arranged in order of missingness. This is a great quick overview!
 
-Now that we know where the missing data points are, one next step could be handling that missing data. There are different strategies for that, but this is outside the scope of this book.
+DataExplorer, like naniar earlier, provides functions for handling the missing values. For instance, we could drop the __budget__ and __mpaa__ columns, as indicated by the red color in the visualization above.
 
 ### Summarizing data {#sec-summarizing-data}
 
-### Visualizing data {#sec-visualizing-data}
+Of course, we want to visualize more than just the missing data. It makes sense to start with an overview of some kind.
+
+### Visualizing relationships {#sec-visualizing-relationships}
 
 **Pairwise plot matrix**
 

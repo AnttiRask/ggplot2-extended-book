@@ -380,7 +380,7 @@ div.csl-indent {
   <ul class="collapse">
 <li><a href="#sec-missing-values" id="toc-sec-missing-values" class="nav-link" data-scroll-target="#sec-missing-values"><span class="header-section-number">2.2.1</span> Missing values</a></li>
   <li><a href="#sec-summarizing-data" id="toc-sec-summarizing-data" class="nav-link" data-scroll-target="#sec-summarizing-data"><span class="header-section-number">2.2.2</span> Summarizing data</a></li>
-  <li><a href="#sec-visualizing-data" id="toc-sec-visualizing-data" class="nav-link" data-scroll-target="#sec-visualizing-data"><span class="header-section-number">2.2.3</span> Visualizing data</a></li>
+  <li><a href="#sec-visualizing-relationships" id="toc-sec-visualizing-relationships" class="nav-link" data-scroll-target="#sec-visualizing-relationships"><span class="header-section-number">2.2.3</span> Visualizing relationships</a></li>
   <li><a href="#sec-automated-eda-app" id="toc-sec-automated-eda-app" class="nav-link" data-scroll-target="#sec-automated-eda-app"><span class="header-section-number">2.2.4</span> Automated EDA app</a></li>
   </ul>
 </li>
@@ -562,7 +562,7 @@ Colorado      7.9     204       78 38.7</code></pre>
 <span class="header-section-number">2.2</span> Exploratory data analysis (EDA)</h2>
 <p>Exploratory data analysis (or EDA, which we’ll be using from now on) is a process, even if it is a loose one. The Cambridge Dictionary <span class="citation" data-cites="mcintosh2013">(<a href="references.html#ref-mcintosh2013" role="doc-biblioref">(Ed.) 2013</a>)</span> defines process as “a series of actions that you take in order to achieve a result”. So, we a) have a series of actions and b) a result you wish to achieve.</p>
 <p>Let’s look at the results first. After all, that is why we do things. You might have other, more specific goals depending on your particular field or use case. But in the most general sense, the result we’re after is a better understanding of the data (set) we’re working on.</p>
-<p>What are the series of actions we need to take? As I mentioned earlier, EDA is a loose process. There are as many ways to go about it as there are analysts and data sets. Still, some common steps usually occur: looking at <strong>missing values</strong>, <strong>summarizing data</strong>, and <strong>visualizing data</strong>.</p>
+<p>What are the series of actions we need to take? As I mentioned earlier, EDA is a loose process. There are as many ways to go about it as there are analysts and data sets. Still, some common steps usually occur: looking at <strong>missing values</strong>, <strong>summarizing data</strong>, and <strong>visualizing relationships</strong> between variables.</p>
 <p>It’s good to note these visualizations aren’t usually meant for publication. Compared to those you find later on in the book, these are more for your eyes than for the eventual audience.</p>
 <p>The last thing we’ll look at in this chapter is one way to <strong>automate</strong> the EDA process using an app. Although I must warn you. It’s better to use these tools only after you’ve gained experience from doing EDA without them. It might sound counterintuitive, but trust me. It can be too overwhelming if you don’t know what you’re doing.</p>
 <section id="sec-missing-values" class="level3" data-number="2.2.1"><h3 data-number="2.2.1" class="anchored" data-anchor-id="sec-missing-values">
@@ -655,28 +655,20 @@ Colorado      7.9     204       78 38.7</code></pre>
 <span>  <span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/vars.html">vars</a></span><span class="op">(</span><span class="va">decade</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><img src="data_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid" width="672"></p>
-<p>Before we move on to the next topic, let’s look at one interesting alternative, <code><a href="https://docs.ropensci.org/visdat/reference/vis_miss.html">vis_miss()</a></code>. Naniar imports it from <strong>visdat</strong> <span class="citation" data-cites="tierney2023">(<a href="references.html#ref-tierney2023" role="doc-biblioref">Tierney 2023</a>)</span>.</p>
-<div class="cell">
-<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">movies_na</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://docs.ropensci.org/visdat/reference/vis_miss.html">vis_miss</a></span><span class="op">(</span></span>
-<span>    <span class="co"># TRUE arranges the columns in order of missingness. Default value is FALSE.</span></span>
-<span>    sort_miss       <span class="op">=</span> <span class="cn">TRUE</span>,</span>
-<span>    <span class="co"># Warn if there is large data? Default is TRUE.</span></span>
-<span>    warn_large_data <span class="op">=</span> <span class="cn">FALSE</span> </span>
-<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="data_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>This one packs a punch. You see the amount of NAs in general. Also the amount of NAs in each column. And to top it off, we can “arrange the columns in order of missingness”. A great quick overview!</p>
-<p>Now that we know where the missing data points are, one next step could be handling that missing data. There are different strategies for that, but this is outside the scope of this book.</p>
+<p>Before moving on, let’s first look at one interesting alternative for visualizing missing values: <code><a href="http://boxuancui.github.io/DataExplorer/reference/plot_missing.html">plot_missing()</a></code>. It comes from the <strong>DataExplorer</strong> <span class="citation" data-cites="cui2024">(<a href="references.html#ref-cui2024" role="doc-biblioref">Cui 2024</a>)</span> package.</p>
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://boxuancui.github.io/DataExplorer/">DataExplorer</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">movies_na</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co"># Let's only visualize the missing values</span></span>
+<span>  <span class="fu"><a href="http://boxuancui.github.io/DataExplorer/reference/plot_missing.html">plot_missing</a></span><span class="op">(</span>missing_only <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><img src="data_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid" width="672"></p>
+<p>You see the amount and percentage of NAs per column, arranged in order of missingness. This is a great quick overview!</p>
+<p>DataExplorer, like naniar earlier, provides functions for handling the missing values. For instance, we could drop the <strong>budget</strong> and <strong>mpaa</strong> columns, as indicated by the red color in the visualization above.</p>
 </section><section id="sec-summarizing-data" class="level3" data-number="2.2.2"><h3 data-number="2.2.2" class="anchored" data-anchor-id="sec-summarizing-data">
 <span class="header-section-number">2.2.2</span> Summarizing data</h3>
-</section><section id="sec-visualizing-data" class="level3" data-number="2.2.3"><h3 data-number="2.2.3" class="anchored" data-anchor-id="sec-visualizing-data">
-<span class="header-section-number">2.2.3</span> Visualizing data</h3>
+<p>Of course, we want to visualize more than just the missing data. It makes sense to start with an overview of some kind.</p>
+</section><section id="sec-visualizing-relationships" class="level3" data-number="2.2.3"><h3 data-number="2.2.3" class="anchored" data-anchor-id="sec-visualizing-relationships">
+<span class="header-section-number">2.2.3</span> Visualizing relationships</h3>
 <p><strong>Pairwise plot matrix</strong></p>
 <p><strong>Correlation matrix</strong></p>
 </section><section id="sec-automated-eda-app" class="level3" data-number="2.2.4"><h3 data-number="2.2.4" class="anchored" data-anchor-id="sec-automated-eda-app">
@@ -687,6 +679,9 @@ Colorado      7.9     204       78 38.7</code></pre>
 <div id="ref-arel-bundock2024" class="csl-entry" role="listitem">
 Arel-Bundock, Vincent. 2024. <em>Rdatasets: A Collection of Datasets Originally Distributed in Various r Packages</em>. <a href="https://vincentarelbundock.github.io/Rdatasets/">https://vincentarelbundock.github.io/Rdatasets/</a>.
 </div>
+<div id="ref-cui2024" class="csl-entry" role="listitem">
+Cui, Boxuan. 2024. <em>DataExplorer: Automate Data Exploration and Treatment. R Package Version 0.8.3</em>. <a href="http://boxuancui.github.io/DataExplorer/">http://boxuancui.github.io/DataExplorer/</a>.
+</div>
 <div id="ref-mcintosh2013" class="csl-entry" role="listitem">
 (Ed.), Colin McIntosh. 2013. <em>Cambridge Advanced Learner’s Dictionary</em>. 4th ed. Cambridge University Press.
 </div>
@@ -695,9 +690,6 @@ Firke, Sam. 2023. <em>Janitor: Simple Tools for Examining and Cleaning Dirty Dat
 </div>
 <div id="ref-müller2023" class="csl-entry" role="listitem">
 Müller, Kirill, and Hadley Wickham. 2023. <em>Tibble: Simple Data Frames. R Package Version 3.2.1</em>. <a href="https://CRAN.R-project.org/package=tibble">https://CRAN.R-project.org/package=tibble</a>.
-</div>
-<div id="ref-tierney2023" class="csl-entry" role="listitem">
-Tierney, Nicholas. 2023. <em>Visdat: Preliminary Visualisation of Data. R Package Version 0.6.0</em>. <a href="https://CRAN.R-project.org/package=visdat">https://CRAN.R-project.org/package=visdat</a>.
 </div>
 <div id="ref-tierney2024" class="csl-entry" role="listitem">
 Tierney, Nicholas, Dianne Cook, Miles McBain, and Colin Fay. 2024. <em>Naniar: Data Structures, Summaries, and Visualisations for Missing Data. R Package Version 1.1.0</em>. <a href="https://CRAN.R-project.org/package=naniar">https://CRAN.R-project.org/package=naniar</a>.
