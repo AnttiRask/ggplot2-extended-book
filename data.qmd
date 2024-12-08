@@ -8,17 +8,27 @@
 source("warning.R")
 ```
 
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(conflicted)
+  conflicts_prefer(dplyr::filter)
+```
+
 ## Data sets {#sec-data-sets}
 
 This book is about tools for creating visualizations. But to visualize data you first need data. So let's start by taking a look at some of the data sets available to us without much hassle.
 
 ### base R {#sec-base-r}
 
-Base R comes with a bunch of data sets ready to use. There are classics like **iris** and **mtcars**, but there are many more to choose from:
+Base R comes with a bunch of data sets ready to use. There are classics like **iris** and **mtcars**, but there are many more to choose from.
 
 ```{r}
 #| echo:    false
 #| message: false
+#| warning: false
 #| results: asis
 
 library(dplyr)
@@ -36,47 +46,55 @@ data() %>%
 
 Since the **datasets** package comes from base R, the data is not always immediately ready to use with **ggplot2** [@wickham2024]. Luckily we have the **tidyverse** [@wickham2023b] packages that make it easy to make the necessary changes.
 
-Here is an example using the **USArrests** ('Violent Crime Rates by US State') data set. We can start by loading the data set by using the `data()` function:
+Here is an example using the **WorldPhones** ('The World's Telephones') data set. We can start by loading the data set by using the `data()` function.
 
 ```{r}
-data(USArrests)
+data(WorldPhones)
 ```
 
-Let's take a quick look at what the first couple of rows of the data set looks like:
+Let's take a quick look at what the first couple of rows of the data set looks like.
 
 ```{r}
-head(USArrests)
+head(WorldPhones)
 ```
 
-As you can see, USArrests is a data frame. It has four columns and the names of the US states are row names. We would like to see them as the fifth column instead. We can use the **tibble** [@müller2023] package to do that. While we're at it, let's also change the data frame into a tibble:
+WorldPhones is a matrix with 7 rows and 8 columns. The columns give the figures for a given region, and the rows the figures for a year. We would like to turn it into a _tidy_ format. We can use the **tibble** [@müller2023] package for the first part. And then we'll use `pivot_longer()` from the __tidyr__ package [@wickham2024b]. It increases the number of rows and decrease the number of columns. We want the continents to be observations, not columns.
 
 ```{r}
 library(tibble)
+library(tidyr)
 
-usarrests_tbl <- USArrests %>%
-  rownames_to_column(var = "State") %>%
-  as_tibble()
+world_phones_tbl <- WorldPhones %>%
+  as.data.frame() %>%
+  rownames_to_column(var = "Year") %>%
+  as_tibble() %>%
+  pivot_longer(
+    cols      = !Year,
+    names_to  = "Continent",
+    values_to = "Phones"
+  ) %>% 
+  mutate(across(where(is.character), as.factor))
 ```
 
 ```{r}
 #| echo: false
 #| message: false
+#| warning: false
 #| results: asis
 
-usarrests_tbl %>%
+world_phones_tbl %>%
   paged_table()
 ```
 
-We can then use the new tibble to create a simple visualization with ggplot2:
+What we're left with is a tibble with three columns, __Year__, __Continent__, and __Phones__. We can then use the new tibble to create a simple visualization with ggplot2.
 
 ```{r}
 library(ggplot2)
 
-usarrests_tbl %>%
-  slice_max(Murder, n = 10) %>% 
-  ggplot(aes(Murder, UrbanPop)) +
-  geom_point() +
-  geom_label(aes(label = State))
+world_phones_tbl %>%
+  ggplot(aes(Year, Phones, color = Continent, group = Continent)) +
+  geom_line() +
+  theme_bw()
 ```
 
 ### IMDb movies (1893-2005) {#sec-imdb-movies-1893-2005}
@@ -85,7 +103,7 @@ usarrests_tbl %>%
 
 But it’s a cool little package. It has [Internet Movie Database (IMDb)](https://www.imdb.com/) data about movies from between 1893 and 2005. The selected movies have "a known length and had been rated by at least one \[IMDb\] user." [@wickham2015].
 
-The **Movies** data set has qualities that make it good for our needs. Let’s start by loading it:
+The **Movies** data set has qualities that make it good for our needs. Let’s start by loading it.
 
 ```{r}
 library(ggplot2movies)
@@ -93,7 +111,7 @@ library(ggplot2movies)
 data(movies)
 ```
 
-Let's take a quick look at what some of the data looks like:
+Let's take a quick look at what some of the data looks like.
 
 ```{r}
 #| eval: false
@@ -125,7 +143,7 @@ head(movies) %>%
 
 Movies is already a tibble. It consists of `r .movies_rowcount` rows (observations) and `r .movies_ncols` columns (variables).
 
-When starting to work with a new data set it's always good to take a look at the documentation. To understand what is in those rows and columns (and what is not):
+When starting to work with a new data set it's always good to take a look at the documentation. To understand what is in those rows and columns (and what is not).
 
 ```{r}
 #| echo: false
@@ -168,14 +186,15 @@ Here are some of the reasons why Movies is a good example data set because it in
 -   *Categorical* data of both *nominal* (title, genre) and *ordinal* (mpaa) kind
 -   *Numerical* data of both *continuous* (budget, length, rating) and *discrete* (year, votes) kind
 
-We can use two of those columns, **year** and **rating** to create a simple visualization with ggplot2:
+We can use two of those columns, **year** and **rating** to create a simple visualization with ggplot2.
 
 ```{r}
 library(ggplot2)
 
 movies %>%
   ggplot(aes(year, rating)) +
-  geom_point()
+  geom_point(alpha = 0.05) +
+  theme_bw()
 ```
 
 As mentioned earlier, Movies is already a tibble. But, it doesn't mean that the data is in an optimal format for all kinds of visualization. But we'll do all the necessary data wrangling within the chapter where we use the data.
@@ -221,7 +240,7 @@ filename <- list.files(
   tally()
 ```
 
-Here listed are the `r .RDatasets_rowcount` data sets that were available on `r .RDatasets_date`:
+Here listed are the `r .RDatasets_rowcount` data sets that were available on `r .RDatasets_date`.
 
 ```{r}
 #| echo: false
@@ -245,7 +264,7 @@ library(dplyr)
 data(starwars)
 ```
 
-Let's take a quick look at what some of the starwars data looks like:
+Let's take a quick look at what some of the starwars data looks like.
 
 ```{r}
 #| eval: false
@@ -264,7 +283,7 @@ head(starwars) %>%
 
 There are a bunch of Star Wars characters and their stats.
 
-Let's choose two columns, **height** and **species** (and filter for six of the more well-known species). We'll use them to create a simple visualization with ggplot2:
+Let's choose two columns, **height** and **species** (and filter for six of the more well-known species). We'll use them to create a simple visualization with ggplot2.
 
 ```{r}
 #| message: false
@@ -276,7 +295,8 @@ library(ggplot2)
 starwars %>%
   filter(species %in% c("Droid", "Ewok", "Gungan", "Human", "Hutt", "Wookiee")) %>%
   ggplot(aes(height, species)) +
-  geom_boxplot()
+  geom_boxplot() +
+  theme_bw()
 ```
 
 This concludes the section about the different data sets available for every R user. Next, we'll take a look at some of the ggplot2 extensions that make it easier to do exploratory data analysis (EDA).
@@ -323,10 +343,11 @@ One simple function is `gg_miss_var()`. It creates a lollipop plot (\[INSERT LIN
 library(naniar)
 
 movies_na %>% 
-  gg_miss_var()
+  gg_miss_var() +
+  theme_bw()
 ```
 
-We can see that _MPAA ratings_ aren't the only thing missing. Almost the same amount of films are missing the budget information. With budget, it's easier to say that if we don't have a number, it is missing. Then again, that column did have NAs in place from the beginning.
+We can see that *MPAA ratings* aren't the only thing missing. Almost the same amount of films are missing the __budget__ information. With budget, it's easier to say that if we don't have a number, it is missing. Then again, that column did have NAs in place from the beginning.
 
 We're also interested in seeing if there is overlapping *missingness* between the columns. We'll use an upset plot (\[INSERT LINK HERE\]) for that. Just add `gg_miss_upset()`.
 
@@ -334,7 +355,7 @@ We're also interested in seeing if there is overlapping *missingness* between th
 movies_na %>% 
   gg_miss_upset(
     # Number of sets to look at. We know there are only two columns with NA
-    nsets = 2 
+    nsets = 2
   )
 ```
 
@@ -349,7 +370,7 @@ We can also use `geom_miss_point()` to see if there are more patterns between th
 library(ggplot2)
 library(scales)
 
-p <- movies_na %>%
+p1 <- movies_na %>%
   ggplot(aes(budget, mpaa)) +
   geom_point() +
   geom_miss_point() +
@@ -359,7 +380,8 @@ p <- movies_na %>%
       prefix = "$",
       suffix = "M"
     )
-  )
+  ) +
+  theme_bw()
 ```
 
 ```{r}
@@ -368,7 +390,7 @@ p <- movies_na %>%
 #| warning: false
 #| results: asis
 
-p
+p1
 ```
 
 Values seem to be missing in all the MPAA rating categories. NC-17 does not seem to contain that many values in general, but many of them seem to be missing.
@@ -397,7 +419,7 @@ We can dig even deeper. We can use `facet_wrap()` from ggplot2 to see how the mi
 #| warning: false
 #| results: asis
 
-p +
+p1 +
   scale_x_continuous(
     n.breaks = 3,
     labels   = label_number(
@@ -409,7 +431,7 @@ p +
   facet_wrap(vars(decade))
 ```
 
-Before moving on, let's first look at one interesting alternative for visualizing missing values: `plot_missing()`. It comes from the __DataExplorer__ [@cui2024] package.
+Before moving on, let's first look at one interesting alternative for visualizing missing values, `plot_missing()`. It comes from the **DataExplorer** [@cui2024] package.
 
 ```{r}
 #| message: false
@@ -419,17 +441,193 @@ Before moving on, let's first look at one interesting alternative for visualizin
 library(DataExplorer)
 
 movies_na %>%
-  # Let's only visualize the missing values
-  plot_missing(missing_only = TRUE)
+  plot_missing(
+    # Let's only visualize the missing values
+    missing_only = TRUE,
+    # We'll use theme_bw() when possible
+    ggtheme      = theme_bw()
+  )
 ```
 
 You see the amount and percentage of NAs per column, arranged in order of missingness. This is a great quick overview!
 
-DataExplorer, like naniar earlier, provides functions for handling the missing values. For instance, we could drop the __budget__ and __mpaa__ columns, as indicated by the red color in the visualization above.
+DataExplorer, like naniar earlier, provides functions for handling the missing values. For instance, we could drop the budget and mpaa columns, as indicated by the red color in the visualization above.
 
 ### Summarizing data {#sec-summarizing-data}
 
-Of course, we want to visualize more than just the missing data. It makes sense to start with an overview of some kind.
+Of course, we want to visualize more than the missing data. It makes sense to start with an overview of some kind.
+
+Luckily we don't have to go further than the DataExplorer package. You know, the one we already tried in the previous chapter.
+
+We'll start with the `plot_intro()` function. It gives us some basic information about our dataset, visualized.
+
+```{r}
+#| message: false
+#| warning: false
+#| results: asis
+
+movies_na %>%
+  plot_intro(ggtheme = theme_bw())
+```
+
+__Missing Values__
+
+The most interesting insights here are still related to missing values. Less than 5% of the rows in the data set are complete. Meaning that they have no missing values in any of the columns. And almost 10% of all the observations are missing. That's how much the missing rows of budget and mpaa are affecting the totals. One positive thing is that we don't have any columns that are missing all the values.
+
+__Categorical Columns__
+
+Let's then take a look at the categorical columns. The one that will be missing from the upcoming visualizations is __title__. The values are more or less unique. So, it wouldn't make sense having a bar plot, for instance, with more than 50000 rows with a count of 1 each.
+
+Did someone mention bar plots? Let's start with the `plot_bar()` function to visualize the categorical columns. This will show us what the frequency of each of the values are within a column.
+
+```{r}
+#| message: false
+#| warning: false
+#| results: asis
+
+movies_na %>% 
+  plot_bar(ggtheme = theme_bw())
+```
+
+We see mpaa with it's missing values. The rest of the categorical columns are binary ones about which genres each movie belongs to. __Comedy__ and __Drama__ seem to be the best represented ones in the data set.
+
+With the _with_ argument we can choose to show something else on the x-axis besides the frequency. Here, for instance, we've chosen __length__ to be the column to sum up.
+
+```{r}
+#| message: false
+#| warning: false
+#| results: asis
+
+movies_na %>% 
+  plot_bar(
+    # Name of continuous feature to be summed instead of NULL (i.e. frequency)
+    with    = "length",
+    ggtheme = theme_bw()
+  )
+```
+
+Here we can see that __Animation__ and __Short__ make up an even smaller part of the whole as before. Which makes sense, when you start to think about it.
+
+Another useful feature is using the _by_ argument. It means we will see the frequency broken down by a discrete feature. In this case we've chosen mpaa.
+
+```{r}
+#| message: false
+#| warning: false
+#| results: asis
+
+movies_na %>% 
+  plot_bar(
+    by      = "mpaa",
+    ggtheme = theme_bw()
+  )
+```
+
+This shows us that action and romance are the genres with more R rated movies than the other genres. Of course we must remember the prevalence of those missing values.
+
+__Numerical Columns__
+
+Next, we'll use `plot_histogram()` to draw a histogram of all the numerical columns (both discrete and continuous).
+
+```{r}
+#| message: false
+#| warning: false
+#| results: asis
+
+movies_na %>%
+  plot_histogram(ggtheme = theme_bw())
+```
+
+That's a lot of information to take in all at once. For the next visualizations, we'll reduce the number of columns to look at.
+
+__r1__ to __r10__ gives the percentile of users who rated the movie that number. Interesting information in its own right. But we'll concentrate on budget, __length__, rating, __votes__, and year. At least for the rest of this chapter.
+
+There is one more thing we notice when looking at the histogram for length. Most of the values seem to be close to zero. But there are some extreme values around even 5000 that are skewing the view. Let's see what the cause is by looking at the title and length of the ten longest movies in the data set.
+
+```{r}
+movies_na %>%
+  select(title, length) %>%
+  slice_max(length, n = 10) %>%
+  paged_table()
+```
+
+So, a couple of cult classics. The Cure for Insomnia (5220 minutes) and The Longest Most Meaningless Movie in the World (2880 minutes) are in a category of their own. They are legit long films and not a mistake. Let's still create a new tibble that includes only those movies that have a length of under 500 minutes.
+
+Also, we'll select the columns mentioned earlier. Budget, length, rating, votes, and year.
+
+```{r}
+#| message: false
+#| warning: false
+#| results: asis
+
+movies_na_length_under_500 <- movies_na %>%
+  select(budget, length, rating, votes, year) %>%
+  filter(length < 500)
+```
+
+Let's see how the four columns, length, rating, votes, and year look like as a box plot when grouped by budget. Budget is a continuous variable. That's why `plot_boxplot()` groups the values to 5 equal ranges.
+
+```{r}
+#| message: false
+#| warning: false
+#| results: asis
+
+movies_na_length_under_500 %>%
+  plot_boxplot(
+    by      = "budget",
+    ggtheme = theme_bw(),
+    ncol    = 4
+  )
+```
+
+Based on the box plot, the movies with a bigger budget tend to:
+
+* have ratings inside a narrower range
+* have better ratings
+* have more votes
+* be more recent
+* be longer
+
+Let's then take a look at what this all looks like as a scatter plot. We'll use all the same columns. It's important to use an _alpha_ value that is low enough to reveal a more nuanced picture than we would see if it was 1.
+
+```{r}
+#| message: false
+#| warning: false
+#| results: asis
+
+movies_na_length_under_500 %>%
+  plot_scatterplot(
+    by              = "budget",
+    geom_point_args = list(alpha = 0.05),
+    ggtheme         = theme_bw(),
+    ncol            = 2
+  )
+```
+
+These are some of the ways to use DataExplorer to create a visual summary of a data set. I encourage you to dig into the documentation and see what else there is.
+
+To conclude, DataExplorer has a function, `create_report()`. It creates a full EDA report from scratch. We won't use that now, because the report would take too much space. But if you're using DataExplorer, you should try it!
+
+__gt & gtExtras__
+
+DataExplorer is a good package, but it's not the only game in town for EDA. __gt__ [@iannone2024] is a package to create tables (\[INSERT LINK HERE\]) with.
+
+Often, when you think about tables, you think about numeric and text values. But that doesn't have to be the case. With __gtExtras__ [@mock2023] you can create a fast and easy visual summary of your data. The `gt_plt_summary()` function is all you need.
+
+The function does have some limitations. It has had some issues with certain data sets. The movies data set didn't work, for instance. That's why we'll take a look at the WorldPhones data set instead.
+
+```{r}
+#| message: false
+#| warning: false
+#| results: asis
+
+library(gt)
+library(gtExtras)
+
+world_phones_tbl %>% 
+  gt_plt_summary()
+```
+
+What we get is a table that combines a visualized plot overview with basic summary elements: _missing_, _mean_, _median_, and _standard deviation (sd)_). You can also see from the icon on the left, whether the column is categorical or continuous. With the categorical columns, you can see a list of the categorical values by clicking the arrow.
 
 ### Visualizing relationships {#sec-visualizing-relationships}
 

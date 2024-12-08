@@ -45,6 +45,7 @@ book:
         - networks.qmd
         - interactive_plots.qmd
         - animated-plots.qmd
+        - tables.qmd
 
     - part: shortcuts.qmd
       chapters:

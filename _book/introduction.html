@@ -2,10 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.555">
+<meta name="generator" content="quarto-1.5.57">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Antti Rask">
-<title>ggplot2 extended - Introduction</title>
+<title>Introduction – ggplot2 extended</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +31,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -125,13 +125,13 @@ div.csl-indent {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./introduction.html">Introduction</a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -179,7 +179,7 @@ div.csl-indent {
       <div class="sidebar-item-container"> 
             <a href="./basics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Basics</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -196,7 +196,7 @@ div.csl-indent {
       <div class="sidebar-item-container"> 
             <a href="./layers.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Layers</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -255,7 +255,7 @@ div.csl-indent {
       <div class="sidebar-item-container"> 
             <a href="./special_cases.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Special cases</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -284,13 +284,19 @@ div.csl-indent {
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Animated plots</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Tables</span></span></a>
+  </div>
+</li>
       </ul>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./shortcuts.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Shortcuts</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -298,13 +304,13 @@ div.csl-indent {
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./helpers.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Helpers</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Helpers</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./interactive_tools.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Interactive tools</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Interactive tools</span></span></a>
   </div>
 </li>
       </ul>
@@ -313,7 +319,7 @@ div.csl-indent {
       <div class="sidebar-item-container"> 
             <a href="./getting_ready_to_publish.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting ready to publish</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -321,13 +327,13 @@ div.csl-indent {
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./finishing_touches.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Finishing touches</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Finishing touches</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./arranging_plots.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Arranging plots</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Arranging plots</span></span></a>
   </div>
 </li>
       </ul>
@@ -336,7 +342,7 @@ div.csl-indent {
       <div class="sidebar-item-container"> 
             <a href="./beyond_r.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Beyond R</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -344,7 +350,7 @@ div.csl-indent {
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./python.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Python</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Python</span></span></a>
   </div>
 </li>
       </ul>
@@ -441,7 +447,7 @@ This book/site is under construction
 <p>This book continues from where <strong>ggplot2: Elegant Graphics for Data Analysis</strong> <span class="citation" data-cites="wickham2016">(<a href="references.html#ref-wickham2016" role="doc-biblioref">Wickham 2016</a>)</span> left off. In his book, Hadley does mention some extension packages by name. But until now there hasn’t been a comprehensive guide to those extension packages. And how to use them together.</p>
 <p><strong>Basics</strong> works as kind of a “Previously, on <strong>ggplot2</strong>…”. A reminder of the basic function(alitie)s of the <em>core</em> package.</p>
 <p><strong>Layers</strong> goes through the layers that make up <em>the grammar of graphics</em>: <strong>Data</strong>, geometric objects (<strong>Geoms</strong>), statistical transformations (<strong>Stats</strong>), titles and labels (<strong>Annotations</strong>), color, position and size of visual elements (<strong>Scales and guides</strong>), <strong>Coordinate systems</strong>, small multiples (<strong>Facets</strong>), and <strong>Themes</strong>. They are in a logical order. As are the rest of the chapters. The same order that you would build your visualization in.</p>
-<p><strong>Special cases</strong> hosts not-so-typical visualizations: <strong>Maps</strong>, <strong>networks</strong>, <strong>interactive plots</strong>, and <strong>animated plots</strong>.</p>
+<p><strong>Special cases</strong> hosts not-so-typical visualizations: <strong>Maps</strong>, <strong>networks</strong>, <strong>interactive plots</strong>, <strong>animated plots</strong>, and plots integrated in <strong>tables</strong>.</p>
 <p><strong>Shortcuts</strong> contains different kinds of <strong>helpers</strong> and <strong>interactive tools</strong>. Designed to make it easier to create your visualizations.</p>
 <p>At some point, we will be <strong>getting ready to publish</strong> our visualization. You’ll want to give them <strong>finishing touches</strong>, but it’s also good to know about <strong>arranging plots</strong>.</p>
 <p>And while ggplot2 is an R package, its impact and influence go <strong>beyond R</strong>. So we’ll talk about <strong>Python</strong> a bit.</p>
@@ -493,7 +499,7 @@ This book/site is under construction
 <p>I’ve liked data visualizations longer than I’ve been using R (which I started in late 2019/early 2020). I made my first visualizations with Excel. At some point, I switched to Power BI. Which is still my main tool for visualization at work.</p>
 <p>You could say that I am an artistic type. Music has been the main avenue for my artistic self-expression for most of my life. But I’ve also liked to take photos of street art. I come across them on my adventures in Helsinki, or when I’m abroad.</p>
 <p>In visualizing data I find myself leaning more towards the <strong>Stephen Few</strong> school of thought. Less is usually more and you should avoid <a href="https://en.wikipedia.org/wiki/Chartjunk">chartjunk</a> at all costs. Still, I’m not a purist, by any means.</p>
-<p>I’ve co-authored the <strong>RandomWalker</strong> <span class="citation" data-cites="sanderson2024">(<a href="references.html#ref-sanderson2024" role="doc-biblioref">Sanderson and Rask 2024</a>)</span> R package with <strong>Steven Paul Sanderson II</strong> (<a href="https://github.com/spsanderson">@spsanderson</a>). Specifically the function <code><a href="https://www.spsanderson.com/RandomWalker/reference/visualize_walks.html">RandomWalker::visualize_walks()</a></code>. It uses ggplot2 and some of the extensions found in this book.</p>
+<p>I’ve co-authored the <strong>RandomWalker</strong> <span class="citation" data-cites="sanderson2024">(<a href="references.html#ref-sanderson2024" role="doc-biblioref">Sanderson and Rask 2024</a>)</span> R package with <strong>Steven Paul Sanderson II</strong> (<a href="https://github.com/spsanderson">@spsanderson</a>). Specifically the function <code>RandomWalker::visualize_walks()</code>. It uses ggplot2 and some of the extensions found in this book.</p>
 <p>I also like to tinker with R Shiny and recently made an app called <a href="https://youcanbeapirate.shinyapps.io/TuneTeller/">TuneTeller</a>. It received an <em>honorable mention</em> in the 2024 <a href="https://posit.co/blog/winners-of-the-2024-shiny-contest/">Shiny Contest</a>.</p>
 </section><section id="sec-r" class="level2"><h2 class="anchored" data-anchor-id="sec-r">R</h2>
 <p>All the code in this book is in <strong>R</strong>. Except for <a href="python.html" class="quarto-xref"><span>18&nbsp; Python</span></a>. If you have never used R, <a href="https://r4ds.hadley.nz/">R for Data Science</a> <span class="citation" data-cites="wickham2023a">(<a href="references.html#ref-wickham2023a" role="doc-biblioref">Wickham, Çetinkaya-Rundel, and Grolemund 2023</a>)</span> is a better place to start.</p>
@@ -540,6 +546,8 @@ This book/site is under construction
 <span>  <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
 <span>    <span class="st">"DataExplorer"</span>,</span>
 <span>    <span class="st">"ggplot2movies"</span>,</span>
+<span>    <span class="st">"gt"</span>,</span>
+<span>    <span class="st">"gtExtras"</span>,</span>
 <span>    <span class="st">"naniar"</span>,</span>
 <span>  <span class="op">)</span></span>
 <span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -605,10 +613,10 @@ This book/site is under construction
 <p>To be continued…</p>
 </section><section id="sec-colophon" class="level2"><h2 class="anchored" data-anchor-id="sec-colophon">Colophon</h2>
 <p>This book was written in <a href="https://posit.co/products/open-source/rstudio/">RStudio</a> using <a href="https://quarto.org/">Quarto</a>. The website is hosted with <a href="https://www.netlify.com/">Netlify</a>. And it’s automatically updated after every commit by <a href="https://github.com/features/actions">Github Actions</a>. The complete source is available from <a href="https://github.com/AnttiRask/ggplot2-extended-book/">GitHub</a>.</p>
-<p>This version of the book was built with R version 4.4.1 (2024-06-14 ucrt) and the following packages:</p>
+<p>This version of the book was built with R version 4.4.2 (2024-10-31) and the following packages:</p>
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
-{"columns":[{"label":["package"],"name":[1],"type":["chr"],"align":["left"]},{"label":["version"],"name":[2],"type":["chr"],"align":["left"]},{"label":["source"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"conflicted","2":"1.2.0","3":"CRAN (R 4.4.0)"},{"1":"DataExplorer","2":"0.8.3","3":"RSPM"},{"1":"dplyr","2":"1.1.4","3":"CRAN (R 4.4.0)"},{"1":"ggplot2","2":"3.5.1","3":"CRAN (R 4.4.0)"},{"1":"ggplot2movies","2":"0.0.1","3":"RSPM"},{"1":"janitor","2":"2.2.0","3":"RSPM"},{"1":"naniar","2":"1.1.0","3":"RSPM"},{"1":"purrr","2":"1.0.2","3":"CRAN (R 4.4.0)"},{"1":"readr","2":"2.1.5","3":"CRAN (R 4.4.0)"},{"1":"rmarkdown","2":"2.29","3":"RSPM"},{"1":"scales","2":"1.3.0","3":"CRAN (R 4.4.0)"},{"1":"tibble","2":"3.2.1","3":"CRAN (R 4.4.0)"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["package"],"name":[1],"type":["chr"],"align":["left"]},{"label":["version"],"name":[2],"type":["chr"],"align":["left"]},{"label":["source"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"conflicted","2":"1.2.0","3":"RSPM"},{"1":"DataExplorer","2":"0.8.3","3":"RSPM"},{"1":"dplyr","2":"1.1.4","3":"RSPM"},{"1":"ggplot2","2":"3.5.1","3":"RSPM"},{"1":"ggplot2movies","2":"0.0.1","3":"RSPM"},{"1":"gt","2":"0.11.1","3":"RSPM"},{"1":"gtExtras","2":"0.5.0","3":"RSPM"},{"1":"janitor","2":"2.2.0","3":"RSPM"},{"1":"naniar","2":"1.1.0","3":"RSPM"},{"1":"purrr","2":"1.0.2","3":"RSPM"},{"1":"readr","2":"2.1.5","3":"RSPM"},{"1":"rmarkdown","2":"2.29","3":"RSPM"},{"1":"scales","2":"1.3.0","3":"RSPM"},{"1":"tibble","2":"3.2.1","3":"RSPM"},{"1":"tidyr","2":"1.3.1","3":"RSPM"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 
@@ -668,18 +676,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -711,7 +708,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp("https:\/\/https:\/\/ggplot2-extended-book\.com\/");
@@ -719,7 +738,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

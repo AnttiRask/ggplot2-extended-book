@@ -30,7 +30,7 @@ This book continues from where **ggplot2: Elegant Graphics for Data Analysis** [
 
 **Layers** goes through the layers that make up *the grammar of graphics*: **Data**, geometric objects (**Geoms**), statistical transformations (**Stats**), titles and labels (**Annotations**), color, position and size of visual elements (**Scales and guides**), **Coordinate systems**, small multiples (**Facets**), and **Themes**. They are in a logical order. As are the rest of the chapters. The same order that you would build your visualization in.
 
-**Special cases** hosts not-so-typical visualizations: **Maps**, **networks**, **interactive plots**, and **animated plots**.
+**Special cases** hosts not-so-typical visualizations: **Maps**, **networks**, **interactive plots**, **animated plots**, and plots integrated in **tables**.
 
 **Shortcuts** contains different kinds of **helpers** and **interactive tools**. Designed to make it easier to create your visualizations.
 
@@ -186,6 +186,8 @@ install.packages(
   c(
     "DataExplorer",
     "ggplot2movies",
+    "gt",
+    "gtExtras",
     "naniar",
   )
 )
@@ -293,13 +295,16 @@ pkgs <- c(
   "dplyr",
   "ggplot2",
   "ggplot2movies",
+  "gt",
+  "gtExtras",
   "janitor",
   "naniar",
   "purrr",
   "readr",
   "rmarkdown",
   "scales",
-  "tibble"
+  "tibble",
+  "tidyr"
 )
 ```
 

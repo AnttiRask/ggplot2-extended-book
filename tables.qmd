@@ -1,0 +1,8 @@
+# Tables {#sec-tables}
+
+```{r}
+#| echo: false
+#| message: false
+#| results: asis
+source("warning.R")
+```
