@@ -438,6 +438,16 @@ This book/site is under construction
 </div>
 <p>Data visualization is one of those things that can look easy when you see someone doing it well. Then you try it yourself and it’s easy to feel like you know nothing.</p>
 <p>I wanted to share the tools that make it easier to create those beautiful visualizations. And to show you how to use those tools together, not only with <strong>ggplot2</strong> <span class="citation" data-cites="wickham2024">(<a href="references.html#ref-wickham2024" role="doc-biblioref">Wickham 2024</a>)</span> but with each other.</p>
+<p>One bit about terminology before we go any further. <em>Chart</em>, <em>diagram</em>, <em>graph</em>, <em>plot</em>, and <em>visualization</em> are all terms that people have tried to give strict definitions to. But in reality, they get used more or less interchangeably. Is it a bar chart or a bar graph? Yes.</p>
+<p>In the context of this book, I try to use the terms consistently in this way:</p>
+<ul>
+<li>
+<strong>Chart / Diagram / Graph</strong>: Type of visualization (e.g.&nbsp;bar chart, Venn diagram, or line graph)</li>
+<li>
+<strong>Plot</strong>: Output of some code to create a visualization. It can contain many charts, diagrams, and/or graphs. But sometimes it’s also used to mean a type of visualization (e.g.&nbsp;scatter plot)</li>
+<li>
+<strong>Visualization</strong>: The most general of the terms. It can be used to talk about visualization as a concept. But sometimes it’s also used for a more specific case.</li>
+</ul>
 <section id="sec-purpose-and-scope" class="level2"><h2 class="anchored" data-anchor-id="sec-purpose-and-scope">Purpose and scope</h2>
 <p>A very basic reason why I started writing this book was the fact that one didn’t already exist. “Someone had to do it”, as they say.</p>
 <p>I know there is information out there about the different ggplot2 extension packages. There are the package documentation, but there are also some blogs around (see <a href="#sec-further-resources" class="quarto-xref"><span>Further resources</span></a>).</p>
@@ -447,7 +457,7 @@ This book/site is under construction
 <p>This book continues from where <strong>ggplot2: Elegant Graphics for Data Analysis</strong> <span class="citation" data-cites="wickham2016">(<a href="references.html#ref-wickham2016" role="doc-biblioref">Wickham 2016</a>)</span> left off. In his book, Hadley does mention some extension packages by name. But until now there hasn’t been a comprehensive guide to those extension packages. And how to use them together.</p>
 <p><strong>Basics</strong> works as kind of a “Previously, on <strong>ggplot2</strong>…”. A reminder of the basic function(alitie)s of the <em>core</em> package.</p>
 <p><strong>Layers</strong> goes through the layers that make up <em>the grammar of graphics</em>: <strong>Data</strong>, geometric objects (<strong>Geoms</strong>), statistical transformations (<strong>Stats</strong>), titles and labels (<strong>Annotations</strong>), color, position and size of visual elements (<strong>Scales and guides</strong>), <strong>Coordinate systems</strong>, small multiples (<strong>Facets</strong>), and <strong>Themes</strong>. They are in a logical order. As are the rest of the chapters. The same order that you would build your visualization in.</p>
-<p><strong>Special cases</strong> hosts not-so-typical visualizations: <strong>Maps</strong>, <strong>networks</strong>, <strong>interactive plots</strong>, <strong>animated plots</strong>, and plots integrated in <strong>tables</strong>.</p>
+<p><strong>Special cases</strong> hosts not-so-typical visualizations: <strong>Maps</strong>, <strong>networks</strong>, <strong>interactive plots</strong>, <strong>animated plots</strong>, and graphs integrated in <strong>tables</strong>.</p>
 <p><strong>Shortcuts</strong> contains different kinds of <strong>helpers</strong> and <strong>interactive tools</strong>. Designed to make it easier to create your visualizations.</p>
 <p>At some point, we will be <strong>getting ready to publish</strong> our visualization. You’ll want to give them <strong>finishing touches</strong>, but it’s also good to know about <strong>arranging plots</strong>.</p>
 <p>And while ggplot2 is an R package, its impact and influence go <strong>beyond R</strong>. So we’ll talk about <strong>Python</strong> a bit.</p>
@@ -545,6 +555,8 @@ This book/site is under construction
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
 <span>    <span class="st">"DataExplorer"</span>,</span>
+<span>    <span class="st">"GGally"</span>,</span>
+<span>    <span class="st">"ggcorrplot"</span>,</span>
 <span>    <span class="st">"ggplot2movies"</span>,</span>
 <span>    <span class="st">"gt"</span>,</span>
 <span>    <span class="st">"gtExtras"</span>,</span>
@@ -616,7 +628,7 @@ This book/site is under construction
 <p>This version of the book was built with R version 4.4.2 (2024-10-31) and the following packages:</p>
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
-{"columns":[{"label":["package"],"name":[1],"type":["chr"],"align":["left"]},{"label":["version"],"name":[2],"type":["chr"],"align":["left"]},{"label":["source"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"conflicted","2":"1.2.0","3":"RSPM"},{"1":"DataExplorer","2":"0.8.3","3":"RSPM"},{"1":"dplyr","2":"1.1.4","3":"RSPM"},{"1":"ggplot2","2":"3.5.1","3":"RSPM"},{"1":"ggplot2movies","2":"0.0.1","3":"RSPM"},{"1":"gt","2":"0.11.1","3":"RSPM"},{"1":"gtExtras","2":"0.5.0","3":"RSPM"},{"1":"janitor","2":"2.2.0","3":"RSPM"},{"1":"naniar","2":"1.1.0","3":"RSPM"},{"1":"purrr","2":"1.0.2","3":"RSPM"},{"1":"readr","2":"2.1.5","3":"RSPM"},{"1":"rmarkdown","2":"2.29","3":"RSPM"},{"1":"scales","2":"1.3.0","3":"RSPM"},{"1":"tibble","2":"3.2.1","3":"RSPM"},{"1":"tidyr","2":"1.3.1","3":"RSPM"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["package"],"name":[1],"type":["chr"],"align":["left"]},{"label":["version"],"name":[2],"type":["chr"],"align":["left"]},{"label":["source"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"conflicted","2":"1.2.0","3":"RSPM"},{"1":"DataExplorer","2":"0.8.3","3":"RSPM"},{"1":"dplyr","2":"1.1.4","3":"RSPM"},{"1":"GGally","2":"2.2.1","3":"RSPM"},{"1":"ggcorrplot","2":"0.1.4.1","3":"RSPM"},{"1":"ggplot2","2":"3.5.1","3":"RSPM"},{"1":"ggplot2movies","2":"0.0.1","3":"RSPM"},{"1":"gt","2":"0.11.1","3":"RSPM"},{"1":"gtExtras","2":"0.5.0","3":"RSPM"},{"1":"janitor","2":"2.2.0","3":"RSPM"},{"1":"naniar","2":"1.1.0","3":"RSPM"},{"1":"purrr","2":"1.0.2","3":"RSPM"},{"1":"readr","2":"2.1.5","3":"RSPM"},{"1":"rmarkdown","2":"2.29","3":"RSPM"},{"1":"scales","2":"1.3.0","3":"RSPM"},{"1":"tibble","2":"3.2.1","3":"RSPM"},{"1":"tidyr","2":"1.3.1","3":"RSPM"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 

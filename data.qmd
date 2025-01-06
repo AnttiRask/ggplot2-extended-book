@@ -14,7 +14,7 @@ source("warning.R")
 #| warning: false
 
 library(conflicted)
-  conflicts_prefer(dplyr::filter)
+conflicts_prefer(dplyr::filter)
 ```
 
 ## Data sets {#sec-data-sets}
@@ -58,9 +58,10 @@ Let's take a quick look at what the first couple of rows of the data set looks l
 head(WorldPhones)
 ```
 
-WorldPhones is a matrix with 7 rows and 8 columns. The columns give the figures for a given region, and the rows the figures for a year. We would like to turn it into a _tidy_ format. We can use the **tibble** [@müller2023] package for the first part. And then we'll use `pivot_longer()` from the __tidyr__ package [@wickham2024b]. It increases the number of rows and decrease the number of columns. We want the continents to be observations, not columns.
+WorldPhones is a matrix with 7 rows and 8 columns. The columns give the figures for a given region, and the rows the figures for a year. We would like to turn it into a *tidy* format. We can use the **tibble** [@müller2023] package for the first part. And then we'll use `pivot_longer()` from the **tidyr** package [@wickham2024b]. It increases the number of rows and decrease the number of columns. We want the continents to be observations, not columns.
 
 ```{r}
+library(dplyr)
 library(tibble)
 library(tidyr)
 
@@ -77,7 +78,7 @@ world_phones_tbl <- WorldPhones %>%
 ```
 
 ```{r}
-#| echo: false
+#| echo:    false
 #| message: false
 #| warning: false
 #| results: asis
@@ -86,9 +87,13 @@ world_phones_tbl %>%
   paged_table()
 ```
 
-What we're left with is a tibble with three columns, __Year__, __Continent__, and __Phones__. We can then use the new tibble to create a simple visualization with ggplot2.
+What we're left with is a tibble with three columns, **Year**, **Continent**, and **Phones**. We can then use the new tibble to create a simple graph with ggplot2.
 
 ```{r}
+#| message: false
+#| warning: false
+#| results: asis
+
 library(ggplot2)
 
 world_phones_tbl %>%
@@ -106,6 +111,10 @@ But it’s a cool little package. It has [Internet Movie Database (IMDb)](https:
 The **Movies** data set has qualities that make it good for our needs. Let’s start by loading it.
 
 ```{r}
+#| message: false
+#| warning: false
+#| results: asis
+
 library(ggplot2movies)
 
 data(movies)
@@ -120,7 +129,7 @@ head(movies)
 ```
 
 ```{r}
-#| echo: false
+#| echo:    false
 #| message: false
 #| results: asis
 
@@ -129,12 +138,13 @@ head(movies) %>%
 ```
 
 ```{r}
-#| echo: false
+#| echo:    false
 #| message: false
 #| warning: false
 
 # Get the number of columns
-.movies_ncols <- ncol(movies)
+.movies_ncols <- movies %>% 
+  ncol()
 
 # Get the row count
 .movies_rowcount <- movies %>% 
@@ -146,9 +156,11 @@ Movies is already a tibble. It consists of `r .movies_rowcount` rows (observatio
 When starting to work with a new data set it's always good to take a look at the documentation. To understand what is in those rows and columns (and what is not).
 
 ```{r}
-#| echo: false
+#| echo:    false
 #| message: false
 #| results: asis
+
+library(tibble)
 
 tribble(
   ~Variable,     ~Description,
@@ -189,6 +201,10 @@ Here are some of the reasons why Movies is a good example data set because it in
 We can use two of those columns, **year** and **rating** to create a simple visualization with ggplot2.
 
 ```{r}
+#| message: false
+#| warning: false
+#| results: asis
+
 library(ggplot2)
 
 movies %>%
@@ -204,7 +220,7 @@ As mentioned earlier, Movies is already a tibble. But, it doesn't mean that the 
 [**RDatasets**](https://vincentarelbundock.github.io/Rdatasets/articles/data.html) is not an R package. But it is an excellent GitHub repo. And a “collection of datasets originally distributed in various R packages" [@arel-bundock2024].
 
 ```{r}
-#| echo: false
+#| echo:    false
 #| message: false
 #| warning: false
 
@@ -243,7 +259,7 @@ filename <- list.files(
 Here listed are the `r .RDatasets_rowcount` data sets that were available on `r .RDatasets_date`.
 
 ```{r}
-#| echo: false
+#| echo:    false
 #| message: false
 #| warning: false
 #| results: asis
@@ -273,7 +289,7 @@ head(starwars)
 ```
 
 ```{r}
-#| echo: false
+#| echo:    false
 #| message: false
 #| results: asis
 
@@ -311,7 +327,7 @@ What are the series of actions we need to take? As I mentioned earlier, EDA is a
 
 It's good to note these visualizations aren't usually meant for publication. Compared to those you find later on in the book, these are more for your eyes than for the eventual audience.
 
-The last thing we'll look at in this chapter is one way to **automate** the EDA process using an app. Although I must warn you. It's better to use these tools only after you've gained experience from doing EDA without them. It might sound counterintuitive, but trust me. It can be too overwhelming if you don't know what you're doing.
+The last thing we'll look at in this chapter is one way to **automate** the EDA process using an app. Although I must warn you. It's better to use these tools only after you've gained experience from doing EDA without them. It might sound counter-intuitive, but trust me. It can be too overwhelming if you don't know what you're doing.
 
 ### Missing values {#sec-missing-values}
 
@@ -330,7 +346,7 @@ movies_na <- movies %>%
   mutate(
     # Turn all blank values of the character type into NA
     across(where(is.character), ~na_if(., "")), 
-    # Create a decade column based on the values in the year column
+    # Create a decade column for grouping based on the values in the year column
     decade = floor(year / 10) * 10
   )
 ```
@@ -347,9 +363,9 @@ movies_na %>%
   theme_bw()
 ```
 
-We can see that *MPAA ratings* aren't the only thing missing. Almost the same amount of films are missing the __budget__ information. With budget, it's easier to say that if we don't have a number, it is missing. Then again, that column did have NAs in place from the beginning.
+We can see that *MPAA ratings* aren't the only thing missing. Almost the same amount of films are missing the **budget** information. With budget, it's easier to say that if we don't have a number, it is missing. Then again, that column did have NAs in place from the beginning.
 
-We're also interested in seeing if there is overlapping *missingness* between the columns. We'll use an upset plot (\[INSERT LINK HERE\]) for that. Just add `gg_miss_upset()`.
+We're also interested in seeing if there is overlapping *missingness* between the columns. It can indicate patterns in the data. We'll use an upset plot (\[INSERT LINK HERE\]) for that. Just add `gg_miss_upset()`.
 
 ```{r}
 movies_na %>% 
@@ -385,7 +401,7 @@ p1 <- movies_na %>%
 ```
 
 ```{r}
-#| echo: false
+#| echo:    false
 #| message: false
 #| warning: false
 #| results: asis
@@ -402,6 +418,7 @@ Let's confirm this observation by creating a frequency table with the `tabyl()` 
 #| warning: false
 #| results: asis
 
+library(dplyr)
 library(janitor)
 
 movies_na %>% 
@@ -431,7 +448,7 @@ p1 +
   facet_wrap(vars(decade))
 ```
 
-Before moving on, let's first look at one interesting alternative for visualizing missing values, `plot_missing()`. It comes from the **DataExplorer** [@cui2024] package.
+Before moving on, let's first look at one alternative for visualizing missing values, `plot_missing()`. It comes from the **DataExplorer** [@cui2024] package.
 
 ```{r}
 #| message: false
@@ -451,7 +468,7 @@ movies_na %>%
 
 You see the amount and percentage of NAs per column, arranged in order of missingness. This is a great quick overview!
 
-DataExplorer, like naniar earlier, provides functions for handling the missing values. For instance, we could drop the budget and mpaa columns, as indicated by the red color in the visualization above.
+DataExplorer, like naniar earlier, provides functions for handling the missing values. For instance, we could drop the budget and mpaa columns, as indicated by the red color in the plot above.
 
 ### Summarizing data {#sec-summarizing-data}
 
@@ -459,7 +476,7 @@ Of course, we want to visualize more than the missing data. It makes sense to st
 
 Luckily we don't have to go further than the DataExplorer package. You know, the one we already tried in the previous chapter.
 
-We'll start with the `plot_intro()` function. It gives us some basic information about our dataset, visualized.
+We'll start with the `plot_intro()` function. It gives us some basic information about our data set, visualized.
 
 ```{r}
 #| message: false
@@ -470,15 +487,15 @@ movies_na %>%
   plot_intro(ggtheme = theme_bw())
 ```
 
-__Missing Values__
+**Missing Values**
 
-The most interesting insights here are still related to missing values. Less than 5% of the rows in the data set are complete. Meaning that they have no missing values in any of the columns. And almost 10% of all the observations are missing. That's how much the missing rows of budget and mpaa are affecting the totals. One positive thing is that we don't have any columns that are missing all the values.
+The most fascinating insights here are still related to missing values. Less than 5% of the rows in the data set are complete. Meaning that they have no missing values in any of the columns. And almost 10% of all the observations are missing. That's how much the missing rows of budget and mpaa are affecting the totals. One positive thing is that we don't have any columns that are missing all the values.
 
-__Categorical Columns__
+**Categorical Columns**
 
-Let's then take a look at the categorical columns. The one that will be missing from the upcoming visualizations is __title__. The values are more or less unique. So, it wouldn't make sense having a bar plot, for instance, with more than 50000 rows with a count of 1 each.
+Let's then take a look at the categorical columns. The one that will be missing from the upcoming visualizations is **title**. The values are more or less unique. So, it wouldn't make sense having a bar chart, for instance, with more than 50000 rows with a count of 1 each.
 
-Did someone mention bar plots? Let's start with the `plot_bar()` function to visualize the categorical columns. This will show us what the frequency of each of the values are within a column.
+Did someone mention bar charts? Let's start with the `plot_bar()` function to visualize the categorical columns. This will show us what the frequency of each of the values are within a column.
 
 ```{r}
 #| message: false
@@ -489,9 +506,9 @@ movies_na %>%
   plot_bar(ggtheme = theme_bw())
 ```
 
-We see mpaa with it's missing values. The rest of the categorical columns are binary ones about which genres each movie belongs to. __Comedy__ and __Drama__ seem to be the best represented ones in the data set.
+We see mpaa with it's missing values. The rest of the categorical columns are binary ones about which genres each movie belongs to. **Comedy** and **Drama** seem to be the best represented ones in the data set.
 
-With the _with_ argument we can choose to show something else on the x-axis besides the frequency. Here, for instance, we've chosen __length__ to be the column to sum up.
+With the *with* argument we can choose to show something else on the x-axis besides the frequency. Here, for instance, we've chosen **length** to be the column to sum up.
 
 ```{r}
 #| message: false
@@ -506,9 +523,9 @@ movies_na %>%
   )
 ```
 
-Here we can see that __Animation__ and __Short__ make up an even smaller part of the whole as before. Which makes sense, when you start to think about it.
+Here we can see that **Animation** and **Short** make up an even smaller part of the whole as before. Which makes sense, when you start to think about it.
 
-Another useful feature is using the _by_ argument. It means we will see the frequency broken down by a discrete feature. In this case we've chosen mpaa.
+Another useful feature is using the *by* argument. It means we will see the frequency broken down by a discrete feature. In this case we've chosen mpaa.
 
 ```{r}
 #| message: false
@@ -522,9 +539,9 @@ movies_na %>%
   )
 ```
 
-This shows us that action and romance are the genres with more R rated movies than the other genres. Of course we must remember the prevalence of those missing values.
+This shows us that **Action** and **Romance** are the genres with more R rated movies than the other genres. Of course we must remember the prevalence of those missing values.
 
-__Numerical Columns__
+**Numerical Columns**
 
 Next, we'll use `plot_histogram()` to draw a histogram of all the numerical columns (both discrete and continuous).
 
@@ -539,7 +556,7 @@ movies_na %>%
 
 That's a lot of information to take in all at once. For the next visualizations, we'll reduce the number of columns to look at.
 
-__r1__ to __r10__ gives the percentile of users who rated the movie that number. Interesting information in its own right. But we'll concentrate on budget, __length__, rating, __votes__, and year. At least for the rest of this chapter.
+**r1** to **r10** gives the percentile of users who rated the movie that number. Interesting information in its own right. But we'll concentrate on budget, **length**, rating, **votes**, and year. At least for the rest of this chapter.
 
 There is one more thing we notice when looking at the histogram for length. Most of the values seem to be close to zero. But there are some extreme values around even 5000 that are skewing the view. Let's see what the cause is by looking at the title and length of the ten longest movies in the data set.
 
@@ -558,6 +575,8 @@ Also, we'll select the columns mentioned earlier. Budget, length, rating, votes,
 #| message: false
 #| warning: false
 #| results: asis
+
+library(dplyr)
 
 movies_na_length_under_500 <- movies_na %>%
   select(budget, length, rating, votes, year) %>%
@@ -581,13 +600,13 @@ movies_na_length_under_500 %>%
 
 Based on the box plot, the movies with a bigger budget tend to:
 
-* have ratings inside a narrower range
-* have better ratings
-* have more votes
-* be more recent
-* be longer
+-   have ratings inside a narrower range
+-   have better ratings
+-   have more votes
+-   be more recent
+-   be longer
 
-Let's then take a look at what this all looks like as a scatter plot. We'll use all the same columns. It's important to use an _alpha_ value that is low enough to reveal a more nuanced picture than we would see if it was 1.
+Let's then take a look at what this all looks like as a scatter plot. We'll use all the same columns. It's important to use an *alpha* value that is low enough to reveal a more nuanced picture than we would see if it was 1.
 
 ```{r}
 #| message: false
@@ -607,11 +626,11 @@ These are some of the ways to use DataExplorer to create a visual summary of a d
 
 To conclude, DataExplorer has a function, `create_report()`. It creates a full EDA report from scratch. We won't use that now, because the report would take too much space. But if you're using DataExplorer, you should try it!
 
-__gt & gtExtras__
+**gt & gtExtras**
 
-DataExplorer is a good package, but it's not the only game in town for EDA. __gt__ [@iannone2024] is a package to create tables (\[INSERT LINK HERE\]) with.
+DataExplorer is a good package, but it's not the only game in town for EDA. **gt** [@iannone2024] is a package to create tables (\[INSERT LINK HERE\]) with.
 
-Often, when you think about tables, you think about numeric and text values. But that doesn't have to be the case. With __gtExtras__ [@mock2023] you can create a fast and easy visual summary of your data. The `gt_plt_summary()` function is all you need.
+Often, when you think about tables, you think about numeric and text values. But that doesn't have to be the case. With **gtExtras** [@mock2023] you can create a fast and easy visual summary of your data. The `gt_plt_summary()` function is all you need.
 
 The function does have some limitations. It has had some issues with certain data sets. The movies data set didn't work, for instance. That's why we'll take a look at the WorldPhones data set instead.
 
@@ -627,12 +646,243 @@ world_phones_tbl %>%
   gt_plt_summary()
 ```
 
-What we get is a table that combines a visualized plot overview with basic summary elements: _missing_, _mean_, _median_, and _standard deviation (sd)_). You can also see from the icon on the left, whether the column is categorical or continuous. With the categorical columns, you can see a list of the categorical values by clicking the arrow.
+What we get is a table that combines a visualized plot overview with basic summary elements: *missing*, *mean*, *median*, and *standard deviation (sd)*). You can also see from the icon on the left, whether the column is categorical or continuous. With the categorical columns, you can see a list of the categorical values by clicking the arrow.
 
 ### Visualizing relationships {#sec-visualizing-relationships}
 
-**Pairwise plot matrix**
+Most of the summarization techniques we’ve used so far have dealt with the distribution of values within one variable. But it’s also important to understand the possible relationships between different variables.
 
-**Correlation matrix**
+Understanding those relationships can provide insights into patterns, trends, and dependencies.
+
+Two tools are available for this. A **correlation matrix** quantifies the relationships numerically. But since this book is about visualizing data, we’ll also visualize those numbers.
+
+A **pairwise plot matrix** is a complementary visual tool to explore those relationships more deeply.
+
+#### Correlation matrix {#sec-correlation-matrix}
+
+First, let’s tweak the data set to better fit our demo purposes. We’ll *select* the columns we wish to use. In this case, it’s all the columns with numeric values. Except for the ones about the ratings percentiles (r1-r10). And we’ll use `drop_na()` from tidyr to drop rows where any column has missing values.
+
+```{r}
+#| message: false
+#| warning: false
+#| results: asis
+
+library(dplyr)
+library(tidyr)
+
+movies_without_na_numeric <- movies_na %>%
+  select(where(is.numeric) & !num_range("r", 1:10)) %>%
+  # The second select() is to order the columns alphabetically.
+  # Except for the names of genres that follow everything else.
+  select(budget, length, rating, votes, year, everything()) %>%
+  drop_na()
+```
+
+```{r}
+#| message: false
+#| warning: false
+#| results: asis
+
+movies_without_na_numeric %>%
+  paged_table()
+```
+
+```{r}
+#| echo:    false
+#| message: false
+#| warning: false
+
+# Get the number of columns
+.movies_without_na_numeric_ncols <- movies_without_na_numeric %>% 
+  ncol()
+
+# Get the row count
+.movies_without_na_numeric_rowcount <- movies_without_na_numeric %>% 
+  tally()
+```
+
+We're left with `r .movies_without_na_numeric_rowcount` rows (observations) and `r .movies_without_na_numeric_ncols` columns (variables). Still plenty enough to perceive exciting correlations between the columns.
+
+Let's first create a correlation matrix using the `cor()` function. It's from base R and computes the correlation between the different columns. We're using the **Pearson** correlation coefficient as the method (default). Remember it can't determine a potential non-linear association between variables.
+
+Due to the lack of space on the page, we'll only look at these columns: budget, length, rating, votes, and year. If there was more room, we'd include the genre columns. But we'll see them again soon enough!
+
+```{r}
+#| message: false
+#| warning: false
+#| results: asis
+
+corr <- movies_without_na_numeric %>% 
+  cor() %>%
+  round(2)
+```
+
+```{r}
+#| message: false
+#| warning: false
+#| results: asis
+
+library(dplyr)
+
+corr %>%
+  as.data.frame() %>%
+  select(budget, length, rating, votes, year) %>%
+  # We're using slice_head to filter only the first n rows. 5 in this case.
+  # Without it, we would also have rows with the genres, ruining our matrix.
+  slice_head(n = 5) %>%
+  paged_table()
+```
+
+Of course, we can see the differences by looking at the values in the matrix. But it might be easier to get the bigger picture by looking at them graphically. For that, we'll use **ggcorrplot** [@kassambra2023].
+
+This time, we'll also include the genre columns. We're interested in how they correlate with each other and the original five.
+
+In its basic form `ggcorrplot()` only needs the data argument. So let's first look at it without any modifications.
+
+```{r}
+#| message: false
+#| warning: false
+#| results: asis
+
+library(ggcorrplot)
+
+corr %>%
+  ggcorrplot()
+```
+
+So, the way to interpret this is simple. The redder the square, the stronger the positive correlation between the two variables. Votes and budget, for instance. Which makes intuitive sense. The bigger the movie (budget), the more likely it is to garner attention from IMDb users. If we look at budget and rating, there is no discernible correlation between the two. This is an intriguing initial finding and we could investigate it further.
+
+But, the bluer the square, the stronger negative correlation there seems to be between the two. The most obvious example here is the negative correlation between length and Short. Who would have guessed that the films in the Short genre would also be short in length? We can also see a negative correlation between the Short genre and budget. Which again makes perfect sense. You can also see the reverse effect when looking at budget and length. It strengthens the case further.
+
+We're still in the territory where most visualizations are for your eyes only. But there are some modifications we could make to the plot. Here are the parameters for `ggcorrplot()` we're using (and why):
+
+-   *Circle* is the other **method** available. The bigger the shape, the bigger the correlation (negative or positive). Double encoding (also known as redundant encoding) is a two-edged sword. We should use it with caution. But here it can help distinguish the most noteworthy cases
+-   We can use one of the ggplot2 themes by using **ggtheme**. Using a clean theme like *theme_bw* makes the plot a bit easier to read
+-   All variables are perfectly correlated with themselves. It doesn't make sense to show the diagonal. If anything, it makes reading the plot a bit harder. We can get rid of the diagonal by setting **show.diag** as *FALSE*
+-   Blue, white, and red are all fine **colors**. For a little more flavor, we can choose something else. Like *dark turquoise*, *grey*, and *dark orange*
+
+```{r}
+#| message: false
+#| warning: false
+#| results: asis
+
+corr %>% 
+  ggcorrplot(
+    method    = "circle",
+    ggtheme   = theme_bw,
+    show.diag = FALSE,
+    colors    = c("darkturquoise", "grey95", "darkorange3")
+  )
+```
+
+Much better! And here are some more genre-related insights based on the matrix:
+
+-   Drama has a fairly strong positive correlation with both length and rating
+-   Action films have the strongest positive correlation with budget
+-   Comedy and Romance have a positive correlation
+-   But so does Romance and Drama
+
+#### Pairwise plot matrix {#sec-pairwise-plot-matrix}
+
+We already got a lot of information out of the correlation matrix. But as mentioned earlier, a pairwise plot matrix is a tool to explore the relationships within and between variables more deeply.
+
+Again, we begin by fine tuning the data set. In this case we're only interested in the Drama genre and how those films compare to the rest of the films.
+
+```{r}
+#| message: false
+#| warning: false
+#| results: asis
+
+movies_without_na_drama <- movies_na %>%
+  mutate(
+    Drama = if_else(Drama == 1, "Yes", "No") %>%
+      as.factor()
+  ) %>% 
+  drop_na() %>%
+  select(budget, length, rating, votes, year, Drama)
+```
+
+```{r}
+#| message: false
+#| warning: false
+#| results: asis
+
+movies_without_na_drama %>% 
+  paged_table()
+```
+
+To use a pairwise plot matrix we turn to **GGally** [@schloerke2024].
+
+Let's start with the basic `ggpairs()` function. We only need to tell it which columns we want to use. We'll start by looking at the dataset without the Drama column.
+
+```{r}
+#| message: false
+#| warning: false
+#| results: asis
+
+library(GGally)
+
+movies_without_na_drama %>%
+  ggpairs(
+    columns = c("budget", "length", "rating", "votes", "year")
+  ) +
+  theme_bw()
+```
+
+The matrix consists of three areas: **upper**, **lower**, and *diagonal* (or **diag** when it comes to function parameters). They can contain different types of plots and are customizable. But let's first look at the defaults:
+
+- Upper contains the correlation coefficient between the two variables
+- Lower contains a scatter plot of the two variables
+- Diagonal contains a density plot of the variable in question
+
+It's time to add Drama as color for the matrix. And also do some customizations:
+
+- We know Drama is either "No" or "Yes", so let's pick two colors that go well together, *dark orange* and *dark turquoise*
+- We can use *functions* to customize any part of the matrix
+  - `lower_function()` creates a scatter plot where the points are somewhat transparent (alpha = 0.5). There is also a red linear trend line
+  - `diag_function()` creates a density plot. But why do we need to do that when the default already does the same? For some reason, default uses default colors, even if we map the colors as we have. But our function here does the trick
+- Then we simply create the matrix
+
+```{r}
+#| message: false
+#| warning: false
+#| results: asis
+
+library(ggplot2)
+
+# 1) Choose your colors
+manual_colors = c("darkorange3","darkturquoise")
+
+# 2) Create functions for the lower half and the diagonal of the matrix
+lower_function <- function(data, mapping) {
+  ggplot(data = data, mapping = mapping) +
+    geom_point(alpha = 0.5) +
+    geom_smooth(method = "lm", color = "red")
+}
+
+diag_function <- function(data, mapping) {
+  ggplot(data = data, mapping = mapping) +
+    geom_density()
+}
+
+# 3) Add colors. Then customize upper and lower half, and the diagonal
+# of the matrix. Lower and diagonal use the functions we created in step 2
+movies_without_na_drama %>%
+  ggpairs(
+    mapping = aes(color = Drama),
+    columns = c("budget", "length", "rating", "votes", "year"),
+    upper   = list(continuous = wrap("cor", size = 3.5)),
+    lower   = list(continuous = lower_function),
+    diag    = list(continuous = diag_function)
+  ) +
+  scale_color_manual(values = manual_colors) +
+  theme_bw()
+```
+
+There are many differences throughout the data depending on whether the movie belongs to the Drama genre.
+
+If you want to, you can do the same with other genres!
+
+There are many other ways to customize a pairwise plot matrix. For the rest, see `ggpairs()` [documentation](https://ggobi.github.io/ggally/articles/ggpairs.html).
 
 ### Automated EDA app {#sec-automated-eda-app}
