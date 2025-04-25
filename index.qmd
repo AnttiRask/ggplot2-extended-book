@@ -1,6 +1,6 @@
 # Welcome {#sec-welcome .unnumbered}
 
-This is the website for my book **ggplot2 extended**. It is about extending the functionality of the [**ggplot2**](https://ggplot2.tidyverse.org/) [@wickham2024] R package by **Hadley Wickham**. Many extension packages have come out since the release of ggplot2. This book is about how to use them to make the most out of the whole ggplot2 ecosystem. And which of the many extensions to use in the first place.
+This is the website for my book **ggplot2 extended**. It is about extending the functionality of the [**ggplot2**](https://ggplot2.tidyverse.org/) [@wickham2024a] R package by **Hadley Wickham**. Many extension packages have come out since the release of ggplot2. This book is about how to use them to make the most out of the whole ggplot2 ecosystem. And which of the many extensions to use in the first place.
 
 I will go through the very basics of how ggplot2 works in 1  ggplot2. But this book does assume some basic understanding of R and ggplot2.
 

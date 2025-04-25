@@ -10,7 +10,7 @@ source("warning.R")
 
 Data visualization is one of those things that can look easy when you see someone doing it well. Then you try it yourself and it’s easy to feel like you know nothing.
 
-I wanted to share the tools that make it easier to create those beautiful visualizations. And to show you how to use those tools together, not only with **ggplot2** [@wickham2024] but with each other.
+I wanted to share the tools that make it easier to create those beautiful visualizations. And to show you how to use those tools together, not only with **ggplot2** [@wickham2024a] but with each other.
 
 One bit about terminology before we go any further. *Chart*, *diagram*, *graph*, *plot*, and *visualization* are all terms that people have tried to give strict definitions to. But in reality, they get used more or less interchangeably. Is it a bar chart or a bar graph? Yes.
 
@@ -193,12 +193,15 @@ Some of them you can install from CRAN:
 install.packages(
   c(
     "DataExplorer",
+    "ExPanDaR",
     "GGally",
     "ggcorrplot",
     "ggplot2movies",
+    "ggquickeda",
     "gt",
     "gtExtras",
     "naniar",
+    "Radiant"
   )
 )
 ```
@@ -262,6 +265,7 @@ Next, it's practice, practice, practice. Recreate your favorite data visualizati
 
 -   [Awesome ggplot2 by Erik Gahner](https://github.com/erikgahner/awesome-ggplot2/)
 -   [Awesome R Dataviz by Krzysztof Joachimiak](https://github.com/krzjoa/awesome-r-dataviz/)
+-   [ggplot2 extenders by Gina Reynolds & Teun van den Brand](https://ggplot2-extenders.github.io/ggplot-extension-club/)
 -   [ggplot Tricks by Teun van den Brand](https://github.com/teunbrand/ggplot_tricks/)
 -   [TidyTuesday by Tom Mock](https://github.com/rfordatascience/tidytuesday)
 
@@ -273,10 +277,14 @@ Next, it's practice, practice, practice. Recreate your favorite data visualizati
 -   [R Graph Gallery by Yan Holtz](https://r-graph-gallery.com/)
 -   [Statistics Globe by Joachim Schork](https://statisticsglobe.com/graphics-in-r)
 
-### YouTube {#sec-youtube}
+### YouTube {#sec-youtube-channels}
 
 -   [Albert Rapp](https://www.youtube.com/@rappa753/)
 -   [Statistics Globe by Joachim Schork](https://www.youtube.com/@StatisticsGlobe/)
+
+### YouTube {#sec-youtube-videos}
+
+-   [ggplot2 extenders - Hadley Wickham: Thoughts on the ggplot2 extension ecosystem](https://www.youtube.com/watch?v=kjjcgdkowXs)
 
 ## Acknowledgments {#sec-introduction-acknowledgments}
 
@@ -303,15 +311,18 @@ pkgs <- c(
   "conflicted",
   "DataExplorer",
   "dplyr",
+  "ExPanDaR",
   "GGally",
   "ggcorrplot",
   "ggplot2",
   "ggplot2movies",
+  "ggquickeda",
   "gt",
   "gtExtras",
   "janitor",
   "naniar",
   "purrr",
+  "Radiant",
   "readr",
   "rmarkdown",
   "scales",

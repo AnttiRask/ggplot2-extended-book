@@ -14,7 +14,12 @@ source("warning.R")
 #| warning: false
 
 library(conflicted)
+conflicts_prefer(base::`+`)
 conflicts_prefer(dplyr::filter)
+conflicts_prefer(radiant.basics::compare_means)
+conflicts_prefer(rlang::set_names)
+conflicts_prefer(shiny::dataTableOutput)
+conflicts_prefer(shiny::renderDataTable)
 ```
 
 ## Data sets {#sec-data-sets}
@@ -44,7 +49,7 @@ data() %>%
   paged_table()
 ```
 
-Since the **datasets** package comes from base R, the data is not always immediately ready to use with **ggplot2** [@wickham2024]. Luckily we have the **tidyverse** [@wickham2023b] packages that make it easy to make the necessary changes.
+Since the **datasets** package comes from base R, the data is not always immediately ready to use with **ggplot2** [@wickham2024a]. Luckily we have the **tidyverse** [@wickham2023b] packages that make it easy to make the necessary changes.
 
 Here is an example using the **WorldPhones** ('The World's Telephones') data set. We can start by loading the data set by using the `data()` function.
 
