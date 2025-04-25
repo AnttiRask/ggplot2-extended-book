@@ -92,7 +92,10 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -429,7 +432,7 @@ This book/site is under construction
 <p>Base R comes with a bunch of data sets ready to use. There are classics like <strong>iris</strong> and <strong>mtcars</strong>, but there are many more to choose from.</p>
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
-{"columns":[{"label":["Item"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Title"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"ability.cov","2":"Ability and Intelligence Tests"},{"1":"airmiles","2":"Passenger Miles on Commercial US Airlines, 1937-1960"},{"1":"AirPassengers","2":"Monthly Airline Passenger Numbers 1949-1960"},{"1":"airquality","2":"New York Air Quality Measurements"},{"1":"anscombe","2":"Anscombe's Quartet of 'Identical' Simple Linear Regressions"},{"1":"attenu","2":"The Joyner-Boore Attenuation Data"},{"1":"attitude","2":"The Chatterjee-Price Attitude Data"},{"1":"austres","2":"Quarterly Time Series of the Number of Australian Residents"},{"1":"beaver1 (beavers)","2":"Body Temperature Series of Two Beavers"},{"1":"beaver2 (beavers)","2":"Body Temperature Series of Two Beavers"},{"1":"BJsales","2":"Sales Data with Leading Indicator"},{"1":"BJsales.lead (BJsales)","2":"Sales Data with Leading Indicator"},{"1":"BOD","2":"Biochemical Oxygen Demand"},{"1":"cars","2":"Speed and Stopping Distances of Cars"},{"1":"ChickWeight","2":"Weight versus age of chicks on different diets"},{"1":"chickwts","2":"Chicken Weights by Feed Type"},{"1":"co2","2":"Mauna Loa Atmospheric CO2 Concentration"},{"1":"CO2","2":"Carbon Dioxide Uptake in Grass Plants"},{"1":"crimtab","2":"Student's 3000 Criminals Data"},{"1":"discoveries","2":"Yearly Numbers of Important Discoveries"},{"1":"DNase","2":"Elisa assay of DNase"},{"1":"esoph","2":"Smoking, Alcohol and (O)esophageal Cancer"},{"1":"euro","2":"Conversion Rates of Euro Currencies"},{"1":"euro.cross (euro)","2":"Conversion Rates of Euro Currencies"},{"1":"eurodist","2":"Distances Between European Cities and Between US Cities"},{"1":"EuStockMarkets","2":"Daily Closing Prices of Major European Stock Indices, 1991-1998"},{"1":"faithful","2":"Old Faithful Geyser Data"},{"1":"fdeaths (UKLungDeaths)","2":"Monthly Deaths from Lung Diseases in the UK"},{"1":"Formaldehyde","2":"Determination of Formaldehyde"},{"1":"freeny","2":"Freeny's Revenue Data"},{"1":"freeny.x (freeny)","2":"Freeny's Revenue Data"},{"1":"freeny.y (freeny)","2":"Freeny's Revenue Data"},{"1":"HairEyeColor","2":"Hair and Eye Color of Statistics Students"},{"1":"Harman23.cor","2":"Harman Example 2.3"},{"1":"Harman74.cor","2":"Harman Example 7.4"},{"1":"Indometh","2":"Pharmacokinetics of Indomethacin"},{"1":"infert","2":"Infertility after Spontaneous and Induced Abortion"},{"1":"InsectSprays","2":"Effectiveness of Insect Sprays"},{"1":"iris","2":"Edgar Anderson's Iris Data"},{"1":"iris3","2":"Edgar Anderson's Iris Data"},{"1":"islands","2":"Areas of the World's Major Landmasses"},{"1":"JohnsonJohnson","2":"Quarterly Earnings per Johnson & Johnson Share"},{"1":"LakeHuron","2":"Level of Lake Huron 1875-1972"},{"1":"ldeaths (UKLungDeaths)","2":"Monthly Deaths from Lung Diseases in the UK"},{"1":"lh","2":"Luteinizing Hormone in Blood Samples"},{"1":"LifeCycleSavings","2":"Intercountry Life-Cycle Savings Data"},{"1":"Loblolly","2":"Growth of Loblolly Pine Trees"},{"1":"longley","2":"Longley's Economic Regression Data"},{"1":"lynx","2":"Annual Canadian Lynx trappings 1821-1934"},{"1":"mdeaths (UKLungDeaths)","2":"Monthly Deaths from Lung Diseases in the UK"},{"1":"morley","2":"Michelson Speed of Light Data"},{"1":"mtcars","2":"Motor Trend Car Road Tests"},{"1":"nhtemp","2":"Average Yearly Temperatures in New Haven"},{"1":"Nile","2":"Flow of the River Nile"},{"1":"nottem","2":"Average Monthly Temperatures at Nottingham, 1920-1939"},{"1":"npk","2":"Classical N, P, K Factorial Experiment"},{"1":"occupationalStatus","2":"Occupational Status of Fathers and their Sons"},{"1":"Orange","2":"Growth of Orange Trees"},{"1":"OrchardSprays","2":"Potency of Orchard Sprays"},{"1":"PlantGrowth","2":"Results from an Experiment on Plant Growth"},{"1":"precip","2":"Annual Precipitation in US Cities"},{"1":"presidents","2":"Quarterly Approval Ratings of US Presidents"},{"1":"pressure","2":"Vapor Pressure of Mercury as a Function of Temperature"},{"1":"Puromycin","2":"Reaction Velocity of an Enzymatic Reaction"},{"1":"quakes","2":"Locations of Earthquakes off Fiji"},{"1":"randu","2":"Random Numbers from Congruential Generator RANDU"},{"1":"rivers","2":"Lengths of Major North American Rivers"},{"1":"rock","2":"Measurements on Petroleum Rock Samples"},{"1":"Seatbelts","2":"Road Casualties in Great Britain 1969-84"},{"1":"sleep","2":"Student's Sleep Data"},{"1":"stack.loss (stackloss)","2":"Brownlee's Stack Loss Plant Data"},{"1":"stack.x (stackloss)","2":"Brownlee's Stack Loss Plant Data"},{"1":"stackloss","2":"Brownlee's Stack Loss Plant Data"},{"1":"state.abb (state)","2":"US State Facts and Figures"},{"1":"state.area (state)","2":"US State Facts and Figures"},{"1":"state.center (state)","2":"US State Facts and Figures"},{"1":"state.division (state)","2":"US State Facts and Figures"},{"1":"state.name (state)","2":"US State Facts and Figures"},{"1":"state.region (state)","2":"US State Facts and Figures"},{"1":"state.x77 (state)","2":"US State Facts and Figures"},{"1":"sunspot.month","2":"Monthly Sunspot Data, from 1749 to \"Present\""},{"1":"sunspot.year","2":"Yearly Sunspot Data, 1700-1988"},{"1":"sunspots","2":"Monthly Sunspot Numbers, 1749-1983"},{"1":"swiss","2":"Swiss Fertility and Socioeconomic Indicators (1888) Data"},{"1":"Theoph","2":"Pharmacokinetics of Theophylline"},{"1":"Titanic","2":"Survival of passengers on the Titanic"},{"1":"ToothGrowth","2":"The Effect of Vitamin C on Tooth Growth in Guinea Pigs"},{"1":"treering","2":"Yearly Tree-Ring Data, -6000-1979"},{"1":"trees","2":"Diameter, Height and Volume for Black Cherry Trees"},{"1":"UCBAdmissions","2":"Student Admissions at UC Berkeley"},{"1":"UKDriverDeaths","2":"Road Casualties in Great Britain 1969-84"},{"1":"UKgas","2":"UK Quarterly Gas Consumption"},{"1":"USAccDeaths","2":"Accidental Deaths in the US 1973-1978"},{"1":"USArrests","2":"Violent Crime Rates by US State"},{"1":"UScitiesD","2":"Distances Between European Cities and Between US Cities"},{"1":"USJudgeRatings","2":"Lawyers' Ratings of State Judges in the US Superior Court"},{"1":"USPersonalExpenditure","2":"Personal Expenditure Data"},{"1":"uspop","2":"Populations Recorded by the US Census"},{"1":"VADeaths","2":"Death Rates in Virginia (1940)"},{"1":"volcano","2":"Topographic Information on Auckland's Maunga Whau Volcano"},{"1":"warpbreaks","2":"The Number of Breaks in Yarn during Weaving"},{"1":"women","2":"Average Heights and Weights for American Women"},{"1":"WorldPhones","2":"The World's Telephones"},{"1":"WWWusage","2":"Internet Usage per Minute"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["Item"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Title"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"ability.cov","2":"Ability and Intelligence Tests"},{"1":"airmiles","2":"Passenger Miles on Commercial US Airlines, 1937-1960"},{"1":"AirPassengers","2":"Monthly Airline Passenger Numbers 1949-1960"},{"1":"airquality","2":"New York Air Quality Measurements"},{"1":"anscombe","2":"Anscombe's Quartet of 'Identical' Simple Linear Regressions"},{"1":"attenu","2":"The Joyner-Boore Attenuation Data"},{"1":"attitude","2":"The Chatterjee-Price Attitude Data"},{"1":"austres","2":"Quarterly Time Series of the Number of Australian Residents"},{"1":"beaver1 (beavers)","2":"Body Temperature Series of Two Beavers"},{"1":"beaver2 (beavers)","2":"Body Temperature Series of Two Beavers"},{"1":"BJsales","2":"Sales Data with Leading Indicator"},{"1":"BJsales.lead (BJsales)","2":"Sales Data with Leading Indicator"},{"1":"BOD","2":"Biochemical Oxygen Demand"},{"1":"cars","2":"Speed and Stopping Distances of Cars"},{"1":"ChickWeight","2":"Weight versus age of chicks on different diets"},{"1":"chickwts","2":"Chicken Weights by Feed Type"},{"1":"co2","2":"Mauna Loa Atmospheric CO2 Concentration"},{"1":"CO2","2":"Carbon Dioxide Uptake in Grass Plants"},{"1":"crimtab","2":"Student's 3000 Criminals Data"},{"1":"discoveries","2":"Yearly Numbers of Important Discoveries"},{"1":"DNase","2":"Elisa assay of DNase"},{"1":"esoph","2":"Smoking, Alcohol and (O)esophageal Cancer"},{"1":"euro","2":"Conversion Rates of Euro Currencies"},{"1":"euro.cross (euro)","2":"Conversion Rates of Euro Currencies"},{"1":"eurodist","2":"Distances Between European Cities and Between US Cities"},{"1":"EuStockMarkets","2":"Daily Closing Prices of Major European Stock Indices, 1991-1998"},{"1":"faithful","2":"Old Faithful Geyser Data"},{"1":"fdeaths (UKLungDeaths)","2":"Monthly Deaths from Lung Diseases in the UK"},{"1":"Formaldehyde","2":"Determination of Formaldehyde"},{"1":"freeny","2":"Freeny's Revenue Data"},{"1":"freeny.x (freeny)","2":"Freeny's Revenue Data"},{"1":"freeny.y (freeny)","2":"Freeny's Revenue Data"},{"1":"gait","2":"Hip and Knee Angle while Walking"},{"1":"HairEyeColor","2":"Hair and Eye Color of Statistics Students"},{"1":"Harman23.cor","2":"Harman Example 2.3"},{"1":"Harman74.cor","2":"Harman Example 7.4"},{"1":"Indometh","2":"Pharmacokinetics of Indomethacin"},{"1":"infert","2":"Infertility after Spontaneous and Induced Abortion"},{"1":"InsectSprays","2":"Effectiveness of Insect Sprays"},{"1":"iris","2":"Edgar Anderson's Iris Data"},{"1":"iris3","2":"Edgar Anderson's Iris Data"},{"1":"islands","2":"Areas of the World's Major Landmasses"},{"1":"JohnsonJohnson","2":"Quarterly Earnings per Johnson & Johnson Share"},{"1":"LakeHuron","2":"Level of Lake Huron 1875-1972"},{"1":"ldeaths (UKLungDeaths)","2":"Monthly Deaths from Lung Diseases in the UK"},{"1":"lh","2":"Luteinizing Hormone in Blood Samples"},{"1":"LifeCycleSavings","2":"Intercountry Life-Cycle Savings Data"},{"1":"Loblolly","2":"Growth of Loblolly Pine Trees"},{"1":"longley","2":"Longley's Economic Regression Data"},{"1":"lynx","2":"Annual Canadian Lynx trappings 1821-1934"},{"1":"mdeaths (UKLungDeaths)","2":"Monthly Deaths from Lung Diseases in the UK"},{"1":"morley","2":"Michelson Speed of Light Data"},{"1":"mtcars","2":"Motor Trend Car Road Tests"},{"1":"nhtemp","2":"Average Yearly Temperatures in New Haven"},{"1":"Nile","2":"Flow of the River Nile"},{"1":"nottem","2":"Average Monthly Temperatures at Nottingham, 1920-1939"},{"1":"npk","2":"Classical N, P, K Factorial Experiment"},{"1":"occupationalStatus","2":"Occupational Status of Fathers and their Sons"},{"1":"Orange","2":"Growth of Orange Trees"},{"1":"OrchardSprays","2":"Potency of Orchard Sprays"},{"1":"penguins","2":"Measurements of Penguins near Palmer Station, Antarctica"},{"1":"penguins_raw (penguins)","2":"Measurements of Penguins near Palmer Station, Antarctica"},{"1":"PlantGrowth","2":"Results from an Experiment on Plant Growth"},{"1":"precip","2":"Annual Precipitation in US Cities"},{"1":"presidents","2":"Quarterly Approval Ratings of US Presidents"},{"1":"pressure","2":"Vapor Pressure of Mercury as a Function of Temperature"},{"1":"Puromycin","2":"Reaction Velocity of an Enzymatic Reaction"},{"1":"quakes","2":"Locations of Earthquakes off Fiji"},{"1":"randu","2":"Random Numbers from Congruential Generator RANDU"},{"1":"rivers","2":"Lengths of Major North American Rivers"},{"1":"rock","2":"Measurements on Petroleum Rock Samples"},{"1":"Seatbelts","2":"Road Casualties in Great Britain 1969-84"},{"1":"sleep","2":"Student's Sleep Data"},{"1":"stack.loss (stackloss)","2":"Brownlee's Stack Loss Plant Data"},{"1":"stack.x (stackloss)","2":"Brownlee's Stack Loss Plant Data"},{"1":"stackloss","2":"Brownlee's Stack Loss Plant Data"},{"1":"state.abb (state)","2":"US State Facts and Figures"},{"1":"state.area (state)","2":"US State Facts and Figures"},{"1":"state.center (state)","2":"US State Facts and Figures"},{"1":"state.division (state)","2":"US State Facts and Figures"},{"1":"state.name (state)","2":"US State Facts and Figures"},{"1":"state.region (state)","2":"US State Facts and Figures"},{"1":"state.x77 (state)","2":"US State Facts and Figures"},{"1":"sunspot.m2014 (sunspot.month)","2":"Monthly Sunspot Data, from 1749 to \"Present\""},{"1":"sunspot.month","2":"Monthly Sunspot Data, from 1749 to \"Present\""},{"1":"sunspot.year","2":"Yearly Sunspot Data, 1700-1988"},{"1":"sunspots","2":"Monthly Sunspot Numbers, 1749-1983"},{"1":"swiss","2":"Swiss Fertility and Socioeconomic Indicators (1888) Data"},{"1":"Theoph","2":"Pharmacokinetics of Theophylline"},{"1":"Titanic","2":"Survival of passengers on the Titanic"},{"1":"ToothGrowth","2":"The Effect of Vitamin C on Tooth Growth in Guinea Pigs"},{"1":"treering","2":"Yearly Tree-Ring Data, -6000-1979"},{"1":"trees","2":"Diameter, Height and Volume for Black Cherry Trees"},{"1":"UCBAdmissions","2":"Student Admissions at UC Berkeley"},{"1":"UKDriverDeaths","2":"Road Casualties in Great Britain 1969-84"},{"1":"UKgas","2":"UK Quarterly Gas Consumption"},{"1":"USAccDeaths","2":"Accidental Deaths in the US 1973-1978"},{"1":"USArrests","2":"Violent Crime Rates by US State"},{"1":"UScitiesD","2":"Distances Between European Cities and Between US Cities"},{"1":"USJudgeRatings","2":"Lawyers' Ratings of State Judges in the US Superior Court"},{"1":"USPersonalExpenditure","2":"Personal Expenditure Data"},{"1":"uspop","2":"Populations Recorded by the US Census"},{"1":"VADeaths","2":"Death Rates in Virginia (1940)"},{"1":"volcano","2":"Topographic Information on Auckland's Maunga Whau Volcano"},{"1":"warpbreaks","2":"The Number of Breaks in Yarn during Weaving"},{"1":"women","2":"Average Heights and Weights for American Women"},{"1":"WorldPhones","2":"The World's Telephones"},{"1":"WWWusage","2":"Internet Usage per Minute"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 <p>Since the <strong>datasets</strong> package comes from base R, the data is not always immediately ready to use with <strong>ggplot2</strong> <span class="citation" data-cites="wickham2024">(<a href="references.html#ref-wickham2024" role="doc-biblioref">Wickham 2024</a>)</span>. Luckily we have the <strong>tidyverse</strong> <span class="citation" data-cites="wickham2023b">(<a href="references.html#ref-wickham2023b" role="doc-biblioref">Wickham, Averick, et al. 2023</a>)</span> packages that make it easy to make the necessary changes.</p>
@@ -762,533 +765,27 @@ This book/site is under construction
 <p>To conclude, DataExplorer has a function, <code><a href="http://boxuancui.github.io/DataExplorer/reference/create_report.html">create_report()</a></code>. It creates a full EDA report from scratch. We won’t use that now, because the report would take too much space. But if you’re using DataExplorer, you should try it!</p>
 <p><strong>gt &amp; gtExtras</strong></p>
 <p>DataExplorer is a good package, but it’s not the only game in town for EDA. <strong>gt</strong> <span class="citation" data-cites="iannone2024">(<a href="references.html#ref-iannone2024" role="doc-biblioref">Iannone et al. 2024</a>)</span> is a package to create tables ([INSERT LINK HERE]) with.</p>
-<p>Often, when you think about tables, you think about numeric and text values. But that doesn’t have to be the case. With <strong>gtExtras</strong> <span class="citation" data-cites="mock2023">(<a href="references.html#ref-mock2023" role="doc-biblioref">Mock 2023</a>)</span> you can create a fast and easy visual summary of your data. The <code><a href="https://jthomasmock.github.io/gtExtras/reference/gt_plt_summary.html">gt_plt_summary()</a></code> function is all you need.</p>
+<p>Often, when you think about tables, you think about numeric and text values. But that doesn’t have to be the case. With <strong>gtExtras</strong> <span class="citation" data-cites="mock2023">(<a href="references.html#ref-mock2023" role="doc-biblioref">Mock 2023</a>)</span> you can create a fast and easy visual summary of your data. The <code>gt_plt_summary()</code> function is all you need.</p>
 <p>The function does have some limitations. It has had some issues with certain data sets. The movies data set didn’t work, for instance. That’s why we’ll take a look at the WorldPhones data set instead.</p>
-<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://gt.rstudio.com">gt</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/jthomasmock/gtExtras">gtExtras</a></span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">world_phones_tbl</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://jthomasmock.github.io/gtExtras/reference/gt_plt_summary.html">gt_plt_summary</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="gwccytpfxv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#gwccytpfxv table {
-  font-family: Lato, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-#gwccytpfxv thead, #gwccytpfxv tbody, #gwccytpfxv tfoot, #gwccytpfxv tr, #gwccytpfxv td, #gwccytpfxv th {
-  border-style: none;
-}
-
-#gwccytpfxv p {
-  margin: 0;
-  padding: 0;
-}
-
-#gwccytpfxv .gt_table {
-  display: table;
-  border-collapse: collapse;
-  line-height: normal;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 3px;
-  border-top-color: #FFFFFF;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#gwccytpfxv .gt_caption {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-#gwccytpfxv .gt_title {
-  color: #333333;
-  font-size: 24px;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#gwccytpfxv .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 3px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#gwccytpfxv .gt_heading {
-  background-color: #FFFFFF;
-  text-align: left;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#gwccytpfxv .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 0px;
-  border-bottom-color: #D3D3D3;
-}
-
-#gwccytpfxv .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 0px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#gwccytpfxv .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 80%;
-  font-weight: bolder;
-  text-transform: uppercase;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#gwccytpfxv .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 80%;
-  font-weight: bolder;
-  text-transform: uppercase;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#gwccytpfxv .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#gwccytpfxv .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#gwccytpfxv .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#gwccytpfxv .gt_spanner_row {
-  border-bottom-style: hidden;
-}
-
-#gwccytpfxv .gt_group_heading {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 80%;
-  font-weight: bolder;
-  text-transform: uppercase;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  text-align: left;
-}
-
-#gwccytpfxv .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 80%;
-  font-weight: bolder;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#gwccytpfxv .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#gwccytpfxv .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#gwccytpfxv .gt_row {
-  padding-top: 7px;
-  padding-bottom: 7px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #F6F7F7;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#gwccytpfxv .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 80%;
-  font-weight: bolder;
-  text-transform: uppercase;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#gwccytpfxv .gt_stub_row_group {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: top;
-}
-
-#gwccytpfxv .gt_row_group_first td {
-  border-top-width: 2px;
-}
-
-#gwccytpfxv .gt_row_group_first th {
-  border-top-width: 2px;
-}
-
-#gwccytpfxv .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#gwccytpfxv .gt_first_summary_row {
-  border-top-style: solid;
-  border-top-color: #D3D3D3;
-}
-
-#gwccytpfxv .gt_first_summary_row.thick {
-  border-top-width: 2px;
-}
-
-#gwccytpfxv .gt_last_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#gwccytpfxv .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#gwccytpfxv .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#gwccytpfxv .gt_last_grand_summary_row_top {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: double;
-  border-bottom-width: 6px;
-  border-bottom-color: #D3D3D3;
-}
-
-#gwccytpfxv .gt_striped {
-  background-color: #FAFAFA;
-}
-
-#gwccytpfxv .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#gwccytpfxv .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#gwccytpfxv .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#gwccytpfxv .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#gwccytpfxv .gt_sourcenote {
-  font-size: 12px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#gwccytpfxv .gt_left {
-  text-align: left;
-}
-
-#gwccytpfxv .gt_center {
-  text-align: center;
-}
-
-#gwccytpfxv .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#gwccytpfxv .gt_font_normal {
-  font-weight: normal;
-}
-
-#gwccytpfxv .gt_font_bold {
-  font-weight: bold;
-}
-
-#gwccytpfxv .gt_font_italic {
-  font-style: italic;
-}
-
-#gwccytpfxv .gt_super {
-  font-size: 65%;
-}
-
-#gwccytpfxv .gt_footnote_marks {
-  font-size: 75%;
-  vertical-align: 0.4em;
-  position: initial;
-}
-
-#gwccytpfxv .gt_asterisk {
-  font-size: 100%;
-  vertical-align: 0;
-}
-
-#gwccytpfxv .gt_indent_1 {
-  text-indent: 5px;
-}
-
-#gwccytpfxv .gt_indent_2 {
-  text-indent: 10px;
-}
-
-#gwccytpfxv .gt_indent_3 {
-  text-indent: 15px;
-}
-
-#gwccytpfxv .gt_indent_4 {
-  text-indent: 20px;
-}
-
-#gwccytpfxv .gt_indent_5 {
-  text-indent: 25px;
-}
-
-#gwccytpfxv .katex-display {
-  display: inline-flex !important;
-  margin-bottom: 0.75em !important;
-}
-
-#gwccytpfxv div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
-  height: 0px !important;
-}
-</style>
-<table class="gt_table caption-top table" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-<colgroup>
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-</colgroup>
-<thead>
-<tr class="header gt_heading">
-<th colspan="7" class="gt_heading gt_title gt_font_normal">.</th>
-</tr>
-<tr class="odd gt_heading">
-<th colspan="7" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border">49 rows x 3 cols</th>
-</tr>
-<tr class="header gt_col_headings">
-<th id="type" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"></th>
-<th id="name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Column</th>
-<th id="value" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Plot Overview</th>
-<th id="n_missing" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Missing</th>
-<th id="Mean" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Mean</th>
-<th id="Median" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Median</th>
-<th id="SD" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">SD</th>
-</tr>
-</thead>
-<tbody class="gt_table_body">
-<tr class="odd">
-<td class="gt_row gt_left" headers="type"><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:20px;width:20px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4e79a7;overflow:visible;position:relative;"><path d="M40 48C26.7 48 16 58.7 16 72v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V72c0-13.3-10.7-24-24-24H40zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zM16 232v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V232c0-13.3-10.7-24-24-24H40c-13.3 0-24 10.7-24 24zM40 368c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V392c0-13.3-10.7-24-24-24H40z"></path></svg></td>
-<td class="gt_row gt_left" headers="name" style="font-weight: bold"><div style="max-width: 150px;">
-<details style="font-weight: normal !important;"><summary style="font-weight: bold !important;">
-Year
-</summary>
-1951, 1956, 1957, 1958, 1959, 1960 and 1961
-</details>
-</div></td>
-<td class="gt_row gt_center" headers="value"><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" class="svglite" width="141.73pt" height="34.02pt" viewbox="0 0 141.73 34.02"><defs><style type="text/css">    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {      fill: none;      stroke: #000000;      stroke-linecap: round;      stroke-linejoin: round;      stroke-miterlimit: 10.00;    }    .svglite text {      white-space: pre;    }  </style></defs><rect width="100%" height="100%" style="stroke: none; fill: none;"></rect><defs><clippath id="cpMC4wMHwxNDEuNzN8MC4wMHwzNC4wMg=="><rect x="0.00" y="0.00" width="141.73" height="34.02"></rect></clippath></defs><g clip-path="url(#cpMC4wMHwxNDEuNzN8MC4wMHwzNC4wMg==)"></g><defs><clippath id="cpMS4wMHwxNDAuNzR8Mi45OXwyMy4zOQ=="><rect x="1.00" y="2.99" width="139.74" height="20.40"></rect></clippath></defs><g clip-path="url(#cpMS4wMHwxNDAuNzR8Mi45OXwyMy4zOQ==)"><rect x="120.77" y="3.92" width="19.96" height="18.54" style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #DDEAF7;"></rect><rect x="100.81" y="3.92" width="19.96" height="18.54" style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C4D8ED;"></rect><rect x="80.85" y="3.92" width="19.96" height="18.54" style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #ABC6E4;"></rect><rect x="60.88" y="3.92" width="19.96" height="18.54" style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #91B4DA;"></rect><rect x="40.92" y="3.92" width="19.96" height="18.54" style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #75A3D0;"></rect><rect x="20.96" y="3.92" width="19.96" height="18.54" style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #5792C7;"></rect><rect x="1.00" y="3.92" width="19.96" height="18.54" style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #3181BD;"></rect></g><g clip-path="url(#cpMC4wMHwxNDEuNzN8MC4wMHwzNC4wMg==)"><text x="1.00" y="30.07" style="font-size: 8.00px; font-family: &quot;Liberation Sans&quot;;" textlength="45.86px" lengthadjust="spacingAndGlyphs">7 categories</text></g></svg></td>
-<td class="gt_row gt_right" headers="n_missing">0.0%</td>
-<td class="gt_row gt_right" headers="Mean">—</td>
-<td class="gt_row gt_right" headers="Median">—</td>
-<td class="gt_row gt_right" headers="SD">—</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left gt_striped" headers="type"><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:20px;width:20px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4e79a7;overflow:visible;position:relative;"><path d="M40 48C26.7 48 16 58.7 16 72v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V72c0-13.3-10.7-24-24-24H40zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zM16 232v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V232c0-13.3-10.7-24-24-24H40c-13.3 0-24 10.7-24 24zM40 368c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V392c0-13.3-10.7-24-24-24H40z"></path></svg></td>
-<td class="gt_row gt_left gt_striped" headers="name" style="font-weight: bold"><div style="max-width: 150px;">
-<details style="font-weight: normal !important;"><summary style="font-weight: bold !important;">
-Continent
-</summary>
-Africa, Asia, Europe, Mid.Amer, N.Amer, Oceania and S.Amer
-</details>
-</div></td>
-<td class="gt_row gt_center gt_striped" headers="value"><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" class="svglite" width="141.73pt" height="34.02pt" viewbox="0 0 141.73 34.02"><defs><style type="text/css">    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {      fill: none;      stroke: #000000;      stroke-linecap: round;      stroke-linejoin: round;      stroke-miterlimit: 10.00;    }    .svglite text {      white-space: pre;    }  </style></defs><rect width="100%" height="100%" style="stroke: none; fill: none;"></rect><defs><clippath id="cpMC4wMHwxNDEuNzN8MC4wMHwzNC4wMg=="><rect x="0.00" y="0.00" width="141.73" height="34.02"></rect></clippath></defs><g clip-path="url(#cpMC4wMHwxNDEuNzN8MC4wMHwzNC4wMg==)"></g><defs><clippath id="cpMS4wMHwxNDAuNzR8Mi45OXwyMy4zOQ=="><rect x="1.00" y="2.99" width="139.74" height="20.40"></rect></clippath></defs><g clip-path="url(#cpMS4wMHwxNDAuNzR8Mi45OXwyMy4zOQ==)"><rect x="120.77" y="3.92" width="19.96" height="18.54" style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #DDEAF7;"></rect><rect x="100.81" y="3.92" width="19.96" height="18.54" style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C4D8ED;"></rect><rect x="80.85" y="3.92" width="19.96" height="18.54" style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #ABC6E4;"></rect><rect x="60.88" y="3.92" width="19.96" height="18.54" style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #91B4DA;"></rect><rect x="40.92" y="3.92" width="19.96" height="18.54" style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #75A3D0;"></rect><rect x="20.96" y="3.92" width="19.96" height="18.54" style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #5792C7;"></rect><rect x="1.00" y="3.92" width="19.96" height="18.54" style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #3181BD;"></rect></g><g clip-path="url(#cpMC4wMHwxNDEuNzN8MC4wMHwzNC4wMg==)"><text x="1.00" y="30.07" style="font-size: 8.00px; font-family: &quot;Liberation Sans&quot;;" textlength="45.86px" lengthadjust="spacingAndGlyphs">7 categories</text></g></svg></td>
-<td class="gt_row gt_right gt_striped" headers="n_missing">0.0%</td>
-<td class="gt_row gt_right gt_striped" headers="Mean">—</td>
-<td class="gt_row gt_right gt_striped" headers="Median">—</td>
-<td class="gt_row gt_right gt_striped" headers="SD">—</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="type"><svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:20px;width:25px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#f18e2c;overflow:visible;position:relative;"><path d="M576 0c17.7 0 32 14.3 32 32V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V32c0-17.7 14.3-32 32-32zM448 96c17.7 0 32 14.3 32 32V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V128c0-17.7 14.3-32 32-32zM352 224V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V224c0-17.7 14.3-32 32-32s32 14.3 32 32zM192 288c17.7 0 32 14.3 32 32V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V320c0-17.7 14.3-32 32-32zM96 416v64c0 17.7-14.3 32-32 32s-32-14.3-32-32V416c0-17.7 14.3-32 32-32s32 14.3 32 32z"></path></svg></td>
-<td class="gt_row gt_left" headers="name" style="font-weight: bold">Phones</td>
-<td class="gt_row gt_center" headers="value"><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" class="svglite" width="141.73pt" height="34.02pt" viewbox="0 0 141.73 34.02"><defs><style type="text/css">    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {      fill: none;      stroke: #000000;      stroke-linecap: round;      stroke-linejoin: round;      stroke-miterlimit: 10.00;    }    .svglite text {      white-space: pre;    }  </style></defs><rect width="100%" height="100%" style="stroke: none; fill: none;"></rect><defs><clippath id="cpMC4wMHwxNDEuNzN8MC4wMHwzNC4wMg=="><rect x="0.00" y="0.00" width="141.73" height="34.02"></rect></clippath></defs><g clip-path="url(#cpMC4wMHwxNDEuNzN8MC4wMHwzNC4wMg==)"></g><defs><clippath id="cpMS4wMHwxNDAuNzR8MS4wMHwyMi41Mw=="><rect x="1.00" y="1.00" width="139.74" height="21.54"></rect></clippath></defs><g clip-path="url(#cpMS4wMHwxNDAuNzR8MS4wMHwyMi41Mw==)"><rect x="7.35" y="1.00" width="21.17" height="21.54" style="stroke-width: 1.07; stroke: #FFFFFF; stroke-linecap: butt; stroke-linejoin: miter; fill: #F8BB87;"></rect><rect x="28.52" y="20.58" width="21.17" height="1.96" style="stroke-width: 1.07; stroke: #FFFFFF; stroke-linecap: butt; stroke-linejoin: miter; fill: #F8BB87;"></rect><rect x="49.69" y="19.92" width="21.17" height="2.61" style="stroke-width: 1.07; stroke: #FFFFFF; stroke-linecap: butt; stroke-linejoin: miter; fill: #F8BB87;"></rect><rect x="70.87" y="20.58" width="21.17" height="1.96" style="stroke-width: 1.07; stroke: #FFFFFF; stroke-linecap: butt; stroke-linejoin: miter; fill: #F8BB87;"></rect><rect x="92.04" y="20.58" width="21.17" height="1.96" style="stroke-width: 1.07; stroke: #FFFFFF; stroke-linecap: butt; stroke-linejoin: miter; fill: #F8BB87;"></rect><rect x="113.21" y="20.58" width="21.17" height="1.96" style="stroke-width: 1.07; stroke: #FFFFFF; stroke-linecap: butt; stroke-linejoin: miter; fill: #F8BB87;"></rect><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="16.96" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><circle cx="128.61" cy="21.88" r="0.46" style="stroke-width: 0.71; stroke: none;"></circle><line x1="22.05" y1="22.53" x2="22.05" y2="1.00" style="stroke-width: 1.07; stroke-linecap: butt;"></line></g><g clip-path="url(#cpMC4wMHwxNDEuNzN8MC4wMHwzNC4wMg==)"><polyline points="1.00,22.53 140.74,22.53 " style="stroke-width: 0.75;"></polyline><polyline points="18.06,25.37 18.06,22.53 " style="stroke-width: 0.75;"></polyline><polyline points="127.52,25.37 127.52,22.53 " style="stroke-width: 0.75;"></polyline><text x="18.06" y="33.60" text-anchor="middle" style="font-size: 6.00px; font-family: &quot;Nimbus Mono PS&quot;;" textlength="7.23px" lengthadjust="spacingAndGlyphs">89</text><text x="127.52" y="33.60" text-anchor="middle" style="font-size: 6.00px; font-family: &quot;Nimbus Mono PS&quot;;" textlength="10.84px" lengthadjust="spacingAndGlyphs">80K</text></g></svg></td>
-<td class="gt_row gt_right" headers="n_missing">0.0%</td>
-<td class="gt_row gt_right" headers="Mean">16,434.8</td>
-<td class="gt_row gt_right" headers="Median">3,000.0</td>
-<td class="gt_row gt_right" headers="SD">24,026.3</td>
-</tr>
-</tbody>
-</table>
+<div class="callout callout-style-simple callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
+<div class="callout-title-container flex-fill">
+This code chunk isn’t currently working (2025-04-25)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>There is an issue with the package used. While it’s going on, its code will be commented out. Will show a static image instead</p>
+</div>
+</div>
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># library(gt)</span></span>
+<span><span class="co"># library(gtExtras)</span></span>
+<span><span class="co"># </span></span>
+<span><span class="co"># world_phones_tbl %&gt;% </span></span>
+<span><span class="co">#   gt_plt_summary()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><a href="img/gtextras_gt_plt_summary_with_world_phones_tbl_2025_05_25.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/gtextras_gt_plt_summary_with_world_phones_tbl_2025_05_25.png" class="img-fluid"></a></p>
 <p>What we get is a table that combines a visualized plot overview with basic summary elements: <em>missing</em>, <em>mean</em>, <em>median</em>, and <em>standard deviation (sd)</em>). You can also see from the icon on the left, whether the column is categorical or continuous. With the categorical columns, you can see a list of the categorical values by clicking the arrow.</p>
 </section><section id="sec-visualizing-relationships" class="level3" data-number="2.2.3"><h3 data-number="2.2.3" class="anchored" data-anchor-id="sec-visualizing-relationships">
 <span class="header-section-number">2.2.3</span> Visualizing relationships</h3>
@@ -1342,7 +839,7 @@ Africa, Asia, Europe, Mid.Amer, N.Amer, Oceania and S.Amer
 <span></span>
 <span><span class="va">corr</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/ggcorrplot/man/ggcorrplot.html">ggcorrplot</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><img src="data_files/figure-html/unnamed-chunk-44-1.png" class="img-fluid" width="672"></p>
+<p><img src="data_files/figure-html/unnamed-chunk-45-1.png" class="img-fluid" width="672"></p>
 <p>So, the way to interpret this is simple. The redder the square, the stronger the positive correlation between the two variables. Votes and budget, for instance. Which makes intuitive sense. The bigger the movie (budget), the more likely it is to garner attention from IMDb users. If we look at budget and rating, there is no discernible correlation between the two. This is an intriguing initial finding and we could investigate it further.</p>
 <p>But, the bluer the square, the stronger negative correlation there seems to be between the two. The most obvious example here is the negative correlation between length and Short. Who would have guessed that the films in the Short genre would also be short in length? We can also see a negative correlation between the Short genre and budget. Which again makes perfect sense. You can also see the reverse effect when looking at budget and length. It strengthens the case further.</p>
 <p>We’re still in the territory where most visualizations are for your eyes only. But there are some modifications we could make to the plot. Here are the parameters for <code><a href="https://rdrr.io/pkg/ggcorrplot/man/ggcorrplot.html">ggcorrplot()</a></code> we’re using (and why):</p>
@@ -1362,7 +859,7 @@ Africa, Asia, Europe, Mid.Amer, N.Amer, Oceania and S.Amer
 <span>    show.diag <span class="op">=</span> <span class="cn">FALSE</span>,</span>
 <span>    colors    <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"darkturquoise"</span>, <span class="st">"grey95"</span>, <span class="st">"darkorange3"</span><span class="op">)</span></span>
 <span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><img src="data_files/figure-html/unnamed-chunk-45-1.png" class="img-fluid" width="672"></p>
+<p><img src="data_files/figure-html/unnamed-chunk-46-1.png" class="img-fluid" width="672"></p>
 <p>Much better! And here are some more genre-related insights based on the matrix:</p>
 <ul>
 <li>Drama has a fairly strong positive correlation with both length and rating</li>
@@ -1396,7 +893,7 @@ Africa, Asia, Europe, Mid.Amer, N.Amer, Oceania and S.Amer
 <span>    columns <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"budget"</span>, <span class="st">"length"</span>, <span class="st">"rating"</span>, <span class="st">"votes"</span>, <span class="st">"year"</span><span class="op">)</span></span>
 <span>  <span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><img src="data_files/figure-html/unnamed-chunk-48-1.png" class="img-fluid" width="672"></p>
+<p><img src="data_files/figure-html/unnamed-chunk-49-1.png" class="img-fluid" width="672"></p>
 <p>The matrix consists of three areas: <strong>upper</strong>, <strong>lower</strong>, and <em>diagonal</em> (or <strong>diag</strong> when it comes to function parameters). They can contain different types of plots and are customizable. But let’s first look at the defaults:</p>
 <ul>
 <li>Upper contains the correlation coefficient between the two variables</li>
@@ -1446,7 +943,7 @@ Africa, Asia, Europe, Mid.Amer, N.Amer, Oceania and S.Amer
 <span>  <span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_color_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="va">manual_colors</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><img src="data_files/figure-html/unnamed-chunk-49-1.png" class="img-fluid" width="672"></p>
+<p><img src="data_files/figure-html/unnamed-chunk-50-1.png" class="img-fluid" width="672"></p>
 <p>There are many differences throughout the data depending on whether the movie belongs to the Drama genre.</p>
 <p>If you want to, you can do the same with other genres!</p>
 <p>There are many other ways to customize a pairwise plot matrix. For the rest, see <code><a href="https://ggobi.github.io/ggally/reference/ggpairs.html">ggpairs()</a></code> <a href="https://ggobi.github.io/ggally/articles/ggpairs.html">documentation</a>.</p>
@@ -1946,7 +1443,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <p>This book was built with <a href="https://quarto.org/">Quarto</a> and is hosted on <a href="https://www.netlify.com">Netlify</a>.</p>
 </div>
   </div>
-</footer>
+</footer><script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","loop":false,"descPosition":"bottom","openEffect":"zoom"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 </body></html>

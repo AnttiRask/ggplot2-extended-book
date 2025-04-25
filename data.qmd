@@ -635,16 +635,26 @@ Often, when you think about tables, you think about numeric and text values. But
 The function does have some limitations. It has had some issues with certain data sets. The movies data set didn't work, for instance. That's why we'll take a look at the WorldPhones data set instead.
 
 ```{r}
+#| echo:    false
+#| message: false
+#| results: asis
+
+source("warning-gtextras-2025-04-25.R")
+```
+
+```{r}
 #| message: false
 #| warning: false
 #| results: asis
 
-library(gt)
-library(gtExtras)
-
-world_phones_tbl %>% 
-  gt_plt_summary()
+# library(gt)
+# library(gtExtras)
+# 
+# world_phones_tbl %>% 
+#   gt_plt_summary()
 ```
+
+![](img/gtextras_gt_plt_summary_with_world_phones_tbl_2025_05_25.png){.lightbox}
 
 What we get is a table that combines a visualized plot overview with basic summary elements: *missing*, *mean*, *median*, and *standard deviation (sd)*). You can also see from the icon on the left, whether the column is categorical or continuous. With the categorical columns, you can see a list of the categorical values by clicking the arrow.
 
@@ -831,17 +841,17 @@ movies_without_na_drama %>%
 
 The matrix consists of three areas: **upper**, **lower**, and *diagonal* (or **diag** when it comes to function parameters). They can contain different types of plots and are customizable. But let's first look at the defaults:
 
-- Upper contains the correlation coefficient between the two variables
-- Lower contains a scatter plot of the two variables
-- Diagonal contains a density plot of the variable in question
+-   Upper contains the correlation coefficient between the two variables
+-   Lower contains a scatter plot of the two variables
+-   Diagonal contains a density plot of the variable in question
 
 It's time to add Drama as color for the matrix. And also do some customizations:
 
-- We know Drama is either "No" or "Yes", so let's pick two colors that go well together, *dark orange* and *dark turquoise*
-- We can use *functions* to customize any part of the matrix
-  - `lower_function()` creates a scatter plot where the points are somewhat transparent (alpha = 0.5). There is also a red linear trend line
-  - `diag_function()` creates a density plot. But why do we need to do that when the default already does the same? For some reason, default uses default colors, even if we map the colors as we have. But our function here does the trick
-- Then we simply create the matrix
+-   We know Drama is either "No" or "Yes", so let's pick two colors that go well together, *dark orange* and *dark turquoise*
+-   We can use *functions* to customize any part of the matrix
+    -   `lower_function()` creates a scatter plot where the points are somewhat transparent (alpha = 0.5). There is also a red linear trend line
+    -   `diag_function()` creates a density plot. But why do we need to do that when the default already does the same? For some reason, default uses default colors, even if we map the colors as we have. But our function here does the trick
+-   Then we simply create the matrix
 
 ```{r}
 #| message: false
