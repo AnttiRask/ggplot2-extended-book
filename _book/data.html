@@ -764,7 +764,7 @@ This book/site is under construction
 <p>These are some of the ways to use DataExplorer to create a visual summary of a data set. I encourage you to dig into the documentation and see what else there is.</p>
 <p>To conclude, DataExplorer has a function, <code><a href="http://boxuancui.github.io/DataExplorer/reference/create_report.html">create_report()</a></code>. It creates a full EDA report from scratch. We won’t use that now, because the report would take too much space. But if you’re using DataExplorer, you should try it!</p>
 <p><strong>gt &amp; gtExtras</strong></p>
-<p>DataExplorer is a good package, but it’s not the only game in town for EDA. <strong>gt</strong> <span class="citation" data-cites="iannone2024">(<a href="references.html#ref-iannone2024" role="doc-biblioref"><strong>iannone2024?</strong></a>)</span> is a package to create tables ([INSERT LINK HERE]) with.</p>
+<p>DataExplorer is a good package, but it’s not the only game in town for EDA. <strong>gt</strong> <span class="citation" data-cites="iannone2024">(<a href="references.html#ref-iannone2024" role="doc-biblioref">Iannone et al. 2025</a>)</span> is a package to create tables ([INSERT LINK HERE]) with.</p>
 <p>Often, when you think about tables, you think about numeric and text values. But that doesn’t have to be the case. With <strong>gtExtras</strong> <span class="citation" data-cites="mock2023">(<a href="references.html#ref-mock2023" role="doc-biblioref">Mock 2023</a>)</span> you can create a fast and easy visual summary of your data. The <code>gt_plt_summary()</code> function is all you need.</p>
 <p>The function does have some limitations. It has had some issues with certain data sets. The movies data set didn’t work, for instance. That’s why we’ll take a look at the WorldPhones data set instead.</p>
 <div class="callout callout-style-simple callout-warning callout-titled">
@@ -964,6 +964,9 @@ Cui, Boxuan. 2024. <em>DataExplorer: Automate Data Exploration and Treatment</em
 </div>
 <div id="ref-firke2023" class="csl-entry" role="listitem">
 Firke, Sam. 2024. <em>Janitor: Simple Tools for Examining and Cleaning Dirty Data</em>. <a href="https://github.com/sfirke/janitor">https://github.com/sfirke/janitor</a>.
+</div>
+<div id="ref-iannone2024" class="csl-entry" role="listitem">
+Iannone, Richard, Joe Cheng, Barret Schloerke, Ellis Hughes, Alexandra Lauer, JooYoung Seo, Ken Brevoort, and Olivier Roy. 2025. <em>Gt: Easily Create Presentation-Ready Display Tables</em>. <a href="https://gt.rstudio.com">https://gt.rstudio.com</a>.
 </div>
 <div id="ref-kassambra2023" class="csl-entry" role="listitem">
 Kassambara, Alboukadel. 2023. <em>Ggcorrplot: Visualization of a Correlation Matrix Using ’Ggplot2’</em>. <a href="http://www.sthda.com/english/wiki/ggcorrplot-visualization-of-a-correlation-matrix-using-ggplot2">http://www.sthda.com/english/wiki/ggcorrplot-visualization-of-a-correlation-matrix-using-ggplot2</a>.
@@ -1441,7 +1444,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <p>This book was built with <a href="https://quarto.org/">Quarto</a> and is hosted on <a href="https://www.netlify.com">Netlify</a>.</p>
 </div>
   </div>
-</footer><script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom"});
+</footer><script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":false,"closeEffect":"zoom","descPosition":"bottom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
