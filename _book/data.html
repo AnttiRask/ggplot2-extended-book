@@ -951,7 +951,7 @@ This code chunk isn’t currently working (2025-04-25)
 </section></section><section id="sec-automated-eda-app" class="level3" data-number="2.2.4"><h3 data-number="2.2.4" class="anchored" data-anchor-id="sec-automated-eda-app">
 <span class="header-section-number">2.2.4</span> Automated EDA app</h3>
 <p>Remember how I warned you about automating the EDA process using an app? We’ve now spent some time learning how to do EDA manually. Let’s take a look at three of the automation tools available: <strong>ExPanDaR</strong> <span class="citation" data-cites="gassen2020">(<a href="references.html#ref-gassen2020" role="doc-biblioref">Gassen 2020</a>)</span>, <strong>ggquickeda</strong> <span class="citation" data-cites="mouksassi2024">(<a href="references.html#ref-mouksassi2024" role="doc-biblioref">Mouksassi et al. 2024</a>)</span>, and <strong>radiant</strong> <span class="citation" data-cites="nijs2024">(<a href="references.html#ref-nijs2024" role="doc-biblioref">Nijs 2024</a>)</span>.</p>
-<p>Let’s start with the similarities so we don’t have to repeat ourselves. All three packages use <strong>Shiny</strong> <span class="citation" data-cites="chang2024">(<a href="references.html#ref-chang2024" role="doc-biblioref">Chang et al. 2024</a>)</span> to provide interactive web-based interfaces. That means the amount of code needed to write for these is minimal. We only need to use the function that starts the Shiny app.</p>
+<p>Let’s start with the similarities so we don’t have to repeat ourselves. All three packages use <strong>shiny</strong> <span class="citation" data-cites="chang2024">(<a href="references.html#ref-chang2024" role="doc-biblioref">Chang et al. 2024</a>)</span> to provide interactive web-based interfaces. That means the amount of code needed to write for these is minimal. We only need to use the function that starts the Shiny app.</p>
 <p>We can use all three to automate EDA. They differ in the scope of analysis and the amount of available features. This also affects the composition of their respective target audiences.</p>
 <p>We’ll be once again using <strong>movies_na</strong> as the dataset.</p>
 <section id="sec-expandar" class="level4" data-number="2.2.4.1"><h4 data-number="2.2.4.1" class="anchored" data-anchor-id="sec-expandar">
@@ -1483,7 +1483,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <p>This book was built with <a href="https://quarto.org/">Quarto</a> and is hosted on <a href="https://www.netlify.com">Netlify</a>.</p>
 </div>
   </div>
-</footer><script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom"});
+</footer><script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"descPosition":"bottom","closeEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

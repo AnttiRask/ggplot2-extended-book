@@ -904,7 +904,7 @@ There are many other ways to customize a pairwise plot matrix. For the rest, see
 
 Remember how I warned you about automating the EDA process using an app? We've now spent some time learning how to do EDA manually. Let's take a look at three of the automation tools available: __ExPanDaR__ [@gassen2020], __ggquickeda__ [@mouksassi2024], and __radiant__ [@nijs2024].
 
-Let's start with the similarities so we don't have to repeat ourselves. All three packages use __Shiny__ [@chang2024] to provide interactive web-based interfaces. That means the amount of code needed to write for these is minimal. We only need to use the function that starts the Shiny app.
+Let's start with the similarities so we don't have to repeat ourselves. All three packages use __shiny__ [@chang2024] to provide interactive web-based interfaces. That means the amount of code needed to write for these is minimal. We only need to use the function that starts the Shiny app.
 
 We can use all three to automate EDA. They differ in the scope of analysis and the amount of available features. This also affects the composition of their respective target audiences.
 
