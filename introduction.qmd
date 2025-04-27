@@ -280,12 +280,12 @@ Next, it's practice, practice, practice. Recreate your favorite data visualizati
 -   [R Graph Gallery by Yan Holtz](https://r-graph-gallery.com/)
 -   [Statistics Globe by Joachim Schork](https://statisticsglobe.com/graphics-in-r)
 
-### YouTube {#sec-youtube-channels}
+### YouTube - Channels {#sec-youtube-channels}
 
 -   [Albert Rapp](https://www.youtube.com/@rappa753/)
 -   [Statistics Globe by Joachim Schork](https://www.youtube.com/@StatisticsGlobe/)
 
-### YouTube {#sec-youtube-videos}
+### YouTube - Videos {#sec-youtube-videos}
 
 -   [ggplot2 extenders - Hadley Wickham: Thoughts on the ggplot2 extension ecosystem](https://www.youtube.com/watch?v=kjjcgdkowXs)
 
