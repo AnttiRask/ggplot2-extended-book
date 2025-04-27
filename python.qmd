@@ -4,6 +4,7 @@
 #| echo: false
 #| message: false
 #| results: asis
+
 source("warning.R")
 ```
 
@@ -11,4 +12,4 @@ source("warning.R")
 
 ## Borrowing from Python with reticulate
 
-### Sunbusrst plot
+### Sunburst plot

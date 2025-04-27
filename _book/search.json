@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "ggplot2 extended",
     "section": "",
-    "text": "Welcome\nThis is the website for my book ggplot2 extended. It is about extending the functionality of the ggplot2 (Wickham 2024) R package by Hadley Wickham. Many extension packages have come out since the release of ggplot2. This book is about how to use them to make the most out of the whole ggplot2 ecosystem. And which of the many extensions to use in the first place.\nI will go through the very basics of how ggplot2 works in 1  ggplot2. But this book does assume some basic understanding of R and ggplot2.\nIf you’re starting with R, R for Data Science (Wickham, Çetinkaya-Rundel, and Grolemund 2023) is a good first stop. The book even contains three chapters on visualizing data with ggplot2.\nWant to take a comprehensive look into ggplot2 and the grammar of graphics first? Check out Hadley’s book ggplot2: Elegant Graphics for Data Analysis (Wickham 2016). You can find the work-in-progress 3rd edition online.\nThis website is and will always be free, licensed under the CC BY-NC-ND 4.0 DEED license. Once I’ve finished writing the whole book, there will be a physical copy of the book available. Stay tuned!\nPlease note that ggplot2 extended uses a Contributor Code of Conduct. By contributing to this book, you agree to abide by its terms.\nThis book is written by Antti Rask.",
+    "text": "Welcome\nThis is the website for my book ggplot2 extended. It is about extending the functionality of the ggplot2 (wickham2024?) R package by Hadley Wickham. Many extension packages have come out since the release of ggplot2. This book is about how to use them to make the most out of the whole ggplot2 ecosystem. And which of the many extensions to use in the first place.\nI will go through the very basics of how ggplot2 works in 1  ggplot2. But this book does assume some basic understanding of R and ggplot2.\nIf you’re starting with R, R for Data Science (Wickham, Çetinkaya-Rundel, and Grolemund 2023) is a good first stop. The book even contains three chapters on visualizing data with ggplot2.\nWant to take a comprehensive look into ggplot2 and the grammar of graphics first? Check out Hadley’s book ggplot2: Elegant Graphics for Data Analysis (Wickham 2016). You can find the work-in-progress 3rd edition online.\nThis website is and will always be free, licensed under the CC BY-NC-ND 4.0 DEED license. Once I’ve finished writing the whole book, there will be a physical copy of the book available. Stay tuned!\nPlease note that ggplot2 extended uses a Contributor Code of Conduct. By contributing to this book, you agree to abide by its terms.\nThis book is written by Antti Rask.",
     "crumbs": [
       "Welcome"
     ]
@@ -28,7 +28,11 @@
     "href": "references.html",
     "title": "References",
     "section": "",
+<<<<<<< HEAD
     "text": "Arel-Bundock, Vincent. 2024. Rdatasets: A Collection of Datasets\nOriginally Distributed in Various r Packages. https://vincentarelbundock.github.io/Rdatasets/.\n\n\nCui, Boxuan. 2024. DataExplorer: Automate Data Exploration and\nTreatment. R Package Version 0.8.3. http://boxuancui.github.io/DataExplorer/.\n\n\n(Ed.), Colin McIntosh. 2013. Cambridge Advanced Learner’s\nDictionary. 4th ed. Cambridge University Press.\n\n\nFirke, Sam. 2023. Janitor: Simple Tools for Examining and Cleaning\nDirty Data. R Package Version 2.2.0. https://github.com/sfirke/janitor.\n\n\nGassen, Joachim. 2020. ExPanDaR: Explore Your Data Interactively. R\nPackage Version 0.5.3. https://joachim-gassen.github.io/ExPanDaR/.\n\n\nIannone, Richard, Joe Cheng, Barret Schloerke, Ellis Hughes, Alexandra\nLauer, JooYoung Seo, Ken Brevoort, and Olivier Roy. 2024. Gt: Easily\nCreate Presentation-Ready Display Tables. R Package Version 0.11.1.\nhttps://gt.rstudio.com.\n\n\nKassambara, Alboukadel. 2023. Ggcorrplot: Visualization of a\nCorrelation Matrix Using ’Ggplot2’. R Package Version 0.1.4.1. http://www.sthda.com/english/wiki/ggcorrplot-visualization-of-a-correlation-matrix-using-ggplot2.\n\n\nMock, Thomas. 2023. gtExtras: Extending ’Gt’ for Beautiful HTML\nTables. R Package Version 0.5.0. https://github.com/jthomasmock/gtExtras.\n\n\nMouksassi, Samer, Dean Attali, James Craig, Benjamin Rich, and Michael\nSachs. 2024. Ggquickeda: Quickly Explore Your Data Using ’Ggplot2’\nand ’Table1’ Summary Tables. R Package Version 0.3.1. https://github.com/smouksassi/ggquickeda.\n\n\nMüller, Kirill, and Hadley Wickham. 2023. Tibble: Simple Data\nFrames. R Package Version 3.2.1. https://CRAN.R-project.org/package=tibble.\n\n\nNijs, Vincent. 2024. Radiant: Business Analytics Using r and Shiny.\nR Package Version 1.6.6. https://github.com/radiant-rstats/radiant.\n\n\nSanderson, Steven, and Antti Rask. 2024. RandomWalker: Generate\nRandom Walks Compatible with the ’Tidyverse’. R Package Version\n0.2.0. https://www.spsanderson.com/RandomWalker/.\n\n\nSchloerke, Barret, Di Cook, Joseph Larmarange, Francois Briatte, Moritz\nMarbach, Edwin Thoen, Amos Elberg, and Jason Crowley. 2024. GGally:\nExtension to ’Ggplot2’. R Package Version 2.2.1. https://ggobi.github.io/ggally/.\n\n\nTierney, Nicholas, Dianne Cook, Miles McBain, and Colin Fay. 2024.\nNaniar: Data Structures, Summaries, and Visualisations for Missing\nData. R Package Version 1.1.0. https://CRAN.R-project.org/package=naniar.\n\n\nWickham, Hadley. 2015. Ggplot2movies: Movies Data. R Package Version\n0.0.1. https://CRAN.R-project.org/package=ggplot2movies.\n\n\n———. 2016. Ggplot2: Elegant Graphics for Data Analysis. 2nd ed.\nSpringer-Verlag New York.\n\n\n———. 2023. Conflicted: An Alternative Conflict Resolution Strategy.\nR Package Version 1.2.0. https://CRAN.R-project.org/package=conflicted.\n\n\n———. 2024. Ggplot2: Elegant Graphics for Data Analysis. R Package\nVersion 3.5.1. https://ggplot2.tidyverse.org.\n\n\nWickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy\nD’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2023.\nTidyverse: Welcome to the Tidyverse. R Package Version 2.0.0.\nhttps://CRAN.R-project.org/package=tidyverse.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023.\nR for Data Science: Import, Tidy, Transform, Visualize, and Model\nData. 2nd ed. O’Reilly.\n\n\nWickham, Hadley, Romain François, Lionel Henry, Kirill Müller, and Davis\nVaughan. 2023. Dplyr: A Grammar of Data Manipulation. R Package\nVersion 1.1.4. https://CRAN.R-project.org/package=dplyr.\n\n\nWickham, Hadley, Thomas Lin Pedersen, and Dana Seidel. 2023. Scales:\nScale Functions for Visualization. R Package Version 1.3.0. https://CRAN.R-project.org/package=scales.\n\n\nWickham, Hadley, Davis Vaughan, and Maximilian Girlich. 2024. Tidyr:\nTidy Messy Data. R Package Version 1.3.1. https://tidyr.tidyverse.org.",
+=======
+    "text": "Arel-Bundock, Vincent. 2024. Rdatasets: A Collection of Datasets\nOriginally Distributed in Various r Packages. https://vincentarelbundock.github.io/Rdatasets/.\n\n\nCui, Boxuan. 2024. DataExplorer: Automate Data Exploration and\nTreatment. http://boxuancui.github.io/DataExplorer/.\n\n\n(Ed.), Colin McIntosh. 2013. Cambridge Advanced Learner’s\nDictionary. 4th ed. Cambridge University Press.\n\n\nFirke, Sam. 2024. Janitor: Simple Tools for Examining and Cleaning\nDirty Data. https://github.com/sfirke/janitor.\n\n\nIannone, Richard, Joe Cheng, Barret Schloerke, Ellis Hughes, Alexandra\nLauer, JooYoung Seo, Ken Brevoort, and Olivier Roy. 2025. Gt: Easily\nCreate Presentation-Ready Display Tables. https://gt.rstudio.com.\n\n\nKassambara, Alboukadel. 2023. Ggcorrplot: Visualization of a\nCorrelation Matrix Using ’Ggplot2’. http://www.sthda.com/english/wiki/ggcorrplot-visualization-of-a-correlation-matrix-using-ggplot2.\n\n\nMock, Thomas. 2023. gtExtras: Extending ’Gt’ for Beautiful HTML\nTables. https://github.com/jthomasmock/gtExtras.\n\n\nMüller, Kirill, and Hadley Wickham. 2023. Tibble: Simple Data\nFrames. https://tibble.tidyverse.org/.\n\n\nSanderson, Steven, and Antti Rask. 2024. RandomWalker: Generate\nRandom Walks Compatible with the ’Tidyverse’. https://www.spsanderson.com/RandomWalker/.\n\n\nSchloerke, Barret, Di Cook, Joseph Larmarange, Francois Briatte, Moritz\nMarbach, Edwin Thoen, Amos Elberg, and Jason Crowley. 2024. GGally:\nExtension to ’Ggplot2’. https://ggobi.github.io/ggally/.\n\n\nTierney, Nicholas, Di Cook, Miles McBain, and Colin Fay. 2024.\nNaniar: Data Structures, Summaries, and Visualisations for Missing\nData. https://naniar.njtierney.com/.\n\n\nWickham, Hadley. 2015. Ggplot2movies: Movies Data.\n\n\n———. 2016. Ggplot2: Elegant Graphics for Data Analysis. 2nd ed.\nSpringer-Verlag New York.\n\n\n———. 2023. Conflicted: An Alternative Conflict Resolution\nStrategy. https://conflicted.r-lib.org/.\n\n\n———. 2025. Ggplot2: Elegant Graphics for Data Analysis. https://ggplot2.tidyverse.org.\n\n\nWickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy\nD’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2023.\nTidyverse: Welcome to the Tidyverse. https://tidyverse.tidyverse.org/.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023.\nR for Data Science: Import, Tidy, Transform, Visualize, and Model\nData. 2nd ed. O’Reilly.\n\n\nWickham, Hadley, Romain François, Lionel Henry, Kirill Müller, and Davis\nVaughan. 2023. Dplyr: A Grammar of Data Manipulation. https://dplyr.tidyverse.org.\n\n\nWickham, Hadley, Thomas Lin Pedersen, and Dana Seidel. 2023. Scales:\nScale Functions for Visualization. https://scales.r-lib.org.\n\n\nWickham, Hadley, Davis Vaughan, and Maximilian Girlich. 2024. Tidyr:\nTidy Messy Data. https://tidyr.tidyverse.org.",
+>>>>>>> 9d3a524a44ea370194b96f1f0bc171ceac1915e8
     "crumbs": [
       "References"
     ]
@@ -215,23 +219,23 @@
   {
     "objectID": "helpers.html",
     "href": "helpers.html",
-    "title": "14  Helpers",
+    "title": "15  Helpers",
     "section": "",
-    "text": "14.1 Combining layers",
+    "text": "15.1 Combining layers",
     "crumbs": [
       "Shortcuts",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Helpers</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Helpers</span>"
     ]
   },
   {
     "objectID": "interactive_tools.html",
     "href": "interactive_tools.html",
-    "title": "15  Interactive tools",
+    "title": "16  Interactive tools",
     "section": "",
-    "text": "15.1 Interactive interface to plot data and perform statistical tests",
+    "text": "16.1 Interactive interface to plot data and perform statistical tests",
     "crumbs": [
       "Shortcuts",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Interactive tools</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Interactive tools</span>"
     ]
   },
   {
@@ -247,23 +251,23 @@
   {
     "objectID": "finishing_touches.html",
     "href": "finishing_touches.html",
-    "title": "16  Finishing touches",
+    "title": "17  Finishing touches",
     "section": "",
-    "text": "16.1 Blending, copying, adjusting, and compositing layers",
+    "text": "17.1 Blending, copying, adjusting, and compositing layers",
     "crumbs": [
       "Getting ready to publish",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Finishing touches</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Finishing touches</span>"
     ]
   },
   {
     "objectID": "arranging_plots.html",
     "href": "arranging_plots.html",
-    "title": "17  Arranging plots",
+    "title": "18  Arranging plots",
     "section": "",
-    "text": "17.1 Arranging multiple plots",
+    "text": "18.1 Arranging multiple plots",
     "crumbs": [
       "Getting ready to publish",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Arranging plots</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Arranging plots</span>"
     ]
   },
   {
@@ -520,7 +524,7 @@
     "objectID": "stats.html#convex-hull",
     "href": "stats.html#convex-hull",
     "title": "4  Stats",
-    "section": "4.2 Convex hull",
+    "section": "\n4.2 Convex hull",
     "text": "4.2 Convex hull",
     "crumbs": [
       "Layers",
@@ -531,8 +535,8 @@
     "objectID": "stats.html#inferential-statistical-tests",
     "href": "stats.html#inferential-statistical-tests",
     "title": "4  Stats",
-    "section": "4.3 Inferential statistical tests",
-    "text": "4.3 Inferential statistical tests\n\n4.3.1 F-test\n\n\n4.3.2 Pearson’s Chi-squared test\n\n\n4.3.3 Test for association between paired samples\n\n\n4.3.4 Test of equal or given proportions\n\n\n4.3.5 T-test",
+    "section": "\n4.3 Inferential statistical tests",
+    "text": "4.3 Inferential statistical tests\n\n4.3.1 F-test\n\n4.3.2 Pearson’s Chi-squared test\n\n4.3.3 Test for association between paired samples\n\n4.3.4 Test of equal or given proportions\n\n4.3.5 T-test",
     "crumbs": [
       "Layers",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Stats</span>"
@@ -542,7 +546,7 @@
     "objectID": "stats.html#interaction-plot",
     "href": "stats.html#interaction-plot",
     "title": "4  Stats",
-    "section": "4.4 Interaction plot",
+    "section": "\n4.4 Interaction plot",
     "text": "4.4 Interaction plot\n\n4.4.1 CGPfunctions",
     "crumbs": [
       "Layers",
@@ -553,8 +557,8 @@
     "objectID": "stats.html#linear-regression",
     "href": "stats.html#linear-regression",
     "title": "4  Stats",
-    "section": "4.5 Linear regression",
-    "text": "4.5 Linear regression\n\n4.5.1 Diagnostic plots\n\n\n4.5.2 Regression line equation and R-square",
+    "section": "\n4.5 Linear regression",
+    "text": "4.5 Linear regression\n\n4.5.1 Diagnostic plots\n\n4.5.2 Regression line equation and R-square",
     "crumbs": [
       "Layers",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Stats</span>"
@@ -564,7 +568,7 @@
     "objectID": "stats.html#lorenz-curve",
     "href": "stats.html#lorenz-curve",
     "title": "4  Stats",
-    "section": "4.6 Lorenz Curve",
+    "section": "\n4.6 Lorenz Curve",
     "text": "4.6 Lorenz Curve",
     "crumbs": [
       "Layers",
@@ -575,7 +579,7 @@
     "objectID": "stats.html#markov-chain-monte-carlo",
     "href": "stats.html#markov-chain-monte-carlo",
     "title": "4  Stats",
-    "section": "4.7 Markov chain Monte Carlo",
+    "section": "\n4.7 Markov chain Monte Carlo",
     "text": "4.7 Markov chain Monte Carlo",
     "crumbs": [
       "Layers",
@@ -586,7 +590,7 @@
     "objectID": "stats.html#multi-stat-binning-layer",
     "href": "stats.html#multi-stat-binning-layer",
     "title": "4  Stats",
-    "section": "4.8 Multi-stat binning layer",
+    "section": "\n4.8 Multi-stat binning layer",
     "text": "4.8 Multi-stat binning layer",
     "crumbs": [
       "Layers",
@@ -597,7 +601,7 @@
     "objectID": "stats.html#overlay-normal-density-plot",
     "href": "stats.html#overlay-normal-density-plot",
     "title": "4  Stats",
-    "section": "4.9 Overlay normal density plot",
+    "section": "\n4.9 Overlay normal density plot",
     "text": "4.9 Overlay normal density plot",
     "crumbs": [
       "Layers",
@@ -608,7 +612,7 @@
     "objectID": "stats.html#p-p-plot",
     "href": "stats.html#p-p-plot",
     "title": "4  Stats",
-    "section": "4.11 P-P plot",
+    "section": "\n4.11 P-P plot",
     "text": "4.11 P-P plot",
     "crumbs": [
       "Layers",
@@ -619,7 +623,7 @@
     "objectID": "stats.html#q-q-plot",
     "href": "stats.html#q-q-plot",
     "title": "4  Stats",
-    "section": "4.12 Q-Q plot",
+    "section": "\n4.12 Q-Q plot",
     "text": "4.12 Q-Q plot",
     "crumbs": [
       "Layers",
@@ -630,7 +634,7 @@
     "objectID": "stats.html#quality-control-chart",
     "href": "stats.html#quality-control-chart",
     "title": "4  Stats",
-    "section": "4.13 Quality control chart",
+    "section": "\n4.13 Quality control chart",
     "text": "4.13 Quality control chart",
     "crumbs": [
       "Layers",
@@ -641,7 +645,7 @@
     "objectID": "stats.html#proportions-according-to-custom-denominator",
     "href": "stats.html#proportions-according-to-custom-denominator",
     "title": "4  Stats",
-    "section": "4.14 Proportions according to custom denominator",
+    "section": "\n4.14 Proportions according to custom denominator",
     "text": "4.14 Proportions according to custom denominator",
     "crumbs": [
       "Layers",
@@ -663,7 +667,7 @@
     "objectID": "stats.html#roc-curves",
     "href": "stats.html#roc-curves",
     "title": "4  Stats",
-    "section": "4.16 ROC curves",
+    "section": "\n4.16 ROC curves",
     "text": "4.16 ROC curves",
     "crumbs": [
       "Layers",
@@ -674,7 +678,7 @@
     "objectID": "stats.html#sample-data-and-distribution-vectors",
     "href": "stats.html#sample-data-and-distribution-vectors",
     "title": "4  Stats",
-    "section": "4.17 Sample data and distribution vectors",
+    "section": "\n4.17 Sample data and distribution vectors",
     "text": "4.17 Sample data and distribution vectors",
     "crumbs": [
       "Layers",
@@ -685,7 +689,7 @@
     "objectID": "stats.html#seasonal-adjustment",
     "href": "stats.html#seasonal-adjustment",
     "title": "4  Stats",
-    "section": "4.18 Seasonal adjustment",
+    "section": "\n4.18 Seasonal adjustment",
     "text": "4.18 Seasonal adjustment",
     "crumbs": [
       "Layers",
@@ -696,7 +700,7 @@
     "objectID": "stats.html#statistics-for-reporting-the-results-of-model-fits",
     "href": "stats.html#statistics-for-reporting-the-results-of-model-fits",
     "title": "4  Stats",
-    "section": "4.19 Statistics for reporting the results of model fits",
+    "section": "\n4.19 Statistics for reporting the results of model fits",
     "text": "4.19 Statistics for reporting the results of model fits",
     "crumbs": [
       "Layers",
@@ -707,7 +711,7 @@
     "objectID": "stats.html#survival-analysis",
     "href": "stats.html#survival-analysis",
     "title": "4  Stats",
-    "section": "4.20 Survival analysis",
+    "section": "\n4.20 Survival analysis",
     "text": "4.20 Survival analysis",
     "crumbs": [
       "Layers",
@@ -718,7 +722,7 @@
     "objectID": "stats.html#tornado-plot",
     "href": "stats.html#tornado-plot",
     "title": "4  Stats",
-    "section": "4.21 Tornado plot",
+    "section": "\n4.21 Tornado plot",
     "text": "4.21 Tornado plot",
     "crumbs": [
       "Layers",
@@ -729,7 +733,7 @@
     "objectID": "stats.html#p-values",
     "href": "stats.html#p-values",
     "title": "4  Stats",
-    "section": "4.10 P-values",
+    "section": "\n4.10 P-values",
     "text": "4.10 P-values",
     "crumbs": [
       "Layers",
@@ -751,8 +755,8 @@
     "objectID": "annotations.html#annotate-areas-with",
     "href": "annotations.html#annotate-areas-with",
     "title": "5  Annotations",
-    "section": "5.2 Annotate areas with…",
-    "text": "5.2 Annotate areas with…\n\n5.2.1 Circles\n\n\n5.2.2 Ellipses\n\n\n5.2.3 Hulls\n\n\n5.2.4 Rectangles",
+    "section": "\n5.2 Annotate areas with…",
+    "text": "5.2 Annotate areas with…\n\n5.2.1 Circles\n\n5.2.2 Ellipses\n\n5.2.3 Hulls\n\n5.2.4 Rectangles",
     "crumbs": [
       "Layers",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Annotations</span>"
@@ -762,7 +766,7 @@
     "objectID": "annotations.html#curved-text-labeling",
     "href": "annotations.html#curved-text-labeling",
     "title": "5  Annotations",
-    "section": "5.3 Curved text labeling",
+    "section": "\n5.3 Curved text labeling",
     "text": "5.3 Curved text labeling",
     "crumbs": [
       "Layers",
@@ -773,7 +777,7 @@
     "objectID": "annotations.html#direct-labeling",
     "href": "annotations.html#direct-labeling",
     "title": "5  Annotations",
-    "section": "5.4 Direct labeling",
+    "section": "\n5.4 Direct labeling",
     "text": "5.4 Direct labeling",
     "crumbs": [
       "Layers",
@@ -784,7 +788,7 @@
     "objectID": "annotations.html#fitted-model-based-annotations",
     "href": "annotations.html#fitted-model-based-annotations",
     "title": "5  Annotations",
-    "section": "5.5 Fitted-model-based annotations",
+    "section": "\n5.5 Fitted-model-based annotations",
     "text": "5.5 Fitted-model-based annotations",
     "crumbs": [
       "Layers",
@@ -806,7 +810,7 @@
     "objectID": "annotations.html#highlighting-points",
     "href": "annotations.html#highlighting-points",
     "title": "5  Annotations",
-    "section": "5.7 Highlighting points",
+    "section": "\n5.7 Highlighting points",
     "text": "5.7 Highlighting points",
     "crumbs": [
       "Layers",
@@ -817,7 +821,7 @@
     "objectID": "annotations.html#inset-plots",
     "href": "annotations.html#inset-plots",
     "title": "5  Annotations",
-    "section": "5.8 Inset plots",
+    "section": "\n5.8 Inset plots",
     "text": "5.8 Inset plots",
     "crumbs": [
       "Layers",
@@ -828,7 +832,7 @@
     "objectID": "annotations.html#inset-tables",
     "href": "annotations.html#inset-tables",
     "title": "5  Annotations",
-    "section": "5.9 Inset tables",
+    "section": "\n5.9 Inset tables",
     "text": "5.9 Inset tables",
     "crumbs": [
       "Layers",
@@ -839,8 +843,8 @@
     "objectID": "annotations.html#repel-overlapping-text-labels",
     "href": "annotations.html#repel-overlapping-text-labels",
     "title": "5  Annotations",
-    "section": "5.10 Repel overlapping text & labels",
-    "text": "5.10 Repel overlapping text & labels\n\n5.10.1 Label\n\n\n5.10.2 Text",
+    "section": "\n5.10 Repel overlapping text & labels",
+    "text": "5.10 Repel overlapping text & labels\n\n5.10.1 Label\n\n5.10.2 Text",
     "crumbs": [
       "Layers",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Annotations</span>"
@@ -850,7 +854,7 @@
     "objectID": "annotations.html#shadow-text",
     "href": "annotations.html#shadow-text",
     "title": "5  Annotations",
-    "section": "5.11 Shadow text",
+    "section": "\n5.11 Shadow text",
     "text": "5.11 Shadow text",
     "crumbs": [
       "Layers",
@@ -861,7 +865,7 @@
     "objectID": "annotations.html#significance-brackets",
     "href": "annotations.html#significance-brackets",
     "title": "5  Annotations",
-    "section": "5.12 Significance brackets",
+    "section": "\n5.12 Significance brackets",
     "text": "5.12 Significance brackets",
     "crumbs": [
       "Layers",
@@ -873,7 +877,7 @@
     "href": "scales_and_guides.html#color-scales",
     "title": "6  Scales and guides",
     "section": "",
-    "text": "6.1.1 paletteer\n\n\n6.1.2 see\n\n\n6.1.3 R color palette finder",
+    "text": "6.1.1 paletteer\n\n6.1.2 see\n\n6.1.3 R color palette finder",
     "crumbs": [
       "Layers",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Scales and guides</span>"
@@ -883,7 +887,7 @@
     "objectID": "scales_and_guides.html#color-blindness",
     "href": "scales_and_guides.html#color-blindness",
     "title": "6  Scales and guides",
-    "section": "6.2 Color blindness",
+    "section": "\n6.2 Color blindness",
     "text": "6.2 Color blindness\n\n6.2.1 Color vision deficiency simulator",
     "crumbs": [
       "Layers",
@@ -894,7 +898,7 @@
     "objectID": "scales_and_guides.html#cyclical-scales",
     "href": "scales_and_guides.html#cyclical-scales",
     "title": "6  Scales and guides",
-    "section": "6.3 Cyclical scales",
+    "section": "\n6.3 Cyclical scales",
     "text": "6.3 Cyclical scales",
     "crumbs": [
       "Layers",
@@ -905,7 +909,7 @@
     "objectID": "scales_and_guides.html#focus-scales",
     "href": "scales_and_guides.html#focus-scales",
     "title": "6  Scales and guides",
-    "section": "6.4 Focus scales",
+    "section": "\n6.4 Focus scales",
     "text": "6.4 Focus scales",
     "crumbs": [
       "Layers",
@@ -916,7 +920,7 @@
     "objectID": "scales_and_guides.html#multiple-scales",
     "href": "scales_and_guides.html#multiple-scales",
     "title": "6  Scales and guides",
-    "section": "6.5 Multiple scales",
+    "section": "\n6.5 Multiple scales",
     "text": "6.5 Multiple scales",
     "crumbs": [
       "Layers",
@@ -927,7 +931,7 @@
     "objectID": "scales_and_guides.html#wrap-plot",
     "href": "scales_and_guides.html#wrap-plot",
     "title": "6  Scales and guides",
-    "section": "6.6 Wrap plot",
+    "section": "\n6.6 Wrap plot",
     "text": "6.6 Wrap plot",
     "crumbs": [
       "Layers",
@@ -971,7 +975,7 @@
     "objectID": "facets.html#facet-calendar",
     "href": "facets.html#facet-calendar",
     "title": "8  Facets",
-    "section": "8.2 Facet calendar",
+    "section": "\n8.2 Facet calendar",
     "text": "8.2 Facet calendar",
     "crumbs": [
       "Layers",
@@ -982,7 +986,7 @@
     "objectID": "facets.html#facet-data-for-zoom-with-context",
     "href": "facets.html#facet-data-for-zoom-with-context",
     "title": "8  Facets",
-    "section": "8.3 Facet data for zoom with context",
+    "section": "\n8.3 Facet data for zoom with context",
     "text": "8.3 Facet data for zoom with context",
     "crumbs": [
       "Layers",
@@ -993,7 +997,7 @@
     "objectID": "facets.html#facet-wrap-improved",
     "href": "facets.html#facet-wrap-improved",
     "title": "8  Facets",
-    "section": "8.4 Facet wrap (improved)",
+    "section": "\n8.4 Facet wrap (improved)",
     "text": "8.4 Facet wrap (improved)",
     "crumbs": [
       "Layers",
@@ -1004,7 +1008,7 @@
     "objectID": "facets.html#manual-facets",
     "href": "facets.html#manual-facets",
     "title": "8  Facets",
-    "section": "8.5 Manual facets",
+    "section": "\n8.5 Manual facets",
     "text": "8.5 Manual facets",
     "crumbs": [
       "Layers",
@@ -1015,7 +1019,7 @@
     "objectID": "facets.html#nested-facets",
     "href": "facets.html#nested-facets",
     "title": "8  Facets",
-    "section": "8.6 Nested facets",
+    "section": "\n8.6 Nested facets",
     "text": "8.6 Nested facets",
     "crumbs": [
       "Layers",
@@ -1026,7 +1030,7 @@
     "objectID": "facets.html#one-dimensional-facets",
     "href": "facets.html#one-dimensional-facets",
     "title": "8  Facets",
-    "section": "8.7 One-dimensional facets",
+    "section": "\n8.7 One-dimensional facets",
     "text": "8.7 One-dimensional facets",
     "crumbs": [
       "Layers",
@@ -1037,7 +1041,7 @@
     "objectID": "facets.html#ragged-grids",
     "href": "facets.html#ragged-grids",
     "title": "8  Facets",
-    "section": "8.8 Ragged grids",
+    "section": "\n8.8 Ragged grids",
     "text": "8.8 Ragged grids",
     "crumbs": [
       "Layers",
@@ -1048,7 +1052,7 @@
     "objectID": "facets.html#split-a-facetted-plot-over-multiple-pages",
     "href": "facets.html#split-a-facetted-plot-over-multiple-pages",
     "title": "8  Facets",
-    "section": "8.9 Split a facetted plot over multiple pages",
+    "section": "\n8.9 Split a facetted plot over multiple pages",
     "text": "8.9 Split a facetted plot over multiple pages",
     "crumbs": [
       "Layers",
@@ -1059,7 +1063,7 @@
     "objectID": "themes.html#dark-themes",
     "href": "themes.html#dark-themes",
     "title": "9  Themes",
-    "section": "9.2 Dark themes",
+    "section": "\n9.2 Dark themes",
     "text": "9.2 Dark themes",
     "crumbs": [
       "Layers",
@@ -1070,7 +1074,7 @@
     "objectID": "themes.html#graphpad-prism",
     "href": "themes.html#graphpad-prism",
     "title": "9  Themes",
-    "section": "9.3 GraphPad prism",
+    "section": "\n9.3 GraphPad prism",
     "text": "9.3 GraphPad prism",
     "crumbs": [
       "Layers",
@@ -1081,7 +1085,7 @@
     "objectID": "themes.html#theme-elements",
     "href": "themes.html#theme-elements",
     "title": "9  Themes",
-    "section": "9.4 Theme elements",
+    "section": "\n9.4 Theme elements",
     "text": "9.4 Theme elements\n\n9.4.1 Element markdown",
     "crumbs": [
       "Layers",
@@ -1092,7 +1096,7 @@
     "objectID": "themes.html#typography-centric-themes",
     "href": "themes.html#typography-centric-themes",
     "title": "9  Themes",
-    "section": "9.5 Typography-centric themes",
+    "section": "\n9.5 Typography-centric themes",
     "text": "9.5 Typography-centric themes",
     "crumbs": [
       "Layers",
@@ -1103,7 +1107,7 @@
     "objectID": "themes.html#using-extra-fonts",
     "href": "themes.html#using-extra-fonts",
     "title": "9  Themes",
-    "section": "9.6 Using extra fonts",
+    "section": "\n9.6 Using extra fonts",
     "text": "9.6 Using extra fonts",
     "crumbs": [
       "Layers",
@@ -1114,7 +1118,7 @@
     "objectID": "maps.html#geofaceting",
     "href": "maps.html#geofaceting",
     "title": "10  Maps",
-    "section": "10.2 Geofaceting",
+    "section": "\n10.2 Geofaceting",
     "text": "10.2 Geofaceting",
     "crumbs": [
       "Special cases",
@@ -1125,7 +1129,7 @@
     "objectID": "maps.html#north-symbols-and-scale-bars",
     "href": "maps.html#north-symbols-and-scale-bars",
     "title": "10  Maps",
-    "section": "10.3 North symbols and scale bars",
+    "section": "\n10.3 North symbols and scale bars",
     "text": "10.3 North symbols and scale bars",
     "crumbs": [
       "Special cases",
@@ -1136,7 +1140,7 @@
     "objectID": "maps.html#parliament-plot",
     "href": "maps.html#parliament-plot",
     "title": "10  Maps",
-    "section": "10.4 Parliament plot",
+    "section": "\n10.4 Parliament plot",
     "text": "10.4 Parliament plot",
     "crumbs": [
       "Special cases",
@@ -1147,7 +1151,7 @@
     "objectID": "maps.html#stamen-maps",
     "href": "maps.html#stamen-maps",
     "title": "10  Maps",
-    "section": "10.5 Stamen maps",
+    "section": "\n10.5 Stamen maps",
     "text": "10.5 Stamen maps",
     "crumbs": [
       "Special cases",
@@ -1158,7 +1162,7 @@
     "objectID": "maps.html#tidy-map",
     "href": "maps.html#tidy-map",
     "title": "10  Maps",
-    "section": "10.6 Tidy map",
+    "section": "\n10.6 Tidy map",
     "text": "10.6 Tidy map",
     "crumbs": [
       "Special cases",
@@ -1169,7 +1173,7 @@
     "objectID": "maps.html#zoomed-inset-panels",
     "href": "maps.html#zoomed-inset-panels",
     "title": "10  Maps",
-    "section": "10.7 Zoomed inset panels",
+    "section": "\n10.7 Zoomed inset panels",
     "text": "10.7 Zoomed inset panels",
     "crumbs": [
       "Special cases",
@@ -1180,7 +1184,7 @@
     "objectID": "maps.html#interactive-maps",
     "href": "maps.html#interactive-maps",
     "title": "10  Maps",
-    "section": "10.8 Interactive maps",
+    "section": "\n10.8 Interactive maps",
     "text": "10.8 Interactive maps",
     "crumbs": [
       "Special cases",
@@ -1191,7 +1195,7 @@
     "objectID": "networks.html#flowchart",
     "href": "networks.html#flowchart",
     "title": "11  Networks",
-    "section": "11.2 Flowchart",
+    "section": "\n11.2 Flowchart",
     "text": "11.2 Flowchart",
     "crumbs": [
       "Special cases",
@@ -1202,7 +1206,7 @@
     "objectID": "networks.html#networks",
     "href": "networks.html#networks",
     "title": "11  Networks",
-    "section": "11.3 Networks",
+    "section": "\n11.3 Networks",
     "text": "11.3 Networks",
     "crumbs": [
       "Special cases",
@@ -1224,7 +1228,7 @@
     "objectID": "interactive_plots.html#plotly",
     "href": "interactive_plots.html#plotly",
     "title": "12  Interactive plots",
-    "section": "12.2 Plotly",
+    "section": "\n12.2 Plotly",
     "text": "12.2 Plotly",
     "crumbs": [
       "Special cases",
@@ -1235,7 +1239,7 @@
     "objectID": "interactive_plots.html#streamgraph",
     "href": "interactive_plots.html#streamgraph",
     "title": "12  Interactive plots",
-    "section": "12.3 Streamgraph",
+    "section": "\n12.3 Streamgraph",
     "text": "12.3 Streamgraph",
     "crumbs": [
       "Special cases",
@@ -1246,7 +1250,7 @@
     "objectID": "interactive_plots.html#trelliscope",
     "href": "interactive_plots.html#trelliscope",
     "title": "12  Interactive plots",
-    "section": "12.4 Trelliscope",
+    "section": "\n12.4 Trelliscope",
     "text": "12.4 Trelliscope",
     "crumbs": [
       "Special cases",
@@ -1287,111 +1291,111 @@
   {
     "objectID": "helpers.html#debugging-ggplot2-internals",
     "href": "helpers.html#debugging-ggplot2-internals",
-    "title": "14  Helpers",
-    "section": "14.2 Debugging ggplot2 internals",
-    "text": "14.2 Debugging ggplot2 internals",
+    "title": "15  Helpers",
+    "section": "\n15.2 Debugging ggplot2 internals",
+    "text": "15.2 Debugging ggplot2 internals",
     "crumbs": [
       "Shortcuts",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Helpers</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Helpers</span>"
     ]
   },
   {
     "objectID": "helpers.html#im-feeling-lucky",
     "href": "helpers.html#im-feeling-lucky",
-    "title": "14  Helpers",
-    "section": "14.3 I’m feeling lucky!",
-    "text": "14.3 I’m feeling lucky!",
+    "title": "15  Helpers",
+    "section": "\n15.3 I’m feeling lucky!",
+    "text": "15.3 I’m feeling lucky!",
     "crumbs": [
       "Shortcuts",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Helpers</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Helpers</span>"
     ]
   },
   {
     "objectID": "interactive_tools.html#shiny",
     "href": "interactive_tools.html#shiny",
-    "title": "15  Interactive tools",
-    "section": "15.2 Shiny",
-    "text": "15.2 Shiny\n\n15.2.1 Auto theming\n\n\n15.2.2 Choosing color palettes interactively\n\n\n15.2.3 Color picker\n\n\n15.2.4 Editing layers\n\n\n15.2.5 Editing themes\n\n\n15.2.6 Interactive layers\n\n\n15.2.7 Marginal plots\n\n\n15.2.8 Theme preview",
+    "title": "16  Interactive tools",
+    "section": "\n16.2 Shiny",
+    "text": "16.2 Shiny\n\n16.2.1 Auto theming\n\n16.2.2 Choosing color palettes interactively\n\n16.2.3 Color picker\n\n16.2.4 Editing layers\n\n16.2.5 Editing themes\n\n16.2.6 Interactive layers\n\n16.2.7 Marginal plots\n\n16.2.8 Theme preview",
     "crumbs": [
       "Shortcuts",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Interactive tools</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Interactive tools</span>"
     ]
   },
   {
     "objectID": "finishing_touches.html#color-manipulation",
     "href": "finishing_touches.html#color-manipulation",
-    "title": "16  Finishing touches",
-    "section": "16.2 Color manipulation",
-    "text": "16.2 Color manipulation",
+    "title": "17  Finishing touches",
+    "section": "\n17.2 Color manipulation",
+    "text": "17.2 Color manipulation",
     "crumbs": [
       "Getting ready to publish",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Finishing touches</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Finishing touches</span>"
     ]
   },
   {
     "objectID": "finishing_touches.html#magnified-inset",
     "href": "finishing_touches.html#magnified-inset",
-    "title": "16  Finishing touches",
-    "section": "16.3 Magnified inset",
-    "text": "16.3 Magnified inset",
+    "title": "17  Finishing touches",
+    "section": "\n17.3 Magnified inset",
+    "text": "17.3 Magnified inset",
     "crumbs": [
       "Getting ready to publish",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Finishing touches</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Finishing touches</span>"
     ]
   },
   {
     "objectID": "finishing_touches.html#point-shapes-improved",
     "href": "finishing_touches.html#point-shapes-improved",
-    "title": "16  Finishing touches",
-    "section": "16.4 Point shapes (improved)",
-    "text": "16.4 Point shapes (improved)",
+    "title": "17  Finishing touches",
+    "section": "\n17.4 Point shapes (improved)",
+    "text": "17.4 Point shapes (improved)",
     "crumbs": [
       "Getting ready to publish",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Finishing touches</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Finishing touches</span>"
     ]
   },
   {
     "objectID": "finishing_touches.html#save-incremental-builds-of-plots",
     "href": "finishing_touches.html#save-incremental-builds-of-plots",
-    "title": "16  Finishing touches",
-    "section": "16.5 Save incremental builds of plots",
-    "text": "16.5 Save incremental builds of plots",
+    "title": "17  Finishing touches",
+    "section": "\n17.5 Save incremental builds of plots",
+    "text": "17.5 Save incremental builds of plots",
     "crumbs": [
       "Getting ready to publish",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Finishing touches</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Finishing touches</span>"
     ]
   },
   {
     "objectID": "finishing_touches.html#shadow-effect",
     "href": "finishing_touches.html#shadow-effect",
-    "title": "16  Finishing touches",
-    "section": "16.6 Shadow effect",
-    "text": "16.6 Shadow effect",
+    "title": "17  Finishing touches",
+    "section": "\n17.6 Shadow effect",
+    "text": "17.6 Shadow effect",
     "crumbs": [
       "Getting ready to publish",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Finishing touches</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Finishing touches</span>"
     ]
   },
   {
     "objectID": "arranging_plots.html#side-panels",
     "href": "arranging_plots.html#side-panels",
-    "title": "17  Arranging plots",
-    "section": "17.2 Side panels",
-    "text": "17.2 Side panels",
+    "title": "18  Arranging plots",
+    "section": "\n18.2 Side panels",
+    "text": "18.2 Side panels",
     "crumbs": [
       "Getting ready to publish",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Arranging plots</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Arranging plots</span>"
     ]
   },
   {
     "objectID": "arranging_plots.html#converting-base-r-plots-to-ggplot2",
     "href": "arranging_plots.html#converting-base-r-plots-to-ggplot2",
-    "title": "17  Arranging plots",
-    "section": "17.3 Converting base R plots to ggplot2",
-    "text": "17.3 Converting base R plots to ggplot2",
+    "title": "18  Arranging plots",
+    "section": "\n18.3 Converting base R plots to ggplot2",
+    "text": "18.3 Converting base R plots to ggplot2",
     "crumbs": [
       "Getting ready to publish",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Arranging plots</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Arranging plots</span>"
     ]
   },
   {
@@ -1421,7 +1425,11 @@
     "href": "python.html#borrowing-from-python-with-reticulate",
     "title": "19  Python",
     "section": "\n19.2 Borrowing from Python with reticulate",
+<<<<<<< HEAD
     "text": "19.2 Borrowing from Python with reticulate\n\n19.2.1 Sunbusrst plot",
+=======
+    "text": "19.2 Borrowing from Python with reticulate\n\n19.2.1 Sunburst plot",
+>>>>>>> 9d3a524a44ea370194b96f1f0bc171ceac1915e8
     "crumbs": [
       "Beyond R",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>Python</span>"
@@ -1603,7 +1611,7 @@
     "objectID": "animated-plots.html#gif",
     "href": "animated-plots.html#gif",
     "title": "13  Animated plots",
-    "section": "13.2 GIF",
+    "section": "\n13.2 GIF",
     "text": "13.2 GIF",
     "crumbs": [
       "Special cases",
@@ -1614,7 +1622,7 @@
     "objectID": "stats.html#random-rorests",
     "href": "stats.html#random-rorests",
     "title": "4  Stats",
-    "section": "4.15 Random rorests",
+    "section": "\n4.15 Random rorests",
     "text": "4.15 Random rorests",
     "crumbs": [
       "Layers",
@@ -1625,7 +1633,7 @@
     "objectID": "annotations.html#highlighting-geoms",
     "href": "annotations.html#highlighting-geoms",
     "title": "5  Annotations",
-    "section": "5.6 Highlighting geoms",
+    "section": "\n5.6 Highlighting geoms",
     "text": "5.6 Highlighting geoms",
     "crumbs": [
       "Layers",
@@ -1636,8 +1644,8 @@
     "objectID": "networks.html#sankey",
     "href": "networks.html#sankey",
     "title": "11  Networks",
-    "section": "11.4 Sankey",
-    "text": "11.4 Sankey\n\n11.4.1 Sankey diagram\n\n\n11.4.2 Sankey bump Plot",
+    "section": "\n11.4 Sankey",
+    "text": "11.4 Sankey\n\n11.4.1 Sankey diagram\n\n11.4.2 Sankey bump Plot",
     "crumbs": [
       "Special cases",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Networks</span>"
@@ -1658,7 +1666,7 @@
     "objectID": "coordinate_systems.html#serial-axes-coordinates",
     "href": "coordinate_systems.html#serial-axes-coordinates",
     "title": "7  Coordinate systems",
-    "section": "7.2 Serial axes coordinates",
+    "section": "\n7.2 Serial axes coordinates",
     "text": "7.2 Serial axes coordinates",
     "crumbs": [
       "Layers",
@@ -1842,7 +1850,7 @@
     "href": "index.html#sec-index-acknowledgments",
     "title": "ggplot2 extended",
     "section": "Acknowledgments",
-    "text": "Acknowledgments\nThis book was built with Quarto and is hosted on Netlify.\n\n\n\n\nWickham, Hadley. 2016. Ggplot2: Elegant Graphics for Data Analysis. 2nd ed. Springer-Verlag New York.\n\n\n———. 2024. Ggplot2: Elegant Graphics for Data Analysis. R Package Version 3.5.1. https://ggplot2.tidyverse.org.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023. R for Data Science: Import, Tidy, Transform, Visualize, and Model Data. 2nd ed. O’Reilly.",
+    "text": "Acknowledgments\nThis book was built with Quarto and is hosted on Netlify.\n\n\n\n\nWickham, Hadley. 2016. Ggplot2: Elegant Graphics for Data Analysis. 2nd ed. Springer-Verlag New York.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023. R for Data Science: Import, Tidy, Transform, Visualize, and Model Data. 2nd ed. O’Reilly.",
     "crumbs": [
       "Welcome"
     ]
