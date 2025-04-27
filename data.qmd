@@ -901,3 +901,43 @@ If you want to, you can do the same with other genres!
 There are many other ways to customize a pairwise plot matrix. For the rest, see `ggpairs()` [documentation](https://ggobi.github.io/ggally/articles/ggpairs.html).
 
 ### Automated EDA app {#sec-automated-eda-app}
+
+Remember how I warned you about automating the EDA process using an app? We've now spent some time learning how to do EDA manually. Let's take a look at three of the automation tools available: __ExPanDaR__ [@gassen2020], __ggquickeda__ [@mouksassi2024], and __radiant__ [@nijs2024].
+
+Let's start with the similarities so we don't have to repeat ourselves. All three packages use __Shiny__ [@chang2024] to provide interactive web-based interfaces. That means the amount of code needed to write for these is minimal. We only need to use the function that starts the Shiny app.
+
+We can use all three to automate EDA. They differ in the scope of analysis and the amount of available features. This also affects the composition of their respective target audiences.
+
+We'll be once again using __movies_na__ as the dataset.
+
+#### ExPanDaR {#sec-expandar}
+
+```{r}
+#| eval: false
+
+library(ExPanDaR) 
+
+movies_na %>%
+  ExPanD()
+```
+
+#### ggquickeda {#sec-ggquickeda}
+
+```{r}
+#| eval: false
+
+library(ggquickeda)
+
+movies_na %>%
+  run_ggquickeda()
+```
+
+#### radiant {#sec-radiant}
+
+```{r}
+#| eval: false
+
+library(radiant)
+
+radiant()
+```

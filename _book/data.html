@@ -950,11 +950,41 @@ This code chunk isn’t currently working (2025-04-25)
 <p>There are many other ways to customize a pairwise plot matrix. For the rest, see <code><a href="https://ggobi.github.io/ggally/reference/ggpairs.html">ggpairs()</a></code> <a href="https://ggobi.github.io/ggally/articles/ggpairs.html">documentation</a>.</p>
 </section></section><section id="sec-automated-eda-app" class="level3" data-number="2.2.4"><h3 data-number="2.2.4" class="anchored" data-anchor-id="sec-automated-eda-app">
 <span class="header-section-number">2.2.4</span> Automated EDA app</h3>
+<p>Remember how I warned you about automating the EDA process using an app? We’ve now spent some time learning how to do EDA manually. Let’s take a look at three of the automation tools available: <strong>ExPanDaR</strong> <span class="citation" data-cites="gassen2020">(<a href="references.html#ref-gassen2020" role="doc-biblioref">Gassen 2020</a>)</span>, <strong>ggquickeda</strong> <span class="citation" data-cites="mouksassi2024">(<a href="references.html#ref-mouksassi2024" role="doc-biblioref">Mouksassi et al. 2024</a>)</span>, and <strong>radiant</strong> <span class="citation" data-cites="nijs2024">(<a href="references.html#ref-nijs2024" role="doc-biblioref">Nijs 2024</a>)</span>.</p>
+<p>Let’s start with the similarities so we don’t have to repeat ourselves. All three packages use <strong>Shiny</strong> <span class="citation" data-cites="chang2024">(<a href="references.html#ref-chang2024" role="doc-biblioref">Chang et al. 2024</a>)</span> to provide interactive web-based interfaces. That means the amount of code needed to write for these is minimal. We only need to use the function that starts the Shiny app.</p>
+<p>We can use all three to automate EDA. They differ in the scope of analysis and the amount of available features. This also affects the composition of their respective target audiences.</p>
+<p>We’ll be once again using <strong>movies_na</strong> as the dataset.</p>
+<section id="sec-expandar" class="level4" data-number="2.2.4.1"><h4 data-number="2.2.4.1" class="anchored" data-anchor-id="sec-expandar">
+<span class="header-section-number">2.2.4.1</span> ExPanDaR</h4>
+<div class="cell">
+<div class="sourceCode" id="cb39"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://joachim-gassen.github.io/ExPanDaR/">ExPanDaR</a></span><span class="op">)</span> </span>
+<span></span>
+<span><span class="va">movies_na</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/ExPanDaR/man/ExPanD.html">ExPanD</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="sec-ggquickeda" class="level4" data-number="2.2.4.2"><h4 data-number="2.2.4.2" class="anchored" data-anchor-id="sec-ggquickeda">
+<span class="header-section-number">2.2.4.2</span> ggquickeda</h4>
+<div class="cell">
+<div class="sourceCode" id="cb40"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/smouksassi/ggquickeda">ggquickeda</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">movies_na</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://smouksassi.github.io/ggquickeda/reference/run_ggquickeda.html">run_ggquickeda</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="sec-radiant" class="level4" data-number="2.2.4.3"><h4 data-number="2.2.4.3" class="anchored" data-anchor-id="sec-radiant">
+<span class="header-section-number">2.2.4.3</span> radiant</h4>
+<div class="cell">
+<div class="sourceCode" id="cb41"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/radiant-rstats/radiant">radiant</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/pkg/radiant/man/radiant.html">radiant</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-arel-bundock2024" class="csl-entry" role="listitem">
 Arel-Bundock, Vincent. 2024. <em>Rdatasets: A Collection of Datasets Originally Distributed in Various r Packages</em>. <a href="https://vincentarelbundock.github.io/Rdatasets/">https://vincentarelbundock.github.io/Rdatasets/</a>.
+</div>
+<div id="ref-chang2024" class="csl-entry" role="listitem">
+Chang, Winston, Joe Cheng, JJ Allaire, Carson Sievert, Barret Schloerke, Yihui Xie, Jeff Allen, Jonathan McPherson, Alan Dipert, and Barbara Borges. 2024. <em>Shiny: Web Application Framework for r</em>. <a href="https://shiny.posit.co/">https://shiny.posit.co/</a>.
 </div>
 <div id="ref-cui2024" class="csl-entry" role="listitem">
 Cui, Boxuan. 2024. <em>DataExplorer: Automate Data Exploration and Treatment</em>. <a href="http://boxuancui.github.io/DataExplorer/">http://boxuancui.github.io/DataExplorer/</a>.
@@ -965,6 +995,9 @@ Cui, Boxuan. 2024. <em>DataExplorer: Automate Data Exploration and Treatment</em
 <div id="ref-firke2023" class="csl-entry" role="listitem">
 Firke, Sam. 2024. <em>Janitor: Simple Tools for Examining and Cleaning Dirty Data</em>. <a href="https://github.com/sfirke/janitor">https://github.com/sfirke/janitor</a>.
 </div>
+<div id="ref-gassen2020" class="csl-entry" role="listitem">
+Gassen, Joachim. 2020. <em>ExPanDaR: Explore Your Data Interactively</em>. <a href="https://joachim-gassen.github.io/ExPanDaR/">https://joachim-gassen.github.io/ExPanDaR/</a>.
+</div>
 <div id="ref-iannone2024" class="csl-entry" role="listitem">
 Iannone, Richard, Joe Cheng, Barret Schloerke, Ellis Hughes, Alexandra Lauer, JooYoung Seo, Ken Brevoort, and Olivier Roy. 2025. <em>Gt: Easily Create Presentation-Ready Display Tables</em>. <a href="https://gt.rstudio.com">https://gt.rstudio.com</a>.
 </div>
@@ -974,8 +1007,14 @@ Kassambara, Alboukadel. 2023. <em>Ggcorrplot: Visualization of a Correlation Mat
 <div id="ref-mock2023" class="csl-entry" role="listitem">
 Mock, Thomas. 2023. <em>gtExtras: Extending ’Gt’ for Beautiful HTML Tables</em>. <a href="https://github.com/jthomasmock/gtExtras">https://github.com/jthomasmock/gtExtras</a>.
 </div>
+<div id="ref-mouksassi2024" class="csl-entry" role="listitem">
+Mouksassi, Samer, Dean Attali, James Craig, Benjamin Rich, and Michael Sachs. 2024. <em>Ggquickeda: Quickly Explore Your Data Using ’Ggplot2’ and ’Table1’ Summary Tables</em>. <a href="https://CRAN.R-project.org/package=ggquickeda">https://CRAN.R-project.org/package=ggquickeda</a>.
+</div>
 <div id="ref-müller2023" class="csl-entry" role="listitem">
 Müller, Kirill, and Hadley Wickham. 2023. <em>Tibble: Simple Data Frames</em>. <a href="https://tibble.tidyverse.org/">https://tibble.tidyverse.org/</a>.
+</div>
+<div id="ref-nijs2024" class="csl-entry" role="listitem">
+Nijs, Vincent. 2024. <em>Radiant: Business Analytics Using r and Shiny</em>. <a href="https://CRAN.R-project.org/package=radiant">https://CRAN.R-project.org/package=radiant</a>.
 </div>
 <div id="ref-schloerke2024" class="csl-entry" role="listitem">
 Schloerke, Barret, Di Cook, Joseph Larmarange, Francois Briatte, Moritz Marbach, Edwin Thoen, Amos Elberg, and Jason Crowley. 2024. <em>GGally: Extension to ’Ggplot2’</em>. <a href="https://ggobi.github.io/ggally/">https://ggobi.github.io/ggally/</a>.
@@ -1002,7 +1041,7 @@ Wickham, Hadley, Thomas Lin Pedersen, and Dana Seidel. 2023. <em>Scales: Scale F
 Wickham, Hadley, Davis Vaughan, and Maximilian Girlich. 2024. <em>Tidyr: Tidy Messy Data</em>. <a href="https://tidyr.tidyverse.org">https://tidyr.tidyverse.org</a>.
 </div>
 </div>
-</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -1444,7 +1483,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <p>This book was built with <a href="https://quarto.org/">Quarto</a> and is hosted on <a href="https://www.netlify.com">Netlify</a>.</p>
 </div>
   </div>
-</footer><script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","descPosition":"bottom","selector":".lightbox","closeEffect":"zoom"});
+</footer><script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
