@@ -201,7 +201,7 @@ install.packages(
     "gt",
     "gtExtras",
     "naniar",
-    "Radiant"
+    "radiant"
   )
 )
 ```
@@ -211,7 +211,10 @@ Others you will have to install from GitHub:
 ```{r}
 #| eval: false
 
-
+# For fully updating radiant
+options(repos = c(RSM = "https://radiant-rstats.github.io/minicran", CRAN = "https://cloud.r-project.org"))
+install.packages("remotes")
+remotes::install_github("radiant-rstats/radiant.update", upgrade = "never")
 ```
 
 ### Others {#sec-others}

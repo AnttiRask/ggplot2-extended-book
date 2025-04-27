@@ -4,37 +4,19 @@
     "href": "index.html",
     "title": "ggplot2 extended",
     "section": "",
-    "text": "Welcome\nThis is the website for my book ggplot2 extended. It is about extending the functionality of the ggplot2 (wickham2024?) R package by Hadley Wickham. Many extension packages have come out since the release of ggplot2. This book is about how to use them to make the most out of the whole ggplot2 ecosystem. And which of the many extensions to use in the first place.\nI will go through the very basics of how ggplot2 works in 1  ggplot2. But this book does assume some basic understanding of R and ggplot2.\nIf you’re starting with R, R for Data Science (Wickham, Çetinkaya-Rundel, and Grolemund 2023) is a good first stop. The book even contains three chapters on visualizing data with ggplot2.\nWant to take a comprehensive look into ggplot2 and the grammar of graphics first? Check out Hadley’s book ggplot2: Elegant Graphics for Data Analysis (Wickham 2016). You can find the work-in-progress 3rd edition online.\nThis website is and will always be free, licensed under the CC BY-NC-ND 4.0 DEED license. Once I’ve finished writing the whole book, there will be a physical copy of the book available. Stay tuned!\nPlease note that ggplot2 extended uses a Contributor Code of Conduct. By contributing to this book, you agree to abide by its terms.\nThis book is written by Antti Rask.",
+    "text": "Welcome\nThis is the website for my book ggplot2 extended. It is about extending the functionality of the ggplot2 (Wickham 2025) R package by Hadley Wickham. Many extension packages have come out since the release of ggplot2. This book is about how to use them to make the most out of the whole ggplot2 ecosystem. And which of the many extensions to use in the first place.\nI will go through the very basics of how ggplot2 works in 1  ggplot2. But this book does assume some basic understanding of R and ggplot2.\nIf you’re starting with R, R for Data Science (Wickham, Çetinkaya-Rundel, and Grolemund 2023) is a good first stop. The book even contains three chapters on visualizing data with ggplot2.\nWant to take a comprehensive look into ggplot2 and the grammar of graphics first? Check out Hadley’s book ggplot2: Elegant Graphics for Data Analysis (Wickham 2016). You can find the work-in-progress 3rd edition online.\nThis website is and will always be free, licensed under the CC BY-NC-ND 4.0 DEED license. Once I’ve finished writing the whole book, there will be a physical copy of the book available. Stay tuned!\nPlease note that ggplot2 extended uses a Contributor Code of Conduct. By contributing to this book, you agree to abide by its terms.\nThis book is written by Antti Rask.",
     "crumbs": [
       "Welcome"
     ]
   },
   {
-    "objectID": "intro.html",
-    "href": "intro.html",
-    "title": "1  Introduction",
-    "section": "",
-    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
-  },
-  {
-    "objectID": "summary.html",
-    "href": "summary.html",
-    "title": "2  Summary",
-    "section": "",
-    "text": "In summary, this book has no content whatsoever.\nTesting testing testing testing and testing some more\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
-    "section": "",
-<<<<<<< HEAD
-    "text": "Arel-Bundock, Vincent. 2024. Rdatasets: A Collection of Datasets\nOriginally Distributed in Various r Packages. https://vincentarelbundock.github.io/Rdatasets/.\n\n\nCui, Boxuan. 2024. DataExplorer: Automate Data Exploration and\nTreatment. R Package Version 0.8.3. http://boxuancui.github.io/DataExplorer/.\n\n\n(Ed.), Colin McIntosh. 2013. Cambridge Advanced Learner’s\nDictionary. 4th ed. Cambridge University Press.\n\n\nFirke, Sam. 2023. Janitor: Simple Tools for Examining and Cleaning\nDirty Data. R Package Version 2.2.0. https://github.com/sfirke/janitor.\n\n\nGassen, Joachim. 2020. ExPanDaR: Explore Your Data Interactively. R\nPackage Version 0.5.3. https://joachim-gassen.github.io/ExPanDaR/.\n\n\nIannone, Richard, Joe Cheng, Barret Schloerke, Ellis Hughes, Alexandra\nLauer, JooYoung Seo, Ken Brevoort, and Olivier Roy. 2024. Gt: Easily\nCreate Presentation-Ready Display Tables. R Package Version 0.11.1.\nhttps://gt.rstudio.com.\n\n\nKassambara, Alboukadel. 2023. Ggcorrplot: Visualization of a\nCorrelation Matrix Using ’Ggplot2’. R Package Version 0.1.4.1. http://www.sthda.com/english/wiki/ggcorrplot-visualization-of-a-correlation-matrix-using-ggplot2.\n\n\nMock, Thomas. 2023. gtExtras: Extending ’Gt’ for Beautiful HTML\nTables. R Package Version 0.5.0. https://github.com/jthomasmock/gtExtras.\n\n\nMouksassi, Samer, Dean Attali, James Craig, Benjamin Rich, and Michael\nSachs. 2024. Ggquickeda: Quickly Explore Your Data Using ’Ggplot2’\nand ’Table1’ Summary Tables. R Package Version 0.3.1. https://github.com/smouksassi/ggquickeda.\n\n\nMüller, Kirill, and Hadley Wickham. 2023. Tibble: Simple Data\nFrames. R Package Version 3.2.1. https://CRAN.R-project.org/package=tibble.\n\n\nNijs, Vincent. 2024. Radiant: Business Analytics Using r and Shiny.\nR Package Version 1.6.6. https://github.com/radiant-rstats/radiant.\n\n\nSanderson, Steven, and Antti Rask. 2024. RandomWalker: Generate\nRandom Walks Compatible with the ’Tidyverse’. R Package Version\n0.2.0. https://www.spsanderson.com/RandomWalker/.\n\n\nSchloerke, Barret, Di Cook, Joseph Larmarange, Francois Briatte, Moritz\nMarbach, Edwin Thoen, Amos Elberg, and Jason Crowley. 2024. GGally:\nExtension to ’Ggplot2’. R Package Version 2.2.1. https://ggobi.github.io/ggally/.\n\n\nTierney, Nicholas, Dianne Cook, Miles McBain, and Colin Fay. 2024.\nNaniar: Data Structures, Summaries, and Visualisations for Missing\nData. R Package Version 1.1.0. https://CRAN.R-project.org/package=naniar.\n\n\nWickham, Hadley. 2015. Ggplot2movies: Movies Data. R Package Version\n0.0.1. https://CRAN.R-project.org/package=ggplot2movies.\n\n\n———. 2016. Ggplot2: Elegant Graphics for Data Analysis. 2nd ed.\nSpringer-Verlag New York.\n\n\n———. 2023. Conflicted: An Alternative Conflict Resolution Strategy.\nR Package Version 1.2.0. https://CRAN.R-project.org/package=conflicted.\n\n\n———. 2024. Ggplot2: Elegant Graphics for Data Analysis. R Package\nVersion 3.5.1. https://ggplot2.tidyverse.org.\n\n\nWickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy\nD’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2023.\nTidyverse: Welcome to the Tidyverse. R Package Version 2.0.0.\nhttps://CRAN.R-project.org/package=tidyverse.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023.\nR for Data Science: Import, Tidy, Transform, Visualize, and Model\nData. 2nd ed. O’Reilly.\n\n\nWickham, Hadley, Romain François, Lionel Henry, Kirill Müller, and Davis\nVaughan. 2023. Dplyr: A Grammar of Data Manipulation. R Package\nVersion 1.1.4. https://CRAN.R-project.org/package=dplyr.\n\n\nWickham, Hadley, Thomas Lin Pedersen, and Dana Seidel. 2023. Scales:\nScale Functions for Visualization. R Package Version 1.3.0. https://CRAN.R-project.org/package=scales.\n\n\nWickham, Hadley, Davis Vaughan, and Maximilian Girlich. 2024. Tidyr:\nTidy Messy Data. R Package Version 1.3.1. https://tidyr.tidyverse.org.",
-=======
-    "text": "Arel-Bundock, Vincent. 2024. Rdatasets: A Collection of Datasets\nOriginally Distributed in Various r Packages. https://vincentarelbundock.github.io/Rdatasets/.\n\n\nCui, Boxuan. 2024. DataExplorer: Automate Data Exploration and\nTreatment. http://boxuancui.github.io/DataExplorer/.\n\n\n(Ed.), Colin McIntosh. 2013. Cambridge Advanced Learner’s\nDictionary. 4th ed. Cambridge University Press.\n\n\nFirke, Sam. 2024. Janitor: Simple Tools for Examining and Cleaning\nDirty Data. https://github.com/sfirke/janitor.\n\n\nIannone, Richard, Joe Cheng, Barret Schloerke, Ellis Hughes, Alexandra\nLauer, JooYoung Seo, Ken Brevoort, and Olivier Roy. 2025. Gt: Easily\nCreate Presentation-Ready Display Tables. https://gt.rstudio.com.\n\n\nKassambara, Alboukadel. 2023. Ggcorrplot: Visualization of a\nCorrelation Matrix Using ’Ggplot2’. http://www.sthda.com/english/wiki/ggcorrplot-visualization-of-a-correlation-matrix-using-ggplot2.\n\n\nMock, Thomas. 2023. gtExtras: Extending ’Gt’ for Beautiful HTML\nTables. https://github.com/jthomasmock/gtExtras.\n\n\nMüller, Kirill, and Hadley Wickham. 2023. Tibble: Simple Data\nFrames. https://tibble.tidyverse.org/.\n\n\nSanderson, Steven, and Antti Rask. 2024. RandomWalker: Generate\nRandom Walks Compatible with the ’Tidyverse’. https://www.spsanderson.com/RandomWalker/.\n\n\nSchloerke, Barret, Di Cook, Joseph Larmarange, Francois Briatte, Moritz\nMarbach, Edwin Thoen, Amos Elberg, and Jason Crowley. 2024. GGally:\nExtension to ’Ggplot2’. https://ggobi.github.io/ggally/.\n\n\nTierney, Nicholas, Di Cook, Miles McBain, and Colin Fay. 2024.\nNaniar: Data Structures, Summaries, and Visualisations for Missing\nData. https://naniar.njtierney.com/.\n\n\nWickham, Hadley. 2015. Ggplot2movies: Movies Data.\n\n\n———. 2016. Ggplot2: Elegant Graphics for Data Analysis. 2nd ed.\nSpringer-Verlag New York.\n\n\n———. 2023. Conflicted: An Alternative Conflict Resolution\nStrategy. https://conflicted.r-lib.org/.\n\n\n———. 2025. Ggplot2: Elegant Graphics for Data Analysis. https://ggplot2.tidyverse.org.\n\n\nWickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy\nD’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2023.\nTidyverse: Welcome to the Tidyverse. https://tidyverse.tidyverse.org/.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023.\nR for Data Science: Import, Tidy, Transform, Visualize, and Model\nData. 2nd ed. O’Reilly.\n\n\nWickham, Hadley, Romain François, Lionel Henry, Kirill Müller, and Davis\nVaughan. 2023. Dplyr: A Grammar of Data Manipulation. https://dplyr.tidyverse.org.\n\n\nWickham, Hadley, Thomas Lin Pedersen, and Dana Seidel. 2023. Scales:\nScale Functions for Visualization. https://scales.r-lib.org.\n\n\nWickham, Hadley, Davis Vaughan, and Maximilian Girlich. 2024. Tidyr:\nTidy Messy Data. https://tidyr.tidyverse.org.",
->>>>>>> 9d3a524a44ea370194b96f1f0bc171ceac1915e8
+    "objectID": "index.html#sec-index-acknowledgments",
+    "href": "index.html#sec-index-acknowledgments",
+    "title": "ggplot2 extended",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\nThis book was built with Quarto and is hosted on Netlify.\n\n\n\n\nWickham, Hadley. 2016. Ggplot2: Elegant Graphics for Data Analysis. 2nd ed. Springer-Verlag New York.\n\n\n———. 2025. Ggplot2: Elegant Graphics for Data Analysis. https://ggplot2.tidyverse.org.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023. R for Data Science: Import, Tidy, Transform, Visualize, and Model Data. 2nd ed. O’Reilly.",
     "crumbs": [
-      "References"
+      "Welcome"
     ]
   },
   {
@@ -48,279 +30,133 @@
     ]
   },
   {
-    "objectID": "getting_started.html",
-    "href": "getting_started.html",
-    "title": "Getting Started",
+    "objectID": "preface.html#sec-landscape",
+    "href": "preface.html#sec-landscape",
+    "title": "Preface",
     "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title"
-  },
-  {
-    "objectID": "maps.html",
-    "href": "maps.html",
-    "title": "10  Maps",
-    "section": "",
-    "text": "10.1 3D maps",
+    "text": "ggplot2 dependencies between 2007-2023\n\n\n\n\n\n\nWickham, Hadley, Romain François, Lionel Henry, Kirill Müller, and Davis Vaughan. 2023. Dplyr: A Grammar of Data Manipulation. https://dplyr.tidyverse.org.",
     "crumbs": [
-      "Special cases",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Maps</span>"
+      "Preface"
     ]
   },
   {
-    "objectID": "layers.html",
-    "href": "layers.html",
-    "title": "Layers",
+    "objectID": "preface.html#footnotes",
+    "href": "preface.html#footnotes",
+    "title": "Preface",
     "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title",
+    "text": "“Depends: Listing a package in […] Depends […] ensures that it’s installed when needed. […] A package you list in Depends will be attached when your package is attached.”↩︎\n“Imports: packages listed here must be present for your package to work. Any time your package is installed, those packages will also be installed, if not already present. devtools::load_all() also checks that all packages in Imports are installed.”↩︎\n“Suggests: your package can use these packages, but doesn’t require them. You might use suggested packages for example datasets, to run tests, build vignettes, or maybe there’s only one function that needs the package.”↩︎",
     "crumbs": [
-      "Layers"
+      "Preface"
     ]
   },
   {
-    "objectID": "data.html",
-    "href": "data.html",
-    "title": "\n2  This book/site is under construction\n",
+    "objectID": "introduction.html",
+    "href": "introduction.html",
+    "title": "Introduction",
     "section": "",
-    "text": "2.1 Data sets\nThis book is about tools for creating visualizations. But to visualize data you first need data. So let’s start by taking a look at some of the data sets available to us without much hassle.",
+    "text": "Purpose and scope\nA very basic reason why I started writing this book was the fact that one didn’t already exist. “Someone had to do it”, as they say.\nI know there is information out there about the different ggplot2 extension packages. There are the package documentation, but there are also some blogs around (see Further resources).\nBut that information is quite scattered. There were many great packages I hadn’t even heard about before I started doing research for the book.\nI’ve tried my best to test and write about the most useful among them. After all, there are hundreds of packages to choose from. And I don’t think everyone should have to go through them all. Don’t try this at home!",
     "crumbs": [
-      "Layers",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data sets</span>"
+      "Introduction"
     ]
   },
   {
-    "objectID": "geoms.html",
-    "href": "geoms.html",
-    "title": "3  Geoms",
+    "objectID": "introduction.html#sec-purpose-and-scope",
+    "href": "introduction.html#sec-purpose-and-scope",
+    "title": "Introduction",
     "section": "",
-    "text": "3.1 Area plots",
+    "text": "What you will learn\nThis book continues from where ggplot2: Elegant Graphics for Data Analysis (Wickham 2016) left off. In his book, Hadley does mention some extension packages by name. But until now there hasn’t been a comprehensive guide to those extension packages. And how to use them together.\nBasics works as kind of a “Previously, on ggplot2…”. A reminder of the basic function(alitie)s of the core package.\nLayers goes through the layers that make up the grammar of graphics: Data, geometric objects (Geoms), statistical transformations (Stats), titles and labels (Annotations), color, position and size of visual elements (Scales and guides), Coordinate systems, small multiples (Facets), and Themes. They are in a logical order. As are the rest of the chapters. The same order that you would build your visualization in.\nSpecial cases hosts not-so-typical visualizations: Maps, networks, interactive plots, animated plots, and graphs integrated in tables.\nShortcuts contains different kinds of helpers and interactive tools. Designed to make it easier to create your visualizations.\nAt some point, we will be getting ready to publish our visualization. You’ll want to give them finishing touches, but it’s also good to know about arranging plots.\nAnd while ggplot2 is an R package, its impact and influence go beyond R. So we’ll talk about Python a bit.\nTo finish off, we go through some case studies. We build visualizations, step-by-step, from data to publication.\nWhat you won’t learn\nThese are some of the interesting topics that I had to leave out of the book. It’s long as it is and I decided to concentrate on the topics and extensions that everyone can use. Regardless of the field you’re in.\nCombining visualizations and BI tools\nUsing R in general and ggplot2 visualizations in specific within BI tools like Power BI is cool. Interested? You can start by reading Luca Zavarella’s book Extending Power BI with Python and R.\nGenerative art\nCreating art with R - color me impressed! It’s called Rtistry or aRt, because why not? There isn’t enough room in the book for a proper chapter on this, but here are some links to get you started on the topic:\n\nartpack by Meghan Harris\naRtsy by Koen Derks\nGenerative Art by Nicola Rennie\n\nLarge language models (LLM)\nI know, it would be trendy to write about AI. And I do think they can play a part in the data visualization process. But there isn’t anything that meaningful to write about. Whatever you do, whether you use AI or not, do trust your senses!\nA machine doesn’t need to visualize data to use it. So, in a way, data visualization is one of the last bastions of human-to-human communication. By humans, for humans, am I right?\nSpecialized packages in specialized fields like bioinformatics\nThis one should be self-evident. “Write what you know”. I know nothing about bioinformatics. I’m not even sure I understand what the term means.\nAre you interested in bioinformatics? I mean, I don’t want to leave you hanging. There is a website and a suite of packages called Bioconductor that should get you started!\nSports\nIt’s the same as with generative art. Interesting topic, but not enough space. Still, here’s another short list of packages related to sports:\nBaseball\n\nbaseballr by Saiem Gilani\nmlbplotR by Camden Kay\n\nFootball\n\nnflplotR by Sebastian Carl\n\nSoccer\n\nggshakeR by Abhishek Amol Mishra\nggsoccer by Ben Torvaney\nsoccerAnimate by Ismael Gómez Schmidt\n\nVarious\n\nsportyR by Ross Drucker",
     "crumbs": [
-      "Layers",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Geoms</span>"
+      "Introduction"
     ]
   },
   {
-    "objectID": "stats.html",
-    "href": "stats.html",
-    "title": "4  Stats",
-    "section": "",
-    "text": "4.1 Combining data visualization and statistical modeling",
+    "objectID": "introduction.html#sec-who-is-the-book-for",
+    "href": "introduction.html#sec-who-is-the-book-for",
+    "title": "Introduction",
+    "section": "Who is the book for?",
+    "text": "Who is the book for?\nI assume that you’re reading this because you’re interested in data visualization, R, or both.\nI already wrote about this in the Welcome section. This book is for people who already have a working knowledge of ggplot2 and the grammar of graphics. I’m quite adamant on that. You should learn the foundations first. And there are already excellent books and websites for that.\nOther than that, the tools and techniques in the book aren’t all that advanced (at least most of them). You don’t have to be a visualization wizard to find the book useful. Each of the chapters will contain code that you can use almost verbatim.\nIt doesn’t even matter if R isn’t your native language. You might find an inspiring R package and then go on and find a similar package in your preferred language. Or write that package, if one doesn’t already exist. It’s all good!",
     "crumbs": [
-      "Layers",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Stats</span>"
+      "Introduction"
     ]
   },
   {
-    "objectID": "annotations.html",
-    "href": "annotations.html",
-    "title": "5  Annotations",
-    "section": "",
-    "text": "5.1 Add p-values",
+    "objectID": "introduction.html#sec-who-am-i-to-write-this-book",
+    "href": "introduction.html#sec-who-am-i-to-write-this-book",
+    "title": "Introduction",
+    "section": "Who am I to write this book?",
+    "text": "Who am I to write this book?\nHi! I’m Antti Rask, a data analyst if you had to choose one label. I’ve lived many lives and had many careers before finding my truest calling in data.\nI’ve liked data visualizations longer than I’ve been using R (which I started in late 2019/early 2020). I made my first visualizations with Excel. At some point, I switched to Power BI. Which is still my main tool for visualization at work.\nYou could say that I am an artistic type. Music has been the main avenue for my artistic self-expression for most of my life. But I’ve also liked to take photos of street art. I come across them on my adventures in Helsinki, or when I’m abroad.\nIn visualizing data I find myself leaning more towards the Stephen Few school of thought. Less is usually more and you should avoid chartjunk at all costs. Still, I’m not a purist, by any means.\nI’ve co-authored the RandomWalker (Sanderson and Rask 2024) R package with Steven Paul Sanderson II (@spsanderson). Specifically the function RandomWalker::visualize_walks(). It uses ggplot2 and some of the extensions found in this book.\nI also like to tinker with R Shiny and recently made an app called TuneTeller. It received an honorable mention in the 2024 Shiny Contest.",
     "crumbs": [
-      "Layers",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Annotations</span>"
+      "Introduction"
     ]
   },
   {
-    "objectID": "scales_and_guides.html",
-    "href": "scales_and_guides.html",
-    "title": "6  Scales and guides",
-    "section": "",
-    "text": "6.1 Color scales",
+    "objectID": "introduction.html#sec-r",
+    "href": "introduction.html#sec-r",
+    "title": "Introduction",
+    "section": "R",
+    "text": "R\nAll the code in this book is in R. Except for 19  Python. If you have never used R, R for Data Science (Wickham, Çetinkaya-Rundel, and Grolemund 2023) is a better place to start.\nDon’t have R yet? You can get the latest version from CRAN (the comprehensive R archive network): https://www.r-project.org/.",
     "crumbs": [
-      "Layers",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Scales and guides</span>"
+      "Introduction"
     ]
   },
   {
-    "objectID": "coords.html",
-    "href": "coords.html",
-    "title": "7  Coords",
-    "section": "",
-    "text": "7.1 Capping axis lines",
+    "objectID": "introduction.html#sec-ide",
+    "href": "introduction.html#sec-ide",
+    "title": "Introduction",
+    "section": "IDE",
+    "text": "IDE\nRStudio is my integrated development environment (IDE) of choice. It’s free and open-source. It’s the environment where you can try out the code you find in this book. And it’s also where I wrote this book.\nYou can download the latest version from the Posit website: https://posit.co/download/rstudio-desktop/. Posit is the company that develops RStudio and many R packages. Like the tidyverse (Wickham et al. 2023) (see ggplot2 & tidyverse).\nThere are other alternatives like VSCode, Positron, and JupyterLab. This book does operate under the assumption that you are using RStudio.",
     "crumbs": [
-      "Layers",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Coords</span>"
+      "Introduction"
     ]
   },
   {
-    "objectID": "facets.html",
-    "href": "facets.html",
-    "title": "8  Facets",
-    "section": "",
-    "text": "8.1 Facet by different data columns",
+    "objectID": "introduction.html#sec-packages",
+    "href": "introduction.html#sec-packages",
+    "title": "Introduction",
+    "section": "Packages",
+    "text": "Packages\nggplot2 & tidyverse\nThe tidyverse is a collection of R packages. ggplot2 is one of them. The others are dplyr, forcats, lubridate, purrr, readr, stringr, tibble, and tidyr.\nYou could install the packages you need one by one, but you might as well install the whole tidyverse:\n\ninstall.packages(\"tidyverse\")\n\nTo highlight each of the packages used, I’ve decided to load the individual packages in the code examples. If you want to, you can use the following:\nlibrary(tidyverse)\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\nThe previous message mentions conflicted (Wickham 2023). It’s not part of the core tidyverse, but it’s one of my favorite packages. And I do recommend loading it whenever you’re writing new code.\nIt checks for conflicting function names and forces you to choose the one you want to use. Either use case by use case (for example dplyr::filter()) or session-wide (for example conflicts_prefer(dplyr::filter())).\nTo install conflicted:\n\ninstall.packages(\"conflicted\")\n\nAll you need to do is load the package at the beginning of your script:\n\nlibrary(conflicted)\n\nIt will then let you know if a conflict emerges. One fewer reason to have your code act weird when running it.\nggplot2 extensions\nHere are the main characters of this book.\nSome of them you can install from CRAN:\n\ninstall.packages(\n  c(\n    \"DataExplorer\",\n    \"ExPanDaR\",\n    \"GGally\",\n    \"ggcorrplot\",\n    \"ggplot2movies\",\n    \"ggquickeda\",\n    \"gt\",\n    \"gtExtras\",\n    \"naniar\",\n    \"radiant\"\n  )\n)\n\nOthers you will have to install from GitHub:\n\n# For fully updating radiant\noptions(repos = c(RSM = \"https://radiant-rstats.github.io/minicran\", CRAN = \"https://cloud.r-project.org\"))\ninstall.packages(\"remotes\")\nremotes::install_github(\"radiant-rstats/radiant.update\", upgrade = \"never\")\n\nOthers\nHere are the packages that are not part of the tidyverse. They aren’t considered to be ggplot2 extensions either. They are still useful for what we want to do and worth highlighting instead of hiding.\n\ninstall.packages(\n  c(\n    \"janitor\",\n    \"scales\"\n  )\n)",
     "crumbs": [
-      "Layers",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Facets</span>"
+      "Introduction"
     ]
   },
   {
-    "objectID": "themes.html",
-    "href": "themes.html",
-    "title": "9  Themes",
-    "section": "",
-    "text": "9.1 Complete themes",
+    "objectID": "introduction.html#sec-next-steps",
+    "href": "introduction.html#sec-next-steps",
+    "title": "Introduction",
+    "section": "Next steps?",
+    "text": "Next steps?\nIf you are reading these chapters in chronological order, the next step will be to read the rest of the book.\nOf course, I recommend you don’t only read the book. I’ve learned the most from reading these technical books when I’ve also gone through the code examples. Debugged them (of course I hope the code I provide isn’t broken…) when needed. Even translated them to another language (Python to R) or dialect (base R to tidyverse).\nNext, it’s practice, practice, practice. Recreate your favorite data visualizations using only ggplot2 and its extensions. Create something completely new. Either using your data (fitness, music, social media, etc.) or even something from 2  Data. There are also concepts like TidyTuesday (see Further resources).",
     "crumbs": [
-      "Layers",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Themes</span>"
+      "Introduction"
     ]
   },
   {
-    "objectID": "special_cases.html",
-    "href": "special_cases.html",
-    "title": "Special cases",
-    "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title",
+    "objectID": "introduction.html#sec-further-resources",
+    "href": "introduction.html#sec-further-resources",
+    "title": "Introduction",
+    "section": "Further resources",
+    "text": "Further resources\nBlogs\n\nAlbert Rapp\nBruno Mioto\nCédric Scherer\nDominic Royé\nGeorgios Karamanis\nMatt Dancho\nNicola Rennie\nBooks\n\nBBC Visual and Data Journalism cookbook for R graphics\nData visualisation using R, for researchers who don’t use R by Emily Nordmann et al.\nggplot2: Elegant Graphics for Data Analysis (3e) by Hadley Wickham et al.\nAn Introduction to ggplot2 by Ozancan Ozdemir\nModern Data Visualization with R by Robert Kabacoff\nR Gallery Book by Kyle W. Brown\nR Graphics Cookbook, 2nd edition by Winston Chang\nSolutions to ggplot2: Elegant Graphics for Data Analysis by Howard Baek\nThe Missing Book by Nicholas Tierney & Allison Horst\nGitHub Repos\n\nAwesome ggplot2 by Erik Gahner\nAwesome R Dataviz by Krzysztof Joachimiak\nggplot2 extenders by Gina Reynolds & Teun van den Brand\nggplot Tricks by Teun van den Brand\nTidyTuesday by Tom Mock\nWebsites\n\nPackages (ggplot2) by Antti Rask\nR for Artists and Designers by Arvind Venkatadri\nR for the Rest of Us by David Keys\nR Graph Gallery by Yan Holtz\nStatistics Globe by Joachim Schork\nYouTube\n\nAlbert Rapp\nStatistics Globe by Joachim Schork\nYouTube\n\nggplot2 extenders - Hadley Wickham: Thoughts on the ggplot2 extension ecosystem",
     "crumbs": [
-      "Special cases"
+      "Introduction"
     ]
   },
   {
-    "objectID": "networks.html",
-    "href": "networks.html",
-    "title": "11  Networks",
-    "section": "",
-    "text": "11.1 Alluvial plot",
+    "objectID": "introduction.html#sec-introduction-acknowledgments",
+    "href": "introduction.html#sec-introduction-acknowledgments",
+    "title": "Introduction",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\nEevamaija Virtanen, Juha Korpela, and Säde Haveri for founding Helsinki Data Week with me. For helping me dream big! And for making me realize a big project like this is possible when you keep making constant progress.\nMarc Eixarch (@Marceix) and Vicent Boned Riera (@eivicent) from the R User Group Finland. Learning R has been more fun thanks to your efforts in keeping the local R scene active in Helsinki, Finland.\nJoe Reis, Ole Olesen-Bagneux, and Vin Vashishta for your generosity and time. And for setting a positive example for someone like me to follow.\nHadley Wickham (@hadley) for all the books and packages. R for Data Science (Wickham, Çetinkaya-Rundel, and Grolemund 2023) got me started with R. ggplot2: Elegant Graphics for Data Analysis (Wickham 2016) helped me understand ggplot2 and the grammar of graphics on a deeper level.\nTo be continued…",
     "crumbs": [
-      "Special cases",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Networks</span>"
+      "Introduction"
     ]
   },
   {
-    "objectID": "interactive_plots.html",
-    "href": "interactive_plots.html",
-    "title": "12  Interactive plots",
-    "section": "",
-    "text": "12.1 ggiraph",
+    "objectID": "introduction.html#sec-colophon",
+    "href": "introduction.html#sec-colophon",
+    "title": "Introduction",
+    "section": "Colophon",
+    "text": "Colophon\nThis book was written in RStudio using Quarto. The website is hosted with Netlify. And it’s automatically updated after every commit by Github Actions. The complete source is available from GitHub.\nThis version of the book was built with R version 4.5.0 (2025-04-11) and the following packages:\n\n  \n\n\n\n\n\nSanderson, Steven, and Antti Rask. 2024. RandomWalker: Generate Random Walks Compatible with the ’Tidyverse’. https://www.spsanderson.com/RandomWalker/.\n\n\nWickham, Hadley. 2016. Ggplot2: Elegant Graphics for Data Analysis. 2nd ed. Springer-Verlag New York.\n\n\n———. 2023. Conflicted: An Alternative Conflict Resolution Strategy. https://conflicted.r-lib.org/.\n\n\n———. 2025. Ggplot2: Elegant Graphics for Data Analysis. https://ggplot2.tidyverse.org.\n\n\nWickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2023. Tidyverse: Welcome to the Tidyverse. https://tidyverse.tidyverse.org/.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023. R for Data Science: Import, Tidy, Transform, Visualize, and Model Data. 2nd ed. O’Reilly.",
     "crumbs": [
-      "Special cases",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Interactive plots</span>"
-    ]
-  },
-  {
-    "objectID": "animation.html",
-    "href": "animation.html",
-    "title": "13  Animation",
-    "section": "",
-    "text": "13.1 Animation",
-    "crumbs": [
-      "Special Cases",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Animation</span>"
-    ]
-  },
-  {
-    "objectID": "shortcuts.html",
-    "href": "shortcuts.html",
-    "title": "Shortcuts",
-    "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title",
-    "crumbs": [
-      "Shortcuts"
-    ]
-  },
-  {
-    "objectID": "helpers.html",
-    "href": "helpers.html",
-    "title": "15  Helpers",
-    "section": "",
-    "text": "15.1 Combining layers",
-    "crumbs": [
-      "Shortcuts",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Helpers</span>"
-    ]
-  },
-  {
-    "objectID": "interactive_tools.html",
-    "href": "interactive_tools.html",
-    "title": "16  Interactive tools",
-    "section": "",
-    "text": "16.1 Interactive interface to plot data and perform statistical tests",
-    "crumbs": [
-      "Shortcuts",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Interactive tools</span>"
-    ]
-  },
-  {
-    "objectID": "getting_ready_to_publish.html",
-    "href": "getting_ready_to_publish.html",
-    "title": "Getting ready to publish",
-    "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title",
-    "crumbs": [
-      "Getting ready to publish"
-    ]
-  },
-  {
-    "objectID": "finishing_touches.html",
-    "href": "finishing_touches.html",
-    "title": "17  Finishing touches",
-    "section": "",
-    "text": "17.1 Blending, copying, adjusting, and compositing layers",
-    "crumbs": [
-      "Getting ready to publish",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Finishing touches</span>"
-    ]
-  },
-  {
-    "objectID": "arranging_plots.html",
-    "href": "arranging_plots.html",
-    "title": "18  Arranging plots",
-    "section": "",
-    "text": "18.1 Arranging multiple plots",
-    "crumbs": [
-      "Getting ready to publish",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Arranging plots</span>"
-    ]
-  },
-  {
-    "objectID": "beyond_r.html",
-    "href": "beyond_r.html",
-    "title": "Beyond R",
-    "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title",
-    "crumbs": [
-      "Beyond R"
-    ]
-  },
-  {
-    "objectID": "bi_tools.html",
-    "href": "bi_tools.html",
-    "title": "19  BI Tools",
-    "section": "",
-    "text": "19.1 Power BI",
-    "crumbs": [
-      "Beyond R",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>BI Tools</span>"
-    ]
-  },
-  {
-    "objectID": "large_language_models.html",
-    "href": "large_language_models.html",
-    "title": "20  Large Language Models",
-    "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title",
-    "crumbs": [
-      "Beyond R",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Large Language Models</span>"
-    ]
-  },
-  {
-    "objectID": "python.html",
-    "href": "python.html",
-    "title": "19  Python",
-    "section": "",
-    "text": "19.1 ggplot2’s descendants",
-    "crumbs": [
-      "Beyond R",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Python</span>"
-    ]
-  },
-  {
-    "objectID": "case_studies.html",
-    "href": "case_studies.html",
-    "title": "Case studies",
-    "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title",
-    "crumbs": [
-      "Case studies"
+      "Introduction"
     ]
   },
   {
@@ -335,35 +171,47 @@
     ]
   },
   {
-    "objectID": "installing_packages.html",
-    "href": "installing_packages.html",
-    "title": "2  Installing Packages",
+    "objectID": "data.html",
+    "href": "data.html",
+    "title": "2  Data",
     "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title",
-    "crumbs": [
-      "Getting Started",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Installing Packages</span>"
-    ]
-  },
-  {
-    "objectID": "introduction.html",
-    "href": "introduction.html",
-    "title": "Introduction",
-    "section": "",
-    "text": "Purpose and scope\nA very basic reason why I started writing this book was the fact that one didn’t already exist. “Someone had to do it”, as they say.\nI know there is information out there about the different ggplot2 extension packages. There are the package documentation, but there are also some blogs around (see Further resources).\nBut that information is quite scattered. There were many great packages I hadn’t even heard about before I started doing research for the book.\nI’ve tried my best to test and write about the most useful among them. After all, there are hundreds of packages to choose from. And I don’t think everyone should have to go through them all. Don’t try this at home!",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "data.html#eda",
-    "href": "data.html#eda",
-    "title": "3  Data",
-    "section": "\n3.2 EDA",
-    "text": "3.2 EDA\n\n3.2.1 Pairwise plot matrix\n\n3.2.2 Correlation matrix\n\n3.2.3 Automated EDA app\n\n\n\n\nArel-Bundock, Vincent. 2024. Rdatasets: A Collection of Datasets Originally Distributed in Various r Packages.\n\n\nMüller, Kirill, and Hadley Wickham. 2023. Tibble: Simple Data Frames. R Package Version 3.2.1.\n\n\nWickham, Hadley. 2015. Ggplot2movies: Movies Data. R Package Version 0.0.1.\n\n\n———. 2024. Ggplot2: Elegant Graphics for Data Analysis. R Package Version 3.5.1.\n\n\nWickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2023. Tidyverse: Welcome to the Tidyverse. R Package Version 2.0.0.",
+    "text": "2.1 Data sets\nThis book is about tools for creating visualizations. But to visualize data you first need data. So let’s start by taking a look at some of the data sets available to us without much hassle.",
     "crumbs": [
       "Layers",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data</span>"
+    ]
+  },
+  {
+    "objectID": "data.html#sec-data-sets",
+    "href": "data.html#sec-data-sets",
+    "title": "2  Data",
+    "section": "",
+    "text": "2.1.1 base R\nBase R comes with a bunch of data sets ready to use. There are classics like iris and mtcars, but there are many more to choose from.\n\n  \n\nSince the datasets package comes from base R, the data is not always immediately ready to use with ggplot2 (Wickham 2025). Luckily we have the tidyverse (Wickham, Averick, et al. 2023) packages that make it easy to make the necessary changes.\nHere is an example using the WorldPhones (‘The World’s Telephones’) data set. We can start by loading the data set by using the data() function.\n\ndata(WorldPhones)\n\nLet’s take a quick look at what the first couple of rows of the data set looks like.\n\nhead(WorldPhones)\n\n     N.Amer Europe Asia S.Amer Oceania Africa Mid.Amer\n1951  45939  21574 2876   1815    1646     89      555\n1956  60423  29990 4708   2568    2366   1411      733\n1957  64721  32510 5230   2695    2526   1546      773\n1958  68484  35218 6662   2845    2691   1663      836\n1959  71799  37598 6856   3000    2868   1769      911\n1960  76036  40341 8220   3145    3054   1905     1008\n\n\nWorldPhones is a matrix with 7 rows and 8 columns. The columns give the figures for a given region, and the rows the figures for a year. We would like to turn it into a tidy format. We can use the tibble (Müller and Wickham 2023) package for the first part. And then we’ll use pivot_longer() from the tidyr package (Wickham, Vaughan, and Girlich 2024). It increases the number of rows and decrease the number of columns. We want the continents to be observations, not columns.\n\nlibrary(dplyr)\nlibrary(tibble)\nlibrary(tidyr)\n\nworld_phones_tbl &lt;- WorldPhones %&gt;%\n  as.data.frame() %&gt;%\n  rownames_to_column(var = \"Year\") %&gt;%\n  as_tibble() %&gt;%\n  pivot_longer(\n    cols      = !Year,\n    names_to  = \"Continent\",\n    values_to = \"Phones\"\n  ) %&gt;% \n  mutate(across(where(is.character), as.factor))\n\n\n  \n\nWhat we’re left with is a tibble with three columns, Year, Continent, and Phones. We can then use the new tibble to create a simple graph with ggplot2.\nlibrary(ggplot2)\n\nworld_phones_tbl %&gt;%\n  ggplot(aes(Year, Phones, color = Continent, group = Continent)) +\n  geom_line() +\n  theme_bw()\n\n\n2.1.2 IMDb movies (1893-2005)\nggplot2movies (Wickham 2015) used to be a part of the ggplot2 package itself. It’s now its own package to make ggplot2 lighter.\nBut it’s a cool little package. It has Internet Movie Database (IMDb) data about movies from between 1893 and 2005. The selected movies have “a known length and had been rated by at least one [IMDb] user.” (Wickham 2015).\nThe Movies data set has qualities that make it good for our needs. Let’s start by loading it.\nlibrary(ggplot2movies)\n\ndata(movies)\nLet’s take a quick look at what some of the data looks like.\n\nhead(movies)\n\n\n  \n\nMovies is already a tibble. It consists of 58788 rows (observations) and 24 columns (variables).\nWhen starting to work with a new data set it’s always good to take a look at the documentation. To understand what is in those rows and columns (and what is not).\n\n  \n\nHere are some of the reasons why Movies is a good example data set because it includes:\n\nA goldilocks amount of data. Not too little, not too much\n\nCategorical data of both nominal (title, genre) and ordinal (mpaa) kind\n\nNumerical data of both continuous (budget, length, rating) and discrete (year, votes) kind\n\nWe can use two of those columns, year and rating to create a simple visualization with ggplot2.\nlibrary(ggplot2)\n\nmovies %&gt;%\n  ggplot(aes(year, rating)) +\n  geom_point(alpha = 0.05) +\n  theme_bw()\n\nAs mentioned earlier, Movies is already a tibble. But, it doesn’t mean that the data is in an optimal format for all kinds of visualization. But we’ll do all the necessary data wrangling within the chapter where we use the data.\n\n2.1.3 RDatasets\nRDatasets is not an R package. But it is an excellent GitHub repo. And a “collection of datasets originally distributed in various R packages” (Arel-Bundock 2024).\nHere listed are the 2337 data sets that were available on 2024-11-11.\n\n  \n\nThe RDatasets repo contains that same list. But there you will also find a .csv file and documentation for each data set.\nIf I had to choose one fun data set from the list to highlight, it would be starwars from the dplyr (Wickham, François, et al. 2023) package.\nYou can choose to use the .csv file provided on the website. Another way to use the collection is to choose the dataset from the list and load the package it comes with:\n\nlibrary(dplyr)\n\ndata(starwars)\n\nLet’s take a quick look at what some of the starwars data looks like.\n\nhead(starwars)\n\n\n  \n\nThere are a bunch of Star Wars characters and their stats.\nLet’s choose two columns, height and species (and filter for six of the more well-known species). We’ll use them to create a simple visualization with ggplot2.\nlibrary(ggplot2)\n\nstarwars %&gt;%\n  filter(species %in% c(\"Droid\", \"Ewok\", \"Gungan\", \"Human\", \"Hutt\", \"Wookiee\")) %&gt;%\n  ggplot(aes(height, species)) +\n  geom_boxplot() +\n  theme_bw()\n\nThis concludes the section about the different data sets available for every R user. Next, we’ll take a look at some of the ggplot2 extensions that make it easier to do exploratory data analysis (EDA).",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data</span>"
+    ]
+  },
+  {
+    "objectID": "data.html#sec-exploratory-data-analysis-eda",
+    "href": "data.html#sec-exploratory-data-analysis-eda",
+    "title": "2  Data",
+    "section": "\n2.2 Exploratory data analysis (EDA)",
+    "text": "2.2 Exploratory data analysis (EDA)\nExploratory data analysis (or EDA, which we’ll be using from now on) is a process, even if it is a loose one. The Cambridge Dictionary ((Ed.) 2013) defines process as “a series of actions that you take in order to achieve a result”. So, we a) have a series of actions and b) a result you wish to achieve.\nLet’s look at the results first. After all, that is why we do things. You might have other, more specific goals depending on your particular field or use case. But in the most general sense, the result we’re after is a better understanding of the data (set) we’re working on.\nWhat are the series of actions we need to take? As I mentioned earlier, EDA is a loose process. There are as many ways to go about it as there are analysts and data sets. Still, some common steps usually occur: looking at missing values, summarizing data, and visualizing relationships between variables.\nIt’s good to note these visualizations aren’t usually meant for publication. Compared to those you find later on in the book, these are more for your eyes than for the eventual audience.\nThe last thing we’ll look at in this chapter is one way to automate the EDA process using an app. Although I must warn you. It’s better to use these tools only after you’ve gained experience from doing EDA without them. It might sound counter-intuitive, but trust me. It can be too overwhelming if you don’t know what you’re doing.\n\n2.2.1 Missing values\nLet’s first load the data. Looking at the movies data set earlier we noticed the mpaa column had many blank values. We don’t know if they didn’t have a rating in the first place. Or if they did, but the rating is missing. For the sake of this demonstration, let’s assume they all should have a rating.\nWe’ll begin by turning all the blank values (of the character type) into NA (not available).\n\nlibrary(dplyr)\nlibrary(ggplot2movies)\n\nmovies_na &lt;- movies %&gt;%\n  mutate(\n    # Turn all blank values of the character type into NA\n    across(where(is.character), ~na_if(., \"\")), \n    # Create a decade column for grouping based on the values in the year column\n    decade = floor(year / 10) * 10\n  )\n\nNaniar (Tierney et al. 2024) is a package with many functions for visualizing missing (NA) values. It does contain many functions outside of visualization. But that’s for another book.\nOne simple function is gg_miss_var(). It creates a lollipop plot ([INSERT LINK HERE]). It shows which columns (variables) contain the greatest amount of missing (NA) values.\n\nlibrary(naniar)\n\nmovies_na %&gt;% \n  gg_miss_var() +\n  theme_bw()\n\n\n\n\n\n\n\nWe can see that MPAA ratings aren’t the only thing missing. Almost the same amount of films are missing the budget information. With budget, it’s easier to say that if we don’t have a number, it is missing. Then again, that column did have NAs in place from the beginning.\nWe’re also interested in seeing if there is overlapping missingness between the columns. It can indicate patterns in the data. We’ll use an upset plot ([INSERT LINK HERE]) for that. Just add gg_miss_upset().\n\nmovies_na %&gt;% \n  gg_miss_upset(\n    # Number of sets to look at. We know there are only two columns with NA\n    nsets = 2\n  )\n\n\n\n\n\n\n\nMore than 3000 movies without an MPAA rating and almost the same amount without a budget. But over 50000 without both. That makes me think there is a consistency in the missingness.\nWe can also use geom_miss_point() to see if there are more patterns between the missing variables. Let’s also use label_number() from the scales (Wickham, Pedersen, and Seidel 2023) package to prettify the x-axis labels.\n\nlibrary(ggplot2)\nlibrary(scales)\n\np1 &lt;- movies_na %&gt;%\n  ggplot(aes(budget, mpaa)) +\n  geom_point() +\n  geom_miss_point() +\n  scale_x_continuous(\n    labels = label_number(\n      scale  = 1e-6,\n      prefix = \"$\",\n      suffix = \"M\"\n    )\n  ) +\n  theme_bw()\n\n\nValues seem to be missing in all the MPAA rating categories. NC-17 does not seem to contain that many values in general, but many of them seem to be missing.\nLet’s confirm this observation by creating a frequency table with the tabyl() function. It’s from a neat package called janitor (Firke 2024).\nlibrary(dplyr)\nlibrary(janitor)\n\nmovies_na %&gt;% \n  filter(mpaa == \"NC-17\") %&gt;% \n  tabyl(mpaa, budget) %&gt;%\n  paged_table()\n\n  \n\nSo, there are more NC-17 movies that are missing the budget than those that aren’t.\nWe can dig even deeper. We can use facet_wrap() from ggplot2 to see how the missing values are distributed throughout the history.\np1 +\n  scale_x_continuous(\n    n.breaks = 3,\n    labels   = label_number(\n      scale  = 1e-6,\n      prefix = \"$\",\n      suffix = \"M\"\n    )\n  ) +\n  facet_wrap(vars(decade))\n\nBefore moving on, let’s first look at one alternative for visualizing missing values, plot_missing(). It comes from the DataExplorer (Cui 2024) package.\nlibrary(DataExplorer)\n\nmovies_na %&gt;%\n  plot_missing(\n    # Let's only visualize the missing values\n    missing_only = TRUE,\n    # We'll use theme_bw() when possible\n    ggtheme      = theme_bw()\n  )\n\nYou see the amount and percentage of NAs per column, arranged in order of missingness. This is a great quick overview!\nDataExplorer, like naniar earlier, provides functions for handling the missing values. For instance, we could drop the budget and mpaa columns, as indicated by the red color in the plot above.\n\n2.2.2 Summarizing data\nOf course, we want to visualize more than the missing data. It makes sense to start with an overview of some kind.\nLuckily we don’t have to go further than the DataExplorer package. You know, the one we already tried in the previous chapter.\nWe’ll start with the plot_intro() function. It gives us some basic information about our data set, visualized.\nmovies_na %&gt;%\n  plot_intro(ggtheme = theme_bw())\n\nMissing Values\nThe most fascinating insights here are still related to missing values. Less than 5% of the rows in the data set are complete. Meaning that they have no missing values in any of the columns. And almost 10% of all the observations are missing. That’s how much the missing rows of budget and mpaa are affecting the totals. One positive thing is that we don’t have any columns that are missing all the values.\nCategorical Columns\nLet’s then take a look at the categorical columns. The one that will be missing from the upcoming visualizations is title. The values are more or less unique. So, it wouldn’t make sense having a bar chart, for instance, with more than 50000 rows with a count of 1 each.\nDid someone mention bar charts? Let’s start with the plot_bar() function to visualize the categorical columns. This will show us what the frequency of each of the values are within a column.\nmovies_na %&gt;% \n  plot_bar(ggtheme = theme_bw())\n\nWe see mpaa with it’s missing values. The rest of the categorical columns are binary ones about which genres each movie belongs to. Comedy and Drama seem to be the best represented ones in the data set.\nWith the with argument we can choose to show something else on the x-axis besides the frequency. Here, for instance, we’ve chosen length to be the column to sum up.\nmovies_na %&gt;% \n  plot_bar(\n    # Name of continuous feature to be summed instead of NULL (i.e. frequency)\n    with    = \"length\",\n    ggtheme = theme_bw()\n  )\n\nHere we can see that Animation and Short make up an even smaller part of the whole as before. Which makes sense, when you start to think about it.\nAnother useful feature is using the by argument. It means we will see the frequency broken down by a discrete feature. In this case we’ve chosen mpaa.\nmovies_na %&gt;% \n  plot_bar(\n    by      = \"mpaa\",\n    ggtheme = theme_bw()\n  )\n\nThis shows us that Action and Romance are the genres with more R rated movies than the other genres. Of course we must remember the prevalence of those missing values.\nNumerical Columns\nNext, we’ll use plot_histogram() to draw a histogram of all the numerical columns (both discrete and continuous).\nmovies_na %&gt;%\n  plot_histogram(ggtheme = theme_bw())\n\nThat’s a lot of information to take in all at once. For the next visualizations, we’ll reduce the number of columns to look at.\nr1 to r10 gives the percentile of users who rated the movie that number. Interesting information in its own right. But we’ll concentrate on budget, length, rating, votes, and year. At least for the rest of this chapter.\nThere is one more thing we notice when looking at the histogram for length. Most of the values seem to be close to zero. But there are some extreme values around even 5000 that are skewing the view. Let’s see what the cause is by looking at the title and length of the ten longest movies in the data set.\n\nmovies_na %&gt;%\n  select(title, length) %&gt;%\n  slice_max(length, n = 10) %&gt;%\n  paged_table()\n\n\n  \n\n\n\nSo, a couple of cult classics. The Cure for Insomnia (5220 minutes) and The Longest Most Meaningless Movie in the World (2880 minutes) are in a category of their own. They are legit long films and not a mistake. Let’s still create a new tibble that includes only those movies that have a length of under 500 minutes.\nAlso, we’ll select the columns mentioned earlier. Budget, length, rating, votes, and year.\nlibrary(dplyr)\n\nmovies_na_length_under_500 &lt;- movies_na %&gt;%\n  select(budget, length, rating, votes, year) %&gt;%\n  filter(length &lt; 500)\nLet’s see how the four columns, length, rating, votes, and year look like as a box plot when grouped by budget. Budget is a continuous variable. That’s why plot_boxplot() groups the values to 5 equal ranges.\nmovies_na_length_under_500 %&gt;%\n  plot_boxplot(\n    by      = \"budget\",\n    ggtheme = theme_bw(),\n    ncol    = 4\n  )\n\nBased on the box plot, the movies with a bigger budget tend to:\n\nhave ratings inside a narrower range\nhave better ratings\nhave more votes\nbe more recent\nbe longer\n\nLet’s then take a look at what this all looks like as a scatter plot. We’ll use all the same columns. It’s important to use an alpha value that is low enough to reveal a more nuanced picture than we would see if it was 1.\nmovies_na_length_under_500 %&gt;%\n  plot_scatterplot(\n    by              = \"budget\",\n    geom_point_args = list(alpha = 0.05),\n    ggtheme         = theme_bw(),\n    ncol            = 2\n  )\n\nThese are some of the ways to use DataExplorer to create a visual summary of a data set. I encourage you to dig into the documentation and see what else there is.\nTo conclude, DataExplorer has a function, create_report(). It creates a full EDA report from scratch. We won’t use that now, because the report would take too much space. But if you’re using DataExplorer, you should try it!\ngt & gtExtras\nDataExplorer is a good package, but it’s not the only game in town for EDA. gt (Iannone et al. 2025) is a package to create tables ([INSERT LINK HERE]) with.\nOften, when you think about tables, you think about numeric and text values. But that doesn’t have to be the case. With gtExtras (Mock 2023) you can create a fast and easy visual summary of your data. The gt_plt_summary() function is all you need.\nThe function does have some limitations. It has had some issues with certain data sets. The movies data set didn’t work, for instance. That’s why we’ll take a look at the WorldPhones data set instead.\n\n\n\n\n\n\nThis code chunk isn’t currently working (2025-04-25)\n\n\n\nThere is an issue with the package used and while it’s going on, its code will be commented out.\nWill show a static image instead.\n\n\n# library(gt)\n# library(gtExtras)\n# \n# world_phones_tbl %&gt;% \n#   gt_plt_summary()\n\nWhat we get is a table that combines a visualized plot overview with basic summary elements: missing, mean, median, and standard deviation (sd)). You can also see from the icon on the left, whether the column is categorical or continuous. With the categorical columns, you can see a list of the categorical values by clicking the arrow.\n\n2.2.3 Visualizing relationships\nMost of the summarization techniques we’ve used so far have dealt with the distribution of values within one variable. But it’s also important to understand the possible relationships between different variables.\nUnderstanding those relationships can provide insights into patterns, trends, and dependencies.\nTwo tools are available for this. A correlation matrix quantifies the relationships numerically. But since this book is about visualizing data, we’ll also visualize those numbers.\nA pairwise plot matrix is a complementary visual tool to explore those relationships more deeply.\n\n2.2.3.1 Correlation matrix\nFirst, let’s tweak the data set to better fit our demo purposes. We’ll select the columns we wish to use. In this case, it’s all the columns with numeric values. Except for the ones about the ratings percentiles (r1-r10). And we’ll use drop_na() from tidyr to drop rows where any column has missing values.\nlibrary(dplyr)\nlibrary(tidyr)\n\nmovies_without_na_numeric &lt;- movies_na %&gt;%\n  select(where(is.numeric) & !num_range(\"r\", 1:10)) %&gt;%\n  # The second select() is to order the columns alphabetically.\n  # Except for the names of genres that follow everything else.\n  select(budget, length, rating, votes, year, everything()) %&gt;%\n  drop_na()\nmovies_without_na_numeric %&gt;%\n  paged_table()\n\n  \n\nWe’re left with 5215 rows (observations) and 13 columns (variables). Still plenty enough to perceive exciting correlations between the columns.\nLet’s first create a correlation matrix using the cor() function. It’s from base R and computes the correlation between the different columns. We’re using the Pearson correlation coefficient as the method (default). Remember it can’t determine a potential non-linear association between variables.\nDue to the lack of space on the page, we’ll only look at these columns: budget, length, rating, votes, and year. If there was more room, we’d include the genre columns. But we’ll see them again soon enough!\ncorr &lt;- movies_without_na_numeric %&gt;% \n  cor() %&gt;%\n  round(2)\nlibrary(dplyr)\n\ncorr %&gt;%\n  as.data.frame() %&gt;%\n  select(budget, length, rating, votes, year) %&gt;%\n  # We're using slice_head to filter only the first n rows. 5 in this case.\n  # Without it, we would also have rows with the genres, ruining our matrix.\n  slice_head(n = 5) %&gt;%\n  paged_table()\n\n  \n\nOf course, we can see the differences by looking at the values in the matrix. But it might be easier to get the bigger picture by looking at them graphically. For that, we’ll use ggcorrplot (Kassambara 2023).\nThis time, we’ll also include the genre columns. We’re interested in how they correlate with each other and the original five.\nIn its basic form ggcorrplot() only needs the data argument. So let’s first look at it without any modifications.\nlibrary(ggcorrplot)\n\ncorr %&gt;%\n  ggcorrplot()\n\nSo, the way to interpret this is simple. The redder the square, the stronger the positive correlation between the two variables. Votes and budget, for instance. Which makes intuitive sense. The bigger the movie (budget), the more likely it is to garner attention from IMDb users. If we look at budget and rating, there is no discernible correlation between the two. This is an intriguing initial finding and we could investigate it further.\nBut, the bluer the square, the stronger negative correlation there seems to be between the two. The most obvious example here is the negative correlation between length and Short. Who would have guessed that the films in the Short genre would also be short in length? We can also see a negative correlation between the Short genre and budget. Which again makes perfect sense. You can also see the reverse effect when looking at budget and length. It strengthens the case further.\nWe’re still in the territory where most visualizations are for your eyes only. But there are some modifications we could make to the plot. Here are the parameters for ggcorrplot() we’re using (and why):\n\n\nCircle is the other method available. The bigger the shape, the bigger the correlation (negative or positive). Double encoding (also known as redundant encoding) is a two-edged sword. We should use it with caution. But here it can help distinguish the most noteworthy cases\nWe can use one of the ggplot2 themes by using ggtheme. Using a clean theme like theme_bw makes the plot a bit easier to read\nAll variables are perfectly correlated with themselves. It doesn’t make sense to show the diagonal. If anything, it makes reading the plot a bit harder. We can get rid of the diagonal by setting show.diag as FALSE\n\nBlue, white, and red are all fine colors. For a little more flavor, we can choose something else. Like dark turquoise, grey, and dark orange\n\n\ncorr %&gt;% \n  ggcorrplot(\n    method    = \"circle\",\n    ggtheme   = theme_bw,\n    show.diag = FALSE,\n    colors    = c(\"darkturquoise\", \"grey95\", \"darkorange3\")\n  )\n\nMuch better! And here are some more genre-related insights based on the matrix:\n\nDrama has a fairly strong positive correlation with both length and rating\nAction films have the strongest positive correlation with budget\nComedy and Romance have a positive correlation\nBut so does Romance and Drama\n\n2.2.3.2 Pairwise plot matrix\nWe already got a lot of information out of the correlation matrix. But as mentioned earlier, a pairwise plot matrix is a tool to explore the relationships within and between variables more deeply.\nAgain, we begin by fine tuning the data set. In this case we’re only interested in the Drama genre and how those films compare to the rest of the films.\nmovies_without_na_drama &lt;- movies_na %&gt;%\n  mutate(\n    Drama = if_else(Drama == 1, \"Yes\", \"No\") %&gt;%\n      as.factor()\n  ) %&gt;% \n  drop_na() %&gt;%\n  select(budget, length, rating, votes, year, Drama)\nmovies_without_na_drama %&gt;% \n  paged_table()\n\n  \n\nTo use a pairwise plot matrix we turn to GGally (Schloerke et al. 2024).\nLet’s start with the basic ggpairs() function. We only need to tell it which columns we want to use. We’ll start by looking at the dataset without the Drama column.\nlibrary(GGally)\n\nmovies_without_na_drama %&gt;%\n  ggpairs(\n    columns = c(\"budget\", \"length\", \"rating\", \"votes\", \"year\")\n  ) +\n  theme_bw()\n\nThe matrix consists of three areas: upper, lower, and diagonal (or diag when it comes to function parameters). They can contain different types of plots and are customizable. But let’s first look at the defaults:\n\nUpper contains the correlation coefficient between the two variables\nLower contains a scatter plot of the two variables\nDiagonal contains a density plot of the variable in question\n\nIt’s time to add Drama as color for the matrix. And also do some customizations:\n\nWe know Drama is either “No” or “Yes”, so let’s pick two colors that go well together, dark orange and dark turquoise\n\nWe can use functions to customize any part of the matrix\n\n\nlower_function() creates a scatter plot where the points are somewhat transparent (alpha = 0.5). There is also a red linear trend line\n\ndiag_function() creates a density plot. But why do we need to do that when the default already does the same? For some reason, default uses default colors, even if we map the colors as we have. But our function here does the trick\n\n\nThen we simply create the matrix\n\nlibrary(ggplot2)\n\n# 1) Choose your colors\nmanual_colors = c(\"darkorange3\",\"darkturquoise\")\n\n# 2) Create functions for the lower half and the diagonal of the matrix\nlower_function &lt;- function(data, mapping) {\n  ggplot(data = data, mapping = mapping) +\n    geom_point(alpha = 0.5) +\n    geom_smooth(method = \"lm\", color = \"red\")\n}\n\ndiag_function &lt;- function(data, mapping) {\n  ggplot(data = data, mapping = mapping) +\n    geom_density()\n}\n\n# 3) Add colors. Then customize upper and lower half, and the diagonal\n# of the matrix. Lower and diagonal use the functions we created in step 2\nmovies_without_na_drama %&gt;%\n  ggpairs(\n    mapping = aes(color = Drama),\n    columns = c(\"budget\", \"length\", \"rating\", \"votes\", \"year\"),\n    upper   = list(continuous = wrap(\"cor\", size = 3.5)),\n    lower   = list(continuous = lower_function),\n    diag    = list(continuous = diag_function)\n  ) +\n  scale_color_manual(values = manual_colors) +\n  theme_bw()\n\nThere are many differences throughout the data depending on whether the movie belongs to the Drama genre.\nIf you want to, you can do the same with other genres!\nThere are many other ways to customize a pairwise plot matrix. For the rest, see ggpairs() documentation.\n\n2.2.4 Automated EDA app\n\n\n\n\nArel-Bundock, Vincent. 2024. Rdatasets: A Collection of Datasets Originally Distributed in Various r Packages. https://vincentarelbundock.github.io/Rdatasets/.\n\n\nCui, Boxuan. 2024. DataExplorer: Automate Data Exploration and Treatment. http://boxuancui.github.io/DataExplorer/.\n\n\n(Ed.), Colin McIntosh. 2013. Cambridge Advanced Learner’s Dictionary. 4th ed. Cambridge University Press.\n\n\nFirke, Sam. 2024. Janitor: Simple Tools for Examining and Cleaning Dirty Data. https://github.com/sfirke/janitor.\n\n\nIannone, Richard, Joe Cheng, Barret Schloerke, Ellis Hughes, Alexandra Lauer, JooYoung Seo, Ken Brevoort, and Olivier Roy. 2025. Gt: Easily Create Presentation-Ready Display Tables. https://gt.rstudio.com.\n\n\nKassambara, Alboukadel. 2023. Ggcorrplot: Visualization of a Correlation Matrix Using ’Ggplot2’. http://www.sthda.com/english/wiki/ggcorrplot-visualization-of-a-correlation-matrix-using-ggplot2.\n\n\nMock, Thomas. 2023. gtExtras: Extending ’Gt’ for Beautiful HTML Tables. https://github.com/jthomasmock/gtExtras.\n\n\nMüller, Kirill, and Hadley Wickham. 2023. Tibble: Simple Data Frames. https://tibble.tidyverse.org/.\n\n\nSchloerke, Barret, Di Cook, Joseph Larmarange, Francois Briatte, Moritz Marbach, Edwin Thoen, Amos Elberg, and Jason Crowley. 2024. GGally: Extension to ’Ggplot2’. https://ggobi.github.io/ggally/.\n\n\nTierney, Nicholas, Di Cook, Miles McBain, and Colin Fay. 2024. Naniar: Data Structures, Summaries, and Visualisations for Missing Data. https://naniar.njtierney.com/.\n\n\nWickham, Hadley. 2015. Ggplot2movies: Movies Data.\n\n\n———. 2025. Ggplot2: Elegant Graphics for Data Analysis. https://ggplot2.tidyverse.org.\n\n\nWickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2023. Tidyverse: Welcome to the Tidyverse. https://tidyverse.tidyverse.org/.\n\n\nWickham, Hadley, Romain François, Lionel Henry, Kirill Müller, and Davis Vaughan. 2023. Dplyr: A Grammar of Data Manipulation. https://dplyr.tidyverse.org.\n\n\nWickham, Hadley, Thomas Lin Pedersen, and Dana Seidel. 2023. Scales: Scale Functions for Visualization. https://scales.r-lib.org.\n\n\nWickham, Hadley, Davis Vaughan, and Maximilian Girlich. 2024. Tidyr: Tidy Messy Data. https://tidyr.tidyverse.org.",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data</span>"
+    ]
+  },
+  {
+    "objectID": "geoms.html",
+    "href": "geoms.html",
+    "title": "3  Geoms",
+    "section": "",
+    "text": "3.1 Area plots",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Geoms</span>"
     ]
   },
   {
@@ -499,25 +347,14 @@
     ]
   },
   {
-    "objectID": "data.html#data-sets",
-    "href": "data.html#data-sets",
-    "title": "2  Data",
+    "objectID": "stats.html",
+    "href": "stats.html",
+    "title": "4  Stats",
     "section": "",
-    "text": "2.1.1 base R\nBase R comes with a bunch of data sets ready to use. There are classics like iris and mtcars, but there are many more to choose from:\n\n  \n\nSince the datasets package comes from base R, the data is not always immediately ready to use with ggplot2 (Wickham 2024). Luckily we have the tidyverse (Wickham, Averick, et al. 2023) packages that make it easy to make the necessary changes.\nHere is an example using the USArrests (‘Violent Crime Rates by US State’) data set. We can start by loading the data set by using the data() function:\n\ndata(USArrests)\n\nLet’s take a quick look at what the first couple of rows of the data set looks like:\n\nhead(USArrests)\n\n           Murder Assault UrbanPop Rape\nAlabama      13.2     236       58 21.2\nAlaska       10.0     263       48 44.5\nArizona       8.1     294       80 31.0\nArkansas      8.8     190       50 19.5\nCalifornia    9.0     276       91 40.6\nColorado      7.9     204       78 38.7\n\n\nAs you can see, USArrests is a data frame. It has four columns and the names of the US states are row names. We would like to see them as the fifth column instead. We can use the tibble (Müller and Wickham 2023) package to do that. While we’re at it, let’s also change the data frame into a tibble:\n\nlibrary(tibble)\n\nusarrests_tbl &lt;- USArrests %&gt;%\n  rownames_to_column(var = \"State\") %&gt;%\n  as_tibble()\n\n\n  \n\nWe can then use the new tibble to create a simple visualization with ggplot2:\n\nlibrary(ggplot2)\n\nusarrests_tbl %&gt;%\n  slice_max(Murder, n = 10) %&gt;% \n  ggplot(aes(Murder, UrbanPop)) +\n  geom_point() +\n  geom_label(aes(label = State))\n\n\n\n\n\n\n\n\n2.1.2 IMDb movies (1893-2005)\nggplot2movies (Wickham 2015) used to be a part of the ggplot2 package itself. It’s now its own package to make ggplot2 lighter.\nBut it’s a cool little package. It has Internet Movie Database (IMDb) data about movies from between 1893 and 2005. The selected movies have “a known length and had been rated by at least one [IMDb] user.” (Wickham 2015).\nThe Movies data set has qualities that make it good for our needs. Let’s start by loading it:\n\nlibrary(ggplot2movies)\n\ndata(movies)\n\nLet’s take a quick look at what some of the data looks like:\n\nhead(movies)\n\n\n  \n\nMovies is already a tibble. It consists of 58788 rows (observations) and 24 columns (variables).\nWhen starting to work with a new data set it’s always good to take a look at the documentation. To understand what is in those rows and columns (and what is not):\n\n  \n\nHere are some of the reasons why Movies is a good example data set because it includes:\n\nA goldilocks amount of data. Not too little, not too much\n\nCategorical data of both nominal (title, genre) and ordinal (mpaa) kind\n\nNumerical data of both continuous (budget, length, rating) and discrete (year, votes) kind\n\nWe can use two of those columns, year and rating to create a simple visualization with ggplot2:\n\nlibrary(ggplot2)\n\nmovies %&gt;%\n  ggplot(aes(year, rating)) +\n  geom_point()\n\n\n\n\n\n\n\nAs mentioned earlier, Movies is already a tibble. But, it doesn’t mean that the data is in an optimal format for all kinds of visualization. But we’ll do all the necessary data wrangling within the chapter where we use the data.\n\n2.1.3 RDatasets\nRDatasets is not an R package. But it is an excellent GitHub repo. And a “collection of datasets originally distributed in various R packages” (Arel-Bundock 2024).\nHere listed are the 2337 data sets that were available on 2024-11-11:\n\n  \n\nThe RDatasets repo contains that same list. But there you will also find a .csv file and documentation for each data set.\nIf I had to choose one fun data set from the list to highlight, it would be starwars from the dplyr (Wickham, François, et al. 2023) package.\nYou can choose to use the .csv file provided on the website. Another way to use the collection is to choose the dataset from the list and load the package it comes with:\n\nlibrary(dplyr)\n\ndata(starwars)\n\nLet’s take a quick look at what some of the starwars data looks like:\n\nhead(starwars)\n\n\n  \n\nThere are a bunch of Star Wars characters and their stats.\nLet’s choose two columns, height and species (and filter for six of the more well-known species). We’ll use them to create a simple visualization with ggplot2:\nlibrary(ggplot2)\n\nstarwars %&gt;%\n  filter(species %in% c(\"Droid\", \"Ewok\", \"Gungan\", \"Human\", \"Hutt\", \"Wookiee\")) %&gt;%\n  ggplot(aes(height, species)) +\n  geom_boxplot()\n\nThis concludes the section about the different data sets available for every R user. Next, we’ll take a look at some of the ggplot2 extensions that make it easier to do exploratory data analysis (EDA).",
+    "text": "4.1 Combining data visualization and statistical modeling",
     "crumbs": [
       "Layers",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data</span>"
-    ]
-  },
-  {
-    "objectID": "stats.html#combining-data-visualization-and-statistical-modeling",
-    "href": "stats.html#combining-data-visualization-and-statistical-modeling",
-    "title": "5  Stats",
-    "section": "",
-    "text": "5.1.1 ggstatsplot",
-    "crumbs": [
-      "Layers",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stats</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Stats</span>"
     ]
   },
   {
@@ -609,6 +446,17 @@
     ]
   },
   {
+    "objectID": "stats.html#p-values",
+    "href": "stats.html#p-values",
+    "title": "4  Stats",
+    "section": "\n4.10 P-values",
+    "text": "4.10 P-values",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Stats</span>"
+    ]
+  },
+  {
     "objectID": "stats.html#p-p-plot",
     "href": "stats.html#p-p-plot",
     "title": "4  Stats",
@@ -653,11 +501,11 @@
     ]
   },
   {
-    "objectID": "stats.html#random-forests",
-    "href": "stats.html#random-forests",
+    "objectID": "stats.html#random-rorests",
+    "href": "stats.html#random-rorests",
     "title": "4  Stats",
-    "section": "\n4.15 Random Forests",
-    "text": "4.15 Random Forests",
+    "section": "\n4.15 Random rorests",
+    "text": "4.15 Random rorests",
     "crumbs": [
       "Layers",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Stats</span>"
@@ -730,25 +578,14 @@
     ]
   },
   {
-    "objectID": "stats.html#p-values",
-    "href": "stats.html#p-values",
-    "title": "4  Stats",
-    "section": "\n4.10 P-values",
-    "text": "4.10 P-values",
-    "crumbs": [
-      "Layers",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Stats</span>"
-    ]
-  },
-  {
-    "objectID": "annotations.html#add-p-values",
-    "href": "annotations.html#add-p-values",
-    "title": "6  Annotations",
+    "objectID": "annotations.html",
+    "href": "annotations.html",
+    "title": "5  Annotations",
     "section": "",
-    "text": "6.1.1 ggpval",
+    "text": "5.1 Add p-values",
     "crumbs": [
       "Layers",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Annotations</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Annotations</span>"
     ]
   },
   {
@@ -796,11 +633,11 @@
     ]
   },
   {
-    "objectID": "annotations.html#highlight-geoms",
-    "href": "annotations.html#highlight-geoms",
+    "objectID": "annotations.html#highlighting-geoms",
+    "href": "annotations.html#highlighting-geoms",
     "title": "5  Annotations",
-    "section": "\n5.6 Highlight Geoms",
-    "text": "5.6 Highlight Geoms",
+    "section": "\n5.6 Highlighting geoms",
+    "text": "5.6 Highlighting geoms",
     "crumbs": [
       "Layers",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Annotations</span>"
@@ -873,6 +710,17 @@
     ]
   },
   {
+    "objectID": "scales_and_guides.html",
+    "href": "scales_and_guides.html",
+    "title": "6  Scales and guides",
+    "section": "",
+    "text": "6.1 Color scales",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Scales and guides</span>"
+    ]
+  },
+  {
     "objectID": "scales_and_guides.html#color-scales",
     "href": "scales_and_guides.html#color-scales",
     "title": "6  Scales and guides",
@@ -939,36 +787,36 @@
     ]
   },
   {
-    "objectID": "coords.html#capping-axis-lines",
-    "href": "coords.html#capping-axis-lines",
-    "title": "8  Coords",
+    "objectID": "coordinate_systems.html",
+    "href": "coordinate_systems.html",
+    "title": "7  Coordinate systems",
     "section": "",
-    "text": "8.1.1 lemon",
+    "text": "7.1 Capping axis lines",
     "crumbs": [
       "Layers",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Coords</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Coordinate systems</span>"
     ]
   },
   {
-    "objectID": "coords.html#serial-axes-coordinates",
-    "href": "coords.html#serial-axes-coordinates",
-    "title": "7  Coords",
+    "objectID": "coordinate_systems.html#serial-axes-coordinates",
+    "href": "coordinate_systems.html#serial-axes-coordinates",
+    "title": "7  Coordinate systems",
     "section": "\n7.2 Serial axes coordinates",
     "text": "7.2 Serial axes coordinates",
     "crumbs": [
       "Layers",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Coords</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Coordinate systems</span>"
     ]
   },
   {
-    "objectID": "facets.html#facet-by-different-data-columns",
-    "href": "facets.html#facet-by-different-data-columns",
-    "title": "9  Facets",
+    "objectID": "facets.html",
+    "href": "facets.html",
+    "title": "8  Facets",
     "section": "",
-    "text": "9.1.1 ggforce",
+    "text": "8.1 Facet by different data columns",
     "crumbs": [
       "Layers",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Facets</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Facets</span>"
     ]
   },
   {
@@ -1060,6 +908,17 @@
     ]
   },
   {
+    "objectID": "themes.html",
+    "href": "themes.html",
+    "title": "9  Themes",
+    "section": "",
+    "text": "9.1 Complete themes",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Themes</span>"
+    ]
+  },
+  {
     "objectID": "themes.html#dark-themes",
     "href": "themes.html#dark-themes",
     "title": "9  Themes",
@@ -1112,6 +971,17 @@
     "crumbs": [
       "Layers",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Themes</span>"
+    ]
+  },
+  {
+    "objectID": "maps.html",
+    "href": "maps.html",
+    "title": "10  Maps",
+    "section": "",
+    "text": "10.1 3D maps",
+    "crumbs": [
+      "Special cases",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Maps</span>"
     ]
   },
   {
@@ -1192,6 +1062,17 @@
     ]
   },
   {
+    "objectID": "networks.html",
+    "href": "networks.html",
+    "title": "11  Networks",
+    "section": "",
+    "text": "11.1 Alluvial plot",
+    "crumbs": [
+      "Special cases",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Networks</span>"
+    ]
+  },
+  {
     "objectID": "networks.html#flowchart",
     "href": "networks.html#flowchart",
     "title": "11  Networks",
@@ -1214,14 +1095,25 @@
     ]
   },
   {
-    "objectID": "networks.html#sankey-diagram",
-    "href": "networks.html#sankey-diagram",
+    "objectID": "networks.html#sankey",
+    "href": "networks.html#sankey",
     "title": "11  Networks",
-    "section": "\n11.4 Sankey Diagram",
-    "text": "11.4 Sankey Diagram\n\n11.4.1 Sankey Diagram\n\n11.4.2 Sankey Bump Plot",
+    "section": "\n11.4 Sankey",
+    "text": "11.4 Sankey\n\n11.4.1 Sankey diagram\n\n11.4.2 Sankey bump Plot",
     "crumbs": [
-      "Special Cases",
+      "Special cases",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Networks</span>"
+    ]
+  },
+  {
+    "objectID": "interactive_plots.html",
+    "href": "interactive_plots.html",
+    "title": "12  Interactive plots",
+    "section": "",
+    "text": "12.1 ggiraph",
+    "crumbs": [
+      "Special cases",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Interactive plots</span>"
     ]
   },
   {
@@ -1258,34 +1150,47 @@
     ]
   },
   {
-    "objectID": "animation.html#creating-a-gif",
-    "href": "animation.html#creating-a-gif",
-    "title": "13  Animation",
-    "section": "\n13.2 Creating a GIF",
-    "text": "13.2 Creating a GIF",
+    "objectID": "animated-plots.html",
+    "href": "animated-plots.html",
+    "title": "13  Animated plots",
+    "section": "",
+    "text": "13.1 Animation",
     "crumbs": [
-      "Special Cases",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Animation</span>"
+      "Special cases",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Animated plots</span>"
     ]
   },
   {
-    "objectID": "shortcuts.html#debugging-ggplot2-internals",
-    "href": "shortcuts.html#debugging-ggplot2-internals",
-    "title": "Shortcuts",
-    "section": "Debugging ggplot2 Internals",
-    "text": "Debugging ggplot2 Internals",
+    "objectID": "animated-plots.html#gif",
+    "href": "animated-plots.html#gif",
+    "title": "13  Animated plots",
+    "section": "\n13.2 GIF",
+    "text": "13.2 GIF",
     "crumbs": [
-      "Shortcuts"
+      "Special cases",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Animated plots</span>"
     ]
   },
   {
-    "objectID": "shortcuts.html#im-feeling-lucky",
-    "href": "shortcuts.html#im-feeling-lucky",
-    "title": "Shortcuts",
-    "section": "I’m Feeling Lucky!",
-    "text": "I’m Feeling Lucky!",
+    "objectID": "tables.html",
+    "href": "tables.html",
+    "title": "14  Tables",
+    "section": "",
+    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title",
     "crumbs": [
-      "Shortcuts"
+      "Special cases",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Tables</span>"
+    ]
+  },
+  {
+    "objectID": "helpers.html",
+    "href": "helpers.html",
+    "title": "15  Helpers",
+    "section": "",
+    "text": "15.1 Combining layers",
+    "crumbs": [
+      "Shortcuts",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Helpers</span>"
     ]
   },
   {
@@ -1311,6 +1216,17 @@
     ]
   },
   {
+    "objectID": "interactive_tools.html",
+    "href": "interactive_tools.html",
+    "title": "16  Interactive tools",
+    "section": "",
+    "text": "16.1 Interactive interface to plot data and perform statistical tests",
+    "crumbs": [
+      "Shortcuts",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Interactive tools</span>"
+    ]
+  },
+  {
     "objectID": "interactive_tools.html#shiny",
     "href": "interactive_tools.html#shiny",
     "title": "16  Interactive tools",
@@ -1319,6 +1235,17 @@
     "crumbs": [
       "Shortcuts",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>Interactive tools</span>"
+    ]
+  },
+  {
+    "objectID": "finishing_touches.html",
+    "href": "finishing_touches.html",
+    "title": "17  Finishing touches",
+    "section": "",
+    "text": "17.1 Blending, copying, adjusting, and compositing layers",
+    "crumbs": [
+      "Getting ready to publish",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Finishing touches</span>"
     ]
   },
   {
@@ -1377,6 +1304,17 @@
     ]
   },
   {
+    "objectID": "arranging_plots.html",
+    "href": "arranging_plots.html",
+    "title": "18  Arranging plots",
+    "section": "",
+    "text": "18.1 Arranging multiple plots",
+    "crumbs": [
+      "Getting ready to publish",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Arranging plots</span>"
+    ]
+  },
+  {
     "objectID": "arranging_plots.html#side-panels",
     "href": "arranging_plots.html#side-panels",
     "title": "18  Arranging plots",
@@ -1399,25 +1337,14 @@
     ]
   },
   {
-    "objectID": "bi_tools.html#tableau",
-    "href": "bi_tools.html#tableau",
-    "title": "19  BI Tools",
-    "section": "19.2 Tableau",
-    "text": "19.2 Tableau",
+    "objectID": "python.html",
+    "href": "python.html",
+    "title": "19  Python",
+    "section": "",
+    "text": "19.1 ggplot2’s descendants",
     "crumbs": [
       "Beyond R",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>BI Tools</span>"
-    ]
-  },
-  {
-    "objectID": "bi_tools.html#others",
-    "href": "bi_tools.html#others",
-    "title": "19  BI Tools",
-    "section": "19.3 Others?",
-    "text": "19.3 Others?",
-    "crumbs": [
-      "Beyond R",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>BI Tools</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Python</span>"
     ]
   },
   {
@@ -1425,165 +1352,20 @@
     "href": "python.html#borrowing-from-python-with-reticulate",
     "title": "19  Python",
     "section": "\n19.2 Borrowing from Python with reticulate",
-<<<<<<< HEAD
-    "text": "19.2 Borrowing from Python with reticulate\n\n19.2.1 Sunbusrst plot",
-=======
     "text": "19.2 Borrowing from Python with reticulate\n\n19.2.1 Sunburst plot",
->>>>>>> 9d3a524a44ea370194b96f1f0bc171ceac1915e8
     "crumbs": [
       "Beyond R",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>Python</span>"
     ]
   },
   {
-    "objectID": "index.html#acknowledgements",
-    "href": "index.html#acknowledgements",
-    "title": "ggplot2 extended",
-    "section": "Acknowledgements",
-    "text": "Acknowledgements\nEevamaija Virtanen, Juha Korpela, and Säde Haveri for founding Helsinki Data Week with me. Helping me to dream big and also realize that even a big project like this is possible when you keep making constant progress.\nVicent Boned Riera (@eivicent) and Marc Eixarch (@Marceix) from the R User Group Finland. Learning R has been more fun thanks to your efforts in keeping the local R scene active in Helsinki, Finland.\nHadley Wickham (@hadley) for all the books and packages. R for Data Science got me started with R and ggplot2: Elegant Graphics for Data Analysis made me understand ggplot2 and the grammar of graphics on a deeper level.\nTo be continued…\n\n\n\n\nWickham, Hadley. 2016. Ggplot2: Elegant Graphics for Data Analysis. 2nd ed. Springer-Verlag New York.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023. R for Data Science: Import, Tidy, Transform, Visualize, and Model Data. 2nd ed. O’Reilly.",
-    "crumbs": [
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "data.html#exploratory-data-analysis-eda",
-    "href": "data.html#exploratory-data-analysis-eda",
-    "title": "2  Data",
-    "section": "\n2.2 Exploratory data analysis (EDA)",
-    "text": "2.2 Exploratory data analysis (EDA)\n\n2.2.1 Missing values\n\n2.2.2 Summarizing data\n\n2.2.3 Pairwise plot matrix\n\n2.2.4 Correlation matrix\n\n2.2.5 Automated EDA app\n\n\n\n\nArel-Bundock, Vincent. 2024. Rdatasets: A Collection of Datasets Originally Distributed in Various r Packages.\n\n\nMüller, Kirill, and Hadley Wickham. 2023. Tibble: Simple Data Frames. R Package Version 3.2.1.\n\n\nWickham, Hadley. 2015. Ggplot2movies: Movies Data. R Package Version 0.0.1.\n\n\n———. 2024. Ggplot2: Elegant Graphics for Data Analysis. R Package Version 3.5.1.\n\n\nWickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2023. Tidyverse: Welcome to the Tidyverse. R Package Version 2.0.0.\n\n\nWickham, Hadley, Romain François, Lionel Henry, Kirill Müller, and Davis Vaughan. 2023. Dplyr: A Grammar of Data Manipulation. R Package Version 1.1.4.",
-    "crumbs": [
-      "Layers",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data</span>"
-    ]
-  },
-  {
-    "objectID": "introduction.html#purpose-and-scope",
-    "href": "introduction.html#purpose-and-scope",
-    "title": "Introduction",
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
     "section": "",
-    "text": "What you will learn\nThis book aims to continue from where ggplot2: Elegant Graphics for Data Analysis (Wickham 2016) left off. In his book, Hadley does mention some extension packages by name. But until now there hasn’t been a comprehensive guide to those extension packages. And how to use them together.\nBasics works as kind of a “Previously, on ggplot2…”. A reminder of the basic function(alitie)s of the core package.\nLayers goes through the layers that make up the grammar of graphics: Data, geometric objects (Geoms), statistical transformations (Stats), titles and labels (Annotations), color, position and size of visual elements (Scales and guides), Coordinate systems, small multiples (Facets), and Themes. They are in a logical order. As are the rest of the chapters. The same order that you would build your visualization in.\nSpecial cases hosts particular kinds of visualization: Maps, Networks, Interactive Plots, and Animated Plots.\nShortcuts contains different kinds of Helpers and Interactive tools designed to make it easier to create your visualizations.\nAt some point, we will be Getting ready to publish our visualization. You’ll want to give them Finishing touches, but it’s also good to know about Arranging plots.\nAnd while ggplot2 is an R package, its impact and influence go Beyond R. So we’ll talk about Python a bit.\nTo finish off, we go through some Case studies. We build visualizations, step-by-step, from data to publication.\nWhat you won’t learn\nThese are some of the interesting topics that I had to leave out of the book. It’s long as it is and I decided to concentrate on the topics and extensions that everyone can use. Regardless of the field you’re in.\nCombining visualizations and BI tools\nUsing R in general and ggplot2 visualizations in specific within BI tools like Power BI is cool. Interested? You can start by reading Luca Zavarella’s book Extending Power BI with Python and R.\nGenerative art\nCreating art with R - color me impressed! It’s called Rtistry or aRt, because why not? There isn’t enough room in the book for a proper chapter on this, but here are some links to get you started on the topic:\n\nartpack by Meghan Harris\naRtsy by Koen Derks\nGenerative Art by Nicola Rennie\n\nLarge language models (LLM)\nI know, it would be trendy to write about AI. And I do think they can play a part in the data visualization process. But there isn’t anything that meaningful to write about. Whatever you do, whether you use AI or not, do trust your senses!\nA machine doesn’t need to visualize data to use it. So, in a way, data visualization is one of the last bastions of human-to-human communication. By humans, for humans, am I right?\nSpecialized packages in specialized fields like bioinformatics\nThis one should be self-evident. “Write what you know”. I know nothing about bioinformatics. I’m not even sure I understand what the term means.\nAre you interested in bioinformatics? I mean, I don’t want to leave you hanging. There is a website and a suite of packages called Bioconductor that should get you started!\nSports\nIt’s the same as with generative art. Interesting topic, but not enough space. Still, here’s another short list of packages related to sports:\nBaseball\n\nbaseballr by Saiem Gilani\nmlbplotR by Camden Kay\n\nFootball\n\nnflplotR by Sebastian Carl\n\nSoccer\n\nggshakeR by Abhishek Amol Mishra\nggsoccer by Ben Torvaney\nsoccerAnimate by Ismael Gómez Schmidt\n\nVarious\n\nsportyR by Ross Drucker",
+    "text": "Arel-Bundock, Vincent. 2024. Rdatasets: A Collection of Datasets\nOriginally Distributed in Various r Packages. https://vincentarelbundock.github.io/Rdatasets/.\n\n\nCui, Boxuan. 2024. DataExplorer: Automate Data Exploration and\nTreatment. http://boxuancui.github.io/DataExplorer/.\n\n\n(Ed.), Colin McIntosh. 2013. Cambridge Advanced Learner’s\nDictionary. 4th ed. Cambridge University Press.\n\n\nFirke, Sam. 2024. Janitor: Simple Tools for Examining and Cleaning\nDirty Data. https://github.com/sfirke/janitor.\n\n\nIannone, Richard, Joe Cheng, Barret Schloerke, Ellis Hughes, Alexandra\nLauer, JooYoung Seo, Ken Brevoort, and Olivier Roy. 2025. Gt: Easily\nCreate Presentation-Ready Display Tables. https://gt.rstudio.com.\n\n\nKassambara, Alboukadel. 2023. Ggcorrplot: Visualization of a\nCorrelation Matrix Using ’Ggplot2’. http://www.sthda.com/english/wiki/ggcorrplot-visualization-of-a-correlation-matrix-using-ggplot2.\n\n\nMock, Thomas. 2023. gtExtras: Extending ’Gt’ for Beautiful HTML\nTables. https://github.com/jthomasmock/gtExtras.\n\n\nMüller, Kirill, and Hadley Wickham. 2023. Tibble: Simple Data\nFrames. https://tibble.tidyverse.org/.\n\n\nSanderson, Steven, and Antti Rask. 2024. RandomWalker: Generate\nRandom Walks Compatible with the ’Tidyverse’. https://www.spsanderson.com/RandomWalker/.\n\n\nSchloerke, Barret, Di Cook, Joseph Larmarange, Francois Briatte, Moritz\nMarbach, Edwin Thoen, Amos Elberg, and Jason Crowley. 2024. GGally:\nExtension to ’Ggplot2’. https://ggobi.github.io/ggally/.\n\n\nTierney, Nicholas, Di Cook, Miles McBain, and Colin Fay. 2024.\nNaniar: Data Structures, Summaries, and Visualisations for Missing\nData. https://naniar.njtierney.com/.\n\n\nWickham, Hadley. 2015. Ggplot2movies: Movies Data.\n\n\n———. 2016. Ggplot2: Elegant Graphics for Data Analysis. 2nd ed.\nSpringer-Verlag New York.\n\n\n———. 2023. Conflicted: An Alternative Conflict Resolution\nStrategy. https://conflicted.r-lib.org/.\n\n\n———. 2025. Ggplot2: Elegant Graphics for Data Analysis. https://ggplot2.tidyverse.org.\n\n\nWickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy\nD’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2023.\nTidyverse: Welcome to the Tidyverse. https://tidyverse.tidyverse.org/.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023.\nR for Data Science: Import, Tidy, Transform, Visualize, and Model\nData. 2nd ed. O’Reilly.\n\n\nWickham, Hadley, Romain François, Lionel Henry, Kirill Müller, and Davis\nVaughan. 2023. Dplyr: A Grammar of Data Manipulation. https://dplyr.tidyverse.org.\n\n\nWickham, Hadley, Thomas Lin Pedersen, and Dana Seidel. 2023. Scales:\nScale Functions for Visualization. https://scales.r-lib.org.\n\n\nWickham, Hadley, Davis Vaughan, and Maximilian Girlich. 2024. Tidyr:\nTidy Messy Data. https://tidyr.tidyverse.org.",
     "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "introduction.html#who-i-am-to-write-this-book",
-    "href": "introduction.html#who-i-am-to-write-this-book",
-    "title": "Introduction",
-    "section": "Who I am to write this book",
-    "text": "Who I am to write this book",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "introduction.html#prerequisites",
-    "href": "introduction.html#prerequisites",
-    "title": "Introduction",
-    "section": "Prerequisites",
-    "text": "Prerequisites\nR\nProgramming language\nRStudio & alternatives\nExecuting code\nPackages\nggplot2 & tidyverse\nOthers",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "introduction.html#next-steps",
-    "href": "introduction.html#next-steps",
-    "title": "Introduction",
-    "section": "Next steps?",
-    "text": "Next steps?\nLearning more and getting help\nFurther resources\nBlogs\n\nAlbert Rapp\nBruno Mioto\nCédric Scherer\nDominic Royé\nGeorgios Karamanis\nMatt Dancho\nNicola Rennie\n\nBooks\n\nBBC Visual and Data Journalism cookbook for R graphics\nData visualisation using R, for researchers who don’t use R by Emily Nordmann et al.\nggplot2: Elegant Graphics for Data Analysis (3e) by Hadley Wickham et al.\nAn Introduction to ggplot2 by Ozancan Ozdemir\nModern Data Visualization with R by Robert Kabacoff\nR Gallery Book by Kyle W. Brown\nR Graphics Cookbook, 2nd edition by Winston Chang\nSolutions to ggplot2: Elegant Graphics for Data Analysis by Howard Baek\n\nGitHub Repos\n\nAwesome ggplot2 by Erik Gahner\nAwesome R Dataviz by Krzysztof Joachimiak\nggplot Tricks by Teun van den Brand\nTidyTuesday by Tom Mock\n\nWebsites\n\nPackages (ggplot2) by Antti Rask\nR for Artists and Designers by Arvind Venkatadri\nR for the Rest of Us by David Keys\nR Graph Gallery by Yan Holtz\nStatistics Globe by Joachim Schork\n\nYouTube\n\nAlbert Rapp\nStatistics Globe by Joachim Schork",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "introduction.html#acknowledgements",
-    "href": "introduction.html#acknowledgements",
-    "title": "Introduction",
-    "section": "Acknowledgements",
-    "text": "Acknowledgements\nEevamaija Virtanen, Juha Korpela, and Säde Haveri for founding Helsinki Data Week with me. For helping me dream big! And for making me realize a big project like this is possible when you keep making constant progress.\nMarc Eixarch (@Marceix) and Vicent Boned Riera (@eivicent) from the R User Group Finland. Learning R has been more fun thanks to your efforts in keeping the local R scene active in Helsinki, Finland.\nJoe Reis, Ole Olesen-Bagneux, and Vin Vashishta for your generosity and time. And for setting a positive example for someone like me to follow.\nHadley Wickham (@hadley) for all the books and packages. R for Data Science (Wickham, Çetinkaya-Rundel, and Grolemund 2023) got me started with R. ggplot2: Elegant Graphics for Data Analysis (Wickham 2016) helped me understand ggplot2 and the grammar of graphics on a deeper level.\nTo be continued…",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "introduction.html#colophon",
-    "href": "introduction.html#colophon",
-    "title": "Introduction",
-    "section": "Colophon",
-    "text": "Colophon\nThis book was written in RStudio using Quarto. The website is hosted with Netlify. And it’s automatically updated after every commit by Github Actions. The complete source is available from GitHub.\nThis version of the book was built with R version 4.4.1 (2024-06-14 ucrt) and the following packages:\n\n  \n\n\n\n\n\nSanderson, Steven, and Antti Rask. 2024. RandomWalker: Generate Random Walks Compatible with the ’Tidyverse’. R Package Version 0.2.0. https://www.spsanderson.com/RandomWalker/.\n\n\nWickham, Hadley. 2016. Ggplot2: Elegant Graphics for Data Analysis. 2nd ed. Springer-Verlag New York.\n\n\n———. 2023. Conflicted: An Alternative Conflict Resolution Strategy. R Package Version 1.2.0. https://CRAN.R-project.org/package=conflicted.\n\n\n———. 2024. Ggplot2: Elegant Graphics for Data Analysis. R Package Version 3.5.1. https://ggplot2.tidyverse.org.\n\n\nWickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2023. Tidyverse: Welcome to the Tidyverse. R Package Version 2.0.0.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023. R for Data Science: Import, Tidy, Transform, Visualize, and Model Data. 2nd ed. O’Reilly.",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "introduction.html#who-the-book-is-for",
-    "href": "introduction.html#who-the-book-is-for",
-    "title": "Introduction",
-    "section": "Who the book is for?",
-    "text": "Who the book is for?\nI assume that you’re reading this because you’re interested in data visualization, R, or both.\nI already wrote about this in the Welcome section. This book is for people who already have a working knowledge of ggplot2 and the grammar of graphics. I’m quite adamant on that, because I think that you should learn the foundations first and there are already excellent books and websites for that.\nOther than that, the tools and techniques in the book aren’t all that advanced (at least most of them). You don’t have to be a visualization wizard to find the book useful. Each of the chapters will contain code that you can use almost verbatim.\nIt doesn’t even matter if R isn’t your native language. You might find an inspiring R package and then go on and find a similar package in your preferred language. Or write that package, if one doesn’t already exist. It’s all good!",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "introduction.html#r",
-    "href": "introduction.html#r",
-    "title": "Introduction",
-    "section": "R",
-    "text": "R\nExcept for 18  Python, all of the code in this book is written in R. If you have never used R, R for Data Science (Wickham, Çetinkaya-Rundel, and Grolemund 2023) is a better place to start.\nIf you haven’t downloaded R on your computer, you can get the latest version from CRAN (the comprehensive R archive network): https://www.r-project.org/.\nIDE\nRStudio is my integrated development environment (IDE) of choice. It’s free and open-source. It’s the environment where you can try out the code you find in this book. And it’s also where I wrote this book.\nYou can download the latest version from the Posit website: https://posit.co/download/rstudio-desktop/. Posit is the company that develops RStudio and many R packages. Most notably the tidyverse (Wickham et al. 2023) (see ggplot2 & tidyverse).\nThere are other alternatives like VSCode, Positron, and JupyterLab. This book, however, operates under the assumption that you are using RStudio.",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "introduction.html#packages",
-    "href": "introduction.html#packages",
-    "title": "Introduction",
-    "section": "Packages",
-    "text": "Packages\nggplot2 & tidyverse\nThe tidyverse is a collection of R packages. ggplot2 is one of them. The others are dplyr, forcats, lubridate, purrr, readr, stringr, tibble, and tidyr.\nYou could install the packages you need one by one, but you might as well install the whole tidyverse:\n\ninstall.packages(\"tidyverse\")\n\nTo highlight each of the packages used, I’ve decided to load the individual packages in the code examples. If you want to, you can just use the following:\nlibrary(tidyverse)\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\nThe previous mentions conflicted (Wickham 2023), which is not part of the core tidyverse. But it’s one of my favorite packages. And I do recommend loading it whenever you’re writing new code.\nIt simply checks for conflicting function names and forces you to choose the one you want to use, either use case by use case (for example dplyr::filter()) or session-wide (for example conflicts_prefer(dplyr::filter())).\nTo install conflicted:\n\ninstall.packages(\"conflicted\")\n\nAll you need to do is load the package at the beginning of your script:\n\nlibrary(conflicted)\n\nIt will then let you know if a conflict emerges. One fewer reason to have your code act weird when running it.\nggplot2 extensions\nHere are the main characters of this book.\nSome of them you can install from CRAN:\n\ninstall.packages(\n  c(\n    \"ggplot2movies\"\n  )\n)\n\nOthers will have to be installed from GitHub:\nOthers\nHere are the packages that are not part of the tidyverse. They aren’t considered to be ggplot2 extensions either. They are still useful for what we want to do and worth highlighting instead of hiding.\n\ninstall.packages(\n  c(\n    \"\"\n  )\n)",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "introduction.html#who-am-i-to-write-this-book",
-    "href": "introduction.html#who-am-i-to-write-this-book",
-    "title": "Introduction",
-    "section": "Who am I to write this book?",
-    "text": "Who am I to write this book?\nHi! I’m Antti Rask, a data analyst if you had to choose one label. I’ve lived many lives and had many careers before finding my truest calling in data.\nI’ve been interested in data visualization longer than I’ve been using R (which I started in late 2019/early 2020). I made my first visualizations with Excel. At some point, I switched to Power BI. Which is still my main tool for visualization at work.\nYou could say that I am an artistic type. Music has been the main avenue for my artistic self-expression for most of my life. But I’ve also liked to take photos of street art. I come across them on my adventures in Helsinki, or when I’m abroad.\nIn visualizing data I find myself leaning more towards the Stephen Few school of thought. Less is usually more and you should avoid chartjunk at all costs. Still, I’m not a purist, by any means.\nI’ve co-authored the RandomWalker (Sanderson and Rask 2024) R package with Steven Paul Sanderson II (@spsanderson). Specifically the function RandomWalker::visualize_walks(). It uses ggplot2 and some of the extensions found in this book.\nI also like to tinker with R Shiny and recently made an app called TuneTeller. It received an honorable mention in the 2024 Shiny Contest.",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "index.html#acknowledgments",
-    "href": "index.html#acknowledgments",
-    "title": "ggplot2 extended",
-    "section": "Acknowledgments",
-    "text": "Acknowledgments\nThis book was built with Quarto and is hosted on Netlify.\n\n\n\n\nWickham, Hadley. 2016. Ggplot2: Elegant Graphics for Data Analysis. 2nd ed. Springer-Verlag New York.\n\n\n———. 2024. Ggplot2: Elegant Graphics for Data Analysis. R Package Version 3.5.1.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023. R for Data Science: Import, Tidy, Transform, Visualize, and Model Data. 2nd ed. O’Reilly.",
-    "crumbs": [
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "the_basics.html",
-    "href": "the_basics.html",
-    "title": "The Basics",
-    "section": "",
-    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title",
-    "crumbs": [
-      "The Basics"
-    ]
-  },
-  {
-    "objectID": "introduction.html#about-me",
-    "href": "introduction.html#about-me",
-    "title": "Introduction",
-    "section": "About me",
-    "text": "About me",
-    "crumbs": [
-      "Introduction"
+      "References"
     ]
   },
   {
@@ -1597,283 +1379,63 @@
     ]
   },
   {
-    "objectID": "animated-plots.html",
-    "href": "animated-plots.html",
-    "title": "13  Animated plots",
-    "section": "",
-    "text": "13.1 Animation",
-    "crumbs": [
-      "Special cases",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Animated plots</span>"
-    ]
-  },
-  {
-    "objectID": "animated-plots.html#gif",
-    "href": "animated-plots.html#gif",
-    "title": "13  Animated plots",
-    "section": "\n13.2 GIF",
-    "text": "13.2 GIF",
-    "crumbs": [
-      "Special cases",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Animated plots</span>"
-    ]
-  },
-  {
-    "objectID": "stats.html#random-rorests",
-    "href": "stats.html#random-rorests",
-    "title": "4  Stats",
-    "section": "\n4.15 Random rorests",
-    "text": "4.15 Random rorests",
-    "crumbs": [
-      "Layers",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Stats</span>"
-    ]
-  },
-  {
-    "objectID": "annotations.html#highlighting-geoms",
-    "href": "annotations.html#highlighting-geoms",
-    "title": "5  Annotations",
-    "section": "\n5.6 Highlighting geoms",
-    "text": "5.6 Highlighting geoms",
-    "crumbs": [
-      "Layers",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Annotations</span>"
-    ]
-  },
-  {
-    "objectID": "networks.html#sankey",
-    "href": "networks.html#sankey",
-    "title": "11  Networks",
-    "section": "\n11.4 Sankey",
-    "text": "11.4 Sankey\n\n11.4.1 Sankey diagram\n\n11.4.2 Sankey bump Plot",
-    "crumbs": [
-      "Special cases",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Networks</span>"
-    ]
-  },
-  {
-    "objectID": "coordinate_systems.html",
-    "href": "coordinate_systems.html",
-    "title": "7  Coordinate systems",
-    "section": "",
-    "text": "7.1 Capping axis lines",
-    "crumbs": [
-      "Layers",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Coordinate systems</span>"
-    ]
-  },
-  {
-    "objectID": "coordinate_systems.html#serial-axes-coordinates",
-    "href": "coordinate_systems.html#serial-axes-coordinates",
-    "title": "7  Coordinate systems",
-    "section": "\n7.2 Serial axes coordinates",
-    "text": "7.2 Serial axes coordinates",
-    "crumbs": [
-      "Layers",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Coordinate systems</span>"
-    ]
-  },
-  {
-    "objectID": "preface.html#landscape",
-    "href": "preface.html#landscape",
-    "title": "Preface",
-    "section": "",
-    "text": "ggplot2 dependencies between 2007-2023\n\n\n\n\n\nggplot2 dependencies between 2007-2023\n\n\n\nWickham, Hadley, Romain François, Lionel Henry, Kirill Müller, and Davis Vaughan. 2023. Dplyr: A Grammar of Data Manipulation. R Package Version 1.1.4. https://CRAN.R-project.org/package=dplyr.",
-    "crumbs": [
-      "Preface"
-    ]
-  },
-  {
-    "objectID": "preface.html#footnotes",
-    "href": "preface.html#footnotes",
-    "title": "Preface",
-    "section": "",
-    "text": "“Depends: Listing a package in […] Depends […] ensures that it’s installed when needed. […] A package you list in Depends will be attached when your package is attached.”↩︎\n“Imports: packages listed here must be present for your package to work. Any time your package is installed, those packages will also be installed, if not already present. devtools::load_all() also checks that all packages in Imports are installed.”↩︎\n“Suggests: your package can use these packages, but doesn’t require them. You might use suggested packages for example datasets, to run tests, build vignettes, or maybe there’s only one function that needs the package.”↩︎",
-    "crumbs": [
-      "Preface"
-    ]
-  },
-  {
-    "objectID": "introduction.html#who-is-the-book-for",
-    "href": "introduction.html#who-is-the-book-for",
-    "title": "Introduction",
-    "section": "Who is the book for?",
-    "text": "Who is the book for?\nI assume that you’re reading this because you’re interested in data visualization, R, or both.\nI already wrote about this in the Welcome section. This book is for people who already have a working knowledge of ggplot2 and the grammar of graphics. I’m quite adamant on that. You should learn the foundations first. And there are already excellent books and websites for that.\nOther than that, the tools and techniques in the book aren’t all that advanced (at least most of them). You don’t have to be a visualization wizard to find the book useful. Each of the chapters will contain code that you can use almost verbatim.\nIt doesn’t even matter if R isn’t your native language. You might find an inspiring R package and then go on and find a similar package in your preferred language. Or write that package, if one doesn’t already exist. It’s all good!",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "index.html#sec-index-acknowledgements",
-    "href": "index.html#sec-index-acknowledgements",
-    "title": "ggplot2 extended",
-    "section": "Acknowledgments",
-    "text": "Acknowledgments\nThis book was built with Quarto and is hosted on Netlify.\n\n\n\n\nWickham, Hadley. 2016. Ggplot2: Elegant Graphics for Data Analysis. 2nd ed. Springer-Verlag New York.\n\n\n———. 2024. Ggplot2: Elegant Graphics for Data Analysis. R Package Version 3.5.1. https://ggplot2.tidyverse.org.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023. R for Data Science: Import, Tidy, Transform, Visualize, and Model Data. 2nd ed. O’Reilly.",
-    "crumbs": [
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "introduction.html#sec-colophon",
-    "href": "introduction.html#sec-colophon",
-    "title": "Introduction",
-    "section": "Colophon",
-    "text": "Colophon\nThis book was written in RStudio using Quarto. The website is hosted with Netlify. And it’s automatically updated after every commit by Github Actions. The complete source is available from GitHub.\nThis version of the book was built with R version 4.5.0 (2025-04-11) and the following packages:\n\n  \n\n\n\n\n\nSanderson, Steven, and Antti Rask. 2024. RandomWalker: Generate Random Walks Compatible with the ’Tidyverse’. https://www.spsanderson.com/RandomWalker/.\n\n\nWickham, Hadley. 2016. Ggplot2: Elegant Graphics for Data Analysis. 2nd ed. Springer-Verlag New York.\n\n\n———. 2023. Conflicted: An Alternative Conflict Resolution Strategy. https://conflicted.r-lib.org/.\n\n\n———. 2025. Ggplot2: Elegant Graphics for Data Analysis. https://ggplot2.tidyverse.org.\n\n\nWickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2023. Tidyverse: Welcome to the Tidyverse. https://tidyverse.tidyverse.org/.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023. R for Data Science: Import, Tidy, Transform, Visualize, and Model Data. 2nd ed. O’Reilly.",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "preface.html#sec-landscape",
-    "href": "preface.html#sec-landscape",
-    "title": "Preface",
-    "section": "",
-    "text": "ggplot2 dependencies between 2007-2023\n\n\n\n\n\n\nWickham, Hadley, Romain François, Lionel Henry, Kirill Müller, and Davis Vaughan. 2023. Dplyr: A Grammar of Data Manipulation. https://dplyr.tidyverse.org.",
-    "crumbs": [
-      "Preface"
-    ]
-  },
-  {
-    "objectID": "introduction.html#sec-purpose-and-scope",
-    "href": "introduction.html#sec-purpose-and-scope",
-    "title": "Introduction",
-    "section": "",
-    "text": "What you will learn\nThis book continues from where ggplot2: Elegant Graphics for Data Analysis (Wickham 2016) left off. In his book, Hadley does mention some extension packages by name. But until now there hasn’t been a comprehensive guide to those extension packages. And how to use them together.\nBasics works as kind of a “Previously, on ggplot2…”. A reminder of the basic function(alitie)s of the core package.\nLayers goes through the layers that make up the grammar of graphics: Data, geometric objects (Geoms), statistical transformations (Stats), titles and labels (Annotations), color, position and size of visual elements (Scales and guides), Coordinate systems, small multiples (Facets), and Themes. They are in a logical order. As are the rest of the chapters. The same order that you would build your visualization in.\nSpecial cases hosts not-so-typical visualizations: Maps, networks, interactive plots, animated plots, and graphs integrated in tables.\nShortcuts contains different kinds of helpers and interactive tools. Designed to make it easier to create your visualizations.\nAt some point, we will be getting ready to publish our visualization. You’ll want to give them finishing touches, but it’s also good to know about arranging plots.\nAnd while ggplot2 is an R package, its impact and influence go beyond R. So we’ll talk about Python a bit.\nTo finish off, we go through some case studies. We build visualizations, step-by-step, from data to publication.\nWhat you won’t learn\nThese are some of the interesting topics that I had to leave out of the book. It’s long as it is and I decided to concentrate on the topics and extensions that everyone can use. Regardless of the field you’re in.\nCombining visualizations and BI tools\nUsing R in general and ggplot2 visualizations in specific within BI tools like Power BI is cool. Interested? You can start by reading Luca Zavarella’s book Extending Power BI with Python and R.\nGenerative art\nCreating art with R - color me impressed! It’s called Rtistry or aRt, because why not? There isn’t enough room in the book for a proper chapter on this, but here are some links to get you started on the topic:\n\nartpack by Meghan Harris\naRtsy by Koen Derks\nGenerative Art by Nicola Rennie\n\nLarge language models (LLM)\nI know, it would be trendy to write about AI. And I do think they can play a part in the data visualization process. But there isn’t anything that meaningful to write about. Whatever you do, whether you use AI or not, do trust your senses!\nA machine doesn’t need to visualize data to use it. So, in a way, data visualization is one of the last bastions of human-to-human communication. By humans, for humans, am I right?\nSpecialized packages in specialized fields like bioinformatics\nThis one should be self-evident. “Write what you know”. I know nothing about bioinformatics. I’m not even sure I understand what the term means.\nAre you interested in bioinformatics? I mean, I don’t want to leave you hanging. There is a website and a suite of packages called Bioconductor that should get you started!\nSports\nIt’s the same as with generative art. Interesting topic, but not enough space. Still, here’s another short list of packages related to sports:\nBaseball\n\nbaseballr by Saiem Gilani\nmlbplotR by Camden Kay\n\nFootball\n\nnflplotR by Sebastian Carl\n\nSoccer\n\nggshakeR by Abhishek Amol Mishra\nggsoccer by Ben Torvaney\nsoccerAnimate by Ismael Gómez Schmidt\n\nVarious\n\nsportyR by Ross Drucker",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "introduction.html#sec-who-is-the-book-for",
-    "href": "introduction.html#sec-who-is-the-book-for",
-    "title": "Introduction",
-    "section": "Who is the book for?",
-    "text": "Who is the book for?\nI assume that you’re reading this because you’re interested in data visualization, R, or both.\nI already wrote about this in the Welcome section. This book is for people who already have a working knowledge of ggplot2 and the grammar of graphics. I’m quite adamant on that. You should learn the foundations first. And there are already excellent books and websites for that.\nOther than that, the tools and techniques in the book aren’t all that advanced (at least most of them). You don’t have to be a visualization wizard to find the book useful. Each of the chapters will contain code that you can use almost verbatim.\nIt doesn’t even matter if R isn’t your native language. You might find an inspiring R package and then go on and find a similar package in your preferred language. Or write that package, if one doesn’t already exist. It’s all good!",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "introduction.html#sec-who-am-i-to-write-this-book",
-    "href": "introduction.html#sec-who-am-i-to-write-this-book",
-    "title": "Introduction",
-    "section": "Who am I to write this book?",
-    "text": "Who am I to write this book?\nHi! I’m Antti Rask, a data analyst if you had to choose one label. I’ve lived many lives and had many careers before finding my truest calling in data.\nI’ve liked data visualizations longer than I’ve been using R (which I started in late 2019/early 2020). I made my first visualizations with Excel. At some point, I switched to Power BI. Which is still my main tool for visualization at work.\nYou could say that I am an artistic type. Music has been the main avenue for my artistic self-expression for most of my life. But I’ve also liked to take photos of street art. I come across them on my adventures in Helsinki, or when I’m abroad.\nIn visualizing data I find myself leaning more towards the Stephen Few school of thought. Less is usually more and you should avoid chartjunk at all costs. Still, I’m not a purist, by any means.\nI’ve co-authored the RandomWalker (Sanderson and Rask 2024) R package with Steven Paul Sanderson II (@spsanderson). Specifically the function RandomWalker::visualize_walks(). It uses ggplot2 and some of the extensions found in this book.\nI also like to tinker with R Shiny and recently made an app called TuneTeller. It received an honorable mention in the 2024 Shiny Contest.",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "introduction.html#sec-r",
-    "href": "introduction.html#sec-r",
-    "title": "Introduction",
-    "section": "R",
-    "text": "R\nAll the code in this book is in R. Except for 19  Python. If you have never used R, R for Data Science (Wickham, Çetinkaya-Rundel, and Grolemund 2023) is a better place to start.\nDon’t have R yet? You can get the latest version from CRAN (the comprehensive R archive network): https://www.r-project.org/.",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "introduction.html#sec-packages",
-    "href": "introduction.html#sec-packages",
-    "title": "Introduction",
-    "section": "Packages",
-    "text": "Packages\nggplot2 & tidyverse\nThe tidyverse is a collection of R packages. ggplot2 is one of them. The others are dplyr, forcats, lubridate, purrr, readr, stringr, tibble, and tidyr.\nYou could install the packages you need one by one, but you might as well install the whole tidyverse:\n\ninstall.packages(\"tidyverse\")\n\nTo highlight each of the packages used, I’ve decided to load the individual packages in the code examples. If you want to, you can use the following:\nlibrary(tidyverse)\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\nThe previous message mentions conflicted (Wickham 2023). It’s not part of the core tidyverse, but it’s one of my favorite packages. And I do recommend loading it whenever you’re writing new code.\nIt checks for conflicting function names and forces you to choose the one you want to use. Either use case by use case (for example dplyr::filter()) or session-wide (for example conflicts_prefer(dplyr::filter())).\nTo install conflicted:\n\ninstall.packages(\"conflicted\")\n\nAll you need to do is load the package at the beginning of your script:\n\nlibrary(conflicted)\n\nIt will then let you know if a conflict emerges. One fewer reason to have your code act weird when running it.\nggplot2 extensions\nHere are the main characters of this book.\nSome of them you can install from CRAN:\n\ninstall.packages(\n  c(\n    \"DataExplorer\",\n    \"ExPanDaR\",\n    \"GGally\",\n    \"ggcorrplot\",\n    \"ggplot2movies\",\n    \"ggquickeda\",\n    \"gt\",\n    \"gtExtras\",\n    \"naniar\",\n    \"Radiant\"\n  )\n)\n\nOthers you will have to install from GitHub:\nOthers\nHere are the packages that are not part of the tidyverse. They aren’t considered to be ggplot2 extensions either. They are still useful for what we want to do and worth highlighting instead of hiding.\n\ninstall.packages(\n  c(\n    \"janitor\",\n    \"scales\"\n  )\n)",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "introduction.html#sec-next-steps",
-    "href": "introduction.html#sec-next-steps",
-    "title": "Introduction",
-    "section": "Next steps?",
-    "text": "Next steps?\nIf you are reading these chapters in chronological order, the next step will be to read the rest of the book.\nOf course, I recommend you don’t only read the book. I’ve learned the most from reading these technical books when I’ve also gone through the code examples. Debugged them (of course I hope the code I provide isn’t broken…) when needed. Even translated them to another language (Python to R) or dialect (base R to tidyverse).\nNext, it’s practice, practice, practice. Recreate your favorite data visualizations using only ggplot2 and its extensions. Create something completely new. Either using your data (fitness, music, social media, etc.) or even something from ?sec-data. There are also concepts like TidyTuesday (see Further resources).",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "introduction.html#sec-introduction-acknowledgements",
-    "href": "introduction.html#sec-introduction-acknowledgements",
-    "title": "Introduction",
-    "section": "Acknowledgements",
-    "text": "Acknowledgements\nEevamaija Virtanen, Juha Korpela, and Säde Haveri for founding Helsinki Data Week with me. For helping me dream big! And for making me realize a big project like this is possible when you keep making constant progress.\nMarc Eixarch (@Marceix) and Vicent Boned Riera (@eivicent) from the R User Group Finland. Learning R has been more fun thanks to your efforts in keeping the local R scene active in Helsinki, Finland.\nJoe Reis, Ole Olesen-Bagneux, and Vin Vashishta for your generosity and time. And for setting a positive example for someone like me to follow.\nHadley Wickham (@hadley) for all the books and packages. R for Data Science (Wickham, Çetinkaya-Rundel, and Grolemund 2023) got me started with R. ggplot2: Elegant Graphics for Data Analysis (Wickham 2016) helped me understand ggplot2 and the grammar of graphics on a deeper level.\nTo be continued…",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "data.html#sec-data-sets",
-    "href": "data.html#sec-data-sets",
-    "title": "\n2  This book/site is under construction\n",
-    "section": "",
-    "text": "2.1.1 base R\nBase R comes with a bunch of data sets ready to use. There are classics like iris and mtcars, but there are many more to choose from.\n\n  \n\nSince the datasets package comes from base R, the data is not always immediately ready to use with ggplot2 (Wickham 2025). Luckily we have the tidyverse (Wickham, Averick, et al. 2023) packages that make it easy to make the necessary changes.\nHere is an example using the WorldPhones (‘The World’s Telephones’) data set. We can start by loading the data set by using the data() function.\n\ndata(WorldPhones)\n\nLet’s take a quick look at what the first couple of rows of the data set looks like.\n\nhead(WorldPhones)\n\n     N.Amer Europe Asia S.Amer Oceania Africa Mid.Amer\n1951  45939  21574 2876   1815    1646     89      555\n1956  60423  29990 4708   2568    2366   1411      733\n1957  64721  32510 5230   2695    2526   1546      773\n1958  68484  35218 6662   2845    2691   1663      836\n1959  71799  37598 6856   3000    2868   1769      911\n1960  76036  40341 8220   3145    3054   1905     1008\n\n\nWorldPhones is a matrix with 7 rows and 8 columns. The columns give the figures for a given region, and the rows the figures for a year. We would like to turn it into a tidy format. We can use the tibble (Müller and Wickham 2023) package for the first part. And then we’ll use pivot_longer() from the tidyr package (Wickham, Vaughan, and Girlich 2024). It increases the number of rows and decrease the number of columns. We want the continents to be observations, not columns.\n\nlibrary(dplyr)\nlibrary(tibble)\nlibrary(tidyr)\n\nworld_phones_tbl &lt;- WorldPhones %&gt;%\n  as.data.frame() %&gt;%\n  rownames_to_column(var = \"Year\") %&gt;%\n  as_tibble() %&gt;%\n  pivot_longer(\n    cols      = !Year,\n    names_to  = \"Continent\",\n    values_to = \"Phones\"\n  ) %&gt;% \n  mutate(across(where(is.character), as.factor))\n\n\n  \n\nWhat we’re left with is a tibble with three columns, Year, Continent, and Phones. We can then use the new tibble to create a simple graph with ggplot2.\nlibrary(ggplot2)\n\nworld_phones_tbl %&gt;%\n  ggplot(aes(Year, Phones, color = Continent, group = Continent)) +\n  geom_line() +\n  theme_bw()\n\n\n2.1.2 IMDb movies (1893-2005)\nggplot2movies (Wickham 2015) used to be a part of the ggplot2 package itself. It’s now its own package to make ggplot2 lighter.\nBut it’s a cool little package. It has Internet Movie Database (IMDb) data about movies from between 1893 and 2005. The selected movies have “a known length and had been rated by at least one [IMDb] user.” (Wickham 2015).\nThe Movies data set has qualities that make it good for our needs. Let’s start by loading it.\nlibrary(ggplot2movies)\n\ndata(movies)\nLet’s take a quick look at what some of the data looks like.\n\nhead(movies)\n\n\n  \n\nMovies is already a tibble. It consists of 58788 rows (observations) and 24 columns (variables).\nWhen starting to work with a new data set it’s always good to take a look at the documentation. To understand what is in those rows and columns (and what is not).\n\n  \n\nHere are some of the reasons why Movies is a good example data set because it includes:\n\nA goldilocks amount of data. Not too little, not too much\n\nCategorical data of both nominal (title, genre) and ordinal (mpaa) kind\n\nNumerical data of both continuous (budget, length, rating) and discrete (year, votes) kind\n\nWe can use two of those columns, year and rating to create a simple visualization with ggplot2.\nlibrary(ggplot2)\n\nmovies %&gt;%\n  ggplot(aes(year, rating)) +\n  geom_point(alpha = 0.05) +\n  theme_bw()\n\nAs mentioned earlier, Movies is already a tibble. But, it doesn’t mean that the data is in an optimal format for all kinds of visualization. But we’ll do all the necessary data wrangling within the chapter where we use the data.\n\n2.1.3 RDatasets\nRDatasets is not an R package. But it is an excellent GitHub repo. And a “collection of datasets originally distributed in various R packages” (Arel-Bundock 2024).\nHere listed are the 2337 data sets that were available on 2024-11-11.\n\n  \n\nThe RDatasets repo contains that same list. But there you will also find a .csv file and documentation for each data set.\nIf I had to choose one fun data set from the list to highlight, it would be starwars from the dplyr (Wickham, François, et al. 2023) package.\nYou can choose to use the .csv file provided on the website. Another way to use the collection is to choose the dataset from the list and load the package it comes with:\n\nlibrary(dplyr)\n\ndata(starwars)\n\nLet’s take a quick look at what some of the starwars data looks like.\n\nhead(starwars)\n\n\n  \n\nThere are a bunch of Star Wars characters and their stats.\nLet’s choose two columns, height and species (and filter for six of the more well-known species). We’ll use them to create a simple visualization with ggplot2.\nlibrary(ggplot2)\n\nstarwars %&gt;%\n  filter(species %in% c(\"Droid\", \"Ewok\", \"Gungan\", \"Human\", \"Hutt\", \"Wookiee\")) %&gt;%\n  ggplot(aes(height, species)) +\n  geom_boxplot() +\n  theme_bw()\n\nThis concludes the section about the different data sets available for every R user. Next, we’ll take a look at some of the ggplot2 extensions that make it easier to do exploratory data analysis (EDA).",
-    "crumbs": [
-      "Layers",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data sets</span>"
-    ]
-  },
-  {
-    "objectID": "data.html#sec-exploratory-data-analysis-eda",
-    "href": "data.html#sec-exploratory-data-analysis-eda",
-    "title": "\n2  This book/site is under construction\n",
-    "section": "\n2.2 Exploratory data analysis (EDA)",
-    "text": "2.2 Exploratory data analysis (EDA)\nExploratory data analysis (or EDA, which we’ll be using from now on) is a process, even if it is a loose one. The Cambridge Dictionary ((Ed.) 2013) defines process as “a series of actions that you take in order to achieve a result”. So, we a) have a series of actions and b) a result you wish to achieve.\nLet’s look at the results first. After all, that is why we do things. You might have other, more specific goals depending on your particular field or use case. But in the most general sense, the result we’re after is a better understanding of the data (set) we’re working on.\nWhat are the series of actions we need to take? As I mentioned earlier, EDA is a loose process. There are as many ways to go about it as there are analysts and data sets. Still, some common steps usually occur: looking at missing values, summarizing data, and visualizing relationships between variables.\nIt’s good to note these visualizations aren’t usually meant for publication. Compared to those you find later on in the book, these are more for your eyes than for the eventual audience.\nThe last thing we’ll look at in this chapter is one way to automate the EDA process using an app. Although I must warn you. It’s better to use these tools only after you’ve gained experience from doing EDA without them. It might sound counter-intuitive, but trust me. It can be too overwhelming if you don’t know what you’re doing.\n\n2.2.1 Missing values\nLet’s first load the data. Looking at the movies data set earlier we noticed the mpaa column had many blank values. We don’t know if they didn’t have a rating in the first place. Or if they did, but the rating is missing. For the sake of this demonstration, let’s assume they all should have a rating.\nWe’ll begin by turning all the blank values (of the character type) into NA (not available).\n\nlibrary(dplyr)\nlibrary(ggplot2movies)\n\nmovies_na &lt;- movies %&gt;%\n  mutate(\n    # Turn all blank values of the character type into NA\n    across(where(is.character), ~na_if(., \"\")), \n    # Create a decade column for grouping based on the values in the year column\n    decade = floor(year / 10) * 10\n  )\n\nNaniar (Tierney et al. 2024) is a package with many functions for visualizing missing (NA) values. It does contain many functions outside of visualization. But that’s for another book.\nOne simple function is gg_miss_var(). It creates a lollipop plot ([INSERT LINK HERE]). It shows which columns (variables) contain the greatest amount of missing (NA) values.\n\nlibrary(naniar)\n\nmovies_na %&gt;% \n  gg_miss_var() +\n  theme_bw()\n\n\n\n\n\n\n\nWe can see that MPAA ratings aren’t the only thing missing. Almost the same amount of films are missing the budget information. With budget, it’s easier to say that if we don’t have a number, it is missing. Then again, that column did have NAs in place from the beginning.\nWe’re also interested in seeing if there is overlapping missingness between the columns. It can indicate patterns in the data. We’ll use an upset plot ([INSERT LINK HERE]) for that. Just add gg_miss_upset().\n\nmovies_na %&gt;% \n  gg_miss_upset(\n    # Number of sets to look at. We know there are only two columns with NA\n    nsets = 2\n  )\n\n\n\n\n\n\n\nMore than 3000 movies without an MPAA rating and almost the same amount without a budget. But over 50000 without both. That makes me think there is a consistency in the missingness.\nWe can also use geom_miss_point() to see if there are more patterns between the missing variables. Let’s also use label_number() from the scales (Wickham, Pedersen, and Seidel 2023) package to prettify the x-axis labels.\n\nlibrary(ggplot2)\nlibrary(scales)\n\np1 &lt;- movies_na %&gt;%\n  ggplot(aes(budget, mpaa)) +\n  geom_point() +\n  geom_miss_point() +\n  scale_x_continuous(\n    labels = label_number(\n      scale  = 1e-6,\n      prefix = \"$\",\n      suffix = \"M\"\n    )\n  ) +\n  theme_bw()\n\n\nValues seem to be missing in all the MPAA rating categories. NC-17 does not seem to contain that many values in general, but many of them seem to be missing.\nLet’s confirm this observation by creating a frequency table with the tabyl() function. It’s from a neat package called janitor (Firke 2024).\nlibrary(dplyr)\nlibrary(janitor)\n\nmovies_na %&gt;% \n  filter(mpaa == \"NC-17\") %&gt;% \n  tabyl(mpaa, budget) %&gt;%\n  paged_table()\n\n  \n\nSo, there are more NC-17 movies that are missing the budget than those that aren’t.\nWe can dig even deeper. We can use facet_wrap() from ggplot2 to see how the missing values are distributed throughout the history.\np1 +\n  scale_x_continuous(\n    n.breaks = 3,\n    labels   = label_number(\n      scale  = 1e-6,\n      prefix = \"$\",\n      suffix = \"M\"\n    )\n  ) +\n  facet_wrap(vars(decade))\n\nBefore moving on, let’s first look at one alternative for visualizing missing values, plot_missing(). It comes from the DataExplorer (Cui 2024) package.\nlibrary(DataExplorer)\n\nmovies_na %&gt;%\n  plot_missing(\n    # Let's only visualize the missing values\n    missing_only = TRUE,\n    # We'll use theme_bw() when possible\n    ggtheme      = theme_bw()\n  )\n\nYou see the amount and percentage of NAs per column, arranged in order of missingness. This is a great quick overview!\nDataExplorer, like naniar earlier, provides functions for handling the missing values. For instance, we could drop the budget and mpaa columns, as indicated by the red color in the plot above.\n\n2.2.2 Summarizing data\nOf course, we want to visualize more than the missing data. It makes sense to start with an overview of some kind.\nLuckily we don’t have to go further than the DataExplorer package. You know, the one we already tried in the previous chapter.\nWe’ll start with the plot_intro() function. It gives us some basic information about our data set, visualized.\nmovies_na %&gt;%\n  plot_intro(ggtheme = theme_bw())\n\nMissing Values\nThe most fascinating insights here are still related to missing values. Less than 5% of the rows in the data set are complete. Meaning that they have no missing values in any of the columns. And almost 10% of all the observations are missing. That’s how much the missing rows of budget and mpaa are affecting the totals. One positive thing is that we don’t have any columns that are missing all the values.\nCategorical Columns\nLet’s then take a look at the categorical columns. The one that will be missing from the upcoming visualizations is title. The values are more or less unique. So, it wouldn’t make sense having a bar chart, for instance, with more than 50000 rows with a count of 1 each.\nDid someone mention bar charts? Let’s start with the plot_bar() function to visualize the categorical columns. This will show us what the frequency of each of the values are within a column.\nmovies_na %&gt;% \n  plot_bar(ggtheme = theme_bw())\n\nWe see mpaa with it’s missing values. The rest of the categorical columns are binary ones about which genres each movie belongs to. Comedy and Drama seem to be the best represented ones in the data set.\nWith the with argument we can choose to show something else on the x-axis besides the frequency. Here, for instance, we’ve chosen length to be the column to sum up.\nmovies_na %&gt;% \n  plot_bar(\n    # Name of continuous feature to be summed instead of NULL (i.e. frequency)\n    with    = \"length\",\n    ggtheme = theme_bw()\n  )\n\nHere we can see that Animation and Short make up an even smaller part of the whole as before. Which makes sense, when you start to think about it.\nAnother useful feature is using the by argument. It means we will see the frequency broken down by a discrete feature. In this case we’ve chosen mpaa.\nmovies_na %&gt;% \n  plot_bar(\n    by      = \"mpaa\",\n    ggtheme = theme_bw()\n  )\n\nThis shows us that Action and Romance are the genres with more R rated movies than the other genres. Of course we must remember the prevalence of those missing values.\nNumerical Columns\nNext, we’ll use plot_histogram() to draw a histogram of all the numerical columns (both discrete and continuous).\nmovies_na %&gt;%\n  plot_histogram(ggtheme = theme_bw())\n\nThat’s a lot of information to take in all at once. For the next visualizations, we’ll reduce the number of columns to look at.\nr1 to r10 gives the percentile of users who rated the movie that number. Interesting information in its own right. But we’ll concentrate on budget, length, rating, votes, and year. At least for the rest of this chapter.\nThere is one more thing we notice when looking at the histogram for length. Most of the values seem to be close to zero. But there are some extreme values around even 5000 that are skewing the view. Let’s see what the cause is by looking at the title and length of the ten longest movies in the data set.\n\nmovies_na %&gt;%\n  select(title, length) %&gt;%\n  slice_max(length, n = 10) %&gt;%\n  paged_table()\n\n\n  \n\n\n\nSo, a couple of cult classics. The Cure for Insomnia (5220 minutes) and The Longest Most Meaningless Movie in the World (2880 minutes) are in a category of their own. They are legit long films and not a mistake. Let’s still create a new tibble that includes only those movies that have a length of under 500 minutes.\nAlso, we’ll select the columns mentioned earlier. Budget, length, rating, votes, and year.\nlibrary(dplyr)\n\nmovies_na_length_under_500 &lt;- movies_na %&gt;%\n  select(budget, length, rating, votes, year) %&gt;%\n  filter(length &lt; 500)\nLet’s see how the four columns, length, rating, votes, and year look like as a box plot when grouped by budget. Budget is a continuous variable. That’s why plot_boxplot() groups the values to 5 equal ranges.\nmovies_na_length_under_500 %&gt;%\n  plot_boxplot(\n    by      = \"budget\",\n    ggtheme = theme_bw(),\n    ncol    = 4\n  )\n\nBased on the box plot, the movies with a bigger budget tend to:\n\nhave ratings inside a narrower range\nhave better ratings\nhave more votes\nbe more recent\nbe longer\n\nLet’s then take a look at what this all looks like as a scatter plot. We’ll use all the same columns. It’s important to use an alpha value that is low enough to reveal a more nuanced picture than we would see if it was 1.\nmovies_na_length_under_500 %&gt;%\n  plot_scatterplot(\n    by              = \"budget\",\n    geom_point_args = list(alpha = 0.05),\n    ggtheme         = theme_bw(),\n    ncol            = 2\n  )\n\nThese are some of the ways to use DataExplorer to create a visual summary of a data set. I encourage you to dig into the documentation and see what else there is.\nTo conclude, DataExplorer has a function, create_report(). It creates a full EDA report from scratch. We won’t use that now, because the report would take too much space. But if you’re using DataExplorer, you should try it!\ngt & gtExtras\nDataExplorer is a good package, but it’s not the only game in town for EDA. gt (Iannone et al. 2025) is a package to create tables ([INSERT LINK HERE]) with.\nOften, when you think about tables, you think about numeric and text values. But that doesn’t have to be the case. With gtExtras (Mock 2023) you can create a fast and easy visual summary of your data. The gt_plt_summary() function is all you need.\nThe function does have some limitations. It has had some issues with certain data sets. The movies data set didn’t work, for instance. That’s why we’ll take a look at the WorldPhones data set instead.\n\n\n\n\n\n\nThis code chunk isn’t currently working (2025-04-25)\n\n\n\nThere is an issue with the package used and while it’s going on, its code will be commented out.\nWill show a static image instead.\n\n\n# library(gt)\n# library(gtExtras)\n# \n# world_phones_tbl %&gt;% \n#   gt_plt_summary()\n\nWhat we get is a table that combines a visualized plot overview with basic summary elements: missing, mean, median, and standard deviation (sd)). You can also see from the icon on the left, whether the column is categorical or continuous. With the categorical columns, you can see a list of the categorical values by clicking the arrow.\n\n2.2.3 Visualizing relationships\nMost of the summarization techniques we’ve used so far have dealt with the distribution of values within one variable. But it’s also important to understand the possible relationships between different variables.\nUnderstanding those relationships can provide insights into patterns, trends, and dependencies.\nTwo tools are available for this. A correlation matrix quantifies the relationships numerically. But since this book is about visualizing data, we’ll also visualize those numbers.\nA pairwise plot matrix is a complementary visual tool to explore those relationships more deeply.\n\n2.2.3.1 Correlation matrix\nFirst, let’s tweak the data set to better fit our demo purposes. We’ll select the columns we wish to use. In this case, it’s all the columns with numeric values. Except for the ones about the ratings percentiles (r1-r10). And we’ll use drop_na() from tidyr to drop rows where any column has missing values.\nlibrary(dplyr)\nlibrary(tidyr)\n\nmovies_without_na_numeric &lt;- movies_na %&gt;%\n  select(where(is.numeric) & !num_range(\"r\", 1:10)) %&gt;%\n  # The second select() is to order the columns alphabetically.\n  # Except for the names of genres that follow everything else.\n  select(budget, length, rating, votes, year, everything()) %&gt;%\n  drop_na()\nmovies_without_na_numeric %&gt;%\n  paged_table()\n\n  \n\nWe’re left with 5215 rows (observations) and 13 columns (variables). Still plenty enough to perceive exciting correlations between the columns.\nLet’s first create a correlation matrix using the cor() function. It’s from base R and computes the correlation between the different columns. We’re using the Pearson correlation coefficient as the method (default). Remember it can’t determine a potential non-linear association between variables.\nDue to the lack of space on the page, we’ll only look at these columns: budget, length, rating, votes, and year. If there was more room, we’d include the genre columns. But we’ll see them again soon enough!\ncorr &lt;- movies_without_na_numeric %&gt;% \n  cor() %&gt;%\n  round(2)\nlibrary(dplyr)\n\ncorr %&gt;%\n  as.data.frame() %&gt;%\n  select(budget, length, rating, votes, year) %&gt;%\n  # We're using slice_head to filter only the first n rows. 5 in this case.\n  # Without it, we would also have rows with the genres, ruining our matrix.\n  slice_head(n = 5) %&gt;%\n  paged_table()\n\n  \n\nOf course, we can see the differences by looking at the values in the matrix. But it might be easier to get the bigger picture by looking at them graphically. For that, we’ll use ggcorrplot (Kassambara 2023).\nThis time, we’ll also include the genre columns. We’re interested in how they correlate with each other and the original five.\nIn its basic form ggcorrplot() only needs the data argument. So let’s first look at it without any modifications.\nlibrary(ggcorrplot)\n\ncorr %&gt;%\n  ggcorrplot()\n\nSo, the way to interpret this is simple. The redder the square, the stronger the positive correlation between the two variables. Votes and budget, for instance. Which makes intuitive sense. The bigger the movie (budget), the more likely it is to garner attention from IMDb users. If we look at budget and rating, there is no discernible correlation between the two. This is an intriguing initial finding and we could investigate it further.\nBut, the bluer the square, the stronger negative correlation there seems to be between the two. The most obvious example here is the negative correlation between length and Short. Who would have guessed that the films in the Short genre would also be short in length? We can also see a negative correlation between the Short genre and budget. Which again makes perfect sense. You can also see the reverse effect when looking at budget and length. It strengthens the case further.\nWe’re still in the territory where most visualizations are for your eyes only. But there are some modifications we could make to the plot. Here are the parameters for ggcorrplot() we’re using (and why):\n\n\nCircle is the other method available. The bigger the shape, the bigger the correlation (negative or positive). Double encoding (also known as redundant encoding) is a two-edged sword. We should use it with caution. But here it can help distinguish the most noteworthy cases\nWe can use one of the ggplot2 themes by using ggtheme. Using a clean theme like theme_bw makes the plot a bit easier to read\nAll variables are perfectly correlated with themselves. It doesn’t make sense to show the diagonal. If anything, it makes reading the plot a bit harder. We can get rid of the diagonal by setting show.diag as FALSE\n\nBlue, white, and red are all fine colors. For a little more flavor, we can choose something else. Like dark turquoise, grey, and dark orange\n\n\ncorr %&gt;% \n  ggcorrplot(\n    method    = \"circle\",\n    ggtheme   = theme_bw,\n    show.diag = FALSE,\n    colors    = c(\"darkturquoise\", \"grey95\", \"darkorange3\")\n  )\n\nMuch better! And here are some more genre-related insights based on the matrix:\n\nDrama has a fairly strong positive correlation with both length and rating\nAction films have the strongest positive correlation with budget\nComedy and Romance have a positive correlation\nBut so does Romance and Drama\n\n2.2.3.2 Pairwise plot matrix\nWe already got a lot of information out of the correlation matrix. But as mentioned earlier, a pairwise plot matrix is a tool to explore the relationships within and between variables more deeply.\nAgain, we begin by fine tuning the data set. In this case we’re only interested in the Drama genre and how those films compare to the rest of the films.\nmovies_without_na_drama &lt;- movies_na %&gt;%\n  mutate(\n    Drama = if_else(Drama == 1, \"Yes\", \"No\") %&gt;%\n      as.factor()\n  ) %&gt;% \n  drop_na() %&gt;%\n  select(budget, length, rating, votes, year, Drama)\nmovies_without_na_drama %&gt;% \n  paged_table()\n\n  \n\nTo use a pairwise plot matrix we turn to GGally (Schloerke et al. 2024).\nLet’s start with the basic ggpairs() function. We only need to tell it which columns we want to use. We’ll start by looking at the dataset without the Drama column.\nlibrary(GGally)\n\nmovies_without_na_drama %&gt;%\n  ggpairs(\n    columns = c(\"budget\", \"length\", \"rating\", \"votes\", \"year\")\n  ) +\n  theme_bw()\n\nThe matrix consists of three areas: upper, lower, and diagonal (or diag when it comes to function parameters). They can contain different types of plots and are customizable. But let’s first look at the defaults:\n\nUpper contains the correlation coefficient between the two variables\nLower contains a scatter plot of the two variables\nDiagonal contains a density plot of the variable in question\n\nIt’s time to add Drama as color for the matrix. And also do some customizations:\n\nWe know Drama is either “No” or “Yes”, so let’s pick two colors that go well together, dark orange and dark turquoise\n\nWe can use functions to customize any part of the matrix\n\n\nlower_function() creates a scatter plot where the points are somewhat transparent (alpha = 0.5). There is also a red linear trend line\n\ndiag_function() creates a density plot. But why do we need to do that when the default already does the same? For some reason, default uses default colors, even if we map the colors as we have. But our function here does the trick\n\n\nThen we simply create the matrix\n\nlibrary(ggplot2)\n\n# 1) Choose your colors\nmanual_colors = c(\"darkorange3\",\"darkturquoise\")\n\n# 2) Create functions for the lower half and the diagonal of the matrix\nlower_function &lt;- function(data, mapping) {\n  ggplot(data = data, mapping = mapping) +\n    geom_point(alpha = 0.5) +\n    geom_smooth(method = \"lm\", color = \"red\")\n}\n\ndiag_function &lt;- function(data, mapping) {\n  ggplot(data = data, mapping = mapping) +\n    geom_density()\n}\n\n# 3) Add colors. Then customize upper and lower half, and the diagonal\n# of the matrix. Lower and diagonal use the functions we created in step 2\nmovies_without_na_drama %&gt;%\n  ggpairs(\n    mapping = aes(color = Drama),\n    columns = c(\"budget\", \"length\", \"rating\", \"votes\", \"year\"),\n    upper   = list(continuous = wrap(\"cor\", size = 3.5)),\n    lower   = list(continuous = lower_function),\n    diag    = list(continuous = diag_function)\n  ) +\n  scale_color_manual(values = manual_colors) +\n  theme_bw()\n\nThere are many differences throughout the data depending on whether the movie belongs to the Drama genre.\nIf you want to, you can do the same with other genres!\nThere are many other ways to customize a pairwise plot matrix. For the rest, see ggpairs() documentation.\n\n2.2.4 Automated EDA app\n\n\n\n\nArel-Bundock, Vincent. 2024. Rdatasets: A Collection of Datasets Originally Distributed in Various r Packages. https://vincentarelbundock.github.io/Rdatasets/.\n\n\nCui, Boxuan. 2024. DataExplorer: Automate Data Exploration and Treatment. http://boxuancui.github.io/DataExplorer/.\n\n\n(Ed.), Colin McIntosh. 2013. Cambridge Advanced Learner’s Dictionary. 4th ed. Cambridge University Press.\n\n\nFirke, Sam. 2024. Janitor: Simple Tools for Examining and Cleaning Dirty Data. https://github.com/sfirke/janitor.\n\n\nIannone, Richard, Joe Cheng, Barret Schloerke, Ellis Hughes, Alexandra Lauer, JooYoung Seo, Ken Brevoort, and Olivier Roy. 2025. Gt: Easily Create Presentation-Ready Display Tables. https://gt.rstudio.com.\n\n\nKassambara, Alboukadel. 2023. Ggcorrplot: Visualization of a Correlation Matrix Using ’Ggplot2’. http://www.sthda.com/english/wiki/ggcorrplot-visualization-of-a-correlation-matrix-using-ggplot2.\n\n\nMock, Thomas. 2023. gtExtras: Extending ’Gt’ for Beautiful HTML Tables. https://github.com/jthomasmock/gtExtras.\n\n\nMüller, Kirill, and Hadley Wickham. 2023. Tibble: Simple Data Frames. https://tibble.tidyverse.org/.\n\n\nSchloerke, Barret, Di Cook, Joseph Larmarange, Francois Briatte, Moritz Marbach, Edwin Thoen, Amos Elberg, and Jason Crowley. 2024. GGally: Extension to ’Ggplot2’. https://ggobi.github.io/ggally/.\n\n\nTierney, Nicholas, Di Cook, Miles McBain, and Colin Fay. 2024. Naniar: Data Structures, Summaries, and Visualisations for Missing Data. https://naniar.njtierney.com/.\n\n\nWickham, Hadley. 2015. Ggplot2movies: Movies Data.\n\n\n———. 2025. Ggplot2: Elegant Graphics for Data Analysis. https://ggplot2.tidyverse.org.\n\n\nWickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2023. Tidyverse: Welcome to the Tidyverse. https://tidyverse.tidyverse.org/.\n\n\nWickham, Hadley, Romain François, Lionel Henry, Kirill Müller, and Davis Vaughan. 2023. Dplyr: A Grammar of Data Manipulation. https://dplyr.tidyverse.org.\n\n\nWickham, Hadley, Thomas Lin Pedersen, and Dana Seidel. 2023. Scales: Scale Functions for Visualization. https://scales.r-lib.org.\n\n\nWickham, Hadley, Davis Vaughan, and Maximilian Girlich. 2024. Tidyr: Tidy Messy Data. https://tidyr.tidyverse.org.",
-    "crumbs": [
-      "Layers",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data sets</span>"
-    ]
-  },
-  {
-    "objectID": "introduction.html#sec-ide",
-    "href": "introduction.html#sec-ide",
-    "title": "Introduction",
-    "section": "IDE",
-    "text": "IDE\nRStudio is my integrated development environment (IDE) of choice. It’s free and open-source. It’s the environment where you can try out the code you find in this book. And it’s also where I wrote this book.\nYou can download the latest version from the Posit website: https://posit.co/download/rstudio-desktop/. Posit is the company that develops RStudio and many R packages. Like the tidyverse (Wickham et al. 2023) (see ggplot2 & tidyverse).\nThere are other alternatives like VSCode, Positron, and JupyterLab. This book does operate under the assumption that you are using RStudio.",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "introduction.html#sec-further-resources",
-    "href": "introduction.html#sec-further-resources",
-    "title": "Introduction",
-    "section": "Further resources",
-    "text": "Further resources\nBlogs\n\nAlbert Rapp\nBruno Mioto\nCédric Scherer\nDominic Royé\nGeorgios Karamanis\nMatt Dancho\nNicola Rennie\nBooks\n\nBBC Visual and Data Journalism cookbook for R graphics\nData visualisation using R, for researchers who don’t use R by Emily Nordmann et al.\nggplot2: Elegant Graphics for Data Analysis (3e) by Hadley Wickham et al.\nAn Introduction to ggplot2 by Ozancan Ozdemir\nModern Data Visualization with R by Robert Kabacoff\nR Gallery Book by Kyle W. Brown\nR Graphics Cookbook, 2nd edition by Winston Chang\nSolutions to ggplot2: Elegant Graphics for Data Analysis by Howard Baek\nThe Missing Book by Nicholas Tierney & Allison Horst\nGitHub Repos\n\nAwesome ggplot2 by Erik Gahner\nAwesome R Dataviz by Krzysztof Joachimiak\nggplot2 extenders by Gina Reynolds & Teun van den Brand\nggplot Tricks by Teun van den Brand\nTidyTuesday by Tom Mock\nWebsites\n\nPackages (ggplot2) by Antti Rask\nR for Artists and Designers by Arvind Venkatadri\nR for the Rest of Us by David Keys\nR Graph Gallery by Yan Holtz\nStatistics Globe by Joachim Schork\nYouTube\n\nAlbert Rapp\nStatistics Globe by Joachim Schork\nYouTube\n\nggplot2 extenders - Hadley Wickham: Thoughts on the ggplot2 extension ecosystem",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "index.html#sec-index-acknowledgments",
-    "href": "index.html#sec-index-acknowledgments",
-    "title": "ggplot2 extended",
-    "section": "Acknowledgments",
-    "text": "Acknowledgments\nThis book was built with Quarto and is hosted on Netlify.\n\n\n\n\nWickham, Hadley. 2016. Ggplot2: Elegant Graphics for Data Analysis. 2nd ed. Springer-Verlag New York.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023. R for Data Science: Import, Tidy, Transform, Visualize, and Model Data. 2nd ed. O’Reilly.",
-    "crumbs": [
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "introduction.html#sec-introduction-acknowledgments",
-    "href": "introduction.html#sec-introduction-acknowledgments",
-    "title": "Introduction",
-    "section": "Acknowledgments",
-    "text": "Acknowledgments\nEevamaija Virtanen, Juha Korpela, and Säde Haveri for founding Helsinki Data Week with me. For helping me dream big! And for making me realize a big project like this is possible when you keep making constant progress.\nMarc Eixarch (@Marceix) and Vicent Boned Riera (@eivicent) from the R User Group Finland. Learning R has been more fun thanks to your efforts in keeping the local R scene active in Helsinki, Finland.\nJoe Reis, Ole Olesen-Bagneux, and Vin Vashishta for your generosity and time. And for setting a positive example for someone like me to follow.\nHadley Wickham (@hadley) for all the books and packages. R for Data Science (Wickham, Çetinkaya-Rundel, and Grolemund 2023) got me started with R. ggplot2: Elegant Graphics for Data Analysis (Wickham 2016) helped me understand ggplot2 and the grammar of graphics on a deeper level.\nTo be continued…",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "tables.html",
-    "href": "tables.html",
-    "title": "14  Tables",
+    "objectID": "layers.html",
+    "href": "layers.html",
+    "title": "Layers",
     "section": "",
     "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title",
     "crumbs": [
-      "Special cases",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Tables</span>"
+      "Layers"
+    ]
+  },
+  {
+    "objectID": "special_cases.html",
+    "href": "special_cases.html",
+    "title": "Special cases",
+    "section": "",
+    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title",
+    "crumbs": [
+      "Special cases"
+    ]
+  },
+  {
+    "objectID": "shortcuts.html",
+    "href": "shortcuts.html",
+    "title": "Shortcuts",
+    "section": "",
+    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title",
+    "crumbs": [
+      "Shortcuts"
+    ]
+  },
+  {
+    "objectID": "getting_ready_to_publish.html",
+    "href": "getting_ready_to_publish.html",
+    "title": "Getting ready to publish",
+    "section": "",
+    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title",
+    "crumbs": [
+      "Getting ready to publish"
+    ]
+  },
+  {
+    "objectID": "beyond_r.html",
+    "href": "beyond_r.html",
+    "title": "Beyond R",
+    "section": "",
+    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title",
+    "crumbs": [
+      "Beyond R"
+    ]
+  },
+  {
+    "objectID": "case_studies.html",
+    "href": "case_studies.html",
+    "title": "Case studies",
+    "section": "",
+    "text": "This book/site is under construction\n\n\n\nEverything is liable to change, even the title",
+    "crumbs": [
+      "Case studies"
     ]
   }
 ]
