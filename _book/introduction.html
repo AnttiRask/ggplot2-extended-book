@@ -204,7 +204,7 @@ div.csl-indent {
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data sets</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -400,7 +400,8 @@ div.csl-indent {
   <li><a href="#sec-books" id="toc-sec-books" class="nav-link" data-scroll-target="#sec-books">Books</a></li>
   <li><a href="#sec-github-repos" id="toc-sec-github-repos" class="nav-link" data-scroll-target="#sec-github-repos">GitHub Repos</a></li>
   <li><a href="#sec-websites" id="toc-sec-websites" class="nav-link" data-scroll-target="#sec-websites">Websites</a></li>
-  <li><a href="#sec-youtube" id="toc-sec-youtube" class="nav-link" data-scroll-target="#sec-youtube">YouTube</a></li>
+  <li><a href="#sec-youtube-channels" id="toc-sec-youtube-channels" class="nav-link" data-scroll-target="#sec-youtube-channels">YouTube</a></li>
+  <li><a href="#sec-youtube-videos" id="toc-sec-youtube-videos" class="nav-link" data-scroll-target="#sec-youtube-videos">YouTube</a></li>
   </ul>
 </li>
   <li><a href="#sec-introduction-acknowledgments" id="toc-sec-introduction-acknowledgments" class="nav-link" data-scroll-target="#sec-introduction-acknowledgments">Acknowledgments</a></li>
@@ -437,7 +438,7 @@ This book/site is under construction
 </div>
 </div>
 <p>Data visualization is one of those things that can look easy when you see someone doing it well. Then you try it yourself and it’s easy to feel like you know nothing.</p>
-<p>I wanted to share the tools that make it easier to create those beautiful visualizations. And to show you how to use those tools together, not only with <strong>ggplot2</strong> <span class="citation" data-cites="wickham2024">(<a href="references.html#ref-wickham2024" role="doc-biblioref">Wickham 2024</a>)</span> but with each other.</p>
+<p>I wanted to share the tools that make it easier to create those beautiful visualizations. And to show you how to use those tools together, not only with <strong>ggplot2</strong> <span class="citation" data-cites="wickham2024a">(<a href="references.html#ref-wickham2024a" role="doc-biblioref">Wickham 2025</a>)</span> but with each other.</p>
 <p>One bit about terminology before we go any further. <em>Chart</em>, <em>diagram</em>, <em>graph</em>, <em>plot</em>, and <em>visualization</em> are all terms that people have tried to give strict definitions to. But in reality, they get used more or less interchangeably. Is it a bar chart or a bar graph? Yes.</p>
 <p>In the context of this book, I try to use the terms consistently in this way:</p>
 <ul>
@@ -512,7 +513,7 @@ This book/site is under construction
 <p>I’ve co-authored the <strong>RandomWalker</strong> <span class="citation" data-cites="sanderson2024">(<a href="references.html#ref-sanderson2024" role="doc-biblioref">Sanderson and Rask 2024</a>)</span> R package with <strong>Steven Paul Sanderson II</strong> (<a href="https://github.com/spsanderson">@spsanderson</a>). Specifically the function <code>RandomWalker::visualize_walks()</code>. It uses ggplot2 and some of the extensions found in this book.</p>
 <p>I also like to tinker with R Shiny and recently made an app called <a href="https://youcanbeapirate.shinyapps.io/TuneTeller/">TuneTeller</a>. It received an <em>honorable mention</em> in the 2024 <a href="https://posit.co/blog/winners-of-the-2024-shiny-contest/">Shiny Contest</a>.</p>
 </section><section id="sec-r" class="level2"><h2 class="anchored" data-anchor-id="sec-r">R</h2>
-<p>All the code in this book is in <strong>R</strong>. Except for <a href="python.html" class="quarto-xref"><span>18&nbsp; Python</span></a>. If you have never used R, <a href="https://r4ds.hadley.nz/">R for Data Science</a> <span class="citation" data-cites="wickham2023a">(<a href="references.html#ref-wickham2023a" role="doc-biblioref">Wickham, Çetinkaya-Rundel, and Grolemund 2023</a>)</span> is a better place to start.</p>
+<p>All the code in this book is in <strong>R</strong>. Except for <a href="python.html" class="quarto-xref"><span>19&nbsp; Python</span></a>. If you have never used R, <a href="https://r4ds.hadley.nz/">R for Data Science</a> <span class="citation" data-cites="wickham2023a">(<a href="references.html#ref-wickham2023a" role="doc-biblioref">Wickham, Çetinkaya-Rundel, and Grolemund 2023</a>)</span> is a better place to start.</p>
 <p>Don’t have R yet? You can get the latest version from <strong>CRAN</strong> (the comprehensive R archive network): <a href="https://www.r-project.org/" class="uri">https://www.r-project.org/</a>.</p>
 </section><section id="sec-ide" class="level2"><h2 class="anchored" data-anchor-id="sec-ide">IDE</h2>
 <p><strong>RStudio</strong> is my integrated development environment (IDE) of choice. It’s free and open-source. It’s the environment where you can try out the code you find in this book. And it’s also where I wrote this book.</p>
@@ -530,9 +531,9 @@ This book/site is under construction
 <pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
 ✔ dplyr     1.1.4     ✔ readr     2.1.5
 ✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   3.5.1     ✔ tibble    3.2.1
-✔ lubridate 1.9.3     ✔ tidyr     1.3.1
-✔ purrr     1.0.2     
+✔ ggplot2   3.5.2     ✔ tibble    3.2.1
+✔ lubridate 1.9.4     ✔ tidyr     1.3.1
+✔ purrr     1.0.4     
 ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
 ✖ dplyr::filter() masks stats::filter()
 ✖ dplyr::lag()    masks stats::lag()
@@ -555,12 +556,15 @@ This book/site is under construction
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
 <span>    <span class="st">"DataExplorer"</span>,</span>
+<span>    <span class="st">"ExPanDaR"</span>,</span>
 <span>    <span class="st">"GGally"</span>,</span>
 <span>    <span class="st">"ggcorrplot"</span>,</span>
 <span>    <span class="st">"ggplot2movies"</span>,</span>
+<span>    <span class="st">"ggquickeda"</span>,</span>
 <span>    <span class="st">"gt"</span>,</span>
 <span>    <span class="st">"gtExtras"</span>,</span>
 <span>    <span class="st">"naniar"</span>,</span>
+<span>    <span class="st">"Radiant"</span></span>
 <span>  <span class="op">)</span></span>
 <span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -578,7 +582,7 @@ This book/site is under construction
 </section></section><section id="sec-next-steps" class="level2"><h2 class="anchored" data-anchor-id="sec-next-steps">Next steps?</h2>
 <p>If you are reading these chapters in chronological order, the next step will be to read the rest of the book.</p>
 <p>Of course, I recommend you don’t only read the book. I’ve learned the most from reading these technical books when I’ve also gone through the code examples. Debugged them (of course I hope the code I provide isn’t broken…) when needed. Even translated them to another language (Python to R) or <em>dialect</em> (base R to tidyverse).</p>
-<p>Next, it’s practice, practice, practice. Recreate your favorite data visualizations using only ggplot2 and its extensions. Create something completely new. Either using your data (fitness, music, social media, etc.) or even something from <a href="data.html" class="quarto-xref"><span>2&nbsp; Data</span></a>. There are also concepts like <strong>TidyTuesday</strong> (see <a href="#sec-further-resources" class="quarto-xref"><span>Further resources</span></a>).</p>
+<p>Next, it’s practice, practice, practice. Recreate your favorite data visualizations using only ggplot2 and its extensions. Create something completely new. Either using your data (fitness, music, social media, etc.) or even something from <span class="quarto-unresolved-ref">?sec-data</span>. There are also concepts like <strong>TidyTuesday</strong> (see <a href="#sec-further-resources" class="quarto-xref"><span>Further resources</span></a>).</p>
 </section><section id="sec-further-resources" class="level2"><h2 class="anchored" data-anchor-id="sec-further-resources">Further resources</h2>
 <section id="sec-blogs" class="level3"><h3 class="anchored" data-anchor-id="sec-blogs">Blogs</h3>
 <ul>
@@ -604,6 +608,7 @@ This book/site is under construction
 <ul>
 <li><a href="https://github.com/erikgahner/awesome-ggplot2/">Awesome ggplot2 by Erik Gahner</a></li>
 <li><a href="https://github.com/krzjoa/awesome-r-dataviz/">Awesome R Dataviz by Krzysztof Joachimiak</a></li>
+<li><a href="https://ggplot2-extenders.github.io/ggplot-extension-club/">ggplot2 extenders by Gina Reynolds &amp; Teun van den Brand</a></li>
 <li><a href="https://github.com/teunbrand/ggplot_tricks/">ggplot Tricks by Teun van den Brand</a></li>
 <li><a href="https://github.com/rfordatascience/tidytuesday">TidyTuesday by Tom Mock</a></li>
 </ul></section><section id="sec-websites" class="level3"><h3 class="anchored" data-anchor-id="sec-websites">Websites</h3>
@@ -613,10 +618,13 @@ This book/site is under construction
 <li><a href="https://rfortherestofus.com/blog/">R for the Rest of Us by David Keys</a></li>
 <li><a href="https://r-graph-gallery.com/">R Graph Gallery by Yan Holtz</a></li>
 <li><a href="https://statisticsglobe.com/graphics-in-r">Statistics Globe by Joachim Schork</a></li>
-</ul></section><section id="sec-youtube" class="level3"><h3 class="anchored" data-anchor-id="sec-youtube">YouTube</h3>
+</ul></section><section id="sec-youtube-channels" class="level3"><h3 class="anchored" data-anchor-id="sec-youtube-channels">YouTube</h3>
 <ul>
 <li><a href="https://www.youtube.com/@rappa753/">Albert Rapp</a></li>
 <li><a href="https://www.youtube.com/@StatisticsGlobe/">Statistics Globe by Joachim Schork</a></li>
+</ul></section><section id="sec-youtube-videos" class="level3"><h3 class="anchored" data-anchor-id="sec-youtube-videos">YouTube</h3>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=kjjcgdkowXs">ggplot2 extenders - Hadley Wickham: Thoughts on the ggplot2 extension ecosystem</a></li>
 </ul></section></section><section id="sec-introduction-acknowledgments" class="level2"><h2 class="anchored" data-anchor-id="sec-introduction-acknowledgments">Acknowledgments</h2>
 <p><a href="https://www.linkedin.com/in/eevamaijavirtanen/">Eevamaija Virtanen</a>, <a href="https://www.linkedin.com/in/jkorpela/">Juha Korpela</a>, and <a href="https://www.linkedin.com/in/sade-haveri/">Säde Haveri</a> for founding <a href="https://www.helsinkidataweek.com/">Helsinki Data Week</a> with me. For helping me dream big! And for making me realize a big project like this is possible when you keep making constant progress.</p>
 <p><strong>Marc Eixarch</strong> (<a href="https://github.com/Marceix/">@Marceix</a>) and <strong>Vicent Boned Riera</strong> (<a href="https://github.com/eivicent/">@eivicent</a>) from the <a href="https://www.meetup.com/r-user-group-finland/">R User Group Finland</a>. Learning R has been more fun thanks to your efforts in keeping the local R scene active in Helsinki, Finland.</p>
@@ -625,29 +633,29 @@ This book/site is under construction
 <p>To be continued…</p>
 </section><section id="sec-colophon" class="level2"><h2 class="anchored" data-anchor-id="sec-colophon">Colophon</h2>
 <p>This book was written in <a href="https://posit.co/products/open-source/rstudio/">RStudio</a> using <a href="https://quarto.org/">Quarto</a>. The website is hosted with <a href="https://www.netlify.com/">Netlify</a>. And it’s automatically updated after every commit by <a href="https://github.com/features/actions">Github Actions</a>. The complete source is available from <a href="https://github.com/AnttiRask/ggplot2-extended-book/">GitHub</a>.</p>
-<p>This version of the book was built with R version 4.4.2 (2024-10-31) and the following packages:</p>
+<p>This version of the book was built with R version 4.5.0 (2025-04-11) and the following packages:</p>
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
-{"columns":[{"label":["package"],"name":[1],"type":["chr"],"align":["left"]},{"label":["version"],"name":[2],"type":["chr"],"align":["left"]},{"label":["source"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"conflicted","2":"1.2.0","3":"RSPM"},{"1":"DataExplorer","2":"0.8.3","3":"RSPM"},{"1":"dplyr","2":"1.1.4","3":"RSPM"},{"1":"GGally","2":"2.2.1","3":"RSPM"},{"1":"ggcorrplot","2":"0.1.4.1","3":"RSPM"},{"1":"ggplot2","2":"3.5.1","3":"RSPM"},{"1":"ggplot2movies","2":"0.0.1","3":"RSPM"},{"1":"gt","2":"0.11.1","3":"RSPM"},{"1":"gtExtras","2":"0.5.0","3":"RSPM"},{"1":"janitor","2":"2.2.0","3":"RSPM"},{"1":"naniar","2":"1.1.0","3":"RSPM"},{"1":"purrr","2":"1.0.2","3":"RSPM"},{"1":"readr","2":"2.1.5","3":"RSPM"},{"1":"rmarkdown","2":"2.29","3":"RSPM"},{"1":"scales","2":"1.3.0","3":"RSPM"},{"1":"tibble","2":"3.2.1","3":"RSPM"},{"1":"tidyr","2":"1.3.1","3":"RSPM"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["package"],"name":[1],"type":["chr"],"align":["left"]},{"label":["version"],"name":[2],"type":["chr"],"align":["left"]},{"label":["source"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"conflicted","2":"1.2.0","3":"CRAN (R 4.5.0)"},{"1":"DataExplorer","2":"0.8.3","3":"RSPM"},{"1":"dplyr","2":"1.1.4","3":"CRAN (R 4.5.0)"},{"1":"ExPanDaR","2":"NA","3":"NA"},{"1":"GGally","2":"2.2.1","3":"RSPM"},{"1":"ggcorrplot","2":"0.1.4.1","3":"RSPM"},{"1":"ggplot2","2":"3.5.2","3":"CRAN (R 4.5.0)"},{"1":"ggplot2movies","2":"0.0.1","3":"RSPM"},{"1":"ggquickeda","2":"NA","3":"NA"},{"1":"gt","2":"1.0.0","3":"CRAN (R 4.5.0)"},{"1":"gtExtras","2":"0.5.0","3":"RSPM"},{"1":"janitor","2":"2.2.1","3":"RSPM"},{"1":"naniar","2":"1.1.0","3":"RSPM"},{"1":"purrr","2":"1.0.4","3":"CRAN (R 4.5.0)"},{"1":"Radiant","2":"NA","3":"NA"},{"1":"readr","2":"2.1.5","3":"CRAN (R 4.5.0)"},{"1":"rmarkdown","2":"2.29","3":"CRAN (R 4.5.0)"},{"1":"scales","2":"1.4.0","3":"RSPM"},{"1":"tibble","2":"3.2.1","3":"CRAN (R 4.5.0)"},{"1":"tidyr","2":"1.3.1","3":"CRAN (R 4.5.0)"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-sanderson2024" class="csl-entry" role="listitem">
-Sanderson, Steven, and Antti Rask. 2024. <em>RandomWalker: Generate Random Walks Compatible with the ’Tidyverse’. R Package Version 0.2.0</em>. <a href="https://www.spsanderson.com/RandomWalker/">https://www.spsanderson.com/RandomWalker/</a>.
+Sanderson, Steven, and Antti Rask. 2024. <em>RandomWalker: Generate Random Walks Compatible with the ’Tidyverse’</em>. <a href="https://www.spsanderson.com/RandomWalker/">https://www.spsanderson.com/RandomWalker/</a>.
 </div>
 <div id="ref-wickham2016" class="csl-entry" role="listitem">
 Wickham, Hadley. 2016. <em>Ggplot2: Elegant Graphics for Data Analysis</em>. 2nd ed. Springer-Verlag New York.
 </div>
 <div id="ref-wickham2023d" class="csl-entry" role="listitem">
-———. 2023. <em>Conflicted: An Alternative Conflict Resolution Strategy. R Package Version 1.2.0</em>. <a href="https://CRAN.R-project.org/package=conflicted">https://CRAN.R-project.org/package=conflicted</a>.
+———. 2023. <em>Conflicted: An Alternative Conflict Resolution Strategy</em>. <a href="https://conflicted.r-lib.org/">https://conflicted.r-lib.org/</a>.
 </div>
-<div id="ref-wickham2024" class="csl-entry" role="listitem">
-———. 2024. <em>Ggplot2: Elegant Graphics for Data Analysis. R Package Version 3.5.1</em>. <a href="https://ggplot2.tidyverse.org">https://ggplot2.tidyverse.org</a>.
+<div id="ref-wickham2024a" class="csl-entry" role="listitem">
+———. 2025. <em>Ggplot2: Elegant Graphics for Data Analysis.</em> <a href="https://ggplot2.tidyverse.org">https://ggplot2.tidyverse.org</a>.
 </div>
 <div id="ref-wickham2023b" class="csl-entry" role="listitem">
-Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2023. <em>Tidyverse: Welcome to the Tidyverse. R Package Version 2.0.0</em>. <a href="https://CRAN.R-project.org/package=tidyverse">https://CRAN.R-project.org/package=tidyverse</a>.
+Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2023. <em>Tidyverse: Welcome to the Tidyverse</em>. <a href="https://tidyverse.tidyverse.org/">https://tidyverse.tidyverse.org/</a>.
 </div>
 <div id="ref-wickham2023a" class="csl-entry" role="listitem">
 Wickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023. <em>R for Data Science: Import, Tidy, Transform, Visualize, and Model Data</em>. 2nd ed. O’Reilly.
