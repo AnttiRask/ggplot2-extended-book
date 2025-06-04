@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.42">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Antti Rask">
 <title>Introduction – ggplot2 extended</title>
@@ -89,10 +89,10 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-96f5e2a3ed94a11b6ec2c918708bf376.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -465,22 +465,21 @@ This book/site is under construction
 <p>To finish off, we go through some <strong>case studies</strong>. We build visualizations, step-by-step, from data to publication.</p>
 </section><section id="sec-what-you-wont-learn" class="level3"><h3 class="anchored" data-anchor-id="sec-what-you-wont-learn">What you won’t learn</h3>
 <p>These are some of the interesting topics that I had to leave out of the book. It’s long as it is and I decided to concentrate on the topics and extensions that everyone can use. Regardless of the field you’re in.</p>
-<p><strong>Combining visualizations and BI tools</strong></p>
+<section id="combining-visualizations-and-bi-tools" class="level4"><h4 class="anchored" data-anchor-id="combining-visualizations-and-bi-tools">Combining visualizations and BI tools</h4>
 <p>Using R in general and ggplot2 visualizations in specific within BI tools like Power BI is cool. Interested? You can start by reading Luca Zavarella’s book <a href="https://www.packtpub.com/en-us/product/extending-power-bi-with-python-and-r-9781837639533">Extending Power BI with Python and R</a>.</p>
-<p><strong>Generative art</strong></p>
+</section><section id="generative-art" class="level4"><h4 class="anchored" data-anchor-id="generative-art">Generative art</h4>
 <p>Creating art with R - color me impressed! It’s called Rtistry or aRt, because why not? There isn’t enough room in the book for a proper chapter on this, but here are some links to get you started on the topic:</p>
 <ul>
 <li><a href="https://meghansaha.github.io/artpack/">artpack by Meghan Harris</a></li>
 <li><a href="https://koenderks.github.io/aRtsy/">aRtsy by Koen Derks</a></li>
 <li><a href="https://nrennie.rbind.io/projects/generative-art/">Generative Art by Nicola Rennie</a></li>
-</ul>
-<p><strong>Large language models (LLM)</strong></p>
+</ul></section><section id="large-language-models-llm" class="level4"><h4 class="anchored" data-anchor-id="large-language-models-llm">Large language models (LLM)</h4>
 <p>I know, it would be trendy to write about AI. And I do think they can play a part in the data visualization process. But there isn’t anything that meaningful to write about. Whatever you do, whether you use AI or not, do trust your senses!</p>
 <p>A machine doesn’t need to visualize data to use it. So, in a way, data visualization is one of the last bastions of human-to-human communication. By humans, for humans, am I right?</p>
-<p><strong>Specialized packages in specialized fields like bioinformatics</strong></p>
+</section><section id="specialized-packages-in-specialized-fields-like-bioinformatics" class="level4"><h4 class="anchored" data-anchor-id="specialized-packages-in-specialized-fields-like-bioinformatics">Specialized packages in specialized fields like bioinformatics</h4>
 <p>This one should be self-evident. “Write what you know”. I know nothing about bioinformatics. I’m not even sure I understand what the term means.</p>
 <p>Are you interested in bioinformatics? I mean, I don’t want to leave you hanging. There is a website and a suite of packages called <a href="https://bioconductor.org/">Bioconductor</a> that should get you started!</p>
-<p><strong>Sports</strong></p>
+</section><section id="sports" class="level4"><h4 class="anchored" data-anchor-id="sports">Sports</h4>
 <p>It’s the same as with generative art. Interesting topic, but not enough space. Still, here’s another short list of packages related to sports:</p>
 <p><strong>Baseball</strong></p>
 <ul>
@@ -500,7 +499,7 @@ This book/site is under construction
 <p><strong>Various</strong></p>
 <ul>
 <li><a href="https://sportyr.sportsdataverse.org/">sportyR by Ross Drucker</a></li>
-</ul></section></section><section id="sec-who-is-the-book-for" class="level2"><h2 class="anchored" data-anchor-id="sec-who-is-the-book-for">Who is the book for?</h2>
+</ul></section></section></section><section id="sec-who-is-the-book-for" class="level2"><h2 class="anchored" data-anchor-id="sec-who-is-the-book-for">Who is the book for?</h2>
 <p>I assume that you’re reading this because you’re interested in data visualization, R, or both.</p>
 <p>I already wrote about this in the Welcome section. This book is for people who already have a working knowledge of ggplot2 and <em>the grammar of graphics</em>. I’m quite adamant on that. You should learn the foundations first. And there are already excellent books and websites for that.</p>
 <p>Other than that, the tools and techniques in the book aren’t all that advanced (at least most of them). You don’t have to be a visualization wizard to find the book useful. Each of the chapters will contain code that you can use almost verbatim.</p>
@@ -642,7 +641,7 @@ This book/site is under construction
 <p>This version of the book was built with R version 4.5.0 (2025-04-11) and the following packages:</p>
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
-{"columns":[{"label":["package"],"name":[1],"type":["chr"],"align":["left"]},{"label":["version"],"name":[2],"type":["chr"],"align":["left"]},{"label":["source"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"conflicted","2":"1.2.0","3":"CRAN (R 4.5.0)"},{"1":"DataExplorer","2":"0.8.3","3":"RSPM"},{"1":"dplyr","2":"1.1.4","3":"CRAN (R 4.5.0)"},{"1":"ExPanDaR","2":"NA","3":"NA"},{"1":"GGally","2":"2.2.1","3":"RSPM"},{"1":"ggcorrplot","2":"0.1.4.1","3":"RSPM"},{"1":"ggplot2","2":"3.5.2","3":"CRAN (R 4.5.0)"},{"1":"ggplot2movies","2":"0.0.1","3":"RSPM"},{"1":"ggquickeda","2":"NA","3":"NA"},{"1":"gt","2":"1.0.0","3":"CRAN (R 4.5.0)"},{"1":"gtExtras","2":"0.5.0","3":"RSPM"},{"1":"janitor","2":"2.2.1","3":"RSPM"},{"1":"naniar","2":"1.1.0","3":"RSPM"},{"1":"purrr","2":"1.0.4","3":"CRAN (R 4.5.0)"},{"1":"Radiant","2":"NA","3":"NA"},{"1":"readr","2":"2.1.5","3":"CRAN (R 4.5.0)"},{"1":"rmarkdown","2":"2.29","3":"CRAN (R 4.5.0)"},{"1":"scales","2":"1.4.0","3":"RSPM"},{"1":"tibble","2":"3.2.1","3":"CRAN (R 4.5.0)"},{"1":"tidyr","2":"1.3.1","3":"CRAN (R 4.5.0)"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["package"],"name":[1],"type":["chr"],"align":["left"]},{"label":["version"],"name":[2],"type":["chr"],"align":["left"]},{"label":["source"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"conflicted","2":"1.2.0","3":"CRAN (R 4.5.0)"},{"1":"DataExplorer","2":"0.8.3","3":"RSPM"},{"1":"dplyr","2":"1.1.4","3":"CRAN (R 4.5.0)"},{"1":"ExPanDaR","2":"0.5.3","3":"CRAN (R 4.5.0)"},{"1":"GGally","2":"2.2.1","3":"RSPM"},{"1":"ggcorrplot","2":"0.1.4.1","3":"RSPM"},{"1":"ggplot2","2":"3.5.2","3":"CRAN (R 4.5.0)"},{"1":"ggplot2movies","2":"0.0.1","3":"RSPM"},{"1":"ggquickeda","2":"0.3.1","3":"CRAN (R 4.5.0)"},{"1":"gt","2":"1.0.0","3":"CRAN (R 4.5.0)"},{"1":"gtExtras","2":"0.6.0","3":"CRAN (R 4.5.0)"},{"1":"janitor","2":"2.2.1","3":"RSPM"},{"1":"naniar","2":"1.1.0","3":"RSPM"},{"1":"purrr","2":"1.0.4","3":"CRAN (R 4.5.0)"},{"1":"radiant","2":"1.6.6","3":"CRAN (R 4.5.0)"},{"1":"readr","2":"2.1.5","3":"CRAN (R 4.5.0)"},{"1":"rmarkdown","2":"2.29","3":"CRAN (R 4.5.0)"},{"1":"scales","2":"1.4.0","3":"RSPM"},{"1":"tibble","2":"3.2.1","3":"CRAN (R 4.5.0)"},{"1":"tidyr","2":"1.3.1","3":"CRAN (R 4.5.0)"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 
@@ -749,8 +748,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -861,7 +858,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

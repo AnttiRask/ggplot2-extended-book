@@ -679,9 +679,11 @@ This book/site is under construction
 <div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">movies_na</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="http://boxuancui.github.io/DataExplorer/reference/plot_intro.html">plot_intro</a></span><span class="op">(</span>ggtheme <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><img src="data_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid" width="672"></p>
-<p><strong>Missing Values</strong></p>
+<section id="missing-values" class="level4" data-number="2.2.2.1"><h4 data-number="2.2.2.1" class="anchored" data-anchor-id="missing-values">
+<span class="header-section-number">2.2.2.1</span> Missing Values</h4>
 <p>The most fascinating insights here are still related to missing values. Less than 5% of the rows in the data set are complete. Meaning that they have no missing values in any of the columns. And almost 10% of all the observations are missing. That’s how much the missing rows of budget and mpaa are affecting the totals. One positive thing is that we don’t have any columns that are missing all the values.</p>
-<p><strong>Categorical Columns</strong></p>
+</section><section id="categorical-columns" class="level4" data-number="2.2.2.2"><h4 data-number="2.2.2.2" class="anchored" data-anchor-id="categorical-columns">
+<span class="header-section-number">2.2.2.2</span> Categorical Columns</h4>
 <p>Let’s then take a look at the categorical columns. The one that will be missing from the upcoming visualizations is <strong>title</strong>. The values are more or less unique. So, it wouldn’t make sense having a bar chart, for instance, with more than 50000 rows with a count of 1 each.</p>
 <p>Did someone mention bar charts? Let’s start with the <code><a href="http://boxuancui.github.io/DataExplorer/reference/plot_bar.html">plot_bar()</a></code> function to visualize the categorical columns. This will show us what the frequency of each of the values are within a column.</p>
 <div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">movies_na</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
@@ -705,7 +707,8 @@ This book/site is under construction
 <span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><img src="data_files/figure-html/unnamed-chunk-32-1.png" class="img-fluid" width="672"></p>
 <p>This shows us that <strong>Action</strong> and <strong>Romance</strong> are the genres with more R rated movies than the other genres. Of course we must remember the prevalence of those missing values.</p>
-<p><strong>Numerical Columns</strong></p>
+</section><section id="numerical-columns" class="level4" data-number="2.2.2.3"><h4 data-number="2.2.2.3" class="anchored" data-anchor-id="numerical-columns">
+<span class="header-section-number">2.2.2.3</span> Numerical Columns</h4>
 <p>Next, we’ll use <code><a href="http://boxuancui.github.io/DataExplorer/reference/plot_histogram.html">plot_histogram()</a></code> to draw a histogram of all the numerical columns (both discrete and continuous).</p>
 <div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">movies_na</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="http://boxuancui.github.io/DataExplorer/reference/plot_histogram.html">plot_histogram</a></span><span class="op">(</span>ggtheme <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -760,7 +763,8 @@ This book/site is under construction
 <p><img src="data_files/figure-html/unnamed-chunk-37-1.png" class="img-fluid" width="672"></p>
 <p>These are some of the ways to use DataExplorer to create a visual summary of a data set. I encourage you to dig into the documentation and see what else there is.</p>
 <p>To conclude, DataExplorer has a function, <code><a href="http://boxuancui.github.io/DataExplorer/reference/create_report.html">create_report()</a></code>. It creates a full EDA report from scratch. We won’t use that now, because the report would take too much space. But if you’re using DataExplorer, you should try it!</p>
-<p><strong>gt &amp; gtExtras</strong></p>
+</section><section id="gt-gtextras" class="level4" data-number="2.2.2.4"><h4 data-number="2.2.2.4" class="anchored" data-anchor-id="gt-gtextras">
+<span class="header-section-number">2.2.2.4</span> gt &amp; gtExtras</h4>
 <p>DataExplorer is a good package, but it’s not the only game in town for EDA. <strong>gt</strong> <span class="citation" data-cites="iannone2024">(<a href="references.html#ref-iannone2024" role="doc-biblioref">Iannone et al. 2025</a>)</span> is a package to create tables ([INSERT LINK HERE]) with.</p>
 <p>Often, when you think about tables, you think about numeric and text values. But that doesn’t have to be the case. With <strong>gtExtras</strong> <span class="citation" data-cites="mock2023">(<a href="references.html#ref-mock2023" role="doc-biblioref">Mock 2023</a>)</span> you can create a fast and easy visual summary of your data. The <code><a href="https://jthomasmock.github.io/gtExtras/reference/gt_plt_summary.html">gt_plt_summary()</a></code> function is all you need.</p>
 <p>The function does have some limitations. It has had some issues with certain data sets. The movies data set didn’t work, for instance. That’s why we’ll take a look at the WorldPhones data set instead.</p>
@@ -1290,7 +1294,7 @@ Africa, Asia, Europe, Mid.Amer, N.Amer, Oceania and S.Amer
 </table>
 </div>
 <p>What we get is a table that combines a visualized plot overview with basic summary elements: <em>missing</em>, <em>mean</em>, <em>median</em>, and <em>standard deviation (sd)</em>). You can also see from the icon on the left, whether the column is categorical or continuous. With the categorical columns, you can see a list of the categorical values by clicking the arrow.</p>
-</section><section id="sec-visualizing-relationships" class="level3" data-number="2.2.3"><h3 data-number="2.2.3" class="anchored" data-anchor-id="sec-visualizing-relationships">
+</section></section><section id="sec-visualizing-relationships" class="level3" data-number="2.2.3"><h3 data-number="2.2.3" class="anchored" data-anchor-id="sec-visualizing-relationships">
 <span class="header-section-number">2.2.3</span> Visualizing relationships</h3>
 <p>Most of the summarization techniques we’ve used so far have dealt with the distribution of values within one variable. But it’s also important to understand the possible relationships between different variables.</p>
 <p>Understanding those relationships can provide insights into patterns, trends, and dependencies.</p>

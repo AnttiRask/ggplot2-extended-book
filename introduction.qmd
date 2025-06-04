@@ -52,11 +52,11 @@ To finish off, we go through some **case studies**. We build visualizations, ste
 
 These are some of the interesting topics that I had to leave out of the book. It's long as it is and I decided to concentrate on the topics and extensions that everyone can use. Regardless of the field you're in.
 
-**Combining visualizations and BI tools**
+#### Combining visualizations and BI tools
 
 Using R in general and ggplot2 visualizations in specific within BI tools like Power BI is cool. Interested? You can start by reading Luca Zavarella's book [Extending Power BI with Python and R](https://www.packtpub.com/en-us/product/extending-power-bi-with-python-and-r-9781837639533).
 
-**Generative art**
+#### Generative art
 
 Creating art with R - color me impressed! It's called Rtistry or aRt, because why not? There isn’t enough room in the book for a proper chapter on this, but here are some links to get you started on the topic:
 
@@ -64,19 +64,19 @@ Creating art with R - color me impressed! It's called Rtistry or aRt, because wh
 -   [aRtsy by Koen Derks](https://koenderks.github.io/aRtsy/)
 -   [Generative Art by Nicola Rennie](https://nrennie.rbind.io/projects/generative-art/)
 
-**Large language models (LLM)**
+#### Large language models (LLM)
 
 I know, it would be trendy to write about AI. And I do think they can play a part in the data visualization process. But there isn’t anything that meaningful to write about. Whatever you do, whether you use AI or not, do trust your senses!
 
 A machine doesn't need to visualize data to use it. So, in a way, data visualization is one of the last bastions of human-to-human communication. By humans, for humans, am I right?
 
-**Specialized packages in specialized fields like bioinformatics**
+#### Specialized packages in specialized fields like bioinformatics
 
 This one should be self-evident. "Write what you know". I know nothing about bioinformatics. I'm not even sure I understand what the term means.
 
 Are you interested in bioinformatics? I mean, I don't want to leave you hanging. There is a website and a suite of packages called [Bioconductor](https://bioconductor.org/) that should get you started!
 
-**Sports**
+#### Sports
 
 It's the same as with generative art. Interesting topic, but not enough space. Still, here's another short list of packages related to sports:
 
@@ -325,7 +325,7 @@ pkgs <- c(
   "janitor",
   "naniar",
   "purrr",
-  "Radiant",
+  "radiant",
   "readr",
   "rmarkdown",
   "scales",

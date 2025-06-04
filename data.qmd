@@ -492,11 +492,11 @@ movies_na %>%
   plot_intro(ggtheme = theme_bw())
 ```
 
-**Missing Values**
+#### Missing Values
 
 The most fascinating insights here are still related to missing values. Less than 5% of the rows in the data set are complete. Meaning that they have no missing values in any of the columns. And almost 10% of all the observations are missing. That's how much the missing rows of budget and mpaa are affecting the totals. One positive thing is that we don't have any columns that are missing all the values.
 
-**Categorical Columns**
+#### Categorical Columns
 
 Let's then take a look at the categorical columns. The one that will be missing from the upcoming visualizations is **title**. The values are more or less unique. So, it wouldn't make sense having a bar chart, for instance, with more than 50000 rows with a count of 1 each.
 
@@ -546,7 +546,7 @@ movies_na %>%
 
 This shows us that **Action** and **Romance** are the genres with more R rated movies than the other genres. Of course we must remember the prevalence of those missing values.
 
-**Numerical Columns**
+#### Numerical Columns
 
 Next, we'll use `plot_histogram()` to draw a histogram of all the numerical columns (both discrete and continuous).
 
@@ -631,7 +631,7 @@ These are some of the ways to use DataExplorer to create a visual summary of a d
 
 To conclude, DataExplorer has a function, `create_report()`. It creates a full EDA report from scratch. We won't use that now, because the report would take too much space. But if you're using DataExplorer, you should try it!
 
-**gt & gtExtras**
+#### gt & gtExtras
 
 DataExplorer is a good package, but it's not the only game in town for EDA. **gt** [@iannone2024] is a package to create tables (\[INSERT LINK HERE\]) with.
 
