@@ -640,26 +640,16 @@ Often, when you think about tables, you think about numeric and text values. But
 The function does have some limitations. It has had some issues with certain data sets. The movies data set didn't work, for instance. That's why we'll take a look at the WorldPhones data set instead.
 
 ```{r}
-#| echo:    false
-#| message: false
-#| results: asis
-
-source("warning-gtextras-2025-04-25.R")
-```
-
-```{r}
 #| message: false
 #| warning: false
 #| results: asis
 
-# library(gt)
-# library(gtExtras)
-# 
-# world_phones_tbl %>% 
-#   gt_plt_summary()
-```
+library(gt)
+library(gtExtras)
 
-![](img/gtextras_gt_plt_summary_with_world_phones_tbl_2025_05_25.png){.lightbox}
+world_phones_tbl %>%
+  gt_plt_summary()
+```
 
 What we get is a table that combines a visualized plot overview with basic summary elements: *missing*, *mean*, *median*, and *standard deviation (sd)*). You can also see from the icon on the left, whether the column is categorical or continuous. With the categorical columns, you can see a list of the categorical values by clicking the arrow.
 
