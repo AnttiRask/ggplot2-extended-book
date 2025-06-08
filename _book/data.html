@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.42">
+<meta name="generator" content="quarto-1.5.57">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Antti Rask">
 <title>2&nbsp; Data – ggplot2 extended</title>
@@ -89,10 +89,13 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-96f5e2a3ed94a11b6ec2c918708bf376.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -384,7 +387,7 @@ div.csl-indent {
   <li>
 <a href="#sec-exploratory-data-analysis-eda" id="toc-sec-exploratory-data-analysis-eda" class="nav-link" data-scroll-target="#sec-exploratory-data-analysis-eda"><span class="header-section-number">2.2</span> Exploratory data analysis (EDA)</a>
   <ul class="collapse">
-<li><a href="#sec-missing-values" id="toc-sec-missing-values" class="nav-link" data-scroll-target="#sec-missing-values"><span class="header-section-number">2.2.1</span> Missing values</a></li>
+<li><a href="#sec-missing-values-eda" id="toc-sec-missing-values-eda" class="nav-link" data-scroll-target="#sec-missing-values-eda"><span class="header-section-number">2.2.1</span> Missing values</a></li>
   <li><a href="#sec-summarizing-data" id="toc-sec-summarizing-data" class="nav-link" data-scroll-target="#sec-summarizing-data"><span class="header-section-number">2.2.2</span> Summarizing data</a></li>
   <li><a href="#sec-visualizing-relationships" id="toc-sec-visualizing-relationships" class="nav-link" data-scroll-target="#sec-visualizing-relationships"><span class="header-section-number">2.2.3</span> Visualizing relationships</a></li>
   <li><a href="#sec-automated-eda-app" id="toc-sec-automated-eda-app" class="nav-link" data-scroll-target="#sec-automated-eda-app"><span class="header-section-number">2.2.4</span> Automated EDA app</a></li>
@@ -408,17 +411,17 @@ div.csl-indent {
   
 
 
-</header><div class="callout callout-style-simple callout-warning callout-titled">
+</header><div class="callout callout-style-simple callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-This book/site is under construction
+This chapter is now done!
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Everything is liable to change, even the title</p>
+<p>Things are still liable to change…</p>
 </div>
 </div>
 <section id="sec-data-sets" class="level2" data-number="2.1"><h2 data-number="2.1" class="anchored" data-anchor-id="sec-data-sets">
@@ -523,7 +526,7 @@ This book/site is under construction
 <p>As mentioned earlier, Movies is already a tibble. But, it doesn’t mean that the data is in an optimal format for all kinds of visualization. But we’ll do all the necessary data wrangling within the chapter where we use the data.</p>
 </section><section id="sec-rdatasets" class="level3" data-number="2.1.3"><h3 data-number="2.1.3" class="anchored" data-anchor-id="sec-rdatasets">
 <span class="header-section-number">2.1.3</span> RDatasets</h3>
-<p><a href="https://vincentarelbundock.github.io/Rdatasets/articles/data.html"><strong>RDatasets</strong></a> is not an R package. But it is an excellent GitHub repo. And a “collection of datasets originally distributed in various R packages” <span class="citation" data-cites="arel-bundock2024">(<a href="references.html#ref-arel-bundock2024" role="doc-biblioref">Arel-Bundock 2024</a>)</span>.</p>
+<p><a href="https://vincentarelbundock.github.io/Rdatasets/articles/data.html"><strong>RDatasets</strong></a> is not an R package. But it is an excellent GitHub repo. And a “collection of data sets originally distributed in various R packages” <span class="citation" data-cites="arel-bundock2024">(<a href="references.html#ref-arel-bundock2024" role="doc-biblioref">Arel-Bundock 2024</a>)</span>.</p>
 <p>Here listed are the 2337 data sets that were available on 2024-11-11.</p>
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -532,7 +535,7 @@ This book/site is under construction
 </div>
 <p>The RDatasets repo contains that same list. But there you will also find a .csv file and documentation for each data set.</p>
 <p>If I had to choose one fun data set from the list to highlight, it would be <strong>starwars</strong> from the <strong>dplyr</strong> <span class="citation" data-cites="wickham2023c">(<a href="references.html#ref-wickham2023c" role="doc-biblioref">Wickham, François, et al. 2023</a>)</span> package.</p>
-<p>You can choose to use the .csv file provided on the website. Another way to use the collection is to choose the dataset from the list and load the package it comes with:</p>
+<p>You can choose to use the .csv file provided on the website. Another way to use the collection is to choose the data set from the list and load the package it comes with:</p>
 <div class="cell">
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span>
 <span></span>
@@ -565,7 +568,7 @@ This book/site is under construction
 <p>What are the series of actions we need to take? As I mentioned earlier, EDA is a loose process. There are as many ways to go about it as there are analysts and data sets. Still, some common steps usually occur: looking at <strong>missing values</strong>, <strong>summarizing data</strong>, and <strong>visualizing relationships</strong> between variables.</p>
 <p>It’s good to note these visualizations aren’t usually meant for publication. Compared to those you find later on in the book, these are more for your eyes than for the eventual audience.</p>
 <p>The last thing we’ll look at in this chapter is one way to <strong>automate</strong> the EDA process using an app. Although I must warn you. It’s better to use these tools only after you’ve gained experience from doing EDA without them. It might sound counter-intuitive, but trust me. It can be too overwhelming if you don’t know what you’re doing.</p>
-<section id="sec-missing-values" class="level3" data-number="2.2.1"><h3 data-number="2.2.1" class="anchored" data-anchor-id="sec-missing-values">
+<section id="sec-missing-values-eda" class="level3" data-number="2.2.1"><h3 data-number="2.2.1" class="anchored" data-anchor-id="sec-missing-values-eda">
 <span class="header-section-number">2.2.1</span> Missing values</h3>
 <p>Let’s first load the data. Looking at the movies data set earlier we noticed the <strong>mpaa</strong> column had many blank values. We don’t know if they didn’t have a rating in the first place. Or if they did, but the rating is missing. For the sake of this demonstration, let’s assume they all should have a rating.</p>
 <p>We’ll begin by turning all the blank values (of the <em>character</em> type) into <em>NA</em> (not available).</p>
@@ -679,10 +682,10 @@ This book/site is under construction
 <div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">movies_na</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="http://boxuancui.github.io/DataExplorer/reference/plot_intro.html">plot_intro</a></span><span class="op">(</span>ggtheme <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><img src="data_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid" width="672"></p>
-<section id="missing-values" class="level4" data-number="2.2.2.1"><h4 data-number="2.2.2.1" class="anchored" data-anchor-id="missing-values">
+<section id="sec-missing-values-summarizing-data" class="level4" data-number="2.2.2.1"><h4 data-number="2.2.2.1" class="anchored" data-anchor-id="sec-missing-values-summarizing-data">
 <span class="header-section-number">2.2.2.1</span> Missing Values</h4>
 <p>The most fascinating insights here are still related to missing values. Less than 5% of the rows in the data set are complete. Meaning that they have no missing values in any of the columns. And almost 10% of all the observations are missing. That’s how much the missing rows of budget and mpaa are affecting the totals. One positive thing is that we don’t have any columns that are missing all the values.</p>
-</section><section id="categorical-columns" class="level4" data-number="2.2.2.2"><h4 data-number="2.2.2.2" class="anchored" data-anchor-id="categorical-columns">
+</section><section id="sec-categorical-columns" class="level4" data-number="2.2.2.2"><h4 data-number="2.2.2.2" class="anchored" data-anchor-id="sec-categorical-columns">
 <span class="header-section-number">2.2.2.2</span> Categorical Columns</h4>
 <p>Let’s then take a look at the categorical columns. The one that will be missing from the upcoming visualizations is <strong>title</strong>. The values are more or less unique. So, it wouldn’t make sense having a bar chart, for instance, with more than 50000 rows with a count of 1 each.</p>
 <p>Did someone mention bar charts? Let’s start with the <code><a href="http://boxuancui.github.io/DataExplorer/reference/plot_bar.html">plot_bar()</a></code> function to visualize the categorical columns. This will show us what the frequency of each of the values are within a column.</p>
@@ -707,7 +710,7 @@ This book/site is under construction
 <span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><img src="data_files/figure-html/unnamed-chunk-32-1.png" class="img-fluid" width="672"></p>
 <p>This shows us that <strong>Action</strong> and <strong>Romance</strong> are the genres with more R rated movies than the other genres. Of course we must remember the prevalence of those missing values.</p>
-</section><section id="numerical-columns" class="level4" data-number="2.2.2.3"><h4 data-number="2.2.2.3" class="anchored" data-anchor-id="numerical-columns">
+</section><section id="sec-numerical-columns" class="level4" data-number="2.2.2.3"><h4 data-number="2.2.2.3" class="anchored" data-anchor-id="sec-numerical-columns">
 <span class="header-section-number">2.2.2.3</span> Numerical Columns</h4>
 <p>Next, we’ll use <code><a href="http://boxuancui.github.io/DataExplorer/reference/plot_histogram.html">plot_histogram()</a></code> to draw a histogram of all the numerical columns (both discrete and continuous).</p>
 <div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">movies_na</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
@@ -763,7 +766,7 @@ This book/site is under construction
 <p><img src="data_files/figure-html/unnamed-chunk-37-1.png" class="img-fluid" width="672"></p>
 <p>These are some of the ways to use DataExplorer to create a visual summary of a data set. I encourage you to dig into the documentation and see what else there is.</p>
 <p>To conclude, DataExplorer has a function, <code><a href="http://boxuancui.github.io/DataExplorer/reference/create_report.html">create_report()</a></code>. It creates a full EDA report from scratch. We won’t use that now, because the report would take too much space. But if you’re using DataExplorer, you should try it!</p>
-</section><section id="gt-gtextras" class="level4" data-number="2.2.2.4"><h4 data-number="2.2.2.4" class="anchored" data-anchor-id="gt-gtextras">
+</section><section id="sec-gt-gtextras" class="level4" data-number="2.2.2.4"><h4 data-number="2.2.2.4" class="anchored" data-anchor-id="sec-gt-gtextras">
 <span class="header-section-number">2.2.2.4</span> gt &amp; gtExtras</h4>
 <p>DataExplorer is a good package, but it’s not the only game in town for EDA. <strong>gt</strong> <span class="citation" data-cites="iannone2024">(<a href="references.html#ref-iannone2024" role="doc-biblioref">Iannone et al. 2025</a>)</span> is a package to create tables ([INSERT LINK HERE]) with.</p>
 <p>Often, when you think about tables, you think about numeric and text values. But that doesn’t have to be the case. With <strong>gtExtras</strong> <span class="citation" data-cites="mock2023">(<a href="references.html#ref-mock2023" role="doc-biblioref">Mock 2023</a>)</span> you can create a fast and easy visual summary of your data. The <code><a href="https://jthomasmock.github.io/gtExtras/reference/gt_plt_summary.html">gt_plt_summary()</a></code> function is all you need.</p>
@@ -1234,13 +1237,13 @@ This book/site is under construction
 <col style="width: 14%">
 </colgroup>
 <thead>
-<tr class="gt_heading header">
+<tr class="header gt_heading">
 <th colspan="7" class="gt_heading gt_title gt_font_normal">.</th>
 </tr>
-<tr class="gt_heading even">
+<tr class="odd gt_heading">
 <th colspan="7" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border">49 rows x 3 cols</th>
 </tr>
-<tr class="gt_col_headings header">
+<tr class="header gt_col_headings">
 <th id="type" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"></th>
 <th id="name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Column</th>
 <th id="value" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Plot Overview</th>
@@ -1392,7 +1395,7 @@ Africa, Asia, Europe, Mid.Amer, N.Amer, Oceania and S.Amer
   </script>
 </div>
 <p>To use a pairwise plot matrix we turn to <strong>GGally</strong> <span class="citation" data-cites="schloerke2024">(<a href="references.html#ref-schloerke2024" role="doc-biblioref">Schloerke et al. 2024</a>)</span>.</p>
-<p>Let’s start with the basic <code><a href="https://ggobi.github.io/ggally/reference/ggpairs.html">ggpairs()</a></code> function. We only need to tell it which columns we want to use. We’ll start by looking at the dataset without the Drama column.</p>
+<p>Let’s start with the basic <code><a href="https://ggobi.github.io/ggally/reference/ggpairs.html">ggpairs()</a></code> function. We only need to tell it which columns we want to use. We’ll start by looking at the data set without the Drama column.</p>
 <div class="sourceCode" id="cb37"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggobi.github.io/ggally/">GGally</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">movies_without_na_drama</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
@@ -1456,33 +1459,112 @@ Africa, Asia, Europe, Mid.Amer, N.Amer, Oceania and S.Amer
 <p>There are many other ways to customize a pairwise plot matrix. For the rest, see <code><a href="https://ggobi.github.io/ggally/reference/ggpairs.html">ggpairs()</a></code> <a href="https://ggobi.github.io/ggally/articles/ggpairs.html">documentation</a>.</p>
 </section></section><section id="sec-automated-eda-app" class="level3" data-number="2.2.4"><h3 data-number="2.2.4" class="anchored" data-anchor-id="sec-automated-eda-app">
 <span class="header-section-number">2.2.4</span> Automated EDA app</h3>
-<p>Remember how I warned you about automating the EDA process using an app? We’ve now spent some time learning how to do EDA manually. Let’s take a look at three of the automation tools available: <strong>ExPanDaR</strong> <span class="citation" data-cites="gassen2020">(<a href="references.html#ref-gassen2020" role="doc-biblioref">Gassen 2020</a>)</span>, <strong>ggquickeda</strong> <span class="citation" data-cites="mouksassi2024">(<a href="references.html#ref-mouksassi2024" role="doc-biblioref">Mouksassi et al. 2024</a>)</span>, and <strong>radiant</strong> <span class="citation" data-cites="nijs2024">(<a href="references.html#ref-nijs2024" role="doc-biblioref">Nijs 2024</a>)</span>.</p>
-<p>Let’s start with the similarities so we don’t have to repeat ourselves. All three packages use <strong>shiny</strong> <span class="citation" data-cites="chang2024">(<a href="references.html#ref-chang2024" role="doc-biblioref">Chang et al. 2024</a>)</span> to provide interactive web-based interfaces. That means the amount of code needed to write for these is minimal. We only need to use the function that starts the Shiny app.</p>
-<p>We can use all three to automate EDA. They differ in the scope of analysis and the amount of available features. This also affects the composition of their respective target audiences.</p>
-<p>We’ll be once again using <strong>movies_na</strong> as the dataset.</p>
+<p>Remember how I warned you about automating the EDA process using an app? We’ve spent some time learning how to perform EDA manually. Now is the time to explore some of the available automation tools: <strong>ExPanDaR</strong> <span class="citation" data-cites="gassen2020">(<a href="references.html#ref-gassen2020" role="doc-biblioref">Gassen 2020</a>)</span>, <strong>ggquickeda</strong> <span class="citation" data-cites="mouksassi2024">(<a href="references.html#ref-mouksassi2024" role="doc-biblioref">Mouksassi et al. 2024</a>)</span>, and <strong>radiant</strong> <span class="citation" data-cites="nijs2024">(<a href="references.html#ref-nijs2024" role="doc-biblioref">Nijs 2024</a>)</span>.</p>
+<p>Let’s start with the similarities:</p>
+<ul>
+<li>Use <strong>shiny</strong> <span class="citation" data-cites="chang2024">(<a href="references.html#ref-chang2024" role="doc-biblioref">Chang et al. 2024</a>)</span> to provide interactive web-based interfaces.</li>
+<li>Cut the coding required. In most cases, you load your data and call a single function to start the app.</li>
+<li>Enable interactive exploration. As you adjust inputs in the UI (select variables, filters, plot types, etc.), the output updates immediately in your browser.</li>
+<li>Support exporting your results in some form.</li>
+</ul>
+<p>They differ in the scope of analysis and the amount of available features. This also affects the composition of their respective target audiences. Let’s take a closer look at each of them.</p>
+<p>We’ll once again use <strong>movies_na_length_under_500</strong> as the data set.</p>
 <section id="sec-expandar" class="level4" data-number="2.2.4.1"><h4 data-number="2.2.4.1" class="anchored" data-anchor-id="sec-expandar">
 <span class="header-section-number">2.2.4.1</span> ExPanDaR</h4>
+<p>ExPanDaR is especially good for panel data (with both cross-sectional and time-series dimensions). You can examine summary statistics, visualize distributions, and relationships. You can also perform linear regression analysis. ExPanDaR even allows for simple experimental tests to verify robustness. Splitting data into training and test samples, for example.</p>
+<p>A key feature is the ability to share analyses without revealing the raw data. This enables researchers to assess the robustness of empirical results within the app. Or to export an R Notebook of the analysis for reproducibility.</p>
+<p>For these reasons, ExPanDaR’s target users are academic researchers.</p>
+<p>To start the ExPanD Shiny app:</p>
 <div class="cell">
 <div class="sourceCode" id="cb39"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://joachim-gassen.github.io/ExPanDaR/">ExPanDaR</a></span><span class="op">)</span> </span>
 <span></span>
-<span><span class="va">movies_na</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span><span class="va">movies_na_length_under_500</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/ExPanDaR/man/ExPanD.html">ExPanD</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>Here’s an example screenshot of the <strong>Scatter Plot</strong> section of the app. You choose the variables with the dropdown menus. There can be extra choices to make. In this case, whether to use a smaller sample and display a smoother as seen in <a href="#sec-pairwise-plot-matrix" class="quarto-xref"><span>Section 2.2.3.2</span></a>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="img/figure-2-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure 2.1: A similar scatter plot to the one we created with DataExplorer in sec-numerical-columns"><img src="img/figure-2-1.png" class="img-fluid figure-img" alt="Figure 2.1: A similar scatter plot to the one we created with DataExplorer in sec-numerical-columns"></a></p>
+<figcaption>Figure 2.1: A similar scatter plot to the one we created with DataExplorer in <a href="#sec-numerical-columns" class="quarto-xref"><span>Section 2.2.2.3</span></a></figcaption></figure>
+</div>
+<p>For a full working example of the app in action, visit <a href="https://jgassen.shinyapps.io/expacc/">Exploring the Accrual Landscape by Open Science</a>.</p>
 </section><section id="sec-ggquickeda" class="level4" data-number="2.2.4.2"><h4 data-number="2.2.4.2" class="anchored" data-anchor-id="sec-ggquickeda">
 <span class="header-section-number">2.2.4.2</span> ggquickeda</h4>
+<p>ggquickeda enables a rapid exploration of your dataset by generating a range of plots (e.g., scatter plots, box plots, bar charts, histograms, and density plots) and summary tables.</p>
+<p>The app also generates descriptive statistics tables for one or many variables. A notable feature is support for visualizing survival analysis. ggquickeda includes custom geoms and stats (e.g., geom_km) to plot Kaplan-Meier survival curves and confidence bands. This makes it especially handy for clinical or time-to-event data.</p>
+<p>The target audience for ggquickeda is analysts and R users who want rapid insight into their data through visualization, but prefer a graphical user interface (GUI) approach. ggquickeda includes an <strong>Export Plot Code</strong> feature that reveals the underlying ggplot2 code for any graph you create. This makes it easy to customize the plots further outside the app.</p>
 <div class="cell">
 <div class="sourceCode" id="cb40"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/smouksassi/ggquickeda">ggquickeda</a></span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">movies_na</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span><span class="va">movies_na_length_under_500</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://smouksassi.github.io/ggquickeda/reference/run_ggquickeda.html">run_ggquickeda</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>Here’s an example screenshot of the <strong>X/Y Plot</strong> section of the app. There are more choices to make compared to ExPanDaR.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="img/figure-2-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure 2.2: Another similar scatter plot to the one we created with DataExplorer in sec-numerical-columns"><img src="img/figure-2-2.png" class="img-fluid figure-img" alt="Figure 2.2: Another similar scatter plot to the one we created with DataExplorer in sec-numerical-columns"></a></p>
+<figcaption>Figure 2.2: Another similar scatter plot to the one we created with DataExplorer in <a href="#sec-numerical-columns" class="quarto-xref"><span>Section 2.2.2.3</span></a></figcaption></figure>
+</div>
+<p>For a more comprehensive introduction to the features, there’s an <a href="https://certara.github.io/R-Certara/articles/lesson_3.html">hour-long webinar from Certara R School</a>.</p>
 </section><section id="sec-radiant" class="level4" data-number="2.2.4.3"><h4 data-number="2.2.4.3" class="anchored" data-anchor-id="sec-radiant">
 <span class="header-section-number">2.2.4.3</span> radiant</h4>
+<p>Radiant isn’t only an EDA tool but a comprehensive Shiny application that covers the entire analytics workflow. From data import and cleaning to exploration, modeling, and even decision-making. For the scope of this book, we’ll concentrate on the EDA part.</p>
+<p>Radiant combines several modular packages (radiant.data, radiant.design, radiant.basics, radiant.model, radiant.multivariate) into one unified app.</p>
+<p>Radiant is for business analysts, students, and instructors in business and statistics. It’s used in classrooms, allowing learners to focus on concepts rather than syntax.</p>
+<p>Radiant can generate an R Markdown report of all your analysis steps or let you save the state of the app. The state file is a snapshot of all inputs and selections, which you or others can reload later to reproduce the exact results.</p>
 <div class="cell">
 <div class="sourceCode" id="cb41"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/radiant-rstats/radiant">radiant</a></span><span class="op">)</span></span>
 <span></span>
+<span><span class="co"># Note that you can't provide radiant with the data set in the code. </span></span>
+<span><span class="co"># We'll do it in the user interface instead.</span></span>
 <span><span class="fu"><a href="https://rdrr.io/pkg/radiant/man/radiant.html">radiant</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>Since we can’t provide radiant with the data set in the code, we’ll do it inside the GUI:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="img/figure-2-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure 2.3: You can load data from any data frame in your Global Environment"><img src="img/figure-2-3.png" class="img-fluid figure-img" alt="Figure 2.3: You can load data from any data frame in your Global Environment"></a></p>
+<figcaption>Figure 2.3: You can load data from any data frame in your Global Environment</figcaption></figure>
+</div>
+<p>Here’s an example screenshot of the <strong>Visualize</strong> section of the app. The app design is closer to ggquickeda than ExPanDaR.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="img/figure-2-4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure 2.4: Yet another similar scatter plot to the one we created with DataExplorer in sec-numerical-columns"><img src="img/figure-2-4.png" class="img-fluid figure-img" alt="Figure 2.4: Yet another similar scatter plot to the one we created with DataExplorer in sec-numerical-columns"></a></p>
+<figcaption>Figure 2.4: Yet another similar scatter plot to the one we created with DataExplorer in <a href="#sec-numerical-columns" class="quarto-xref"><span>Section 2.2.2.3</span></a></figcaption></figure>
+</div>
+<p>For a more comprehensive introduction to the features, check the <a href="https://radiant-rstats.github.io/docs/radiant-tutorial-series.html">Radiant Tutorial Video Series</a>.</p>
+</section><section id="sec-comparative-summary" class="level4" data-number="2.2.4.4"><h4 data-number="2.2.4.4" class="anchored" data-anchor-id="sec-comparative-summary">
+<span class="header-section-number">2.2.4.4</span> Comparative summary</h4>
+<p>In conclusion, each package excels in a different niche. They all leverage the power of R through an interactive interface, so the <em>best</em> choice depends on the use case. Choose the one whose design philosophy matches your analysis needs.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 23%">
+<col style="width: 23%">
+<col style="width: 29%">
+</colgroup>
+<thead><tr class="header">
+<th>Package</th>
+<th>Focus &amp; Scope</th>
+<th>Unique Strengths</th>
+<th>Ideal Use Cases</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><strong>ExPanDaR</strong></td>
+<td>Particularly for panel data (longitudinal data sets)</td>
+<td>Robust modeling features, reproducible reports</td>
+<td>Academic research, teaching, panel data analysis</td>
+</tr>
+<tr class="even">
+<td><strong>ggquickeda</strong></td>
+<td>Quick visualization and summary statistics</td>
+<td>Quick plots, Kaplan-Meier survival curves</td>
+<td>Quick EDA, initial data inspections, simple visualization</td>
+</tr>
+<tr class="odd">
+<td><strong>radiant</strong></td>
+<td>Comprehensive business analytics platform</td>
+<td>Broad analytics toolkit, decision analysis</td>
+<td>Business analytics, education, end-to-end analysis workflow</td>
+</tr>
+</tbody>
+</table>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
@@ -1629,6 +1711,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -1739,6 +1823,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
+      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
@@ -1986,7 +2071,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <p>This book was built with <a href="https://quarto.org/">Quarto</a> and is hosted on <a href="https://www.netlify.com">Netlify</a>.</p>
 </div>
   </div>
-</footer>
+</footer><script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","loop":false,"selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 </body></html>

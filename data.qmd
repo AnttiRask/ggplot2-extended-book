@@ -5,7 +5,7 @@
 #| message: false
 #| results: asis
 
-source("warning.R")
+source("ready.R")
 ```
 
 ```{r}
@@ -222,7 +222,7 @@ As mentioned earlier, Movies is already a tibble. But, it doesn't mean that the 
 
 ### RDatasets {#sec-rdatasets}
 
-[**RDatasets**](https://vincentarelbundock.github.io/Rdatasets/articles/data.html) is not an R package. But it is an excellent GitHub repo. And a “collection of datasets originally distributed in various R packages" [@arel-bundock2024].
+[**RDatasets**](https://vincentarelbundock.github.io/Rdatasets/articles/data.html) is not an R package. But it is an excellent GitHub repo. And a “collection of data sets originally distributed in various R packages" [@arel-bundock2024].
 
 ```{r}
 #| echo:    false
@@ -277,7 +277,7 @@ The RDatasets repo contains that same list. But there you will also find a .csv 
 
 If I had to choose one fun data set from the list to highlight, it would be **starwars** from the **dplyr** [@wickham2023c] package.
 
-You can choose to use the .csv file provided on the website. Another way to use the collection is to choose the dataset from the list and load the package it comes with:
+You can choose to use the .csv file provided on the website. Another way to use the collection is to choose the data set from the list and load the package it comes with:
 
 ```{r}
 library(dplyr)
@@ -334,7 +334,7 @@ It's good to note these visualizations aren't usually meant for publication. Com
 
 The last thing we'll look at in this chapter is one way to **automate** the EDA process using an app. Although I must warn you. It's better to use these tools only after you've gained experience from doing EDA without them. It might sound counter-intuitive, but trust me. It can be too overwhelming if you don't know what you're doing.
 
-### Missing values {#sec-missing-values}
+### Missing values {#sec-missing-values-eda}
 
 Let's first load the data. Looking at the movies data set earlier we noticed the **mpaa** column had many blank values. We don't know if they didn't have a rating in the first place. Or if they did, but the rating is missing. For the sake of this demonstration, let's assume they all should have a rating.
 
@@ -492,11 +492,11 @@ movies_na %>%
   plot_intro(ggtheme = theme_bw())
 ```
 
-#### Missing Values
+#### Missing Values {#sec-missing-values-summarizing-data}
 
 The most fascinating insights here are still related to missing values. Less than 5% of the rows in the data set are complete. Meaning that they have no missing values in any of the columns. And almost 10% of all the observations are missing. That's how much the missing rows of budget and mpaa are affecting the totals. One positive thing is that we don't have any columns that are missing all the values.
 
-#### Categorical Columns
+#### Categorical Columns {#sec-categorical-columns}
 
 Let's then take a look at the categorical columns. The one that will be missing from the upcoming visualizations is **title**. The values are more or less unique. So, it wouldn't make sense having a bar chart, for instance, with more than 50000 rows with a count of 1 each.
 
@@ -546,7 +546,7 @@ movies_na %>%
 
 This shows us that **Action** and **Romance** are the genres with more R rated movies than the other genres. Of course we must remember the prevalence of those missing values.
 
-#### Numerical Columns
+#### Numerical Columns {#sec-numerical-columns}
 
 Next, we'll use `plot_histogram()` to draw a histogram of all the numerical columns (both discrete and continuous).
 
@@ -631,7 +631,7 @@ These are some of the ways to use DataExplorer to create a visual summary of a d
 
 To conclude, DataExplorer has a function, `create_report()`. It creates a full EDA report from scratch. We won't use that now, because the report would take too much space. But if you're using DataExplorer, you should try it!
 
-#### gt & gtExtras
+#### gt & gtExtras {#sec-gt-gtextras}
 
 DataExplorer is a good package, but it's not the only game in town for EDA. **gt** [@iannone2024] is a package to create tables (\[INSERT LINK HERE\]) with.
 
@@ -818,7 +818,7 @@ movies_without_na_drama %>%
 
 To use a pairwise plot matrix we turn to **GGally** [@schloerke2024].
 
-Let's start with the basic `ggpairs()` function. We only need to tell it which columns we want to use. We'll start by looking at the dataset without the Drama column.
+Let's start with the basic `ggpairs()` function. We only need to tell it which columns we want to use. We'll start by looking at the data set without the Drama column.
 
 ```{r}
 #| message: false
@@ -892,42 +892,103 @@ There are many other ways to customize a pairwise plot matrix. For the rest, see
 
 ### Automated EDA app {#sec-automated-eda-app}
 
-Remember how I warned you about automating the EDA process using an app? We've now spent some time learning how to do EDA manually. Let's take a look at three of the automation tools available: __ExPanDaR__ [@gassen2020], __ggquickeda__ [@mouksassi2024], and __radiant__ [@nijs2024].
+Remember how I warned you about automating the EDA process using an app? We've spent some time learning how to perform EDA manually. Now is the time to explore some of the available automation tools: **ExPanDaR** [@gassen2020], **ggquickeda** [@mouksassi2024], and **radiant** [@nijs2024].
 
-Let's start with the similarities so we don't have to repeat ourselves. All three packages use __shiny__ [@chang2024] to provide interactive web-based interfaces. That means the amount of code needed to write for these is minimal. We only need to use the function that starts the Shiny app.
+Let's start with the similarities:
 
-We can use all three to automate EDA. They differ in the scope of analysis and the amount of available features. This also affects the composition of their respective target audiences.
+- Use **shiny** [@chang2024] to provide interactive web-based interfaces.
+- Cut the coding required. In most cases, you load your data and call a single function to start the app.
+- Enable interactive exploration. As you adjust inputs in the UI (select variables, filters, plot types, etc.), the output updates immediately in your browser.
+- Support exporting your results in some form.
 
-We'll be once again using __movies_na__ as the dataset.
+They differ in the scope of analysis and the amount of available features. This also affects the composition of their respective target audiences. Let's take a closer look at each of them.
+
+We'll once again use **movies_na_length_under_500** as the data set.
 
 #### ExPanDaR {#sec-expandar}
+
+ExPanDaR is especially good for panel data (with both cross-sectional and time-series dimensions). You can examine summary statistics, visualize distributions, and relationships. You can also perform linear regression analysis. ExPanDaR even allows for simple experimental tests to verify robustness. Splitting data into training and test samples, for example.
+
+A key feature is the ability to share analyses without revealing the raw data. This enables researchers to assess the robustness of empirical results within the app. Or to export an R Notebook of the analysis for reproducibility.
+
+For these reasons, ExPanDaR’s target users are academic researchers.
+
+To start the ExPanD Shiny app:
 
 ```{r}
 #| eval: false
 
 library(ExPanDaR) 
 
-movies_na %>%
+movies_na_length_under_500 %>%
   ExPanD()
 ```
 
+Here's an example screenshot of the __Scatter Plot__ section of the app. You choose the variables with the dropdown menus. There can be extra choices to make. In this case, whether to use a smaller sample and display a smoother as seen in @sec-pairwise-plot-matrix.
+
+![Figure 2.1: A similar scatter plot to the one we created with DataExplorer in @sec-numerical-columns](img/figure-2-1.png){.lightbox}
+
+For a full working example of the app in action, visit [Exploring the Accrual Landscape by Open Science](https://jgassen.shinyapps.io/expacc/).
+
 #### ggquickeda {#sec-ggquickeda}
+
+ggquickeda enables a rapid exploration of your dataset by generating a range of plots (e.g., scatter plots, box plots, bar charts, histograms, and density plots) and summary tables.
+
+The app also generates descriptive statistics tables for one or many variables. A notable feature is support for visualizing survival analysis. ggquickeda includes custom geoms and stats (e.g., geom_km) to plot Kaplan-Meier survival curves and confidence bands. This makes it especially handy for clinical or time-to-event data.
+
+The target audience for ggquickeda is analysts and R users who want rapid insight into their data through visualization, but prefer a graphical user interface (GUI) approach. ggquickeda includes an __Export Plot Code__ feature that reveals the underlying ggplot2 code for any graph you create. This makes it easy to customize the plots further outside the app.
 
 ```{r}
 #| eval: false
 
 library(ggquickeda)
 
-movies_na %>%
+movies_na_length_under_500 %>%
   run_ggquickeda()
 ```
 
+Here's an example screenshot of the __X/Y Plot__ section of the app. There are more choices to make compared to ExPanDaR.
+
+![Figure 2.2: Another similar scatter plot to the one we created with DataExplorer in @sec-numerical-columns](img/figure-2-2.png){.lightbox}
+
+For a more comprehensive introduction to the features, there's an [hour-long webinar from Certara R School](https://certara.github.io/R-Certara/articles/lesson_3.html).
+
 #### radiant {#sec-radiant}
+
+Radiant isn't only an EDA tool but a comprehensive Shiny application that covers the entire analytics workflow. From data import and cleaning to exploration, modeling, and even decision-making. For the scope of this book, we'll concentrate on the EDA part.
+
+Radiant combines several modular packages (radiant.data, radiant.design, radiant.basics, radiant.model, radiant.multivariate) into one unified app.
+
+Radiant is for business analysts, students, and instructors in business and statistics. It’s used in classrooms, allowing learners to focus on concepts rather than syntax.
+
+Radiant can generate an R Markdown report of all your analysis steps or let you save the state of the app. The state file is a snapshot of all inputs and selections, which you or others can reload later to reproduce the exact results.
 
 ```{r}
 #| eval: false
 
 library(radiant)
 
+# Note that you can't provide radiant with the data set in the code. 
+# We'll do it in the user interface instead.
 radiant()
 ```
+
+Since we can't provide radiant with the data set in the code, we'll do it inside the GUI:
+
+![Figure 2.3: You can load data from any data frame in your Global Environment](img/figure-2-3.png){.lightbox}
+
+Here's an example screenshot of the __Visualize__ section of the app. The app design is closer to ggquickeda than ExPanDaR.
+
+![Figure 2.4: Yet another similar scatter plot to the one we created with DataExplorer in @sec-numerical-columns](img/figure-2-4.png){.lightbox}
+
+For a more comprehensive introduction to the features, check the [Radiant Tutorial Video Series](https://radiant-rstats.github.io/docs/radiant-tutorial-series.html).
+
+#### Comparative summary {#sec-comparative-summary}
+
+In conclusion, each package excels in a different niche. They all leverage the power of R through an interactive interface, so the _best_ choice depends on the use case. Choose the one whose design philosophy matches your analysis needs.
+
+| Package | Focus & Scope | Unique Strengths | Ideal Use Cases |
+|-----------------|-----------------|-----------------|---------------------|
+| __ExPanDaR__ | Particularly for panel data (longitudinal data sets) | Robust modeling features, reproducible reports | Academic research, teaching, panel data analysis |
+| __ggquickeda__ | Quick visualization and summary statistics | Quick plots, Kaplan-Meier survival curves | Quick EDA, initial data inspections, simple visualization |
+| __radiant__ | Comprehensive business analytics platform | Broad analytics toolkit, decision analysis | Business analytics, education, end-to-end analysis workflow |

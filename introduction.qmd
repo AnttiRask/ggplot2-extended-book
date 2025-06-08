@@ -5,7 +5,7 @@
 #| message: false
 #| results: asis
 
-source("warning.R")
+source("ready.R")
 ```
 
 Data visualization is one of those things that can look easy when you see someone doing it well. Then you try it yourself and it’s easy to feel like you know nothing.
@@ -255,6 +255,7 @@ Next, it's practice, practice, practice. Recreate your favorite data visualizati
 ### Books {#sec-books}
 
 -   [BBC Visual and Data Journalism cookbook for R graphics](https://bbc.github.io/rcookbook/)
+-   [Big Book of R (Chapter 12 Data Visualization) by Oscar Baruffa](https://www.bigbookofr.com/chapters/data%20visualization)
 -   [Data visualisation using R, for researchers who don’t use R by Emily Nordmann et al.](https://psyteachr.github.io/introdataviz/index.html)
 -   [ggplot2: Elegant Graphics for Data Analysis (3e) by Hadley Wickham et al.](https://ggplot2-book.org/)
 -   [An Introduction to ggplot2 by Ozancan Ozdemir](https://bookdown.org/ozancanozdemir/introduction-to-ggplot2/)
