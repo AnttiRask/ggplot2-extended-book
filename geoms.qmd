@@ -7,6 +7,20 @@
 source("warning.R")
 ```
 
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(conflicted)
+```
+
+A __geom__ (short for geometric object) is a component that defines how data is visually represented in a plot. Geoms determine the type of visualization or the graphical shape that will be drawn.
+
+"These geoms are the fundamental building blocks of **ggplot2** [@wickham2024a]. They are useful in their own right, but are also used to construct more complex geoms. Most of these geoms are associated with a named plot: when that geom is used by itself in a plot, that plot has a special name." [@wickham2016]
+
+ggplot2 already has a [long list of geoms](https://ggplot2.tidyverse.org/reference/index.html#geoms). We won't be discussing those unless there is an extension package that is an improvement to the original. Primarily, this chapter focuses on the geoms that ggplot2 does not include.
+
 ## Area plots
 
 ### Horizon chart

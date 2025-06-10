@@ -896,10 +896,10 @@ Remember how I warned you about automating the EDA process using an app? We've s
 
 Let's start with the similarities:
 
-- Use **shiny** [@chang2024] to provide interactive web-based interfaces.
-- Cut the coding required. In most cases, you load your data and call a single function to start the app.
-- Enable interactive exploration. As you adjust inputs in the UI (select variables, filters, plot types, etc.), the output updates immediately in your browser.
-- Support exporting your results in some form.
+-   Use **shiny** [@chang2024] to provide interactive web-based interfaces.
+-   Cut the coding required. In most cases, you load your data and call a single function to start the app.
+-   Enable interactive exploration. As you adjust inputs in the UI (select variables, filters, plot types, etc.), the output updates immediately in your browser.
+-   Support exporting your results in some form.
 
 They differ in the scope of analysis and the amount of available features. This also affects the composition of their respective target audiences. Let's take a closer look at each of them.
 
@@ -924,7 +924,7 @@ movies_na_length_under_500 %>%
   ExPanD()
 ```
 
-Here's an example screenshot of the __Scatter Plot__ section of the app. You choose the variables with the dropdown menus. There can be extra choices to make. In this case, whether to use a smaller sample and display a smoother as seen in @sec-pairwise-plot-matrix.
+Here's an example screenshot of the **Scatter Plot** section of the app. You choose the variables with the dropdown menus. There can be extra choices to make. In this case, whether to use a smaller sample and display a smoother as seen in @sec-pairwise-plot-matrix.
 
 ![Figure 2.1: A similar scatter plot to the one we created with DataExplorer in @sec-numerical-columns](img/figure-2-1.png){.lightbox}
 
@@ -936,7 +936,7 @@ ggquickeda enables a rapid exploration of your dataset by generating a range of 
 
 The app also generates descriptive statistics tables for one or many variables. A notable feature is support for visualizing survival analysis. ggquickeda includes custom geoms and stats (e.g., geom_km) to plot Kaplan-Meier survival curves and confidence bands. This makes it especially handy for clinical or time-to-event data.
 
-The target audience for ggquickeda is analysts and R users who want rapid insight into their data through visualization, but prefer a graphical user interface (GUI) approach. ggquickeda includes an __Export Plot Code__ feature that reveals the underlying ggplot2 code for any graph you create. This makes it easy to customize the plots further outside the app.
+The target audience for ggquickeda is analysts and R users who want rapid insight into their data through visualization, but prefer a graphical user interface (GUI) approach. ggquickeda includes an **Export Plot Code** feature that reveals the underlying ggplot2 code for any graph you create. This makes it easy to customize the plots further outside the app.
 
 ```{r}
 #| eval: false
@@ -947,7 +947,7 @@ movies_na_length_under_500 %>%
   run_ggquickeda()
 ```
 
-Here's an example screenshot of the __X/Y Plot__ section of the app. There are more choices to make compared to ExPanDaR.
+Here's an example screenshot of the **X/Y Plot** section of the app. There are more choices to make compared to ExPanDaR.
 
 ![Figure 2.2: Another similar scatter plot to the one we created with DataExplorer in @sec-numerical-columns](img/figure-2-2.png){.lightbox}
 
@@ -977,7 +977,7 @@ Since we can't provide radiant with the data set in the code, we'll do it inside
 
 ![Figure 2.3: You can load data from any data frame in your Global Environment](img/figure-2-3.png){.lightbox}
 
-Here's an example screenshot of the __Visualize__ section of the app. The app design is closer to ggquickeda than ExPanDaR.
+Here's an example screenshot of the **Visualize** section of the app. The app design is closer to ggquickeda than ExPanDaR.
 
 ![Figure 2.4: Yet another similar scatter plot to the one we created with DataExplorer in @sec-numerical-columns](img/figure-2-4.png){.lightbox}
 
@@ -985,10 +985,10 @@ For a more comprehensive introduction to the features, check the [Radiant Tutori
 
 #### Comparative summary {#sec-comparative-summary}
 
-In conclusion, each package excels in a different niche. They all leverage the power of R through an interactive interface, so the _best_ choice depends on the use case. Choose the one whose design philosophy matches your analysis needs.
+In conclusion, each package excels in a different niche. They all leverage the power of R through an interactive interface, so the *best* choice depends on the use case. Choose the one whose design philosophy matches your analysis needs.
 
 | Package | Focus & Scope | Unique Strengths | Ideal Use Cases |
-|-----------------|-----------------|-----------------|---------------------|
-| __ExPanDaR__ | Particularly for panel data (longitudinal data sets) | Robust modeling features, reproducible reports | Academic research, teaching, panel data analysis |
-| __ggquickeda__ | Quick visualization and summary statistics | Quick plots, Kaplan-Meier survival curves | Quick EDA, initial data inspections, simple visualization |
-| __radiant__ | Comprehensive business analytics platform | Broad analytics toolkit, decision analysis | Business analytics, education, end-to-end analysis workflow |
+|------------------|------------------|------------------|--------------------|
+| **ExPanDaR** | Particularly for panel data (longitudinal data sets) | Robust modeling features, reproducible reports | Academic research, teaching, panel data analysis |
+| **ggquickeda** | Quick visualization and summary statistics | Quick plots, Kaplan-Meier survival curves | Quick EDA, initial data inspections, simple visualization |
+| **radiant** | Comprehensive business analytics platform | Broad analytics toolkit, decision analysis | Business analytics, education, end-to-end analysis workflow |
