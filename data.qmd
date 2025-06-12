@@ -988,7 +988,7 @@ For a more comprehensive introduction to the features, check the [Radiant Tutori
 In conclusion, each package excels in a different niche. They all leverage the power of R through an interactive interface, so the *best* choice depends on the use case. Choose the one whose design philosophy matches your analysis needs.
 
 | Package | Focus & Scope | Unique Strengths | Ideal Use Cases |
-|------------------|------------------|------------------|--------------------|
+|------------------|------------------|------------------|-------------------|
 | **ExPanDaR** | Particularly for panel data (longitudinal data sets) | Robust modeling features, reproducible reports | Academic research, teaching, panel data analysis |
 | **ggquickeda** | Quick visualization and summary statistics | Quick plots, Kaplan-Meier survival curves | Quick EDA, initial data inspections, simple visualization |
 | **radiant** | Comprehensive business analytics platform | Broad analytics toolkit, decision analysis | Business analytics, education, end-to-end analysis workflow |

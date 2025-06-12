@@ -453,7 +453,7 @@ This chapter is now done!
 1960  76036  40341 8220   3145    3054   1905     1008</code></pre>
 </div>
 </div>
-<p>WorldPhones is a matrix with 7 rows and 8 columns. The columns give the figures for a given region, and the rows the figures for a year. We would like to turn it into a <em>tidy</em> format. We can use the <strong>tibble</strong> <span class="citation" data-cites="müller2023">(<a href="references.html#ref-m%C3%BCller2023" role="doc-biblioref">Müller and Wickham 2023</a>)</span> package for the first part. And then we’ll use <code><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">pivot_longer()</a></code> from the <strong>tidyr</strong> package <span class="citation" data-cites="wickham2024b">(<a href="references.html#ref-wickham2024b" role="doc-biblioref">Wickham, Vaughan, and Girlich 2024</a>)</span>. It increases the number of rows and decrease the number of columns. We want the continents to be observations, not columns.</p>
+<p>WorldPhones is a matrix with 7 rows and 8 columns. The columns give the figures for a given region, and the rows the figures for a year. We would like to turn it into a <em>tidy</em> format. We can use the <strong>tibble</strong> <span class="citation" data-cites="müller2023">(<a href="references.html#ref-m%C3%BCller2023" role="doc-biblioref">Müller and Wickham 2025</a>)</span> package for the first part. And then we’ll use <code><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">pivot_longer()</a></code> from the <strong>tidyr</strong> package <span class="citation" data-cites="wickham2024b">(<a href="references.html#ref-wickham2024b" role="doc-biblioref">Wickham, Vaughan, and Girlich 2024</a>)</span>. It increases the number of rows and decrease the number of columns. We want the continents to be observations, not columns.</p>
 <div class="cell">
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tibble.tidyverse.org/">tibble</a></span><span class="op">)</span></span>
@@ -769,7 +769,7 @@ This chapter is now done!
 </section><section id="sec-gt-gtextras" class="level4" data-number="2.2.2.4"><h4 data-number="2.2.2.4" class="anchored" data-anchor-id="sec-gt-gtextras">
 <span class="header-section-number">2.2.2.4</span> gt &amp; gtExtras</h4>
 <p>DataExplorer is a good package, but it’s not the only game in town for EDA. <strong>gt</strong> <span class="citation" data-cites="iannone2024">(<a href="references.html#ref-iannone2024" role="doc-biblioref">Iannone et al. 2025</a>)</span> is a package to create tables ([INSERT LINK HERE]) with.</p>
-<p>Often, when you think about tables, you think about numeric and text values. But that doesn’t have to be the case. With <strong>gtExtras</strong> <span class="citation" data-cites="mock2023">(<a href="references.html#ref-mock2023" role="doc-biblioref">Mock 2023</a>)</span> you can create a fast and easy visual summary of your data. The <code><a href="https://jthomasmock.github.io/gtExtras/reference/gt_plt_summary.html">gt_plt_summary()</a></code> function is all you need.</p>
+<p>Often, when you think about tables, you think about numeric and text values. But that doesn’t have to be the case. With <strong>gtExtras</strong> <span class="citation" data-cites="mock2023">(<a href="references.html#ref-mock2023" role="doc-biblioref">Mock 2025</a>)</span> you can create a fast and easy visual summary of your data. The <code><a href="https://jthomasmock.github.io/gtExtras/reference/gt_plt_summary.html">gt_plt_summary()</a></code> function is all you need.</p>
 <p>The function does have some limitations. It has had some issues with certain data sets. The movies data set didn’t work, for instance. That’s why we’ll take a look at the WorldPhones data set instead.</p>
 <div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://gt.rstudio.com">gt</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/jthomasmock/gtExtras">gtExtras</a></span><span class="op">)</span></span>
@@ -1536,7 +1536,7 @@ Africa, Asia, Europe, Mid.Amer, N.Amer, Oceania and S.Amer
 <col style="width: 24%">
 <col style="width: 24%">
 <col style="width: 24%">
-<col style="width: 27%">
+<col style="width: 26%">
 </colgroup>
 <thead><tr class="header">
 <th>Package</th>
@@ -1593,13 +1593,13 @@ Iannone, Richard, Joe Cheng, Barret Schloerke, Ellis Hughes, Alexandra Lauer, Jo
 Kassambara, Alboukadel. 2023. <em>Ggcorrplot: Visualization of a Correlation Matrix Using ’Ggplot2’</em>. <a href="http://www.sthda.com/english/wiki/ggcorrplot-visualization-of-a-correlation-matrix-using-ggplot2">http://www.sthda.com/english/wiki/ggcorrplot-visualization-of-a-correlation-matrix-using-ggplot2</a>.
 </div>
 <div id="ref-mock2023" class="csl-entry" role="listitem">
-Mock, Thomas. 2023. <em>gtExtras: Extending ’Gt’ for Beautiful HTML Tables</em>. <a href="https://github.com/jthomasmock/gtExtras">https://github.com/jthomasmock/gtExtras</a>.
+Mock, Thomas. 2025. <em>gtExtras: Extending ’Gt’ for Beautiful HTML Tables</em>. <a href="https://CRAN.R-project.org/package=gtExtras">https://CRAN.R-project.org/package=gtExtras</a>.
 </div>
 <div id="ref-mouksassi2024" class="csl-entry" role="listitem">
 Mouksassi, Samer, Dean Attali, James Craig, Benjamin Rich, and Michael Sachs. 2024. <em>Ggquickeda: Quickly Explore Your Data Using ’Ggplot2’ and ’Table1’ Summary Tables</em>. <a href="https://CRAN.R-project.org/package=ggquickeda">https://CRAN.R-project.org/package=ggquickeda</a>.
 </div>
 <div id="ref-müller2023" class="csl-entry" role="listitem">
-Müller, Kirill, and Hadley Wickham. 2023. <em>Tibble: Simple Data Frames</em>. <a href="https://tibble.tidyverse.org/">https://tibble.tidyverse.org/</a>.
+Müller, Kirill, and Hadley Wickham. 2025. <em>Tibble: Simple Data Frames</em>. <a href="https://CRAN.R-project.org/package=tibble">https://CRAN.R-project.org/package=tibble</a>.
 </div>
 <div id="ref-nijs2024" class="csl-entry" role="listitem">
 Nijs, Vincent. 2024. <em>Radiant: Business Analytics Using r and Shiny</em>. <a href="https://CRAN.R-project.org/package=radiant">https://CRAN.R-project.org/package=radiant</a>.
@@ -1611,7 +1611,7 @@ Schloerke, Barret, Di Cook, Joseph Larmarange, Francois Briatte, Moritz Marbach,
 Tierney, Nicholas, Di Cook, Miles McBain, and Colin Fay. 2024. <em>Naniar: Data Structures, Summaries, and Visualisations for Missing Data</em>. <a href="https://naniar.njtierney.com/">https://naniar.njtierney.com/</a>.
 </div>
 <div id="ref-wickham2015" class="csl-entry" role="listitem">
-Wickham, Hadley. 2015. <em>Ggplot2movies: Movies Data</em>.
+Wickham, Hadley. 2015. <em>Ggplot2movies: Movies Data</em>. <a href="https://CRAN.R-project.org/package=ggplot2movies">https://CRAN.R-project.org/package=ggplot2movies</a>.
 </div>
 <div id="ref-wickham2024a" class="csl-entry" role="listitem">
 ———. 2025. <em>Ggplot2: Elegant Graphics for Data Analysis.</em> <a href="https://ggplot2.tidyverse.org">https://ggplot2.tidyverse.org</a>.
