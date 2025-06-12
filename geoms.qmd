@@ -15,94 +15,96 @@ source("warning.R")
 library(conflicted)
 ```
 
-A __geom__ (short for geometric object) is a component that defines how data is visually represented in a plot. Geoms determine the type of visualization or the graphical shape that will be drawn.
+A **geom** (short for geometric object) is a component that defines how data is visually represented in a plot. Geoms determine the type of visualization or the graphical shape that will be drawn.
 
-"These geoms are the fundamental building blocks of **ggplot2** [@wickham2024a]. They are useful in their own right, but are also used to construct more complex geoms. Most of these geoms are associated with a named plot: when that geom is used by itself in a plot, that plot has a special name." [@wickham2016]
+"These geoms are the fundamental building blocks of **ggplot2** [@wickham2024a]. They are useful in their own right, but are also used to construct more complex geoms. Most of these geoms are associated with a named [chart]: when that geom is used by itself in a [chart], that [chart] has a special name." [@wickham2016]
 
 ggplot2 already has a [long list of geoms](https://ggplot2.tidyverse.org/reference/index.html#geoms). We won't be discussing those unless there is an extension package that is an improvement to the original. Primarily, this chapter focuses on the geoms that ggplot2 does not include.
 
-## Area plots
+## Area charts {#sec-area-charts}
 
-### Horizon chart
+In general, area charts are line charts
 
-### Ribbon plot (improved)
+### Horizon chart {#sec-horizon-chart}
 
-### Streamgraph
+### Ribbon chart (improved) {#sec-ribbon-chart-improved}
 
-## Bar charts
+### Streamgraph {#sec-streamgraph}
 
-### Likert plot
+## Bar charts {#sec-bar-charts}
 
-### Mosaic plot
+### Likert chart {#sec-likert-chart}
 
-## Density plots
+### Mosaic chart {#sec-mosaic-chart}
 
-### Raincloud plot
+## Density charts {#sec-density-charts}
 
-### Ridgeline plot
+### Raincloud chart {#sec-raincloud-chart}
 
-## Geometric shapes
+### Ridgeline chart {#sec-ridgeline-chart}
 
-### Arc
+## Geometric shapes {#sec-geometric-shapes}
 
-### B-spline curve
+### Arc {#sec-arc}
 
-### Bézier curve
+### B-spline curve {#sec-b-spline-curve}
 
-### Circle
+### Bézier curve {#sec-bezier-curve}
 
-### Ellipse
+### Circle {#sec-circle}
 
-## Heatmaps
+### Ellipse {#sec-ellipse}
 
-### Calendar heatmap
+## Heatmaps {#sec-heatmaps}
 
-## Intersection plots
+### Calendar heatmap {#sec-calendar-heatmap}
 
-### Upset plot
+## Intersection diagrams {#sec-intersection-diagrams}
 
-### Venn diagram
+### UpSet diagram {#sec-upset-diagram}
 
-## Line charts
+### Venn diagram {#sec-venn-diagram}
 
-### Bump chart
+## Line charts {#sec-geoms}
 
-### Dumbbell and lollipop plot
+### Bump chart {#sec-bump-chart}
 
-### Line chart with neon glow or shadow effects
+### Dumbbell and lollipop chart {#sec-dumbbell-and-lollipop-chart}
 
-### Slope chart
+### Line chart (with neon glow or shadow effects) {#sec-line-chart-with-neon-glow-or-shadow-effects}
 
-## Multivariate graphs
+### Slope chart {#sec-slope-chart}
 
-### Parallel coordinates plot (improved)
+## Multivariate charts {#sec-multivariate-charts}
 
-### Radar chart
+### Parallel coordinates chart (improved) {#sec-parallel-coordinates-chart-improved}
 
-## Pie charts
+### Radar chart {#sec-radar-chart}
 
-### Pie chart (improved)
+## Pie charts {#sec-pie-charts}
 
-### Moon chart
+### Pie chart (improved) {#sec-pie-chart-improved}
 
-### Square chart / waffle chart
+### Moon chart {#sec-moon-chart}
 
-## Scatter plots
+### Square chart (waffle chart) {#sec-square-chart-waffle-chart}
 
-### Beeswarm plot
+## Scatter charts {#sec-scatter-charts}
 
-### Point density plot
+### Beeswarm chart {#sec-beeswarm-chart}
 
-## Text visualization
+### Point density chart {#sec-point-density-chart}
 
-### Page layout visualization
+## Text visualization {#sec-text-visualization}
 
-### Word cloud
+### Page layout visualization {#sec-page-layout-visualization}
 
-## Tree-based graphs
+### Word cloud diagram {#sec-word-cloud-diagram}
 
-### Dendrogram
+## Tree diagrams {#sec-tree-diagrams}
 
-### Treemap
+### Dendrogram {#sec-dendrogram}
 
-### Voronoi diagram
+### Treemap diagram {#sec-treemap-diagram}
+
+### Voronoi diagram {#sec-voronoi-diagram}

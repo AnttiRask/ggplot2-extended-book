@@ -17,8 +17,8 @@ One bit about terminology before we go any further. *Chart*, *diagram*, *graph*,
 In the context of this book, I try to use the terms consistently in this way:
 
 -   **Chart / Diagram / Graph**: Type of visualization (e.g. bar chart, Venn diagram, or line graph)
--   **Plot**: Output of some code to create a visualization. It can contain many charts, diagrams, and/or graphs. But sometimes it's also used to mean a type of visualization (e.g. scatter plot)
--   **Visualization**: The most general of the terms. It can be used to talk about visualization as a concept. But sometimes it's also used for a more specific case.
+-   **Plot**: Output of some code to create a visualization. It can contain many charts, diagrams, and/or graphs. Sometimes it's also used to mean a type of visualization (e.g. scatter plot), but for the sake of consistency I try to avoid that
+-   **Visualization**: The most general of the terms. It can be used to talk about visualization as a concept. But sometimes it's also used for a more specific case
 
 ## Purpose and scope {#sec-purpose-and-scope}
 
