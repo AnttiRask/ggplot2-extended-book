@@ -738,7 +738,7 @@ corr %>%
   paged_table()
 ```
 
-Of course, we can see the differences by looking at the values in the matrix. But it might be easier to get the bigger picture by looking at them graphically. For that, we'll use **ggcorrplot** [@kassambra2023].
+Of course, we can see the differences by looking at the values in the matrix. But it might be easier to get the bigger picture by looking at them graphically. For that, we'll use **ggcorrplot** [@kassambara2023].
 
 This time, we'll also include the genre columns. We're interested in how they correlate with each other and the original five.
 
