@@ -9,14 +9,50 @@ source("warning.R")
 
 ## Complete themes
 
+### ggcharts
+
+### ggeconodist
+
+### ggnetwork
+
+### ggpomological
+
+### ggpubr
+
+### ggthemes {#sec-ggthemes}
+
+### ggthemr
+
+### lato
+
+### see
+
+### tvthemes
+
+### urbnthemes
+
+### xkcd
+
 ## Dark themes
+
+### ggdark
 
 ## GraphPad prism
 
+### ggprism
+
 ## Theme elements
 
-### Element markdown
+### ggtext
+
+### marquee
 
 ## Typography-centric themes
 
+### hrbrthemes
+
 ## Using extra fonts
+
+### extrafont
+
+### showtext

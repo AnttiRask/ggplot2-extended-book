@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.42">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Antti Rask">
 <title>9&nbsp; Themes – ggplot2 extended</title>
@@ -35,10 +35,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-d750defc014fd27ac05477a74ef534d9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -318,17 +318,55 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-<li><a href="#complete-themes" id="toc-complete-themes" class="nav-link active" data-scroll-target="#complete-themes"><span class="header-section-number">9.1</span> Complete themes</a></li>
-  <li><a href="#dark-themes" id="toc-dark-themes" class="nav-link" data-scroll-target="#dark-themes"><span class="header-section-number">9.2</span> Dark themes</a></li>
-  <li><a href="#graphpad-prism" id="toc-graphpad-prism" class="nav-link" data-scroll-target="#graphpad-prism"><span class="header-section-number">9.3</span> GraphPad prism</a></li>
+<li>
+<a href="#complete-themes" id="toc-complete-themes" class="nav-link active" data-scroll-target="#complete-themes"><span class="header-section-number">9.1</span> Complete themes</a>
+  <ul class="collapse">
+<li><a href="#ggcharts" id="toc-ggcharts" class="nav-link" data-scroll-target="#ggcharts"><span class="header-section-number">9.1.1</span> ggcharts</a></li>
+  <li><a href="#ggeconodist" id="toc-ggeconodist" class="nav-link" data-scroll-target="#ggeconodist"><span class="header-section-number">9.1.2</span> ggeconodist</a></li>
+  <li><a href="#ggnetwork" id="toc-ggnetwork" class="nav-link" data-scroll-target="#ggnetwork"><span class="header-section-number">9.1.3</span> ggnetwork</a></li>
+  <li><a href="#ggpomological" id="toc-ggpomological" class="nav-link" data-scroll-target="#ggpomological"><span class="header-section-number">9.1.4</span> ggpomological</a></li>
+  <li><a href="#ggpubr" id="toc-ggpubr" class="nav-link" data-scroll-target="#ggpubr"><span class="header-section-number">9.1.5</span> ggpubr</a></li>
+  <li><a href="#sec-ggthemes" id="toc-sec-ggthemes" class="nav-link" data-scroll-target="#sec-ggthemes"><span class="header-section-number">9.1.6</span> ggthemes</a></li>
+  <li><a href="#ggthemr" id="toc-ggthemr" class="nav-link" data-scroll-target="#ggthemr"><span class="header-section-number">9.1.7</span> ggthemr</a></li>
+  <li><a href="#lato" id="toc-lato" class="nav-link" data-scroll-target="#lato"><span class="header-section-number">9.1.8</span> lato</a></li>
+  <li><a href="#see" id="toc-see" class="nav-link" data-scroll-target="#see"><span class="header-section-number">9.1.9</span> see</a></li>
+  <li><a href="#tvthemes" id="toc-tvthemes" class="nav-link" data-scroll-target="#tvthemes"><span class="header-section-number">9.1.10</span> tvthemes</a></li>
+  <li><a href="#urbnthemes" id="toc-urbnthemes" class="nav-link" data-scroll-target="#urbnthemes"><span class="header-section-number">9.1.11</span> urbnthemes</a></li>
+  <li><a href="#xkcd" id="toc-xkcd" class="nav-link" data-scroll-target="#xkcd"><span class="header-section-number">9.1.12</span> xkcd</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#dark-themes" id="toc-dark-themes" class="nav-link" data-scroll-target="#dark-themes"><span class="header-section-number">9.2</span> Dark themes</a>
+  <ul class="collapse">
+<li><a href="#ggdark" id="toc-ggdark" class="nav-link" data-scroll-target="#ggdark"><span class="header-section-number">9.2.1</span> ggdark</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#graphpad-prism" id="toc-graphpad-prism" class="nav-link" data-scroll-target="#graphpad-prism"><span class="header-section-number">9.3</span> GraphPad prism</a>
+  <ul class="collapse">
+<li><a href="#ggprism" id="toc-ggprism" class="nav-link" data-scroll-target="#ggprism"><span class="header-section-number">9.3.1</span> ggprism</a></li>
+  </ul>
+</li>
   <li>
 <a href="#theme-elements" id="toc-theme-elements" class="nav-link" data-scroll-target="#theme-elements"><span class="header-section-number">9.4</span> Theme elements</a>
   <ul class="collapse">
-<li><a href="#element-markdown" id="toc-element-markdown" class="nav-link" data-scroll-target="#element-markdown"><span class="header-section-number">9.4.1</span> Element markdown</a></li>
+<li><a href="#ggtext" id="toc-ggtext" class="nav-link" data-scroll-target="#ggtext"><span class="header-section-number">9.4.1</span> ggtext</a></li>
+  <li><a href="#marquee" id="toc-marquee" class="nav-link" data-scroll-target="#marquee"><span class="header-section-number">9.4.2</span> marquee</a></li>
   </ul>
 </li>
-  <li><a href="#typography-centric-themes" id="toc-typography-centric-themes" class="nav-link" data-scroll-target="#typography-centric-themes"><span class="header-section-number">9.5</span> Typography-centric themes</a></li>
-  <li><a href="#using-extra-fonts" id="toc-using-extra-fonts" class="nav-link" data-scroll-target="#using-extra-fonts"><span class="header-section-number">9.6</span> Using extra fonts</a></li>
+  <li>
+<a href="#typography-centric-themes" id="toc-typography-centric-themes" class="nav-link" data-scroll-target="#typography-centric-themes"><span class="header-section-number">9.5</span> Typography-centric themes</a>
+  <ul class="collapse">
+<li><a href="#hrbrthemes" id="toc-hrbrthemes" class="nav-link" data-scroll-target="#hrbrthemes"><span class="header-section-number">9.5.1</span> hrbrthemes</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#using-extra-fonts" id="toc-using-extra-fonts" class="nav-link" data-scroll-target="#using-extra-fonts"><span class="header-section-number">9.6</span> Using extra fonts</a>
+  <ul class="collapse">
+<li><a href="#extrafont" id="toc-extrafont" class="nav-link" data-scroll-target="#extrafont"><span class="header-section-number">9.6.1</span> extrafont</a></li>
+  <li><a href="#showtext" id="toc-showtext" class="nav-link" data-scroll-target="#showtext"><span class="header-section-number">9.6.2</span> showtext</a></li>
+  </ul>
+</li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/edit/main/themes.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
@@ -362,21 +400,57 @@ This book/site is under construction
 </div>
 <section id="complete-themes" class="level2" data-number="9.1"><h2 data-number="9.1" class="anchored" data-anchor-id="complete-themes">
 <span class="header-section-number">9.1</span> Complete themes</h2>
-</section><section id="dark-themes" class="level2" data-number="9.2"><h2 data-number="9.2" class="anchored" data-anchor-id="dark-themes">
+<section id="ggcharts" class="level3" data-number="9.1.1"><h3 data-number="9.1.1" class="anchored" data-anchor-id="ggcharts">
+<span class="header-section-number">9.1.1</span> ggcharts</h3>
+</section><section id="ggeconodist" class="level3" data-number="9.1.2"><h3 data-number="9.1.2" class="anchored" data-anchor-id="ggeconodist">
+<span class="header-section-number">9.1.2</span> ggeconodist</h3>
+</section><section id="ggnetwork" class="level3" data-number="9.1.3"><h3 data-number="9.1.3" class="anchored" data-anchor-id="ggnetwork">
+<span class="header-section-number">9.1.3</span> ggnetwork</h3>
+</section><section id="ggpomological" class="level3" data-number="9.1.4"><h3 data-number="9.1.4" class="anchored" data-anchor-id="ggpomological">
+<span class="header-section-number">9.1.4</span> ggpomological</h3>
+</section><section id="ggpubr" class="level3" data-number="9.1.5"><h3 data-number="9.1.5" class="anchored" data-anchor-id="ggpubr">
+<span class="header-section-number">9.1.5</span> ggpubr</h3>
+</section><section id="sec-ggthemes" class="level3" data-number="9.1.6"><h3 data-number="9.1.6" class="anchored" data-anchor-id="sec-ggthemes">
+<span class="header-section-number">9.1.6</span> ggthemes</h3>
+</section><section id="ggthemr" class="level3" data-number="9.1.7"><h3 data-number="9.1.7" class="anchored" data-anchor-id="ggthemr">
+<span class="header-section-number">9.1.7</span> ggthemr</h3>
+</section><section id="lato" class="level3" data-number="9.1.8"><h3 data-number="9.1.8" class="anchored" data-anchor-id="lato">
+<span class="header-section-number">9.1.8</span> lato</h3>
+</section><section id="see" class="level3" data-number="9.1.9"><h3 data-number="9.1.9" class="anchored" data-anchor-id="see">
+<span class="header-section-number">9.1.9</span> see</h3>
+</section><section id="tvthemes" class="level3" data-number="9.1.10"><h3 data-number="9.1.10" class="anchored" data-anchor-id="tvthemes">
+<span class="header-section-number">9.1.10</span> tvthemes</h3>
+</section><section id="urbnthemes" class="level3" data-number="9.1.11"><h3 data-number="9.1.11" class="anchored" data-anchor-id="urbnthemes">
+<span class="header-section-number">9.1.11</span> urbnthemes</h3>
+</section><section id="xkcd" class="level3" data-number="9.1.12"><h3 data-number="9.1.12" class="anchored" data-anchor-id="xkcd">
+<span class="header-section-number">9.1.12</span> xkcd</h3>
+</section></section><section id="dark-themes" class="level2" data-number="9.2"><h2 data-number="9.2" class="anchored" data-anchor-id="dark-themes">
 <span class="header-section-number">9.2</span> Dark themes</h2>
-</section><section id="graphpad-prism" class="level2" data-number="9.3"><h2 data-number="9.3" class="anchored" data-anchor-id="graphpad-prism">
+<section id="ggdark" class="level3" data-number="9.2.1"><h3 data-number="9.2.1" class="anchored" data-anchor-id="ggdark">
+<span class="header-section-number">9.2.1</span> ggdark</h3>
+</section></section><section id="graphpad-prism" class="level2" data-number="9.3"><h2 data-number="9.3" class="anchored" data-anchor-id="graphpad-prism">
 <span class="header-section-number">9.3</span> GraphPad prism</h2>
-</section><section id="theme-elements" class="level2" data-number="9.4"><h2 data-number="9.4" class="anchored" data-anchor-id="theme-elements">
+<section id="ggprism" class="level3" data-number="9.3.1"><h3 data-number="9.3.1" class="anchored" data-anchor-id="ggprism">
+<span class="header-section-number">9.3.1</span> ggprism</h3>
+</section></section><section id="theme-elements" class="level2" data-number="9.4"><h2 data-number="9.4" class="anchored" data-anchor-id="theme-elements">
 <span class="header-section-number">9.4</span> Theme elements</h2>
-<section id="element-markdown" class="level3" data-number="9.4.1"><h3 data-number="9.4.1" class="anchored" data-anchor-id="element-markdown">
-<span class="header-section-number">9.4.1</span> Element markdown</h3>
+<section id="ggtext" class="level3" data-number="9.4.1"><h3 data-number="9.4.1" class="anchored" data-anchor-id="ggtext">
+<span class="header-section-number">9.4.1</span> ggtext</h3>
+</section><section id="marquee" class="level3" data-number="9.4.2"><h3 data-number="9.4.2" class="anchored" data-anchor-id="marquee">
+<span class="header-section-number">9.4.2</span> marquee</h3>
 </section></section><section id="typography-centric-themes" class="level2" data-number="9.5"><h2 data-number="9.5" class="anchored" data-anchor-id="typography-centric-themes">
 <span class="header-section-number">9.5</span> Typography-centric themes</h2>
-</section><section id="using-extra-fonts" class="level2" data-number="9.6"><h2 data-number="9.6" class="anchored" data-anchor-id="using-extra-fonts">
+<section id="hrbrthemes" class="level3" data-number="9.5.1"><h3 data-number="9.5.1" class="anchored" data-anchor-id="hrbrthemes">
+<span class="header-section-number">9.5.1</span> hrbrthemes</h3>
+</section></section><section id="using-extra-fonts" class="level2" data-number="9.6"><h2 data-number="9.6" class="anchored" data-anchor-id="using-extra-fonts">
 <span class="header-section-number">9.6</span> Using extra fonts</h2>
+<section id="extrafont" class="level3" data-number="9.6.1"><h3 data-number="9.6.1" class="anchored" data-anchor-id="extrafont">
+<span class="header-section-number">9.6.1</span> extrafont</h3>
+</section><section id="showtext" class="level3" data-number="9.6.2"><h3 data-number="9.6.2" class="anchored" data-anchor-id="showtext">
+<span class="header-section-number">9.6.2</span> showtext</h3>
 
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -458,8 +532,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -570,7 +642,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

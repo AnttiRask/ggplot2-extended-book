@@ -13,19 +13,213 @@ source("warning.R")
 #| warning: false
 
 library(conflicted)
+conflicts_prefer(dplyr::filter)
 ```
 
 A **geom** (short for geometric object) is a component that defines how data is visually represented in a plot. Geoms determine the type of visualization or the graphical shape that will be drawn.
 
-"These geoms are the fundamental building blocks of **ggplot2** [@wickham2024a]. They are useful in their own right, but are also used to construct more complex geoms. Most of these geoms are associated with a named [chart]: when that geom is used by itself in a [chart], that [chart] has a special name." [@wickham2016]
+"These geoms are the fundamental building blocks of **ggplot2** [@wickham2024a]. They are useful in their own right, but are also used to construct more complex geoms. Most of these geoms are associated with a named \[chart\]: when that geom is used by itself in a \[chart\], that \[chart\] has a special name." [@wickham2016]
 
 ggplot2 already has a [long list of geoms](https://ggplot2.tidyverse.org/reference/index.html#geoms). We won't be discussing those unless there is an extension package that is an improvement to the original. Primarily, this chapter focuses on the geoms that ggplot2 does not include.
 
 ## Area charts {#sec-area-charts}
 
-In general, area charts are line charts
+Area charts are based on line charts. The area between the x-axis and each line (or the area between lines) is shaded to help highlight the volume of the data.
+
+In this chapter, we'll take a look at the __horizon chart__, an improved version of the __ribbon chart__, and the __streamgraph__. They are all different takes on the area chart.
 
 ### Horizon chart {#sec-horizon-chart}
+
+A horizon chart is a method for condensing time series data into a format that is both informative and relatively easy to interpret.
+
+Often, when you have both positive and negative values, they lie on both sides of the x-axis. In a horizon chart, the negative values are on the same side as the positive ones.
+
+We use color to show whether the values are positive or negative. But also for the magnitude of those values.
+
+As Jonathan Schwabish points out in their book, Better Data Visualizations [@schwabish2021], "the purpose of the horizon chart is not necessarily to enable readers to pick out specific values, but instead to easily spot general trends and identify extreme values".
+
+For the horizon chart, we'll be using __ggHoriPlot__ [@rivas-gonzalez2022]. The package includes various example data sets. But we'll be using weather data from the __Finnish Meteorological Institute__ (FMI). Its open data, weather observations are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
+```{r}
+#| echo:    false
+#| message: false
+#| warning: false
+#| results: asis
+
+library(readr)
+
+temperature_hki <- read_csv("data/temperature_hki-2025-06-13.csv")
+```
+
+Using the [FMI API](https://en.ilmatieteenlaitos.fi/open-data) (Application Programming Interface), I retrieved the average temperatures in __Helsinki__ (Kaisaniemi weather station) for the years 2000-2024. You can take a look at the data below.
+
+```{r}
+#| echo:    false
+#| message: false
+#| warning: false
+#| results: asis
+
+library(dplyr)
+library(rmarkdown)
+
+temperature_hki %>%
+  paged_table()
+```
+
+We have __avg_temperature_celsius__ (daily average temperature (in Celsius)), __day__, __month__, and __year__. We also have the __date_dummy__ column. It is there because we want to use the month as the x-axis. But the column needs to be in _date_ format for our use case. So we need all the rows to have the same dummy year with real months and days. I chose 2024 because it was a leap year. Without it, all the rows with February 29th would have _NA_ in that column instead of the correct values.
+
+Before we can proceed with the visualization, we need to perform some data wrangling. First, we’ll remove outliers using the [interquartile range (IQR) method](https://en.wikipedia.org/wiki/Interquartile_range).
+
+```{r}
+#| message: false
+#| warning: false
+#| results: asis
+
+library(dplyr)
+
+# Filter temperature data to exclude outliers based on 1.5 * IQR method
+cutpoints <- temperature_hki %>%
+  filter(
+    between(
+      avg_temperature_celsius,
+      quantile(
+        avg_temperature_celsius, 0.25, na.rm = TRUE
+        ) - 1.5 * IQR(avg_temperature_celsius, na.rm = TRUE),
+      quantile(
+        avg_temperature_celsius, 0.75, na.rm = TRUE
+        ) + 1.5 * IQR(avg_temperature_celsius, na.rm = TRUE)
+    )
+  )
+```
+
+```{r}
+#| echo:    false
+#| message: false
+#| warning: false
+#| results: asis
+
+cutpoints %>%
+  paged_table()
+```
+
+Fifteen outliers were filtered out, and we can continue. Next, we’ll calculate the midpoint of the temperature range and also divide the __scale__ into evenly spaced value ranges. We’ll use the first as the __origin__ for the horizon chart and the second to determine how to color the areas.
+
+```{r}
+#| message: false
+#| warning: false
+#| results: asis
+
+# Calculate the midpoint of the temperature range for use in horizon chart
+origin <- cutpoints %>%
+  summarize(origin = mean(range(avg_temperature_celsius))) %>% 
+  pull(origin)
+
+# Create the scale vector:
+# 7 evenly spaced values across the filtered temperature range.
+# Drop the 4th value (the midpoint), as required by gghoriplot scale input
+scale <- cutpoints %>%
+  summarize(
+    min_val = min(avg_temperature_celsius),
+    max_val = max(avg_temperature_celsius)
+  ) %>%
+  # Generate 7 evenly spaced values
+  with(seq(min_val, max_val, length.out = 7)) %>% 
+  # Convert to tibble to use dplyr::slice()
+  tibble() %>%
+  # Remove the middle value (4th out of 7)
+  slice(-4) %>% 
+  # Return as plain numeric vector
+  pull(.)
+```
+
+```{r}
+#| echo:    false
+#| message: false
+#| warning: false
+
+# The origin
+.origin <- round(origin, 2)
+
+# The horizon scale cutpoints
+.scale <- round(scale, 2)
+```
+
+The origin is `r .origin`, and the scale cutpoints are as follows: `r .scale`.
+
+Now we’re ready for the visualization itself. Besides ggHoriPlot and ggplot2, we’ll be using __ggthemes__ [@arnold2024] to provide us the theme. We'll dive deeper into _themes_ (including ggthemes in @sec-ggthemes) later on in @sec-themes.
+
+We're using `geom_horizon()` to create the horizon chart. The arguments to pay attention to are __fill__ (inside `aes()`), __origin__, and __horizonscale__. They are all using the origin and scale we calculated earlier. `scale_fill_hcl()` is also available in the ggHoriPlot package. Otherwise, we’re using basic ggplot2 functionalities.
+
+```{r}
+#| message: false
+#| warning: false
+#| results: asis
+
+library(ggHoriPlot) # for geom_horizon() to create horizon plots
+library(ggplot2)    # for general plotting functions
+library(ggthemes)   # for additional themes like theme_few()
+
+# Create the horizon chart
+temperature_hki %>%
+  ggplot() +
+  
+  # Horizon chart layer, mapping x, y, and fill aesthetics
+  geom_horizon(
+    aes(
+      date_dummy,              # x-axis: typically date
+      avg_temperature_celsius, # y-axis: temperature variable
+      fill = ..Cutpoints..     # fill determined by horizon chart cutpoints
+    ), 
+    origin       = origin, # baseline (e.g., 0°C); defines neutral midpoint
+    horizonscale = scale   # vertical scale; controls how bands are split
+  ) +
+
+  # Use a diverging color scale (red-blue), reversed so red = high temp
+  scale_fill_hcl(palette = 'RdBu', reverse = TRUE) +
+
+  # Create one small horizon chart per year, stacked vertically
+  facet_grid(vars(year)) +
+
+  # Use a clean, simple theme based on the rules and examples from Stephen
+  # Few's Show Me the Numbers and Practical Rules for Using Color in Charts
+  theme_few() +
+
+  # Customize appearance
+  theme(
+    # Customize x-axis labels
+    axis.text.x     = element_text(size = 10),
+    # Remove unnecessary labels
+    axis.text.y     = element_blank(),                   
+    axis.title.y    = element_blank(),                   
+    axis.ticks.y    = element_blank(),                   
+    panel.border    = element_blank(),                   
+    # Remove vertical space between facets
+    panel.spacing.y = unit(0, "lines"),                  
+    # Subtle caption style
+    plot.caption    = element_text(size = 8, hjust = 0, color = "#777777"),
+    # Adjust margins because otherwise Jan is too close to the left edge
+    plot.margin     = margin(10, 10, 10, 15),             
+    # Customize facet labels
+    strip.text.y    = element_text(size = 8, angle = 0, hjust = 0)  
+  ) +
+
+  # Format x-axis to show months (with short names) without expansion
+  scale_x_date(
+    expand      = c(0, 0),
+    date_breaks = "1 month", 
+    date_labels = "%b"
+  ) +
+
+  # Add informative plot title, subtitle, and data source caption
+  labs(
+    title    = "Average daily temperature (Celsius) in Helsinki",
+    subtitle = "From 2000 to 2024",
+    caption  = "Data: Finnish Meteorological Institute open data, weather observations (CC BY 4.0)",
+    x        = NULL # remove x-axis title
+  )
+```
+
+I'm not a climatologist, but it does seem like there is a trend, over time, of Helsinki having milder winters. The summer temperatures are less clear-cut and will need a closer look.
 
 ### Ribbon chart (improved) {#sec-ribbon-chart-improved}
 

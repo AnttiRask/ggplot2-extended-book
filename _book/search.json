@@ -114,7 +114,7 @@
     "href": "introduction.html#sec-packages",
     "title": "Introduction",
     "section": "Packages",
-    "text": "Packages\nggplot2 & tidyverse\nThe tidyverse is a collection of R packages. ggplot2 is one of them. The others are dplyr, forcats, lubridate, purrr, readr, stringr, tibble, and tidyr.\nYou could install the packages you need one by one, but you might as well install the whole tidyverse:\n\ninstall.packages(\"tidyverse\")\n\nTo highlight each of the packages used, I’ve decided to load the individual packages in the code examples. If you want to, you can use the following:\nlibrary(tidyverse)\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\nThe previous message mentions conflicted (Wickham 2023). It’s not part of the core tidyverse, but it’s one of my favorite packages. And I do recommend loading it whenever you’re writing new code.\nIt checks for conflicting function names and forces you to choose the one you want to use. Either use case by use case (for example dplyr::filter()) or session-wide (for example conflicts_prefer(dplyr::filter())).\nTo install conflicted:\n\ninstall.packages(\"conflicted\")\n\nAll you need to do is load the package at the beginning of your script:\n\nlibrary(conflicted)\n\nIt will then let you know if a conflict emerges. One fewer reason to have your code act weird when running it.\nggplot2 extensions\nHere are the main characters of this book.\nSome of them you can install from CRAN:\n\ninstall.packages(\n  c(\n    \"DataExplorer\",\n    \"ExPanDaR\",\n    \"GGally\",\n    \"ggcorrplot\",\n    \"ggHoriPlot\",\n    \"ggplot2movies\",\n    \"ggquickeda\",\n    \"gt\",\n    \"gtExtras\",\n    \"naniar\",\n    \"radiant\"\n  )\n)\n\nOthers you will have to install from GitHub:\n\n# For fully updating radiant\noptions(repos = c(RSM = \"https://radiant-rstats.github.io/minicran\", CRAN = \"https://cloud.r-project.org\"))\ninstall.packages(\"remotes\")\nremotes::install_github(\"radiant-rstats/radiant.update\", upgrade = \"never\")\n\nOthers\nHere are the packages that are not part of the tidyverse. They aren’t considered to be ggplot2 extensions either. They are still useful for what we want to do and worth highlighting instead of hiding.\n\ninstall.packages(\n  c(\n    \"janitor\",\n    \"scales\"\n  )\n)",
+    "text": "Packages\nggplot2 & tidyverse\nThe tidyverse is a collection of R packages. ggplot2 is one of them. The others are dplyr, forcats, lubridate, purrr, readr, stringr, tibble, and tidyr.\nYou could install the packages you need one by one, but you might as well install the whole tidyverse:\n\ninstall.packages(\"tidyverse\")\n\nTo highlight each of the packages used, I’ve decided to load the individual packages in the code examples. If you want to, you can use the following:\nlibrary(tidyverse)\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\nThe previous message mentions conflicted (Wickham 2023). It’s not part of the core tidyverse, but it’s one of my favorite packages. And I do recommend loading it whenever you’re writing new code.\nIt checks for conflicting function names and forces you to choose the one you want to use. Either use case by use case (for example dplyr::filter()) or session-wide (for example conflicts_prefer(dplyr::filter())).\nTo install conflicted:\n\ninstall.packages(\"conflicted\")\n\nAll you need to do is load the package at the beginning of your script:\n\nlibrary(conflicted)\n\nIt will then let you know if a conflict emerges. One fewer reason to have your code act weird when running it.\nggplot2 extensions\nHere are the main characters of this book.\nSome of them you can install from CRAN:\n\ninstall.packages(\n  c(\n    \"DataExplorer\",\n    \"ExPanDaR\",\n    \"GGally\",\n    \"ggcorrplot\",\n    \"ggHoriPlot\",\n    \"ggplot2movies\",\n    \"ggquickeda\",\n    \"ggthemes\",\n    \"gt\",\n    \"gtExtras\",\n    \"naniar\",\n    \"radiant\"\n  )\n)\n\nOthers you will have to install from GitHub:\n\n# For fully updating radiant\noptions(repos = c(RSM = \"https://radiant-rstats.github.io/minicran\", CRAN = \"https://cloud.r-project.org\"))\ninstall.packages(\"remotes\")\nremotes::install_github(\"radiant-rstats/radiant.update\", upgrade = \"never\")\n\nOthers\nHere are the packages that are not part of the tidyverse. They aren’t considered to be ggplot2 extensions either. They are still useful for what we want to do and worth highlighting instead of hiding.\n\ninstall.packages(\n  c(\n    \"janitor\",\n    \"scales\"\n  )\n)",
     "crumbs": [
       "Introduction"
     ]
@@ -208,7 +208,7 @@
     "href": "geoms.html",
     "title": "3  Geoms",
     "section": "",
-    "text": "3.1 Area charts\nA geom (short for geometric object) is a component that defines how data is visually represented in a plot. Geoms determine the type of visualization or the graphical shape that will be drawn.\n“These geoms are the fundamental building blocks of ggplot2 (Wickham 2025). They are useful in their own right, but are also used to construct more complex geoms. Most of these geoms are associated with a named [chart]: when that geom is used by itself in a [chart], that [chart] has a special name.” (Wickham 2016)\nggplot2 already has a long list of geoms. We won’t be discussing those unless there is an extension package that is an improvement to the original. Primarily, this chapter focuses on the geoms that ggplot2 does not include.\nIn general, area charts are line charts",
+    "text": "3.1 Area charts\nA geom (short for geometric object) is a component that defines how data is visually represented in a plot. Geoms determine the type of visualization or the graphical shape that will be drawn.\n“These geoms are the fundamental building blocks of ggplot2 (Wickham 2025). They are useful in their own right, but are also used to construct more complex geoms. Most of these geoms are associated with a named [chart]: when that geom is used by itself in a [chart], that [chart] has a special name.” (Wickham 2016)\nggplot2 already has a long list of geoms. We won’t be discussing those unless there is an extension package that is an improvement to the original. Primarily, this chapter focuses on the geoms that ggplot2 does not include.\nArea charts are based on line charts. The area between the x-axis and each line (or the area between lines) is shaded to help highlight the volume of the data.\nIn this chapter, we’ll take a look at the horizon chart, an improved version of the ribbon chart, and the streamgraph. They are all different takes on the area chart.",
     "crumbs": [
       "Layers",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Geoms</span>"
@@ -923,7 +923,7 @@
     "href": "themes.html#dark-themes",
     "title": "9  Themes",
     "section": "\n9.2 Dark themes",
-    "text": "9.2 Dark themes",
+    "text": "9.2 Dark themes\n\n9.2.1 ggdark",
     "crumbs": [
       "Layers",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Themes</span>"
@@ -934,7 +934,7 @@
     "href": "themes.html#graphpad-prism",
     "title": "9  Themes",
     "section": "\n9.3 GraphPad prism",
-    "text": "9.3 GraphPad prism",
+    "text": "9.3 GraphPad prism\n\n9.3.1 ggprism",
     "crumbs": [
       "Layers",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Themes</span>"
@@ -945,7 +945,7 @@
     "href": "themes.html#theme-elements",
     "title": "9  Themes",
     "section": "\n9.4 Theme elements",
-    "text": "9.4 Theme elements\n\n9.4.1 Element markdown",
+    "text": "9.4 Theme elements\n\n9.4.1 ggtext\n\n9.4.2 marquee",
     "crumbs": [
       "Layers",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Themes</span>"
@@ -956,7 +956,7 @@
     "href": "themes.html#typography-centric-themes",
     "title": "9  Themes",
     "section": "\n9.5 Typography-centric themes",
-    "text": "9.5 Typography-centric themes",
+    "text": "9.5 Typography-centric themes\n\n9.5.1 hrbrthemes",
     "crumbs": [
       "Layers",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Themes</span>"
@@ -967,7 +967,7 @@
     "href": "themes.html#using-extra-fonts",
     "title": "9  Themes",
     "section": "\n9.6 Using extra fonts",
-    "text": "9.6 Using extra fonts",
+    "text": "9.6 Using extra fonts\n\n9.6.1 extrafont\n\n9.6.2 showtext",
     "crumbs": [
       "Layers",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Themes</span>"
@@ -1443,7 +1443,7 @@
     "href": "geoms.html#sec-area-charts",
     "title": "3  Geoms",
     "section": "",
-    "text": "3.1.1 Horizon chart\n\n3.1.2 Ribbon chart (improved)\n\n3.1.3 Streamgraph",
+    "text": "3.1.1 Horizon chart\nA horizon chart is a method for condensing time series data into a format that is both informative and relatively easy to interpret.\nOften, when you have both positive and negative values, they lie on both sides of the x-axis. In a horizon chart, the negative values are on the same side as the positive ones.\nWe use color to show whether the values are positive or negative. But also for the magnitude of those values.\nAs Jonathan Schwabish points out in their book, Better Data Visualizations (Schwabish 2021), “the purpose of the horizon chart is not necessarily to enable readers to pick out specific values, but instead to easily spot general trends and identify extreme values”.\nFor the horizon chart, we’ll be using ggHoriPlot (Rivas-González 2022). The package includes various example data sets. But we’ll be using weather data from the Finnish Meteorological Institute (FMI). Its open data, weather observations are licensed under CC BY 4.0.\nUsing the FMI API (Application Programming Interface), I retrieved the average temperatures in Helsinki (Kaisaniemi weather station) for the years 2000-2024. You can take a look at the data below.\n\n  \n\nWe have avg_temperature_celsius (daily average temperature (in Celsius)), day, month, and year. We also have the date_dummy column. It is there because we want to use the month as the x-axis. But the column needs to be in date format for our use case. So we need all the rows to have the same dummy year with real months and days. I chose 2024 because it was a leap year. Without it, all the rows with February 29th would have NA in that column instead of the correct values.\nBefore we can proceed with the visualization, we need to perform some data wrangling. First, we’ll remove outliers using the interquartile range (IQR) method.\nlibrary(dplyr)\n\n# Filter temperature data to exclude outliers based on 1.5 * IQR method\ncutpoints &lt;- temperature_hki %&gt;%\n  filter(\n    between(\n      avg_temperature_celsius,\n      quantile(\n        avg_temperature_celsius, 0.25, na.rm = TRUE\n        ) - 1.5 * IQR(avg_temperature_celsius, na.rm = TRUE),\n      quantile(\n        avg_temperature_celsius, 0.75, na.rm = TRUE\n        ) + 1.5 * IQR(avg_temperature_celsius, na.rm = TRUE)\n    )\n  )\n\n  \n\nFifteen outliers were filtered out, and we can continue. Next, we’ll calculate the midpoint of the temperature range and also divide the scale into evenly spaced value ranges. We’ll use the first as the origin for the horizon chart and the second to determine how to color the areas.\n# Calculate the midpoint of the temperature range for use in horizon chart\norigin &lt;- cutpoints %&gt;%\n  summarize(origin = mean(range(avg_temperature_celsius))) %&gt;% \n  pull(origin)\n\n# Create the scale vector:\n# 7 evenly spaced values across the filtered temperature range.\n# Drop the 4th value (the midpoint), as required by gghoriplot scale input\nscale &lt;- cutpoints %&gt;%\n  summarize(\n    min_val = min(avg_temperature_celsius),\n    max_val = max(avg_temperature_celsius)\n  ) %&gt;%\n  # Generate 7 evenly spaced values\n  with(seq(min_val, max_val, length.out = 7)) %&gt;% \n  # Convert to tibble to use dplyr::slice()\n  tibble() %&gt;%\n  # Remove the middle value (4th out of 7)\n  slice(-4) %&gt;% \n  # Return as plain numeric vector\n  pull(.)\nThe origin is 3.55, and the scale cutpoints are as follows: -19.3, -11.68, -4.07, 11.17, 18.78, 26.4.\nNow we’re ready for the visualization itself. Besides ggHoriPlot and ggplot2, we’ll be using ggthemes (Arnold 2024) to provide us the theme. We’ll dive deeper into themes (including ggthemes in Section 9.1.6) later on in Chapter 9.\nWe’re using geom_horizon() to create the horizon chart. The arguments to pay attention to are fill (inside aes()), origin, and horizonscale. They are all using the origin and scale we calculated earlier. scale_fill_hcl() is also available in the ggHoriPlot package. Otherwise, we’re using basic ggplot2 functionalities.\nlibrary(ggHoriPlot) # for geom_horizon() to create horizon plots\nlibrary(ggplot2)    # for general plotting functions\nlibrary(ggthemes)   # for additional themes like theme_few()\n\n# Create the horizon chart\ntemperature_hki %&gt;%\n  ggplot() +\n  \n  # Horizon chart layer, mapping x, y, and fill aesthetics\n  geom_horizon(\n    aes(\n      date_dummy,              # x-axis: typically date\n      avg_temperature_celsius, # y-axis: temperature variable\n      fill = ..Cutpoints..     # fill determined by horizon chart cutpoints\n    ), \n    origin       = origin, # baseline (e.g., 0°C); defines neutral midpoint\n    horizonscale = scale   # vertical scale; controls how bands are split\n  ) +\n\n  # Use a diverging color scale (red-blue), reversed so red = high temp\n  scale_fill_hcl(palette = 'RdBu', reverse = TRUE) +\n\n  # Create one small horizon chart per year, stacked vertically\n  facet_grid(vars(year)) +\n\n  # Use a clean, simple theme based on the rules and examples from Stephen\n  # Few's Show Me the Numbers and Practical Rules for Using Color in Charts\n  theme_few() +\n\n  # Customize appearance\n  theme(\n    # Customize x-axis labels\n    axis.text.x     = element_text(size = 10),\n    # Remove unnecessary labels\n    axis.text.y     = element_blank(),                   \n    axis.title.y    = element_blank(),                   \n    axis.ticks.y    = element_blank(),                   \n    panel.border    = element_blank(),                   \n    # Remove vertical space between facets\n    panel.spacing.y = unit(0, \"lines\"),                  \n    # Subtle caption style\n    plot.caption    = element_text(size = 8, hjust = 0, color = \"#777777\"),\n    # Adjust margins because otherwise Jan is too close to the left edge\n    plot.margin     = margin(10, 10, 10, 15),             \n    # Customize facet labels\n    strip.text.y    = element_text(size = 8, angle = 0, hjust = 0)  \n  ) +\n\n  # Format x-axis to show months (with short names) without expansion\n  scale_x_date(\n    expand      = c(0, 0),\n    date_breaks = \"1 month\", \n    date_labels = \"%b\"\n  ) +\n\n  # Add informative plot title, subtitle, and data source caption\n  labs(\n    title    = \"Average daily temperature (Celsius) in Helsinki\",\n    subtitle = \"From 2000 to 2024\",\n    caption  = \"Data: Finnish Meteorological Institute open data, weather observations (CC BY 4.0)\",\n    x        = NULL # remove x-axis title\n  )\n\nI’m not a climatologist, but it does seem like there is a trend, over time, of Helsinki having milder winters. The summer temperatures are less clear-cut and will need a closer look.\n\n3.1.2 Ribbon chart (improved)\n\n3.1.3 Streamgraph",
     "crumbs": [
       "Layers",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Geoms</span>"
@@ -1564,10 +1564,21 @@
     "href": "geoms.html#sec-tree-diagrams",
     "title": "3  Geoms",
     "section": "\n3.12 Tree diagrams",
-    "text": "3.12 Tree diagrams\n\n3.12.1 Dendrogram\n\n3.12.2 Treemap diagram\n\n3.12.3 Voronoi diagram\n\n\n\n\nWickham, Hadley. 2016. Ggplot2: Elegant Graphics for Data Analysis. 2nd ed. Springer-Verlag New York.\n\n\n———. 2025. Ggplot2: Elegant Graphics for Data Analysis. https://ggplot2.tidyverse.org.",
+    "text": "3.12 Tree diagrams\n\n3.12.1 Dendrogram\n\n3.12.2 Treemap diagram\n\n3.12.3 Voronoi diagram\n\n\n\n\nArnold, Jeffrey B. 2024. Ggthemes: Extra Themes, Scales and Geoms for ’Ggplot2’. https://CRAN.R-project.org/package=ggthemes.\n\n\nRivas-González, Iker. 2022. ggHoriPlot: Horizon Plots for ’Ggplot2’. https://CRAN.R-project.org/package=ggHoriPlot.\n\n\nSchwabish, Jonathan A. 2021. Better Data Visualizations: A Guide for Scholars, Researchers, and Wonks. 1st ed. Columbia University Press.\n\n\nWickham, Hadley. 2016. Ggplot2: Elegant Graphics for Data Analysis. 2nd ed. Springer-Verlag New York.\n\n\n———. 2025. Ggplot2: Elegant Graphics for Data Analysis. https://ggplot2.tidyverse.org.",
     "crumbs": [
       "Layers",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Geoms</span>"
+    ]
+  },
+  {
+    "objectID": "themes.html#complete-themes",
+    "href": "themes.html#complete-themes",
+    "title": "9  Themes",
+    "section": "",
+    "text": "9.1.1 ggcharts\n\n9.1.2 ggeconodist\n\n9.1.3 ggnetwork\n\n9.1.4 ggpomological\n\n9.1.5 ggpubr\n\n9.1.6 ggthemes\n\n9.1.7 ggthemr\n\n9.1.8 lato\n\n9.1.9 see\n\n9.1.10 tvthemes\n\n9.1.11 urbnthemes\n\n9.1.12 xkcd",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Themes</span>"
     ]
   }
 ]
