@@ -213,7 +213,7 @@ Others you will have to install from GitHub:
 ```{r}
 #| eval: false
 
-# for installing ggbraid
+# For installing ggbraid
 # install.packages("remotes")
 remotes::install_github("nsgrantham/ggbraid")
 
