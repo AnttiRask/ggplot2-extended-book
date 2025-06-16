@@ -213,9 +213,13 @@ Others you will have to install from GitHub:
 ```{r}
 #| eval: false
 
+# for installing ggbraid
+# install.packages("remotes")
+remotes::install_github("nsgrantham/ggbraid")
+
 # For fully updating radiant
 options(repos = c(RSM = "https://radiant-rstats.github.io/minicran", CRAN = "https://cloud.r-project.org"))
-install.packages("remotes")
+# install.packages("remotes")
 remotes::install_github("radiant-rstats/radiant.update", upgrade = "never")
 ```
 
@@ -318,7 +322,9 @@ pkgs <- c(
   "DataExplorer",
   "dplyr",
   "ExPanDaR",
+  "forcats",
   "GGally",
+  "ggbraid",
   "ggcorrplot",
   "ggHoriPlot",
   "ggplot2",
@@ -328,12 +334,14 @@ pkgs <- c(
   "gt",
   "gtExtras",
   "janitor",
+  "lubridate",
   "naniar",
   "purrr",
   "radiant",
   "readr",
   "rmarkdown",
   "scales",
+  "stringr",
   "tibble",
   "tidyr"
 )

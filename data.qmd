@@ -488,6 +488,9 @@ We'll start with the `plot_intro()` function. It gives us some basic information
 #| warning: false
 #| results: asis
 
+library(DataExplorer)
+library(dplyr)
+
 movies_na %>%
   plot_intro(ggtheme = theme_bw())
 ```
@@ -580,8 +583,6 @@ Also, we'll select the columns mentioned earlier. Budget, length, rating, votes,
 #| message: false
 #| warning: false
 #| results: asis
-
-library(dplyr)
 
 movies_na_length_under_500 <- movies_na %>%
   select(budget, length, rating, votes, year) %>%
@@ -726,8 +727,6 @@ corr <- movies_without_na_numeric %>%
 #| message: false
 #| warning: false
 #| results: asis
-
-library(dplyr)
 
 corr %>%
   as.data.frame() %>%

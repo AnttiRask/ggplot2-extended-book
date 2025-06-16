@@ -223,6 +223,396 @@ I'm not a climatologist, but it does seem like there is a trend, over time, of H
 
 ### Ribbon chart (improved) {#sec-ribbon-chart-improved}
 
+As the ggplot2 documentation tells us, an area chart is, in fact, a special case of a ribbon chart. That makes sense when you realize that every type of area chart has a __ymin__ and __ymax__. In the basic area chart, ymin is zero, and ymax is __y__. [@wickham2024a]
+
+The ribbon chart, then, displays the area between two lines. `geom_ribbon()` gets the job done when the lines don’t meet. But as you’ll soon see, for those cases where they do, you need something called _braiding_. You can read more about it in the __ggbraid__ [@grantham2025] [documentation](https://nsgrantham.github.io/ggbraid/articles/temps.html#the-unbraided-ribbon-problem).
+
+We’ll take a look at what the problem (and solution) looks like with real data. But let’s first examine the data we’ll be using for this. Time series data works best for this type of chart. Let’s stick to the **ggplot2movies** [@wickham2015] data set that we first encountered in @sec-imdb-movies-1893-2005 and the __movies_na__ tibble.
+
+```{r}
+#| message: false
+#| warning: false
+#| echo:    false
+
+library(ggplot2movies)
+
+movies_na <- movies %>%
+  mutate(
+    # Turn all blank values of the character type into NA
+    across(where(is.character), ~na_if(., "")), 
+    # Create a decade column for grouping based on the values in the year column
+    decade = floor(year / 10) * 10
+  )
+```
+
+We’ll perform some transformations to prepare the data for visualization. In this case, we’ll need the data in two _formats_, __long__ and __short__.
+
+Let's first create the _long_ tibble consisting of __genre__, __year__, and __n__ (for the count).
+
+One minor detail to note here is that we’ll turn the genre column from _character_ to _factor_ format. We’ll use __forcats__ [@wickham2023h] from __tidyverse__ [@wickham2023b] to do that. It's not necessary in this case, but it's good practice.
+
+```{r}
+#| message: false
+#| warning: false
+
+library(forcats)
+library(tidyr)
+
+# Transform and filter the `movies_na` dataset
+movies_na_long <- movies_na %>%
+  
+  # Pivot genre columns (from Action to Short) into long format:
+  # Creates two columns: "genre" and "value"
+  pivot_longer(Action:Short, names_to = "genre") %>%
+  
+  # Filter to keep only:
+  # - rows where the movie is flagged in that genre (value != 0)
+  # - only the genres Comedy and Drama
+  # - movies released between 1900 and 2000
+  filter(
+    value != 0,
+    genre %in% c("Comedy", "Drama"),
+    between(year, 1900, 2000)
+  ) %>%
+  
+  # Convert genre to a factor
+  mutate(genre = as_factor(genre)) %>%
+  
+  # Count the number of movies per genre per year
+  count(genre, year)
+```
+
+```{r}
+#| echo:    false
+#| message: false
+#| warning: false
+#| results: asis
+
+movies_na_long %>% 
+  paged_table()
+```
+
+Next, we’ll split the genre into two separate columns, Comedy and Drama. They will retrieve their values from the n column.
+
+We’ll also be adding a __fill_condition__ column. We’ll use that later to determine which color to use to fill the area between the two lines.
+
+```{r}
+#| message: false
+#| warning: false
+
+# Convert long-format genre counts back to wide format and compare values
+movies_na_wide <- movies_na_long %>%
+  
+  # Pivot genre counts from long to wide:
+  # Each genre becomes its own column (e.g., Comedy, Drama),
+  # with yearly counts as values
+  pivot_wider(
+    names_from  = genre,
+    values_from = n
+  ) %>%
+  
+  # Create a new logical column indicating whether
+  # Comedy had fewer movies than Drama in that year
+  mutate(fill_condition = Comedy < Drama)
+```
+
+```{r}
+#| echo:    false
+#| message: false
+#| warning: false
+#| results: asis
+
+movies_na_wide %>% 
+  paged_table()
+```
+
+Now we can return to the topic of why we need to use an extension for cases where the lines don’t stay separate.
+
+Here’s what the basic visualization would look like with `geom_ribbon()` from ggplot2.
+
+```{r}
+#| message: false
+#| warning: false
+
+ggplot() +
+  geom_line(
+    aes(year, n, linetype = genre),
+    data = movies_na_long
+  ) +
+  geom_ribbon(
+    aes(year, ymin = Comedy, ymax = Drama, fill = fill_condition),
+    data  = movies_na_wide,
+    alpha = 0.7
+  )
+```
+
+That won't work if we want to use the ribbon chart to show where the two categories change places, indicating which is greater.
+
+But that's where ggbraid's `geom_braid()` comes to the rescue. The basic code is the same. We'll only switch the geom function.
+
+The rest of the code is to make the visualization more presentable. Note that we'll move the legend inside the plot. We'll use the __legend.position__ argument inside the `theme()` function to do that. There's enough _white space_ inside the plot to accommodate the legend. This way, we gain more space to showcase the time series element of the plot.
+
+```{r}
+#| message: false
+#| warning: false
+
+library(ggbraid) # for geom_braid() to visualize overlapping time series
+
+ggplot() +
+  
+  # Line plot for number of movies per genre per year
+  geom_line(
+    aes(year, n, linetype = genre),
+    data = movies_na_long
+  ) +
+  
+  # Braid layer to highlight which genre had more movies per year
+  geom_braid(
+    aes(year, ymin = Comedy, ymax = Drama, fill = fill_condition),
+    data  = movies_na_wide,
+    alpha = 0.7
+  ) +
+  
+  # Text annotation when comedies dominated
+  annotate(
+    "text",
+    x     = 1938,
+    y     = 300,
+    size  = 4,
+    label = "More comedies than drama",
+    hjust = 0.5,
+    color = "#F36523"
+  ) +
+  
+  # Text annotation when dramas dominated
+  annotate(
+    "text",
+    x     = 1975,
+    y     = 80,
+    size  = 4,
+    label = "More drama than comedies",
+    hjust = 0.5,
+    color = "#125184"
+  ) +
+  
+  # Manually set fill colors for the braid based on fill condition
+  scale_fill_manual(values = c("#F36523", "#125184")) +
+  
+  # Customize x-axis: limit, spacing, and ticks
+  scale_x_continuous(
+    expand = c(0, 1),
+    limits = c(1899, 2001),
+    breaks = seq(1900, 2000, by = 10)
+  ) +
+  
+  # Customize y-axis: limit, spacing, and ticks
+  scale_y_continuous(
+    expand = c(0, 1),
+    limits = c(0, 800),
+    breaks = seq(0, 800, by = 100)
+  ) +
+  
+  # Hide fill legend (keep linetype legend only)
+  guides(fill = "none") +
+  
+  # Add plot title, subtitle, and axis labels
+  labs(
+    linetype = NULL,
+    title    = "100 years of cinema",
+    subtitle = "Number of comedies vs. dramas throughout the years",
+    x        = NULL,
+    y        = NULL
+  ) +
+  
+  # Use a clean black-and-white theme as a base
+  theme_bw() +
+  
+  # Custom legend appearance and positioning
+  theme(
+    legend.direction = "horizontal",
+    legend.box.background = element_rect(
+      color     = "black",
+      linetype  = "solid",
+      linewidth = 0.5
+      ),
+    legend.key.size  = unit(2, "line"),
+    legend.position  = c(0.19, 0.88), # relative position inside plot
+    legend.text      = element_text(size = 10)
+  )
+```
+
+I'm not an expert, but based on this data set there would seem to be a correlation between major wars (WWI, WWII, and the Vietnam War) and more comedies being made.
+
+As an extra, we'll take a look at another ribbon chart. We can use the data set from @sec-horizon-chart, which contains average daily temperatures in Helsinki from 2000 to 2024. We'll compare the two years, 2000 and 2024. Which had more warmer days?
+
+First, we’ll perform similar transformations and get the data into both long and wide formats.
+
+One minor detail to note here is that we’ll need to turn the year column from _numeric_ to _factor_ format. It won’t work as a category for the linetype argument otherwise. We’ll again use the forcats package to do that.
+
+```{r}
+#| message: false
+#| warning: false
+
+temperature_hki_long <- temperature_hki %>%
+  
+  # Filter data to include only the years 2000 and 2024
+  filter(year %in% c(2000, 2024)) %>%
+  
+  # Convert `year` to a factor (useful for plotting or grouping)
+  mutate(year = as_factor(year)) %>%
+  
+  # Keep only the necessary columns for analysis or visualization
+  select(avg_temperature_celsius, year, date_dummy)
+```
+
+In this next transformation, note the use of the __names_prefix__ argument. A column with a number as the first character of the name is not ideal. This will take care of that.
+
+```{r}
+#| message: false
+#| warning: false
+
+# Pivot data from long to wide format
+temperature_hki_wide <- temperature_hki_long %>%
+  
+  # Creates one column per year (e.g., year_2000, year_2024),
+  # using temperature values as the content
+  pivot_wider(
+    names_from   = year,
+    names_prefix = "year_",
+    values_from  = avg_temperature_celsius
+  ) %>%
+  
+  # Create a new logical column to compare the two years:
+  # TRUE if 2024 temp > 2000 temp for that date
+  mutate(fill_condition = year_2000 < year_2024)
+```
+
+We’ll also count the number (and percentage of total) of days where the average temperature is greater in 2000 and 2024. We’ll use this information for annotations.
+
+```{r}
+#| message: false
+#| warning: false
+
+temperature_hki_wide %>%
+  
+  # Count how many days had each condition (TRUE/FALSE)
+  count(fill_condition) %>%
+  
+  # Calculate the percentage for each group
+  mutate(n_pct = round(n / sum(n), 3))
+```
+
+Looks like 2024 has more days (60.4%) that were, on average, warmer than 2000 (39.6%).
+
+The visualization itself is like the movie example. The most significant difference is the use of two packages from the tidyverse family.
+
+`str_glue()` from __stringr__ [@wickham2023g] features a convenient implicit line break functionality. We’ll also use it to add the degree Celsius symbol (°C) to the y-axis.
+
+`as_date()` from __lubridate__ [@spinu2024] allows us to use the date in _character_ format to map it to the x-axis. This helps us place the annotations in the correct position.
+
+```{r}
+#| message: false
+#| warning: false
+
+library(ggbraid)   # for geom_braid(), visualizing area between two lines
+library(lubridate) # for working with date types
+library(stringr)   # for string manipulation like str_glue()
+
+ggplot() +
+  
+  # Add temperature lines for each year (2000 and 2024)
+  geom_line(
+    aes(date_dummy, avg_temperature_celsius, linetype = year),
+    data = temperature_hki_long
+  ) +
+  
+  # Add braided area showing difference between 2000 and 2024
+  # Fill based on which year was warmer (fill_condition)
+  geom_braid(
+    aes(
+      date_dummy,
+      ymin = year_2000,
+      ymax = year_2024,
+      fill = fill_condition
+    ),
+    data  = temperature_hki_wide,
+    alpha = 0.7
+  ) +
+  
+  # Annotate area where 2000 was warmer
+  annotate(
+    "text",
+    x     = as_date("2024-03-01"),
+    y     = -17.5,
+    size  = 4,
+    label = str_glue(
+      "2000 was warmer
+      40 % of the days"
+    ),
+    hjust = 0.5,
+    color = "#125184"
+  ) +
+  
+  # Annotate area where 2024 was warmer
+  annotate(
+    "text",
+    x     = as_date("2024-11-15"),
+    y     = 17.5,
+    size  = 4,
+    label = str_glue(
+      "2024 was warmer 
+      60 % of the days"
+    ),
+    hjust = 0.5,
+    color = "#F36523"
+  ) +
+  
+  # Manual fill colors: blue for 2000 warmer, orange for 2024 warmer
+  scale_fill_manual(values = c("#125184", "#F36523")) +
+  
+  # Format x-axis: monthly ticks, short month labels
+  scale_x_date(
+    date_breaks = "1 month",
+    date_labels = "%b",
+    expand      = c(0, 0.1)
+  ) +
+  
+  # Format y-axis: show temperature with °C symbol
+  scale_y_continuous(labels = ~ str_glue("{.x} °C")) +
+  
+  # Hide fill legend (keep linetype legend only)
+  guides(fill = "none") +
+  
+  # Add plot title, subtitle, and caption
+  labs(
+    linetype = NULL,
+    title    = "Is the temperature rising?",
+    subtitle = "Average daily temperatures (Celsius) in Helsinki, 2000 vs. 2024",
+    caption  = "Data: Finnish Meteorological Institute open data, weather observations (CC BY 4.0)",
+    x        = NULL,
+    y        = NULL
+  ) +
+  
+  # Use a clean, minimal black-and-white theme
+  theme_bw() +
+  
+  # Customize legend and caption styling
+  theme(
+    legend.direction = "horizontal",
+    legend.box.background = element_rect(
+      color     = "black",
+      linetype  = "solid",
+      linewidth = 0.5
+      ),
+    legend.key.size  = unit(2, "line"),
+    legend.position  = c(0.83, 0.12), # bottom-right position
+    legend.text      = element_text(size = 10),
+    plot.caption     = element_text(size = 8, hjust = 1, color = "#777777")
+  )
+```
+
+And so we have another perspective on the Helsinki temperature data set.
+
 ### Streamgraph {#sec-streamgraph}
 
 ## Bar charts {#sec-bar-charts}
