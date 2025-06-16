@@ -38,6 +38,8 @@ We use color to show whether the values are positive or negative. But also for t
 
 As Jonathan Schwabish points out in their book, Better Data Visualizations [@schwabish2021], "the purpose of the horizon chart is not necessarily to enable readers to pick out specific values, but instead to easily spot general trends and identify extreme values".
 
+#### Viz #1: Helsinki temperatures, part I {#sec-viz-1-helsinki-temperatures-part-i}
+
 For the horizon chart, we'll be using __ggHoriPlot__ [@rivas-gonzalez2022]. The package includes various example data sets. But we'll be using weather data from the __Finnish Meteorological Institute__ (FMI). Its open data, weather observations are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 ```{r}
@@ -227,7 +229,11 @@ As the ggplot2 documentation tells us, an area chart is, in fact, a special case
 
 The ribbon chart, then, displays the area between two lines. `geom_ribbon()` gets the job done when the lines don’t meet. But as you’ll soon see, for those cases where they do, you need something called _braiding_. You can read more about it in the __ggbraid__ [@grantham2025] [documentation](https://nsgrantham.github.io/ggbraid/articles/temps.html#the-unbraided-ribbon-problem).
 
-We’ll take a look at what the problem (and solution) looks like with real data. But let’s first examine the data we’ll be using for this. Time series data works best for this type of chart. Let’s stick to the **ggplot2movies** [@wickham2015] data set that we first encountered in @sec-imdb-movies-1893-2005 and the __movies_na__ tibble.
+#### Viz #2: IMDB movies, Part I {#sec-viz-2-imdb-movies-part-i}
+
+We’ll take a look at what the problem (and solution) looks like with real data. The question we'd like to answer here is which genre, comedy or drama, has produced more movies during the 20th century.
+
+But let’s first examine the data we’ll be using for this. Time series data works best for this type of chart. Let’s stick to the **ggplot2movies** [@wickham2015] data set that we first encountered in @sec-imdb-movies-1893-2005 and the __movies_na__ tibble.
 
 ```{r}
 #| message: false
@@ -419,7 +425,7 @@ ggplot() +
   labs(
     linetype = NULL,
     title    = "100 years of cinema",
-    subtitle = "Number of comedies vs. dramas throughout the years",
+    subtitle = "Number of comedies vs. dramas throughout the 20th century",
     x        = NULL,
     y        = NULL
   ) +
@@ -441,13 +447,15 @@ ggplot() +
   )
 ```
 
-I'm not an expert, but based on this data set there would seem to be a correlation between major wars (WWI, WWII, and the Vietnam War) and more comedies being made.
+I'm not an expert on this topic either. Based on this dataset, however, there appears to be a correlation between major wars (WWI, WWII, and the Vietnam War) and the production of more comedies than dramas.
 
-As an extra, we'll take a look at another ribbon chart. We can use the data set from @sec-horizon-chart, which contains average daily temperatures in Helsinki from 2000 to 2024. We'll compare the two years, 2000 and 2024. Which had more warmer days?
+#### Viz #3: Helsinki temperatures, part II {#sec-viz-3-helsinki-temperatures-part-ii}
 
-First, we’ll perform similar transformations and get the data into both long and wide formats.
+Let's take a look at another ribbon chart. We can use the data set from @sec-horizon-chart, which contains average daily temperatures in Helsinki from 2000 to 2024. We'll compare the two years, 2000 and 2024. Which one had more warmer days?
 
-One minor detail to note here is that we’ll need to turn the year column from _numeric_ to _factor_ format. It won’t work as a category for the linetype argument otherwise. We’ll again use the forcats package to do that.
+First, we’ll perform similar transformations as before and convert the data into both long and wide formats.
+
+One minor detail to note here is that we’ll need to turn the year column from _numeric_ to _factor_ format. It won’t work as a category for the __linetype__ argument otherwise. We’ll again use the forcats package to do that.
 
 ```{r}
 #| message: false

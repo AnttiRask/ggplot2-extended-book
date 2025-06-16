@@ -508,6 +508,8 @@ This book/site is under construction
 <p>Often, when you have both positive and negative values, they lie on both sides of the x-axis. In a horizon chart, the negative values are on the same side as the positive ones.</p>
 <p>We use color to show whether the values are positive or negative. But also for the magnitude of those values.</p>
 <p>As Jonathan Schwabish points out in their book, Better Data Visualizations <span class="citation" data-cites="schwabish2021">(<a href="references.html#ref-schwabish2021" role="doc-biblioref">Schwabish 2021</a>)</span>, “the purpose of the horizon chart is not necessarily to enable readers to pick out specific values, but instead to easily spot general trends and identify extreme values”.</p>
+<section id="sec-viz-1-helsinki-temperatures-part-i" class="level4" data-number="3.1.1.1"><h4 data-number="3.1.1.1" class="anchored" data-anchor-id="sec-viz-1-helsinki-temperatures-part-i">
+<span class="header-section-number">3.1.1.1</span> Viz #1: Helsinki temperatures, part I</h4>
 <p>For the horizon chart, we’ll be using <strong>ggHoriPlot</strong> <span class="citation" data-cites="rivas-gonzalez2022">(<a href="references.html#ref-rivas-gonzalez2022" role="doc-biblioref">Rivas-González 2022</a>)</span>. The package includes various example data sets. But we’ll be using weather data from the <strong>Finnish Meteorological Institute</strong> (FMI). Its open data, weather observations are licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
 <p>Using the <a href="https://en.ilmatieteenlaitos.fi/open-data">FMI API</a> (Application Programming Interface), I retrieved the average temperatures in <strong>Helsinki</strong> (Kaisaniemi weather station) for the years 2000-2024. You can take a look at the data below.</p>
 <div data-pagedtable="false">
@@ -626,11 +628,14 @@ This book/site is under construction
 <span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><img src="geoms_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="672"></p>
 <p>I’m not a climatologist, but it does seem like there is a trend, over time, of Helsinki having milder winters. The summer temperatures are less clear-cut and will need a closer look.</p>
-</section><section id="sec-ribbon-chart-improved" class="level3" data-number="3.1.2"><h3 data-number="3.1.2" class="anchored" data-anchor-id="sec-ribbon-chart-improved">
+</section></section><section id="sec-ribbon-chart-improved" class="level3" data-number="3.1.2"><h3 data-number="3.1.2" class="anchored" data-anchor-id="sec-ribbon-chart-improved">
 <span class="header-section-number">3.1.2</span> Ribbon chart (improved)</h3>
 <p>As the ggplot2 documentation tells us, an area chart is, in fact, a special case of a ribbon chart. That makes sense when you realize that every type of area chart has a <strong>ymin</strong> and <strong>ymax</strong>. In the basic area chart, ymin is zero, and ymax is <strong>y</strong>. <span class="citation" data-cites="wickham2024a">(<a href="references.html#ref-wickham2024a" role="doc-biblioref">Wickham et al. 2025</a>)</span></p>
 <p>The ribbon chart, then, displays the area between two lines. <code><a href="https://ggplot2.tidyverse.org/reference/geom_ribbon.html">geom_ribbon()</a></code> gets the job done when the lines don’t meet. But as you’ll soon see, for those cases where they do, you need something called <em>braiding</em>. You can read more about it in the <strong>ggbraid</strong> <span class="citation" data-cites="grantham2025">(<a href="references.html#ref-grantham2025" role="doc-biblioref">Grantham 2025</a>)</span> <a href="https://nsgrantham.github.io/ggbraid/articles/temps.html#the-unbraided-ribbon-problem">documentation</a>.</p>
-<p>We’ll take a look at what the problem (and solution) looks like with real data. But let’s first examine the data we’ll be using for this. Time series data works best for this type of chart. Let’s stick to the <strong>ggplot2movies</strong> <span class="citation" data-cites="wickham2015">(<a href="references.html#ref-wickham2015" role="doc-biblioref">Wickham 2015</a>)</span> data set that we first encountered in <a href="data.html#sec-imdb-movies-1893-2005" class="quarto-xref"><span>Section 2.1.2</span></a> and the <strong>movies_na</strong> tibble.</p>
+<section id="sec-viz-2-imdb-movies-part-i" class="level4" data-number="3.1.2.1"><h4 data-number="3.1.2.1" class="anchored" data-anchor-id="sec-viz-2-imdb-movies-part-i">
+<span class="header-section-number">3.1.2.1</span> Viz #2: IMDB movies, Part I</h4>
+<p>We’ll take a look at what the problem (and solution) looks like with real data. The question we’d like to answer here is which genre, comedy or drama, has produced more movies during the 20th century.</p>
+<p>But let’s first examine the data we’ll be using for this. Time series data works best for this type of chart. Let’s stick to the <strong>ggplot2movies</strong> <span class="citation" data-cites="wickham2015">(<a href="references.html#ref-wickham2015" role="doc-biblioref">Wickham 2015</a>)</span> data set that we first encountered in <a href="data.html#sec-imdb-movies-1893-2005" class="quarto-xref"><span>Section 2.1.2</span></a> and the <strong>movies_na</strong> tibble.</p>
 <p>We’ll perform some transformations to prepare the data for visualization. In this case, we’ll need the data in two <em>formats</em>, <strong>long</strong> and <strong>short</strong>.</p>
 <p>Let’s first create the <em>long</em> tibble consisting of <strong>genre</strong>, <strong>year</strong>, and <strong>n</strong> (for the count).</p>
 <p>One minor detail to note here is that we’ll turn the genre column from <em>character</em> to <em>factor</em> format. We’ll use <strong>forcats</strong> <span class="citation" data-cites="wickham2023h">(<a href="references.html#ref-wickham2023h" role="doc-biblioref">Wickham 2023a</a>)</span> from <strong>tidyverse</strong> <span class="citation" data-cites="wickham2023b">(<a href="references.html#ref-wickham2023b" role="doc-biblioref">Wickham 2023c</a>)</span> to do that. It’s not necessary in this case, but it’s good practice.</p>
@@ -776,7 +781,7 @@ This book/site is under construction
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span></span>
 <span>    linetype <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>    title    <span class="op">=</span> <span class="st">"100 years of cinema"</span>,</span>
-<span>    subtitle <span class="op">=</span> <span class="st">"Number of comedies vs. dramas throughout the years"</span>,</span>
+<span>    subtitle <span class="op">=</span> <span class="st">"Number of comedies vs. dramas throughout the 20th century"</span>,</span>
 <span>    x        <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>    y        <span class="op">=</span> <span class="cn">NULL</span></span>
 <span>  <span class="op">)</span> <span class="op">+</span></span>
@@ -803,10 +808,12 @@ This book/site is under construction
 </div>
 </div>
 </div>
-<p>I’m not an expert, but based on this data set there would seem to be a correlation between major wars (WWI, WWII, and the Vietnam War) and more comedies being made.</p>
-<p>As an extra, we’ll take a look at another ribbon chart. We can use the data set from <a href="#sec-horizon-chart" class="quarto-xref"><span>Section 3.1.1</span></a>, which contains average daily temperatures in Helsinki from 2000 to 2024. We’ll compare the two years, 2000 and 2024. Which had more warmer days?</p>
-<p>First, we’ll perform similar transformations and get the data into both long and wide formats.</p>
-<p>One minor detail to note here is that we’ll need to turn the year column from <em>numeric</em> to <em>factor</em> format. It won’t work as a category for the linetype argument otherwise. We’ll again use the forcats package to do that.</p>
+<p>I’m not an expert on this topic either. Based on this dataset, however, there appears to be a correlation between major wars (WWI, WWII, and the Vietnam War) and the production of more comedies than dramas.</p>
+</section><section id="sec-viz-3-helsinki-temperatures-part-ii" class="level4" data-number="3.1.2.2"><h4 data-number="3.1.2.2" class="anchored" data-anchor-id="sec-viz-3-helsinki-temperatures-part-ii">
+<span class="header-section-number">3.1.2.2</span> Viz #3: Helsinki temperatures, part II</h4>
+<p>Let’s take a look at another ribbon chart. We can use the data set from <a href="#sec-horizon-chart" class="quarto-xref"><span>Section 3.1.1</span></a>, which contains average daily temperatures in Helsinki from 2000 to 2024. We’ll compare the two years, 2000 and 2024. Which one had more warmer days?</p>
+<p>First, we’ll perform similar transformations as before and convert the data into both long and wide formats.</p>
+<p>One minor detail to note here is that we’ll need to turn the year column from <em>numeric</em> to <em>factor</em> format. It won’t work as a category for the <strong>linetype</strong> argument otherwise. We’ll again use the forcats package to do that.</p>
 <div class="cell">
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">temperature_hki_long</span> <span class="op">&lt;-</span> <span class="va">temperature_hki</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  </span>
@@ -961,7 +968,7 @@ This book/site is under construction
 </div>
 </div>
 <p>And so we have another perspective on the Helsinki temperature data set.</p>
-</section><section id="sec-streamgraph" class="level3" data-number="3.1.3"><h3 data-number="3.1.3" class="anchored" data-anchor-id="sec-streamgraph">
+</section></section><section id="sec-streamgraph" class="level3" data-number="3.1.3"><h3 data-number="3.1.3" class="anchored" data-anchor-id="sec-streamgraph">
 <span class="header-section-number">3.1.3</span> Streamgraph</h3>
 </section></section><section id="sec-bar-charts" class="level2" data-number="3.2"><h2 data-number="3.2" class="anchored" data-anchor-id="sec-bar-charts">
 <span class="header-section-number">3.2</span> Bar charts</h2>
@@ -1072,7 +1079,7 @@ Wickham, Hadley. 2015. <em>Ggplot2movies: Movies Data</em>. <a href="https://CRA
 ———. 2023b. <em>Stringr: Simple, Consistent Wrappers for Common String Operations</em>. <a href="https://CRAN.R-project.org/package=stringr">https://CRAN.R-project.org/package=stringr</a>.
 </div>
 <div id="ref-wickham2023b" class="csl-entry" role="listitem">
-———. 2023c. <em>Tidyverse: Easily Install and Load the ’Tidyverse’</em>. <a href="https://doi.org/10.32614/CRAN.package.tidyverse">https://doi.org/10.32614/CRAN.package.tidyverse</a>.
+———. 2023c. <em>Tidyverse: Easily Install and Load the ’Tidyverse’</em>. <a href="https://CRAN.R-project.org/package=tidyverse">https://CRAN.R-project.org/package=tidyverse</a>.
 </div>
 <div id="ref-wickham2024a" class="csl-entry" role="listitem">
 Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, Dewey Dunnington, and Teun van den Brand. 2025. <em>Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics</em>. <a href="https://CRAN.R-project.org/package=ggplot2">https://CRAN.R-project.org/package=ggplot2</a>.
