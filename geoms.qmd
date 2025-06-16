@@ -649,7 +649,7 @@ And so we have another perspective on the Helsinki temperature data set.
 
 ### Venn diagram {#sec-venn-diagram}
 
-## Line charts {#sec-geoms}
+## Line charts {#sec-line-charts}
 
 ### Bump chart {#sec-bump-chart}
 
