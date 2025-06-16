@@ -1580,5 +1580,16 @@
       "Layers",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Themes</span>"
     ]
+  },
+  {
+    "objectID": "geoms.html#sec-line-charts",
+    "href": "geoms.html#sec-line-charts",
+    "title": "3  Geoms",
+    "section": "\n3.7 Line charts",
+    "text": "3.7 Line charts\n\n3.7.1 Bump chart\n\n3.7.2 Dumbbell and lollipop chart\n\n3.7.3 Line chart (with neon glow or shadow effects)\n\n3.7.4 Slope chart",
+    "crumbs": [
+      "Layers",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Geoms</span>"
+    ]
   }
 ]
