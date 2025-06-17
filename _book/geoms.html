@@ -92,7 +92,7 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d750defc014fd27ac05477a74ef534d9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-96f5e2a3ed94a11b6ec2c918708bf376.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -419,7 +419,7 @@ div.csl-indent {
   </ul>
 </li>
   <li>
-<a href="#sec-geoms" id="toc-sec-geoms" class="nav-link" data-scroll-target="#sec-geoms"><span class="header-section-number">3.7</span> Line charts</a>
+<a href="#sec-line-charts" id="toc-sec-line-charts" class="nav-link" data-scroll-target="#sec-line-charts"><span class="header-section-number">3.7</span> Line charts</a>
   <ul class="collapse">
 <li><a href="#sec-bump-chart" id="toc-sec-bump-chart" class="nav-link" data-scroll-target="#sec-bump-chart"><span class="header-section-number">3.7.1</span> Bump chart</a></li>
   <li><a href="#sec-dumbbell-and-lollipop-chart" id="toc-sec-dumbbell-and-lollipop-chart" class="nav-link" data-scroll-target="#sec-dumbbell-and-lollipop-chart"><span class="header-section-number">3.7.2</span> Dumbbell and lollipop chart</a></li>
@@ -496,7 +496,7 @@ This book/site is under construction
 </div>
 </div>
 <p>A <strong>geom</strong> (short for geometric object) is a component that defines how data is visually represented in a plot. Geoms determine the type of visualization or the graphical shape that will be drawn.</p>
-<p>“These geoms are the fundamental building blocks of <strong>ggplot2</strong> <span class="citation" data-cites="wickham2024a">(<a href="references.html#ref-wickham2024a" role="doc-biblioref">Wickham 2025</a>)</span>. They are useful in their own right, but are also used to construct more complex geoms. Most of these geoms are associated with a named [chart]: when that geom is used by itself in a [chart], that [chart] has a special name.” <span class="citation" data-cites="wickham2016">(<a href="references.html#ref-wickham2016" role="doc-biblioref">Wickham 2016</a>)</span></p>
+<p>“These geoms are the fundamental building blocks of <strong>ggplot2</strong> <span class="citation" data-cites="wickham2024a">(<a href="references.html#ref-wickham2024a" role="doc-biblioref">Wickham et al. 2025</a>)</span>. They are useful in their own right, but are also used to construct more complex geoms. Most of these geoms are associated with a named [chart]: when that geom is used by itself in a [chart], that [chart] has a special name.” <span class="citation" data-cites="wickham2016">(<a href="references.html#ref-wickham2016" role="doc-biblioref">Wickham 2016</a>)</span></p>
 <p>ggplot2 already has a <a href="https://ggplot2.tidyverse.org/reference/index.html#geoms">long list of geoms</a>. We won’t be discussing those unless there is an extension package that is an improvement to the original. Primarily, this chapter focuses on the geoms that ggplot2 does not include.</p>
 <section id="sec-area-charts" class="level2" data-number="3.1"><h2 data-number="3.1" class="anchored" data-anchor-id="sec-area-charts">
 <span class="header-section-number">3.1</span> Area charts</h2>
@@ -508,6 +508,8 @@ This book/site is under construction
 <p>Often, when you have both positive and negative values, they lie on both sides of the x-axis. In a horizon chart, the negative values are on the same side as the positive ones.</p>
 <p>We use color to show whether the values are positive or negative. But also for the magnitude of those values.</p>
 <p>As Jonathan Schwabish points out in their book, Better Data Visualizations <span class="citation" data-cites="schwabish2021">(<a href="references.html#ref-schwabish2021" role="doc-biblioref">Schwabish 2021</a>)</span>, “the purpose of the horizon chart is not necessarily to enable readers to pick out specific values, but instead to easily spot general trends and identify extreme values”.</p>
+<section id="sec-viz-1-helsinki-temperatures-part-i" class="level4" data-number="3.1.1.1"><h4 data-number="3.1.1.1" class="anchored" data-anchor-id="sec-viz-1-helsinki-temperatures-part-i">
+<span class="header-section-number">3.1.1.1</span> Viz #1: Helsinki temperatures, part I</h4>
 <p>For the horizon chart, we’ll be using <strong>ggHoriPlot</strong> <span class="citation" data-cites="rivas-gonzalez2022">(<a href="references.html#ref-rivas-gonzalez2022" role="doc-biblioref">Rivas-González 2022</a>)</span>. The package includes various example data sets. But we’ll be using weather data from the <strong>Finnish Meteorological Institute</strong> (FMI). Its open data, weather observations are licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
 <p>Using the <a href="https://en.ilmatieteenlaitos.fi/open-data">FMI API</a> (Application Programming Interface), I retrieved the average temperatures in <strong>Helsinki</strong> (Kaisaniemi weather station) for the years 2000-2024. You can take a look at the data below.</p>
 <div data-pagedtable="false">
@@ -626,9 +628,347 @@ This book/site is under construction
 <span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><img src="geoms_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="672"></p>
 <p>I’m not a climatologist, but it does seem like there is a trend, over time, of Helsinki having milder winters. The summer temperatures are less clear-cut and will need a closer look.</p>
-</section><section id="sec-ribbon-chart-improved" class="level3" data-number="3.1.2"><h3 data-number="3.1.2" class="anchored" data-anchor-id="sec-ribbon-chart-improved">
+</section></section><section id="sec-ribbon-chart-improved" class="level3" data-number="3.1.2"><h3 data-number="3.1.2" class="anchored" data-anchor-id="sec-ribbon-chart-improved">
 <span class="header-section-number">3.1.2</span> Ribbon chart (improved)</h3>
-</section><section id="sec-streamgraph" class="level3" data-number="3.1.3"><h3 data-number="3.1.3" class="anchored" data-anchor-id="sec-streamgraph">
+<p>As the ggplot2 documentation tells us, an area chart is, in fact, a special case of a ribbon chart. That makes sense when you realize that every type of area chart has a <strong>ymin</strong> and <strong>ymax</strong>. In the basic area chart, ymin is zero, and ymax is <strong>y</strong>. <span class="citation" data-cites="wickham2024a">(<a href="references.html#ref-wickham2024a" role="doc-biblioref">Wickham et al. 2025</a>)</span></p>
+<p>The ribbon chart, then, displays the area between two lines. <code><a href="https://ggplot2.tidyverse.org/reference/geom_ribbon.html">geom_ribbon()</a></code> gets the job done when the lines don’t meet. But as you’ll soon see, for those cases where they do, you need something called <em>braiding</em>. You can read more about it in the <strong>ggbraid</strong> <span class="citation" data-cites="grantham2025">(<a href="references.html#ref-grantham2025" role="doc-biblioref">Grantham 2025</a>)</span> <a href="https://nsgrantham.github.io/ggbraid/articles/temps.html#the-unbraided-ribbon-problem">documentation</a>.</p>
+<section id="sec-viz-2-imdb-movies-part-i" class="level4" data-number="3.1.2.1"><h4 data-number="3.1.2.1" class="anchored" data-anchor-id="sec-viz-2-imdb-movies-part-i">
+<span class="header-section-number">3.1.2.1</span> Viz #2: IMDB movies, Part I</h4>
+<p>We’ll take a look at what the problem (and solution) looks like with real data. The question we’d like to answer here is which genre, comedy or drama, has produced more movies during the 20th century.</p>
+<p>But let’s first examine the data we’ll be using for this. Time series data works best for this type of chart. Let’s stick to the <strong>ggplot2movies</strong> <span class="citation" data-cites="wickham2015">(<a href="references.html#ref-wickham2015" role="doc-biblioref">Wickham 2015</a>)</span> data set that we first encountered in <a href="data.html#sec-imdb-movies-1893-2005" class="quarto-xref"><span>Section 2.1.2</span></a> and the <strong>movies_na</strong> tibble.</p>
+<p>We’ll perform some transformations to prepare the data for visualization. In this case, we’ll need the data in two <em>formats</em>, <strong>long</strong> and <strong>short</strong>.</p>
+<p>Let’s first create the <em>long</em> tibble consisting of <strong>genre</strong>, <strong>year</strong>, and <strong>n</strong> (for the count).</p>
+<p>One minor detail to note here is that we’ll turn the genre column from <em>character</em> to <em>factor</em> format. We’ll use <strong>forcats</strong> <span class="citation" data-cites="wickham2023h">(<a href="references.html#ref-wickham2023h" role="doc-biblioref">Wickham 2023a</a>)</span> from <strong>tidyverse</strong> <span class="citation" data-cites="wickham2023b">(<a href="references.html#ref-wickham2023b" role="doc-biblioref">Wickham 2023c</a>)</span> to do that. It’s not necessary in this case, but it’s good practice.</p>
+<div class="cell">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://forcats.tidyverse.org/">forcats</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyr.tidyverse.org">tidyr</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Transform and filter the `movies_na` dataset</span></span>
+<span><span class="va">movies_na_long</span> <span class="op">&lt;-</span> <span class="va">movies_na</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  </span>
+<span>  <span class="co"># Pivot genre columns (from Action to Short) into long format:</span></span>
+<span>  <span class="co"># Creates two columns: "genre" and "value"</span></span>
+<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">pivot_longer</a></span><span class="op">(</span><span class="va">Action</span><span class="op">:</span><span class="va">Short</span>, names_to <span class="op">=</span> <span class="st">"genre"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  </span>
+<span>  <span class="co"># Filter to keep only:</span></span>
+<span>  <span class="co"># - rows where the movie is flagged in that genre (value != 0)</span></span>
+<span>  <span class="co"># - only the genres Comedy and Drama</span></span>
+<span>  <span class="co"># - movies released between 1900 and 2000</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span></span>
+<span>    <span class="va">value</span> <span class="op">!=</span> <span class="fl">0</span>,</span>
+<span>    <span class="va">genre</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Comedy"</span>, <span class="st">"Drama"</span><span class="op">)</span>,</span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/between.html">between</a></span><span class="op">(</span><span class="va">year</span>, <span class="fl">1900</span>, <span class="fl">2000</span><span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  </span>
+<span>  <span class="co"># Convert genre to a factor</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>genre <span class="op">=</span> <span class="fu"><a href="https://forcats.tidyverse.org/reference/as_factor.html">as_factor</a></span><span class="op">(</span><span class="va">genre</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  </span>
+<span>  <span class="co"># Count the number of movies per genre per year</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">genre</span>, <span class="va">year</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["genre"],"name":[1],"type":["fct"],"align":["left"]},{"label":["year"],"name":[2],"type":["int"],"align":["right"]},{"label":["n"],"name":[3],"type":["int"],"align":["right"]}],"data":[{"1":"Comedy","2":"1900","3":"5"},{"1":"Comedy","2":"1901","3":"8"},{"1":"Comedy","2":"1902","3":"2"},{"1":"Comedy","2":"1903","3":"8"},{"1":"Comedy","2":"1904","3":"10"},{"1":"Comedy","2":"1905","3":"6"},{"1":"Comedy","2":"1906","3":"2"},{"1":"Comedy","2":"1907","3":"6"},{"1":"Comedy","2":"1908","3":"8"},{"1":"Comedy","2":"1909","3":"7"},{"1":"Comedy","2":"1910","3":"2"},{"1":"Comedy","2":"1911","3":"2"},{"1":"Comedy","2":"1912","3":"4"},{"1":"Comedy","2":"1913","3":"11"},{"1":"Comedy","2":"1914","3":"38"},{"1":"Comedy","2":"1915","3":"22"},{"1":"Comedy","2":"1916","3":"27"},{"1":"Comedy","2":"1917","3":"18"},{"1":"Comedy","2":"1918","3":"23"},{"1":"Comedy","2":"1919","3":"29"},{"1":"Comedy","2":"1920","3":"20"},{"1":"Comedy","2":"1921","3":"23"},{"1":"Comedy","2":"1922","3":"16"},{"1":"Comedy","2":"1923","3":"19"},{"1":"Comedy","2":"1924","3":"24"},{"1":"Comedy","2":"1925","3":"36"},{"1":"Comedy","2":"1926","3":"40"},{"1":"Comedy","2":"1927","3":"32"},{"1":"Comedy","2":"1928","3":"45"},{"1":"Comedy","2":"1929","3":"60"},{"1":"Comedy","2":"1930","3":"125"},{"1":"Comedy","2":"1931","3":"146"},{"1":"Comedy","2":"1932","3":"143"},{"1":"Comedy","2":"1933","3":"159"},{"1":"Comedy","2":"1934","3":"192"},{"1":"Comedy","2":"1935","3":"192"},{"1":"Comedy","2":"1936","3":"212"},{"1":"Comedy","2":"1937","3":"209"},{"1":"Comedy","2":"1938","3":"217"},{"1":"Comedy","2":"1939","3":"183"},{"1":"Comedy","2":"1940","3":"213"},{"1":"Comedy","2":"1941","3":"242"},{"1":"Comedy","2":"1942","3":"203"},{"1":"Comedy","2":"1943","3":"165"},{"1":"Comedy","2":"1944","3":"157"},{"1":"Comedy","2":"1945","3":"126"},{"1":"Comedy","2":"1946","3":"144"},{"1":"Comedy","2":"1947","3":"137"},{"1":"Comedy","2":"1948","3":"172"},{"1":"Comedy","2":"1949","3":"179"},{"1":"Comedy","2":"1950","3":"166"},{"1":"Comedy","2":"1951","3":"187"},{"1":"Comedy","2":"1952","3":"178"},{"1":"Comedy","2":"1953","3":"178"},{"1":"Comedy","2":"1954","3":"168"},{"1":"Comedy","2":"1955","3":"154"},{"1":"Comedy","2":"1956","3":"143"},{"1":"Comedy","2":"1957","3":"142"},{"1":"Comedy","2":"1958","3":"141"},{"1":"Comedy","2":"1959","3":"143"},{"1":"Comedy","2":"1960","3":"126"},{"1":"Comedy","2":"1961","3":"135"},{"1":"Comedy","2":"1962","3":"163"},{"1":"Comedy","2":"1963","3":"164"},{"1":"Comedy","2":"1964","3":"160"},{"1":"Comedy","2":"1965","3":"175"},{"1":"Comedy","2":"1966","3":"176"},{"1":"Comedy","2":"1967","3":"193"},{"1":"Comedy","2":"1968","3":"166"},{"1":"Comedy","2":"1969","3":"164"},{"1":"Comedy","2":"1970","3":"156"},{"1":"Comedy","2":"1971","3":"155"},{"1":"Comedy","2":"1972","3":"146"},{"1":"Comedy","2":"1973","3":"150"},{"1":"Comedy","2":"1974","3":"130"},{"1":"Comedy","2":"1975","3":"148"},{"1":"Comedy","2":"1976","3":"148"},{"1":"Comedy","2":"1977","3":"152"},{"1":"Comedy","2":"1978","3":"151"},{"1":"Comedy","2":"1979","3":"160"},{"1":"Comedy","2":"1980","3":"184"},{"1":"Comedy","2":"1981","3":"178"},{"1":"Comedy","2":"1982","3":"172"},{"1":"Comedy","2":"1983","3":"166"},{"1":"Comedy","2":"1984","3":"190"},{"1":"Comedy","2":"1985","3":"213"},{"1":"Comedy","2":"1986","3":"204"},{"1":"Comedy","2":"1987","3":"252"},{"1":"Comedy","2":"1988","3":"249"},{"1":"Comedy","2":"1989","3":"239"},{"1":"Comedy","2":"1990","3":"232"},{"1":"Comedy","2":"1991","3":"250"},{"1":"Comedy","2":"1992","3":"240"},{"1":"Comedy","2":"1993","3":"254"},{"1":"Comedy","2":"1994","3":"309"},{"1":"Comedy","2":"1995","3":"281"},{"1":"Comedy","2":"1996","3":"352"},{"1":"Comedy","2":"1997","3":"404"},{"1":"Comedy","2":"1998","3":"451"},{"1":"Comedy","2":"1999","3":"562"},{"1":"Comedy","2":"2000","3":"561"},{"1":"Drama","2":"1900","3":"2"},{"1":"Drama","2":"1901","3":"5"},{"1":"Drama","2":"1902","3":"1"},{"1":"Drama","2":"1903","3":"2"},{"1":"Drama","2":"1904","3":"3"},{"1":"Drama","2":"1905","3":"4"},{"1":"Drama","2":"1906","3":"5"},{"1":"Drama","2":"1907","3":"1"},{"1":"Drama","2":"1908","3":"8"},{"1":"Drama","2":"1909","3":"14"},{"1":"Drama","2":"1910","3":"14"},{"1":"Drama","2":"1911","3":"14"},{"1":"Drama","2":"1912","3":"22"},{"1":"Drama","2":"1913","3":"13"},{"1":"Drama","2":"1914","3":"13"},{"1":"Drama","2":"1915","3":"16"},{"1":"Drama","2":"1916","3":"13"},{"1":"Drama","2":"1917","3":"14"},{"1":"Drama","2":"1918","3":"14"},{"1":"Drama","2":"1919","3":"17"},{"1":"Drama","2":"1920","3":"14"},{"1":"Drama","2":"1921","3":"23"},{"1":"Drama","2":"1922","3":"20"},{"1":"Drama","2":"1923","3":"20"},{"1":"Drama","2":"1924","3":"15"},{"1":"Drama","2":"1925","3":"27"},{"1":"Drama","2":"1926","3":"37"},{"1":"Drama","2":"1927","3":"41"},{"1":"Drama","2":"1928","3":"51"},{"1":"Drama","2":"1929","3":"74"},{"1":"Drama","2":"1930","3":"106"},{"1":"Drama","2":"1931","3":"138"},{"1":"Drama","2":"1932","3":"157"},{"1":"Drama","2":"1933","3":"167"},{"1":"Drama","2":"1934","3":"164"},{"1":"Drama","2":"1935","3":"140"},{"1":"Drama","2":"1936","3":"120"},{"1":"Drama","2":"1937","3":"153"},{"1":"Drama","2":"1938","3":"133"},{"1":"Drama","2":"1939","3":"179"},{"1":"Drama","2":"1940","3":"156"},{"1":"Drama","2":"1941","3":"139"},{"1":"Drama","2":"1942","3":"148"},{"1":"Drama","2":"1943","3":"129"},{"1":"Drama","2":"1944","3":"118"},{"1":"Drama","2":"1945","3":"122"},{"1":"Drama","2":"1946","3":"135"},{"1":"Drama","2":"1947","3":"162"},{"1":"Drama","2":"1948","3":"179"},{"1":"Drama","2":"1949","3":"187"},{"1":"Drama","2":"1950","3":"167"},{"1":"Drama","2":"1951","3":"191"},{"1":"Drama","2":"1952","3":"194"},{"1":"Drama","2":"1953","3":"183"},{"1":"Drama","2":"1954","3":"177"},{"1":"Drama","2":"1955","3":"220"},{"1":"Drama","2":"1956","3":"183"},{"1":"Drama","2":"1957","3":"236"},{"1":"Drama","2":"1958","3":"219"},{"1":"Drama","2":"1959","3":"186"},{"1":"Drama","2":"1960","3":"224"},{"1":"Drama","2":"1961","3":"186"},{"1":"Drama","2":"1962","3":"210"},{"1":"Drama","2":"1963","3":"199"},{"1":"Drama","2":"1964","3":"189"},{"1":"Drama","2":"1965","3":"158"},{"1":"Drama","2":"1966","3":"168"},{"1":"Drama","2":"1967","3":"200"},{"1":"Drama","2":"1968","3":"223"},{"1":"Drama","2":"1969","3":"266"},{"1":"Drama","2":"1970","3":"252"},{"1":"Drama","2":"1971","3":"260"},{"1":"Drama","2":"1972","3":"238"},{"1":"Drama","2":"1973","3":"258"},{"1":"Drama","2":"1974","3":"258"},{"1":"Drama","2":"1975","3":"244"},{"1":"Drama","2":"1976","3":"250"},{"1":"Drama","2":"1977","3":"246"},{"1":"Drama","2":"1978","3":"231"},{"1":"Drama","2":"1979","3":"248"},{"1":"Drama","2":"1980","3":"230"},{"1":"Drama","2":"1981","3":"243"},{"1":"Drama","2":"1982","3":"255"},{"1":"Drama","2":"1983","3":"265"},{"1":"Drama","2":"1984","3":"278"},{"1":"Drama","2":"1985","3":"256"},{"1":"Drama","2":"1986","3":"289"},{"1":"Drama","2":"1987","3":"339"},{"1":"Drama","2":"1988","3":"332"},{"1":"Drama","2":"1989","3":"324"},{"1":"Drama","2":"1990","3":"321"},{"1":"Drama","2":"1991","3":"330"},{"1":"Drama","2":"1992","3":"347"},{"1":"Drama","2":"1993","3":"381"},{"1":"Drama","2":"1994","3":"435"},{"1":"Drama","2":"1995","3":"493"},{"1":"Drama","2":"1996","3":"493"},{"1":"Drama","2":"1997","3":"555"},{"1":"Drama","2":"1998","3":"634"},{"1":"Drama","2":"1999","3":"694"},{"1":"Drama","2":"2000","3":"793"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<p>Next, we’ll split the genre into two separate columns, Comedy and Drama. They will retrieve their values from the n column.</p>
+<p>We’ll also be adding a <strong>fill_condition</strong> column. We’ll use that later to determine which color to use to fill the area between the two lines.</p>
+<div class="cell">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Convert long-format genre counts back to wide format and compare values</span></span>
+<span><span class="va">movies_na_wide</span> <span class="op">&lt;-</span> <span class="va">movies_na_long</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  </span>
+<span>  <span class="co"># Pivot genre counts from long to wide:</span></span>
+<span>  <span class="co"># Each genre becomes its own column (e.g., Comedy, Drama),</span></span>
+<span>  <span class="co"># with yearly counts as values</span></span>
+<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_wider.html">pivot_wider</a></span><span class="op">(</span></span>
+<span>    names_from  <span class="op">=</span> <span class="va">genre</span>,</span>
+<span>    values_from <span class="op">=</span> <span class="va">n</span></span>
+<span>  <span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  </span>
+<span>  <span class="co"># Create a new logical column indicating whether</span></span>
+<span>  <span class="co"># Comedy had fewer movies than Drama in that year</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>fill_condition <span class="op">=</span> <span class="va">Comedy</span> <span class="op">&lt;</span> <span class="va">Drama</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["year"],"name":[1],"type":["int"],"align":["right"]},{"label":["Comedy"],"name":[2],"type":["int"],"align":["right"]},{"label":["Drama"],"name":[3],"type":["int"],"align":["right"]},{"label":["fill_condition"],"name":[4],"type":["lgl"],"align":["right"]}],"data":[{"1":"1900","2":"5","3":"2","4":"FALSE"},{"1":"1901","2":"8","3":"5","4":"FALSE"},{"1":"1902","2":"2","3":"1","4":"FALSE"},{"1":"1903","2":"8","3":"2","4":"FALSE"},{"1":"1904","2":"10","3":"3","4":"FALSE"},{"1":"1905","2":"6","3":"4","4":"FALSE"},{"1":"1906","2":"2","3":"5","4":"TRUE"},{"1":"1907","2":"6","3":"1","4":"FALSE"},{"1":"1908","2":"8","3":"8","4":"FALSE"},{"1":"1909","2":"7","3":"14","4":"TRUE"},{"1":"1910","2":"2","3":"14","4":"TRUE"},{"1":"1911","2":"2","3":"14","4":"TRUE"},{"1":"1912","2":"4","3":"22","4":"TRUE"},{"1":"1913","2":"11","3":"13","4":"TRUE"},{"1":"1914","2":"38","3":"13","4":"FALSE"},{"1":"1915","2":"22","3":"16","4":"FALSE"},{"1":"1916","2":"27","3":"13","4":"FALSE"},{"1":"1917","2":"18","3":"14","4":"FALSE"},{"1":"1918","2":"23","3":"14","4":"FALSE"},{"1":"1919","2":"29","3":"17","4":"FALSE"},{"1":"1920","2":"20","3":"14","4":"FALSE"},{"1":"1921","2":"23","3":"23","4":"FALSE"},{"1":"1922","2":"16","3":"20","4":"TRUE"},{"1":"1923","2":"19","3":"20","4":"TRUE"},{"1":"1924","2":"24","3":"15","4":"FALSE"},{"1":"1925","2":"36","3":"27","4":"FALSE"},{"1":"1926","2":"40","3":"37","4":"FALSE"},{"1":"1927","2":"32","3":"41","4":"TRUE"},{"1":"1928","2":"45","3":"51","4":"TRUE"},{"1":"1929","2":"60","3":"74","4":"TRUE"},{"1":"1930","2":"125","3":"106","4":"FALSE"},{"1":"1931","2":"146","3":"138","4":"FALSE"},{"1":"1932","2":"143","3":"157","4":"TRUE"},{"1":"1933","2":"159","3":"167","4":"TRUE"},{"1":"1934","2":"192","3":"164","4":"FALSE"},{"1":"1935","2":"192","3":"140","4":"FALSE"},{"1":"1936","2":"212","3":"120","4":"FALSE"},{"1":"1937","2":"209","3":"153","4":"FALSE"},{"1":"1938","2":"217","3":"133","4":"FALSE"},{"1":"1939","2":"183","3":"179","4":"FALSE"},{"1":"1940","2":"213","3":"156","4":"FALSE"},{"1":"1941","2":"242","3":"139","4":"FALSE"},{"1":"1942","2":"203","3":"148","4":"FALSE"},{"1":"1943","2":"165","3":"129","4":"FALSE"},{"1":"1944","2":"157","3":"118","4":"FALSE"},{"1":"1945","2":"126","3":"122","4":"FALSE"},{"1":"1946","2":"144","3":"135","4":"FALSE"},{"1":"1947","2":"137","3":"162","4":"TRUE"},{"1":"1948","2":"172","3":"179","4":"TRUE"},{"1":"1949","2":"179","3":"187","4":"TRUE"},{"1":"1950","2":"166","3":"167","4":"TRUE"},{"1":"1951","2":"187","3":"191","4":"TRUE"},{"1":"1952","2":"178","3":"194","4":"TRUE"},{"1":"1953","2":"178","3":"183","4":"TRUE"},{"1":"1954","2":"168","3":"177","4":"TRUE"},{"1":"1955","2":"154","3":"220","4":"TRUE"},{"1":"1956","2":"143","3":"183","4":"TRUE"},{"1":"1957","2":"142","3":"236","4":"TRUE"},{"1":"1958","2":"141","3":"219","4":"TRUE"},{"1":"1959","2":"143","3":"186","4":"TRUE"},{"1":"1960","2":"126","3":"224","4":"TRUE"},{"1":"1961","2":"135","3":"186","4":"TRUE"},{"1":"1962","2":"163","3":"210","4":"TRUE"},{"1":"1963","2":"164","3":"199","4":"TRUE"},{"1":"1964","2":"160","3":"189","4":"TRUE"},{"1":"1965","2":"175","3":"158","4":"FALSE"},{"1":"1966","2":"176","3":"168","4":"FALSE"},{"1":"1967","2":"193","3":"200","4":"TRUE"},{"1":"1968","2":"166","3":"223","4":"TRUE"},{"1":"1969","2":"164","3":"266","4":"TRUE"},{"1":"1970","2":"156","3":"252","4":"TRUE"},{"1":"1971","2":"155","3":"260","4":"TRUE"},{"1":"1972","2":"146","3":"238","4":"TRUE"},{"1":"1973","2":"150","3":"258","4":"TRUE"},{"1":"1974","2":"130","3":"258","4":"TRUE"},{"1":"1975","2":"148","3":"244","4":"TRUE"},{"1":"1976","2":"148","3":"250","4":"TRUE"},{"1":"1977","2":"152","3":"246","4":"TRUE"},{"1":"1978","2":"151","3":"231","4":"TRUE"},{"1":"1979","2":"160","3":"248","4":"TRUE"},{"1":"1980","2":"184","3":"230","4":"TRUE"},{"1":"1981","2":"178","3":"243","4":"TRUE"},{"1":"1982","2":"172","3":"255","4":"TRUE"},{"1":"1983","2":"166","3":"265","4":"TRUE"},{"1":"1984","2":"190","3":"278","4":"TRUE"},{"1":"1985","2":"213","3":"256","4":"TRUE"},{"1":"1986","2":"204","3":"289","4":"TRUE"},{"1":"1987","2":"252","3":"339","4":"TRUE"},{"1":"1988","2":"249","3":"332","4":"TRUE"},{"1":"1989","2":"239","3":"324","4":"TRUE"},{"1":"1990","2":"232","3":"321","4":"TRUE"},{"1":"1991","2":"250","3":"330","4":"TRUE"},{"1":"1992","2":"240","3":"347","4":"TRUE"},{"1":"1993","2":"254","3":"381","4":"TRUE"},{"1":"1994","2":"309","3":"435","4":"TRUE"},{"1":"1995","2":"281","3":"493","4":"TRUE"},{"1":"1996","2":"352","3":"493","4":"TRUE"},{"1":"1997","2":"404","3":"555","4":"TRUE"},{"1":"1998","2":"451","3":"634","4":"TRUE"},{"1":"1999","2":"562","3":"694","4":"TRUE"},{"1":"2000","2":"561","3":"793","4":"TRUE"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<p>Now we can return to the topic of why we need to use an extension for cases where the lines don’t stay separate.</p>
+<p>Here’s what the basic visualization would look like with <code><a href="https://ggplot2.tidyverse.org/reference/geom_ribbon.html">geom_ribbon()</a></code> from ggplot2.</p>
+<div class="cell">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">year</span>, <span class="va">n</span>, linetype <span class="op">=</span> <span class="va">genre</span><span class="op">)</span>,</span>
+<span>    data <span class="op">=</span> <span class="va">movies_na_long</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_ribbon.html">geom_ribbon</a></span><span class="op">(</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">year</span>, ymin <span class="op">=</span> <span class="va">Comedy</span>, ymax <span class="op">=</span> <span class="va">Drama</span>, fill <span class="op">=</span> <span class="va">fill_condition</span><span class="op">)</span>,</span>
+<span>    data  <span class="op">=</span> <span class="va">movies_na_wide</span>,</span>
+<span>    alpha <span class="op">=</span> <span class="fl">0.7</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="geoms_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>That won’t work if we want to use the ribbon chart to show where the two categories change places, indicating which is greater.</p>
+<p>But that’s where ggbraid’s <code><a href="https://nsgrantham.github.io/ggbraid/reference/geom_braid.html">geom_braid()</a></code> comes to the rescue. The basic code is the same. We’ll only switch the geom function.</p>
+<p>The rest of the code is to make the visualization more presentable. Note that we’ll move the legend inside the plot. We’ll use the <strong>legend.position</strong> argument inside the <code><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme()</a></code> function to do that. There’s enough <em>white space</em> inside the plot to accommodate the legend. This way, we gain more space to showcase the time series element of the plot.</p>
+<div class="cell">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://nsgrantham.github.io/ggbraid/">ggbraid</a></span><span class="op">)</span> <span class="co"># for geom_braid() to visualize overlapping time series</span></span>
+<span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Line plot for number of movies per genre per year</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">year</span>, <span class="va">n</span>, linetype <span class="op">=</span> <span class="va">genre</span><span class="op">)</span>,</span>
+<span>    data <span class="op">=</span> <span class="va">movies_na_long</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Braid layer to highlight which genre had more movies per year</span></span>
+<span>  <span class="fu"><a href="https://nsgrantham.github.io/ggbraid/reference/geom_braid.html">geom_braid</a></span><span class="op">(</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">year</span>, ymin <span class="op">=</span> <span class="va">Comedy</span>, ymax <span class="op">=</span> <span class="va">Drama</span>, fill <span class="op">=</span> <span class="va">fill_condition</span><span class="op">)</span>,</span>
+<span>    data  <span class="op">=</span> <span class="va">movies_na_wide</span>,</span>
+<span>    alpha <span class="op">=</span> <span class="fl">0.7</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Text annotation when comedies dominated</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/annotate.html">annotate</a></span><span class="op">(</span></span>
+<span>    <span class="st">"text"</span>,</span>
+<span>    x     <span class="op">=</span> <span class="fl">1938</span>,</span>
+<span>    y     <span class="op">=</span> <span class="fl">300</span>,</span>
+<span>    size  <span class="op">=</span> <span class="fl">4</span>,</span>
+<span>    label <span class="op">=</span> <span class="st">"More comedies than drama"</span>,</span>
+<span>    hjust <span class="op">=</span> <span class="fl">0.5</span>,</span>
+<span>    color <span class="op">=</span> <span class="st">"#F36523"</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Text annotation when dramas dominated</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/annotate.html">annotate</a></span><span class="op">(</span></span>
+<span>    <span class="st">"text"</span>,</span>
+<span>    x     <span class="op">=</span> <span class="fl">1975</span>,</span>
+<span>    y     <span class="op">=</span> <span class="fl">80</span>,</span>
+<span>    size  <span class="op">=</span> <span class="fl">4</span>,</span>
+<span>    label <span class="op">=</span> <span class="st">"More drama than comedies"</span>,</span>
+<span>    hjust <span class="op">=</span> <span class="fl">0.5</span>,</span>
+<span>    color <span class="op">=</span> <span class="st">"#125184"</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Manually set fill colors for the braid based on fill condition</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_fill_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"#F36523"</span>, <span class="st">"#125184"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Customize x-axis: limit, spacing, and ticks</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span></span>
+<span>    expand <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">1</span><span class="op">)</span>,</span>
+<span>    limits <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1899</span>, <span class="fl">2001</span><span class="op">)</span>,</span>
+<span>    breaks <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">1900</span>, <span class="fl">2000</span>, by <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Customize y-axis: limit, spacing, and ticks</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous</a></span><span class="op">(</span></span>
+<span>    expand <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">1</span><span class="op">)</span>,</span>
+<span>    limits <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">800</span><span class="op">)</span>,</span>
+<span>    breaks <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">800</span>, by <span class="op">=</span> <span class="fl">100</span><span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Hide fill legend (keep linetype legend only)</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/guides.html">guides</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="st">"none"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Add plot title, subtitle, and axis labels</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span></span>
+<span>    linetype <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>    title    <span class="op">=</span> <span class="st">"100 years of cinema"</span>,</span>
+<span>    subtitle <span class="op">=</span> <span class="st">"Number of comedies vs. dramas throughout the 20th century"</span>,</span>
+<span>    x        <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>    y        <span class="op">=</span> <span class="cn">NULL</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Use a clean black-and-white theme as a base</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Custom legend appearance and positioning</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span></span>
+<span>    legend.direction <span class="op">=</span> <span class="st">"horizontal"</span>,</span>
+<span>    legend.box.background <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_rect</a></span><span class="op">(</span></span>
+<span>      color     <span class="op">=</span> <span class="st">"black"</span>,</span>
+<span>      linetype  <span class="op">=</span> <span class="st">"solid"</span>,</span>
+<span>      linewidth <span class="op">=</span> <span class="fl">0.5</span></span>
+<span>      <span class="op">)</span>,</span>
+<span>    legend.key.size  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grid/unit.html">unit</a></span><span class="op">(</span><span class="fl">2</span>, <span class="st">"line"</span><span class="op">)</span>,</span>
+<span>    legend.position  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.19</span>, <span class="fl">0.88</span><span class="op">)</span>, <span class="co"># relative position inside plot</span></span>
+<span>    legend.text      <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="geoms_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>I’m not an expert on this topic either. Based on this dataset, however, there appears to be a correlation between major wars (WWI, WWII, and the Vietnam War) and the production of more comedies than dramas.</p>
+</section><section id="sec-viz-3-helsinki-temperatures-part-ii" class="level4" data-number="3.1.2.2"><h4 data-number="3.1.2.2" class="anchored" data-anchor-id="sec-viz-3-helsinki-temperatures-part-ii">
+<span class="header-section-number">3.1.2.2</span> Viz #3: Helsinki temperatures, part II</h4>
+<p>Let’s take a look at another ribbon chart. We can use the data set from <a href="#sec-horizon-chart" class="quarto-xref"><span>Section 3.1.1</span></a>, which contains average daily temperatures in Helsinki from 2000 to 2024. We’ll compare the two years, 2000 and 2024. Which one had more warmer days?</p>
+<p>First, we’ll perform similar transformations as before and convert the data into both long and wide formats.</p>
+<p>One minor detail to note here is that we’ll need to turn the year column from <em>numeric</em> to <em>factor</em> format. It won’t work as a category for the <strong>linetype</strong> argument otherwise. We’ll again use the forcats package to do that.</p>
+<div class="cell">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">temperature_hki_long</span> <span class="op">&lt;-</span> <span class="va">temperature_hki</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  </span>
+<span>  <span class="co"># Filter data to include only the years 2000 and 2024</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">year</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2000</span>, <span class="fl">2024</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  </span>
+<span>  <span class="co"># Convert `year` to a factor (useful for plotting or grouping)</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>year <span class="op">=</span> <span class="fu"><a href="https://forcats.tidyverse.org/reference/as_factor.html">as_factor</a></span><span class="op">(</span><span class="va">year</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  </span>
+<span>  <span class="co"># Keep only the necessary columns for analysis or visualization</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">avg_temperature_celsius</span>, <span class="va">year</span>, <span class="va">date_dummy</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>In this next transformation, note the use of the <strong>names_prefix</strong> argument. A column with a number as the first character of the name is not ideal. This will take care of that.</p>
+<div class="cell">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Pivot data from long to wide format</span></span>
+<span><span class="va">temperature_hki_wide</span> <span class="op">&lt;-</span> <span class="va">temperature_hki_long</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  </span>
+<span>  <span class="co"># Creates one column per year (e.g., year_2000, year_2024),</span></span>
+<span>  <span class="co"># using temperature values as the content</span></span>
+<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_wider.html">pivot_wider</a></span><span class="op">(</span></span>
+<span>    names_from   <span class="op">=</span> <span class="va">year</span>,</span>
+<span>    names_prefix <span class="op">=</span> <span class="st">"year_"</span>,</span>
+<span>    values_from  <span class="op">=</span> <span class="va">avg_temperature_celsius</span></span>
+<span>  <span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  </span>
+<span>  <span class="co"># Create a new logical column to compare the two years:</span></span>
+<span>  <span class="co"># TRUE if 2024 temp &gt; 2000 temp for that date</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>fill_condition <span class="op">=</span> <span class="va">year_2000</span> <span class="op">&lt;</span> <span class="va">year_2024</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We’ll also count the number (and percentage of total) of days where the average temperature is greater in 2000 and 2024. We’ll use this information for annotations.</p>
+<div class="cell">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">temperature_hki_wide</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  </span>
+<span>  <span class="co"># Count how many days had each condition (TRUE/FALSE)</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">fill_condition</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  </span>
+<span>  <span class="co"># Calculate the percentage for each group</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>n_pct <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="va">n</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span>, <span class="fl">3</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 3
+  fill_condition     n n_pct
+  &lt;lgl&gt;          &lt;int&gt; &lt;dbl&gt;
+1 FALSE            145 0.396
+2 TRUE             221 0.604</code></pre>
+</div>
+</div>
+<p>Looks like 2024 has more days (60.4%) that were, on average, warmer than 2000 (39.6%).</p>
+<p>The visualization itself is like the movie example. The most significant difference is the use of two packages from the tidyverse family.</p>
+<p><code><a href="https://stringr.tidyverse.org/reference/str_glue.html">str_glue()</a></code> from <strong>stringr</strong> <span class="citation" data-cites="wickham2023g">(<a href="references.html#ref-wickham2023g" role="doc-biblioref">Wickham 2023b</a>)</span> features a convenient implicit line break functionality. We’ll also use it to add the degree Celsius symbol (°C) to the y-axis.</p>
+<p><code><a href="https://lubridate.tidyverse.org/reference/as_date.html">as_date()</a></code> from <strong>lubridate</strong> <span class="citation" data-cites="spinu2024">(<a href="references.html#ref-spinu2024" role="doc-biblioref">Spinu, Grolemund, and Wickham 2024</a>)</span> allows us to use the date in <em>character</em> format to map it to the x-axis. This helps us place the annotations in the correct position.</p>
+<div class="cell">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://nsgrantham.github.io/ggbraid/">ggbraid</a></span><span class="op">)</span>   <span class="co"># for geom_braid(), visualizing area between two lines</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://lubridate.tidyverse.org">lubridate</a></span><span class="op">)</span> <span class="co"># for working with date types</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://stringr.tidyverse.org">stringr</a></span><span class="op">)</span>   <span class="co"># for string manipulation like str_glue()</span></span>
+<span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Add temperature lines for each year (2000 and 2024)</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">date_dummy</span>, <span class="va">avg_temperature_celsius</span>, linetype <span class="op">=</span> <span class="va">year</span><span class="op">)</span>,</span>
+<span>    data <span class="op">=</span> <span class="va">temperature_hki_long</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Add braided area showing difference between 2000 and 2024</span></span>
+<span>  <span class="co"># Fill based on which year was warmer (fill_condition)</span></span>
+<span>  <span class="fu"><a href="https://nsgrantham.github.io/ggbraid/reference/geom_braid.html">geom_braid</a></span><span class="op">(</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span></span>
+<span>      <span class="va">date_dummy</span>,</span>
+<span>      ymin <span class="op">=</span> <span class="va">year_2000</span>,</span>
+<span>      ymax <span class="op">=</span> <span class="va">year_2024</span>,</span>
+<span>      fill <span class="op">=</span> <span class="va">fill_condition</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    data  <span class="op">=</span> <span class="va">temperature_hki_wide</span>,</span>
+<span>    alpha <span class="op">=</span> <span class="fl">0.7</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Annotate area where 2000 was warmer</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/annotate.html">annotate</a></span><span class="op">(</span></span>
+<span>    <span class="st">"text"</span>,</span>
+<span>    x     <span class="op">=</span> <span class="fu"><a href="https://lubridate.tidyverse.org/reference/as_date.html">as_date</a></span><span class="op">(</span><span class="st">"2024-03-01"</span><span class="op">)</span>,</span>
+<span>    y     <span class="op">=</span> <span class="op">-</span><span class="fl">17.5</span>,</span>
+<span>    size  <span class="op">=</span> <span class="fl">4</span>,</span>
+<span>    label <span class="op">=</span> <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_glue.html">str_glue</a></span><span class="op">(</span></span>
+<span>      <span class="st">"2000 was warmer</span></span>
+<span><span class="st">      40 % of the days"</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    hjust <span class="op">=</span> <span class="fl">0.5</span>,</span>
+<span>    color <span class="op">=</span> <span class="st">"#125184"</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Annotate area where 2024 was warmer</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/annotate.html">annotate</a></span><span class="op">(</span></span>
+<span>    <span class="st">"text"</span>,</span>
+<span>    x     <span class="op">=</span> <span class="fu"><a href="https://lubridate.tidyverse.org/reference/as_date.html">as_date</a></span><span class="op">(</span><span class="st">"2024-11-15"</span><span class="op">)</span>,</span>
+<span>    y     <span class="op">=</span> <span class="fl">17.5</span>,</span>
+<span>    size  <span class="op">=</span> <span class="fl">4</span>,</span>
+<span>    label <span class="op">=</span> <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_glue.html">str_glue</a></span><span class="op">(</span></span>
+<span>      <span class="st">"2024 was warmer </span></span>
+<span><span class="st">      60 % of the days"</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    hjust <span class="op">=</span> <span class="fl">0.5</span>,</span>
+<span>    color <span class="op">=</span> <span class="st">"#F36523"</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Manual fill colors: blue for 2000 warmer, orange for 2024 warmer</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_fill_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"#125184"</span>, <span class="st">"#F36523"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Format x-axis: monthly ticks, short month labels</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_date.html">scale_x_date</a></span><span class="op">(</span></span>
+<span>    date_breaks <span class="op">=</span> <span class="st">"1 month"</span>,</span>
+<span>    date_labels <span class="op">=</span> <span class="st">"%b"</span>,</span>
+<span>    expand      <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0.1</span><span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Format y-axis: show temperature with °C symbol</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous</a></span><span class="op">(</span>labels <span class="op">=</span> <span class="op">~</span> <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_glue.html">str_glue</a></span><span class="op">(</span><span class="st">"{.x} °C"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Hide fill legend (keep linetype legend only)</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/guides.html">guides</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="st">"none"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Add plot title, subtitle, and caption</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span></span>
+<span>    linetype <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>    title    <span class="op">=</span> <span class="st">"Is the temperature rising?"</span>,</span>
+<span>    subtitle <span class="op">=</span> <span class="st">"Average daily temperatures (Celsius) in Helsinki, 2000 vs. 2024"</span>,</span>
+<span>    caption  <span class="op">=</span> <span class="st">"Data: Finnish Meteorological Institute open data, weather observations (CC BY 4.0)"</span>,</span>
+<span>    x        <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>    y        <span class="op">=</span> <span class="cn">NULL</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Use a clean, minimal black-and-white theme</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Customize legend and caption styling</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span></span>
+<span>    legend.direction <span class="op">=</span> <span class="st">"horizontal"</span>,</span>
+<span>    legend.box.background <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_rect</a></span><span class="op">(</span></span>
+<span>      color     <span class="op">=</span> <span class="st">"black"</span>,</span>
+<span>      linetype  <span class="op">=</span> <span class="st">"solid"</span>,</span>
+<span>      linewidth <span class="op">=</span> <span class="fl">0.5</span></span>
+<span>      <span class="op">)</span>,</span>
+<span>    legend.key.size  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grid/unit.html">unit</a></span><span class="op">(</span><span class="fl">2</span>, <span class="st">"line"</span><span class="op">)</span>,</span>
+<span>    legend.position  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.83</span>, <span class="fl">0.12</span><span class="op">)</span>, <span class="co"># bottom-right position</span></span>
+<span>    legend.text      <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">10</span><span class="op">)</span>,</span>
+<span>    plot.caption     <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">8</span>, hjust <span class="op">=</span> <span class="fl">1</span>, color <span class="op">=</span> <span class="st">"#777777"</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="geoms_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>And so we have another perspective on the Helsinki temperature data set.</p>
+</section></section><section id="sec-streamgraph" class="level3" data-number="3.1.3"><h3 data-number="3.1.3" class="anchored" data-anchor-id="sec-streamgraph">
 <span class="header-section-number">3.1.3</span> Streamgraph</h3>
 </section></section><section id="sec-bar-charts" class="level2" data-number="3.2"><h2 data-number="3.2" class="anchored" data-anchor-id="sec-bar-charts">
 <span class="header-section-number">3.2</span> Bar charts</h2>
@@ -664,7 +1004,7 @@ This book/site is under construction
 <span class="header-section-number">3.6.1</span> UpSet diagram</h3>
 </section><section id="sec-venn-diagram" class="level3" data-number="3.6.2"><h3 data-number="3.6.2" class="anchored" data-anchor-id="sec-venn-diagram">
 <span class="header-section-number">3.6.2</span> Venn diagram</h3>
-</section></section><section id="sec-geoms" class="level2" data-number="3.7"><h2 data-number="3.7" class="anchored" data-anchor-id="sec-geoms">
+</section></section><section id="sec-line-charts" class="level2" data-number="3.7"><h2 data-number="3.7" class="anchored" data-anchor-id="sec-line-charts">
 <span class="header-section-number">3.7</span> Line charts</h2>
 <section id="sec-bump-chart" class="level3" data-number="3.7.1"><h3 data-number="3.7.1" class="anchored" data-anchor-id="sec-bump-chart">
 <span class="header-section-number">3.7.1</span> Bump chart</h3>
@@ -714,17 +1054,35 @@ This book/site is under construction
 <div id="ref-arnold2024" class="csl-entry" role="listitem">
 Arnold, Jeffrey B. 2024. <em>Ggthemes: Extra Themes, Scales and Geoms for ’Ggplot2’</em>. <a href="https://CRAN.R-project.org/package=ggthemes">https://CRAN.R-project.org/package=ggthemes</a>.
 </div>
+<div id="ref-grantham2025" class="csl-entry" role="listitem">
+Grantham, Neal. 2025. <em>Ggbraid: Braid Ribbons in ’Ggplot2’</em>. <a href="https://github.com/nsgrantham/ggbraid">https://github.com/nsgrantham/ggbraid</a>.
+</div>
 <div id="ref-rivas-gonzalez2022" class="csl-entry" role="listitem">
 Rivas-González, Iker. 2022. <em>ggHoriPlot: Horizon Plots for ’Ggplot2’</em>. <a href="https://CRAN.R-project.org/package=ggHoriPlot">https://CRAN.R-project.org/package=ggHoriPlot</a>.
 </div>
 <div id="ref-schwabish2021" class="csl-entry" role="listitem">
 Schwabish, Jonathan A. 2021. <em>Better Data Visualizations: A Guide for Scholars, Researchers, and Wonks</em>. 1st ed. Columbia University Press.
 </div>
+<div id="ref-spinu2024" class="csl-entry" role="listitem">
+Spinu, Vitalie, Garrett Grolemund, and Hadley Wickham. 2024. <em>Lubridate: Make Dealing with Dates a Little Easier</em>. <a href="https://CRAN.R-project.org/package=lubridate">https://CRAN.R-project.org/package=lubridate</a>.
+</div>
+<div id="ref-wickham2015" class="csl-entry" role="listitem">
+Wickham, Hadley. 2015. <em>Ggplot2movies: Movies Data</em>. <a href="https://CRAN.R-project.org/package=ggplot2movies">https://CRAN.R-project.org/package=ggplot2movies</a>.
+</div>
 <div id="ref-wickham2016" class="csl-entry" role="listitem">
-Wickham, Hadley. 2016. <em>Ggplot2: Elegant Graphics for Data Analysis</em>. 2nd ed. Springer-Verlag New York.
+———. 2016. <em>Ggplot2: Elegant Graphics for Data Analysis</em>. 2nd ed. Springer-Verlag New York.
+</div>
+<div id="ref-wickham2023h" class="csl-entry" role="listitem">
+———. 2023a. <em>Forcats: Tools for Working with Categorical Variables (Factors)</em>. <a href="https://CRAN.R-project.org/package=forcats">https://CRAN.R-project.org/package=forcats</a>.
+</div>
+<div id="ref-wickham2023g" class="csl-entry" role="listitem">
+———. 2023b. <em>Stringr: Simple, Consistent Wrappers for Common String Operations</em>. <a href="https://CRAN.R-project.org/package=stringr">https://CRAN.R-project.org/package=stringr</a>.
+</div>
+<div id="ref-wickham2023b" class="csl-entry" role="listitem">
+———. 2023c. <em>Tidyverse: Easily Install and Load the ’Tidyverse’</em>. <a href="https://CRAN.R-project.org/package=tidyverse">https://CRAN.R-project.org/package=tidyverse</a>.
 </div>
 <div id="ref-wickham2024a" class="csl-entry" role="listitem">
-———. 2025. <em>Ggplot2: Elegant Graphics for Data Analysis.</em> <a href="https://ggplot2.tidyverse.org">https://ggplot2.tidyverse.org</a>.
+Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, Dewey Dunnington, and Teun van den Brand. 2025. <em>Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics</em>. <a href="https://CRAN.R-project.org/package=ggplot2">https://CRAN.R-project.org/package=ggplot2</a>.
 </div>
 </div>
 </section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
