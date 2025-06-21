@@ -923,9 +923,9 @@ movies_na_length_under_500 %>%
   ExPanD()
 ```
 
-Here's an example screenshot of the **Scatter Plot** section of the app. You choose the variables with the dropdown menus. There can be extra choices to make. In this case, whether to use a smaller sample and display a smoother as seen in [2.2.3.2 Pairwise plot matrix](@sec-pairwise-plot-matrix).
+Here's an example screenshot of the **Scatter Plot** section of the app. You choose the variables with the dropdown menus. There can be extra choices to make. In this case, whether to use a smaller sample and display a smoother as seen in @sec-pairwise-plot-matrix.
 
-![Figure 2.1: A similar scatter plot to the one we created with DataExplorer in [2.2.2.3 Numerical Columns](@sec-numerical-columns)](img/figure-2-1.png){.lightbox}
+![Figure 2.1: A similar scatter plot to the one we created with DataExplorer in @sec-numerical-columns](img/figure-2-1.png){.lightbox}
 
 For a full working example of the app in action, visit [Exploring the Accrual Landscape by Open Science](https://jgassen.shinyapps.io/expacc/).
 
@@ -948,7 +948,7 @@ movies_na_length_under_500 %>%
 
 Here's an example screenshot of the **X/Y Plot** section of the app. There are more choices to make compared to ExPanDaR.
 
-![Figure 2.2: Another similar scatter plot to the one we created with DataExplorer in [2.2.2.3 Numerical Columns](@sec-numerical-columns)](img/figure-2-2.png){.lightbox}
+![Figure 2.2: Another similar scatter plot to the one we created with DataExplorer in @sec-numerical-columns](img/figure-2-2.png){.lightbox}
 
 For a more comprehensive introduction to the features, there's an [hour-long webinar from Certara R School](https://certara.github.io/R-Certara/articles/lesson_3.html).
 
@@ -978,7 +978,7 @@ Since we can't provide radiant with the data set in the code, we'll do it inside
 
 Here's an example screenshot of the **Visualize** section of the app. The app design is closer to ggquickeda than ExPanDaR.
 
-![Figure 2.4: Yet another similar scatter plot to the one we created with DataExplorer in [2.2.2.3 Numerical Columns](@sec-numerical-columns)](img/figure-2-4.png){.lightbox}
+![Figure 2.4: Yet another similar scatter plot to the one we created with DataExplorer in @sec-numerical-columns](img/figure-2-4.png){.lightbox}
 
 For a more comprehensive introduction to the features, check the [Radiant Tutorial Video Series](https://radiant-rstats.github.io/docs/radiant-tutorial-series.html).
 
