@@ -853,16 +853,16 @@ library(stringr)    # for string manipulation like str_glue()
   # packages by type and year
   geom_stream(
     aes(
-      x = year,
-      y = n,
-      fill = type,
+      x     = year,
+      y     = n,
+      fill  = type,
       # Slightly darken stream borders for contrast
       color = after_scale(darken(fill))
     ),
     # bw means bandwidth of kernel density estimation
     # This is the argument you can control the waviness with
     # The closer the value is to 1, the less wavy the graph
-    bw = 1,
+    bw        = 1,
     linewidth = 0.1
   ) +
   
@@ -870,20 +870,20 @@ library(stringr)    # for string manipulation like str_glue()
   geom_richtext(
     data = annotation_numbers,
     aes(
-      x = 2024 + 0.2,
-      y = y,
+      x     = 2024 + 0.2,
+      y     = y,
       label = label
     ),
-    hjust = 0,
+    hjust      = 0,
     lineheight = 0.9,
     label.size = NA,
-    size = 5,
-    family = font_family
+    size       = 5,
+    family     = font_family
   ) +
 
   # Configure the x-axis with major and minor breaks
   scale_x_continuous(
-    breaks = seq(2008, 2024, 2),
+    breaks       = seq(2008, 2024, 2),
     minor_breaks = 2007:2024
   ) +
   
@@ -895,9 +895,9 @@ library(stringr)    # for string manipulation like str_glue()
 
   # Set plot titles and descriptions using inline color styling
   labs(
-    title = str_glue("Number of packages on CRAN in 2024 <span style='color:{color_1}'>depending on</span>, <span style='color:{color_2}'>importing</span>, or <span style='color:{color_3}'>suggesting</span> {{ggplot2}}"),
+    title    = str_glue("Number of packages on CRAN in 2024 <span style='color:{color_1}'>depending on</span>, <span style='color:{color_2}'>importing</span>, or <span style='color:{color_3}'>suggesting</span> {{ggplot2}}"),
     subtitle = "Aggregated by the initial package release years. Categories may change from one version to another and were taken from the latest versions.",
-    caption = "Data: CRAN via {pkgsearch} | Visualization: Antti Rask | Updated: 2024-12-31"
+    caption  = "Data: CRAN via {pkgsearch} | Visualization: Antti Rask | Updated: 2024-12-31"
   ) +
 
   # Apply a clean, minimal theme and customize text styling
