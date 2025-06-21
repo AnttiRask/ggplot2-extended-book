@@ -7,52 +7,52 @@
 source("warning.R")
 ```
 
-## Complete themes
+## Complete themes {#sec-complete-themes}
 
-### ggcharts
+### ggcharts {#sec-ggcharts}
 
-### ggeconodist
+### ggeconodist {#sec-ggeconodist}
 
-### ggnetwork
+### ggnetwork {#sec-ggnetwork}
 
-### ggpomological
+### ggpomological {#sec-ggpomological}
 
-### ggpubr
+### ggpubr {#sec-ggpubr}
 
 ### ggthemes {#sec-ggthemes}
 
-### ggthemr
+### ggthemr {#sec-ggthemr}
 
-### lato
+### lato {#sec-lato}
 
-### see
+### see {#sec-lato}
 
-### tvthemes
+### tvthemes {#sec-tvthemes}
 
-### urbnthemes
+### urbnthemes {#sec-urbnthemes}
 
-### xkcd
+### xkcd {#sec-xkcd}
 
-## Dark themes
+## Dark themes {#sec-dark-themes}
 
-### ggdark
+### ggdark {#sec-ggdark}
 
-## GraphPad prism
+## GraphPad prism {#sec-graphpad-prism}
 
-### ggprism
+### ggprism {#sec-ggprism}
 
-## Theme elements
+## Theme elements {#sec-theme-elements}
 
-### ggtext
+### ggtext {#sec-ggtext}
 
-### marquee
+### marquee {#sec-marquee}
 
-## Typography-centric themes
+## Typography-centric themes {#sec-typography-centric-themes}
 
-### hrbrthemes
+### hrbrthemes {#sec-hrbrthemes}
 
-## Using extra fonts
+## Using extra fonts {#sec-using-extra-fonts}
 
-### extrafont
+### extrafont {#sec-extrafont}
 
-### showtext
+### showtext {#sec-showtext}

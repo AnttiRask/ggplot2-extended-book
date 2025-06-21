@@ -50,7 +50,7 @@ For the horizon chart, we'll be using __ggHoriPlot__ [@rivas-gonzalez2022]. The 
 
 library(readr)
 
-temperature_hki <- read_csv("data/temperature_hki-2025-06-13.csv")
+temperature_hki <- read_csv("data/temperature-hki-2025-06-13.csv")
 ```
 
 Using the [FMI API](https://en.ilmatieteenlaitos.fi/open-data) (Application Programming Interface), I retrieved the average temperatures in __Helsinki__ (Kaisaniemi weather station) for the years 2000-2024. You can take a look at the data below.
@@ -86,10 +86,10 @@ cutpoints <- temperature_hki %>%
       avg_temperature_celsius,
       quantile(
         avg_temperature_celsius, 0.25, na.rm = TRUE
-        ) - 1.5 * IQR(avg_temperature_celsius, na.rm = TRUE),
+      ) - 1.5 * IQR(avg_temperature_celsius, na.rm = TRUE),
       quantile(
         avg_temperature_celsius, 0.75, na.rm = TRUE
-        ) + 1.5 * IQR(avg_temperature_celsius, na.rm = TRUE)
+      ) + 1.5 * IQR(avg_temperature_celsius, na.rm = TRUE)
     )
   )
 ```
@@ -162,8 +162,7 @@ library(ggplot2)    # for general plotting functions
 library(ggthemes)   # for additional themes like theme_few()
 
 # Create the horizon chart
-temperature_hki %>%
-  ggplot() +
+  ggplot(temperature_hki) +
   
   # Horizon chart layer, mapping x, y, and fill aesthetics
   geom_horizon(
@@ -175,17 +174,17 @@ temperature_hki %>%
     origin       = origin, # baseline (e.g., 0°C); defines neutral midpoint
     horizonscale = scale   # vertical scale; controls how bands are split
   ) +
-
+  
   # Use a diverging color scale (red-blue), reversed so red = high temp
   scale_fill_hcl(palette = 'RdBu', reverse = TRUE) +
-
+  
   # Create one small horizon chart per year, stacked vertically
   facet_grid(vars(year)) +
-
+  
   # Use a clean, simple theme based on the rules and examples from Stephen
   # Few's Show Me the Numbers and Practical Rules for Using Color in Charts
   theme_few() +
-
+  
   # Customize appearance
   theme(
     # Customize x-axis labels
@@ -204,14 +203,14 @@ temperature_hki %>%
     # Customize facet labels
     strip.text.y    = element_text(size = 8, angle = 0, hjust = 0)  
   ) +
-
+  
   # Format x-axis to show months (with short names) without expansion
   scale_x_date(
     expand      = c(0, 0),
     date_breaks = "1 month", 
     date_labels = "%b"
   ) +
-
+  
   # Add informative plot title, subtitle, and data source caption
   labs(
     title    = "Average daily temperature (Celsius) in Helsinki",
@@ -363,6 +362,7 @@ The rest of the code is to make the visualization more presentable. Note that we
 #| warning: false
 
 library(ggbraid) # for geom_braid() to visualize overlapping time series
+library(ggplot2) # for general plotting functions
 
 ggplot() +
   
@@ -440,7 +440,7 @@ ggplot() +
       color     = "black",
       linetype  = "solid",
       linewidth = 0.5
-      ),
+    ),
     legend.key.size  = unit(2, "line"),
     legend.position  = c(0.19, 0.88), # relative position inside plot
     legend.text      = element_text(size = 10)
@@ -523,6 +523,7 @@ The visualization itself is like the movie example. The most significant differe
 #| warning: false
 
 library(ggbraid)   # for geom_braid(), visualizing area between two lines
+library(ggplot2)   # for general plotting functions
 library(lubridate) # for working with date types
 library(stringr)   # for string manipulation like str_glue()
 
@@ -611,7 +612,7 @@ ggplot() +
       color     = "black",
       linetype  = "solid",
       linewidth = 0.5
-      ),
+    ),
     legend.key.size  = unit(2, "line"),
     legend.position  = c(0.83, 0.12), # bottom-right position
     legend.text      = element_text(size = 10),
@@ -622,6 +623,318 @@ ggplot() +
 And so we have another perspective on the Helsinki temperature data set.
 
 ### Streamgraph {#sec-streamgraph}
+
+A streamgraph is a stacked area chart where the areas are positioned around the central axis.
+
+#### Viz #4: ggplot2 dependencies {#sec-ggplot2-dependencies}
+
+If you’ve read the book in chronological order, you’ve already encountered a streamgraph in @sec-landscape. We will use that visualization as the example in this chapter.
+
+The purpose of this visualization is to illustrate how the ggplot2 dependencies have evolved from a small speck in 2007 to their current state at the end of 2024. This is the exact use case for which I would use a streamgraph.
+
+Before we proceed, I want to mention __Georgios Karamanis__. Their [original visualization](https://github.com/gkaramanis/tidytuesday/tree/master/2023/2023-week_38) for [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday) (see Figure 3.1) was the inspiration for my version.
+
+![Figure 3.1: The original visualization for Tidy Tuesday by Georgios Karamanis](img/figure-3-1.png){.lightbox}
+
+If you want to know the differences, they are as follows:
+
+1) Use the initial release years instead of the latest release...
+2) ...which meant switching the data source
+3) Use the ggplot2-related packages' metadata
+4) Bring in a third type, __Imports__
+5) Change the color palette
+6) Change the fonts to __Roboto Mono__
+7) Annotate all the major ggplot2 releases
+8) Make the stream chart less wavy
+9) Other, smaller changes
+
+We'll cover these in more detail as we proceed.
+
+```{r}
+#| echo:    false
+#| message: false
+#| warning: false
+#| results: asis
+
+ggplot2_dependencies_by_year <- read_csv("data/ggplot2-dependencies-by-year-2025-06-21.csv")
+```
+
+Let's take a look at the data we're working with. It was gathered with __pkgsearch__ [@csardi2025].
+
+```{r}
+#| echo:    false
+#| message: false
+#| warning: false
+#| results: asis
+
+ggplot2_dependencies_by_year %>%
+  paged_table()
+```
+
+We won’t reiterate the definitions of the different __types__ (see @sec-landscape for them). But we can see that the _count_ for each type starts small in 2007 and increases significantly by 2024.
+
+Let’s first take a look at what the streamgraph would look like with default settings.
+
+```{r}
+#| message: false
+#| warning: false
+
+library(ggstream)
+
+ggplot2_dependencies_by_year %>%
+  ggplot() +
+  geom_stream(
+    aes(
+      x    = year,
+      y    = n,
+      fill = type
+    )
+  )
+```
+
+That's not bad for ten lines of code. But we can make it more presentable.
+
+Let’s start with colors. In the previous visualizations, we’ve inserted the _hex codes_ straight into the code. But since we need to use these colors in many places, let’s convert them into a vector so we don’t have to repeat ourselves.
+
+```{r}
+#| message: false
+#| warning: false
+
+color_1 <- "#F36523"
+color_2 <- "#125184"
+color_3 <- "#2E8B57"
+colors <- c(color_1, color_2, color_3)
+
+colors
+```
+
+For the font, I wanted to use something different. Roboto is a slightly futuristic font (family) that I like. But it doesn't come with R.
+
+That's why we'll use __showtext__ [@qiu2024] (read more about it in @sec-showtext).
+
+```{r}
+#| message: false
+#| warning: false
+
+library(showtext)
+
+font_add_google("Roboto Mono", "roboto")
+showtext_auto()
+font_family <- "roboto"
+```
+
+Next, we’ll create the annotations that'll be displayed on the right side of the graph.
+
+The labels are in an HTML-style format. We’ll delve into this topic in more detail in @sec-ggtext.
+
+```{r}
+#| message: false
+#| warning: false
+
+annotation_numbers <- ggplot2_dependencies_by_year %>%
+  
+  # Total number of packages per dependency type
+  summarize(
+    n   = sum(n),
+    .by = type
+  ) %>%
+  
+  # Ensure consistent vertical stacking order
+  arrange(type) %>%
+  
+  mutate(
+    
+    # Manually assign y-positions for labels
+    y = c(390, 75, -300),
+    
+    # Create HTML-styled rich labels with colored numbers
+    label = case_when(
+      type == "Depends" ~
+        str_glue("**<span style='color:{color_1}'>{n}</span>**"),
+      type == "Imports" ~
+        str_glue("**<span style='color:{color_2}'>{n}</span>**"),
+      type == "Suggests" ~
+        str_glue("**<span style='color:{color_3}'>{n}</span>**")
+    )
+  )
+```
+
+```{r}
+#| echo:    false
+#| message: false
+#| warning: false
+#| results: asis
+
+annotation_numbers %>% 
+  paged_table()
+```
+
+Now it’s time to bring it all together.
+
+Usually, you would start with the main geom for the plot. But we must begin with the data points and labels due to the layer order. We’re stacking layers on top of each other, and here we want the lines for the labels to stay behind the streamgraph.
+
+```{r}
+#| message: false
+#| warning: false
+
+library(colorspace) # for color manipulation like darken()
+library(ggplot2)    # for general plotting functions
+library(ggrepel)    # for placing non-overlapping labels
+library(ggstream)   # for creating streamgraphs
+library(ggtext)     # for text manipulation
+library(stringr)    # for string manipulation like str_glue()
+
+  ggplot(ggplot2_dependencies_by_year) +
+
+  # Add a small point at the origin to anchor the first version label
+  geom_point(
+    aes(x = 2007, y = 0),
+    data = NULL,
+    size = 1.5,
+    stat = "unique",
+  ) +
+  
+  # Add a label for ggplot2 version 0.5 (2007)
+  geom_label_repel(
+        aes(x = 2007, y = 0, label = "{ggplot2}\nver 0.5"),
+        data          = NULL,
+        stat          = "unique",
+        nudge_y       = 75,
+        label.size    = NA,
+        lineheight    = 0.5,
+        family        = font_family
+    ) +
+  
+  # Add a label for ggplot2 version 1.0 (2014)
+  geom_label_repel(
+        aes(x = 2014, y = 50, label = "{ggplot2}\nver 1.0"),
+        data          = NULL,
+        stat          = "unique",
+        nudge_y       = 115,
+        label.size    = NA,
+        lineheight    = 0.5,
+        family        = font_family
+    ) +
+  
+  # Add a label for ggplot2 version 2.0 (2015)
+  geom_label_repel(
+        aes(x = 2015, y = 125, label = "{ggplot2}\nver 2.0"),
+        data          = NULL,
+        stat          = "unique",
+        nudge_y       = 140,
+        label.size    = NA,
+        lineheight    = 0.5,
+        family        = font_family
+    ) +
+  
+  # Add a label for ggplot2 version 3.0 (2018)
+  geom_label_repel(
+        aes(x = 2018, y = 100, label = "{ggplot2}\nver 3.0"),
+        data          = NULL,
+        stat          = "unique",
+        nudge_y       = 200,
+        label.size    = NA,
+        lineheight    = 0.5,
+        family        = font_family
+    ) +
+  
+  # Add a label for ggplot2 version 3.5 (2024)
+  geom_label_repel(
+        aes(x = 2024, y = 410, label = "{ggplot2}\nver 3.5"),
+        data          = NULL,
+        stat          = "unique",
+        nudge_y       = 75,
+        label.size    = NA,
+        lineheight    = 0.5,
+        family        = font_family
+    ) +
+  
+  # Create a stream-like area chart showing the number of dependent 
+  # packages by type and year
+  geom_stream(
+    aes(
+      x = year,
+      y = n,
+      fill = type,
+      # Slightly darken stream borders for contrast
+      color = after_scale(darken(fill))
+    ),
+    # bw means bandwidth of kernel density estimation
+    # This is the argument you can control the waviness with
+    # The closer the value is to 1, the less wavy the graph
+    bw = 1,
+    linewidth = 0.1
+  ) +
+  
+  # Add annotations on the right side using rich text labels from ggtext
+  geom_richtext(
+    data = annotation_numbers,
+    aes(
+      x = 2024 + 0.2,
+      y = y,
+      label = label
+    ),
+    hjust = 0,
+    lineheight = 0.9,
+    label.size = NA,
+    size = 5,
+    family = font_family
+  ) +
+
+  # Configure the x-axis with major and minor breaks
+  scale_x_continuous(
+    breaks = seq(2008, 2024, 2),
+    minor_breaks = 2007:2024
+  ) +
+  
+  # Manually assign fill colors for the dependency types
+  scale_fill_manual(values = colors) +
+
+  # Allow annotations to extend outside the plot area
+  coord_cartesian(clip = "off") +
+
+  # Set plot titles and descriptions using inline color styling
+  labs(
+    title = str_glue("Number of packages on CRAN in 2024 <span style='color:{color_1}'>depending on</span>, <span style='color:{color_2}'>importing</span>, or <span style='color:{color_3}'>suggesting</span> {{ggplot2}}"),
+    subtitle = "Aggregated by the initial package release years. Categories may change from one version to another and were taken from the latest versions.",
+    caption = "Data: CRAN via {pkgsearch} | Visualization: Antti Rask | Updated: 2024-12-31"
+  ) +
+
+  # Apply a clean, minimal theme and customize text styling
+  theme_minimal(base_family = font_family) +
+  
+  # Customize title and caption styling
+  theme(
+    axis.text.x = element_text(
+      size   = 14,
+      face   = "bold",
+      margin = margin(10, 0, 0, 0)
+    ),
+    axis.text.y           = element_blank(),
+    axis.title            = element_blank(),
+    legend.position       = "none",
+    panel.grid.major.y    = element_blank(),
+    panel.grid.minor.y    = element_blank(),
+    plot.margin           = margin(10, 50, 10, 10),
+    plot.title            = element_markdown(
+      face  = "bold",
+      size  = 16,
+      hjust = 0.5
+    ),
+    plot.subtitle = element_text(
+      hjust  = 0.5,
+      margin = margin(0, 0, 20, 0)
+    ),
+    plot.caption = element_text(
+      size   = 10,
+      color  = darken("darkgrey", 0.4),
+      hjust  = 0.5,
+      margin = margin(20, 0, 0, 0)
+      )
+  )
+```
+
+Streamgraph, like other area graphs, isn’t the best for making detailed comparisons between groups. But it's excellent for creating a broader picture of what’s going on in the data.
 
 ## Bar charts {#sec-bar-charts}
 
