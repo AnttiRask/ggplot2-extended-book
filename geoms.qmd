@@ -703,7 +703,7 @@ Let’s start with colors. In the previous visualizations, we’ve inserted the 
 color_1 <- "#F36523"
 color_2 <- "#125184"
 color_3 <- "#2E8B57"
-colors <- c(color_1, color_2, color_3)
+colors  <- c(color_1, color_2, color_3)
 
 colors
 ```
