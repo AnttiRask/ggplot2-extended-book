@@ -148,7 +148,7 @@ scale <- cutpoints %>%
 
 The origin is `r .origin`, and the scale cutpoints are as follows: `r .scale`.
 
-Now we’re ready for the visualization itself. Besides ggHoriPlot and ggplot2, we’ll be using __ggthemes__ [@arnold2024] to provide us the theme. We'll dive deeper into _themes_ (including ggthemes in @sec-ggthemes) later on in @sec-themes.
+Now we’re ready for the visualization itself. Besides ggHoriPlot and ggplot2, we’ll be using __ggthemes__ [@arnold2024] to provide us the theme. We'll dive deeper into _themes_ (including ggthemes in [9.1.6 ggthemes](@sec-ggthemes)) later on in [9 Themes](@sec-themes).
 
 We're using `geom_horizon()` to create the horizon chart. The arguments to pay attention to are __fill__ (inside `aes()`), __origin__, and __horizonscale__. They are all using the origin and scale we calculated earlier. `scale_fill_hcl()` is also available in the ggHoriPlot package. Otherwise, we’re using basic ggplot2 functionalities.
 
@@ -232,7 +232,7 @@ The ribbon chart, then, displays the area between two lines. `geom_ribbon()` get
 
 We’ll take a look at what the problem (and solution) looks like with real data. The question we'd like to answer here is which genre, comedy or drama, has produced more movies during the 20th century.
 
-But let’s first examine the data we’ll be using for this. Time series data works best for this type of chart. Let’s stick to the **ggplot2movies** [@wickham2015] data set that we first encountered in @sec-imdb-movies-1893-2005 and the __movies_na__ tibble.
+But let’s first examine the data we’ll be using for this. Time series data works best for this type of chart. Let’s stick to the **ggplot2movies** [@wickham2015] data set that we first encountered in [2.1.2 IMDb movies (1893-2005)](@sec-imdb-movies-1893-2005) and the __movies_na__ tibble.
 
 ```{r}
 #| message: false
@@ -451,7 +451,7 @@ I'm not an expert on this topic either. Based on this dataset, however, there ap
 
 #### Viz #3: Helsinki temperatures, part II {#sec-viz-3-helsinki-temperatures-part-ii}
 
-Let's take a look at another ribbon chart. We can use the data set from @sec-horizon-chart, which contains average daily temperatures in Helsinki from 2000 to 2024. We'll compare the two years, 2000 and 2024. Which one had more warmer days?
+Let's take a look at another ribbon chart. We can use the data set from [3.1.1 Horizon chart](@sec-horizon-chart), which contains average daily temperatures in Helsinki from 2000 to 2024. We'll compare the two years, 2000 and 2024. Which one had more warmer days?
 
 First, we’ll perform similar transformations as before and convert the data into both long and wide formats.
 
@@ -628,7 +628,7 @@ A streamgraph is a stacked area chart where the areas are positioned around the 
 
 #### Viz #4: ggplot2 dependencies {#sec-ggplot2-dependencies}
 
-If you’ve read the book in chronological order, you’ve already encountered a streamgraph in @sec-landscape. We will use that visualization as the example in this chapter.
+If you’ve read the book in chronological order, you’ve already encountered a streamgraph in [Preface](@sec-landscape). We will use that visualization as the example in this chapter.
 
 The purpose of this visualization is to illustrate how the ggplot2 dependencies have evolved from a small speck in 2007 to their current state at the end of 2024. This is the exact use case for which I would use a streamgraph.
 
@@ -671,7 +671,7 @@ ggplot2_dependencies_by_year %>%
   paged_table()
 ```
 
-We won’t reiterate the definitions of the different __types__ (see @sec-landscape for them). But we can see that the _count_ for each type starts small in 2007 and increases significantly by 2024.
+We won’t reiterate the definitions of the different __types__ (see [Preface](@sec-landscape) for them). But we can see that the _count_ for each type starts small in 2007 and increases significantly by 2024.
 
 Let’s first take a look at what the streamgraph would look like with default settings. We'll use `geom_stream()` from __ggstream__ [@sjoberg2021] for that.
 
@@ -710,7 +710,7 @@ colors
 
 For the font, I wanted to use something different. Roboto is a slightly futuristic font (family) that I like. But it doesn't come with R.
 
-That's why we'll use __showtext__ [@qiu2024] (read more about it in @sec-showtext).
+That's why we'll use __showtext__ [@qiu2024] (read more about it in [ 9.6.2 showtext](@sec-showtext)).
 
 ```{r}
 #| message: false
@@ -725,7 +725,7 @@ font_family <- "roboto"
 
 Next, we’ll create the annotations that'll be displayed on the right side of the graph.
 
-The labels are in an HTML-style format. We’ll delve into this topic in more detail in @sec-ggtext.
+The labels are in an HTML-style format. To be used later with __ggtext__ [@wilke2022]. We’ll delve into this topic in more detail in [9.4.1 ggtext](@sec-ggtext).
 
 ```{r}
 #| message: false
@@ -775,7 +775,7 @@ Usually, you would start with the main geom for the plot. But we must begin with
 
 The new packages we haven't mentioned before are __colorspace__ [@ihaka2024] and __ggrepel__ [@slowikowski2024].
 
-We get back to them both in detail later, but colorspace (see more in @sec-colorspace) is used for color manipulation. In this graph, we're making the borders of the areas slightly darker than the areas themselves. ggrepel (see more in @sec-repel-overlapping-labels-and-text) is used for creating labels that don't overlap.
+We get back to them both in detail later, but colorspace (see more in [16.2.2.1 colorspace](@sec-colorspace)) is used for color manipulation. In this graph, we're making the borders of the areas slightly darker than the areas themselves. ggrepel (see more in [5.10 Repel overlapping labels & text](@sec-repel-overlapping-labels-and-text)) is used for creating labels that don't overlap.
 
 ```{r}
 #| message: false
