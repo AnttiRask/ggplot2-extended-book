@@ -673,7 +673,7 @@ ggplot2_dependencies_by_year %>%
 
 We won’t reiterate the definitions of the different __types__ (see @sec-landscape for them). But we can see that the _count_ for each type starts small in 2007 and increases significantly by 2024.
 
-Let’s first take a look at what the streamgraph would look like with default settings.
+Let’s first take a look at what the streamgraph would look like with default settings. We'll use `geom_stream()` from __ggstream__ [@sjoberg2021] for that.
 
 ```{r}
 #| message: false
@@ -772,6 +772,10 @@ annotation_numbers %>%
 Now it’s time to bring it all together.
 
 Usually, you would start with the main geom for the plot. But we must begin with the data points and labels due to the layer order. We’re stacking layers on top of each other, and here we want the lines for the labels to stay behind the streamgraph.
+
+The new packages we haven't mentioned before are __colorspace__ [@ihaka2024] and __ggrepel__ [@slowikowski2024].
+
+We get back to them both in detail later, but colorspace (see more in @sec-colorspace) is used for color manipulation. In this graph, we're making the borders of the areas slightly darker than the areas themselves. ggrepel (see more in @sec-repel-overlapping-labels-and-text) is used for creating labels that don't overlap.
 
 ```{r}
 #| message: false

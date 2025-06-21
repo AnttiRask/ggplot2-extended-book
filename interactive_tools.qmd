@@ -7,22 +7,24 @@
 source("warning.R")
 ```
 
-## Interactive interface to plot data and perform statistical tests
+## Interactive interface to plot data and perform statistical tests {#sec-interactive-interface}
 
-## Shiny
+## Shiny {#sec-shiny}
 
-### Auto theming
+### Auto theming {#sec-auto-theming}
 
-### Choosing color palettes interactively
+### Choosing color palettes interactively {#sec-choosing-color-palettes}
 
-### Color picker
+#### colorspace {#sec-colorspace}
 
-### Editing layers
+### Color picker {#sec-color-picker}
 
-### Editing themes
+### Editing layers {#sec-editing-layers}
 
-### Interactive layers
+### Editing themes {#sec-editing-themes}
 
-### Marginal plots
+### Interactive layers {#sec-interactive-layers}
 
-### Theme preview
+### Marginal plots {#sec-marginal-plots}
+
+### Theme preview {#sec-theme-preview}

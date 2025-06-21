@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.42">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Antti Rask">
 <title>5&nbsp; Annotations – ggplot2 extended</title>
@@ -35,10 +35,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-96f5e2a3ed94a11b6ec2c918708bf376.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -318,32 +318,32 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-<li><a href="#add-p-values" id="toc-add-p-values" class="nav-link active" data-scroll-target="#add-p-values"><span class="header-section-number">5.1</span> Add p-values</a></li>
+<li><a href="#sec-add-p-values" id="toc-sec-add-p-values" class="nav-link active" data-scroll-target="#sec-add-p-values"><span class="header-section-number">5.1</span> Add p-values</a></li>
   <li>
-<a href="#annotate-areas-with" id="toc-annotate-areas-with" class="nav-link" data-scroll-target="#annotate-areas-with"><span class="header-section-number">5.2</span> Annotate areas with…</a>
+<a href="#sec-annotate-areas-with" id="toc-sec-annotate-areas-with" class="nav-link" data-scroll-target="#sec-annotate-areas-with"><span class="header-section-number">5.2</span> Annotate areas with…</a>
   <ul class="collapse">
-<li><a href="#circles" id="toc-circles" class="nav-link" data-scroll-target="#circles"><span class="header-section-number">5.2.1</span> Circles</a></li>
-  <li><a href="#ellipses" id="toc-ellipses" class="nav-link" data-scroll-target="#ellipses"><span class="header-section-number">5.2.2</span> Ellipses</a></li>
-  <li><a href="#hulls" id="toc-hulls" class="nav-link" data-scroll-target="#hulls"><span class="header-section-number">5.2.3</span> Hulls</a></li>
-  <li><a href="#rectangles" id="toc-rectangles" class="nav-link" data-scroll-target="#rectangles"><span class="header-section-number">5.2.4</span> Rectangles</a></li>
+<li><a href="#sec-circles" id="toc-sec-circles" class="nav-link" data-scroll-target="#sec-circles"><span class="header-section-number">5.2.1</span> Circles</a></li>
+  <li><a href="#sec-ellipses" id="toc-sec-ellipses" class="nav-link" data-scroll-target="#sec-ellipses"><span class="header-section-number">5.2.2</span> Ellipses</a></li>
+  <li><a href="#sec-hulls" id="toc-sec-hulls" class="nav-link" data-scroll-target="#sec-hulls"><span class="header-section-number">5.2.3</span> Hulls</a></li>
+  <li><a href="#sec-rectangles" id="toc-sec-rectangles" class="nav-link" data-scroll-target="#sec-rectangles"><span class="header-section-number">5.2.4</span> Rectangles</a></li>
   </ul>
 </li>
-  <li><a href="#curved-text-labeling" id="toc-curved-text-labeling" class="nav-link" data-scroll-target="#curved-text-labeling"><span class="header-section-number">5.3</span> Curved text labeling</a></li>
-  <li><a href="#direct-labeling" id="toc-direct-labeling" class="nav-link" data-scroll-target="#direct-labeling"><span class="header-section-number">5.4</span> Direct labeling</a></li>
-  <li><a href="#fitted-model-based-annotations" id="toc-fitted-model-based-annotations" class="nav-link" data-scroll-target="#fitted-model-based-annotations"><span class="header-section-number">5.5</span> Fitted-model-based annotations</a></li>
-  <li><a href="#highlighting-geoms" id="toc-highlighting-geoms" class="nav-link" data-scroll-target="#highlighting-geoms"><span class="header-section-number">5.6</span> Highlighting geoms</a></li>
-  <li><a href="#highlighting-points" id="toc-highlighting-points" class="nav-link" data-scroll-target="#highlighting-points"><span class="header-section-number">5.7</span> Highlighting points</a></li>
-  <li><a href="#inset-plots" id="toc-inset-plots" class="nav-link" data-scroll-target="#inset-plots"><span class="header-section-number">5.8</span> Inset plots</a></li>
-  <li><a href="#inset-tables" id="toc-inset-tables" class="nav-link" data-scroll-target="#inset-tables"><span class="header-section-number">5.9</span> Inset tables</a></li>
+  <li><a href="#sec-curved-text-labeling" id="toc-sec-curved-text-labeling" class="nav-link" data-scroll-target="#sec-curved-text-labeling"><span class="header-section-number">5.3</span> Curved text labeling</a></li>
+  <li><a href="#sec-direct-labeling" id="toc-sec-direct-labeling" class="nav-link" data-scroll-target="#sec-direct-labeling"><span class="header-section-number">5.4</span> Direct labeling</a></li>
+  <li><a href="#sec-fitted-model-based-annotations" id="toc-sec-fitted-model-based-annotations" class="nav-link" data-scroll-target="#sec-fitted-model-based-annotations"><span class="header-section-number">5.5</span> Fitted-model-based annotations</a></li>
+  <li><a href="#sec-highlighting-geoms" id="toc-sec-highlighting-geoms" class="nav-link" data-scroll-target="#sec-highlighting-geoms"><span class="header-section-number">5.6</span> Highlighting geoms</a></li>
+  <li><a href="#sec-highlighting-points" id="toc-sec-highlighting-points" class="nav-link" data-scroll-target="#sec-highlighting-points"><span class="header-section-number">5.7</span> Highlighting points</a></li>
+  <li><a href="#sec-inset-plots" id="toc-sec-inset-plots" class="nav-link" data-scroll-target="#sec-inset-plots"><span class="header-section-number">5.8</span> Inset plots</a></li>
+  <li><a href="#sec-inset-tables" id="toc-sec-inset-tables" class="nav-link" data-scroll-target="#sec-inset-tables"><span class="header-section-number">5.9</span> Inset tables</a></li>
   <li>
-<a href="#repel-overlapping-text-labels" id="toc-repel-overlapping-text-labels" class="nav-link" data-scroll-target="#repel-overlapping-text-labels"><span class="header-section-number">5.10</span> Repel overlapping text &amp; labels</a>
+<a href="#sec-repel-overlapping-labels-and-text" id="toc-sec-repel-overlapping-labels-and-text" class="nav-link" data-scroll-target="#sec-repel-overlapping-labels-and-text"><span class="header-section-number">5.10</span> Repel overlapping labels &amp; text</a>
   <ul class="collapse">
-<li><a href="#label" id="toc-label" class="nav-link" data-scroll-target="#label"><span class="header-section-number">5.10.1</span> Label</a></li>
-  <li><a href="#text" id="toc-text" class="nav-link" data-scroll-target="#text"><span class="header-section-number">5.10.2</span> Text</a></li>
+<li><a href="#sec-repel-labels" id="toc-sec-repel-labels" class="nav-link" data-scroll-target="#sec-repel-labels"><span class="header-section-number">5.10.1</span> Labels</a></li>
+  <li><a href="#sec-repel-text" id="toc-sec-repel-text" class="nav-link" data-scroll-target="#sec-repel-text"><span class="header-section-number">5.10.2</span> Text</a></li>
   </ul>
 </li>
-  <li><a href="#shadow-text" id="toc-shadow-text" class="nav-link" data-scroll-target="#shadow-text"><span class="header-section-number">5.11</span> Shadow text</a></li>
-  <li><a href="#significance-brackets" id="toc-significance-brackets" class="nav-link" data-scroll-target="#significance-brackets"><span class="header-section-number">5.12</span> Significance brackets</a></li>
+  <li><a href="#sec-shadow-text" id="toc-sec-shadow-text" class="nav-link" data-scroll-target="#sec-shadow-text"><span class="header-section-number">5.11</span> Shadow text</a></li>
+  <li><a href="#sec-significance-brackets" id="toc-sec-significance-brackets" class="nav-link" data-scroll-target="#sec-significance-brackets"><span class="header-section-number">5.12</span> Significance brackets</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/edit/main/annotations.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
@@ -375,41 +375,41 @@ This book/site is under construction
 <p>Everything is liable to change, even the title</p>
 </div>
 </div>
-<section id="add-p-values" class="level2" data-number="5.1"><h2 data-number="5.1" class="anchored" data-anchor-id="add-p-values">
+<section id="sec-add-p-values" class="level2" data-number="5.1"><h2 data-number="5.1" class="anchored" data-anchor-id="sec-add-p-values">
 <span class="header-section-number">5.1</span> Add p-values</h2>
-</section><section id="annotate-areas-with" class="level2" data-number="5.2"><h2 data-number="5.2" class="anchored" data-anchor-id="annotate-areas-with">
+</section><section id="sec-annotate-areas-with" class="level2" data-number="5.2"><h2 data-number="5.2" class="anchored" data-anchor-id="sec-annotate-areas-with">
 <span class="header-section-number">5.2</span> Annotate areas with…</h2>
-<section id="circles" class="level3" data-number="5.2.1"><h3 data-number="5.2.1" class="anchored" data-anchor-id="circles">
+<section id="sec-circles" class="level3" data-number="5.2.1"><h3 data-number="5.2.1" class="anchored" data-anchor-id="sec-circles">
 <span class="header-section-number">5.2.1</span> Circles</h3>
-</section><section id="ellipses" class="level3" data-number="5.2.2"><h3 data-number="5.2.2" class="anchored" data-anchor-id="ellipses">
+</section><section id="sec-ellipses" class="level3" data-number="5.2.2"><h3 data-number="5.2.2" class="anchored" data-anchor-id="sec-ellipses">
 <span class="header-section-number">5.2.2</span> Ellipses</h3>
-</section><section id="hulls" class="level3" data-number="5.2.3"><h3 data-number="5.2.3" class="anchored" data-anchor-id="hulls">
+</section><section id="sec-hulls" class="level3" data-number="5.2.3"><h3 data-number="5.2.3" class="anchored" data-anchor-id="sec-hulls">
 <span class="header-section-number">5.2.3</span> Hulls</h3>
-</section><section id="rectangles" class="level3" data-number="5.2.4"><h3 data-number="5.2.4" class="anchored" data-anchor-id="rectangles">
+</section><section id="sec-rectangles" class="level3" data-number="5.2.4"><h3 data-number="5.2.4" class="anchored" data-anchor-id="sec-rectangles">
 <span class="header-section-number">5.2.4</span> Rectangles</h3>
-</section></section><section id="curved-text-labeling" class="level2" data-number="5.3"><h2 data-number="5.3" class="anchored" data-anchor-id="curved-text-labeling">
+</section></section><section id="sec-curved-text-labeling" class="level2" data-number="5.3"><h2 data-number="5.3" class="anchored" data-anchor-id="sec-curved-text-labeling">
 <span class="header-section-number">5.3</span> Curved text labeling</h2>
-</section><section id="direct-labeling" class="level2" data-number="5.4"><h2 data-number="5.4" class="anchored" data-anchor-id="direct-labeling">
+</section><section id="sec-direct-labeling" class="level2" data-number="5.4"><h2 data-number="5.4" class="anchored" data-anchor-id="sec-direct-labeling">
 <span class="header-section-number">5.4</span> Direct labeling</h2>
-</section><section id="fitted-model-based-annotations" class="level2" data-number="5.5"><h2 data-number="5.5" class="anchored" data-anchor-id="fitted-model-based-annotations">
+</section><section id="sec-fitted-model-based-annotations" class="level2" data-number="5.5"><h2 data-number="5.5" class="anchored" data-anchor-id="sec-fitted-model-based-annotations">
 <span class="header-section-number">5.5</span> Fitted-model-based annotations</h2>
-</section><section id="highlighting-geoms" class="level2" data-number="5.6"><h2 data-number="5.6" class="anchored" data-anchor-id="highlighting-geoms">
+</section><section id="sec-highlighting-geoms" class="level2" data-number="5.6"><h2 data-number="5.6" class="anchored" data-anchor-id="sec-highlighting-geoms">
 <span class="header-section-number">5.6</span> Highlighting geoms</h2>
-</section><section id="highlighting-points" class="level2" data-number="5.7"><h2 data-number="5.7" class="anchored" data-anchor-id="highlighting-points">
+</section><section id="sec-highlighting-points" class="level2" data-number="5.7"><h2 data-number="5.7" class="anchored" data-anchor-id="sec-highlighting-points">
 <span class="header-section-number">5.7</span> Highlighting points</h2>
-</section><section id="inset-plots" class="level2" data-number="5.8"><h2 data-number="5.8" class="anchored" data-anchor-id="inset-plots">
+</section><section id="sec-inset-plots" class="level2" data-number="5.8"><h2 data-number="5.8" class="anchored" data-anchor-id="sec-inset-plots">
 <span class="header-section-number">5.8</span> Inset plots</h2>
-</section><section id="inset-tables" class="level2" data-number="5.9"><h2 data-number="5.9" class="anchored" data-anchor-id="inset-tables">
+</section><section id="sec-inset-tables" class="level2" data-number="5.9"><h2 data-number="5.9" class="anchored" data-anchor-id="sec-inset-tables">
 <span class="header-section-number">5.9</span> Inset tables</h2>
-</section><section id="repel-overlapping-text-labels" class="level2" data-number="5.10"><h2 data-number="5.10" class="anchored" data-anchor-id="repel-overlapping-text-labels">
-<span class="header-section-number">5.10</span> Repel overlapping text &amp; labels</h2>
-<section id="label" class="level3" data-number="5.10.1"><h3 data-number="5.10.1" class="anchored" data-anchor-id="label">
-<span class="header-section-number">5.10.1</span> Label</h3>
-</section><section id="text" class="level3" data-number="5.10.2"><h3 data-number="5.10.2" class="anchored" data-anchor-id="text">
+</section><section id="sec-repel-overlapping-labels-and-text" class="level2" data-number="5.10"><h2 data-number="5.10" class="anchored" data-anchor-id="sec-repel-overlapping-labels-and-text">
+<span class="header-section-number">5.10</span> Repel overlapping labels &amp; text</h2>
+<section id="sec-repel-labels" class="level3" data-number="5.10.1"><h3 data-number="5.10.1" class="anchored" data-anchor-id="sec-repel-labels">
+<span class="header-section-number">5.10.1</span> Labels</h3>
+</section><section id="sec-repel-text" class="level3" data-number="5.10.2"><h3 data-number="5.10.2" class="anchored" data-anchor-id="sec-repel-text">
 <span class="header-section-number">5.10.2</span> Text</h3>
-</section></section><section id="shadow-text" class="level2" data-number="5.11"><h2 data-number="5.11" class="anchored" data-anchor-id="shadow-text">
+</section></section><section id="sec-shadow-text" class="level2" data-number="5.11"><h2 data-number="5.11" class="anchored" data-anchor-id="sec-shadow-text">
 <span class="header-section-number">5.11</span> Shadow text</h2>
-</section><section id="significance-brackets" class="level2" data-number="5.12"><h2 data-number="5.12" class="anchored" data-anchor-id="significance-brackets">
+</section><section id="sec-significance-brackets" class="level2" data-number="5.12"><h2 data-number="5.12" class="anchored" data-anchor-id="sec-significance-brackets">
 <span class="header-section-number">5.12</span> Significance brackets</h2>
 
 
@@ -495,8 +495,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -607,7 +605,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
