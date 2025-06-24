@@ -192,6 +192,7 @@ Some of them you can install from CRAN:
 
 install.packages(
   c(
+    "colorspace",
     "DataExplorer",
     "ExPanDaR",
     "GGally",
@@ -199,11 +200,15 @@ install.packages(
     "ggHoriPlot",
     "ggplot2movies",
     "ggquickeda",
+    "ggrepel",
+    "ggstream",
+    "ggtext",
     "ggthemes",
     "gt",
     "gtExtras",
     "naniar",
-    "radiant"
+    "radiant",
+    "showtext"
   )
 )
 ```
@@ -318,6 +323,7 @@ This version of the book was built with `r R.version.string` and the following p
 #| echo: false
 
 pkgs <- c(
+  "colorspace",
   "conflicted",
   "DataExplorer",
   "dplyr",
@@ -330,6 +336,9 @@ pkgs <- c(
   "ggplot2",
   "ggplot2movies",
   "ggquickeda",
+  "ggrepel",
+  "ggstream",
+  "ggtext",
   "ggthemes",
   "gt",
   "gtExtras",
@@ -341,6 +350,7 @@ pkgs <- c(
   "readr",
   "rmarkdown",
   "scales",
+  "showtext",
   "stringr",
   "tibble",
   "tidyr"

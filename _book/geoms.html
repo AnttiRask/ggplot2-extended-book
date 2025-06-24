@@ -92,7 +92,10 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-96f5e2a3ed94a11b6ec2c918708bf376.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-96f5e2a3ed94a11b6ec2c918708bf376.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -528,10 +531,10 @@ This book/site is under construction
 <span>      <span class="va">avg_temperature_celsius</span>,</span>
 <span>      <span class="fu"><a href="https://rdrr.io/r/stats/quantile.html">quantile</a></span><span class="op">(</span></span>
 <span>        <span class="va">avg_temperature_celsius</span>, <span class="fl">0.25</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span></span>
-<span>        <span class="op">)</span> <span class="op">-</span> <span class="fl">1.5</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/stats/IQR.html">IQR</a></span><span class="op">(</span><span class="va">avg_temperature_celsius</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
+<span>      <span class="op">)</span> <span class="op">-</span> <span class="fl">1.5</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/stats/IQR.html">IQR</a></span><span class="op">(</span><span class="va">avg_temperature_celsius</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
 <span>      <span class="fu"><a href="https://rdrr.io/r/stats/quantile.html">quantile</a></span><span class="op">(</span></span>
 <span>        <span class="va">avg_temperature_celsius</span>, <span class="fl">0.75</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span></span>
-<span>        <span class="op">)</span> <span class="op">+</span> <span class="fl">1.5</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/stats/IQR.html">IQR</a></span><span class="op">(</span><span class="va">avg_temperature_celsius</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span>      <span class="op">)</span> <span class="op">+</span> <span class="fl">1.5</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/stats/IQR.html">IQR</a></span><span class="op">(</span><span class="va">avg_temperature_celsius</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span>    <span class="op">)</span></span>
 <span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div data-pagedtable="false">
@@ -569,8 +572,7 @@ This book/site is under construction
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://jrnold.github.io/ggthemes/">ggthemes</a></span><span class="op">)</span>   <span class="co"># for additional themes like theme_few()</span></span>
 <span></span>
 <span><span class="co"># Create the horizon chart</span></span>
-<span><span class="va">temperature_hki</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">temperature_hki</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  </span>
 <span>  <span class="co"># Horizon chart layer, mapping x, y, and fill aesthetics</span></span>
 <span>  <span class="fu"><a href="https://rivasiker.github.io/ggHoriPlot/reference/geom_horizon.html">geom_horizon</a></span><span class="op">(</span></span>
@@ -582,17 +584,17 @@ This book/site is under construction
 <span>    origin       <span class="op">=</span> <span class="va">origin</span>, <span class="co"># baseline (e.g., 0°C); defines neutral midpoint</span></span>
 <span>    horizonscale <span class="op">=</span> <span class="va">scale</span>   <span class="co"># vertical scale; controls how bands are split</span></span>
 <span>  <span class="op">)</span> <span class="op">+</span></span>
-<span></span>
+<span>  </span>
 <span>  <span class="co"># Use a diverging color scale (red-blue), reversed so red = high temp</span></span>
 <span>  <span class="fu"><a href="https://rivasiker.github.io/ggHoriPlot/reference/scale_fill_hcl.html">scale_fill_hcl</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">'RdBu'</span>, reverse <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">+</span></span>
-<span></span>
+<span>  </span>
 <span>  <span class="co"># Create one small horizon chart per year, stacked vertically</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_grid.html">facet_grid</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/vars.html">vars</a></span><span class="op">(</span><span class="va">year</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span></span>
+<span>  </span>
 <span>  <span class="co"># Use a clean, simple theme based on the rules and examples from Stephen</span></span>
 <span>  <span class="co"># Few's Show Me the Numbers and Practical Rules for Using Color in Charts</span></span>
 <span>  <span class="fu"><a href="http://jrnold.github.io/ggthemes/reference/theme_few.html">theme_few</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span></span>
+<span>  </span>
 <span>  <span class="co"># Customize appearance</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span></span>
 <span>    <span class="co"># Customize x-axis labels</span></span>
@@ -611,14 +613,14 @@ This book/site is under construction
 <span>    <span class="co"># Customize facet labels</span></span>
 <span>    strip.text.y    <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">8</span>, angle <span class="op">=</span> <span class="fl">0</span>, hjust <span class="op">=</span> <span class="fl">0</span><span class="op">)</span>  </span>
 <span>  <span class="op">)</span> <span class="op">+</span></span>
-<span></span>
+<span>  </span>
 <span>  <span class="co"># Format x-axis to show months (with short names) without expansion</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_date.html">scale_x_date</a></span><span class="op">(</span></span>
 <span>    expand      <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span>,</span>
 <span>    date_breaks <span class="op">=</span> <span class="st">"1 month"</span>, </span>
 <span>    date_labels <span class="op">=</span> <span class="st">"%b"</span></span>
 <span>  <span class="op">)</span> <span class="op">+</span></span>
-<span></span>
+<span>  </span>
 <span>  <span class="co"># Add informative plot title, subtitle, and data source caption</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span></span>
 <span>    title    <span class="op">=</span> <span class="st">"Average daily temperature (Celsius) in Helsinki"</span>,</span>
@@ -719,6 +721,7 @@ This book/site is under construction
 <p>The rest of the code is to make the visualization more presentable. Note that we’ll move the legend inside the plot. We’ll use the <strong>legend.position</strong> argument inside the <code><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme()</a></code> function to do that. There’s enough <em>white space</em> inside the plot to accommodate the legend. This way, we gain more space to showcase the time series element of the plot.</p>
 <div class="cell">
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://nsgrantham.github.io/ggbraid/">ggbraid</a></span><span class="op">)</span> <span class="co"># for geom_braid() to visualize overlapping time series</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span> <span class="co"># for general plotting functions</span></span>
 <span></span>
 <span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  </span>
@@ -796,7 +799,7 @@ This book/site is under construction
 <span>      color     <span class="op">=</span> <span class="st">"black"</span>,</span>
 <span>      linetype  <span class="op">=</span> <span class="st">"solid"</span>,</span>
 <span>      linewidth <span class="op">=</span> <span class="fl">0.5</span></span>
-<span>      <span class="op">)</span>,</span>
+<span>    <span class="op">)</span>,</span>
 <span>    legend.key.size  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grid/unit.html">unit</a></span><span class="op">(</span><span class="fl">2</span>, <span class="st">"line"</span><span class="op">)</span>,</span>
 <span>    legend.position  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.19</span>, <span class="fl">0.88</span><span class="op">)</span>, <span class="co"># relative position inside plot</span></span>
 <span>    legend.text      <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span>
@@ -866,6 +869,7 @@ This book/site is under construction
 <p><code><a href="https://lubridate.tidyverse.org/reference/as_date.html">as_date()</a></code> from <strong>lubridate</strong> <span class="citation" data-cites="spinu2024">(<a href="references.html#ref-spinu2024" role="doc-biblioref">Spinu, Grolemund, and Wickham 2024</a>)</span> allows us to use the date in <em>character</em> format to map it to the x-axis. This helps us place the annotations in the correct position.</p>
 <div class="cell">
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://nsgrantham.github.io/ggbraid/">ggbraid</a></span><span class="op">)</span>   <span class="co"># for geom_braid(), visualizing area between two lines</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>   <span class="co"># for general plotting functions</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://lubridate.tidyverse.org">lubridate</a></span><span class="op">)</span> <span class="co"># for working with date types</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://stringr.tidyverse.org">stringr</a></span><span class="op">)</span>   <span class="co"># for string manipulation like str_glue()</span></span>
 <span></span>
@@ -954,7 +958,7 @@ This book/site is under construction
 <span>      color     <span class="op">=</span> <span class="st">"black"</span>,</span>
 <span>      linetype  <span class="op">=</span> <span class="st">"solid"</span>,</span>
 <span>      linewidth <span class="op">=</span> <span class="fl">0.5</span></span>
-<span>      <span class="op">)</span>,</span>
+<span>    <span class="op">)</span>,</span>
 <span>    legend.key.size  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grid/unit.html">unit</a></span><span class="op">(</span><span class="fl">2</span>, <span class="st">"line"</span><span class="op">)</span>,</span>
 <span>    legend.position  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.83</span>, <span class="fl">0.12</span><span class="op">)</span>, <span class="co"># bottom-right position</span></span>
 <span>    legend.text      <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">10</span><span class="op">)</span>,</span>
@@ -970,7 +974,284 @@ This book/site is under construction
 <p>And so we have another perspective on the Helsinki temperature data set.</p>
 </section></section><section id="sec-streamgraph" class="level3" data-number="3.1.3"><h3 data-number="3.1.3" class="anchored" data-anchor-id="sec-streamgraph">
 <span class="header-section-number">3.1.3</span> Streamgraph</h3>
-</section></section><section id="sec-bar-charts" class="level2" data-number="3.2"><h2 data-number="3.2" class="anchored" data-anchor-id="sec-bar-charts">
+<p>A streamgraph is a stacked area chart where the areas are positioned around the central axis.</p>
+<section id="sec-ggplot2-dependencies" class="level4" data-number="3.1.3.1"><h4 data-number="3.1.3.1" class="anchored" data-anchor-id="sec-ggplot2-dependencies">
+<span class="header-section-number">3.1.3.1</span> Viz #4: ggplot2 dependencies</h4>
+<p>If you’ve read the book in chronological order, you’ve already encountered a streamgraph in <a href="preface.html#sec-landscape" class="quarto-xref"><span>Section 1</span></a>. We will use that visualization as the example in this chapter.</p>
+<p>The purpose of this visualization is to illustrate how the ggplot2 dependencies have evolved from a small speck in 2007 to their current state at the end of 2024. This is the exact use case for which I would use a streamgraph.</p>
+<p>Before we proceed, I want to mention <strong>Georgios Karamanis</strong>. Their <a href="https://github.com/gkaramanis/tidytuesday/tree/master/2023/2023-week_38">original visualization</a> for <a href="https://github.com/rfordatascience/tidytuesday">Tidy Tuesday</a> (see Figure 3.1) was the inspiration for my version.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="img/figure-3-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure 3.1: The original visualization for Tidy Tuesday by Georgios Karamanis"><img src="img/figure-3-1.png" class="img-fluid figure-img" alt="Figure 3.1: The original visualization for Tidy Tuesday by Georgios Karamanis"></a></p>
+<figcaption>Figure 3.1: The original visualization for Tidy Tuesday by Georgios Karamanis</figcaption></figure>
+</div>
+<p>If you want to know the differences, they are as follows:</p>
+<ol type="1">
+<li>Use the initial release years instead of the latest release…</li>
+<li>…which meant switching the data source</li>
+<li>Use the ggplot2-related packages’ metadata</li>
+<li>Bring in a third type, <strong>Imports</strong>
+</li>
+<li>Change the color palette</li>
+<li>Change the fonts to <strong>Roboto Mono</strong>
+</li>
+<li>Annotate all the major ggplot2 releases</li>
+<li>Make the stream chart less wavy</li>
+<li>Other, smaller changes</li>
+</ol>
+<p>We’ll cover these in more detail as we proceed.</p>
+<p>Let’s take a look at the data we’re working with. It was gathered with <strong>pkgsearch</strong> <span class="citation" data-cites="csardi2025">(<a href="references.html#ref-csardi2025" role="doc-biblioref">Csárdi and Salmon 2025</a>)</span>.</p>
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["year"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["type"],"name":[2],"type":["chr"],"align":["left"]},{"label":["n"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"2007","2":"Depends","3":"1"},{"1":"2007","2":"Imports","3":"4"},{"1":"2007","2":"Suggests","3":"6"},{"1":"2008","2":"Depends","3":"3"},{"1":"2008","2":"Imports","3":"8"},{"1":"2008","2":"Suggests","3":"8"},{"1":"2009","2":"Depends","3":"6"},{"1":"2009","2":"Imports","3":"14"},{"1":"2009","2":"Suggests","3":"12"},{"1":"2010","2":"Depends","3":"5"},{"1":"2010","2":"Imports","3":"13"},{"1":"2010","2":"Suggests","3":"13"},{"1":"2011","2":"Depends","3":"5"},{"1":"2011","2":"Imports","3":"28"},{"1":"2011","2":"Suggests","3":"16"},{"1":"2012","2":"Depends","3":"13"},{"1":"2012","2":"Imports","3":"41"},{"1":"2012","2":"Suggests","3":"22"},{"1":"2013","2":"Depends","3":"15"},{"1":"2013","2":"Imports","3":"56"},{"1":"2013","2":"Suggests","3":"21"},{"1":"2014","2":"Depends","3":"18"},{"1":"2014","2":"Imports","3":"79"},{"1":"2014","2":"Suggests","3":"42"},{"1":"2015","2":"Depends","3":"38"},{"1":"2015","2":"Imports","3":"124"},{"1":"2015","2":"Suggests","3":"68"},{"1":"2016","2":"Depends","3":"47"},{"1":"2016","2":"Imports","3":"204"},{"1":"2016","2":"Suggests","3":"116"},{"1":"2017","2":"Depends","3":"46"},{"1":"2017","2":"Imports","3":"277"},{"1":"2017","2":"Suggests","3":"141"},{"1":"2018","2":"Depends","3":"35"},{"1":"2018","2":"Imports","3":"300"},{"1":"2018","2":"Suggests","3":"129"},{"1":"2019","2":"Depends","3":"32"},{"1":"2019","2":"Imports","3":"358"},{"1":"2019","2":"Suggests","3":"147"},{"1":"2020","2":"Depends","3":"35"},{"1":"2020","2":"Imports","3":"401"},{"1":"2020","2":"Suggests","3":"196"},{"1":"2021","2":"Depends","3":"46"},{"1":"2021","2":"Imports","3":"511"},{"1":"2021","2":"Suggests","3":"183"},{"1":"2022","2":"Depends","3":"29"},{"1":"2022","2":"Imports","3":"509"},{"1":"2022","2":"Suggests","3":"203"},{"1":"2023","2":"Depends","3":"23"},{"1":"2023","2":"Imports","3":"458"},{"1":"2023","2":"Suggests","3":"147"},{"1":"2024","2":"Depends","3":"40"},{"1":"2024","2":"Imports","3":"454"},{"1":"2024","2":"Suggests","3":"173"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<p>We won’t reiterate the definitions of the different <strong>types</strong> (see <a href="preface.html#sec-landscape" class="quarto-xref"><span>Section 1</span></a> for them). But we can see that the <em>count</em> for each type starts small in 2007 and increases significantly by 2024.</p>
+<p>Let’s first take a look at what the streamgraph would look like with default settings. We’ll use <code><a href="https://rdrr.io/pkg/ggstream/man/geom_stream.html">geom_stream()</a></code> from <strong>ggstream</strong> <span class="citation" data-cites="sjoberg2021">(<a href="references.html#ref-sjoberg2021" role="doc-biblioref">Sjoberg 2021</a>)</span> for that.</p>
+<div class="cell">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">ggstream</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">ggplot2_dependencies_by_year</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/ggstream/man/geom_stream.html">geom_stream</a></span><span class="op">(</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span></span>
+<span>      x    <span class="op">=</span> <span class="va">year</span>,</span>
+<span>      y    <span class="op">=</span> <span class="va">n</span>,</span>
+<span>      fill <span class="op">=</span> <span class="va">type</span></span>
+<span>    <span class="op">)</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="geoms_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>That’s not bad for ten lines of code. But we can make it more presentable.</p>
+<p>Let’s start with colors. In the previous visualizations, we’ve inserted the <em>hex codes</em> straight into the code. But since we need to use these colors in many places, let’s convert them into a vector so we don’t have to repeat ourselves.</p>
+<div class="cell">
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">color_1</span> <span class="op">&lt;-</span> <span class="st">"#F36523"</span></span>
+<span><span class="va">color_2</span> <span class="op">&lt;-</span> <span class="st">"#125184"</span></span>
+<span><span class="va">color_3</span> <span class="op">&lt;-</span> <span class="st">"#2E8B57"</span></span>
+<span><span class="va">colors</span>  <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">color_1</span>, <span class="va">color_2</span>, <span class="va">color_3</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">colors</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "#F36523" "#125184" "#2E8B57"</code></pre>
+</div>
+</div>
+<p>For the font, I wanted to use something different. Roboto is a slightly futuristic font (family) that I like. But it doesn’t come with R.</p>
+<p>That’s why we’ll use <strong>showtext</strong> <span class="citation" data-cites="qiu2024">(<a href="references.html#ref-qiu2024" role="doc-biblioref">Qiu and Raggett 2024</a>)</span> (read more about it in <a href="themes.html#sec-showtext" class="quarto-xref"><span>Section 9.6.2</span></a>).</p>
+<div class="cell">
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/yixuan/showtext">showtext</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/pkg/sysfonts/man/font_add_google.html">font_add_google</a></span><span class="op">(</span><span class="st">"Roboto Mono"</span>, <span class="st">"roboto"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/pkg/showtext/man/showtext_auto.html">showtext_auto</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="va">font_family</span> <span class="op">&lt;-</span> <span class="st">"roboto"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Next, we’ll create the annotations that’ll be displayed on the right side of the graph.</p>
+<p>The labels are in an HTML-style format. To be used later with <strong>ggtext</strong> <span class="citation" data-cites="wilke2022">(<a href="references.html#ref-wilke2022" role="doc-biblioref">Wilke and Wiernik 2022</a>)</span>. We’ll delve into this topic in more detail in <a href="themes.html#sec-ggtext" class="quarto-xref"><span>Section 9.4.1</span></a>.</p>
+<div class="cell">
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">annotation_numbers</span> <span class="op">&lt;-</span> <span class="va">ggplot2_dependencies_by_year</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  </span>
+<span>  <span class="co"># Total number of packages per dependency type</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span></span>
+<span>    n   <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span>,</span>
+<span>    .by <span class="op">=</span> <span class="va">type</span></span>
+<span>  <span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  </span>
+<span>  <span class="co"># Ensure consistent vertical stacking order</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="va">type</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
+<span>    </span>
+<span>    <span class="co"># Manually assign y-positions for labels</span></span>
+<span>    y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">390</span>, <span class="fl">75</span>, <span class="op">-</span><span class="fl">300</span><span class="op">)</span>,</span>
+<span>    </span>
+<span>    <span class="co"># Create HTML-styled rich labels with colored numbers</span></span>
+<span>    label <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when</a></span><span class="op">(</span></span>
+<span>      <span class="va">type</span> <span class="op">==</span> <span class="st">"Depends"</span> <span class="op">~</span></span>
+<span>        <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_glue.html">str_glue</a></span><span class="op">(</span><span class="st">"**&lt;span style='color:{color_1}'&gt;{n}&lt;/span&gt;**"</span><span class="op">)</span>,</span>
+<span>      <span class="va">type</span> <span class="op">==</span> <span class="st">"Imports"</span> <span class="op">~</span></span>
+<span>        <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_glue.html">str_glue</a></span><span class="op">(</span><span class="st">"**&lt;span style='color:{color_2}'&gt;{n}&lt;/span&gt;**"</span><span class="op">)</span>,</span>
+<span>      <span class="va">type</span> <span class="op">==</span> <span class="st">"Suggests"</span> <span class="op">~</span></span>
+<span>        <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_glue.html">str_glue</a></span><span class="op">(</span><span class="st">"**&lt;span style='color:{color_3}'&gt;{n}&lt;/span&gt;**"</span><span class="op">)</span></span>
+<span>    <span class="op">)</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["type"],"name":[1],"type":["chr"],"align":["left"]},{"label":["n"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["y"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["label"],"name":[4],"type":["glue"],"align":["right"]}],"data":[{"1":"Depends","2":"437","3":"390","4":"**<span style='color:#F36523'>437<\/span>**"},{"1":"Imports","2":"3839","3":"75","4":"**<span style='color:#125184'>3839<\/span>**"},{"1":"Suggests","2":"1643","3":"-300","4":"**<span style='color:#2E8B57'>1643<\/span>**"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<p>Now it’s time to bring it all together.</p>
+<p>Usually, you would start with the main geom for the plot. But we must begin with the data points and labels due to the layer order. We’re stacking layers on top of each other, and here we want the lines for the labels to stay behind the streamgraph.</p>
+<p>The new packages we haven’t mentioned before are <strong>colorspace</strong> <span class="citation" data-cites="ihaka2024">(<a href="references.html#ref-ihaka2024" role="doc-biblioref">Ihaka et al. 2024</a>)</span> and <strong>ggrepel</strong> <span class="citation" data-cites="slowikowski2024">(<a href="references.html#ref-slowikowski2024" role="doc-biblioref">Slowikowski 2024</a>)</span>.</p>
+<p>We get back to them both in detail later, but colorspace (see more in <a href="interactive_tools.html#sec-colorspace" class="quarto-xref"><span>Section 16.2.2.1</span></a>)) is used for color manipulation. In this graph, we’re making the borders of the areas slightly darker than the areas themselves. ggrepel (see more in <a href="annotations.html#sec-repel-overlapping-labels-and-text" class="quarto-xref"><span>Section 5.10</span></a>) is used for creating labels that don’t overlap.</p>
+<div class="cell">
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://colorspace.R-Forge.R-project.org/">colorspace</a></span><span class="op">)</span> <span class="co"># for color manipulation like darken()</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>    <span class="co"># for general plotting functions</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggrepel.slowkow.com/">ggrepel</a></span><span class="op">)</span>    <span class="co"># for placing non-overlapping labels</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">ggstream</span><span class="op">)</span>   <span class="co"># for creating streamgraphs</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://wilkelab.org/ggtext/">ggtext</a></span><span class="op">)</span>     <span class="co"># for text manipulation</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://stringr.tidyverse.org">stringr</a></span><span class="op">)</span>    <span class="co"># for string manipulation like str_glue()</span></span>
+<span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">ggplot2_dependencies_by_year</span><span class="op">)</span> <span class="op">+</span></span>
+<span></span>
+<span>  <span class="co"># Add a small point at the origin to anchor the first version label</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">2007</span>, y <span class="op">=</span> <span class="fl">0</span><span class="op">)</span>,</span>
+<span>    data <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>    size <span class="op">=</span> <span class="fl">1.5</span>,</span>
+<span>    stat <span class="op">=</span> <span class="st">"unique"</span>,</span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Add a label for ggplot2 version 0.5 (2007)</span></span>
+<span>  <span class="fu"><a href="https://ggrepel.slowkow.com/reference/geom_text_repel.html">geom_label_repel</a></span><span class="op">(</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">2007</span>, y <span class="op">=</span> <span class="fl">0</span>, label <span class="op">=</span> <span class="st">"{ggplot2}\nver 0.5"</span><span class="op">)</span>,</span>
+<span>        data          <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>        stat          <span class="op">=</span> <span class="st">"unique"</span>,</span>
+<span>        nudge_y       <span class="op">=</span> <span class="fl">75</span>,</span>
+<span>        label.size    <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>        lineheight    <span class="op">=</span> <span class="fl">0.5</span>,</span>
+<span>        family        <span class="op">=</span> <span class="va">font_family</span></span>
+<span>    <span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Add a label for ggplot2 version 1.0 (2014)</span></span>
+<span>  <span class="fu"><a href="https://ggrepel.slowkow.com/reference/geom_text_repel.html">geom_label_repel</a></span><span class="op">(</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">2014</span>, y <span class="op">=</span> <span class="fl">50</span>, label <span class="op">=</span> <span class="st">"{ggplot2}\nver 1.0"</span><span class="op">)</span>,</span>
+<span>        data          <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>        stat          <span class="op">=</span> <span class="st">"unique"</span>,</span>
+<span>        nudge_y       <span class="op">=</span> <span class="fl">115</span>,</span>
+<span>        label.size    <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>        lineheight    <span class="op">=</span> <span class="fl">0.5</span>,</span>
+<span>        family        <span class="op">=</span> <span class="va">font_family</span></span>
+<span>    <span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Add a label for ggplot2 version 2.0 (2015)</span></span>
+<span>  <span class="fu"><a href="https://ggrepel.slowkow.com/reference/geom_text_repel.html">geom_label_repel</a></span><span class="op">(</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">2015</span>, y <span class="op">=</span> <span class="fl">125</span>, label <span class="op">=</span> <span class="st">"{ggplot2}\nver 2.0"</span><span class="op">)</span>,</span>
+<span>        data          <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>        stat          <span class="op">=</span> <span class="st">"unique"</span>,</span>
+<span>        nudge_y       <span class="op">=</span> <span class="fl">140</span>,</span>
+<span>        label.size    <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>        lineheight    <span class="op">=</span> <span class="fl">0.5</span>,</span>
+<span>        family        <span class="op">=</span> <span class="va">font_family</span></span>
+<span>    <span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Add a label for ggplot2 version 3.0 (2018)</span></span>
+<span>  <span class="fu"><a href="https://ggrepel.slowkow.com/reference/geom_text_repel.html">geom_label_repel</a></span><span class="op">(</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">2018</span>, y <span class="op">=</span> <span class="fl">100</span>, label <span class="op">=</span> <span class="st">"{ggplot2}\nver 3.0"</span><span class="op">)</span>,</span>
+<span>        data          <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>        stat          <span class="op">=</span> <span class="st">"unique"</span>,</span>
+<span>        nudge_y       <span class="op">=</span> <span class="fl">200</span>,</span>
+<span>        label.size    <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>        lineheight    <span class="op">=</span> <span class="fl">0.5</span>,</span>
+<span>        family        <span class="op">=</span> <span class="va">font_family</span></span>
+<span>    <span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Add a label for ggplot2 version 3.5 (2024)</span></span>
+<span>  <span class="fu"><a href="https://ggrepel.slowkow.com/reference/geom_text_repel.html">geom_label_repel</a></span><span class="op">(</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">2024</span>, y <span class="op">=</span> <span class="fl">410</span>, label <span class="op">=</span> <span class="st">"{ggplot2}\nver 3.5"</span><span class="op">)</span>,</span>
+<span>        data          <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>        stat          <span class="op">=</span> <span class="st">"unique"</span>,</span>
+<span>        nudge_y       <span class="op">=</span> <span class="fl">75</span>,</span>
+<span>        label.size    <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>        lineheight    <span class="op">=</span> <span class="fl">0.5</span>,</span>
+<span>        family        <span class="op">=</span> <span class="va">font_family</span></span>
+<span>    <span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Create a stream-like area chart showing the number of dependent </span></span>
+<span>  <span class="co"># packages by type and year</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/ggstream/man/geom_stream.html">geom_stream</a></span><span class="op">(</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span></span>
+<span>      x     <span class="op">=</span> <span class="va">year</span>,</span>
+<span>      y     <span class="op">=</span> <span class="va">n</span>,</span>
+<span>      fill  <span class="op">=</span> <span class="va">type</span>,</span>
+<span>      <span class="co"># Slightly darken stream borders for contrast</span></span>
+<span>      color <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes_eval.html">after_scale</a></span><span class="op">(</span><span class="fu"><a href="https://colorspace.R-Forge.R-project.org/reference/lighten.html">darken</a></span><span class="op">(</span><span class="va">fill</span><span class="op">)</span><span class="op">)</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    <span class="co"># bw means bandwidth of kernel density estimation</span></span>
+<span>    <span class="co"># This is the argument you can control the waviness with</span></span>
+<span>    <span class="co"># The closer the value is to 1, the less wavy the graph</span></span>
+<span>    bw        <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>    linewidth <span class="op">=</span> <span class="fl">0.1</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Add annotations on the right side using rich text labels from ggtext</span></span>
+<span>  <span class="fu"><a href="https://wilkelab.org/ggtext/reference/geom_richtext.html">geom_richtext</a></span><span class="op">(</span></span>
+<span>    data <span class="op">=</span> <span class="va">annotation_numbers</span>,</span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span></span>
+<span>      x     <span class="op">=</span> <span class="fl">2024</span> <span class="op">+</span> <span class="fl">0.2</span>,</span>
+<span>      y     <span class="op">=</span> <span class="va">y</span>,</span>
+<span>      label <span class="op">=</span> <span class="va">label</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    hjust      <span class="op">=</span> <span class="fl">0</span>,</span>
+<span>    lineheight <span class="op">=</span> <span class="fl">0.9</span>,</span>
+<span>    label.size <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>    size       <span class="op">=</span> <span class="fl">5</span>,</span>
+<span>    family     <span class="op">=</span> <span class="va">font_family</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span></span>
+<span>  <span class="co"># Configure the x-axis with major and minor breaks</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span></span>
+<span>    breaks       <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">2008</span>, <span class="fl">2024</span>, <span class="fl">2</span><span class="op">)</span>,</span>
+<span>    minor_breaks <span class="op">=</span> <span class="fl">2007</span><span class="op">:</span><span class="fl">2024</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Manually assign fill colors for the dependency types</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_fill_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="va">colors</span><span class="op">)</span> <span class="op">+</span></span>
+<span></span>
+<span>  <span class="co"># Allow annotations to extend outside the plot area</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_cartesian.html">coord_cartesian</a></span><span class="op">(</span>clip <span class="op">=</span> <span class="st">"off"</span><span class="op">)</span> <span class="op">+</span></span>
+<span></span>
+<span>  <span class="co"># Set plot titles and descriptions using inline color styling</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span></span>
+<span>    title    <span class="op">=</span> <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_glue.html">str_glue</a></span><span class="op">(</span><span class="st">"Number of packages on CRAN in 2024 &lt;span style='color:{color_1}'&gt;depending on&lt;/span&gt;, &lt;span style='color:{color_2}'&gt;importing&lt;/span&gt;, or &lt;span style='color:{color_3}'&gt;suggesting&lt;/span&gt; {{ggplot2}}"</span><span class="op">)</span>,</span>
+<span>    subtitle <span class="op">=</span> <span class="st">"Aggregated by the initial package release years. Categories may change from one version to another and were taken from the latest versions."</span>,</span>
+<span>    caption  <span class="op">=</span> <span class="st">"Data: CRAN via {pkgsearch} | Visualization: Antti Rask | Updated: 2024-12-31"</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span></span>
+<span>  <span class="co"># Apply a clean, minimal theme and customize text styling</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span>base_family <span class="op">=</span> <span class="va">font_family</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Customize title and caption styling</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span></span>
+<span>    axis.text.x <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span></span>
+<span>      size   <span class="op">=</span> <span class="fl">14</span>,</span>
+<span>      face   <span class="op">=</span> <span class="st">"bold"</span>,</span>
+<span>      margin <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">margin</a></span><span class="op">(</span><span class="fl">10</span>, <span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    axis.text.y           <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    axis.title            <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    legend.position       <span class="op">=</span> <span class="st">"none"</span>,</span>
+<span>    panel.grid.major.y    <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    panel.grid.minor.y    <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    plot.margin           <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">margin</a></span><span class="op">(</span><span class="fl">10</span>, <span class="fl">50</span>, <span class="fl">10</span>, <span class="fl">10</span><span class="op">)</span>,</span>
+<span>    plot.title            <span class="op">=</span> <span class="fu"><a href="https://wilkelab.org/ggtext/reference/element_markdown.html">element_markdown</a></span><span class="op">(</span></span>
+<span>      face  <span class="op">=</span> <span class="st">"bold"</span>,</span>
+<span>      size  <span class="op">=</span> <span class="fl">16</span>,</span>
+<span>      hjust <span class="op">=</span> <span class="fl">0.5</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    plot.subtitle <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span></span>
+<span>      hjust  <span class="op">=</span> <span class="fl">0.5</span>,</span>
+<span>      margin <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">margin</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">20</span>, <span class="fl">0</span><span class="op">)</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    plot.caption <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span></span>
+<span>      size   <span class="op">=</span> <span class="fl">10</span>,</span>
+<span>      color  <span class="op">=</span> <span class="fu"><a href="https://colorspace.R-Forge.R-project.org/reference/lighten.html">darken</a></span><span class="op">(</span><span class="st">"darkgrey"</span>, <span class="fl">0.4</span><span class="op">)</span>,</span>
+<span>      hjust  <span class="op">=</span> <span class="fl">0.5</span>,</span>
+<span>      margin <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">margin</a></span><span class="op">(</span><span class="fl">20</span>, <span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span></span>
+<span>      <span class="op">)</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="geoms_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Streamgraph, like other area graphs, isn’t the best for making detailed comparisons between groups. But it’s excellent for creating a broader picture of what’s going on in the data.</p>
+</section></section></section><section id="sec-bar-charts" class="level2" data-number="3.2"><h2 data-number="3.2" class="anchored" data-anchor-id="sec-bar-charts">
 <span class="header-section-number">3.2</span> Bar charts</h2>
 <section id="sec-likert-chart" class="level3" data-number="3.2.1"><h3 data-number="3.2.1" class="anchored" data-anchor-id="sec-likert-chart">
 <span class="header-section-number">3.2.1</span> Likert chart</h3>
@@ -1054,14 +1335,29 @@ This book/site is under construction
 <div id="ref-arnold2024" class="csl-entry" role="listitem">
 Arnold, Jeffrey B. 2024. <em>Ggthemes: Extra Themes, Scales and Geoms for ’Ggplot2’</em>. <a href="https://CRAN.R-project.org/package=ggthemes">https://CRAN.R-project.org/package=ggthemes</a>.
 </div>
+<div id="ref-csardi2025" class="csl-entry" role="listitem">
+Csárdi, Gábor, and Maëlle Salmon. 2025. <em>Pkgsearch: Search and Query CRAN r Packages</em>. <a href="https://CRAN.R-project.org/package=pkgsearch">https://CRAN.R-project.org/package=pkgsearch</a>.
+</div>
 <div id="ref-grantham2025" class="csl-entry" role="listitem">
 Grantham, Neal. 2025. <em>Ggbraid: Braid Ribbons in ’Ggplot2’</em>. <a href="https://github.com/nsgrantham/ggbraid">https://github.com/nsgrantham/ggbraid</a>.
+</div>
+<div id="ref-ihaka2024" class="csl-entry" role="listitem">
+Ihaka, Ross, Paul Murrell, Kurt Hornik, Jason C. Fisher, Reto Stauffer, Claus O. Wilke, Claire D. McWhite, and Achim Zeileis. 2024. <em>Colorspace: A Toolbox for Manipulating and Assessing Colors and Palettes</em>. <a href="https://CRAN.R-project.org/package=colorspace">https://CRAN.R-project.org/package=colorspace</a>.
+</div>
+<div id="ref-qiu2024" class="csl-entry" role="listitem">
+Qiu, Yixuan, and Dave Raggett. 2024. <em>Showtext: Using Fonts More Easily in r Graphs</em>. <a href="https://CRAN.R-project.org/package=showtext">https://CRAN.R-project.org/package=showtext</a>.
 </div>
 <div id="ref-rivas-gonzalez2022" class="csl-entry" role="listitem">
 Rivas-González, Iker. 2022. <em>ggHoriPlot: Horizon Plots for ’Ggplot2’</em>. <a href="https://CRAN.R-project.org/package=ggHoriPlot">https://CRAN.R-project.org/package=ggHoriPlot</a>.
 </div>
 <div id="ref-schwabish2021" class="csl-entry" role="listitem">
 Schwabish, Jonathan A. 2021. <em>Better Data Visualizations: A Guide for Scholars, Researchers, and Wonks</em>. 1st ed. Columbia University Press.
+</div>
+<div id="ref-sjoberg2021" class="csl-entry" role="listitem">
+Sjoberg, David. 2021. <em>Ggstream: Create Streamplots in ’Ggplot2’</em>. <a href="https://CRAN.R-project.org/package=ggstream">https://CRAN.R-project.org/package=ggstream</a>.
+</div>
+<div id="ref-slowikowski2024" class="csl-entry" role="listitem">
+Slowikowski, Kamil. 2024. <em>Ggrepel: Automatically Position Non-Overlapping Text Labels with ’Ggplot2’</em>. <a href="https://CRAN.R-project.org/package=ggrepel">https://CRAN.R-project.org/package=ggrepel</a>.
 </div>
 <div id="ref-spinu2024" class="csl-entry" role="listitem">
 Spinu, Vitalie, Garrett Grolemund, and Hadley Wickham. 2024. <em>Lubridate: Make Dealing with Dates a Little Easier</em>. <a href="https://CRAN.R-project.org/package=lubridate">https://CRAN.R-project.org/package=lubridate</a>.
@@ -1083,6 +1379,9 @@ Wickham, Hadley. 2015. <em>Ggplot2movies: Movies Data</em>. <a href="https://CRA
 </div>
 <div id="ref-wickham2024a" class="csl-entry" role="listitem">
 Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, Dewey Dunnington, and Teun van den Brand. 2025. <em>Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics</em>. <a href="https://CRAN.R-project.org/package=ggplot2">https://CRAN.R-project.org/package=ggplot2</a>.
+</div>
+<div id="ref-wilke2022" class="csl-entry" role="listitem">
+Wilke, Claus O., and Brenton M. Wiernik. 2022. <em>Ggtext: Improved Text Rendering Support for ’Ggplot2’</em>. <a href="https://CRAN.R-project.org/package=ggtext">https://CRAN.R-project.org/package=ggtext</a>.
 </div>
 </div>
 </section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
@@ -1524,7 +1823,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <p>This book was built with <a href="https://quarto.org/">Quarto</a> and is hosted on <a href="https://www.netlify.com">Netlify</a>.</p>
 </div>
   </div>
-</footer>
+</footer><script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 </body></html>

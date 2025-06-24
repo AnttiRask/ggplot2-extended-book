@@ -7,38 +7,38 @@
 source("warning.R")
 ```
 
-## Add p-values
+## Add p-values {#sec-add-p-values}
 
-## Annotate areas with…
+## Annotate areas with… {#sec-annotate-areas-with}
 
-### Circles
+### Circles {#sec-circles}
 
-### Ellipses
+### Ellipses {#sec-ellipses}
 
-### Hulls
+### Hulls {#sec-hulls}
 
-### Rectangles
+### Rectangles {#sec-rectangles}
 
-## Curved text labeling
+## Curved text labeling {#sec-curved-text-labeling}
 
-## Direct labeling
+## Direct labeling {#sec-direct-labeling}
 
-## Fitted-model-based annotations
+## Fitted-model-based annotations {#sec-fitted-model-based-annotations}
 
-## Highlighting geoms
+## Highlighting geoms {#sec-highlighting-geoms}
 
-## Highlighting points
+## Highlighting points {#sec-highlighting-points}
 
-## Inset plots
+## Inset plots {#sec-inset-plots}
 
-## Inset tables
+## Inset tables {#sec-inset-tables}
 
-## Repel overlapping text & labels
+## Repel overlapping labels & text {#sec-repel-overlapping-labels-and-text}
 
-### Label
+### Labels {#sec-repel-labels}
 
-### Text
+### Text {#sec-repel-text}
 
-## Shadow text
+## Shadow text {#sec-shadow-text}
 
-## Significance brackets
+## Significance brackets {#sec-significance-brackets}

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.42">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Antti Rask">
 <title>16&nbsp; Interactive tools – ggplot2 extended</title>
@@ -35,10 +35,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-96f5e2a3ed94a11b6ec2c918708bf376.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -318,18 +318,18 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-<li><a href="#interactive-interface-to-plot-data-and-perform-statistical-tests" id="toc-interactive-interface-to-plot-data-and-perform-statistical-tests" class="nav-link active" data-scroll-target="#interactive-interface-to-plot-data-and-perform-statistical-tests"><span class="header-section-number">16.1</span> Interactive interface to plot data and perform statistical tests</a></li>
+<li><a href="#sec-interactive-interface" id="toc-sec-interactive-interface" class="nav-link active" data-scroll-target="#sec-interactive-interface"><span class="header-section-number">16.1</span> Interactive interface to plot data and perform statistical tests</a></li>
   <li>
-<a href="#shiny" id="toc-shiny" class="nav-link" data-scroll-target="#shiny"><span class="header-section-number">16.2</span> Shiny</a>
+<a href="#sec-shiny" id="toc-sec-shiny" class="nav-link" data-scroll-target="#sec-shiny"><span class="header-section-number">16.2</span> Shiny</a>
   <ul class="collapse">
-<li><a href="#auto-theming" id="toc-auto-theming" class="nav-link" data-scroll-target="#auto-theming"><span class="header-section-number">16.2.1</span> Auto theming</a></li>
-  <li><a href="#choosing-color-palettes-interactively" id="toc-choosing-color-palettes-interactively" class="nav-link" data-scroll-target="#choosing-color-palettes-interactively"><span class="header-section-number">16.2.2</span> Choosing color palettes interactively</a></li>
-  <li><a href="#color-picker" id="toc-color-picker" class="nav-link" data-scroll-target="#color-picker"><span class="header-section-number">16.2.3</span> Color picker</a></li>
-  <li><a href="#editing-layers" id="toc-editing-layers" class="nav-link" data-scroll-target="#editing-layers"><span class="header-section-number">16.2.4</span> Editing layers</a></li>
-  <li><a href="#editing-themes" id="toc-editing-themes" class="nav-link" data-scroll-target="#editing-themes"><span class="header-section-number">16.2.5</span> Editing themes</a></li>
-  <li><a href="#interactive-layers" id="toc-interactive-layers" class="nav-link" data-scroll-target="#interactive-layers"><span class="header-section-number">16.2.6</span> Interactive layers</a></li>
-  <li><a href="#marginal-plots" id="toc-marginal-plots" class="nav-link" data-scroll-target="#marginal-plots"><span class="header-section-number">16.2.7</span> Marginal plots</a></li>
-  <li><a href="#theme-preview" id="toc-theme-preview" class="nav-link" data-scroll-target="#theme-preview"><span class="header-section-number">16.2.8</span> Theme preview</a></li>
+<li><a href="#sec-auto-theming" id="toc-sec-auto-theming" class="nav-link" data-scroll-target="#sec-auto-theming"><span class="header-section-number">16.2.1</span> Auto theming</a></li>
+  <li><a href="#sec-choosing-color-palettes" id="toc-sec-choosing-color-palettes" class="nav-link" data-scroll-target="#sec-choosing-color-palettes"><span class="header-section-number">16.2.2</span> Choosing color palettes interactively</a></li>
+  <li><a href="#sec-color-picker" id="toc-sec-color-picker" class="nav-link" data-scroll-target="#sec-color-picker"><span class="header-section-number">16.2.3</span> Color picker</a></li>
+  <li><a href="#sec-editing-layers" id="toc-sec-editing-layers" class="nav-link" data-scroll-target="#sec-editing-layers"><span class="header-section-number">16.2.4</span> Editing layers</a></li>
+  <li><a href="#sec-editing-themes" id="toc-sec-editing-themes" class="nav-link" data-scroll-target="#sec-editing-themes"><span class="header-section-number">16.2.5</span> Editing themes</a></li>
+  <li><a href="#sec-interactive-layers" id="toc-sec-interactive-layers" class="nav-link" data-scroll-target="#sec-interactive-layers"><span class="header-section-number">16.2.6</span> Interactive layers</a></li>
+  <li><a href="#sec-marginal-plots" id="toc-sec-marginal-plots" class="nav-link" data-scroll-target="#sec-marginal-plots"><span class="header-section-number">16.2.7</span> Marginal plots</a></li>
+  <li><a href="#sec-theme-preview" id="toc-sec-theme-preview" class="nav-link" data-scroll-target="#sec-theme-preview"><span class="header-section-number">16.2.8</span> Theme preview</a></li>
   </ul>
 </li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/edit/main/interactive_tools.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -363,25 +363,27 @@ This book/site is under construction
 <p>Everything is liable to change, even the title</p>
 </div>
 </div>
-<section id="interactive-interface-to-plot-data-and-perform-statistical-tests" class="level2" data-number="16.1"><h2 data-number="16.1" class="anchored" data-anchor-id="interactive-interface-to-plot-data-and-perform-statistical-tests">
+<section id="sec-interactive-interface" class="level2" data-number="16.1"><h2 data-number="16.1" class="anchored" data-anchor-id="sec-interactive-interface">
 <span class="header-section-number">16.1</span> Interactive interface to plot data and perform statistical tests</h2>
-</section><section id="shiny" class="level2" data-number="16.2"><h2 data-number="16.2" class="anchored" data-anchor-id="shiny">
+</section><section id="sec-shiny" class="level2" data-number="16.2"><h2 data-number="16.2" class="anchored" data-anchor-id="sec-shiny">
 <span class="header-section-number">16.2</span> Shiny</h2>
-<section id="auto-theming" class="level3" data-number="16.2.1"><h3 data-number="16.2.1" class="anchored" data-anchor-id="auto-theming">
+<section id="sec-auto-theming" class="level3" data-number="16.2.1"><h3 data-number="16.2.1" class="anchored" data-anchor-id="sec-auto-theming">
 <span class="header-section-number">16.2.1</span> Auto theming</h3>
-</section><section id="choosing-color-palettes-interactively" class="level3" data-number="16.2.2"><h3 data-number="16.2.2" class="anchored" data-anchor-id="choosing-color-palettes-interactively">
+</section><section id="sec-choosing-color-palettes" class="level3" data-number="16.2.2"><h3 data-number="16.2.2" class="anchored" data-anchor-id="sec-choosing-color-palettes">
 <span class="header-section-number">16.2.2</span> Choosing color palettes interactively</h3>
-</section><section id="color-picker" class="level3" data-number="16.2.3"><h3 data-number="16.2.3" class="anchored" data-anchor-id="color-picker">
+<section id="sec-colorspace" class="level4" data-number="16.2.2.1"><h4 data-number="16.2.2.1" class="anchored" data-anchor-id="sec-colorspace">
+<span class="header-section-number">16.2.2.1</span> colorspace</h4>
+</section></section><section id="sec-color-picker" class="level3" data-number="16.2.3"><h3 data-number="16.2.3" class="anchored" data-anchor-id="sec-color-picker">
 <span class="header-section-number">16.2.3</span> Color picker</h3>
-</section><section id="editing-layers" class="level3" data-number="16.2.4"><h3 data-number="16.2.4" class="anchored" data-anchor-id="editing-layers">
+</section><section id="sec-editing-layers" class="level3" data-number="16.2.4"><h3 data-number="16.2.4" class="anchored" data-anchor-id="sec-editing-layers">
 <span class="header-section-number">16.2.4</span> Editing layers</h3>
-</section><section id="editing-themes" class="level3" data-number="16.2.5"><h3 data-number="16.2.5" class="anchored" data-anchor-id="editing-themes">
+</section><section id="sec-editing-themes" class="level3" data-number="16.2.5"><h3 data-number="16.2.5" class="anchored" data-anchor-id="sec-editing-themes">
 <span class="header-section-number">16.2.5</span> Editing themes</h3>
-</section><section id="interactive-layers" class="level3" data-number="16.2.6"><h3 data-number="16.2.6" class="anchored" data-anchor-id="interactive-layers">
+</section><section id="sec-interactive-layers" class="level3" data-number="16.2.6"><h3 data-number="16.2.6" class="anchored" data-anchor-id="sec-interactive-layers">
 <span class="header-section-number">16.2.6</span> Interactive layers</h3>
-</section><section id="marginal-plots" class="level3" data-number="16.2.7"><h3 data-number="16.2.7" class="anchored" data-anchor-id="marginal-plots">
+</section><section id="sec-marginal-plots" class="level3" data-number="16.2.7"><h3 data-number="16.2.7" class="anchored" data-anchor-id="sec-marginal-plots">
 <span class="header-section-number">16.2.7</span> Marginal plots</h3>
-</section><section id="theme-preview" class="level3" data-number="16.2.8"><h3 data-number="16.2.8" class="anchored" data-anchor-id="theme-preview">
+</section><section id="sec-theme-preview" class="level3" data-number="16.2.8"><h3 data-number="16.2.8" class="anchored" data-anchor-id="sec-theme-preview">
 <span class="header-section-number">16.2.8</span> Theme preview</h3>
 
 
@@ -467,8 +469,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -579,7 +579,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
