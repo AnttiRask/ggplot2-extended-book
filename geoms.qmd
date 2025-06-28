@@ -215,7 +215,7 @@ library(ggthemes)   # for additional themes like theme_few()
   labs(
     title    = "Average daily temperature (Celsius) in Helsinki",
     subtitle = "From 2000 to 2024",
-    caption  = "Data: Finnish Meteorological Institute open data, weather observations (CC BY 4.0)",
+    caption  = "Data: Finnish Meteorological Institute open data, weather observations (CC BY 4.0) | Visualization: Antti Rask",
     x        = NULL # remove x-axis title
   )
 ```
@@ -263,7 +263,7 @@ One minor detail to note here is that we’ll turn the genre column from _charac
 library(forcats)
 library(tidyr)
 
-# Transform and filter the `movies_na` dataset
+# Transform and filter the `movies_na` data set
 movies_na_long <- movies_na %>%
   
   # Pivot genre columns (from Action to Short) into long format:
@@ -426,6 +426,7 @@ ggplot() +
     linetype = NULL,
     title    = "100 years of cinema",
     subtitle = "Number of comedies vs. dramas throughout the 20th century",
+    caption  = "Data: IMDb movies (1893-2005) via {ggplot2movies} | Visualization: Antti Rask",
     x        = NULL,
     y        = NULL
   ) +
@@ -447,7 +448,7 @@ ggplot() +
   )
 ```
 
-I'm not an expert on this topic either. Based on this dataset, however, there appears to be a correlation between major wars (WWI, WWII, and the Vietnam War) and the production of more comedies than dramas.
+I'm not an expert on this topic either. Based on this data set, however, there appears to be a correlation between major wars (WWI, WWII, and the Vietnam War) and the production of more comedies than dramas.
 
 #### Viz #3: Helsinki temperatures, part II {#sec-viz-3-helsinki-temperatures-part-ii}
 
@@ -597,7 +598,7 @@ ggplot() +
     linetype = NULL,
     title    = "Is the temperature rising?",
     subtitle = "Average daily temperatures (Celsius) in Helsinki, 2000 vs. 2024",
-    caption  = "Data: Finnish Meteorological Institute open data, weather observations (CC BY 4.0)",
+    caption  = "Data: Finnish Meteorological Institute open data, weather observations (CC BY 4.0) | Visualization: Antti Rask",
     x        = NULL,
     y        = NULL
   ) +
@@ -788,7 +789,7 @@ library(ggstream)   # for creating streamgraphs
 library(ggtext)     # for text manipulation
 library(stringr)    # for string manipulation like str_glue()
 
-  ggplot(ggplot2_dependencies_by_year) +
+ggplot(ggplot2_dependencies_by_year) +
 
   # Add a small point at the origin to anchor the first version label
   geom_point(
@@ -947,6 +948,249 @@ Bar charts are the backbone of data visualization. And ggplot2 handles most type
 In this section, we’ll take a look at the __Likert chart__ and the __mosaic chart__, also known as the __Marimekko chart__ or the __Mekko chart__, after the company (go Finland!).
 
 ### Likert chart {#sec-likert-chart}
+
+A Likert chart is a diverging stacked bar chart. It’s used to visualize responses to a questionnaire using the Likert (or similar) scale format. The “respondents are asked to indicate their degree of agreement or disagreement on a symmetric agree-disagree scale for each of a series of statements” [@burns2007].
+
+For Likert charts, __ggstats__ [@larmarange2025] is my package of choice. It also has other functionalities, which  we’ll return to in @sec-ggstats.
+
+#### Viz #5: PISA 2022 Questionnaire {#sec-pisa-2022-questionnaire}
+
+I was thinking of a good, open data source for the Likert chart. Most packages (ggstats included) use older __PISA__ (Programme for International Student Assessment) questionnaires for the example data. I was able to find more recent data and selected seven statements from the PISA 2022 Student Questionnaire [@oecd2023]. There was a lot of data to choose from, but I selected the statements that a) dealt with creativity and b) had the fewest number of NAs in the answers.
+
+```{r}
+#| echo:    false
+#| message: false
+#| warning: false
+#| results: asis
+
+pisa_2022_labels     <- read_csv("data/pisa_2022_can_fin_gbr_7_labels.csv")
+pisa_2022_statements <- read_csv("data/pisa_2022_can_fin_gbr_7_statements.csv")
+```
+
+I chose three countries to compare. Canada, Finland and Great Britain. I would've been interested in seeing a comparison between the US as well, but sadly the data was all NAs for these statements.
+
+Let's first take a look at the data we have.
+
+```{r}
+#| echo:    false
+#| message: false
+#| warning: false
+#| results: asis
+
+pisa_2022_statements %>%
+  paged_table()
+```
+
+There is a __country__ column, but the other columns each have answers to one of the statements. They all have a technical ID as a name (e.g., __ST339Q04JA__) and these possible values:
+
+* Strongly disagree
+* Disagree
+* Agree
+* Strongly agree
+* NA
+
+We can already take a look at what this data would look like visualized with one function, `gglikert()`. We don't want to include the country column yet.
+
+```{r}
+#| message: false
+#| warning: false
+
+library(ggstats)
+
+pisa_2022_statements %>%
+  gglikert(include = -country)
+```
+
+By default, `gglikert()` ignores the NA values. If we wanted to, we could turn them into a character string. And then use the __exclude_fill_values__ argument to "[count] them in the denominator for computing proportions" [@larmarange2025].
+
+Now, two things are wrong with this first plot.
+
+1. We don't know what the statements were (unless we go and look elsewhere)
+2. The categories aren't in the correct order. The default order for the _character_ type is alphabetical
+
+First, let's look at the labels we have in a separate tibble.
+
+```{r}
+#| echo:    false
+#| message: false
+#| warning: false
+#| results: asis
+
+pisa_2022_labels %>%
+  paged_table()
+```
+
+Let's turn them into a named vector that we can use. We'll use the `deframe()` function from **tibble** [@müller2023] for that.
+
+```{r}
+#| message: false
+#| warning: false
+
+library(tibble)
+
+pisa_2022_labels_vector <- pisa_2022_labels %>%
+  deframe()
+```
+
+```{r}
+#| echo:    false
+#| message: false
+#| warning: false
+
+pisa_2022_labels_vector
+```
+
+Then we'll create another vector for the agreement levels. Notice that they are now in the order we want them to be in.
+
+```{r}
+#| message: false
+#| warning: false
+
+agreement_levels <- c(
+  "Strongly disagree",
+  "Disagree",
+  "Agree",
+  "Strongly agree"
+)
+```
+
+We’ll convert the statement columns in our data set into factors. And we’ll use the `fct_relevel()` function to reorder those factors in the desired order.
+
+```{r}
+#| message: false
+#| warning: false
+
+pisa_2022_statements_refactored <- pisa_2022_statements %>%
+  mutate(
+    across(
+      -country,
+      ~ as_factor(.) %>% fct_relevel(agreement_levels)
+    )
+  )
+```
+
+Let’s see what the plot looks like now after those two changes.
+
+```{r}
+#| message: false
+#| warning: false
+
+pisa_2022_statements_refactored %>%
+  gglikert(
+    include         = -country,
+    variable_labels = pisa_2022_labels_vector
+  )
+```
+
+Much better! Let's try adding the country as a grouping variable. We have two basic options for arguments, __facet_cols__ and __facet_rows__. Let's first see what it would look like if we facet the plot with the countries as columns.
+
+```{r}
+#| message: false
+#| warning: false
+
+pisa_2022_statements %>%
+  gglikert(
+    include         = -country,
+    facet_cols      = vars(country),
+    variable_labels = pisa_2022_labels_vector
+  )
+```
+
+That makes it quite hard to compare the values between the countries. Let's see what it would look like if we facet the plot with the countries as rows.
+
+```{r}
+#| message: false
+#| warning: false
+
+pisa_2022_statements %>%
+  gglikert(
+    include         = -country,
+    facet_rows      = vars(country),
+    variable_labels = pisa_2022_labels_vector
+  )
+```
+
+That’s way too busy, and still, it’s hard to compare the countries. Luckily, we have a third option.
+
+We can facet the rows using the statements as the upper level. And then use the countries as a lower level. This way, the plot is both readable and easier to compare between the countries.
+
+The rest of the code is primarily used to make the visualization more presentable.
+
+```{r}
+#| message: false
+#| warning: false
+
+library(ggplot2) # for general plotting functions
+library(ggstats) # for Likert charts
+
+# Create a Likert chart for PISA 2022 student statements, faceted by statement
+gglikert(
+    
+    # Data
+    pisa_2022_statements_refactored,
+    
+    # Include all columns except 'country'
+    include = -country,
+    
+    # y-axis shows countries
+    y = "country",
+    
+    # Use custom labels for statements
+    variable_labels = pisa_2022_labels_vector,
+    
+    # Sort responses in descending order
+    sort = "descending",
+    
+    # Facet rows by statement variable
+    facet_rows = vars(.question)
+  ) +
+  
+  # Adjust facet grid layout: wrap statement labels and move to the left side
+  facet_grid(
+    
+    # Facet rows by statement variable
+    rows     = vars(.question),
+    
+    # Switch facet labels to the left side
+    switch   = "y",
+    
+    # Wrap long labels at 30 characters
+    labeller = label_wrap_gen(30)
+  ) +
+  
+  # Manually set Likert scale colors for each response level
+  scale_fill_manual(
+    values = c(
+      "Strongly disagree" = "#ca0020",
+      "Disagree"          = "#f4a582",
+      "Agree"             = "#92c5de",
+      "Strongly agree"    = "#0571b0"
+    )
+  ) +
+  
+  # Add title, subtitle, and caption to the plot
+  labs(
+    title    = "The majority of respondents in Canada, Finland, and Great Britain feel creative, even if they don't all express themselves through art",
+    subtitle = "PISA 2022 Student Questionnaire - a sample of 7 statements",
+    caption  = "Data: OECD | Visualization: Antti Rask"
+  ) +
+  
+  # Apply custom theme styling for text, facets, and layout
+  theme(
+    text                  = element_text(family = "wqy-microhei"),
+    axis.text             = element_text(color = "#333333"),
+    strip.background.y    = element_rect(fill = "#FFD166"),
+    strip.placement.y     = "top", # Place facet labels on top, or in this case, left
+    strip.text.y.left     = element_text(angle = 0, hjust = 0.5, color = "#333333"),
+    legend.margin         = margin(0, 0, 0, 0),
+    plot.caption          = element_text(hjust = 0, color = "#333333"),
+    plot.caption.position = "plot",
+    plot.margin           = margin(10, 10, 10, 10),
+    plot.title.position   = "plot"
+  )
+```
+
+The kids seem to be alright! At least when it comes to feeling creative. There are some interesting differences between the three countries, but nothing too extreme.
 
 ### Mosaic chart {#sec-mosaic-chart}
 

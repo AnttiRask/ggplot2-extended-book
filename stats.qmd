@@ -7,60 +7,62 @@
 source("warning.R")
 ```
 
-## Combining data visualization and statistical modeling
+## Combining data visualization and statistical modeling {#sec-combining-data-visualization-and-statistical-modeling}
 
-## Convex hull
+## Convex hull {#sec-convex-hull}
 
-## Inferential statistical tests
+## Inferential statistical tests {#sec-inferential-statistical-tests}
 
-### F-test
+### F-test {#sec-f-test}
 
-### Pearson's Chi-squared test
+### Pearson's Chi-squared test {#sec-pearsons-chi-squared-test}
 
-### Test for association between paired samples
+### Test for association between paired samples {#sec-test-for-association-between-paired-samples}
 
-### Test of equal or given proportions
+### Test of equal or given proportions {#sec-test-of-equal-or-given-proportions}
 
-### T-test
+### T-test {#sec-t-test}
 
-## Interaction plot
+## Interaction plot {#sec-interaction-plot}
 
-### CGPfunctions
+### CGPfunctions {#sec-CGPfunctions}
 
-## Linear regression
+## Linear regression {#sec-linear-regression}
 
-### Diagnostic plots
+### Diagnostic plots {#sec-diagnostic-plots}
 
-### Regression line equation and R-square
+### Regression line equation and R-squared {#sec-regression-line-equation-and-r-squared}
 
-## Lorenz Curve
+## Lorenz Curve {#sec-lorenz-curve}
 
-## Markov chain Monte Carlo
+## Markov chain Monte Carlo {#sec-markov-chain-monte-carlo}
 
-## Multi-stat binning layer
+## Multi-stat binning layer {#sec-multi-stat-binning-layer}
 
-## Overlay normal density plot
+## Overlay normal density plot {#sec-overlay-normal-density-plot}
 
-## P-values
+## P-values {#sec-p-values}
 
-## P-P plot
+## P-P plot {#sec-p-p-plot}
 
-## Q-Q plot
+## Q-Q plot {#sec-q-q-plot}
 
-## Quality control chart
+## Quality control chart {#sec-quality-control-chart}
 
-## Proportions according to custom denominator
+## Proportions according to custom denominator {#sec-proportions-according-to-custom-denominator}
 
-## Random rorests
+### ggstats {#sec-ggstats}
 
-## ROC curves
+## Random forests {#sec-random-forests}
 
-## Sample data and distribution vectors
+## ROC curves {#sec-roc-curves}
 
-## Seasonal adjustment
+## Sample data and distribution vectors {#sec-sample-data-and-distribution-vectors}
 
-## Statistics for reporting the results of model fits
+## Seasonal adjustment {#sec-seasonal-adjustment}
 
-## Survival analysis
+## Statistics for reporting the results of model fits {#sec-statistics-for-reporting-the-results-of-model-fits}
 
-## Tornado plot
+## Survival analysis {#sec-survival-analysis}
+
+## Tornado plot {#sec-tornado-plot}
