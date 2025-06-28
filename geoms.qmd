@@ -26,7 +26,7 @@ ggplot2 already has a [long list of geoms](https://ggplot2.tidyverse.org/referen
 
 Area charts are based on line charts. The area between the x-axis and each line (or the area between lines) is shaded to help highlight the volume of the data.
 
-In this chapter, we'll take a look at the __horizon chart__, an improved version of the __ribbon chart__, and the __streamgraph__. They are all different takes on the area chart.
+In this section, we'll take a look at the __horizon chart__, an improved version of the __ribbon chart__, and the __streamgraph__. They are all different takes on the area chart.
 
 ### Horizon chart {#sec-horizon-chart}
 
@@ -628,7 +628,7 @@ A streamgraph is a stacked area chart where the areas are positioned around the 
 
 #### Viz #4: ggplot2 dependencies {#sec-ggplot2-dependencies}
 
-If you’ve read the book in chronological order, you’ve already encountered a streamgraph in @sec-landscape. We will use that visualization as the example in this chapter.
+If you’ve read the book in chronological order, you’ve already encountered a streamgraph in @sec-landscape. We will use that visualization as the example in this section.
 
 The purpose of this visualization is to illustrate how the ggplot2 dependencies have evolved from a small speck in 2007 to their current state at the end of 2024. This is the exact use case for which I would use a streamgraph.
 
@@ -941,6 +941,10 @@ library(stringr)    # for string manipulation like str_glue()
 Streamgraph, like other area graphs, isn’t the best for making detailed comparisons between groups. But it's excellent for creating a broader picture of what’s going on in the data.
 
 ## Bar charts {#sec-bar-charts}
+
+Bar charts are the backbone of data visualization. And ggplot2 handles most types of bar charts out of the box. However, there are situations where you may want to take it a step further.
+
+In this section, we’ll take a look at the __Likert chart__ and the __mosaic chart__, also known as the __Marimekko chart__ or the __Mekko chart__, after the company (go Finland!).
 
 ### Likert chart {#sec-likert-chart}
 
