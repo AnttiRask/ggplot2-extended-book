@@ -92,7 +92,7 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-96f5e2a3ed94a11b6ec2c918708bf376.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-d750defc014fd27ac05477a74ef534d9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
@@ -1259,7 +1259,7 @@ This book/site is under construction
 <section id="sec-likert-chart" class="level3" data-number="3.2.1"><h3 data-number="3.2.1" class="anchored" data-anchor-id="sec-likert-chart">
 <span class="header-section-number">3.2.1</span> Likert chart</h3>
 <p>A Likert chart is a diverging stacked bar chart. It’s used to visualize responses to a questionnaire using the Likert (or similar) scale format. The “respondents are asked to indicate their degree of agreement or disagreement on a symmetric agree-disagree scale for each of a series of statements” <span class="citation" data-cites="burns2007">(<a href="references.html#ref-burns2007" role="doc-biblioref">Burns and Bush 2007</a>)</span>.</p>
-<p>For Likert charts, <strong>ggstats</strong> <span class="citation" data-cites="larmarange2025">(<a href="references.html#ref-larmarange2025" role="doc-biblioref">Larmarange 2025</a>)</span> is my package of choice. It also has other functionalities, which we’ll return to in <a href="stats.html#sec-ggstats" class="quarto-xref"><span>Section 4.14.1</span></a>.</p>
+<p>For Likert charts, <strong>ggstats</strong> <span class="citation" data-cites="larmarange2025a">(<a href="references.html#ref-larmarange2025a" role="doc-biblioref">Larmarange 2025</a>)</span> is my package of choice. It also has other functionalities, which we’ll return to in <a href="stats.html#sec-ggstats" class="quarto-xref"><span>Section 4.14.1</span></a>.</p>
 <section id="sec-pisa-2022-questionnaire" class="level4" data-number="3.2.1.1"><h4 data-number="3.2.1.1" class="anchored" data-anchor-id="sec-pisa-2022-questionnaire">
 <span class="header-section-number">3.2.1.1</span> Viz #5: PISA 2022 Questionnaire</h4>
 <p>I was thinking of a good, open data source for the Likert chart. Most packages (ggstats included) use older <strong>PISA</strong> (Programme for International Student Assessment) questionnaires for the example data. I was able to find more recent data and selected seven statements from the PISA 2022 Student Questionnaire <span class="citation" data-cites="oecd2023">(<a href="references.html#ref-oecd2023" role="doc-biblioref">OECD 2023</a>)</span>. There was a lot of data to choose from, but I selected the statements that a) dealt with creativity and b) had the fewest number of NAs in the answers.</p>
@@ -1291,7 +1291,7 @@ This book/site is under construction
 </div>
 </div>
 </div>
-<p>By default, <code><a href="https://larmarange.github.io/ggstats/reference/gglikert.html">gglikert()</a></code> ignores the NA values. If we wanted to, we could turn them into a character string. And then use the <strong>exclude_fill_values</strong> argument to “[count] them in the denominator for computing proportions” <span class="citation" data-cites="larmarange2025">(<a href="references.html#ref-larmarange2025" role="doc-biblioref">Larmarange 2025</a>)</span>.</p>
+<p>By default, <code><a href="https://larmarange.github.io/ggstats/reference/gglikert.html">gglikert()</a></code> ignores the NA values. If we wanted to, we could turn them into a character string. And then use the <strong>exclude_fill_values</strong> argument to “[count] them in the denominator for computing proportions” <span class="citation" data-cites="larmarange2025a">(<a href="references.html#ref-larmarange2025a" role="doc-biblioref">Larmarange 2025</a>)</span>.</p>
 <p>Now, two things are wrong with this first plot.</p>
 <ol type="1">
 <li>We don’t know what the statements were (unless we go and look elsewhere)</li>
@@ -1563,7 +1563,7 @@ Grantham, Neal. 2025. <em>Ggbraid: Braid Ribbons in ’Ggplot2’</em>. <a href=
 <div id="ref-ihaka2024" class="csl-entry" role="listitem">
 Ihaka, Ross, Paul Murrell, Kurt Hornik, Jason C. Fisher, Reto Stauffer, Claus O. Wilke, Claire D. McWhite, and Achim Zeileis. 2024. <em>Colorspace: A Toolbox for Manipulating and Assessing Colors and Palettes</em>. <a href="https://CRAN.R-project.org/package=colorspace">https://CRAN.R-project.org/package=colorspace</a>.
 </div>
-<div id="ref-larmarange2025" class="csl-entry" role="listitem">
+<div id="ref-larmarange2025a" class="csl-entry" role="listitem">
 Larmarange, Joseph. 2025. <em>Ggstats: Extension to ’Ggplot2’ for Plotting Stats</em>. <a href="https://larmarange.github.io/ggstats/">https://larmarange.github.io/ggstats/</a>.
 </div>
 <div id="ref-müller2023" class="csl-entry" role="listitem">

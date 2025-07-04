@@ -92,7 +92,7 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-96f5e2a3ed94a11b6ec2c918708bf376.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-d750defc014fd27ac05477a74ef534d9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
@@ -585,7 +585,7 @@ This chapter is now done!
 <span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><strong>Naniar</strong> <span class="citation" data-cites="tierney2024">(<a href="references.html#ref-tierney2024" role="doc-biblioref">Tierney et al. 2024</a>)</span> is a package with many functions for visualizing missing (NA) values. It does contain many functions outside of visualization. But that’s for another book.</p>
-<p>One simple function is <code><a href="https://naniar.njtierney.com/reference/gg_miss_var.html">gg_miss_var()</a></code>. It creates a lollipop plot ([INSERT LINK HERE]). It shows which columns (variables) contain the greatest amount of missing (NA) values.</p>
+<p>One simple function is <code><a href="https://naniar.njtierney.com/reference/gg_miss_var.html">gg_miss_var()</a></code>. It creates a lollipop chart (see <a href="geoms.html#sec-dumbbell-and-lollipop-chart" class="quarto-xref"><span>Section 3.7.2</span></a>). It shows which columns (variables) contain the greatest amount of missing (NA) values.</p>
 <div class="cell">
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/njtierney/naniar">naniar</a></span><span class="op">)</span></span>
 <span></span>
@@ -600,7 +600,7 @@ This chapter is now done!
 </div>
 </div>
 <p>We can see that <em>MPAA ratings</em> aren’t the only thing missing. Almost the same amount of films are missing the <strong>budget</strong> information. With budget, it’s easier to say that if we don’t have a number, it is missing. Then again, that column did have NAs in place from the beginning.</p>
-<p>We’re also interested in seeing if there is overlapping <em>missingness</em> between the columns. It can indicate patterns in the data. We’ll use an upset plot ([INSERT LINK HERE]) for that. Just add <code><a href="https://naniar.njtierney.com/reference/gg_miss_upset.html">gg_miss_upset()</a></code>.</p>
+<p>We’re also interested in seeing if there is overlapping <em>missingness</em> between the columns. It can indicate patterns in the data. We’ll use an UpSet diagram (see <a href="geoms.html#sec-upset-diagram" class="quarto-xref"><span>Section 3.6.1</span></a>) for that. Just add <code><a href="https://naniar.njtierney.com/reference/gg_miss_upset.html">gg_miss_upset()</a></code>.</p>
 <div class="cell">
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">movies_na</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://naniar.njtierney.com/reference/gg_miss_upset.html">gg_miss_upset</a></span><span class="op">(</span></span>
@@ -673,7 +673,7 @@ This chapter is now done!
 <span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><img src="data_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid" width="672"></p>
 <p>You see the amount and percentage of NAs per column, arranged in order of missingness. This is a great quick overview!</p>
-<p>DataExplorer, like naniar earlier, provides functions for handling the missing values. For instance, we could drop the budget and mpaa columns, as indicated by the red color in the plot above.</p>
+<p>DataExplorer, like naniar earlier, provides functions for handling the missing values. For instance, we could drop the budget and mpaa columns, as indicated by the red color in the above plot.</p>
 </section><section id="sec-summarizing-data" class="level3" data-number="2.2.2"><h3 data-number="2.2.2" class="anchored" data-anchor-id="sec-summarizing-data">
 <span class="header-section-number">2.2.2</span> Summarizing data</h3>
 <p>Of course, we want to visualize more than the missing data. It makes sense to start with an overview of some kind.</p>
@@ -740,7 +740,7 @@ This chapter is now done!
 <div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">movies_na_length_under_500</span> <span class="op">&lt;-</span> <span class="va">movies_na</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">budget</span>, <span class="va">length</span>, <span class="va">rating</span>, <span class="va">votes</span>, <span class="va">year</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">length</span> <span class="op">&lt;</span> <span class="fl">500</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Let’s see how the four columns, length, rating, votes, and year look like as a box plot when grouped by budget. Budget is a continuous variable. That’s why <code><a href="http://boxuancui.github.io/DataExplorer/reference/plot_boxplot.html">plot_boxplot()</a></code> groups the values to 5 equal ranges.</p>
+<p>Let’s see how the four columns, length, rating, votes, and year look like as a boxplot when grouped by budget. Budget is a continuous variable. That’s why <code><a href="http://boxuancui.github.io/DataExplorer/reference/plot_boxplot.html">plot_boxplot()</a></code> groups the values to 5 equal ranges.</p>
 <div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">movies_na_length_under_500</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="http://boxuancui.github.io/DataExplorer/reference/plot_boxplot.html">plot_boxplot</a></span><span class="op">(</span></span>
 <span>    by      <span class="op">=</span> <span class="st">"budget"</span>,</span>
@@ -748,7 +748,7 @@ This chapter is now done!
 <span>    ncol    <span class="op">=</span> <span class="fl">4</span></span>
 <span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><img src="data_files/figure-html/unnamed-chunk-36-1.png" class="img-fluid" width="672"></p>
-<p>Based on the box plot, the movies with a bigger budget tend to:</p>
+<p>Based on the boxplot, the movies with a bigger budget tend to:</p>
 <ul>
 <li>have ratings inside a narrower range</li>
 <li>have better ratings</li>
@@ -756,7 +756,7 @@ This chapter is now done!
 <li>be more recent</li>
 <li>be longer</li>
 </ul>
-<p>Let’s then take a look at what this all looks like as a scatter plot. We’ll use all the same columns. It’s important to use an <em>alpha</em> value that is low enough to reveal a more nuanced picture than we would see if it was 1.</p>
+<p>Let’s then take a look at what this all looks like as a scatter chart. We’ll use all the same columns. It’s important to use an <em>alpha</em> value that is low enough to reveal a more nuanced picture than we would see if it was 1.</p>
 <div class="sourceCode" id="cb27"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">movies_na_length_under_500</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="http://boxuancui.github.io/DataExplorer/reference/plot_scatterplot.html">plot_scatterplot</a></span><span class="op">(</span></span>
 <span>    by              <span class="op">=</span> <span class="st">"budget"</span>,</span>
@@ -769,7 +769,7 @@ This chapter is now done!
 <p>To conclude, DataExplorer has a function, <code><a href="http://boxuancui.github.io/DataExplorer/reference/create_report.html">create_report()</a></code>. It creates a full EDA report from scratch. We won’t use that now, because the report would take too much space. But if you’re using DataExplorer, you should try it!</p>
 </section><section id="sec-gt-gtextras" class="level4" data-number="2.2.2.4"><h4 data-number="2.2.2.4" class="anchored" data-anchor-id="sec-gt-gtextras">
 <span class="header-section-number">2.2.2.4</span> gt &amp; gtExtras</h4>
-<p>DataExplorer is a good package, but it’s not the only game in town for EDA. <strong>gt</strong> <span class="citation" data-cites="iannone2024">(<a href="references.html#ref-iannone2024" role="doc-biblioref">Iannone et al. 2025</a>)</span> is a package to create tables ([INSERT LINK HERE]) with.</p>
+<p>DataExplorer is a good package, but it’s not the only game in town for EDA. <strong>gt</strong> <span class="citation" data-cites="iannone2024">(<a href="references.html#ref-iannone2024" role="doc-biblioref">Iannone et al. 2025</a>)</span> is a package to create tables (see <a href="tables.html" class="quarto-xref"><span>Chapter 14</span></a>) with.</p>
 <p>Often, when you think about tables, you think about numeric and text values. But that doesn’t have to be the case. With <strong>gtExtras</strong> <span class="citation" data-cites="mock2023">(<a href="references.html#ref-mock2023" role="doc-biblioref">Mock 2025</a>)</span> you can create a fast and easy visual summary of your data. The <code><a href="https://jthomasmock.github.io/gtExtras/reference/gt_plt_summary.html">gt_plt_summary()</a></code> function is all you need.</p>
 <p>The function does have some limitations. It has had some issues with certain data sets. The movies data set didn’t work, for instance. That’s why we’ll take a look at the WorldPhones data set instead.</p>
 <div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://gt.rstudio.com">gt</a></span><span class="op">)</span></span>
@@ -1297,7 +1297,7 @@ Africa, Asia, Europe, Mid.Amer, N.Amer, Oceania and S.Amer
 </tbody>
 </table>
 </div>
-<p>What we get is a table that combines a visualized plot overview with basic summary elements: <em>missing</em>, <em>mean</em>, <em>median</em>, and <em>standard deviation (sd)</em>). You can also see from the icon on the left, whether the column is categorical or continuous. With the categorical columns, you can see a list of the categorical values by clicking the arrow.</p>
+<p>What we get is a table that combines a plot overview with basic summary elements: <em>missing</em>, <em>mean</em>, <em>median</em>, and <em>standard deviation (sd)</em>). You can also see from the icon on the left, whether the column is categorical or continuous. With the categorical columns, you can see a list of the categorical values by clicking the arrow.</p>
 </section></section><section id="sec-visualizing-relationships" class="level3" data-number="2.2.3"><h3 data-number="2.2.3" class="anchored" data-anchor-id="sec-visualizing-relationships">
 <span class="header-section-number">2.2.3</span> Visualizing relationships</h3>
 <p>Most of the summarization techniques we’ve used so far have dealt with the distribution of values within one variable. But it’s also important to understand the possible relationships between different variables.</p>
@@ -1406,8 +1406,8 @@ Africa, Asia, Europe, Mid.Amer, N.Amer, Oceania and S.Amer
 <p>The matrix consists of three areas: <strong>upper</strong>, <strong>lower</strong>, and <em>diagonal</em> (or <strong>diag</strong> when it comes to function parameters). They can contain different types of plots and are customizable. But let’s first look at the defaults:</p>
 <ul>
 <li>Upper contains the correlation coefficient between the two variables</li>
-<li>Lower contains a scatter plot of the two variables</li>
-<li>Diagonal contains a density plot of the variable in question</li>
+<li>Lower contains a scatter chart of the two variables</li>
+<li>Diagonal contains a density chart of the variable in question</li>
 </ul>
 <p>It’s time to add Drama as color for the matrix. And also do some customizations:</p>
 <ul>
@@ -1416,9 +1416,9 @@ Africa, Asia, Europe, Mid.Amer, N.Amer, Oceania and S.Amer
 <li>We can use <em>functions</em> to customize any part of the matrix
 <ul>
 <li>
-<code>lower_function()</code> creates a scatter plot where the points are somewhat transparent (alpha = 0.5). There is also a red linear trend line</li>
+<code>lower_function()</code> creates a scatter chart where the points are somewhat transparent (alpha = 0.5). There is also a red linear trend line</li>
 <li>
-<code>diag_function()</code> creates a density plot. But why do we need to do that when the default already does the same? For some reason, default uses default colors, even if we map the colors as we have. But our function here does the trick</li>
+<code>diag_function()</code> creates a density chart. But why do we need to do that when the default already does the same? For some reason, default uses default colors, even if we map the colors as we have. But our function here does the trick</li>
 </ul>
 </li>
 <li>Then we simply create the matrix</li>
@@ -1463,7 +1463,7 @@ Africa, Asia, Europe, Mid.Amer, N.Amer, Oceania and S.Amer
 <ul>
 <li>Use <strong>shiny</strong> <span class="citation" data-cites="chang2024">(<a href="references.html#ref-chang2024" role="doc-biblioref">Chang et al. 2024</a>)</span> to provide interactive web-based interfaces.</li>
 <li>Cut the coding required. In most cases, you load your data and call a single function to start the app.</li>
-<li>Enable interactive exploration. As you adjust inputs in the UI (select variables, filters, plot types, etc.), the output updates immediately in your browser.</li>
+<li>Enable interactive exploration. As you adjust inputs in the UI (select variables, filters, chart types, etc.), the output updates immediately in your browser.</li>
 <li>Support exporting your results in some form.</li>
 </ul>
 <p>They differ in the scope of analysis and the amount of available features. This also affects the composition of their respective target audiences. Let’s take a closer look at each of them.</p>
@@ -1482,8 +1482,8 @@ Africa, Asia, Europe, Mid.Amer, N.Amer, Oceania and S.Amer
 </div>
 <p>Here’s an example screenshot of the <strong>Scatter Plot</strong> section of the app. You choose the variables with the dropdown menus. There can be extra choices to make. In this case, whether to use a smaller sample and display a smoother as seen in <a href="#sec-pairwise-plot-matrix" class="quarto-xref"><span>Section 2.2.3.2</span></a>.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/figure-2-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure 2.1: A similar scatter plot to the one we created with DataExplorer in sec-numerical-columns"><img src="img/figure-2-1.png" class="img-fluid figure-img" alt="Figure 2.1: A similar scatter plot to the one we created with DataExplorer in sec-numerical-columns"></a></p>
-<figcaption>Figure 2.1: A similar scatter plot to the one we created with DataExplorer in <a href="#sec-numerical-columns" class="quarto-xref"><span>Section 2.2.2.3</span></a></figcaption></figure>
+<figure class="figure"><p><a href="img/figure-2-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure 2.1: A similar scatter chart to the one we created with DataExplorer in sec-numerical-columns"><img src="img/figure-2-1.png" class="img-fluid figure-img" alt="Figure 2.1: A similar scatter chart to the one we created with DataExplorer in sec-numerical-columns"></a></p>
+<figcaption>Figure 2.1: A similar scatter chart to the one we created with DataExplorer in <a href="#sec-numerical-columns" class="quarto-xref"><span>Section 2.2.2.3</span></a></figcaption></figure>
 </div>
 <p>For a full working example of the app in action, visit <a href="https://jgassen.shinyapps.io/expacc/">Exploring the Accrual Landscape by Open Science</a>.</p>
 </section><section id="sec-ggquickeda" class="level4" data-number="2.2.4.2"><h4 data-number="2.2.4.2" class="anchored" data-anchor-id="sec-ggquickeda">
@@ -1499,8 +1499,8 @@ Africa, Asia, Europe, Mid.Amer, N.Amer, Oceania and S.Amer
 </div>
 <p>Here’s an example screenshot of the <strong>X/Y Plot</strong> section of the app. There are more choices to make compared to ExPanDaR.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/figure-2-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure 2.2: Another similar scatter plot to the one we created with DataExplorer in sec-numerical-columns"><img src="img/figure-2-2.png" class="img-fluid figure-img" alt="Figure 2.2: Another similar scatter plot to the one we created with DataExplorer in sec-numerical-columns"></a></p>
-<figcaption>Figure 2.2: Another similar scatter plot to the one we created with DataExplorer in <a href="#sec-numerical-columns" class="quarto-xref"><span>Section 2.2.2.3</span></a></figcaption></figure>
+<figure class="figure"><p><a href="img/figure-2-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure 2.2: Another similar scatter chart to the one we created with DataExplorer in sec-numerical-columns"><img src="img/figure-2-2.png" class="img-fluid figure-img" alt="Figure 2.2: Another similar scatter chart to the one we created with DataExplorer in sec-numerical-columns"></a></p>
+<figcaption>Figure 2.2: Another similar scatter chart to the one we created with DataExplorer in <a href="#sec-numerical-columns" class="quarto-xref"><span>Section 2.2.2.3</span></a></figcaption></figure>
 </div>
 <p>For a more comprehensive introduction to the features, there’s an <a href="https://certara.github.io/R-Certara/articles/lesson_3.html">hour-long webinar from Certara R School</a>.</p>
 </section><section id="sec-radiant" class="level4" data-number="2.2.4.3"><h4 data-number="2.2.4.3" class="anchored" data-anchor-id="sec-radiant">
@@ -1523,8 +1523,8 @@ Africa, Asia, Europe, Mid.Amer, N.Amer, Oceania and S.Amer
 </div>
 <p>Here’s an example screenshot of the <strong>Visualize</strong> section of the app. The app design is closer to ggquickeda than ExPanDaR.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/figure-2-4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure 2.4: Yet another similar scatter plot to the one we created with DataExplorer in sec-numerical-columns"><img src="img/figure-2-4.png" class="img-fluid figure-img" alt="Figure 2.4: Yet another similar scatter plot to the one we created with DataExplorer in sec-numerical-columns"></a></p>
-<figcaption>Figure 2.4: Yet another similar scatter plot to the one we created with DataExplorer in <a href="#sec-numerical-columns" class="quarto-xref"><span>Section 2.2.2.3</span></a></figcaption></figure>
+<figure class="figure"><p><a href="img/figure-2-4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure 2.4: Yet another similar scatter chart to the one we created with DataExplorer in sec-numerical-columns"><img src="img/figure-2-4.png" class="img-fluid figure-img" alt="Figure 2.4: Yet another similar scatter chart to the one we created with DataExplorer in sec-numerical-columns"></a></p>
+<figcaption>Figure 2.4: Yet another similar scatter chart to the one we created with DataExplorer in <a href="#sec-numerical-columns" class="quarto-xref"><span>Section 2.2.2.3</span></a></figcaption></figure>
 </div>
 <p>For a more comprehensive introduction to the features, check the <a href="https://radiant-rstats.github.io/docs/radiant-tutorial-series.html">Radiant Tutorial Video Series</a>.</p>
 </section><section id="sec-comparative-summary" class="level4" data-number="2.2.4.4"><h4 data-number="2.2.4.4" class="anchored" data-anchor-id="sec-comparative-summary">

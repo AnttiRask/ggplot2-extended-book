@@ -358,7 +358,7 @@ movies_na <- movies %>%
 
 **Naniar** [@tierney2024] is a package with many functions for visualizing missing (NA) values. It does contain many functions outside of visualization. But that's for another book.
 
-One simple function is `gg_miss_var()`. It creates a lollipop plot (\[INSERT LINK HERE\]). It shows which columns (variables) contain the greatest amount of missing (NA) values.
+One simple function is `gg_miss_var()`. It creates a lollipop chart (see @sec-dumbbell-and-lollipop-chart). It shows which columns (variables) contain the greatest amount of missing (NA) values.
 
 ```{r}
 library(naniar)
@@ -370,7 +370,7 @@ movies_na %>%
 
 We can see that *MPAA ratings* aren't the only thing missing. Almost the same amount of films are missing the **budget** information. With budget, it's easier to say that if we don't have a number, it is missing. Then again, that column did have NAs in place from the beginning.
 
-We're also interested in seeing if there is overlapping *missingness* between the columns. It can indicate patterns in the data. We'll use an upset plot (\[INSERT LINK HERE\]) for that. Just add `gg_miss_upset()`.
+We're also interested in seeing if there is overlapping *missingness* between the columns. It can indicate patterns in the data. We'll use an UpSet diagram (see @sec-upset-diagram) for that. Just add `gg_miss_upset()`.
 
 ```{r}
 movies_na %>% 
@@ -473,7 +473,7 @@ movies_na %>%
 
 You see the amount and percentage of NAs per column, arranged in order of missingness. This is a great quick overview!
 
-DataExplorer, like naniar earlier, provides functions for handling the missing values. For instance, we could drop the budget and mpaa columns, as indicated by the red color in the plot above.
+DataExplorer, like naniar earlier, provides functions for handling the missing values. For instance, we could drop the budget and mpaa columns, as indicated by the red color in the above plot.
 
 ### Summarizing data {#sec-summarizing-data}
 
@@ -589,7 +589,7 @@ movies_na_length_under_500 <- movies_na %>%
   filter(length < 500)
 ```
 
-Let's see how the four columns, length, rating, votes, and year look like as a box plot when grouped by budget. Budget is a continuous variable. That's why `plot_boxplot()` groups the values to 5 equal ranges.
+Let's see how the four columns, length, rating, votes, and year look like as a boxplot when grouped by budget. Budget is a continuous variable. That's why `plot_boxplot()` groups the values to 5 equal ranges.
 
 ```{r}
 #| message: false
@@ -604,7 +604,7 @@ movies_na_length_under_500 %>%
   )
 ```
 
-Based on the box plot, the movies with a bigger budget tend to:
+Based on the boxplot, the movies with a bigger budget tend to:
 
 -   have ratings inside a narrower range
 -   have better ratings
@@ -612,7 +612,7 @@ Based on the box plot, the movies with a bigger budget tend to:
 -   be more recent
 -   be longer
 
-Let's then take a look at what this all looks like as a scatter plot. We'll use all the same columns. It's important to use an *alpha* value that is low enough to reveal a more nuanced picture than we would see if it was 1.
+Let's then take a look at what this all looks like as a scatter chart. We'll use all the same columns. It's important to use an *alpha* value that is low enough to reveal a more nuanced picture than we would see if it was 1.
 
 ```{r}
 #| message: false
@@ -634,7 +634,7 @@ To conclude, DataExplorer has a function, `create_report()`. It creates a full E
 
 #### gt & gtExtras {#sec-gt-gtextras}
 
-DataExplorer is a good package, but it's not the only game in town for EDA. **gt** [@iannone2024] is a package to create tables (\[INSERT LINK HERE\]) with.
+DataExplorer is a good package, but it's not the only game in town for EDA. **gt** [@iannone2024] is a package to create tables (see @sec-tables) with.
 
 Often, when you think about tables, you think about numeric and text values. But that doesn't have to be the case. With **gtExtras** [@mock2023] you can create a fast and easy visual summary of your data. The `gt_plt_summary()` function is all you need.
 
@@ -652,7 +652,7 @@ world_phones_tbl %>%
   gt_plt_summary()
 ```
 
-What we get is a table that combines a visualized plot overview with basic summary elements: *missing*, *mean*, *median*, and *standard deviation (sd)*). You can also see from the icon on the left, whether the column is categorical or continuous. With the categorical columns, you can see a list of the categorical values by clicking the arrow.
+What we get is a table that combines a plot overview with basic summary elements: *missing*, *mean*, *median*, and *standard deviation (sd)*). You can also see from the icon on the left, whether the column is categorical or continuous. With the categorical columns, you can see a list of the categorical values by clicking the arrow.
 
 ### Visualizing relationships {#sec-visualizing-relationships}
 
@@ -836,15 +836,15 @@ movies_without_na_drama %>%
 The matrix consists of three areas: **upper**, **lower**, and *diagonal* (or **diag** when it comes to function parameters). They can contain different types of plots and are customizable. But let's first look at the defaults:
 
 -   Upper contains the correlation coefficient between the two variables
--   Lower contains a scatter plot of the two variables
--   Diagonal contains a density plot of the variable in question
+-   Lower contains a scatter chart of the two variables
+-   Diagonal contains a density chart of the variable in question
 
 It's time to add Drama as color for the matrix. And also do some customizations:
 
 -   We know Drama is either "No" or "Yes", so let's pick two colors that go well together, *dark orange* and *dark turquoise*
 -   We can use *functions* to customize any part of the matrix
-    -   `lower_function()` creates a scatter plot where the points are somewhat transparent (alpha = 0.5). There is also a red linear trend line
-    -   `diag_function()` creates a density plot. But why do we need to do that when the default already does the same? For some reason, default uses default colors, even if we map the colors as we have. But our function here does the trick
+    -   `lower_function()` creates a scatter chart where the points are somewhat transparent (alpha = 0.5). There is also a red linear trend line
+    -   `diag_function()` creates a density chart. But why do we need to do that when the default already does the same? For some reason, default uses default colors, even if we map the colors as we have. But our function here does the trick
 -   Then we simply create the matrix
 
 ```{r}
@@ -897,7 +897,7 @@ Let's start with the similarities:
 
 -   Use **shiny** [@chang2024] to provide interactive web-based interfaces.
 -   Cut the coding required. In most cases, you load your data and call a single function to start the app.
--   Enable interactive exploration. As you adjust inputs in the UI (select variables, filters, plot types, etc.), the output updates immediately in your browser.
+-   Enable interactive exploration. As you adjust inputs in the UI (select variables, filters, chart types, etc.), the output updates immediately in your browser.
 -   Support exporting your results in some form.
 
 They differ in the scope of analysis and the amount of available features. This also affects the composition of their respective target audiences. Let's take a closer look at each of them.
@@ -925,7 +925,7 @@ movies_na_length_under_500 %>%
 
 Here's an example screenshot of the **Scatter Plot** section of the app. You choose the variables with the dropdown menus. There can be extra choices to make. In this case, whether to use a smaller sample and display a smoother as seen in @sec-pairwise-plot-matrix.
 
-![Figure 2.1: A similar scatter plot to the one we created with DataExplorer in @sec-numerical-columns](img/figure-2-1.png){.lightbox}
+![Figure 2.1: A similar scatter chart to the one we created with DataExplorer in @sec-numerical-columns](img/figure-2-1.png){.lightbox}
 
 For a full working example of the app in action, visit [Exploring the Accrual Landscape by Open Science](https://jgassen.shinyapps.io/expacc/).
 
@@ -948,7 +948,7 @@ movies_na_length_under_500 %>%
 
 Here's an example screenshot of the **X/Y Plot** section of the app. There are more choices to make compared to ExPanDaR.
 
-![Figure 2.2: Another similar scatter plot to the one we created with DataExplorer in @sec-numerical-columns](img/figure-2-2.png){.lightbox}
+![Figure 2.2: Another similar scatter chart to the one we created with DataExplorer in @sec-numerical-columns](img/figure-2-2.png){.lightbox}
 
 For a more comprehensive introduction to the features, there's an [hour-long webinar from Certara R School](https://certara.github.io/R-Certara/articles/lesson_3.html).
 
@@ -978,7 +978,7 @@ Since we can't provide radiant with the data set in the code, we'll do it inside
 
 Here's an example screenshot of the **Visualize** section of the app. The app design is closer to ggquickeda than ExPanDaR.
 
-![Figure 2.4: Yet another similar scatter plot to the one we created with DataExplorer in @sec-numerical-columns](img/figure-2-4.png){.lightbox}
+![Figure 2.4: Yet another similar scatter chart to the one we created with DataExplorer in @sec-numerical-columns](img/figure-2-4.png){.lightbox}
 
 For a more comprehensive introduction to the features, check the [Radiant Tutorial Video Series](https://radiant-rstats.github.io/docs/radiant-tutorial-series.html).
 

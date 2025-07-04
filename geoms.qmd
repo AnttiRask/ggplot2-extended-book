@@ -951,7 +951,7 @@ In this section, we’ll take a look at the __Likert chart__ and the __mosaic ch
 
 A Likert chart is a diverging stacked bar chart. It’s used to visualize responses to a questionnaire using the Likert (or similar) scale format. The “respondents are asked to indicate their degree of agreement or disagreement on a symmetric agree-disagree scale for each of a series of statements” [@burns2007].
 
-For Likert charts, __ggstats__ [@larmarange2025] is my package of choice. It also has other functionalities, which  we’ll return to in @sec-ggstats.
+For Likert charts, __ggstats__ [@larmarange2025a] is my package of choice. It also has other functionalities, which  we’ll return to in @sec-ggstats.
 
 #### Viz #5: PISA 2022 Questionnaire {#sec-pisa-2022-questionnaire}
 
@@ -1001,7 +1001,7 @@ pisa_2022_statements %>%
   gglikert(include = -country)
 ```
 
-By default, `gglikert()` ignores the NA values. If we wanted to, we could turn them into a character string. And then use the __exclude_fill_values__ argument to "[count] them in the denominator for computing proportions" [@larmarange2025].
+By default, `gglikert()` ignores the NA values. If we wanted to, we could turn them into a character string. And then use the __exclude_fill_values__ argument to "[count] them in the denominator for computing proportions" [@larmarange2025a].
 
 Now, two things are wrong with this first plot.
 
