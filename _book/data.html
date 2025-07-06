@@ -92,7 +92,7 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d750defc014fd27ac05477a74ef534d9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-96f5e2a3ed94a11b6ec2c918708bf376.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
@@ -585,11 +585,7 @@ This chapter is now done!
 <span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><strong>Naniar</strong> <span class="citation" data-cites="tierney2024">(<a href="references.html#ref-tierney2024" role="doc-biblioref">Tierney et al. 2024</a>)</span> is a package with many functions for visualizing missing (NA) values. It does contain many functions outside of visualization. But that’s for another book.</p>
-<<<<<<< HEAD
-<p>One simple function is <code><a href="https://naniar.njtierney.com/reference/gg_miss_var.html">gg_miss_var()</a></code>. It creates a lollipop plot (see <a href="geoms.html#sec-dumbbell-and-lollipop-chart" class="quarto-xref"><span>Section 3.7.2</span></a>). It shows which columns (variables) contain the greatest amount of missing (NA) values.</p>
-=======
 <p>One simple function is <code><a href="https://naniar.njtierney.com/reference/gg_miss_var.html">gg_miss_var()</a></code>. It creates a lollipop chart (see <a href="geoms.html#sec-dumbbell-and-lollipop-chart" class="quarto-xref"><span>Section 3.7.2</span></a>). It shows which columns (variables) contain the greatest amount of missing (NA) values.</p>
->>>>>>> 3171a6cedb4e0729469d2102537b0708e3df870a
 <div class="cell">
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/njtierney/naniar">naniar</a></span><span class="op">)</span></span>
 <span></span>
@@ -604,11 +600,7 @@ This chapter is now done!
 </div>
 </div>
 <p>We can see that <em>MPAA ratings</em> aren’t the only thing missing. Almost the same amount of films are missing the <strong>budget</strong> information. With budget, it’s easier to say that if we don’t have a number, it is missing. Then again, that column did have NAs in place from the beginning.</p>
-<<<<<<< HEAD
-<p>We’re also interested in seeing if there is overlapping <em>missingness</em> between the columns. It can indicate patterns in the data. We’ll use an UpSet plot (see <a href="geoms.html#sec-upset-diagram" class="quarto-xref"><span>Section 3.6.1</span></a>) for that. Just add <code><a href="https://naniar.njtierney.com/reference/gg_miss_upset.html">gg_miss_upset()</a></code>.</p>
-=======
 <p>We’re also interested in seeing if there is overlapping <em>missingness</em> between the columns. It can indicate patterns in the data. We’ll use an UpSet diagram (see <a href="geoms.html#sec-upset-diagram" class="quarto-xref"><span>Section 3.6.1</span></a>) for that. Just add <code><a href="https://naniar.njtierney.com/reference/gg_miss_upset.html">gg_miss_upset()</a></code>.</p>
->>>>>>> 3171a6cedb4e0729469d2102537b0708e3df870a
 <div class="cell">
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">movies_na</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://naniar.njtierney.com/reference/gg_miss_upset.html">gg_miss_upset</a></span><span class="op">(</span></span>
@@ -777,11 +769,7 @@ This chapter is now done!
 <p>To conclude, DataExplorer has a function, <code><a href="http://boxuancui.github.io/DataExplorer/reference/create_report.html">create_report()</a></code>. It creates a full EDA report from scratch. We won’t use that now, because the report would take too much space. But if you’re using DataExplorer, you should try it!</p>
 </section><section id="sec-gt-gtextras" class="level4" data-number="2.2.2.4"><h4 data-number="2.2.2.4" class="anchored" data-anchor-id="sec-gt-gtextras">
 <span class="header-section-number">2.2.2.4</span> gt &amp; gtExtras</h4>
-<<<<<<< HEAD
 <p>DataExplorer is a good package, but it’s not the only game in town for EDA. <strong>gt</strong> <span class="citation" data-cites="iannone2024">(<a href="references.html#ref-iannone2024" role="doc-biblioref">Iannone et al. 2025</a>)</span> is a package to create tables (<a href="tables.html" class="quarto-xref"><span>Chapter 14</span></a>) with.</p>
-=======
-<p>DataExplorer is a good package, but it’s not the only game in town for EDA. <strong>gt</strong> <span class="citation" data-cites="iannone2024">(<a href="references.html#ref-iannone2024" role="doc-biblioref">Iannone et al. 2025</a>)</span> is a package to create tables (see <a href="tables.html" class="quarto-xref"><span>Chapter 14</span></a>) with.</p>
->>>>>>> 3171a6cedb4e0729469d2102537b0708e3df870a
 <p>Often, when you think about tables, you think about numeric and text values. But that doesn’t have to be the case. With <strong>gtExtras</strong> <span class="citation" data-cites="mock2023">(<a href="references.html#ref-mock2023" role="doc-biblioref">Mock 2025</a>)</span> you can create a fast and easy visual summary of your data. The <code><a href="https://jthomasmock.github.io/gtExtras/reference/gt_plt_summary.html">gt_plt_summary()</a></code> function is all you need.</p>
 <p>The function does have some limitations. It has had some issues with certain data sets. The movies data set didn’t work, for instance. That’s why we’ll take a look at the WorldPhones data set instead.</p>
 <div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://gt.rstudio.com">gt</a></span><span class="op">)</span></span>
