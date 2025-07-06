@@ -198,6 +198,7 @@ install.packages(
     "GGally",
     "ggcorrplot",
     "ggHoriPlot",
+    "ggmosaic",
     "ggplot2movies",
     "ggquickeda",
     "ggrepel",
@@ -207,6 +208,7 @@ install.packages(
     "ggthemes",
     "gt",
     "gtExtras",
+    "labelled", # Needed with ggmosaic
     "naniar",
     "radiant",
     "showtext"
@@ -334,6 +336,7 @@ pkgs <- c(
   "ggbraid",
   "ggcorrplot",
   "ggHoriPlot",
+  "ggmosaic",
   "ggplot2",
   "ggplot2movies",
   "ggquickeda",
@@ -345,6 +348,7 @@ pkgs <- c(
   "gt",
   "gtExtras",
   "janitor",
+  "labelled",
   "lubridate",
   "naniar",
   "purrr",

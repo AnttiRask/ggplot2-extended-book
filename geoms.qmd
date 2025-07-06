@@ -951,7 +951,7 @@ In this section, we’ll take a look at the __Likert chart__ and the __mosaic ch
 
 A Likert chart is a diverging stacked bar chart. It’s used to visualize responses to a questionnaire using the Likert (or similar) scale format. The “respondents are asked to indicate their degree of agreement or disagreement on a symmetric agree-disagree scale for each of a series of statements” [@burns2007].
 
-For Likert charts, __ggstats__ [@larmarange2025] is my package of choice. It also has other functionalities, which  we’ll return to in @sec-ggstats.
+For Likert charts, __ggstats__ [@larmarange2025a] is my package of choice. It also has other functionalities, which  we’ll return to in @sec-ggstats.
 
 #### Viz #5: PISA 2022 Questionnaire {#sec-pisa-2022-questionnaire}
 
@@ -1001,7 +1001,7 @@ pisa_2022_statements %>%
   gglikert(include = -country)
 ```
 
-By default, `gglikert()` ignores the NA values. If we wanted to, we could turn them into a character string. And then use the __exclude_fill_values__ argument to "[count] them in the denominator for computing proportions" [@larmarange2025].
+By default, `gglikert()` ignores the NA values. If we wanted to, we could turn them into a character string. And then use the __exclude_fill_values__ argument to "[count] them in the denominator for computing proportions" [@larmarange2025a].
 
 Now, two things are wrong with this first plot.
 
@@ -1193,6 +1193,236 @@ gglikert(
 The kids seem to be alright! At least when it comes to feeling creative. There are some interesting differences between the three countries, but nothing too extreme.
 
 ### Mosaic chart {#sec-mosaic-chart}
+
+A mosaic chart is a special type of stacked bar chart. It differs from a normal one in that “the heights and widths of individual shaded areas vary” [@wilke2019].
+
+To create a mosaic chart, we’ll be using __ggmosaic__ [@jeppson2021]. You can use it to create bar charts, stacked bar charts, mosaic charts, and double-decker charts. But we’ll be concentrating on the mosaic chart.
+
+To use ggmosaic, you’ll also have to install __labelled__ [@larmarange2025b]. If you don’t, ggmosaic will remind you of this fact when you try to run your code for the first time.
+
+#### Viz #6: IMDB movies, Part II {#sec-viz-2-imdb-movies-part-ii}
+
+We return to the IMDB movies data set. This time looking at how many movies in each genre have a certain _MPAA rating_ (among those movies that have a rating in the first place).
+
+We’ll use the already familiar movies_na data set. But we’ll have to make some adjustments to get it ready for ggmosaic.
+
+The new function here is `fct_infreq()`. It helps us order the factor levels by size, even though we don’t have a separate column for those counts.
+
+```{r}
+#| message: false
+#| warning: false
+
+# Transform and filter the `movies_na` data set
+movies_ggmosaic <- movies_na %>%
+  
+  # Pivot genre columns (from Action to Short) into long format:
+  # Creates two columns: "genre" and "value"
+  pivot_longer(Action:Short, names_to = "genre") %>%
+  
+  # Filter to keep only:
+  # - rows where the movie is flagged in that genre
+  # - rows where the mpaa value is not NA
+  filter(
+    value != 0,
+    !is.na(mpaa)
+  ) %>%
+  
+  # Select only the mpaa and genre columns
+  select(mpaa, genre) %>%
+  
+  # Convert both columns to a factor
+  mutate(
+    
+    # For mpaa the levels and their order is clear
+    mpaa = mpaa %>% factor(levels = c("PG", "PG-13", "R", "NC-17")),
+    
+    # For genre, we'll use fct_infreq to order the levels by number of 
+    # observations with each level (largest first)
+    genre = genre %>% as_factor() %>% fct_infreq(.)
+  
+  )
+```
+
+```{r}
+#| echo:    false
+#| message: false
+#| warning: false
+#| results: asis
+
+movies_ggmosaic %>%
+  paged_table()
+```
+
+That’s all we need to take a look at the basic functionality of `geom_mosaic()`.
+
+We’ll wrap mpaa with a helper function, `product()` to prepare it for the x-axis. Then assign genre to the fill argument. __Offset__  lets us set the space between the tiles and __show.legend__ does exactly what the name promises.
+
+We can use this basic version as a basis for the final version. So let’s also assign the plot to __plot_ggmosaic__.
+
+```{r}
+#| message: false
+#| warning: false
+
+library(ggmosaic) # for creating mosaic charts (for categorical data)
+library(ggplot2)  # for general plotting
+
+# Build a mosaic plot of movie ratings (mpaa) vs. genres
+plot_ggmosaic <- ggplot(movies_ggmosaic) +
+  geom_mosaic(
+    aes(
+      
+      # x-axis shows mpaa rating categories
+      x    = product(mpaa),
+      
+      # Fill color represents movie genre
+      fill = genre
+    ),
+    
+    # Add small spacing between tiles
+    offset      = 0.02,
+    
+    # Hide legend (optional)
+    show.legend = FALSE
+  )
+
+# Render the plot
+plot_ggmosaic
+```
+
+You get the idea. Next, let’s see what we need to do to get this into a more presentable state.
+
+* Add text labels to show the counts of the different tiles (except the small ones)
+* Change the color palette with ggthemes
+* Use a custom theme, `theme_ggmosaic()` that comes with ggmosaic
+
+First, let’s take a look at those text labels. ggmosaic comes with a `geom_mosaic_text()` function, but we'll use `geom_text()` from ggplot2 instead. Some of the tiles are so small it doesn't make sense to add labels to them. This way we have more control of the labels and we can decide not to show labels when the counts are too small (under 70 in this case).
+
+We’re using the data from the plot_ggmosaic object. It’s a _list_, after all, containing all sorts of data we can use.  We'll calculate the label positions, __xpos__ and __ypos__. Then we'll count the combinations of mpaa and genre and combine the two into one tibble.
+
+```{r}
+#| message: false
+#| warning: false
+
+library(dplyr) # for data manipulation
+library(purrr) # for pluck()
+
+# Extract built plot data (data for all geoms)
+p_built <- ggplot_build(plot_ggmosaic)
+
+# Get tile data for the first layer and compute tile centers
+tile_data <- p_built %>%
+  
+  # Extract data for first layer of plot
+  pluck("data", 1) %>%
+  
+  # Compute x and y centers of each tile
+  mutate(
+    xpos = (xmin + xmax) / 2,
+    ypos = (ymin + ymax) / 2
+  )
+
+# Count original observations for each (mpaa, genre) pair
+counts <- movies_ggmosaic %>%
+  count(mpaa, genre)
+
+# Join counts to tile data, add label only if count >= 70
+tile_data_with_counts <- tile_data %>%
+  left_join(
+    counts,
+    by = c(
+      "x__mpaa"        = "mpaa",
+      "x__fill__genre" = "genre"
+    )
+  ) %>%
+  
+  # Drop labels for small counts
+  mutate(n_label = if_else(n < 70, NA, n)) %>%
+  
+  # Keep only label and tile center coordinates
+  select(n_label, xpos, ypos)
+```
+
+```{r}
+#| echo:    false
+#| message: false
+#| warning: false
+#| results: asis
+
+tile_data_with_counts  %>%
+  paged_table()
+```
+
+With our text labels ready, we can create the final visualization. We start with the plot_ggmosaic and start adding other layers on top.
+
+We have as many as seven categories (genres). We’ll use `scale_fill_colorblind()` from ggthemese to create a nice colorblind-friendly color palette.
+
+The custom theme, `theme_ggmosaic()` doesn't need any arguments.
+
+```{r}
+#| message: false
+#| warning: false
+
+library(ggthemes) # for the color scale
+
+# Add labels, colorblind palette, titles, and custom theme to the mosaic plot
+plot_ggmosaic +
+  
+  # Add text labels to tiles, using the prepared center positions 
+  # and filtered counts
+  geom_text(
+    data = tile_data_with_counts,
+    aes(
+      x     = xpos,     # x-position: tile center x
+      y     = ypos,     # y-position: tile center y
+      label = n_label   # Label: count (only if >= 70)
+    ),
+    colour   = "white", # White text for contrast
+    fontface = "bold",
+    size     = 5  
+  ) +
+  
+  # Use a colorblind-friendly palette for fills
+  scale_fill_colorblind() +
+  
+  # Add title, subtitle, and caption
+  labs(
+    title    = '"Yes More Drama in My Life"',
+    subtitle = "A count of different combinations of genre and MPAA ratings",
+    caption  = "Data: IMDb movies (1893-2005) via {ggplot2movies} | Visualization: Antti Rask",
+    x        = "",
+    y        = ""
+  ) +
+  
+  # Apply a built-in mosaic theme as a base
+  theme_mosaic() +
+  
+  # Additional theme tweaks for text styling
+  theme(
+    axis.text = element_text(
+      size   = 14,
+      face   = "bold"
+    ),
+    plot.title = element_text(
+      face  = "bold",
+      size  = 16,
+      hjust = 0.5,
+      margin = margin(20, 0, 10, 0)
+    ),
+    plot.subtitle = element_text(
+      size  = 14,
+      hjust  = 0.5,
+      margin = margin(0, 0, 0, 0)
+    ),
+    plot.caption = element_text(
+      size   = 10,
+      color  = "darkgrey",
+      hjust  = 0.5,
+      margin = margin(10, 0, 10, 0)
+      )
+  )
+```
+
+Mosaic chart isn’t meant for comparing small details. But it does give you a good overview of the proportions between the different category combinations.
 
 ## Density charts {#sec-density-charts}
 
