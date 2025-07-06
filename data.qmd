@@ -358,7 +358,7 @@ movies_na <- movies %>%
 
 **Naniar** [@tierney2024] is a package with many functions for visualizing missing (NA) values. It does contain many functions outside of visualization. But that's for another book.
 
-One simple function is `gg_miss_var()`. It creates a lollipop plot (\[INSERT LINK HERE\]). It shows which columns (variables) contain the greatest amount of missing (NA) values.
+One simple function is `gg_miss_var()`. It creates a lollipop plot (see @sec-dumbbell-and-lollipop-chart). It shows which columns (variables) contain the greatest amount of missing (NA) values.
 
 ```{r}
 library(naniar)
@@ -370,7 +370,7 @@ movies_na %>%
 
 We can see that *MPAA ratings* aren't the only thing missing. Almost the same amount of films are missing the **budget** information. With budget, it's easier to say that if we don't have a number, it is missing. Then again, that column did have NAs in place from the beginning.
 
-We're also interested in seeing if there is overlapping *missingness* between the columns. It can indicate patterns in the data. We'll use an upset plot (\[INSERT LINK HERE\]) for that. Just add `gg_miss_upset()`.
+We're also interested in seeing if there is overlapping *missingness* between the columns. It can indicate patterns in the data. We'll use an UpSet plot (see @sec-upset-diagram) for that. Just add `gg_miss_upset()`.
 
 ```{r}
 movies_na %>% 
@@ -634,7 +634,7 @@ To conclude, DataExplorer has a function, `create_report()`. It creates a full E
 
 #### gt & gtExtras {#sec-gt-gtextras}
 
-DataExplorer is a good package, but it's not the only game in town for EDA. **gt** [@iannone2024] is a package to create tables (\[INSERT LINK HERE\]) with.
+DataExplorer is a good package, but it's not the only game in town for EDA. **gt** [@iannone2024] is a package to create tables (@sec-tables) with.
 
 Often, when you think about tables, you think about numeric and text values. But that doesn't have to be the case. With **gtExtras** [@mock2023] you can create a fast and easy visual summary of your data. The `gt_plt_summary()` function is all you need.
 
