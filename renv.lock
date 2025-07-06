@@ -2379,6 +2379,46 @@
       "Maintainer": "Alboukadel Kassambara <alboukadel.kassambara@gmail.com>",
       "Repository": "https://packagemanager.posit.co/cran/latest"
     },
+    "ggmosaic": {
+      "Package": "ggmosaic",
+      "Version": "0.3.3",
+      "Source": "Repository",
+      "Title": "Mosaic Plots in the 'ggplot2' Framework",
+      "Authors@R": "c(person(given = \"Haley\", family = \"Jeppson\", role = c(\"aut\", \"cre\"), email = \"hjeppson@iastate.edu\"), person(given = \"Heike\", family = \"Hofmann\", role = \"aut\", email = \"hofmann@iastate.edu\"), person(given = \"Di\", family = \"Cook\", role = \"aut\", email = \"dicook@monash.edu\"), person(given = \"Hadley\", family = \"Wickham\", role = \"ctb\", email = \"hadley@rstudio.com\"))",
+      "Description": "Mosaic plots in the 'ggplot2' framework. Mosaic plot functionality is provided in a single 'ggplot2' layer by calling the geom 'mosaic'.",
+      "License": "GPL (>= 2)",
+      "URL": "https://github.com/haleyjeppson/ggmosaic",
+      "BugReports": "https://github.com/haleyjeppson/ggmosaic",
+      "Depends": [
+        "ggplot2 (>= 3.3.0)",
+        "R (>= 3.5.0)"
+      ],
+      "Imports": [
+        "productplots",
+        "dplyr",
+        "plotly (>= 4.5.5)",
+        "purrr",
+        "rlang",
+        "tidyr",
+        "ggrepel",
+        "scales"
+      ],
+      "Suggests": [
+        "gridExtra",
+        "knitr",
+        "NHANES",
+        "rmarkdown",
+        "patchwork"
+      ],
+      "VignetteBuilder": "knitr",
+      "Encoding": "UTF-8",
+      "LazyData": "true",
+      "RoxygenNote": "7.1.1",
+      "NeedsCompilation": "no",
+      "Author": "Haley Jeppson [aut, cre], Heike Hofmann [aut], Di Cook [aut], Hadley Wickham [ctb]",
+      "Maintainer": "Haley Jeppson <hjeppson@iastate.edu>",
+      "Repository": "https://packagemanager.posit.co/cran/latest"
+    },
     "ggplot2": {
       "Package": "ggplot2",
       "Version": "3.5.2",
@@ -5008,6 +5048,33 @@
       "Author": "Gábor Csárdi [aut, cre, cph] (<https://orcid.org/0000-0001-7098-9676>), Winston Chang [aut], Posit Software, PBC [cph, fnd], Ascent Digital Services [cph, fnd]",
       "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
       "Repository": "CRAN"
+    },
+    "productplots": {
+      "Package": "productplots",
+      "Version": "0.1.1",
+      "Source": "Repository",
+      "Title": "Product Plots for R",
+      "Description": "Framework for visualising tables of counts, proportions and probabilities. The framework is called product plots, alluding to the computation of area as a product of height and width, and the statistical concept of generating a joint distribution from the product of conditional and marginal distributions. The framework, with extensions, is sufficient to encompass over 20 visualisations previously described in fields of statistical graphics and 'infovis', including bar charts, mosaic plots, 'treemaps', equal area plots and fluctuation diagrams.",
+      "Authors@R": "c( person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", c(\"aut\", \"cre\")), person(\"Heike\", \"Hofmann\", , \"heike.hofmann@gmail.com\", role = \"aut\") )",
+      "Imports": [
+        "plyr",
+        "ggplot2"
+      ],
+      "Suggests": [
+        "reshape2",
+        "testthat",
+        "covr"
+      ],
+      "License": "GPL-2",
+      "LazyData": "true",
+      "RoxygenNote": "5.0.1",
+      "URL": "https://github.com/hadley/productplots",
+      "BugReports": "https://github.com/hadley/productplots/issues",
+      "NeedsCompilation": "no",
+      "Author": "Hadley Wickham [aut, cre], Heike Hofmann [aut]",
+      "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
+      "Encoding": "UTF-8"
     },
     "progress": {
       "Package": "progress",
