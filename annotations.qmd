@@ -29,9 +29,11 @@ source("warning.R")
 
 ## Highlighting points {#sec-highlighting-points}
 
-## Inset plots {#sec-inset-plots}
+## Inset plots & tables {#sec-inset-plots-and-tables}
 
-## Inset tables {#sec-inset-tables}
+### Plots {#sec-inset-plots}
+
+### Tables {#sec-inset-tables}
 
 ## Repel overlapping labels & text {#sec-repel-overlapping-labels-and-text}
 

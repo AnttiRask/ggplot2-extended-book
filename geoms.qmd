@@ -14,6 +14,7 @@ source("warning.R")
 
 library(conflicted)
 conflicts_prefer(dplyr::filter)
+conflicts_prefer(ggplot2::annotate)
 ```
 
 A **geom** (short for geometric object) is a component that defines how data is visually represented in a plot. Geoms determine the type of visualization or the graphical shape that will be drawn.
@@ -627,7 +628,7 @@ And so we have another perspective on the Helsinki temperature data set.
 
 A streamgraph is a stacked area chart where the areas are positioned around the central axis.
 
-#### Viz #4: ggplot2 dependencies {#sec-ggplot2-dependencies}
+#### Viz #4: ggplot2 dependencies {#sec-viz-4-ggplot2-dependencies}
 
 If you’ve read the book in chronological order, you’ve already encountered a streamgraph in @sec-landscape. We will use that visualization as the example in this section.
 
@@ -704,9 +705,9 @@ Let’s start with colors. In the previous visualizations, we’ve inserted the 
 color_1 <- "#F36523"
 color_2 <- "#125184"
 color_3 <- "#2E8B57"
-colors  <- c(color_1, color_2, color_3)
+colors_viz_4  <- c(color_1, color_2, color_3)
 
-colors
+colors_viz_4
 ```
 
 For the font, I wanted to use something different. Roboto is a slightly futuristic font (family) that I like. But it doesn't come with R.
@@ -893,7 +894,7 @@ ggplot(ggplot2_dependencies_by_year) +
   ) +
   
   # Manually assign fill colors for the dependency types
-  scale_fill_manual(values = colors) +
+  scale_fill_manual(values = colors_viz_4) +
 
   # Allow annotations to extend outside the plot area
   coord_cartesian(clip = "off") +
@@ -953,7 +954,7 @@ A Likert chart is a diverging stacked bar chart. It’s used to visualize respon
 
 For Likert charts, __ggstats__ [@larmarange2025a] is my package of choice. It also has other functionalities, which  we’ll return to in @sec-ggstats.
 
-#### Viz #5: PISA 2022 Questionnaire {#sec-pisa-2022-questionnaire}
+#### Viz #5: PISA 2022 Questionnaire {#sec-viz-5-pisa-2022-questionnaire}
 
 I was thinking of a good, open data source for the Likert chart. Most packages (ggstats included) use older __PISA__ (Programme for International Student Assessment) questionnaires for the example data. I was able to find more recent data and selected seven statements from the PISA 2022 Student Questionnaire [@oecd2023]. There was a lot of data to choose from, but I selected the statements that a) dealt with creativity and b) had the fewest number of NAs in the answers.
 
@@ -1200,7 +1201,7 @@ To create a mosaic chart, we’ll be using __ggmosaic__ [@jeppson2021]. You can 
 
 To use ggmosaic, you’ll also have to install __labelled__ [@larmarange2025b]. If you don’t, ggmosaic will remind you of this fact when you try to run your code for the first time.
 
-#### Viz #6: IMDB movies, Part II {#sec-viz-2-imdb-movies-part-ii}
+#### Viz #6: IMDB movies, Part II {#sec-viz-6-imdb-movies-part-ii}
 
 We return to the IMDB movies data set. This time looking at how many movies in each genre have a certain _MPAA rating_ (among those movies that have a rating in the first place).
 
@@ -1255,7 +1256,7 @@ movies_ggmosaic %>%
 
 That’s all we need to take a look at the basic functionality of `geom_mosaic()`.
 
-We’ll wrap mpaa with a helper function, `product()` to prepare it for the x-axis. Then assign genre to the fill argument. __Offset__  lets us set the space between the tiles and __show.legend__ does exactly what the name promises.
+We’ll wrap mpaa with a helper function, `product()` to prepare it for the x-axis. Then assign genre to the __fill__ argument. __Offset__  lets us set the space between the tiles and __show.legend__ does exactly what the name promises.
 
 We can use this basic version as a basis for the final version. So let’s also assign the plot to __plot_ggmosaic__.
 
@@ -1431,6 +1432,269 @@ Density charts work similarly to histograms. They make it easy to visualize a di
 In this section, we’ll take a look at the __raincloud chart__ and the __ridgeline chart__. The latter was formerly known as the __joyplot__, after Joy Division's 1979 album Unknown Pleasures [@wilke2017].
 
 ### Raincloud chart {#sec-raincloud-chart}
+
+A raincloud chart isn't a geom. It contains three different geoms, __boxplot__, __violin__ (or at least half of one), and __point__. They were "presented in 2019 as an approach to overcome issues of hiding the true data distribution when plotting bars with errorbars — also known as dynamite plots or barbarplots — or box plots" [@scherer2021].
+
+You could create a raincloud chart using those individual geoms and mostly ggplot2. __Cédric Scherer__ demonstrates this [here](https://gist.github.com/z3tt/8b2a06d05e8fae308abbf027ce357f01), creating a raincloud chart using the Palmer Penguins data.
+
+We have, however, a package, __ggrain__ [@judd2024], that we can use for the same purpose. That there are numerous ways to accomplish the same task is both the beauty and the primary source of frustration with these tools. In any case, you get to choose which one works the best for you. You can also mix and match. You’ll see this when we reach the final visualization.
+
+#### Viz #7: IMDB movies, Part III {#sec-viz-7-imdb-movies-part-iii}
+
+We return, once again, to the IMDB movies data set. This time, looking at how the ratings for movies in three genres (Action, Documentary, and Short) are distributed. We’ll make some adjustments for ggrain. As you can see, data wrangling plays a significant role in the data visualization process. Context is key.
+
+```{r}
+#| message: false
+#| warning: false
+
+# Load required packages
+library(dplyr)          # For data manipulation
+library(ggplot2movies)  # Contains the 'movies' dataset
+library(tidyr)          # For pivoting functions like pivot_longer()
+
+# Prepare movie data for plotting or analysis
+movies_ggrain <- movies %>%
+  
+  # Reshape genre columns (Action to Short) into long format:
+  # each row becomes one movie-genre pair with value 0 or 1
+  pivot_longer(Action:Short, names_to = "genre") %>%
+  
+  # Filter rows:
+  filter(
+    # Keep only selected genres
+    genre %in% c("Action", "Documentary", "Short"),
+    # Remove unusually long films
+    length < 500,
+    # Keep only genres that apply (value == 1)
+    value != 0,
+    # Focus on movies released after 2000
+    year > 2000
+  ) %>% 
+
+  # Keep only the genre and rating columns for further use
+  select(genre, rating)
+```
+
+```{r}
+#| echo:    false
+#| message: false
+#| warning: false
+#| results: asis
+
+movies_ggrain %>%
+  paged_table()
+```
+
+We're left with a lot of genre-rating pairings. Here's what they look like using only the default settings of `geom_rain()`.
+
+```{r}
+#| message: false
+#| warning: false
+
+# For raincloud-style plots (combining density, boxplot, and raw data)
+library(ggrain)
+
+# Create a raincloud plot showing rating distributions by genre
+movies_ggrain %>%
+  ggplot(aes(genre, rating, fill = genre)) +
+  geom_rain()
+```
+
+We have the points on the left, the boxplot in the middle, and the half-violin on the right. This already tells us something. However, upon examining the points, there are too many to make much sense without taking action. We’ll get back to that in the final visualization.
+
+Before we proceed, I would like us to examine the version where the different groups overlap. That requires us to use an additional package, __ggpp__ [@aphalo2025]. We borrow the function `position_dodgenudge()` from it. We’ll explore other uses of the package in @sec-inset-plots-and-tables.
+
+The __cov__ argument is used to assign a covariate to color the dots by. __boxplot.args.pos__ lets us add a list of positional arguments for the boxplot. There are similar arguments for __line__ (which we won’t use), point, and violin. Otherwise, it’s pretty much the same code as in the first example.
+
+```{r}
+#| message: false
+#| warning: false
+
+# For advanced position adjustments (e.g., position_dodgenudge)
+library(ggpp)
+
+# Create a raincloud plot with dodged and nudged boxplots for each genre
+movies_ggrain %>%
+  ggplot(aes(x = 1, y = rating, fill = genre)) +
+  geom_rain(
+    
+    # Group by 'genre' for separate rainclouds at the same x-position
+    cov = "genre",
+    
+    # Pass custom positioning to the internal boxplot layer
+    boxplot.args.pos = list(
+      # Slightly separate boxplots by genre
+      position = position_dodgenudge(
+        # Nudge boxplots sideways
+        x = 0.1,
+        # Control dodge width (how far apart they spread)
+        width = 0.1
+      ), 
+      # Width of individual boxplots
+      width = 0.1
+    )
+  )
+```
+
+As you can see, the __alpha__ argument would be much needed also here. It's impossible to see all the overlapping elements without it. 
+
+Besides that, I can see uses for both the separate and overlapping versions of the chart. Let’s use the first one for the cleaned-up version.
+
+One new function from the forcats package, `fct_reorder()`. This is one of my most used forcats functions. It allows us to reorder the categories (genre) by the values in another column (rating). Super helpful with bar charts, and also the best tool to use here. It makes more sense to order categories like this, rather than in the default alphabetical order, if they can be compared.
+
+We’ll use the `stat_summary()` functions to foreshadow @sec-stats. One for counting and annotating the median, the other for counting and annotating the sample size. These two are copied from Cédric’s code and are here to remind us that you can often combine code from two sources. There are also some other touches, such as the `darken()`/`lighten()` effects from colorspace. They were also from that same source.
+
+Since we are showing all the points in the plot, there’s no need to show the outliers in the boxplot. That is done by assigning _NA_ to the __outlier.shape__ argument.
+
+```{r}
+#| message: false
+#| warning: false
+
+# Define custom fill colors for each genre
+colors_vis_7 <- c(
+  "Action"      = "#f487b6",
+  "Documentary" = "#3772FF", 
+  "Short"       = "#43B929"
+) 
+
+# Define axis label color order (to match reordered factor levels)
+colors_vis_7_axis <- c("#3772FF", "#43B929", "#f487b6")
+
+# Define custom summary function to display sample sizes for each genre
+add_sample <- function(x) {
+  return(
+    c(
+      # Y-position just above the max
+      y = max(x) + .025,
+      # Sample size as label
+      label = length(x)       
+    )
+  )
+}
+
+# Load required packages
+library(colorspace) # For color manipulation (darken/lighten)
+library(forcats)    # For factor reordering with fct_reorder()
+library(ggplot2)    # For base plotting
+library(ggrain)     # For raincloud-style plots
+
+# Create the raincloud plot
+ggplot(
+  movies_ggrain,
+  aes(
+    # Reorder genres by median rating
+    fct_reorder(genre, rating, .desc = TRUE),
+    rating,
+    fill  = genre,
+    color = genre
+  )
+) +
+  
+  # Add raincloud plot (half density + boxplot + jittered points)
+  geom_rain(
+    
+    # Draw rain (density) on the right side
+    rain.side = 'r',
+    
+    # Customize boxplot style
+    boxplot.args = list(
+      color = "black",
+      # Hide outlier dots
+      outlier.shape = NA
+    ),
+    # Set point transparency
+    point.args = list(alpha = 0.1),
+    # Jitter points horizontally
+    point.args.pos = list(position = position_jitter(seed = 1, width = .06))
+  ) +
+  
+  # Add median values as text labels above each raincloud
+  stat_summary(
+    geom = "text",
+    fun  = "median",
+    aes(
+      # Format median to 2 decimals
+      label = round(after_stat(y), 2),
+      # Darken text color slightly
+      color = stage(genre, after_scale = darken(color, .2, space = "HLS"))
+    ),
+    size  = 3.5,
+    vjust = -5
+  ) +
+  
+  # Add sample size (n =) labels using custom summary function
+  stat_summary(
+    geom = "text",
+    fun.data = add_sample,
+    aes(
+      label = paste("n =", after_stat(label)),
+      color = stage(genre, after_scale = darken(color, .2, space = "HLS"))
+    ),
+    size  = 3.5,
+    hjust = -0.25
+  ) +
+  
+  # Manually set outline (color) values — darker than fill
+  scale_color_manual(
+    values = colors_vis_7,
+    # Hide color legend
+    guide = "none"
+  ) +
+  
+  # Manually set fill colors (lightened versions of outline)
+  scale_fill_manual(
+    values = lighten(colors_vis_7, .4, space = "HLS"),
+    # Hide fill legend
+    guide = "none"
+  ) +
+  
+  # Set y-axis ticks at whole rating points (1 to 10)
+  scale_y_continuous(breaks = seq(1, 10, by = 1)) +
+  
+  # Flip axes for horizontal layout. Allow text to extend outside plot area
+  coord_flip(xlim = c(1.4, NA), clip = "off") +
+  
+  # Add plot labels
+  labs(
+    x        = NULL,
+    y        = NULL,
+    title    = "Documentaries have, on average, the best ratings",
+    subtitle = "Distribution of IMDB ratings (from 2000 to 2005) by genre",
+    caption  = "Data: IMDB movies (1893-2005) | Visualization: Antti Rask"
+  ) +
+  
+  # Apply a clean minimal theme
+  theme_minimal() +
+  
+  # Customize text, grid, and spacing
+  theme(
+    axis.text.y = element_text(
+      color = darken(colors_vis_7_axis, .1, space = "HLS"),
+      face  = "bold",
+      size  = 12
+    ),
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor = element_blank(),
+    plot.title = element_text(
+      face = "bold",
+      size = 14
+    ),
+    plot.title.position = "plot",
+    plot.subtitle = element_text(
+      color  = "grey40",
+      margin = margin(0, 0, 10, 0),
+      size   = 12
+    ),
+    plot.caption = element_text(
+      color  = "grey40",
+      margin = margin(15, 0, 0, 0)
+    ),
+    plot.margin = margin(15, 45, 10, 15),
+    text        = element_text(family = "wqy-microhei"),
+  )
+```
+
+This way, we have the best of all three worlds. We can see that the Documentary genre has the highest median. It also has the strongest concentration of points (which also shows in the half-violin) around the median. Especially compared to Action.
 
 ### Ridgeline chart {#sec-ridgeline-chart}
 

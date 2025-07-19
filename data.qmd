@@ -516,7 +516,7 @@ movies_na %>%
 
 We see mpaa with it's missing values. The rest of the categorical columns are binary ones about which genres each movie belongs to. **Comedy** and **Drama** seem to be the best represented ones in the data set.
 
-With the *with* argument we can choose to show something else on the x-axis besides the frequency. Here, for instance, we've chosen **length** to be the column to sum up.
+With the __with__ argument we can choose to show something else on the x-axis besides the frequency. Here, for instance, we've chosen **length** to be the column to sum up.
 
 ```{r}
 #| message: false
@@ -533,7 +533,7 @@ movies_na %>%
 
 Here we can see that **Animation** and **Short** make up an even smaller part of the whole as before. Which makes sense, when you start to think about it.
 
-Another useful feature is using the *by* argument. It means we will see the frequency broken down by a discrete feature. In this case we've chosen mpaa.
+Another useful feature is using the __by__ argument. It means we will see the frequency broken down by a discrete feature. In this case we've chosen mpaa.
 
 ```{r}
 #| message: false
@@ -589,7 +589,7 @@ movies_na_length_under_500 <- movies_na %>%
   filter(length < 500)
 ```
 
-Let's see how the four columns, length, rating, votes, and year look like as a boxplot when grouped by budget. Budget is a continuous variable. That's why `plot_boxplot()` groups the values to 5 equal ranges.
+Let's see how the four columns, length, rating, votes, and year look like as a __boxplot__ when grouped by budget. Budget is a continuous variable. That's why `plot_boxplot()` groups the values to 5 equal ranges.
 
 ```{r}
 #| message: false
@@ -612,7 +612,7 @@ Based on the boxplot, the movies with a bigger budget tend to:
 -   be more recent
 -   be longer
 
-Let's then take a look at what this all looks like as a scatter chart. We'll use all the same columns. It's important to use an *alpha* value that is low enough to reveal a more nuanced picture than we would see if it was 1.
+Let's then take a look at what this all looks like as a scatter chart. We'll use all the same columns. It's important to use an __alpha__ value that is low enough to reveal a more nuanced picture than we would see if it was 1.
 
 ```{r}
 #| message: false
@@ -741,7 +741,7 @@ Of course, we can see the differences by looking at the values in the matrix. Bu
 
 This time, we'll also include the genre columns. We're interested in how they correlate with each other and the original five.
 
-In its basic form `ggcorrplot()` only needs the data argument. So let's first look at it without any modifications.
+In its basic form `ggcorrplot()` only needs the __data__ argument. So let's first look at it without any modifications.
 
 ```{r}
 #| message: false

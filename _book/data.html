@@ -696,7 +696,7 @@ This chapter is now done!
 <span>  <span class="fu"><a href="http://boxuancui.github.io/DataExplorer/reference/plot_bar.html">plot_bar</a></span><span class="op">(</span>ggtheme <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><img src="data_files/figure-html/unnamed-chunk-30-1.png" class="img-fluid" width="672"></p>
 <p>We see mpaa with it’s missing values. The rest of the categorical columns are binary ones about which genres each movie belongs to. <strong>Comedy</strong> and <strong>Drama</strong> seem to be the best represented ones in the data set.</p>
-<p>With the <em>with</em> argument we can choose to show something else on the x-axis besides the frequency. Here, for instance, we’ve chosen <strong>length</strong> to be the column to sum up.</p>
+<p>With the <strong>with</strong> argument we can choose to show something else on the x-axis besides the frequency. Here, for instance, we’ve chosen <strong>length</strong> to be the column to sum up.</p>
 <div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">movies_na</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="http://boxuancui.github.io/DataExplorer/reference/plot_bar.html">plot_bar</a></span><span class="op">(</span></span>
 <span>    <span class="co"># Name of continuous feature to be summed instead of NULL (i.e. frequency)</span></span>
@@ -705,7 +705,7 @@ This chapter is now done!
 <span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><img src="data_files/figure-html/unnamed-chunk-31-1.png" class="img-fluid" width="672"></p>
 <p>Here we can see that <strong>Animation</strong> and <strong>Short</strong> make up an even smaller part of the whole as before. Which makes sense, when you start to think about it.</p>
-<p>Another useful feature is using the <em>by</em> argument. It means we will see the frequency broken down by a discrete feature. In this case we’ve chosen mpaa.</p>
+<p>Another useful feature is using the <strong>by</strong> argument. It means we will see the frequency broken down by a discrete feature. In this case we’ve chosen mpaa.</p>
 <div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">movies_na</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="http://boxuancui.github.io/DataExplorer/reference/plot_bar.html">plot_bar</a></span><span class="op">(</span></span>
 <span>    by      <span class="op">=</span> <span class="st">"mpaa"</span>,</span>
@@ -740,7 +740,7 @@ This chapter is now done!
 <div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">movies_na_length_under_500</span> <span class="op">&lt;-</span> <span class="va">movies_na</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">budget</span>, <span class="va">length</span>, <span class="va">rating</span>, <span class="va">votes</span>, <span class="va">year</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">length</span> <span class="op">&lt;</span> <span class="fl">500</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Let’s see how the four columns, length, rating, votes, and year look like as a boxplot when grouped by budget. Budget is a continuous variable. That’s why <code><a href="http://boxuancui.github.io/DataExplorer/reference/plot_boxplot.html">plot_boxplot()</a></code> groups the values to 5 equal ranges.</p>
+<p>Let’s see how the four columns, length, rating, votes, and year look like as a <strong>boxplot</strong> when grouped by budget. Budget is a continuous variable. That’s why <code><a href="http://boxuancui.github.io/DataExplorer/reference/plot_boxplot.html">plot_boxplot()</a></code> groups the values to 5 equal ranges.</p>
 <div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">movies_na_length_under_500</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="http://boxuancui.github.io/DataExplorer/reference/plot_boxplot.html">plot_boxplot</a></span><span class="op">(</span></span>
 <span>    by      <span class="op">=</span> <span class="st">"budget"</span>,</span>
@@ -756,7 +756,7 @@ This chapter is now done!
 <li>be more recent</li>
 <li>be longer</li>
 </ul>
-<p>Let’s then take a look at what this all looks like as a scatter chart. We’ll use all the same columns. It’s important to use an <em>alpha</em> value that is low enough to reveal a more nuanced picture than we would see if it was 1.</p>
+<p>Let’s then take a look at what this all looks like as a scatter chart. We’ll use all the same columns. It’s important to use an <strong>alpha</strong> value that is low enough to reveal a more nuanced picture than we would see if it was 1.</p>
 <div class="sourceCode" id="cb27"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">movies_na_length_under_500</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="http://boxuancui.github.io/DataExplorer/reference/plot_scatterplot.html">plot_scatterplot</a></span><span class="op">(</span></span>
 <span>    by              <span class="op">=</span> <span class="st">"budget"</span>,</span>
@@ -1343,7 +1343,7 @@ Africa, Asia, Europe, Mid.Amer, N.Amer, Oceania and S.Amer
 </div>
 <p>Of course, we can see the differences by looking at the values in the matrix. But it might be easier to get the bigger picture by looking at them graphically. For that, we’ll use <strong>ggcorrplot</strong> <span class="citation" data-cites="kassambara2023">(<a href="references.html#ref-kassambara2023" role="doc-biblioref">Kassambara 2023</a>)</span>.</p>
 <p>This time, we’ll also include the genre columns. We’re interested in how they correlate with each other and the original five.</p>
-<p>In its basic form <code><a href="https://rdrr.io/pkg/ggcorrplot/man/ggcorrplot.html">ggcorrplot()</a></code> only needs the data argument. So let’s first look at it without any modifications.</p>
+<p>In its basic form <code><a href="https://rdrr.io/pkg/ggcorrplot/man/ggcorrplot.html">ggcorrplot()</a></code> only needs the <strong>data</strong> argument. So let’s first look at it without any modifications.</p>
 <div class="sourceCode" id="cb33"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://www.sthda.com/english/wiki/ggcorrplot-visualization-of-a-correlation-matrix-using-ggplot2">ggcorrplot</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">corr</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
