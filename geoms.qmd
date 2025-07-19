@@ -1426,6 +1426,10 @@ Mosaic chart isn’t meant for comparing small details. But it does give you a g
 
 ## Density charts {#sec-density-charts}
 
+Density charts work similarly to histograms. They make it easy to visualize a distribution (or distributions) of data. Again, ggplot2 has a geom called `geom_density()` that you can use for a basic density chart.
+
+In this section, we’ll take a look at the __raincloud chart__ and the __ridgeline chart__. The latter was formerly known as the __joyplot__, after Joy Division's 1979 album Unknown Pleasures [@wilke2017].
+
 ### Raincloud chart {#sec-raincloud-chart}
 
 ### Ridgeline chart {#sec-ridgeline-chart}
