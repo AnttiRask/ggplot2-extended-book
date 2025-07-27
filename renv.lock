@@ -141,7 +141,7 @@
       "NeedsCompilation": "no",
       "Author": "Boxuan Cui [aut, cre]",
       "Maintainer": "Boxuan Cui <boxuancui@gmail.com>",
-      "Repository": "https://packagemanager.posit.co/cran/latest"
+      "Repository": "CRAN"
     },
     "Deriv": {
       "Package": "Deriv",
