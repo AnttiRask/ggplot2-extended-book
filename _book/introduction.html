@@ -558,6 +558,7 @@ This chapter is now done!
 <span>    <span class="st">"DataExplorer"</span>,</span>
 <span>    <span class="st">"ExPanDaR"</span>,</span>
 <span>    <span class="st">"GGally"</span>,</span>
+<span>    <span class="st">"gganimate"</span>,</span>
 <span>    <span class="st">"ggcorrplot"</span>,</span>
 <span>    <span class="st">"ggHoriPlot"</span>,</span>
 <span>    <span class="st">"ggmosaic"</span>,</span>
@@ -566,10 +567,12 @@ This chapter is now done!
 <span>    <span class="st">"ggquickeda"</span>,</span>
 <span>    <span class="st">"ggrain"</span>,</span>
 <span>    <span class="st">"ggrepel"</span>,</span>
+<span>    <span class="st">"ggridges"</span>,</span>
 <span>    <span class="st">"ggstats"</span>,</span>
 <span>    <span class="st">"ggstream"</span>,</span>
 <span>    <span class="st">"ggtext"</span>,</span>
 <span>    <span class="st">"ggthemes"</span>,</span>
+<span>    <span class="st">"gifski"</span>,   <span class="co"># Needed with gganimate</span></span>
 <span>    <span class="st">"gt"</span>,</span>
 <span>    <span class="st">"gtExtras"</span>,</span>
 <span>    <span class="st">"labelled"</span>, <span class="co"># Needed with ggmosaic</span></span>
@@ -658,7 +661,7 @@ This chapter is now done!
 <p>This version of the book was built with R version 4.5.1 (2025-06-13) and the following packages:</p>
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
-{"columns":[{"label":["package"],"name":[1],"type":["chr"],"align":["left"]},{"label":["version"],"name":[2],"type":["chr"],"align":["left"]},{"label":["source"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"colorspace","2":"2.1-1","3":"CRAN (R 4.5.0)"},{"1":"conflicted","2":"1.2.0","3":"CRAN (R 4.5.0)"},{"1":"DataExplorer","2":"0.8.3","3":"RSPM"},{"1":"dplyr","2":"1.1.4","3":"CRAN (R 4.5.0)"},{"1":"ExPanDaR","2":"0.5.3","3":"CRAN (R 4.5.0)"},{"1":"forcats","2":"1.0.0","3":"CRAN (R 4.5.0)"},{"1":"GGally","2":"2.3.0","3":"CRAN (R 4.5.1)"},{"1":"ggbraid","2":"0.2.3","3":"Github (nsgrantham/ggbraid@e1018d7a86bc33a46ca85cf6f88a5149256e1598)"},{"1":"ggcorrplot","2":"0.1.4.1","3":"RSPM"},{"1":"ggHoriPlot","2":"1.0.1","3":"CRAN (R 4.5.0)"},{"1":"ggmosaic","2":"0.3.3","3":"RSPM"},{"1":"ggplot2","2":"3.5.2","3":"CRAN (R 4.5.0)"},{"1":"ggplot2movies","2":"0.0.1","3":"RSPM"},{"1":"ggpp","2":"0.5.9","3":"CRAN (R 4.5.1)"},{"1":"ggquickeda","2":"0.3.1","3":"CRAN (R 4.5.0)"},{"1":"ggrain","2":"0.0.4","3":"RSPM"},{"1":"ggrepel","2":"0.9.6","3":"CRAN (R 4.5.0)"},{"1":"ggstats","2":"0.10.0","3":"CRAN (R 4.5.1)"},{"1":"ggstream","2":"0.1.0","3":"RSPM"},{"1":"ggtext","2":"0.1.2","3":"CRAN (R 4.5.0)"},{"1":"ggthemes","2":"5.1.0","3":"CRAN (R 4.5.0)"},{"1":"gt","2":"1.0.0","3":"CRAN (R 4.5.0)"},{"1":"gtExtras","2":"0.6.0","3":"CRAN (R 4.5.0)"},{"1":"janitor","2":"2.2.1","3":"RSPM"},{"1":"labelled","2":"2.14.1","3":"CRAN (R 4.5.1)"},{"1":"lubridate","2":"1.9.4","3":"CRAN (R 4.5.0)"},{"1":"naniar","2":"1.1.0","3":"RSPM"},{"1":"purrr","2":"1.1.0","3":"CRAN (R 4.5.1)"},{"1":"radiant","2":"1.6.6","3":"CRAN (R 4.5.0)"},{"1":"readr","2":"2.1.5","3":"CRAN (R 4.5.0)"},{"1":"rmarkdown","2":"2.29","3":"CRAN (R 4.5.0)"},{"1":"scales","2":"1.4.0","3":"RSPM"},{"1":"showtext","2":"0.9-7","3":"CRAN (R 4.5.0)"},{"1":"stringr","2":"1.5.1","3":"CRAN (R 4.5.0)"},{"1":"tibble","2":"3.3.0","3":"CRAN (R 4.5.0)"},{"1":"tidyr","2":"1.3.1","3":"CRAN (R 4.5.0)"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["package"],"name":[1],"type":["chr"],"align":["left"]},{"label":["version"],"name":[2],"type":["chr"],"align":["left"]},{"label":["source"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"colorspace","2":"2.1-1","3":"CRAN (R 4.5.0)"},{"1":"conflicted","2":"1.2.0","3":"CRAN (R 4.5.0)"},{"1":"DataExplorer","2":"0.8.4","3":"RSPM"},{"1":"dplyr","2":"1.1.4","3":"CRAN (R 4.5.0)"},{"1":"ExPanDaR","2":"0.5.3","3":"CRAN (R 4.5.0)"},{"1":"forcats","2":"1.0.0","3":"CRAN (R 4.5.0)"},{"1":"GGally","2":"2.3.0","3":"CRAN (R 4.5.1)"},{"1":"gganimate","2":"1.0.10","3":"RSPM"},{"1":"ggbraid","2":"0.2.3","3":"Github (nsgrantham/ggbraid@e1018d7a86bc33a46ca85cf6f88a5149256e1598)"},{"1":"ggcorrplot","2":"0.1.4.1","3":"RSPM"},{"1":"ggHoriPlot","2":"1.0.1","3":"CRAN (R 4.5.0)"},{"1":"ggmosaic","2":"0.3.3","3":"RSPM"},{"1":"ggplot2","2":"3.5.2","3":"CRAN (R 4.5.0)"},{"1":"ggplot2movies","2":"0.0.1","3":"RSPM"},{"1":"ggpp","2":"0.5.9","3":"CRAN (R 4.5.1)"},{"1":"ggquickeda","2":"0.3.1","3":"CRAN (R 4.5.0)"},{"1":"ggrain","2":"0.0.4","3":"RSPM"},{"1":"ggrepel","2":"0.9.6","3":"CRAN (R 4.5.0)"},{"1":"ggridges","2":"0.5.6","3":"CRAN (R 4.5.0)"},{"1":"ggstats","2":"0.10.0","3":"CRAN (R 4.5.1)"},{"1":"ggstream","2":"0.1.0","3":"RSPM"},{"1":"ggtext","2":"0.1.2","3":"CRAN (R 4.5.0)"},{"1":"ggthemes","2":"5.1.0","3":"CRAN (R 4.5.0)"},{"1":"gifski","2":"1.32.0-2","3":"CRAN (R 4.5.1)"},{"1":"gt","2":"1.0.0","3":"CRAN (R 4.5.0)"},{"1":"gtExtras","2":"0.6.0","3":"CRAN (R 4.5.0)"},{"1":"janitor","2":"2.2.1","3":"RSPM"},{"1":"labelled","2":"2.14.1","3":"CRAN (R 4.5.1)"},{"1":"lubridate","2":"1.9.4","3":"CRAN (R 4.5.0)"},{"1":"naniar","2":"1.1.0","3":"RSPM"},{"1":"purrr","2":"1.1.0","3":"CRAN (R 4.5.1)"},{"1":"radiant","2":"1.6.6","3":"CRAN (R 4.5.0)"},{"1":"readr","2":"2.1.5","3":"CRAN (R 4.5.0)"},{"1":"rmarkdown","2":"2.29","3":"CRAN (R 4.5.0)"},{"1":"scales","2":"1.4.0","3":"RSPM"},{"1":"showtext","2":"0.9-7","3":"CRAN (R 4.5.0)"},{"1":"stringr","2":"1.5.1","3":"CRAN (R 4.5.0)"},{"1":"tibble","2":"3.3.0","3":"CRAN (R 4.5.0)"},{"1":"tidyr","2":"1.3.1","3":"CRAN (R 4.5.0)"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 
