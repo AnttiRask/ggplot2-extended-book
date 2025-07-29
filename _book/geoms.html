@@ -92,7 +92,7 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-96f5e2a3ed94a11b6ec2c918708bf376.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-d750defc014fd27ac05477a74ef534d9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
@@ -365,7 +365,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">references.html</span></span></a>
   </div>
 </li>
     </ul>
@@ -572,7 +572,7 @@ This book/site is under construction
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://jrnold.github.io/ggthemes/">ggthemes</a></span><span class="op">)</span>   <span class="co"># for additional themes like theme_few()</span></span>
 <span></span>
 <span><span class="co"># Create the horizon chart</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">temperature_hki</span><span class="op">)</span> <span class="op">+</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">temperature_hki</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  </span>
 <span>  <span class="co"># Horizon chart layer, mapping x, y, and fill aesthetics</span></span>
 <span>  <span class="fu"><a href="https://rivasiker.github.io/ggHoriPlot/reference/geom_horizon.html">geom_horizon</a></span><span class="op">(</span></span>
@@ -1097,7 +1097,7 @@ This book/site is under construction
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://stringr.tidyverse.org">stringr</a></span><span class="op">)</span>    <span class="co"># for string manipulation like str_glue()</span></span>
 <span></span>
 <span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">ggplot2_dependencies_by_year</span><span class="op">)</span> <span class="op">+</span></span>
-<span></span>
+<span>  </span>
 <span>  <span class="co"># Add a small point at the origin to anchor the first version label</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span></span>
 <span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">2007</span>, y <span class="op">=</span> <span class="fl">0</span><span class="op">)</span>,</span>
@@ -1108,58 +1108,58 @@ This book/site is under construction
 <span>  </span>
 <span>  <span class="co"># Add a label for ggplot2 version 0.5 (2007)</span></span>
 <span>  <span class="fu"><a href="https://ggrepel.slowkow.com/reference/geom_text_repel.html">geom_label_repel</a></span><span class="op">(</span></span>
-<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">2007</span>, y <span class="op">=</span> <span class="fl">0</span>, label <span class="op">=</span> <span class="st">"{ggplot2}\nver 0.5"</span><span class="op">)</span>,</span>
-<span>        data          <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>        stat          <span class="op">=</span> <span class="st">"unique"</span>,</span>
-<span>        nudge_y       <span class="op">=</span> <span class="fl">75</span>,</span>
-<span>        label.size    <span class="op">=</span> <span class="cn">NA</span>,</span>
-<span>        lineheight    <span class="op">=</span> <span class="fl">0.5</span>,</span>
-<span>        family        <span class="op">=</span> <span class="va">font_family</span></span>
-<span>    <span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">2007</span>, y <span class="op">=</span> <span class="fl">0</span>, label <span class="op">=</span> <span class="st">"{ggplot2}\nver 0.5"</span><span class="op">)</span>,</span>
+<span>    data          <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>    stat          <span class="op">=</span> <span class="st">"unique"</span>,</span>
+<span>    nudge_y       <span class="op">=</span> <span class="fl">75</span>,</span>
+<span>    label.size    <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>    lineheight    <span class="op">=</span> <span class="fl">0.5</span>,</span>
+<span>    family        <span class="op">=</span> <span class="va">font_family</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
 <span>  </span>
 <span>  <span class="co"># Add a label for ggplot2 version 1.0 (2014)</span></span>
 <span>  <span class="fu"><a href="https://ggrepel.slowkow.com/reference/geom_text_repel.html">geom_label_repel</a></span><span class="op">(</span></span>
-<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">2014</span>, y <span class="op">=</span> <span class="fl">50</span>, label <span class="op">=</span> <span class="st">"{ggplot2}\nver 1.0"</span><span class="op">)</span>,</span>
-<span>        data          <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>        stat          <span class="op">=</span> <span class="st">"unique"</span>,</span>
-<span>        nudge_y       <span class="op">=</span> <span class="fl">115</span>,</span>
-<span>        label.size    <span class="op">=</span> <span class="cn">NA</span>,</span>
-<span>        lineheight    <span class="op">=</span> <span class="fl">0.5</span>,</span>
-<span>        family        <span class="op">=</span> <span class="va">font_family</span></span>
-<span>    <span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">2014</span>, y <span class="op">=</span> <span class="fl">50</span>, label <span class="op">=</span> <span class="st">"{ggplot2}\nver 1.0"</span><span class="op">)</span>,</span>
+<span>    data          <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>    stat          <span class="op">=</span> <span class="st">"unique"</span>,</span>
+<span>    nudge_y       <span class="op">=</span> <span class="fl">115</span>,</span>
+<span>    label.size    <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>    lineheight    <span class="op">=</span> <span class="fl">0.5</span>,</span>
+<span>    family        <span class="op">=</span> <span class="va">font_family</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
 <span>  </span>
 <span>  <span class="co"># Add a label for ggplot2 version 2.0 (2015)</span></span>
 <span>  <span class="fu"><a href="https://ggrepel.slowkow.com/reference/geom_text_repel.html">geom_label_repel</a></span><span class="op">(</span></span>
-<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">2015</span>, y <span class="op">=</span> <span class="fl">125</span>, label <span class="op">=</span> <span class="st">"{ggplot2}\nver 2.0"</span><span class="op">)</span>,</span>
-<span>        data          <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>        stat          <span class="op">=</span> <span class="st">"unique"</span>,</span>
-<span>        nudge_y       <span class="op">=</span> <span class="fl">140</span>,</span>
-<span>        label.size    <span class="op">=</span> <span class="cn">NA</span>,</span>
-<span>        lineheight    <span class="op">=</span> <span class="fl">0.5</span>,</span>
-<span>        family        <span class="op">=</span> <span class="va">font_family</span></span>
-<span>    <span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">2015</span>, y <span class="op">=</span> <span class="fl">125</span>, label <span class="op">=</span> <span class="st">"{ggplot2}\nver 2.0"</span><span class="op">)</span>,</span>
+<span>    data          <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>    stat          <span class="op">=</span> <span class="st">"unique"</span>,</span>
+<span>    nudge_y       <span class="op">=</span> <span class="fl">140</span>,</span>
+<span>    label.size    <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>    lineheight    <span class="op">=</span> <span class="fl">0.5</span>,</span>
+<span>    family        <span class="op">=</span> <span class="va">font_family</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
 <span>  </span>
 <span>  <span class="co"># Add a label for ggplot2 version 3.0 (2018)</span></span>
 <span>  <span class="fu"><a href="https://ggrepel.slowkow.com/reference/geom_text_repel.html">geom_label_repel</a></span><span class="op">(</span></span>
-<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">2018</span>, y <span class="op">=</span> <span class="fl">100</span>, label <span class="op">=</span> <span class="st">"{ggplot2}\nver 3.0"</span><span class="op">)</span>,</span>
-<span>        data          <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>        stat          <span class="op">=</span> <span class="st">"unique"</span>,</span>
-<span>        nudge_y       <span class="op">=</span> <span class="fl">200</span>,</span>
-<span>        label.size    <span class="op">=</span> <span class="cn">NA</span>,</span>
-<span>        lineheight    <span class="op">=</span> <span class="fl">0.5</span>,</span>
-<span>        family        <span class="op">=</span> <span class="va">font_family</span></span>
-<span>    <span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">2018</span>, y <span class="op">=</span> <span class="fl">100</span>, label <span class="op">=</span> <span class="st">"{ggplot2}\nver 3.0"</span><span class="op">)</span>,</span>
+<span>    data          <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>    stat          <span class="op">=</span> <span class="st">"unique"</span>,</span>
+<span>    nudge_y       <span class="op">=</span> <span class="fl">200</span>,</span>
+<span>    label.size    <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>    lineheight    <span class="op">=</span> <span class="fl">0.5</span>,</span>
+<span>    family        <span class="op">=</span> <span class="va">font_family</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
 <span>  </span>
 <span>  <span class="co"># Add a label for ggplot2 version 3.5 (2024)</span></span>
 <span>  <span class="fu"><a href="https://ggrepel.slowkow.com/reference/geom_text_repel.html">geom_label_repel</a></span><span class="op">(</span></span>
-<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">2024</span>, y <span class="op">=</span> <span class="fl">410</span>, label <span class="op">=</span> <span class="st">"{ggplot2}\nver 3.5"</span><span class="op">)</span>,</span>
-<span>        data          <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>        stat          <span class="op">=</span> <span class="st">"unique"</span>,</span>
-<span>        nudge_y       <span class="op">=</span> <span class="fl">75</span>,</span>
-<span>        label.size    <span class="op">=</span> <span class="cn">NA</span>,</span>
-<span>        lineheight    <span class="op">=</span> <span class="fl">0.5</span>,</span>
-<span>        family        <span class="op">=</span> <span class="va">font_family</span></span>
-<span>    <span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">2024</span>, y <span class="op">=</span> <span class="fl">410</span>, label <span class="op">=</span> <span class="st">"{ggplot2}\nver 3.5"</span><span class="op">)</span>,</span>
+<span>    data          <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>    stat          <span class="op">=</span> <span class="st">"unique"</span>,</span>
+<span>    nudge_y       <span class="op">=</span> <span class="fl">75</span>,</span>
+<span>    label.size    <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>    lineheight    <span class="op">=</span> <span class="fl">0.5</span>,</span>
+<span>    family        <span class="op">=</span> <span class="va">font_family</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
 <span>  </span>
 <span>  <span class="co"># Create a stream-like area chart showing the number of dependent </span></span>
 <span>  <span class="co"># packages by type and year</span></span>
@@ -1180,19 +1180,19 @@ This book/site is under construction
 <span>  </span>
 <span>  <span class="co"># Add annotations on the right side using rich text labels from ggtext</span></span>
 <span>  <span class="fu"><a href="https://wilkelab.org/ggtext/reference/geom_richtext.html">geom_richtext</a></span><span class="op">(</span></span>
-<span>    data <span class="op">=</span> <span class="va">annotation_numbers</span>,</span>
 <span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span></span>
 <span>      x     <span class="op">=</span> <span class="fl">2024</span> <span class="op">+</span> <span class="fl">0.2</span>,</span>
 <span>      y     <span class="op">=</span> <span class="va">y</span>,</span>
 <span>      label <span class="op">=</span> <span class="va">label</span></span>
 <span>    <span class="op">)</span>,</span>
+<span>    data <span class="op">=</span> <span class="va">annotation_numbers</span>,</span>
 <span>    hjust      <span class="op">=</span> <span class="fl">0</span>,</span>
 <span>    lineheight <span class="op">=</span> <span class="fl">0.9</span>,</span>
 <span>    label.size <span class="op">=</span> <span class="cn">NA</span>,</span>
 <span>    size       <span class="op">=</span> <span class="fl">5</span>,</span>
 <span>    family     <span class="op">=</span> <span class="va">font_family</span></span>
 <span>  <span class="op">)</span> <span class="op">+</span></span>
-<span></span>
+<span>  </span>
 <span>  <span class="co"># Configure the x-axis with major and minor breaks</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span></span>
 <span>    breaks       <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">2008</span>, <span class="fl">2024</span>, <span class="fl">2</span><span class="op">)</span>,</span>
@@ -1201,17 +1201,17 @@ This book/site is under construction
 <span>  </span>
 <span>  <span class="co"># Manually assign fill colors for the dependency types</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_fill_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="va">colors_viz_4</span><span class="op">)</span> <span class="op">+</span></span>
-<span></span>
+<span>  </span>
 <span>  <span class="co"># Allow annotations to extend outside the plot area</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_cartesian.html">coord_cartesian</a></span><span class="op">(</span>clip <span class="op">=</span> <span class="st">"off"</span><span class="op">)</span> <span class="op">+</span></span>
-<span></span>
+<span>  </span>
 <span>  <span class="co"># Set plot titles and descriptions using inline color styling</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span></span>
 <span>    title    <span class="op">=</span> <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_glue.html">str_glue</a></span><span class="op">(</span><span class="st">"Number of packages on CRAN in 2024 &lt;span style='color:{color_1}'&gt;depending on&lt;/span&gt;, &lt;span style='color:{color_2}'&gt;importing&lt;/span&gt;, or &lt;span style='color:{color_3}'&gt;suggesting&lt;/span&gt; {{ggplot2}}"</span><span class="op">)</span>,</span>
 <span>    subtitle <span class="op">=</span> <span class="st">"Aggregated by the initial package release years. Categories may change from one version to another and were taken from the latest versions."</span>,</span>
 <span>    caption  <span class="op">=</span> <span class="st">"Data: CRAN via {pkgsearch} | Visualization: Antti Rask | Updated: 2024-12-31"</span></span>
 <span>  <span class="op">)</span> <span class="op">+</span></span>
-<span></span>
+<span>  </span>
 <span>  <span class="co"># Apply a clean, minimal theme and customize text styling</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span>base_family <span class="op">=</span> <span class="va">font_family</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  </span>
@@ -1242,7 +1242,7 @@ This book/site is under construction
 <span>      color  <span class="op">=</span> <span class="fu"><a href="https://colorspace.R-Forge.R-project.org/reference/lighten.html">darken</a></span><span class="op">(</span><span class="st">"darkgrey"</span>, <span class="fl">0.4</span><span class="op">)</span>,</span>
 <span>      hjust  <span class="op">=</span> <span class="fl">0.5</span>,</span>
 <span>      margin <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">margin</a></span><span class="op">(</span><span class="fl">20</span>, <span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span></span>
-<span>      <span class="op">)</span></span>
+<span>    <span class="op">)</span></span>
 <span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
@@ -1252,6 +1252,7 @@ This book/site is under construction
 </div>
 </div>
 <p>Streamgraph, like other area graphs, isn’t the best for making detailed comparisons between groups. But it’s excellent for creating a broader picture of what’s going on in the data.</p>
+<p>There is also an interactive version of streamgraph, built in to the package. We’ll check it out in <a href="interactive_plots.html#sec-interactive-streamgraph" class="quarto-xref"><span>Section 12.3</span></a>.</p>
 </section></section></section><section id="sec-bar-charts" class="level2" data-number="3.2"><h2 data-number="3.2" class="anchored" data-anchor-id="sec-bar-charts">
 <span class="header-section-number">3.2</span> Bar charts</h2>
 <p>Bar charts are the backbone of data visualization. And ggplot2 handles most types of bar charts out of the box. However, there are situations where you may want to take it a step further.</p>
@@ -1400,25 +1401,25 @@ This book/site is under construction
 <span></span>
 <span><span class="co"># Create a Likert chart for PISA 2022 student statements, faceted by statement</span></span>
 <span><span class="fu"><a href="https://larmarange.github.io/ggstats/reference/gglikert.html">gglikert</a></span><span class="op">(</span></span>
-<span>    </span>
-<span>    <span class="co"># Data</span></span>
-<span>    <span class="va">pisa_2022_statements_refactored</span>,</span>
-<span>    </span>
-<span>    <span class="co"># Include all columns except 'country'</span></span>
-<span>    include <span class="op">=</span> <span class="op">-</span><span class="va">country</span>,</span>
-<span>    </span>
-<span>    <span class="co"># y-axis shows countries</span></span>
-<span>    y <span class="op">=</span> <span class="st">"country"</span>,</span>
-<span>    </span>
-<span>    <span class="co"># Use custom labels for statements</span></span>
-<span>    variable_labels <span class="op">=</span> <span class="va">pisa_2022_labels_vector</span>,</span>
-<span>    </span>
-<span>    <span class="co"># Sort responses in descending order</span></span>
-<span>    sort <span class="op">=</span> <span class="st">"descending"</span>,</span>
-<span>    </span>
-<span>    <span class="co"># Facet rows by statement variable</span></span>
-<span>    facet_rows <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/vars.html">vars</a></span><span class="op">(</span><span class="va">.question</span><span class="op">)</span></span>
-<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Data</span></span>
+<span>  <span class="va">pisa_2022_statements_refactored</span>,</span>
+<span>  </span>
+<span>  <span class="co"># Include all columns except 'country'</span></span>
+<span>  include <span class="op">=</span> <span class="op">-</span><span class="va">country</span>,</span>
+<span>  </span>
+<span>  <span class="co"># y-axis shows countries</span></span>
+<span>  y <span class="op">=</span> <span class="st">"country"</span>,</span>
+<span>  </span>
+<span>  <span class="co"># Use custom labels for statements</span></span>
+<span>  variable_labels <span class="op">=</span> <span class="va">pisa_2022_labels_vector</span>,</span>
+<span>  </span>
+<span>  <span class="co"># Sort responses in descending order</span></span>
+<span>  sort <span class="op">=</span> <span class="st">"descending"</span>,</span>
+<span>  </span>
+<span>  <span class="co"># Facet rows by statement variable</span></span>
+<span>  facet_rows <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/vars.html">vars</a></span><span class="op">(</span><span class="va">.question</span><span class="op">)</span></span>
+<span><span class="op">)</span> <span class="op">+</span></span>
 <span>  </span>
 <span>  <span class="co"># Adjust facet grid layout: wrap statement labels and move to the left side</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_grid.html">facet_grid</a></span><span class="op">(</span></span>
@@ -1509,7 +1510,7 @@ This book/site is under construction
 <span>    <span class="co"># For genre, we'll use fct_infreq to order the levels by number of </span></span>
 <span>    <span class="co"># observations with each level (largest first)</span></span>
 <span>    genre <span class="op">=</span> <span class="va">genre</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://forcats.tidyverse.org/reference/as_factor.html">as_factor</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://forcats.tidyverse.org/reference/fct_inorder.html">fct_infreq</a></span><span class="op">(</span><span class="va">.</span><span class="op">)</span></span>
-<span>  </span>
+<span>    </span>
 <span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div data-pagedtable="false">
@@ -1616,12 +1617,12 @@ This book/site is under construction
 <span>  <span class="co"># Add text labels to tiles, using the prepared center positions </span></span>
 <span>  <span class="co"># and filtered counts</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_text.html">geom_text</a></span><span class="op">(</span></span>
-<span>    data <span class="op">=</span> <span class="va">tile_data_with_counts</span>,</span>
 <span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span></span>
 <span>      x     <span class="op">=</span> <span class="va">xpos</span>,     <span class="co"># x-position: tile center x</span></span>
 <span>      y     <span class="op">=</span> <span class="va">ypos</span>,     <span class="co"># y-position: tile center y</span></span>
 <span>      label <span class="op">=</span> <span class="va">n_label</span>   <span class="co"># Label: count (only if &gt;= 70)</span></span>
 <span>    <span class="op">)</span>,</span>
+<span>    data     <span class="op">=</span> <span class="va">tile_data_with_counts</span>,</span>
 <span>    colour   <span class="op">=</span> <span class="st">"white"</span>, <span class="co"># White text for contrast</span></span>
 <span>    fontface <span class="op">=</span> <span class="st">"bold"</span>,</span>
 <span>    size     <span class="op">=</span> <span class="fl">5</span>  </span>
@@ -1664,7 +1665,7 @@ This book/site is under construction
 <span>      color  <span class="op">=</span> <span class="st">"darkgrey"</span>,</span>
 <span>      hjust  <span class="op">=</span> <span class="fl">0.5</span>,</span>
 <span>      margin <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">margin</a></span><span class="op">(</span><span class="fl">10</span>, <span class="fl">0</span>, <span class="fl">10</span>, <span class="fl">0</span><span class="op">)</span></span>
-<span>      <span class="op">)</span></span>
+<span>    <span class="op">)</span></span>
 <span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
@@ -1710,7 +1711,7 @@ This book/site is under construction
 <span>    <span class="co"># Focus on movies released after 2000</span></span>
 <span>    <span class="va">year</span> <span class="op">&gt;</span> <span class="fl">2000</span></span>
 <span>  <span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span></span>
+<span>  </span>
 <span>  <span class="co"># Keep only the genre and rating columns for further use</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">genre</span>, <span class="va">rating</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -1836,26 +1837,26 @@ This book/site is under construction
 <span>  </span>
 <span>  <span class="co"># Add median values as text labels above each raincloud</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/stat_summary.html">stat_summary</a></span><span class="op">(</span></span>
-<span>    geom <span class="op">=</span> <span class="st">"text"</span>,</span>
-<span>    fun  <span class="op">=</span> <span class="st">"median"</span>,</span>
 <span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span></span>
 <span>      <span class="co"># Format median to 2 decimals</span></span>
 <span>      label <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes_eval.html">after_stat</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span>, <span class="fl">2</span><span class="op">)</span>,</span>
 <span>      <span class="co"># Darken text color slightly</span></span>
 <span>      color <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes_eval.html">stage</a></span><span class="op">(</span><span class="va">genre</span>, after_scale <span class="op">=</span> <span class="fu"><a href="https://colorspace.R-Forge.R-project.org/reference/lighten.html">darken</a></span><span class="op">(</span><span class="va">color</span>, <span class="fl">.2</span>, space <span class="op">=</span> <span class="st">"HLS"</span><span class="op">)</span><span class="op">)</span></span>
 <span>    <span class="op">)</span>,</span>
+<span>    geom <span class="op">=</span> <span class="st">"text"</span>,</span>
+<span>    fun  <span class="op">=</span> <span class="st">"median"</span>,</span>
 <span>    size  <span class="op">=</span> <span class="fl">3.5</span>,</span>
 <span>    vjust <span class="op">=</span> <span class="op">-</span><span class="fl">5</span></span>
 <span>  <span class="op">)</span> <span class="op">+</span></span>
 <span>  </span>
 <span>  <span class="co"># Add sample size (n =) labels using custom summary function</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/stat_summary.html">stat_summary</a></span><span class="op">(</span></span>
-<span>    geom <span class="op">=</span> <span class="st">"text"</span>,</span>
-<span>    fun.data <span class="op">=</span> <span class="va">add_sample</span>,</span>
 <span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span></span>
 <span>      label <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"n ="</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes_eval.html">after_stat</a></span><span class="op">(</span><span class="va">label</span><span class="op">)</span><span class="op">)</span>,</span>
 <span>      color <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes_eval.html">stage</a></span><span class="op">(</span><span class="va">genre</span>, after_scale <span class="op">=</span> <span class="fu"><a href="https://colorspace.R-Forge.R-project.org/reference/lighten.html">darken</a></span><span class="op">(</span><span class="va">color</span>, <span class="fl">.2</span>, space <span class="op">=</span> <span class="st">"HLS"</span><span class="op">)</span><span class="op">)</span></span>
 <span>    <span class="op">)</span>,</span>
+<span>    geom <span class="op">=</span> <span class="st">"text"</span>,</span>
+<span>    fun.data <span class="op">=</span> <span class="va">add_sample</span>,</span>
 <span>    size  <span class="op">=</span> <span class="fl">3.5</span>,</span>
 <span>    hjust <span class="op">=</span> <span class="op">-</span><span class="fl">0.25</span></span>
 <span>  <span class="op">)</span> <span class="op">+</span></span>
@@ -1928,7 +1929,145 @@ This book/site is under construction
 <p>This way, we have the best of all three worlds. We can see that the Documentary genre has the highest median. It also has the strongest concentration of points (which also shows in the half-violin) around the median. Especially compared to Action.</p>
 </section></section><section id="sec-ridgeline-chart" class="level3" data-number="3.3.2"><h3 data-number="3.3.2" class="anchored" data-anchor-id="sec-ridgeline-chart">
 <span class="header-section-number">3.3.2</span> Ridgeline chart</h3>
-</section></section><section id="sec-geometric-shapes" class="level2" data-number="3.4"><h2 data-number="3.4" class="anchored" data-anchor-id="sec-geometric-shapes">
+<p>A ridgeline chart is a good alternative to the violin plot. They “tend to work particularly well if [you] want to show trends in distributions over time. […] The purpose of the [chart] is not to show specific density values but instead to allow for easy comparison of density shapes and relative heights across groups” <span class="citation" data-cites="wilke2019">(<a href="references.html#ref-wilke2019" role="doc-biblioref">Wilke 2019</a>)</span>.</p>
+<p>We will use <strong>ggridges</strong> <span class="citation" data-cites="wilke2024">(<a href="references.html#ref-wilke2024" role="doc-biblioref">Wilke 2024</a>)</span> to create our ridgeline chart. If you’re familiar with ggplot2 extensions, you might have known a package called <strong><a href="https://github.com/clauswilke/ggjoy">ggjoy</a></strong> that did the same. It was <em>deprecated</em>, though, and you should update your old scripts to use ggridges instead.</p>
+<section id="sec-viz-8-helsinki-temperatures-part-iii" class="level4" data-number="3.3.2.1"><h4 data-number="3.3.2.1" class="anchored" data-anchor-id="sec-viz-8-helsinki-temperatures-part-iii">
+<span class="header-section-number">3.3.2.1</span> Viz #8: Helsinki temperatures, part III</h4>
+<p>Since the ridgeline chart works well for distributions over time, let’s use the Helsinki temperatures data. I’m interested in seeing how the daily average temperatures are distributed by month in 2024.</p>
+<p>Let’s start by getting the data ready. The one new trick is using <strong>month.abb</strong>. It’s a constant built into R. We have the month numbers in the data set and can use them in combination.</p>
+<p><code><a href="https://forcats.tidyverse.org/reference/fct_rev.html">fct_rev()</a></code> is the newest forcats function we get to use. It just reverses the order of factor levels. If we didn’t use it, the order of months in the plot would be from December to January. And it feels more natural to have them from January to December.</p>
+<div class="cell">
+<div class="sourceCode" id="cb36"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Load required packages</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span>    <span class="co"># For data manipulation</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://forcats.tidyverse.org/">forcats</a></span><span class="op">)</span>  <span class="co"># For working with factor levels (e.g., fct_rev)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://readr.tidyverse.org">readr</a></span><span class="op">)</span>    <span class="co"># For reading CSV files efficiently</span></span>
+<span></span>
+<span><span class="co"># Read and preprocess temperature data for ridgeline plot</span></span>
+<span><span class="va">temperature_ggridges</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/temperature-hki-2025-06-13.csv"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  </span>
+<span>  <span class="co"># Filter for data from the year 2024 only</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">year</span> <span class="op">==</span> <span class="fl">2024</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
+<span>    <span class="co"># Create a month_name factor (Jan–Dec)</span></span>
+<span>    month_name <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span></span>
+<span>      <span class="co"># Convert month number to 3-letter abbreviation (e.g., Jan)</span></span>
+<span>      <span class="va">month.abb</span><span class="op">[</span><span class="va">month</span><span class="op">]</span>,</span>
+<span>      <span class="co"># Set order Jan–Dec</span></span>
+<span>      levels  <span class="op">=</span> <span class="va">month.abb</span>,</span>
+<span>      <span class="co"># Ensure it's an ordered factor</span></span>
+<span>      ordered <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span>    <span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>      </span>
+<span>      <span class="co"># Reverse order: Jan at top, Dec at bottom</span></span>
+<span>      <span class="fu"><a href="https://forcats.tidyverse.org/reference/fct_rev.html">fct_rev</a></span><span class="op">(</span><span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  </span>
+<span>  <span class="co"># Keep only columns needed for plotting</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">avg_temperature_celsius</span>, <span class="va">month_name</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["avg_temperature_celsius"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["month_name"],"name":[2],"type":["ord"],"align":["right"]}],"data":[{"1":"-15.8","2":"Jan"},{"1":"-16.4","2":"Jan"},{"1":"-16.4","2":"Jan"},{"1":"-17.1","2":"Jan"},{"1":"-15.9","2":"Jan"},{"1":"-15.1","2":"Jan"},{"1":"-19.3","2":"Jan"},{"1":"-6.5","2":"Jan"},{"1":"0.4","2":"Jan"},{"1":"1.4","2":"Jan"},{"1":"-4.0","2":"Jan"},{"1":"-7.9","2":"Jan"},{"1":"-8.3","2":"Jan"},{"1":"-5.9","2":"Jan"},{"1":"-8.9","2":"Jan"},{"1":"-16.0","2":"Jan"},{"1":"-9.6","2":"Jan"},{"1":"-4.3","2":"Jan"},{"1":"-9.0","2":"Jan"},{"1":"-15.0","2":"Jan"},{"1":"-4.4","2":"Jan"},{"1":"0.6","2":"Jan"},{"1":"2.8","2":"Jan"},{"1":"0.8","2":"Jan"},{"1":"-0.7","2":"Jan"},{"1":"-5.3","2":"Jan"},{"1":"-2.2","2":"Jan"},{"1":"1.7","2":"Jan"},{"1":"2.5","2":"Jan"},{"1":"0.2","2":"Jan"},{"1":"1.4","2":"Jan"},{"1":"2.0","2":"Feb"},{"1":"0.4","2":"Feb"},{"1":"1.7","2":"Feb"},{"1":"0.8","2":"Feb"},{"1":"-1.8","2":"Feb"},{"1":"-5.0","2":"Feb"},{"1":"-10.2","2":"Feb"},{"1":"-13.4","2":"Feb"},{"1":"-13.2","2":"Feb"},{"1":"-12.3","2":"Feb"},{"1":"-10.0","2":"Feb"},{"1":"-7.1","2":"Feb"},{"1":"-6.5","2":"Feb"},{"1":"-1.2","2":"Feb"},{"1":"0.2","2":"Feb"},{"1":"0.9","2":"Feb"},{"1":"1.6","2":"Feb"},{"1":"-2.7","2":"Feb"},{"1":"-1.1","2":"Feb"},{"1":"-0.2","2":"Feb"},{"1":"0.1","2":"Feb"},{"1":"1.4","2":"Feb"},{"1":"2.2","2":"Feb"},{"1":"1.9","2":"Feb"},{"1":"2.2","2":"Feb"},{"1":"0.7","2":"Feb"},{"1":"-0.3","2":"Feb"},{"1":"-0.5","2":"Feb"},{"1":"1.2","2":"Feb"},{"1":"0.8","2":"Mar"},{"1":"0.9","2":"Mar"},{"1":"0.6","2":"Mar"},{"1":"0.5","2":"Mar"},{"1":"-0.1","2":"Mar"},{"1":"-0.8","2":"Mar"},{"1":"-3.5","2":"Mar"},{"1":"-3.3","2":"Mar"},{"1":"-0.8","2":"Mar"},{"1":"-1.3","2":"Mar"},{"1":"-0.4","2":"Mar"},{"1":"-0.5","2":"Mar"},{"1":"0.7","2":"Mar"},{"1":"2.6","2":"Mar"},{"1":"3.7","2":"Mar"},{"1":"3.8","2":"Mar"},{"1":"-1.3","2":"Mar"},{"1":"-3.1","2":"Mar"},{"1":"-0.3","2":"Mar"},{"1":"0.9","2":"Mar"},{"1":"1.4","2":"Mar"},{"1":"1.5","2":"Mar"},{"1":"2.4","2":"Mar"},{"1":"0.6","2":"Mar"},{"1":"0.7","2":"Mar"},{"1":"0.4","2":"Mar"},{"1":"2.6","2":"Mar"},{"1":"5.7","2":"Mar"},{"1":"4.7","2":"Mar"},{"1":"5.3","2":"Mar"},{"1":"4.4","2":"Mar"},{"1":"7.5","2":"Apr"},{"1":"3.2","2":"Apr"},{"1":"-1.0","2":"Apr"},{"1":"-2.0","2":"Apr"},{"1":"-1.4","2":"Apr"},{"1":"0.3","2":"Apr"},{"1":"2.9","2":"Apr"},{"1":"6.0","2":"Apr"},{"1":"7.6","2":"Apr"},{"1":"6.7","2":"Apr"},{"1":"5.9","2":"Apr"},{"1":"8.5","2":"Apr"},{"1":"5.1","2":"Apr"},{"1":"4.5","2":"Apr"},{"1":"6.6","2":"Apr"},{"1":"4.5","2":"Apr"},{"1":"2.8","2":"Apr"},{"1":"0.3","2":"Apr"},{"1":"-1.9","2":"Apr"},{"1":"-1.6","2":"Apr"},{"1":"0.0","2":"Apr"},{"1":"-0.3","2":"Apr"},{"1":"-0.2","2":"Apr"},{"1":"3.0","2":"Apr"},{"1":"3.4","2":"Apr"},{"1":"3.8","2":"Apr"},{"1":"5.1","2":"Apr"},{"1":"6.6","2":"Apr"},{"1":"11.0","2":"Apr"},{"1":"11.5","2":"Apr"},{"1":"9.9","2":"May"},{"1":"10.2","2":"May"},{"1":"11.1","2":"May"},{"1":"14.6","2":"May"},{"1":"9.0","2":"May"},{"1":"6.1","2":"May"},{"1":"5.8","2":"May"},{"1":"4.4","2":"May"},{"1":"5.6","2":"May"},{"1":"8.7","2":"May"},{"1":"10.2","2":"May"},{"1":"10.2","2":"May"},{"1":"12.0","2":"May"},{"1":"11.4","2":"May"},{"1":"15.2","2":"May"},{"1":"17.4","2":"May"},{"1":"16.4","2":"May"},{"1":"14.7","2":"May"},{"1":"16.4","2":"May"},{"1":"15.2","2":"May"},{"1":"13.0","2":"May"},{"1":"14.5","2":"May"},{"1":"17.4","2":"May"},{"1":"19.5","2":"May"},{"1":"19.7","2":"May"},{"1":"18.8","2":"May"},{"1":"19.7","2":"May"},{"1":"20.6","2":"May"},{"1":"19.7","2":"May"},{"1":"19.8","2":"May"},{"1":"21.6","2":"May"},{"1":"21.8","2":"Jun"},{"1":"20.1","2":"Jun"},{"1":"21.1","2":"Jun"},{"1":"20.0","2":"Jun"},{"1":"18.0","2":"Jun"},{"1":"16.3","2":"Jun"},{"1":"14.6","2":"Jun"},{"1":"13.7","2":"Jun"},{"1":"13.1","2":"Jun"},{"1":"12.3","2":"Jun"},{"1":"13.5","2":"Jun"},{"1":"13.9","2":"Jun"},{"1":"14.4","2":"Jun"},{"1":"14.5","2":"Jun"},{"1":"14.5","2":"Jun"},{"1":"17.1","2":"Jun"},{"1":"18.0","2":"Jun"},{"1":"16.9","2":"Jun"},{"1":"15.3","2":"Jun"},{"1":"16.1","2":"Jun"},{"1":"17.2","2":"Jun"},{"1":"16.6","2":"Jun"},{"1":"18.2","2":"Jun"},{"1":"19.2","2":"Jun"},{"1":"20.0","2":"Jun"},{"1":"19.8","2":"Jun"},{"1":"21.3","2":"Jun"},{"1":"21.9","2":"Jun"},{"1":"19.8","2":"Jun"},{"1":"17.8","2":"Jun"},{"1":"17.9","2":"Jul"},{"1":"17.7","2":"Jul"},{"1":"14.9","2":"Jul"},{"1":"17.0","2":"Jul"},{"1":"16.3","2":"Jul"},{"1":"14.7","2":"Jul"},{"1":"16.6","2":"Jul"},{"1":"17.0","2":"Jul"},{"1":"17.1","2":"Jul"},{"1":"17.9","2":"Jul"},{"1":"18.7","2":"Jul"},{"1":"18.5","2":"Jul"},{"1":"20.7","2":"Jul"},{"1":"19.1","2":"Jul"},{"1":"18.4","2":"Jul"},{"1":"20.0","2":"Jul"},{"1":"20.4","2":"Jul"},{"1":"19.1","2":"Jul"},{"1":"18.5","2":"Jul"},{"1":"18.7","2":"Jul"},{"1":"19.4","2":"Jul"},{"1":"21.2","2":"Jul"},{"1":"22.1","2":"Jul"},{"1":"21.7","2":"Jul"},{"1":"21.9","2":"Jul"},{"1":"22.1","2":"Jul"},{"1":"21.2","2":"Jul"},{"1":"21.2","2":"Jul"},{"1":"21.8","2":"Jul"},{"1":"20.3","2":"Jul"},{"1":"18.1","2":"Jul"},{"1":"17.7","2":"Aug"},{"1":"17.7","2":"Aug"},{"1":"18.0","2":"Aug"},{"1":"18.3","2":"Aug"},{"1":"18.2","2":"Aug"},{"1":"19.3","2":"Aug"},{"1":"18.4","2":"Aug"},{"1":"20.0","2":"Aug"},{"1":"21.7","2":"Aug"},{"1":"19.0","2":"Aug"},{"1":"17.0","2":"Aug"},{"1":"15.1","2":"Aug"},{"1":"18.9","2":"Aug"},{"1":"19.4","2":"Aug"},{"1":"19.6","2":"Aug"},{"1":"19.7","2":"Aug"},{"1":"19.4","2":"Aug"},{"1":"17.7","2":"Aug"},{"1":"18.4","2":"Aug"},{"1":"16.8","2":"Aug"},{"1":"19.6","2":"Aug"},{"1":"19.2","2":"Aug"},{"1":"17.4","2":"Aug"},{"1":"17.7","2":"Aug"},{"1":"19.6","2":"Aug"},{"1":"17.2","2":"Aug"},{"1":"17.3","2":"Aug"},{"1":"17.7","2":"Aug"},{"1":"17.9","2":"Aug"},{"1":"20.8","2":"Aug"},{"1":"16.1","2":"Aug"},{"1":"14.9","2":"Sep"},{"1":"16.3","2":"Sep"},{"1":"18.2","2":"Sep"},{"1":"19.3","2":"Sep"},{"1":"19.7","2":"Sep"},{"1":"18.6","2":"Sep"},{"1":"18.4","2":"Sep"},{"1":"18.9","2":"Sep"},{"1":"20.0","2":"Sep"},{"1":"19.7","2":"Sep"},{"1":"17.3","2":"Sep"},{"1":"17.3","2":"Sep"},{"1":"17.0","2":"Sep"},{"1":"18.2","2":"Sep"},{"1":"13.2","2":"Sep"},{"1":"13.5","2":"Sep"},{"1":"15.8","2":"Sep"},{"1":"13.0","2":"Sep"},{"1":"13.6","2":"Sep"},{"1":"16.0","2":"Sep"},{"1":"12.0","2":"Sep"},{"1":"8.6","2":"Sep"},{"1":"13.4","2":"Sep"},{"1":"17.1","2":"Sep"},{"1":"16.9","2":"Sep"},{"1":"15.7","2":"Sep"},{"1":"15.2","2":"Sep"},{"1":"11.5","2":"Sep"},{"1":"8.9","2":"Sep"},{"1":"7.4","2":"Sep"},{"1":"8.0","2":"Oct"},{"1":"6.8","2":"Oct"},{"1":"7.7","2":"Oct"},{"1":"7.6","2":"Oct"},{"1":"9.1","2":"Oct"},{"1":"12.2","2":"Oct"},{"1":"9.9","2":"Oct"},{"1":"7.5","2":"Oct"},{"1":"9.6","2":"Oct"},{"1":"12.9","2":"Oct"},{"1":"12.5","2":"Oct"},{"1":"7.5","2":"Oct"},{"1":"8.2","2":"Oct"},{"1":"6.7","2":"Oct"},{"1":"5.0","2":"Oct"},{"1":"7.0","2":"Oct"},{"1":"10.4","2":"Oct"},{"1":"10.8","2":"Oct"},{"1":"11.2","2":"Oct"},{"1":"10.6","2":"Oct"},{"1":"11.6","2":"Oct"},{"1":"11.5","2":"Oct"},{"1":"10.5","2":"Oct"},{"1":"10.2","2":"Oct"},{"1":"10.2","2":"Oct"},{"1":"10.5","2":"Oct"},{"1":"10.4","2":"Oct"},{"1":"8.4","2":"Oct"},{"1":"6.1","2":"Oct"},{"1":"8.4","2":"Oct"},{"1":"4.5","2":"Oct"},{"1":"3.1","2":"Nov"},{"1":"1.7","2":"Nov"},{"1":"1.5","2":"Nov"},{"1":"1.5","2":"Nov"},{"1":"5.8","2":"Nov"},{"1":"6.9","2":"Nov"},{"1":"6.1","2":"Nov"},{"1":"6.6","2":"Nov"},{"1":"6.2","2":"Nov"},{"1":"3.6","2":"Nov"},{"1":"5.1","2":"Nov"},{"1":"4.4","2":"Nov"},{"1":"5.9","2":"Nov"},{"1":"5.2","2":"Nov"},{"1":"5.7","2":"Nov"},{"1":"8.4","2":"Nov"},{"1":"6.2","2":"Nov"},{"1":"1.8","2":"Nov"},{"1":"-0.7","2":"Nov"},{"1":"1.8","2":"Nov"},{"1":"2.1","2":"Nov"},{"1":"-1.5","2":"Nov"},{"1":"-2.1","2":"Nov"},{"1":"1.4","2":"Nov"},{"1":"6.1","2":"Nov"},{"1":"7.9","2":"Nov"},{"1":"7.1","2":"Nov"},{"1":"5.3","2":"Nov"},{"1":"2.7","2":"Nov"},{"1":"5.4","2":"Nov"},{"1":"6.5","2":"Dec"},{"1":"5.8","2":"Dec"},{"1":"0.5","2":"Dec"},{"1":"-4.3","2":"Dec"},{"1":"-0.9","2":"Dec"},{"1":"0.4","2":"Dec"},{"1":"0.8","2":"Dec"},{"1":"0.3","2":"Dec"},{"1":"-1.8","2":"Dec"},{"1":"0.6","2":"Dec"},{"1":"1.0","2":"Dec"},{"1":"-3.1","2":"Dec"},{"1":"-2.0","2":"Dec"},{"1":"1.6","2":"Dec"},{"1":"-4.4","2":"Dec"},{"1":"1.5","2":"Dec"},{"1":"0.2","2":"Dec"},{"1":"-1.6","2":"Dec"},{"1":"4.2","2":"Dec"},{"1":"1.7","2":"Dec"},{"1":"-1.0","2":"Dec"},{"1":"3.4","2":"Dec"},{"1":"4.0","2":"Dec"},{"1":"2.4","2":"Dec"},{"1":"4.7","2":"Dec"},{"1":"5.5","2":"Dec"},{"1":"2.2","2":"Dec"},{"1":"2.2","2":"Dec"},{"1":"4.9","2":"Dec"},{"1":"2.4","2":"Dec"},{"1":"-1.2","2":"Dec"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<p>Let’s again start with the most simple version of the visualization. ggridges comes with various density geoms. The most basic one is <code><a href="https://wilkelab.org/ggridges/reference/geom_density_ridges.html">geom_density_ridges()</a></code>.</p>
+<div class="cell">
+<div class="sourceCode" id="cb37"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Load ggridges for ridgeline (joyplot-style) visualizations</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://wilkelab.org/ggridges/">ggridges</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Create a ridgeline chart of average temperatures by month</span></span>
+<span><span class="va">temperature_ggridges</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span></span>
+<span>      <span class="co"># x-axis: average daily temperature</span></span>
+<span>      <span class="va">avg_temperature_celsius</span>,</span>
+<span>      <span class="co"># y-axis: month (ordered and reversed earlier)</span></span>
+<span>      <span class="va">month_name</span></span>
+<span>    <span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Plot density ridges for each month</span></span>
+<span>  <span class="fu"><a href="https://wilkelab.org/ggridges/reference/geom_density_ridges.html">geom_density_ridges</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="geoms_files/figure-html/unnamed-chunk-54-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Simple, yet effective. I even like the grayscale feel. But we can help the reader a little bit more by making some adjustments.</p>
+<p>We’ll switch the geom to <code><a href="https://wilkelab.org/ggridges/reference/geom_ridgeline_gradient.html">geom_density_ridges_gradient()</a></code>, because we want to add some color. <strong>option = “H”</strong> from <code><a href="https://ggplot2.tidyverse.org/reference/scale_viridis.html">scale_fill_viridis_c()</a></code> seems like an intuitive color scale for temperature data. ggridges comes with the <code><a href="https://wilkelab.org/ggridges/reference/theme_ridges.html">theme_ridges()</a></code> function that works well with the rest of the functions, as expected.</p>
+<div class="cell">
+<div class="sourceCode" id="cb38"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Load required libraries</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>    <span class="co"># Core plotting library</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://wilkelab.org/ggridges/">ggridges</a></span><span class="op">)</span>   <span class="co"># For ridge/density plots with vertical layout</span></span>
+<span></span>
+<span><span class="co"># Create a gradient ridgeline plot showing Helsinki temperatures by month</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span></span>
+<span>    <span class="co"># x-axis: average daily temperature</span></span>
+<span>    <span class="va">avg_temperature_celsius</span>,</span>
+<span>    <span class="co"># y-axis: month (already ordered and reversed)</span></span>
+<span>    <span class="va">month_name</span>,</span>
+<span>    <span class="co"># Use x (temperature) value to control fill gradient</span></span>
+<span>    fill <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes_eval.html">after_stat</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
+<span>  <span class="op">)</span>,</span>
+<span>  <span class="co"># Data frame prepared earlier</span></span>
+<span>  data <span class="op">=</span> <span class="va">temperature_ggridges</span></span>
+<span><span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Add gradient ridgelines — fill color based on temperature (x value)</span></span>
+<span>  <span class="fu"><a href="https://wilkelab.org/ggridges/reference/geom_ridgeline_gradient.html">geom_density_ridges_gradient</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Customize x-axis: temperature range with regular tick marks</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span></span>
+<span>    <span class="co"># Show ticks every 5 degrees</span></span>
+<span>    breaks <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="op">-</span><span class="fl">20</span>, <span class="fl">25</span>, by <span class="op">=</span> <span class="fl">5</span><span class="op">)</span>,</span>
+<span>    <span class="co"># Slight padding on left and right</span></span>
+<span>    expand <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.01</span>, <span class="fl">0.01</span><span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Use viridis "H" color palette (visually perceptible, colorblind-safe)</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_viridis.html">scale_fill_viridis_c</a></span><span class="op">(</span>option <span class="op">=</span> <span class="st">"H"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Add labels and title (no axis labels for minimalist look)</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span></span>
+<span>    x        <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>    y        <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>    title    <span class="op">=</span> <span class="st">"Average daily temperature (°C) in Helsinki in 2024"</span>,</span>
+<span>    caption  <span class="op">=</span> <span class="st">"Data: Finnish Meteorological Institute open data, weather observations (CC BY 4.0) | Visualization: Antti Rask"</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Apply ridges-specific theme with grid lines disabled</span></span>
+<span>  <span class="fu"><a href="https://wilkelab.org/ggridges/reference/theme_ridges.html">theme_ridges</a></span><span class="op">(</span>grid <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Additional theme customizations</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span></span>
+<span>    axis.ticks      <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    legend.position <span class="op">=</span> <span class="st">"null"</span>,</span>
+<span>    plot.margin     <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">margin</a></span><span class="op">(</span><span class="fl">15</span>, <span class="fl">15</span>, <span class="fl">15</span>, <span class="fl">15</span><span class="op">)</span>,</span>
+<span>    plot.title      <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span></span>
+<span>      face   <span class="op">=</span> <span class="st">"bold"</span>,</span>
+<span>      size   <span class="op">=</span> <span class="fl">18</span>,</span>
+<span>      margin <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">margin</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">20</span>, <span class="fl">0</span><span class="op">)</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    plot.caption <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span></span>
+<span>      color  <span class="op">=</span> <span class="st">"#777777"</span>,</span>
+<span>      size   <span class="op">=</span> <span class="fl">10</span>,</span>
+<span>      margin <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">margin</a></span><span class="op">(</span><span class="fl">10</span>, <span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    plot.title.position <span class="op">=</span> <span class="st">"plot"</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="geoms_files/figure-html/unnamed-chunk-55-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Of course, it would be nice to see how the distributions have changed over the years. One way to do that is by using animation. For that, see <a href="animated-plots.html#sec-gganimate" class="quarto-xref"><span>Section 13.2</span></a>.</p>
+</section></section></section><section id="sec-geometric-shapes" class="level2" data-number="3.4"><h2 data-number="3.4" class="anchored" data-anchor-id="sec-geometric-shapes">
 <span class="header-section-number">3.4</span> Geometric shapes</h2>
 <section id="sec-arc" class="level3" data-number="3.4.1"><h3 data-number="3.4.1" class="anchored" data-anchor-id="sec-arc">
 <span class="header-section-number">3.4.1</span> Arc</h3>
@@ -2077,6 +2216,9 @@ Wilke, Claus O. 2017. <span>“Goodbye Joyplots.”</span> <a href="https://clau
 </div>
 <div id="ref-wilke2019" class="csl-entry" role="listitem">
 ———. 2019. <em>Fundamentals of Data Visualization: A Primer on Making Informative and Compelling Figures</em>. 1st ed. O’Reilly. <a href="https://clauswilke.com/dataviz/">https://clauswilke.com/dataviz/</a>.
+</div>
+<div id="ref-wilke2024" class="csl-entry" role="listitem">
+———. 2024. <em>Ggridges: Ridgeline Plots in ’Ggplot2’</em>. <a href="https://CRAN.R-project.org/package=ggridges">https://CRAN.R-project.org/package=ggridges</a>.
 </div>
 <div id="ref-wilke2022" class="csl-entry" role="listitem">
 Wilke, Claus O., and Brenton M. Wiernik. 2022. <em>Ggtext: Improved Text Rendering Support for ’Ggplot2’</em>. <a href="https://CRAN.R-project.org/package=ggtext">https://CRAN.R-project.org/package=ggtext</a>.

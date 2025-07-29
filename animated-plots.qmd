@@ -7,6 +7,199 @@
 source("warning.R")
 ```
 
-## Animation
+Animated data visualizations incorporate motion to convey information. Unlike static charts, animated visuals show change dynamically. For example, a bar growing to represent an increasing value, or points moving on a map to show a shifting geographic pattern.
 
-## GIF
+Animation can make data stories more engaging and help audiences grasp transitions or trends that unfold over time. However, using animation requires understanding when it aids comprehension and when it might hinder it.
+
+__ggplot2__ [@wickham2024a] out of the package doesn't come with animation capabilities.
+In this chapter, we'll see how different packages have approached the challenge.
+
+## camcorder {#sec-gif-camcorder}
+
+## gganimate {#sec-gganimate}
+
+Using __gganimate__ [@pedersen2025] is a nice, easy way to animate your visualizations. You can always start with a static visualization and add the animation elements. It "extends the grammar of graphics as implemented by ggplot2 to include the description of animation. It does this by providing a range of new grammar classes that can be added to the plot object in order to customise how it should change with time."
+
+Of course, we need to render the animation somehow. We'll be using the default, __gifski__ [@ooms2025], but it's good to know that there are other options available.
+
+#### Viz #n: Helsinki temperatures, part n {#sec-viz-n-helsinki-temperatures-part-n}
+
+For this example, we'll be revisiting the Helsinki temperatures visualization from @sec-viz-8-helsinki-temperatures-part-iii. Since you can revisit that section, we'll only go through what needs to be added for the animation.
+
+The original static visualization showed monthly temperature data for 2024. What we’d like to see is the same, but for each year between 2000 and 2024. Starting with the data, the only change we need to make is to remove the year filter and include the year as a column.
+
+```{r}
+#| echo:    false
+#| message: false
+#| warning: false
+#| results: asis
+
+# Load required packages
+library(dplyr)      # For data manipulation (filter, mutate, select, etc.)
+library(forcats)    # For working with factors (e.g., fct_rev for reversing levels)
+library(readr)      # For reading CSV files
+
+# Read and preprocess temperature data for multi-year ridgeline visualization
+temperature_ggridges <- read_csv("data/temperature-hki-2025-06-13.csv") %>%
+  
+  # Create a reversed month name factor for plotting (Jan at top, Dec at bottom)
+  mutate(
+    month_name = factor(
+      # Convert numeric month to abbreviated name (e.g., "Jan")
+      month.abb[month],
+      # Ensure correct month order (Jan to Dec)
+      levels  = month.abb,
+      # Mark as ordered factor for plotting purposes
+      ordered = TRUE
+    ) %>% 
+      
+      # Reverse order for top-to-bottom month layout
+      fct_rev()
+  ) %>%
+  
+  # Keep only the variables needed for plotting or filtering later
+  select(avg_temperature_celsius, month_name, year)
+```
+
+```{r}
+#| echo:    false
+#| message: false
+#| warning: false
+#| results: asis
+
+library(rmarkdown)
+
+temperature_ggridges %>%
+  paged_table()
+```
+
+Similarly, for the ggplot2 code, there are only two small changes that need to be made. We'll save the ggplot object as __plot_ggridges__. And we've added the argument __subtitle = "Year: {closest_state}"__ inside the `labs()` function. That's it.
+
+```{r}
+#| echo:    false
+#| message: false
+#| warning: false
+#| results: asis
+
+library(ggplot2)
+library(ggridges)
+
+plot_ggridges <- ggplot(
+  aes(
+    avg_temperature_celsius,
+    month_name,
+    fill = after_stat(x)
+  ),
+  data = temperature_ggridges
+) +
+  geom_density_ridges_gradient() +
+  scale_x_continuous(
+    breaks = seq(-20, 25, by = 5),
+    expand = c(0.01, 0.01)
+  ) +
+  scale_fill_viridis_c(option = "H") +
+  labs(
+    x        = NULL,
+    y        = NULL,
+    title    = "Average daily temperature (°C) in Helsinki between 2000 and 2024",
+    subtitle = "Year: {closest_state}",
+    caption  = "Data: Finnish Meteorological Institute open data, weather observations (CC BY 4.0) | Visualization: Antti Rask"
+  ) +
+  theme_ridges(grid = FALSE) +
+  theme(
+    axis.ticks      = element_blank(),
+    legend.position = "null",
+    plot.margin     = margin(15, 15, 15, 15),
+    plot.title      = element_text(
+      face   = "bold",
+      size   = 18,
+      margin = margin(0, 0, 20, 0)
+    ),
+    plot.subtitle       = element_text(
+      size   = 16,
+      margin = margin(0, 0, 20, 0)
+    ),
+    plot.caption        = element_text(
+      color  = "#777777",
+      size   = 10,
+      margin = margin(10, 0, 0, 0)
+    ),
+    plot.title.position = "plot"
+  )
+```
+
+```{r}
+#| echo:    false
+#| message: false
+#| warning: false
+
+# This is here, because without using the library function on gganimate, renv
+# thinks that the package hasn't been used (because the next code chunk is not
+# evaluated)
+
+library(gganimate)
+```
+
+Starting with the plot_ggridges we can now add the animation layer. We'll do this in three easy steps:
+
+1. `transition_states()` defines how the data should be spread out and how it relates to itself across time
+2. `enter_fade()` defines how new data should appear...
+3. ...and `exit_fade()` defines how old data should disappear during the course of the animation [@pedersen2025]
+
+```{r}
+#| eval: false
+#| message: false
+#| warning: false
+
+# Load required libraries
+library(gganimate)    # For creating animated ggplot visuals
+library(ggplot2)      # Core plotting library
+
+# Animate the ridgeline plot across different years
+plot_animated <- plot_ggridges +
+  transition_states(
+    # Animate over the 'year' variable
+    year, 
+    # Duration of transitions between states (in frames)
+    transition_length = 10,
+    # Duration each state (year) is held on screen
+    state_length      = 4
+  ) +
+  
+  # Smooth fade-in for each year's frame
+  enter_fade() +
+  
+  # Smooth fade-out when switching years
+  exit_fade()
+```
+
+Now that we have the animated plot in plot_animated, we still need to do the rendering. We select the __number of frames__, __frames per second__, __width__, __height__, and, finally, the __renderer__.
+
+```{r}
+#| eval: false
+#| message: false
+#| warning: false
+
+animate(
+  # Use the animated plot object defined earlier
+  plot      = plot_animated,
+  # Total number of frames in the animation
+  nframes   = 300,
+  # Frames per second → total duration = 60 seconds
+  fps       = 5,
+  # Width of the output GIF in pixels
+  width     = 800,
+  # Height of the output GIF in pixels
+  height    = 600,
+  # Save output as a GIF to specified file path
+  renderer  = gifski_renderer("img/figure-13-1.gif")
+)
+```
+
+Compared to many other things, rendering will take some time. This one took 59.80 seconds. So it's still not that bad, even if it's a lot compared to a static visualization. I wanted to add enough frames so that you have time to see what's happening in the chart.
+
+![Figure 13.1: Average daily temperature (°C) in Helsinki, but animated](img/figure-13-1.gif){.lightbox}
+
+I would say that this animation falls under the category of "help audiences grasp transitions or trends that unfold over time”.
+
+## plotly {#sec-animation-plotly}

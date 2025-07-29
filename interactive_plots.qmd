@@ -7,10 +7,10 @@
 source("warning.R")
 ```
 
-## ggiraph
+## ggiraph {#sec-ggiraph}
 
-## Plotly
+## Plotly {#sec-interactive-plotly}
 
-## Streamgraph
+## Streamgraph {#sec-interactive-streamgraph}
 
-## Trelliscope
+## Trelliscope {#sec-trelliscope}
