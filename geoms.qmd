@@ -1852,17 +1852,7 @@ ggplot(
 
 Of course, it would be nice to see how the distributions have changed over the years. One way to do that is by using animation. For that, see @sec-gganimate.
 
-## Geometric shapes {#sec-geometric-shapes}
-
-### Arc {#sec-arc}
-
-### B-spline curve {#sec-b-spline-curve}
-
-### Bézier curve {#sec-bezier-curve}
-
-### Circle {#sec-circle}
-
-### Ellipse {#sec-ellipse}
+## Geometric primitives {#sec-geometric-primitives}
 
 ## Heatmaps {#sec-heatmaps}
 

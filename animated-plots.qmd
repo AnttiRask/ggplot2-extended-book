@@ -18,7 +18,7 @@ In this chapter, we'll see how different packages have approached the challenge.
 
 ## gganimate {#sec-gganimate}
 
-Using __gganimate__ [@pedersen2025] is a nice, easy way to animate your visualizations. You can always start with a static visualization and add the animation elements. It "extends the grammar of graphics as implemented by ggplot2 to include the description of animation. It does this by providing a range of new grammar classes that can be added to the plot object in order to customise how it should change with time."
+Using __gganimate__ [@pedersen2025a] is a nice, easy way to animate your visualizations. You can always start with a static visualization and add the animation elements. It "extends the grammar of graphics as implemented by ggplot2 to include the description of animation. It does this by providing a range of new grammar classes that can be added to the plot object in order to customise how it should change with time."
 
 Of course, we need to render the animation somehow. We'll be using the default, __gifski__ [@ooms2025], but it's good to know that there are other options available.
 
@@ -144,7 +144,7 @@ Starting with the plot_ggridges we can now add the animation layer. We'll do thi
 
 1. `transition_states()` defines how the data should be spread out and how it relates to itself across time
 2. `enter_fade()` defines how new data should appear...
-3. ...and `exit_fade()` defines how old data should disappear during the course of the animation [@pedersen2025]
+3. ...and `exit_fade()` defines how old data should disappear during the course of the animation [@pedersen2025a]
 
 ```{r}
 #| eval: false
