@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.42">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Antti Rask">
-
 <title>Introduction – ggplot2 extended</title>
 <style>
 code{white-space: pre-wrap;}
@@ -77,7 +74,6 @@ div.csl-indent {
   margin-left: 2em;
 }</style>
 
-
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -96,8 +92,7 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c5a49c6176af09ee6ed689c80b782381.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-c5a49c6176af09ee6ed689c80b782381.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -123,20 +118,13 @@ div.csl-indent {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-<script data-goatcounter="https://ggplot2-extended-book.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
-<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+}</script><script data-goatcounter="https://ggplot2-extended-book.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
-
-
 </head>
-
 <body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
@@ -147,13 +135,9 @@ div.csl-indent {
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">ggplot2 extended</a> 
         <div class="sidebar-tools-main">
@@ -173,7 +157,7 @@ div.csl-indent {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Welcome</span></a>
@@ -199,15 +183,15 @@ div.csl-indent {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ggplot2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">ggplot2</span></span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./layers.html" class="sidebar-item-text sidebar-link">
@@ -216,8 +200,8 @@ div.csl-indent {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data</span></span></a>
@@ -266,7 +250,7 @@ div.csl-indent {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./special_cases.html" class="sidebar-item-text sidebar-link">
@@ -275,8 +259,8 @@ div.csl-indent {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./maps.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Maps</span></span></a>
@@ -307,7 +291,7 @@ div.csl-indent {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./shortcuts.html" class="sidebar-item-text sidebar-link">
@@ -316,8 +300,8 @@ div.csl-indent {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./helpers.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Helpers</span></span></a>
@@ -330,7 +314,7 @@ div.csl-indent {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./getting_ready_to_publish.html" class="sidebar-item-text sidebar-link">
@@ -339,8 +323,8 @@ div.csl-indent {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./finishing_touches.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Finishing touches</span></span></a>
@@ -353,7 +337,7 @@ div.csl-indent {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./beyond_r.html" class="sidebar-item-text sidebar-link">
@@ -362,15 +346,15 @@ div.csl-indent {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./python.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Python</span></span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <span class="sidebar-item-text sidebar-link text-start">
  <span class="menu-text">Case studies</span></span>
@@ -382,50 +366,50 @@ div.csl-indent {
   </div>
 </li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#sec-purpose-and-scope" id="toc-sec-purpose-and-scope" class="nav-link active" data-scroll-target="#sec-purpose-and-scope">Purpose and scope</a>
+<li>
+<a href="#sec-purpose-and-scope" id="toc-sec-purpose-and-scope" class="nav-link active" data-scroll-target="#sec-purpose-and-scope">Purpose and scope</a>
   <ul class="collapse">
-  <li><a href="#sec-what-you-will-learn" id="toc-sec-what-you-will-learn" class="nav-link" data-scroll-target="#sec-what-you-will-learn">What you will learn</a></li>
+<li><a href="#sec-what-you-will-learn" id="toc-sec-what-you-will-learn" class="nav-link" data-scroll-target="#sec-what-you-will-learn">What you will learn</a></li>
   <li><a href="#sec-what-you-wont-learn" id="toc-sec-what-you-wont-learn" class="nav-link" data-scroll-target="#sec-what-you-wont-learn">What you won’t learn</a></li>
-  </ul></li>
+  </ul>
+</li>
   <li><a href="#sec-who-is-the-book-for" id="toc-sec-who-is-the-book-for" class="nav-link" data-scroll-target="#sec-who-is-the-book-for">Who is the book for?</a></li>
   <li><a href="#sec-who-am-i-to-write-this-book" id="toc-sec-who-am-i-to-write-this-book" class="nav-link" data-scroll-target="#sec-who-am-i-to-write-this-book">Who am I to write this book?</a></li>
   <li><a href="#sec-r" id="toc-sec-r" class="nav-link" data-scroll-target="#sec-r">R</a></li>
   <li><a href="#sec-ide" id="toc-sec-ide" class="nav-link" data-scroll-target="#sec-ide">IDE</a></li>
-  <li><a href="#sec-packages" id="toc-sec-packages" class="nav-link" data-scroll-target="#sec-packages">Packages</a>
+  <li>
+<a href="#sec-packages" id="toc-sec-packages" class="nav-link" data-scroll-target="#sec-packages">Packages</a>
   <ul class="collapse">
-  <li><a href="#sec-ggplot2-tidyverse" id="toc-sec-ggplot2-tidyverse" class="nav-link" data-scroll-target="#sec-ggplot2-tidyverse">ggplot2 &amp; tidyverse</a></li>
+<li><a href="#sec-ggplot2-tidyverse" id="toc-sec-ggplot2-tidyverse" class="nav-link" data-scroll-target="#sec-ggplot2-tidyverse">ggplot2 &amp; tidyverse</a></li>
   <li><a href="#sec-ggplot2-extensions" id="toc-sec-ggplot2-extensions" class="nav-link" data-scroll-target="#sec-ggplot2-extensions">ggplot2 extensions</a></li>
   <li><a href="#sec-others" id="toc-sec-others" class="nav-link" data-scroll-target="#sec-others">Others</a></li>
-  </ul></li>
+  </ul>
+</li>
   <li><a href="#sec-next-steps" id="toc-sec-next-steps" class="nav-link" data-scroll-target="#sec-next-steps">Next steps?</a></li>
-  <li><a href="#sec-further-resources" id="toc-sec-further-resources" class="nav-link" data-scroll-target="#sec-further-resources">Further resources</a>
+  <li>
+<a href="#sec-further-resources" id="toc-sec-further-resources" class="nav-link" data-scroll-target="#sec-further-resources">Further resources</a>
   <ul class="collapse">
-  <li><a href="#sec-blogs" id="toc-sec-blogs" class="nav-link" data-scroll-target="#sec-blogs">Blogs</a></li>
+<li><a href="#sec-blogs" id="toc-sec-blogs" class="nav-link" data-scroll-target="#sec-blogs">Blogs</a></li>
   <li><a href="#sec-books" id="toc-sec-books" class="nav-link" data-scroll-target="#sec-books">Books</a></li>
   <li><a href="#sec-github-repos" id="toc-sec-github-repos" class="nav-link" data-scroll-target="#sec-github-repos">GitHub Repos</a></li>
   <li><a href="#sec-websites" id="toc-sec-websites" class="nav-link" data-scroll-target="#sec-websites">Websites</a></li>
   <li><a href="#sec-youtube-channels" id="toc-sec-youtube-channels" class="nav-link" data-scroll-target="#sec-youtube-channels">YouTube - Channels</a></li>
   <li><a href="#sec-youtube-videos" id="toc-sec-youtube-videos" class="nav-link" data-scroll-target="#sec-youtube-videos">YouTube - Videos</a></li>
-  </ul></li>
+  </ul>
+</li>
   <li><a href="#sec-introduction-acknowledgments" id="toc-sec-introduction-acknowledgments" class="nav-link" data-scroll-target="#sec-introduction-acknowledgments">Acknowledgments</a></li>
   <li><a href="#sec-colophon" id="toc-sec-colophon" class="nav-link" data-scroll-target="#sec-colophon">Colophon</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/edit/main/introduction.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/edit/main/introduction.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/AnttiRask/ggplot2-extended-book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <h1 class="title"><span id="sec-introduction" class="quarto-section-identifier">Introduction</span></h1>
 </div>
 
@@ -440,10 +424,7 @@ div.csl-indent {
   
 
 
-</header>
-
-
-<div class="callout callout-style-simple callout-note callout-titled">
+</header><div class="callout callout-style-simple callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -457,23 +438,24 @@ This chapter is now done!
 </div>
 </div>
 <p>Data visualization is one of those things that can look easy when you see someone doing it well. Then you try it yourself and it’s easy to feel like you know nothing.</p>
-<p>I wanted to share the tools that make it easier to create those beautiful visualizations. And to show you how to use those tools together, not only with <strong>ggplot2</strong> <span class="citation" data-cites="wickham2024a">(<a href="#ref-wickham2024a" role="doc-biblioref">Wickham et al. 2025</a>)</span> but with each other.</p>
+<p>I wanted to share the tools that make it easier to create those beautiful visualizations. And to show you how to use those tools together, not only with <strong>ggplot2</strong> <span class="citation" data-cites="wickham2024a">(<a href="references.html#ref-wickham2024a" role="doc-biblioref">Wickham et al. 2025</a>)</span> but with each other.</p>
 <p>One bit about terminology before we go any further. <em>Chart</em>, <em>diagram</em>, <em>graph</em>, <em>plot</em>, and <em>visualization</em> are all terms that people have tried to give strict definitions to. But in reality, they get used more or less interchangeably. Is it a bar chart or a bar graph? Yes.</p>
 <p>In the context of this book, I try to use the terms consistently in this way:</p>
 <ul>
-<li><strong>Chart / Diagram / Graph</strong>: Type of visualization (e.g.&nbsp;bar chart, Venn diagram, or line graph)</li>
-<li><strong>Plot</strong>: Output of some code to create a visualization. It can contain many charts, diagrams, and/or graphs. Sometimes it’s also used to mean a type of visualization (e.g.&nbsp;scatter plot), but for the sake of consistency I try to avoid that</li>
-<li><strong>Visualization</strong>: The most general of the terms. It can be used to talk about visualization as a concept. But sometimes it’s also used for a more specific case</li>
+<li>
+<strong>Chart / Diagram / Graph</strong>: Type of visualization (e.g.&nbsp;bar chart, Venn diagram, or line graph)</li>
+<li>
+<strong>Plot</strong>: Output of some code to create a visualization. It can contain many charts, diagrams, and/or graphs. Sometimes it’s also used to mean a type of visualization (e.g.&nbsp;scatter plot), but for the sake of consistency I try to avoid that</li>
+<li>
+<strong>Visualization</strong>: The most general of the terms. It can be used to talk about visualization as a concept. But sometimes it’s also used for a more specific case</li>
 </ul>
-<section id="sec-purpose-and-scope" class="level2">
-<h2 class="anchored" data-anchor-id="sec-purpose-and-scope">Purpose and scope</h2>
+<section id="sec-purpose-and-scope" class="level2"><h2 class="anchored" data-anchor-id="sec-purpose-and-scope">Purpose and scope</h2>
 <p>A very basic reason why I started writing this book was the fact that one didn’t already exist. “Someone had to do it”, as they say.</p>
-<p>I know there is information out there about the different ggplot2 extension packages. There are the package documentation, but there are also some blogs around (see <a href="#sec-further-resources" class="quarto-xref"><span class="quarto-unresolved-ref">sec-further-resources</span></a>).</p>
+<p>I know there is information out there about the different ggplot2 extension packages. There are the package documentation, but there are also some blogs around (see <a href="#sec-further-resources" class="quarto-xref"><span>Further resources</span></a>).</p>
 <p>But that information is quite scattered. There were many great packages I hadn’t even heard about before I started doing research for the book.</p>
 <p>I’ve tried my best to test and write about the most useful among them. After all, there are hundreds of packages to choose from. And I don’t think everyone should have to go through them all. Don’t try this at home!</p>
-<section id="sec-what-you-will-learn" class="level3">
-<h3 class="anchored" data-anchor-id="sec-what-you-will-learn">What you will learn</h3>
-<p>This book continues from where <strong>ggplot2: Elegant Graphics for Data Analysis</strong> <span class="citation" data-cites="wickham2016">(<a href="#ref-wickham2016" role="doc-biblioref">Wickham 2016</a>)</span> left off. In his book, Hadley does mention some extension packages by name. But until now there hasn’t been a comprehensive guide to those extension packages. And how to use them together.</p>
+<section id="sec-what-you-will-learn" class="level3"><h3 class="anchored" data-anchor-id="sec-what-you-will-learn">What you will learn</h3>
+<p>This book continues from where <strong>ggplot2: Elegant Graphics for Data Analysis</strong> <span class="citation" data-cites="wickham2016">(<a href="references.html#ref-wickham2016" role="doc-biblioref">Wickham 2016</a>)</span> left off. In his book, Hadley does mention some extension packages by name. But until now there hasn’t been a comprehensive guide to those extension packages. And how to use them together.</p>
 <p><strong>Basics</strong> works as kind of a “Previously, on <strong>ggplot2</strong>…”. A reminder of the basic function(alitie)s of the <em>core</em> package.</p>
 <p><strong>Layers</strong> goes through the layers that make up <em>the grammar of graphics</em>: <strong>Data</strong>, geometric objects (<strong>Geoms</strong>), statistical transformations (<strong>Stats</strong>), titles and labels (<strong>Annotations</strong>), color, position and size of visual elements (<strong>Scales and guides</strong>), <strong>Coordinate systems</strong>, small multiples (<strong>Facets</strong>), and <strong>Themes</strong>. They are in a logical order. As are the rest of the chapters. The same order that you would build your visualization in.</p>
 <p><strong>Special cases</strong> hosts not-so-typical visualizations: <strong>Maps</strong>, <strong>networks</strong>, <strong>interactive plots</strong>, <strong>animated plots</strong>, and graphs integrated in <strong>tables</strong>.</p>
@@ -481,35 +463,23 @@ This chapter is now done!
 <p>At some point, we will be <strong>getting ready to publish</strong> our visualization. You’ll want to give them <strong>finishing touches</strong>, but it’s also good to know about <strong>arranging plots</strong>.</p>
 <p>And while ggplot2 is an R package, its impact and influence go <strong>beyond R</strong>. So we’ll talk about <strong>Python</strong> a bit.</p>
 <p>To finish off, we go through some <strong>case studies</strong>. We build visualizations, step-by-step, from data to publication.</p>
-</section>
-<section id="sec-what-you-wont-learn" class="level3">
-<h3 class="anchored" data-anchor-id="sec-what-you-wont-learn">What you won’t learn</h3>
+</section><section id="sec-what-you-wont-learn" class="level3"><h3 class="anchored" data-anchor-id="sec-what-you-wont-learn">What you won’t learn</h3>
 <p>These are some of the interesting topics that I had to leave out of the book. It’s long as it is and I decided to concentrate on the topics and extensions that everyone can use. Regardless of the field you’re in.</p>
-<section id="combining-visualizations-and-bi-tools" class="level4">
-<h4 class="anchored" data-anchor-id="combining-visualizations-and-bi-tools">Combining visualizations and BI tools</h4>
+<section id="combining-visualizations-and-bi-tools" class="level4"><h4 class="anchored" data-anchor-id="combining-visualizations-and-bi-tools">Combining visualizations and BI tools</h4>
 <p>Using R in general and ggplot2 visualizations in specific within BI tools like Power BI is cool. Interested? You can start by reading Luca Zavarella’s book <a href="https://www.packtpub.com/en-us/product/extending-power-bi-with-python-and-r-9781837639533">Extending Power BI with Python and R</a>.</p>
-</section>
-<section id="generative-art" class="level4">
-<h4 class="anchored" data-anchor-id="generative-art">Generative art</h4>
+</section><section id="generative-art" class="level4"><h4 class="anchored" data-anchor-id="generative-art">Generative art</h4>
 <p>Creating art with R - color me impressed! It’s called Rtistry or aRt, because why not? There isn’t enough room in the book for a proper chapter on this, but here are some links to get you started on the topic:</p>
 <ul>
 <li><a href="https://meghansaha.github.io/artpack/">artpack by Meghan Harris</a></li>
 <li><a href="https://koenderks.github.io/aRtsy/">aRtsy by Koen Derks</a></li>
 <li><a href="https://nrennie.rbind.io/projects/generative-art/">Generative Art by Nicola Rennie</a></li>
-</ul>
-</section>
-<section id="large-language-models-llm" class="level4">
-<h4 class="anchored" data-anchor-id="large-language-models-llm">Large language models (LLM)</h4>
+</ul></section><section id="large-language-models-llm" class="level4"><h4 class="anchored" data-anchor-id="large-language-models-llm">Large language models (LLM)</h4>
 <p>I know, it would be trendy to write about AI. And I do think they can play a part in the data visualization process. But there isn’t anything that meaningful to write about. Whatever you do, whether you use AI or not, do trust your senses!</p>
 <p>A machine doesn’t need to visualize data to use it. So, in a way, data visualization is one of the last bastions of human-to-human communication. By humans, for humans, am I right?</p>
-</section>
-<section id="specialized-packages-in-specialized-fields-like-bioinformatics" class="level4">
-<h4 class="anchored" data-anchor-id="specialized-packages-in-specialized-fields-like-bioinformatics">Specialized packages in specialized fields like bioinformatics</h4>
+</section><section id="specialized-packages-in-specialized-fields-like-bioinformatics" class="level4"><h4 class="anchored" data-anchor-id="specialized-packages-in-specialized-fields-like-bioinformatics">Specialized packages in specialized fields like bioinformatics</h4>
 <p>This one should be self-evident. “Write what you know”. I know nothing about bioinformatics. I’m not even sure I understand what the term means.</p>
 <p>Are you interested in bioinformatics? I mean, I don’t want to leave you hanging. There is a website and a suite of packages called <a href="https://bioconductor.org/">Bioconductor</a> that should get you started!</p>
-</section>
-<section id="sports" class="level4">
-<h4 class="anchored" data-anchor-id="sports">Sports</h4>
+</section><section id="sports" class="level4"><h4 class="anchored" data-anchor-id="sports">Sports</h4>
 <p>It’s the same as with generative art. Interesting topic, but not enough space. Still, here’s another short list of packages related to sports:</p>
 <p><strong>Baseball</strong></p>
 <ul>
@@ -529,48 +499,34 @@ This chapter is now done!
 <p><strong>Various</strong></p>
 <ul>
 <li><a href="https://sportyr.sportsdataverse.org/">sportyR by Ross Drucker</a></li>
-</ul>
-</section>
-</section>
-</section>
-<section id="sec-who-is-the-book-for" class="level2">
-<h2 class="anchored" data-anchor-id="sec-who-is-the-book-for">Who is the book for?</h2>
+</ul></section></section></section><section id="sec-who-is-the-book-for" class="level2"><h2 class="anchored" data-anchor-id="sec-who-is-the-book-for">Who is the book for?</h2>
 <p>I assume that you’re reading this because you’re interested in data visualization, R, or both.</p>
 <p>I already wrote about this in the Welcome section. This book is for people who already have a working knowledge of ggplot2 and <em>the grammar of graphics</em>. I’m quite adamant on that. You should learn the foundations first. And there are already excellent books and websites for that.</p>
 <p>Other than that, the tools and techniques in the book aren’t all that advanced (at least most of them). You don’t have to be a visualization wizard to find the book useful. Each of the chapters will contain code that you can use almost verbatim.</p>
 <p>It doesn’t even matter if R isn’t your <em>native</em> language. You might find an inspiring R package and then go on and find a similar package in your preferred language. Or write that package, if one doesn’t already exist. It’s all good!</p>
-</section>
-<section id="sec-who-am-i-to-write-this-book" class="level2">
-<h2 class="anchored" data-anchor-id="sec-who-am-i-to-write-this-book">Who am I to write this book?</h2>
+</section><section id="sec-who-am-i-to-write-this-book" class="level2"><h2 class="anchored" data-anchor-id="sec-who-am-i-to-write-this-book">Who am I to write this book?</h2>
 <p>Hi! I’m Antti Rask, a data analyst if you had to choose one label. I’ve lived many lives and had many careers before finding my truest calling in data.</p>
 <p>I’ve liked data visualizations longer than I’ve been using R (which I started in late 2019/early 2020). I made my first visualizations with Excel. At some point, I switched to Power BI. Which is still my main tool for visualization at work.</p>
 <p>You could say that I am an artistic type. Music has been the main avenue for my artistic self-expression for most of my life. But I’ve also liked to take photos of street art. I come across them on my adventures in Helsinki, or when I’m abroad.</p>
 <p>In visualizing data I find myself leaning more towards the <strong>Stephen Few</strong> school of thought. Less is usually more and you should avoid <a href="https://en.wikipedia.org/wiki/Chartjunk">chartjunk</a> at all costs. Still, I’m not a purist, by any means.</p>
-<p>I’ve co-authored the <strong>RandomWalker</strong> <span class="citation" data-cites="sanderson2024">(<a href="#ref-sanderson2024" role="doc-biblioref">Sanderson and Rask 2025</a>)</span> R package with <strong>Steven Paul Sanderson II</strong> (<a href="https://github.com/spsanderson">@spsanderson</a>). Specifically the function <code>RandomWalker::visualize_walks()</code>. It uses ggplot2 and some of the extensions found in this book.</p>
+<p>I’ve co-authored the <strong>RandomWalker</strong> <span class="citation" data-cites="sanderson2024">(<a href="references.html#ref-sanderson2024" role="doc-biblioref">Sanderson and Rask 2025</a>)</span> R package with <strong>Steven Paul Sanderson II</strong> (<a href="https://github.com/spsanderson">@spsanderson</a>). Specifically the function <code>RandomWalker::visualize_walks()</code>. It uses ggplot2 and some of the extensions found in this book.</p>
 <p>I also like to tinker with R Shiny and recently made an app called <a href="https://youcanbeapirate.shinyapps.io/TuneTeller/">TuneTeller</a>. It received an <em>honorable mention</em> in the 2024 <a href="https://posit.co/blog/winners-of-the-2024-shiny-contest/">Shiny Contest</a>.</p>
-</section>
-<section id="sec-r" class="level2">
-<h2 class="anchored" data-anchor-id="sec-r">R</h2>
-<p>All the code in this book is in <strong>R</strong>. Except for <a href="#sec-python" class="quarto-xref"><span class="quarto-unresolved-ref">sec-python</span></a>. If you have never used R, <a href="https://r4ds.hadley.nz/">R for Data Science</a> <span class="citation" data-cites="wickham2023a">(<a href="#ref-wickham2023a" role="doc-biblioref">Wickham, Çetinkaya-Rundel, and Grolemund 2023</a>)</span> is a better place to start.</p>
+</section><section id="sec-r" class="level2"><h2 class="anchored" data-anchor-id="sec-r">R</h2>
+<p>All the code in this book is in <strong>R</strong>. Except for <a href="python.html" class="quarto-xref"><span>19&nbsp; Python</span></a>. If you have never used R, <a href="https://r4ds.hadley.nz/">R for Data Science</a> <span class="citation" data-cites="wickham2023a">(<a href="references.html#ref-wickham2023a" role="doc-biblioref">Wickham, Çetinkaya-Rundel, and Grolemund 2023</a>)</span> is a better place to start.</p>
 <p>Don’t have R yet? You can get the latest version from <strong>CRAN</strong> (the comprehensive R archive network): <a href="https://www.r-project.org/" class="uri">https://www.r-project.org/</a>.</p>
-</section>
-<section id="sec-ide" class="level2">
-<h2 class="anchored" data-anchor-id="sec-ide">IDE</h2>
+</section><section id="sec-ide" class="level2"><h2 class="anchored" data-anchor-id="sec-ide">IDE</h2>
 <p><strong>RStudio</strong> is my integrated development environment (IDE) of choice. It’s free and open-source. It’s the environment where you can try out the code you find in this book. And it’s also where I wrote this book.</p>
-<p>You can download the latest version from the <strong>Posit</strong> website: <a href="https://posit.co/download/rstudio-desktop/" class="uri">https://posit.co/download/rstudio-desktop/</a>. Posit is the company that develops RStudio and many R packages. Like the <strong>tidyverse</strong> <span class="citation" data-cites="wickham2023b">(<a href="#ref-wickham2023b" role="doc-biblioref">Wickham 2023b</a>)</span> (see <a href="#sec-ggplot2-tidyverse" class="quarto-xref"><span class="quarto-unresolved-ref">sec-ggplot2-tidyverse</span></a>).</p>
+<p>You can download the latest version from the <strong>Posit</strong> website: <a href="https://posit.co/download/rstudio-desktop/" class="uri">https://posit.co/download/rstudio-desktop/</a>. Posit is the company that develops RStudio and many R packages. Like the <strong>tidyverse</strong> <span class="citation" data-cites="wickham2023b">(<a href="references.html#ref-wickham2023b" role="doc-biblioref">Wickham 2023b</a>)</span> (see <a href="#sec-ggplot2-tidyverse" class="quarto-xref"><span>ggplot2 &amp; tidyverse</span></a>).</p>
 <p>There are other alternatives like <a href="https://code.visualstudio.com/">VSCode</a>, <a href="https://positron.posit.co/">Positron</a>, and <a href="https://jupyter.org/">JupyterLab</a>. This book does operate under the assumption that you are using RStudio.</p>
-</section>
-<section id="sec-packages" class="level2">
-<h2 class="anchored" data-anchor-id="sec-packages">Packages</h2>
-<section id="sec-ggplot2-tidyverse" class="level3">
-<h3 class="anchored" data-anchor-id="sec-ggplot2-tidyverse">ggplot2 &amp; tidyverse</h3>
+</section><section id="sec-packages" class="level2"><h2 class="anchored" data-anchor-id="sec-packages">Packages</h2>
+<section id="sec-ggplot2-tidyverse" class="level3"><h3 class="anchored" data-anchor-id="sec-ggplot2-tidyverse">ggplot2 &amp; tidyverse</h3>
 <p>The tidyverse is a collection of R packages. ggplot2 is one of them. The others are <strong>dplyr</strong>, <strong>forcats</strong>, <strong>lubridate</strong>, <strong>purrr</strong>, <strong>readr</strong>, <strong>stringr</strong>, <strong>tibble</strong>, and <strong>tidyr</strong>.</p>
 <p>You could install the packages you need one by one, but you might as well install the whole tidyverse:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"tidyverse"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>To highlight each of the packages used, I’ve decided to load the individual packages in the code examples. If you want to, you can use the following:</p>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
 ✔ dplyr     1.1.4     ✔ readr     2.1.5
 ✔ forcats   1.0.0     ✔ stringr   1.5.2
@@ -581,89 +537,79 @@ This chapter is now done!
 ✖ dplyr::filter() masks stats::filter()
 ✖ dplyr::lag()    masks stats::lag()
 ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-<p>The previous message mentions <strong>conflicted</strong> <span class="citation" data-cites="wickham2023d">(<a href="#ref-wickham2023d" role="doc-biblioref">Wickham 2023a</a>)</span>. It’s not part of the core tidyverse, but it’s one of my favorite packages. And I do recommend loading it whenever you’re writing new code.</p>
-<p>It checks for conflicting function names and forces you to choose the one you want to use. Either use case by use case (for example <code>dplyr::filter()</code>) or session-wide (for example <code>conflicts_prefer(dplyr::filter())</code>).</p>
+<p>The previous message mentions <strong>conflicted</strong> <span class="citation" data-cites="wickham2023d">(<a href="references.html#ref-wickham2023d" role="doc-biblioref">Wickham 2023a</a>)</span>. It’s not part of the core tidyverse, but it’s one of my favorite packages. And I do recommend loading it whenever you’re writing new code.</p>
+<p>It checks for conflicting function names and forces you to choose the one you want to use. Either use case by use case (for example <code><a href="https://dplyr.tidyverse.org/reference/filter.html">dplyr::filter()</a></code>) or session-wide (for example <code>conflicts_prefer(dplyr::filter())</code>).</p>
 <p>To install conflicted:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"conflicted"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"conflicted"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>All you need to do is load the package at the beginning of your script:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(conflicted)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://conflicted.r-lib.org/">conflicted</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>It will then let you know if a conflict emerges. One fewer reason to have your code act weird when running it.</p>
-</section>
-<section id="sec-ggplot2-extensions" class="level3">
-<h3 class="anchored" data-anchor-id="sec-ggplot2-extensions">ggplot2 extensions</h3>
+</section><section id="sec-ggplot2-extensions" class="level3"><h3 class="anchored" data-anchor-id="sec-ggplot2-extensions">ggplot2 extensions</h3>
 <p>Here are the main characters of this book.</p>
 <p>Some of them you can install from CRAN:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"colorspace"</span>,</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"DataExplorer"</span>,</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ExPanDaR"</span>,</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"GGally"</span>,</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"gganimate"</span>,</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ggcorrplot"</span>,</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ggforce"</span>,</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ggHoriPlot"</span>,</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ggmosaic"</span>,</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ggplot2movies"</span>,</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ggpp"</span>,</span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ggquickeda"</span>,</span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ggrain"</span>,</span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ggrepel"</span>,</span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ggridges"</span>,</span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ggstats"</span>,</span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ggstream"</span>,</span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ggtext"</span>,</span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ggthemes"</span>,</span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>    <span class="st">"gifski"</span>,   <span class="co"># Needed with gganimate</span></span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>    <span class="st">"gt"</span>,</span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>    <span class="st">"gtExtras"</span>,</span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>    <span class="st">"labelled"</span>, <span class="co"># Needed with ggmosaic</span></span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>    <span class="st">"naniar"</span>,</span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>    <span class="st">"radiant"</span>,</span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>    <span class="st">"showtext"</span></span>
-<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
+<span>    <span class="st">"colorspace"</span>,</span>
+<span>    <span class="st">"DataExplorer"</span>,</span>
+<span>    <span class="st">"ExPanDaR"</span>,</span>
+<span>    <span class="st">"GGally"</span>,</span>
+<span>    <span class="st">"gganimate"</span>,</span>
+<span>    <span class="st">"ggcorrplot"</span>,</span>
+<span>    <span class="st">"ggforce"</span>,</span>
+<span>    <span class="st">"ggHoriPlot"</span>,</span>
+<span>    <span class="st">"ggmosaic"</span>,</span>
+<span>    <span class="st">"ggplot2movies"</span>,</span>
+<span>    <span class="st">"ggpp"</span>,</span>
+<span>    <span class="st">"ggquickeda"</span>,</span>
+<span>    <span class="st">"ggrain"</span>,</span>
+<span>    <span class="st">"ggrepel"</span>,</span>
+<span>    <span class="st">"ggridges"</span>,</span>
+<span>    <span class="st">"ggstats"</span>,</span>
+<span>    <span class="st">"ggstream"</span>,</span>
+<span>    <span class="st">"ggtext"</span>,</span>
+<span>    <span class="st">"ggthemes"</span>,</span>
+<span>    <span class="st">"gifski"</span>,   <span class="co"># Needed with gganimate</span></span>
+<span>    <span class="st">"gt"</span>,</span>
+<span>    <span class="st">"gtExtras"</span>,</span>
+<span>    <span class="st">"labelled"</span>, <span class="co"># Needed with ggmosaic</span></span>
+<span>    <span class="st">"naniar"</span>,</span>
+<span>    <span class="st">"radiant"</span>,</span>
+<span>    <span class="st">"showtext"</span></span>
+<span>  <span class="op">)</span></span>
+<span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Others you will have to install from GitHub:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># For installing ggbraid</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("remotes")</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"nsgrantham/ggbraid"</span>)</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co"># For fully updating radiant</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(<span class="at">RSM =</span> <span class="st">"https://radiant-rstats.github.io/minicran"</span>, <span class="at">CRAN =</span> <span class="st">"https://cloud.r-project.org"</span>))</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("remotes")</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"radiant-rstats/radiant.update"</span>, <span class="at">upgrade =</span> <span class="st">"never"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># For installing ggbraid</span></span>
+<span><span class="co"># install.packages("remotes")</span></span>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"nsgrantham/ggbraid"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># For fully updating radiant</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/options.html">options</a></span><span class="op">(</span>repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>RSM <span class="op">=</span> <span class="st">"https://radiant-rstats.github.io/minicran"</span>, CRAN <span class="op">=</span> <span class="st">"https://cloud.r-project.org"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co"># install.packages("remotes")</span></span>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"radiant-rstats/radiant.update"</span>, upgrade <span class="op">=</span> <span class="st">"never"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="sec-others" class="level3">
-<h3 class="anchored" data-anchor-id="sec-others">Others</h3>
+</section><section id="sec-others" class="level3"><h3 class="anchored" data-anchor-id="sec-others">Others</h3>
 <p>Here are the packages that are not part of the tidyverse. They aren’t considered to be ggplot2 extensions either. They are still useful for what we want to do and worth highlighting instead of hiding.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"janitor"</span>,</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"scales"</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
+<span>    <span class="st">"janitor"</span>,</span>
+<span>    <span class="st">"scales"</span></span>
+<span>  <span class="op">)</span></span>
+<span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-</section>
-<section id="sec-next-steps" class="level2">
-<h2 class="anchored" data-anchor-id="sec-next-steps">Next steps?</h2>
+</section></section><section id="sec-next-steps" class="level2"><h2 class="anchored" data-anchor-id="sec-next-steps">Next steps?</h2>
 <p>If you are reading these chapters in chronological order, the next step will be to read the rest of the book.</p>
 <p>Of course, I recommend you don’t only read the book. I’ve learned the most from reading these technical books when I’ve also gone through the code examples. Debugged them (of course I hope the code I provide isn’t broken…) when needed. Even translated them to another language (Python to R) or <em>dialect</em> (base R to tidyverse).</p>
-<p>Next, it’s practice, practice, practice. Recreate your favorite data visualizations using only ggplot2 and its extensions. Create something completely new. Either using your data (fitness, music, social media, etc.) or even something from <a href="#sec-data" class="quarto-xref"><span class="quarto-unresolved-ref">sec-data</span></a>. There are also concepts like <strong>TidyTuesday</strong> (see <a href="#sec-further-resources" class="quarto-xref"><span class="quarto-unresolved-ref">sec-further-resources</span></a>).</p>
-</section>
-<section id="sec-further-resources" class="level2">
-<h2 class="anchored" data-anchor-id="sec-further-resources">Further resources</h2>
-<section id="sec-blogs" class="level3">
-<h3 class="anchored" data-anchor-id="sec-blogs">Blogs</h3>
+<p>Next, it’s practice, practice, practice. Recreate your favorite data visualizations using only ggplot2 and its extensions. Create something completely new. Either using your data (fitness, music, social media, etc.) or even something from <a href="data.html" class="quarto-xref"><span>2&nbsp; Data</span></a>. There are also concepts like <strong>TidyTuesday</strong> (see <a href="#sec-further-resources" class="quarto-xref"><span>Further resources</span></a>).</p>
+</section><section id="sec-further-resources" class="level2"><h2 class="anchored" data-anchor-id="sec-further-resources">Further resources</h2>
+<section id="sec-blogs" class="level3"><h3 class="anchored" data-anchor-id="sec-blogs">Blogs</h3>
 <ul>
 <li><a href="https://albert-rapp.de/ggplot-series/">Albert Rapp</a></li>
 <li><a href="https://www.brunomioto.com/">Bruno Mioto</a></li>
@@ -672,10 +618,7 @@ This chapter is now done!
 <li><a href="https://karaman.is/">Georgios Karamanis</a></li>
 <li><a href="https://www.business-science.io/blog/index.html">Matt Dancho</a></li>
 <li><a href="https://nrennie.rbind.io/blog/">Nicola Rennie</a></li>
-</ul>
-</section>
-<section id="sec-books" class="level3">
-<h3 class="anchored" data-anchor-id="sec-books">Books</h3>
+</ul></section><section id="sec-books" class="level3"><h3 class="anchored" data-anchor-id="sec-books">Books</h3>
 <ul>
 <li><a href="https://bbc.github.io/rcookbook/">BBC Visual and Data Journalism cookbook for R graphics</a></li>
 <li><a href="https://www.bigbookofr.com/chapters/data%20visualization">Big Book of R (Chapter 12 Data Visualization) by Oscar Baruffa</a></li>
@@ -687,66 +630,44 @@ This chapter is now done!
 <li><a href="https://r-graphics.org/">R Graphics Cookbook, 2nd edition by Winston Chang</a></li>
 <li><a href="https://ggplot2-book-solutions-3ed.netlify.app/">Solutions to ggplot2: Elegant Graphics for Data Analysis by Howard Baek</a></li>
 <li><a href="https://tmb.njtierney.com/">The Missing Book by Nicholas Tierney &amp; Allison Horst</a></li>
-</ul>
-</section>
-<section id="sec-github-repos" class="level3">
-<h3 class="anchored" data-anchor-id="sec-github-repos">GitHub Repos</h3>
+</ul></section><section id="sec-github-repos" class="level3"><h3 class="anchored" data-anchor-id="sec-github-repos">GitHub Repos</h3>
 <ul>
 <li><a href="https://github.com/erikgahner/awesome-ggplot2/">Awesome ggplot2 by Erik Gahner</a></li>
 <li><a href="https://github.com/krzjoa/awesome-r-dataviz/">Awesome R Dataviz by Krzysztof Joachimiak</a></li>
 <li><a href="https://ggplot2-extenders.github.io/ggplot-extension-club/">ggplot2 extenders by Gina Reynolds &amp; Teun van den Brand</a></li>
 <li><a href="https://github.com/teunbrand/ggplot_tricks/">ggplot Tricks by Teun van den Brand</a></li>
 <li><a href="https://github.com/rfordatascience/tidytuesday">TidyTuesday by Tom Mock</a></li>
-</ul>
-</section>
-<section id="sec-websites" class="level3">
-<h3 class="anchored" data-anchor-id="sec-websites">Websites</h3>
+</ul></section><section id="sec-websites" class="level3"><h3 class="anchored" data-anchor-id="sec-websites">Websites</h3>
 <ul>
 <li><a href="https://tinyurl.com/ggplot2packages/">Packages (ggplot2) by Antti Rask</a></li>
 <li><a href="https://r-for-artists.netlify.app/">R for Artists and Designers by Arvind Venkatadri</a></li>
 <li><a href="https://rfortherestofus.com/blog/">R for the Rest of Us by David Keys</a></li>
 <li><a href="https://r-graph-gallery.com/">R Graph Gallery by Yan Holtz</a></li>
 <li><a href="https://statisticsglobe.com/graphics-in-r">Statistics Globe by Joachim Schork</a></li>
-</ul>
-</section>
-<section id="sec-youtube-channels" class="level3">
-<h3 class="anchored" data-anchor-id="sec-youtube-channels">YouTube - Channels</h3>
+</ul></section><section id="sec-youtube-channels" class="level3"><h3 class="anchored" data-anchor-id="sec-youtube-channels">YouTube - Channels</h3>
 <ul>
 <li><a href="https://www.youtube.com/@rappa753/">Albert Rapp</a></li>
 <li><a href="https://www.youtube.com/@StatisticsGlobe/">Statistics Globe by Joachim Schork</a></li>
-</ul>
-</section>
-<section id="sec-youtube-videos" class="level3">
-<h3 class="anchored" data-anchor-id="sec-youtube-videos">YouTube - Videos</h3>
+</ul></section><section id="sec-youtube-videos" class="level3"><h3 class="anchored" data-anchor-id="sec-youtube-videos">YouTube - Videos</h3>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=kjjcgdkowXs">ggplot2 extenders - Hadley Wickham: Thoughts on the ggplot2 extension ecosystem</a></li>
-</ul>
-</section>
-</section>
-<section id="sec-introduction-acknowledgments" class="level2">
-<h2 class="anchored" data-anchor-id="sec-introduction-acknowledgments">Acknowledgments</h2>
+</ul></section></section><section id="sec-introduction-acknowledgments" class="level2"><h2 class="anchored" data-anchor-id="sec-introduction-acknowledgments">Acknowledgments</h2>
 <p><a href="https://www.linkedin.com/in/eevamaijavirtanen/">Eevamaija Virtanen</a>, <a href="https://www.linkedin.com/in/jkorpela/">Juha Korpela</a>, and <a href="https://www.linkedin.com/in/sade-haveri/">Säde Haveri</a> for founding <a href="https://www.helsinkidataweek.com/">Helsinki Data Week</a> with me. For helping me dream big! And for making me realize a big project like this is possible when you keep making constant progress.</p>
 <p><strong>Marc Eixarch</strong> (<a href="https://github.com/Marceix/">@Marceix</a>) and <strong>Vicent Boned Riera</strong> (<a href="https://github.com/eivicent/">@eivicent</a>) from the <a href="https://www.meetup.com/r-user-group-finland/">R User Group Finland</a>. Learning R has been more fun thanks to your efforts in keeping the local R scene active in Helsinki, Finland.</p>
 <p><a href="https://www.linkedin.com/in/josephreis/">Joe Reis</a>, <a href="https://www.linkedin.com/in/ole-olesen-bagneux/">Ole Olesen-Bagneux</a>, and <a href="https://www.linkedin.com/in/vineetvashishta/">Vin Vashishta</a> for your generosity and time. And for setting a positive example for someone like me to follow.</p>
-<p><strong>Hadley Wickham</strong> (<a href="https://github.com/hadley/">@hadley</a>) for all the books and packages. <strong>R for Data Science</strong> <span class="citation" data-cites="wickham2023a">(<a href="#ref-wickham2023a" role="doc-biblioref">Wickham, Çetinkaya-Rundel, and Grolemund 2023</a>)</span> got me started with R. <strong>ggplot2: Elegant Graphics for Data Analysis</strong> <span class="citation" data-cites="wickham2016">(<a href="#ref-wickham2016" role="doc-biblioref">Wickham 2016</a>)</span> helped me understand ggplot2 and <em>the grammar of graphics</em> on a deeper level.</p>
+<p><strong>Hadley Wickham</strong> (<a href="https://github.com/hadley/">@hadley</a>) for all the books and packages. <strong>R for Data Science</strong> <span class="citation" data-cites="wickham2023a">(<a href="references.html#ref-wickham2023a" role="doc-biblioref">Wickham, Çetinkaya-Rundel, and Grolemund 2023</a>)</span> got me started with R. <strong>ggplot2: Elegant Graphics for Data Analysis</strong> <span class="citation" data-cites="wickham2016">(<a href="references.html#ref-wickham2016" role="doc-biblioref">Wickham 2016</a>)</span> helped me understand ggplot2 and <em>the grammar of graphics</em> on a deeper level.</p>
 <p>To be continued…</p>
-</section>
-<section id="sec-colophon" class="level2">
-<h2 class="anchored" data-anchor-id="sec-colophon">Colophon</h2>
+</section><section id="sec-colophon" class="level2"><h2 class="anchored" data-anchor-id="sec-colophon">Colophon</h2>
 <p>This book was written in <a href="https://posit.co/products/open-source/rstudio/">RStudio</a> using <a href="https://quarto.org/">Quarto</a>. The website is hosted with <a href="https://www.netlify.com/">Netlify</a>. And it’s automatically updated after every commit by <a href="https://github.com/features/actions">Github Actions</a>. The complete source is available from <a href="https://github.com/AnttiRask/ggplot2-extended-book/">GitHub</a>.</p>
 <p>This version of the book was built with R version 4.5.1 (2025-06-13) and the following packages:</p>
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
-<<<<<<< HEAD
-{"columns":[{"label":["package"],"name":[1],"type":["chr"],"align":["left"]},{"label":["version"],"name":[2],"type":["chr"],"align":["left"]},{"label":["source"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"colorspace","2":"2.1-1","3":"CRAN (R 4.5.1)"},{"1":"conflicted","2":"1.2.0","3":"CRAN (R 4.5.1)"},{"1":"DataExplorer","2":"0.8.4","3":"CRAN (R 4.5.1)"},{"1":"dplyr","2":"1.1.4","3":"CRAN (R 4.5.1)"},{"1":"ExPanDaR","2":"0.5.3","3":"RSPM"},{"1":"forcats","2":"1.0.0","3":"CRAN (R 4.5.1)"},{"1":"GGally","2":"2.4.0","3":"CRAN (R 4.5.1)"},{"1":"gganimate","2":"1.0.11","3":"CRAN (R 4.5.1)"},{"1":"ggbraid","2":"0.2.3","3":"Github (nsgrantham/ggbraid@e1018d7a86bc33a46ca85cf6f88a5149256e1598)"},{"1":"ggcorrplot","2":"0.1.4.1","3":"CRAN (R 4.5.1)"},{"1":"ggforce","2":"0.5.0","3":"CRAN (R 4.5.1)"},{"1":"ggHoriPlot","2":"1.0.1","3":"CRAN (R 4.5.1)"},{"1":"ggmosaic","2":"0.3.3","3":"CRAN (R 4.5.1)"},{"1":"ggplot2","2":"3.5.2","3":"CRAN (R 4.5.1)"},{"1":"ggplot2movies","2":"0.0.1","3":"RSPM"},{"1":"ggpp","2":"0.5.9","3":"CRAN (R 4.5.1)"},{"1":"ggquickeda","2":"0.3.1","3":"CRAN (R 4.5.1)"},{"1":"ggrain","2":"0.0.4","3":"CRAN (R 4.5.1)"},{"1":"ggrepel","2":"0.9.6","3":"CRAN (R 4.5.1)"},{"1":"ggridges","2":"0.5.7","3":"CRAN (R 4.5.1)"},{"1":"ggstats","2":"0.10.0","3":"CRAN (R 4.5.1)"},{"1":"ggstream","2":"0.1.0","3":"CRAN (R 4.5.1)"},{"1":"ggtext","2":"0.1.2","3":"CRAN (R 4.5.1)"},{"1":"ggthemes","2":"5.1.0","3":"CRAN (R 4.5.1)"},{"1":"gifski","2":"NA","3":"NA"},{"1":"gt","2":"1.0.0","3":"CRAN (R 4.5.1)"},{"1":"gtExtras","2":"0.6.0","3":"CRAN (R 4.5.1)"},{"1":"janitor","2":"2.2.1","3":"RSPM (R 4.5.1)"},{"1":"labelled","2":"2.14.1","3":"CRAN (R 4.5.1)"},{"1":"lubridate","2":"1.9.4","3":"CRAN (R 4.5.1)"},{"1":"naniar","2":"1.1.0","3":"CRAN (R 4.5.1)"},{"1":"purrr","2":"1.1.0","3":"CRAN (R 4.5.1)"},{"1":"radiant","2":"1.6.6","3":"Custom"},{"1":"readr","2":"2.1.5","3":"CRAN (R 4.5.1)"},{"1":"rmarkdown","2":"2.29","3":"CRAN (R 4.5.1)"},{"1":"scales","2":"1.4.0","3":"CRAN (R 4.5.1)"},{"1":"showtext","2":"0.9-7","3":"CRAN (R 4.5.1)"},{"1":"stringr","2":"1.5.1","3":"CRAN (R 4.5.1)"},{"1":"tibble","2":"3.3.0","3":"CRAN (R 4.5.1)"},{"1":"tidyr","2":"1.3.1","3":"CRAN (R 4.5.1)"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-=======
-{"columns":[{"label":["package"],"name":[1],"type":["chr"],"align":["left"]},{"label":["version"],"name":[2],"type":["chr"],"align":["left"]},{"label":["source"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"colorspace","2":"2.1-1","3":"RSPM"},{"1":"conflicted","2":"1.2.0","3":"RSPM"},{"1":"DataExplorer","2":"0.8.4","3":"CRAN (R 4.5.1)"},{"1":"dplyr","2":"1.1.4","3":"RSPM"},{"1":"ExPanDaR","2":"0.5.3","3":"RSPM"},{"1":"forcats","2":"1.0.0","3":"RSPM"},{"1":"GGally","2":"2.4.0","3":"CRAN (R 4.5.1)"},{"1":"gganimate","2":"1.0.11","3":"CRAN (R 4.5.1)"},{"1":"ggbraid","2":"0.2.3","3":"Github (nsgrantham/ggbraid@e1018d7a86bc33a46ca85cf6f88a5149256e1598)"},{"1":"ggcorrplot","2":"0.1.4.1","3":"RSPM"},{"1":"ggforce","2":"0.5.0","3":"RSPM"},{"1":"ggHoriPlot","2":"1.0.1","3":"CRAN (R 4.5.0)"},{"1":"ggmosaic","2":"0.3.3","3":"RSPM"},{"1":"ggplot2","2":"4.0.0","3":"CRAN (R 4.5.1)"},{"1":"ggplot2movies","2":"0.0.1","3":"RSPM"},{"1":"ggpp","2":"0.5.9","3":"RSPM"},{"1":"ggquickeda","2":"0.3.1","3":"RSPM"},{"1":"ggrain","2":"0.0.4","3":"RSPM"},{"1":"ggrepel","2":"0.9.6","3":"RSPM"},{"1":"ggridges","2":"0.5.7","3":"RSPM"},{"1":"ggstats","2":"0.10.0","3":"CRAN (R 4.5.1)"},{"1":"ggstream","2":"0.1.0","3":"RSPM"},{"1":"ggtext","2":"0.1.2","3":"RSPM"},{"1":"ggthemes","2":"5.1.0","3":"CRAN (R 4.5.0)"},{"1":"gifski","2":"1.32.0-2","3":"CRAN (R 4.5.1)"},{"1":"gt","2":"1.0.0","3":"RSPM"},{"1":"gtExtras","2":"0.6.0","3":"CRAN (R 4.5.0)"},{"1":"janitor","2":"2.2.1","3":"RSPM"},{"1":"labelled","2":"2.14.1","3":"CRAN (R 4.5.1)"},{"1":"lubridate","2":"1.9.4","3":"RSPM"},{"1":"naniar","2":"1.1.0","3":"RSPM"},{"1":"purrr","2":"1.1.0","3":"CRAN (R 4.5.1)"},{"1":"radiant","2":"1.6.6","3":"CRAN (R 4.5.0)"},{"1":"readr","2":"2.1.5","3":"RSPM"},{"1":"rmarkdown","2":"2.29","3":"RSPM"},{"1":"scales","2":"1.4.0","3":"RSPM (R 4.5.0)"},{"1":"showtext","2":"0.9-7","3":"RSPM"},{"1":"stringr","2":"1.5.2","3":"CRAN (R 4.5.1)"},{"1":"tibble","2":"3.3.0","3":"CRAN (R 4.5.0)"},{"1":"tidyr","2":"1.3.1","3":"RSPM"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
->>>>>>> 2a33a000185a359ba5fd50e2e91ece23599b27a0
+{"columns":[{"label":["package"],"name":[1],"type":["chr"],"align":["left"]},{"label":["version"],"name":[2],"type":["chr"],"align":["left"]},{"label":["source"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"colorspace","2":"2.1-1","3":"CRAN (R 4.5.1)"},{"1":"conflicted","2":"1.2.0","3":"CRAN (R 4.5.1)"},{"1":"DataExplorer","2":"0.8.4","3":"CRAN (R 4.5.1)"},{"1":"dplyr","2":"1.1.4","3":"CRAN (R 4.5.1)"},{"1":"ExPanDaR","2":"0.5.3","3":"RSPM"},{"1":"forcats","2":"1.0.0","3":"CRAN (R 4.5.1)"},{"1":"GGally","2":"2.4.0","3":"CRAN (R 4.5.1)"},{"1":"gganimate","2":"1.0.11","3":"CRAN (R 4.5.1)"},{"1":"ggbraid","2":"0.2.3","3":"Github (nsgrantham/ggbraid@e1018d7a86bc33a46ca85cf6f88a5149256e1598)"},{"1":"ggcorrplot","2":"0.1.4.1","3":"CRAN (R 4.5.1)"},{"1":"ggforce","2":"0.5.0","3":"CRAN (R 4.5.1)"},{"1":"ggHoriPlot","2":"1.0.1","3":"CRAN (R 4.5.1)"},{"1":"ggmosaic","2":"0.3.3","3":"CRAN (R 4.5.1)"},{"1":"ggplot2","2":"4.0.0","3":"CRAN (R 4.5.1)"},{"1":"ggplot2movies","2":"0.0.1","3":"RSPM"},{"1":"ggpp","2":"0.5.9","3":"CRAN (R 4.5.1)"},{"1":"ggquickeda","2":"0.3.1","3":"CRAN (R 4.5.1)"},{"1":"ggrain","2":"0.0.4","3":"CRAN (R 4.5.1)"},{"1":"ggrepel","2":"0.9.6","3":"CRAN (R 4.5.1)"},{"1":"ggridges","2":"0.5.7","3":"CRAN (R 4.5.1)"},{"1":"ggstats","2":"0.10.0","3":"CRAN (R 4.5.1)"},{"1":"ggstream","2":"0.1.0","3":"CRAN (R 4.5.1)"},{"1":"ggtext","2":"0.1.2","3":"CRAN (R 4.5.1)"},{"1":"ggthemes","2":"5.1.0","3":"CRAN (R 4.5.1)"},{"1":"gifski","2":"NA","3":"NA"},{"1":"gt","2":"1.0.0","3":"CRAN (R 4.5.1)"},{"1":"gtExtras","2":"0.6.0","3":"CRAN (R 4.5.1)"},{"1":"janitor","2":"2.2.1","3":"RSPM (R 4.5.1)"},{"1":"labelled","2":"2.14.1","3":"CRAN (R 4.5.1)"},{"1":"lubridate","2":"1.9.4","3":"CRAN (R 4.5.1)"},{"1":"naniar","2":"1.1.0","3":"CRAN (R 4.5.1)"},{"1":"purrr","2":"1.1.0","3":"CRAN (R 4.5.1)"},{"1":"radiant","2":"1.6.6","3":"Custom"},{"1":"readr","2":"2.1.5","3":"CRAN (R 4.5.1)"},{"1":"rmarkdown","2":"2.29","3":"CRAN (R 4.5.1)"},{"1":"scales","2":"1.4.0","3":"CRAN (R 4.5.1)"},{"1":"showtext","2":"0.9-7","3":"CRAN (R 4.5.1)"},{"1":"stringr","2":"1.5.2","3":"CRAN (R 4.5.1)"},{"1":"tibble","2":"3.3.0","3":"CRAN (R 4.5.1)"},{"1":"tidyr","2":"1.3.1","3":"CRAN (R 4.5.1)"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-sanderson2024" class="csl-entry" role="listitem">
 Sanderson, Steven, and Antti Rask. 2025. <em>RandomWalker: Generate Random Walks Compatible with the ’Tidyverse’</em>. <a href="https://CRAN.R-project.org/package=RandomWalker">https://CRAN.R-project.org/package=RandomWalker</a>.
 </div>
@@ -766,10 +687,7 @@ Wickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023. <em>R for 
 Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, Dewey Dunnington, and Teun van den Brand. 2025. <em>Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics</em>. <a href="https://CRAN.R-project.org/package=ggplot2">https://CRAN.R-project.org/package=ggplot2</a>.
 </div>
 </div>
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -1185,9 +1103,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
+</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="./preface.html" class="pagination-link" aria-label="Preface">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
       </a>          
@@ -1199,8 +1115,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
 <p>ggplot2 extended was written by Antti Rask.</p>
 </div>   
@@ -1212,8 +1127,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
   </div>
 </footer>
-
-
 
 
 </body></html>
