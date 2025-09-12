@@ -1263,6 +1263,22 @@ We’ll wrap mpaa with a helper function, `product()` to prepare it for the x-ax
 We can use this basic version as a basis for the final version. So let’s also assign the plot to **plot_ggmosaic**.
 
 ```{r}
+#| echo: false
+#| message: false
+#| results: asis
+source("warning-ggmosaic-2025-09-12.R")
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(ggmosaic)
+```
+
+```{r}
+#| eval: false
 #| message: false
 #| warning: false
 
@@ -1292,6 +1308,8 @@ plot_ggmosaic <- ggplot(movies_ggmosaic) +
 plot_ggmosaic
 ```
 
+![](img/ggmosaic-2025-09-12-1.png){.lightbox}
+
 You get the idea. Next, let’s see what we need to do to get this into a more presentable state.
 
 -   Add text labels to show the counts of the different tiles (except the small ones)
@@ -1303,6 +1321,7 @@ First, let’s take a look at those text labels. ggmosaic comes with a `geom_mos
 We’re using the data from the plot_ggmosaic object. It’s a *list*, after all, containing all sorts of data we can use. We'll calculate the label positions, **xpos** and **ypos**. Then we'll count the combinations of mpaa and genre and combine the two into one tibble.
 
 ```{r}
+#| eval: false
 #| message: false
 #| warning: false
 
@@ -1346,6 +1365,7 @@ tile_data_with_counts <- tile_data %>%
 ```
 
 ```{r}
+#| eval: false
 #| echo:    false
 #| message: false
 #| warning: false
@@ -1362,6 +1382,7 @@ We have as many as seven categories (genres). We’ll use `scale_fill_colorblind
 The custom theme, `theme_ggmosaic()` doesn't need any arguments.
 
 ```{r}
+#| eval: false
 #| message: false
 #| warning: false
 
@@ -1424,6 +1445,8 @@ plot_ggmosaic +
     )
   )
 ```
+
+![](img/ggmosaic-2025-09-12-2.png){.lightbox}
 
 Mosaic chart isn’t meant for comparing small details. But it does give you a good overview of the proportions between the different category combinations.
 

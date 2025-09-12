@@ -1512,6 +1512,19 @@ This book/site is under construction
 <p>That’s all we need to take a look at the basic functionality of <code><a href="https://rdrr.io/pkg/ggmosaic/man/geom_mosaic.html">geom_mosaic()</a></code>.</p>
 <p>We’ll wrap mpaa with a helper function, <code><a href="https://rdrr.io/pkg/ggmosaic/man/product.html">product()</a></code> to prepare it for the x-axis. Then assign genre to the <strong>fill</strong> argument. <strong>Offset</strong> lets us set the space between the tiles and <strong>show.legend</strong> does exactly what the name promises.</p>
 <p>We can use this basic version as a basis for the final version. So let’s also assign the plot to <strong>plot_ggmosaic</strong>.</p>
+<div class="callout callout-style-simple callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+This package is waiting for an update
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>After ggplot2 4.0.0 update (2025-09-12)</p>
+</div>
+</div>
 <div class="cell">
 <div class="sourceCode" id="cb29"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/haleyjeppson/ggmosaic">ggmosaic</a></span><span class="op">)</span> <span class="co"># for creating mosaic charts (for categorical data)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>  <span class="co"># for general plotting</span></span>
@@ -1537,13 +1550,8 @@ This book/site is under construction
 <span></span>
 <span><span class="co"># Render the plot</span></span>
 <span><span class="va">plot_ggmosaic</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="geoms_files/figure-html/unnamed-chunk-43-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
 </div>
-</div>
-</div>
+<p><a href="img/ggmosaic-2025-09-12-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/ggmosaic-2025-09-12-1.png" class="img-fluid"></a></p>
 <p>You get the idea. Next, let’s see what we need to do to get this into a more presentable state.</p>
 <ul>
 <li>Add text labels to show the counts of the different tiles (except the small ones)</li>
@@ -1590,11 +1598,6 @@ This book/site is under construction
 <span>  </span>
 <span>  <span class="co"># Keep only label and tile center coordinates</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">n_label</span>, <span class="va">xpos</span>, <span class="va">ypos</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div data-pagedtable="false">
-  <script data-pagedtable-source="" type="application/json">
-{"columns":[{"label":["n_label"],"name":[1],"type":["int"],"align":["right"]},{"label":["xpos"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["ypos"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"190","2":"0.05335348","3":"0.1244534"},{"1":"267","2":"0.05335348","3":"0.4428660"},{"1":"NA","2":"0.05335348","3":"0.6767812"},{"1":"82","2":"0.05335348","3":"0.7895180"},{"1":"NA","2":"0.05335348","3":"0.8793292"},{"1":"NA","2":"0.05335348","3":"0.9435947"},{"1":"NA","2":"0.05335348","3":"0.9954149"},{"1":"471","2":"0.24162217","3":"0.1432384"},{"1":"474","2":"0.24162217","3":"0.4496969"},{"1":"237","2":"0.24162217","3":"0.6849923"},{"1":"231","2":"0.24162217","3":"0.8463876"},{"1":"NA","2":"0.24162217","3":"0.9439187"},{"1":"NA","2":"0.24162217","3":"0.9751526"},{"1":"NA","2":"0.24162217","3":"0.9990877"},{"1":"1723","2":"0.67700588","3":"0.2004022"},{"1":"916","2":"0.67700588","3":"0.5264136"},{"1":"644","2":"0.67700588","3":"0.7269264"},{"1":"440","2":"0.67700588","3":"0.8720758"},{"1":"NA","2":"0.67700588","3":"0.9501142"},{"1":"NA","2":"0.67700588","3":"0.9782556"},{"1":"NA","2":"0.67700588","3":"0.9993021"},{"1":"NA","2":"0.99873720","3":"0.2490706"},{"1":"NA","2":"0.99873720","3":"0.6555831"},{"1":"NA","2":"0.99873720","3":"0.8130249"},{"1":"NA","2":"0.99873720","3":"0.8597687"},{"1":"NA","2":"0.99873720","3":"0.9341870"},{"1":"NA","2":"0.99873720","3":"0.9809307"},{"1":"NA","2":"0.99873720","3":"1.0000000"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
 </div>
 <p>With our text labels ready, we can create the final visualization. We start with the plot_ggmosaic and start adding other layers on top.</p>
 <p>We have as many as seven categories (genres). We’ll use <code><a href="http://jrnold.github.io/ggthemes/reference/colorblind.html">scale_fill_colorblind()</a></code> from ggthemese to create a nice colorblind-friendly color palette.</p>
@@ -1658,13 +1661,8 @@ This book/site is under construction
 <span>      margin <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">margin</a></span><span class="op">(</span><span class="fl">10</span>, <span class="fl">0</span>, <span class="fl">10</span>, <span class="fl">0</span><span class="op">)</span></span>
 <span>    <span class="op">)</span></span>
 <span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="geoms_files/figure-html/unnamed-chunk-46-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
 </div>
-</div>
-</div>
+<p><a href="img/ggmosaic-2025-09-12-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/ggmosaic-2025-09-12-2.png" class="img-fluid"></a></p>
 <p>Mosaic chart isn’t meant for comparing small details. But it does give you a good overview of the proportions between the different category combinations.</p>
 </section></section></section><section id="sec-density-charts" class="level2" data-number="3.3"><h2 data-number="3.3" class="anchored" data-anchor-id="sec-density-charts">
 <span class="header-section-number">3.3</span> Density charts</h2>
@@ -1722,7 +1720,7 @@ This book/site is under construction
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/ggrain/man/geom_rain.html">geom_rain</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="geoms_files/figure-html/unnamed-chunk-49-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="geoms_files/figure-html/unnamed-chunk-51-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1757,7 +1755,7 @@ This book/site is under construction
 <span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="geoms_files/figure-html/unnamed-chunk-50-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="geoms_files/figure-html/unnamed-chunk-52-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1912,7 +1910,7 @@ This book/site is under construction
 <span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="geoms_files/figure-html/unnamed-chunk-51-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="geoms_files/figure-html/unnamed-chunk-53-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1982,7 +1980,7 @@ This book/site is under construction
 <span>  <span class="fu"><a href="https://wilkelab.org/ggridges/reference/geom_density_ridges.html">geom_density_ridges</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="geoms_files/figure-html/unnamed-chunk-54-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="geoms_files/figure-html/unnamed-chunk-56-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -2052,7 +2050,7 @@ This book/site is under construction
 <span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="geoms_files/figure-html/unnamed-chunk-55-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="geoms_files/figure-html/unnamed-chunk-57-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
