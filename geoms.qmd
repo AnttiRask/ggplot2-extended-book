@@ -1700,15 +1700,15 @@ This way, we have the best of all three worlds. We can see that the Documentary 
 
 ### Ridgeline chart {#sec-ridgeline-chart}
 
-A ridgeline chart is a good alternative to the violin plot. They "tend to work particularly well if [you] want to show trends in distributions over time. [...] The purpose of the [chart] is not to show specific density values but instead to allow for easy comparison of density shapes and relative heights across groups" [@wilke2019].
+A ridgeline chart is a good alternative to the violin plot. They "tend to work particularly well if \[you\] want to show trends in distributions over time. \[...\] The purpose of the \[chart\] is not to show specific density values but instead to allow for easy comparison of density shapes and relative heights across groups" [@wilke2019].
 
-We will use **ggridges** [@wilke2024] to create our ridgeline chart. If you're familiar with ggplot2 extensions, you might have known a package called __[ggjoy](https://github.com/clauswilke/ggjoy)__ that did the same. It was _deprecated_, though, and you should update your old scripts to use ggridges instead.
+We will use **ggridges** [@wilke2024] to create our ridgeline chart. If you're familiar with ggplot2 extensions, you might have known a package called [**ggjoy**](https://github.com/clauswilke/ggjoy) that did the same. It was *deprecated*, though, and you should update your old scripts to use ggridges instead.
 
 #### Viz #8: Helsinki temperatures, part III {#sec-viz-8-helsinki-temperatures-part-iii}
 
 Since the ridgeline chart works well for distributions over time, let's use the Helsinki temperatures data. I'm interested in seeing how the daily average temperatures are distributed by month in 2024.
 
-Let's start by getting the data ready. The one new trick is using __month.abb__. It's a constant built into R. We have the month numbers in the data set and can use them in combination.
+Let's start by getting the data ready. The one new trick is using **month.abb**. It's a constant built into R. We have the month numbers in the data set and can use them in combination.
 
 `fct_rev()` is the newest forcats function we get to use. It just reverses the order of factor levels. If we didn't use it, the order of months in the plot would be from December to January. And it feels more natural to have them from January to December.
 
@@ -1782,7 +1782,7 @@ temperature_ggridges %>%
 
 Simple, yet effective. I even like the grayscale feel. But we can help the reader a little bit more by making some adjustments.
 
-We'll switch the geom to `geom_density_ridges_gradient()`, because we want to add some color. __option = "H"__ from `scale_fill_viridis_c()` seems like an intuitive color scale for temperature data. ggridges comes with the `theme_ridges()` function that works well with the rest of the functions, as expected.
+We'll switch the geom to `geom_density_ridges_gradient()`, because we want to add some color. **option = "H"** from `scale_fill_viridis_c()` seems like an intuitive color scale for temperature data. ggridges comes with the `theme_ridges()` function that works well with the rest of the functions, as expected.
 
 ```{r}
 #| message: false
