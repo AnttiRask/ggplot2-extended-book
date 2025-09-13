@@ -901,7 +901,7 @@ ggplot(ggplot2_dependencies_by_year) +
   
   # Set plot titles and descriptions using inline color styling
   labs(
-    title    = str_glue("Number of packages on CRAN in 2024 <span style='color:{color_1}'>depending on</span>, <span style='color:{color_2}'>importing</span>, or <span style='color:{color_3}'>suggesting</span> {{ggplot2}}"),
+    title = str_glue("Number of packages on CRAN in 2024 <span style='color:{color_1}'>depending on</span>, <span style='color:{color_2}'>importing</span>, or <span style='color:{color_3}'>suggesting</span> {{ggplot2}}"),
     subtitle = "Aggregated by the initial package release years. Categories may change from one version to another and were taken from the latest versions.",
     caption  = "Data: CRAN via {pkgsearch} | Visualization: Antti Rask | Updated: 2024-12-31"
   ) +
@@ -1400,7 +1400,7 @@ plot_ggmosaic +
       label = n_label   # Label: count (only if >= 70)
     ),
     data     = tile_data_with_counts,
-    colour   = "white", # White text for contrast
+    color   = "white", # White text for contrast
     fontface = "bold",
     size     = 5  
   ) +
