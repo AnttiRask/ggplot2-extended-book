@@ -25,7 +25,7 @@ source("warning.R")
 
 ### lato {#sec-lato}
 
-### see {#sec-lato}
+### see {#sec-see}
 
 ### tvthemes {#sec-tvthemes}
 

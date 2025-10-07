@@ -198,6 +198,7 @@ install.packages(
     "GGally",
     "gganimate",
     "ggcorrplot",
+    "ggdiagram",
     "ggforce",
     "ggHoriPlot",
     "ggmosaic",
