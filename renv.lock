@@ -663,12 +663,12 @@
     },
     "V8": {
       "Package": "V8",
-      "Version": "8.0.0",
+      "Version": "8.0.1",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Embedded JavaScript and WebAssembly Engine for R",
       "Authors@R": "c( person(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroenooms@gmail.com\", comment = c(ORCID = \"0000-0002-4035-0289\")), person(\"George\", \"Stagg\", role = \"ctb\", comment = c(ORCID = \"0009-0006-3173-9846\")), person(\"Jan Marvin\", \"Garbuszus\", role = \"ctb\"))",
-      "Description": "An R interface to V8 <https://v8.dev>: Google's open source JavaScript and WebAssembly engine. This package can be compiled either with V8 version 6  and up or NodeJS when built as a shared library.",
+      "Description": "An R interface to V8 <https://v8.dev>: Google's open source JavaScript and WebAssembly engine. This package can be compiled either with V8 or NodeJS  when built as a shared library.",
       "License": "MIT + file LICENSE",
       "URL": "https://jeroen.r-universe.dev/V8",
       "BugReports": "https://github.com/jeroen/v8/issues",
@@ -695,7 +695,7 @@
       "Biarch": "true",
       "Author": "Jeroen Ooms [aut, cre] (ORCID: <https://orcid.org/0000-0002-4035-0289>), George Stagg [ctb] (ORCID: <https://orcid.org/0009-0006-3173-9846>), Jan Marvin Garbuszus [ctb]",
       "Maintainer": "Jeroen Ooms <jeroenooms@gmail.com>",
-      "Repository": "https://packagemanager.posit.co/cran/latest"
+      "Repository": "CRAN"
     },
     "abind": {
       "Package": "abind",
@@ -3401,7 +3401,7 @@
     },
     "gtExtras": {
       "Package": "gtExtras",
-      "Version": "0.6.0",
+      "Version": "0.6.1",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Extending 'gt' for Beautiful HTML Tables",
@@ -3453,7 +3453,7 @@
       "NeedsCompilation": "no",
       "Author": "Thomas Mock [aut, cre, cph], Daniel D. Sjoberg [ctb] (ORCID: <https://orcid.org/0000-0003-0862-2018>)",
       "Maintainer": "Thomas Mock <j.thomasmock@gmail.com>",
-      "Repository": "CRAN"
+      "Repository": "https://packagemanager.posit.co/cran/latest"
     },
     "gtable": {
       "Package": "gtable",
@@ -3859,7 +3859,7 @@
     },
     "import": {
       "Package": "import",
-      "Version": "1.3.2",
+      "Version": "1.3.3",
       "Source": "Repository",
       "Type": "Package",
       "Title": "An Import Mechanism for R",
@@ -3867,7 +3867,7 @@
       "Description": "Alternative mechanism for importing objects from packages and R modules. The syntax allows for importing multiple objects with a single command in an expressive way. The import package bridges some of the gap between using library (or require) and direct (single-object) imports. Furthermore the imported objects are not placed in the current environment.",
       "License": "MIT + file LICENSE",
       "ByteCompile": "TRUE",
-      "URL": "https://github.com/rticulate/import",
+      "URL": "https://rticulate.github.io/import/, https://github.com/rticulate/import",
       "BugReports": "https://github.com/rticulate/import/issues",
       "Suggests": [
         "knitr",
@@ -3877,12 +3877,12 @@
       ],
       "Language": "en-US",
       "VignetteBuilder": "knitr",
-      "RoxygenNote": "7.2.3",
+      "RoxygenNote": "7.3.3",
       "Encoding": "UTF-8",
       "NeedsCompilation": "no",
       "Author": "Stefan Milton Bache [aut], Magnus Thor Torfason [aut, cre]",
       "Maintainer": "Magnus Thor Torfason <m@zulutime.net>",
-      "Repository": "RSM"
+      "Repository": "CRAN"
     },
     "isoband": {
       "Package": "isoband",
@@ -4976,7 +4976,7 @@
       "NeedsCompilation": "yes",
       "Author": "Jeroen Ooms [aut, cre] (ORCID: <https://orcid.org/0000-0002-4035-0289>), Oliver Keyes [ctb]",
       "Maintainer": "Jeroen Ooms <jeroenooms@gmail.com>",
-      "Repository": "https://packagemanager.posit.co/cran/latest"
+      "Repository": "CRAN"
     },
     "paletteer": {
       "Package": "paletteer",
@@ -5157,7 +5157,7 @@
       "NeedsCompilation": "no",
       "Author": "Kirill Müller [aut, cre] (ORCID: <https://orcid.org/0000-0002-1416-3412>), Hadley Wickham [aut], RStudio [cph]",
       "Maintainer": "Kirill Müller <kirill@cynkra.com>",
-      "Repository": "https://packagemanager.posit.co/cran/latest"
+      "Repository": "CRAN"
     },
     "pkgconfig": {
       "Package": "pkgconfig",
@@ -7262,15 +7262,15 @@
       "NeedsCompilation": "yes",
       "Author": "Thomas Lin Pedersen [aut, cre] (ORCID: <https://orcid.org/0000-0002-5147-4711>), Jeroen Ooms [aut] (ORCID: <https://orcid.org/0000-0002-4035-0289>), Devon Govett [aut] (Author of font-manager), Posit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
       "Maintainer": "Thomas Lin Pedersen <thomas.pedersen@posit.co>",
-      "Repository": "https://packagemanager.posit.co/cran/latest"
+      "Repository": "CRAN"
     },
     "textshaping": {
       "Package": "textshaping",
-      "Version": "1.0.3",
+      "Version": "1.0.4",
       "Source": "Repository",
       "Title": "Bindings to the 'HarfBuzz' and 'Fribidi' Libraries for Text Shaping",
       "Authors@R": "c( person(\"Thomas Lin\", \"Pedersen\", , \"thomas.pedersen@posit.co\", role = c(\"cre\", \"aut\"), comment = c(ORCID = \"0000-0002-5147-4711\")), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"), comment = c(ROR = \"03wc8by49\")) )",
-      "Description": "Provides access to the text shaping functionality in the 'HarfBuzz' library and the bidirectional algorithm in the 'Fribidi' library.  'textshaping' is a low-level utility package mainly for graphic devices that expands upon the font tool-set provided by the 'systemfonts' package.",
+      "Description": "Provides access to the text shaping functionality in the 'HarfBuzz' library and the bidirectional algorithm in the 'Fribidi' library. 'textshaping' is a low-level utility package mainly for graphic devices that expands upon the font tool-set provided by the 'systemfonts' package.",
       "License": "MIT + file LICENSE",
       "URL": "https://github.com/r-lib/textshaping",
       "BugReports": "https://github.com/r-lib/textshaping/issues",
@@ -7281,7 +7281,7 @@
         "lifecycle",
         "stats",
         "stringi",
-        "systemfonts (>= 1.1.0)",
+        "systemfonts (>= 1.3.0)",
         "utils"
       ],
       "Suggests": [
@@ -7680,12 +7680,12 @@
     },
     "units": {
       "Package": "units",
-      "Version": "0.8-7",
+      "Version": "1.0-0",
       "Source": "Repository",
       "Title": "Measurement Units for R Vectors",
       "Authors@R": "c(person(\"Edzer\", \"Pebesma\", role = c(\"aut\", \"cre\"), email = \"edzer.pebesma@uni-muenster.de\", comment = c(ORCID = \"0000-0001-8049-7069\")), person(\"Thomas\", \"Mailund\", role = \"aut\", email = \"mailund@birc.au.dk\"), person(\"Tomasz\", \"Kalinowski\", role = \"aut\"), person(\"James\", \"Hiebert\", role = \"ctb\"), person(\"Iñaki\", \"Ucar\", role = \"aut\", email = \"iucar@fedoraproject.org\", comment = c(ORCID = \"0000-0001-6403-5550\")), person(\"Thomas Lin\", \"Pedersen\", role = \"ctb\") )",
       "Depends": [
-        "R (>= 3.0.2)"
+        "R (>= 3.5.0)"
       ],
       "Imports": [
         "Rcpp"
@@ -7714,13 +7714,13 @@
       "License": "GPL-2",
       "URL": "https://r-quantities.github.io/units/, https://github.com/r-quantities/units",
       "BugReports": "https://github.com/r-quantities/units/issues",
-      "RoxygenNote": "7.3.2",
+      "RoxygenNote": "7.3.3",
       "Encoding": "UTF-8",
       "Config/testthat/edition": "3",
       "NeedsCompilation": "yes",
-      "Author": "Edzer Pebesma [aut, cre] (<https://orcid.org/0000-0001-8049-7069>), Thomas Mailund [aut], Tomasz Kalinowski [aut], James Hiebert [ctb], Iñaki Ucar [aut] (<https://orcid.org/0000-0001-6403-5550>), Thomas Lin Pedersen [ctb]",
+      "Author": "Edzer Pebesma [aut, cre] (ORCID: <https://orcid.org/0000-0001-8049-7069>), Thomas Mailund [aut], Tomasz Kalinowski [aut], James Hiebert [ctb], Iñaki Ucar [aut] (ORCID: <https://orcid.org/0000-0001-6403-5550>), Thomas Lin Pedersen [ctb]",
       "Maintainer": "Edzer Pebesma <edzer.pebesma@uni-muenster.de>",
-      "Repository": "CRAN"
+      "Repository": "https://packagemanager.posit.co/cran/latest"
     },
     "utf8": {
       "Package": "utf8",
