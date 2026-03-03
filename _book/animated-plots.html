@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.25">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Antti Rask">
 <title>13&nbsp; Animated plots – ggplot2 extended</title>
@@ -87,14 +87,15 @@ div.csl-indent {
 <link href="./cover.jpg" rel="icon" type="image/jpeg">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-e5aec111f686eb2ce2443ccaf5fa6ccd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-4629e7eef7b60ee973ddd10e1ba5b1c0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
@@ -142,7 +143,9 @@ div.csl-indent {
     </div>
   </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="./">ggplot2 extended</a> 
         <div class="sidebar-tools-main">
@@ -405,7 +408,7 @@ div.csl-indent {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-This book/site is under construction
+<span class="screen-reader-only">Warning</span>This book/site is under construction
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -441,7 +444,7 @@ This book/site is under construction
 </li>
 </ol>
 <div class="cell">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Load required libraries</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Load required libraries</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://gganimate.com">gganimate</a></span><span class="op">)</span>    <span class="co"># For creating animated ggplot visuals</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>      <span class="co"># Core plotting library</span></span>
 <span></span>
@@ -460,11 +463,11 @@ This book/site is under construction
 <span>  <span class="fu"><a href="https://gganimate.com/reference/enter_exit.html">enter_fade</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  </span>
 <span>  <span class="co"># Smooth fade-out when switching years</span></span>
-<span>  <span class="fu"><a href="https://gganimate.com/reference/enter_exit.html">exit_fade</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu"><a href="https://gganimate.com/reference/enter_exit.html">exit_fade</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Now that we have the animated plot in plot_animated, we still need to do the rendering. We select the <strong>number of frames</strong>, <strong>frames per second</strong>, <strong>width</strong>, <strong>height</strong>, and, finally, the <strong>renderer</strong>.</p>
 <div class="cell">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://gganimate.com/reference/animate.html">animate</a></span><span class="op">(</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://gganimate.com/reference/animate.html">animate</a></span><span class="op">(</span></span>
 <span>  <span class="co"># Use the animated plot object defined earlier</span></span>
 <span>  plot      <span class="op">=</span> <span class="va">plot_animated</span>,</span>
 <span>  <span class="co"># Total number of frames in the animation</span></span>
@@ -477,7 +480,7 @@ This book/site is under construction
 <span>  height    <span class="op">=</span> <span class="fl">600</span>,</span>
 <span>  <span class="co"># Save output as a GIF to specified file path</span></span>
 <span>  renderer  <span class="op">=</span> <span class="fu"><a href="https://gganimate.com/reference/renderers.html">gifski_renderer</a></span><span class="op">(</span><span class="st">"img/figure-13-1.gif"</span><span class="op">)</span></span>
-<span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Compared to many other things, rendering will take some time. This one took 59.80 seconds. So it’s still not that bad, even if it’s a lot compared to a static visualization. I wanted to add enough frames so that you have time to see what’s happening in the chart.</p>
 <div class="quarto-figure quarto-figure-center">
@@ -551,13 +554,14 @@ Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takaha
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
