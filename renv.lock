@@ -349,10 +349,10 @@
     },
     "Matrix": {
       "Package": "Matrix",
-      "Version": "1.7-4",
+      "Version": "1.7-5",
       "Source": "Repository",
       "VersionNote": "do also bump src/version.h, inst/include/Matrix/version.h",
-      "Date": "2025-08-27",
+      "Date": "2026-03-20",
       "Priority": "recommended",
       "Title": "Sparse and Dense Matrix Classes and Methods",
       "Description": "A rich hierarchy of sparse and dense matrix classes, including general, symmetric, triangular, and diagonal matrices with numeric, logical, or pattern entries.  Efficient methods for operating on such matrices, often wrapping the 'BLAS', 'LAPACK', and 'SuiteSparse' libraries.",
@@ -2726,46 +2726,6 @@
       "Maintainer": "Alboukadel Kassambara <alboukadel.kassambara@gmail.com>",
       "Repository": "CRAN"
     },
-    "ggmosaic": {
-      "Package": "ggmosaic",
-      "Version": "0.3.3",
-      "Source": "Repository",
-      "Title": "Mosaic Plots in the 'ggplot2' Framework",
-      "Authors@R": "c(person(given = \"Haley\", family = \"Jeppson\", role = c(\"aut\", \"cre\"), email = \"hjeppson@iastate.edu\"), person(given = \"Heike\", family = \"Hofmann\", role = \"aut\", email = \"hofmann@iastate.edu\"), person(given = \"Di\", family = \"Cook\", role = \"aut\", email = \"dicook@monash.edu\"), person(given = \"Hadley\", family = \"Wickham\", role = \"ctb\", email = \"hadley@rstudio.com\"))",
-      "Description": "Mosaic plots in the 'ggplot2' framework. Mosaic plot functionality is provided in a single 'ggplot2' layer by calling the geom 'mosaic'.",
-      "License": "GPL (>= 2)",
-      "URL": "https://github.com/haleyjeppson/ggmosaic",
-      "BugReports": "https://github.com/haleyjeppson/ggmosaic",
-      "Depends": [
-        "ggplot2 (>= 3.3.0)",
-        "R (>= 3.5.0)"
-      ],
-      "Imports": [
-        "productplots",
-        "dplyr",
-        "plotly (>= 4.5.5)",
-        "purrr",
-        "rlang",
-        "tidyr",
-        "ggrepel",
-        "scales"
-      ],
-      "Suggests": [
-        "gridExtra",
-        "knitr",
-        "NHANES",
-        "rmarkdown",
-        "patchwork"
-      ],
-      "VignetteBuilder": "knitr",
-      "Encoding": "UTF-8",
-      "LazyData": "true",
-      "RoxygenNote": "7.1.1",
-      "NeedsCompilation": "no",
-      "Author": "Haley Jeppson [aut, cre], Heike Hofmann [aut], Di Cook [aut], Hadley Wickham [ctb]",
-      "Maintainer": "Haley Jeppson <hjeppson@iastate.edu>",
-      "Repository": "CRAN"
-    },
     "ggplot2": {
       "Package": "ggplot2",
       "Version": "4.0.2",
@@ -4638,6 +4598,38 @@
       "Maintainer": "Lionel Henry <lionel@posit.co>",
       "Repository": "CRAN"
     },
+    "marimekko": {
+      "Package": "marimekko",
+      "Version": "0.1.0",
+      "Source": "Repository",
+      "Title": "Marimekko Plots for 'ggplot2'",
+      "Authors@R": "person(\"Dawid\", \"Kałędkowski\", , email = \"dawid.kaledkowski@gmail.com\", role = c(\"aut\", \"cre\"), comment = \"ORCID: <https://orcid.org/0000-0001-9533-457X>\")",
+      "Description": "Create marimekko (mosaic) plots as a 'ggplot2' layer. Column widths encode marginal proportions of one categorical variable and segment heights encode conditional proportions of a second categorical variable.",
+      "License": "MIT + file LICENSE",
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.3.3",
+      "Depends": [
+        "R (>= 4.1.0)"
+      ],
+      "Imports": [
+        "ggplot2 (>= 3.5.0)"
+      ],
+      "Suggests": [
+        "knitr",
+        "pkgdown",
+        "plotly",
+        "rmarkdown",
+        "testthat (>= 3.0.0)",
+        "vdiffr (>= 1.0.0)"
+      ],
+      "VignetteBuilder": "knitr",
+      "Config/testthat/edition": "3",
+      "Collate": "'marimekko-package.R' 'geom-marimekko.R' 'fortify-marimekko.R' 'stat-marimekko-tiles.R' 'theme-marimekko.R'",
+      "NeedsCompilation": "no",
+      "Author": "Dawid Kałędkowski [aut, cre] (ORCID: <https://orcid.org/0000-0001-9533-457X>)",
+      "Maintainer": "Dawid Kałędkowski <dawid.kaledkowski@gmail.com>",
+      "Repository": "CRAN"
+    },
     "markdown": {
       "Package": "markdown",
       "Version": "2.0",
@@ -4991,9 +4983,9 @@
     },
     "nlme": {
       "Package": "nlme",
-      "Version": "3.1-168",
+      "Version": "3.1-169",
       "Source": "Repository",
-      "Date": "2025-03-31",
+      "Date": "2026-03-27",
       "Priority": "recommended",
       "Title": "Linear and Nonlinear Mixed Effects Models",
       "Authors@R": "c(person(\"José\", \"Pinheiro\", role = \"aut\", comment = \"S version\"), person(\"Douglas\", \"Bates\", role = \"aut\", comment = \"up to 2007\"), person(\"Saikat\", \"DebRoy\", role = \"ctb\", comment = \"up to 2002\"), person(\"Deepayan\", \"Sarkar\", role = \"ctb\", comment = \"up to 2005\"), person(\"EISPACK authors\", role = \"ctb\", comment = \"src/rs.f\"), person(\"Siem\", \"Heisterkamp\", role = \"ctb\", comment = \"Author fixed sigma\"), person(\"Bert\", \"Van Willigen\",role = \"ctb\", comment = \"Programmer fixed sigma\"), person(\"Johannes\", \"Ranke\", role = \"ctb\", comment = \"varConstProp()\"), person(\"R Core Team\", email = \"R-core@R-project.org\", role = c(\"aut\", \"cre\"), comment = c(ROR = \"02zz1nj61\")))",
@@ -5019,7 +5011,7 @@
       "MailingList": "R-help@r-project.org",
       "URL": "https://svn.r-project.org/R-packages/trunk/nlme/",
       "NeedsCompilation": "yes",
-      "Author": "José Pinheiro [aut] (S version), Douglas Bates [aut] (up to 2007), Saikat DebRoy [ctb] (up to 2002), Deepayan Sarkar [ctb] (up to 2005), EISPACK authors [ctb] (src/rs.f), Siem Heisterkamp [ctb] (Author fixed sigma), Bert Van Willigen [ctb] (Programmer fixed sigma), Johannes Ranke [ctb] (varConstProp()), R Core Team [aut, cre] (02zz1nj61)",
+      "Author": "José Pinheiro [aut] (S version), Douglas Bates [aut] (up to 2007), Saikat DebRoy [ctb] (up to 2002), Deepayan Sarkar [ctb] (up to 2005), EISPACK authors [ctb] (src/rs.f), Siem Heisterkamp [ctb] (Author fixed sigma), Bert Van Willigen [ctb] (Programmer fixed sigma), Johannes Ranke [ctb] (varConstProp()), R Core Team [aut, cre] (ROR: <https://ror.org/02zz1nj61>)",
       "Maintainer": "R Core Team <R-core@R-project.org>",
       "Repository": "CRAN"
     },
@@ -5666,33 +5658,6 @@
       "NeedsCompilation": "yes",
       "Author": "Gábor Csárdi [aut, cre, cph] (ORCID: <https://orcid.org/0000-0001-7098-9676>), Winston Chang [aut], Posit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>), Ascent Digital Services [cph, fnd]",
       "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
-      "Repository": "CRAN"
-    },
-    "productplots": {
-      "Package": "productplots",
-      "Version": "0.1.2",
-      "Source": "Repository",
-      "Title": "Product Plots for R",
-      "Description": "Framework for visualising tables of counts, proportions and probabilities. The framework is called product plots, alluding to the computation of area as a product of height and width, and the statistical concept of generating a joint distribution from the product of conditional and marginal distributions. The framework, with extensions, is sufficient to encompass over 20 visualisations previously described in fields of statistical graphics and 'infovis', including bar charts, mosaic plots, 'treemaps', equal area plots and fluctuation diagrams.",
-      "Authors@R": "c( person(\"Hadley\", \"Wickham\", , \"hadley@posit.co\", c(\"aut\", \"cre\")), person(\"Heike\", \"Hofmann\", , \"heike.hofmann@gmail.com\", role = \"aut\") )",
-      "Imports": [
-        "plyr",
-        "ggplot2"
-      ],
-      "Suggests": [
-        "reshape2",
-        "testthat",
-        "covr"
-      ],
-      "License": "GPL-2",
-      "LazyData": "true",
-      "RoxygenNote": "7.3.3",
-      "Encoding": "UTF-8",
-      "URL": "https://github.com/hadley/productplots",
-      "BugReports": "https://github.com/hadley/productplots/issues",
-      "NeedsCompilation": "no",
-      "Author": "Hadley Wickham [aut, cre], Heike Hofmann [aut]",
-      "Maintainer": "Hadley Wickham <hadley@posit.co>",
       "Repository": "CRAN"
     },
     "progress": {
