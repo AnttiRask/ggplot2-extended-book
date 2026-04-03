@@ -201,7 +201,7 @@ install.packages(
     "ggdiagram",
     "ggforce",
     "ggHoriPlot",
-    "ggmosaic",
+    # "ggmosaic", Deprecated 2026-04-04
     "ggplot2movies",
     "ggpp",
     "ggquickeda",
@@ -212,10 +212,11 @@ install.packages(
     "ggstream",
     "ggtext",
     "ggthemes",
-    "gifski",   # Needed with gganimate
+    "gifski", # Needed with gganimate
     "gt",
     "gtExtras",
-    "labelled", # Needed with ggmosaic
+    # "labelled", Needed with ggmosaic / Deprecated 2026-04-04
+    "marimekko",
     "naniar",
     "radiant",
     "showtext"

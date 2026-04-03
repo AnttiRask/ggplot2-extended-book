@@ -1199,15 +1199,15 @@ The kids seem to be alright! At least when it comes to feeling creative. There a
 
 A mosaic chart is a special type of stacked bar chart. It differs from a normal one in that “the heights and widths of individual shaded areas vary” [@wilke2019].
 
-To create a mosaic chart, we’ll be using **ggmosaic** [@jeppson2021]. You can use it to create bar charts, stacked bar charts, mosaic charts, and double-decker charts. But we’ll be concentrating on the mosaic chart.
+To create a mosaic chart, we’ll be using **marimekko** [@kałędkowski2026]. It provides `geom_marimekko()` as a native ggplot2 layer, so you can combine it with any other ggplot2 functionality (facets, themes, annotations, etc.). You can use it to create spine plots, stacked bar charts, mosaic charts, and multi-variable mosaics.
 
-To use ggmosaic, you’ll also have to install **labelled** [@larmarange2025b]. If you don’t, ggmosaic will remind you of this fact when you try to run your code for the first time.
+**Note!** The first version of this chapter was written with **ggmosaic** [@jeppson2021] in mind. But after it was archived from **CRAN** on 2025-11-10 (as issues were not corrected despite reminders) and even the version on GitHub isn't working currently, I was forced to find a replacement. And marimekko is that package.
 
 #### Viz #6: IMDB movies, Part II {#sec-viz-6-imdb-movies-part-ii}
 
 We return to the IMDB movies data set. This time looking at how many movies in each genre have a certain *MPAA rating* (among those movies that have a rating in the first place).
 
-We’ll use the already familiar movies_na data set. But we’ll have to make some adjustments to get it ready for ggmosaic.
+We’ll use the already familiar movies_na data set. But we’ll have to make some adjustments to get it ready for marimekko.
 
 The new function here is `fct_infreq()`. It helps us order the factor levels by size, even though we don’t have a separate column for those counts.
 
@@ -1216,7 +1216,7 @@ The new function here is `fct_infreq()`. It helps us order the factor levels by 
 #| warning: false
 
 # Transform and filter the `movies_na` data set
-movies_ggmosaic <- movies_na %>%
+movies_marimekko <- movies_na %>%
   
   # Pivot genre columns (from Action to Short) into long format:
   # Creates two columns: "genre" and "value"
@@ -1252,157 +1252,84 @@ movies_ggmosaic <- movies_na %>%
 #| warning: false
 #| results: asis
 
-movies_ggmosaic %>%
+movies_marimekko %>%
   paged_table()
 ```
 
-That’s all we need to take a look at the basic functionality of `geom_mosaic()`.
+That’s all we need to take a look at the basic functionality of `geom_marimekko()`.
 
-We’ll wrap mpaa with a helper function, `product()` to prepare it for the x-axis. Then assign genre to the **fill** argument. **Offset** lets us set the space between the tiles and **show.legend** does exactly what the name promises.
+The key difference from the old ggmosaic approach is that marimekko uses a formula to specify the variables instead of wrapping them in `product()`. The formula `~ mpaa | genre` tells marimekko to use mpaa for the columns and genre for the segments within each column.
 
-We can use this basic version as a basis for the final version. So let’s also assign the plot to **plot_ggmosaic**.
+Then we assign genre to the **fill** aesthetic. The **gap** parameter controls the space between the tiles, and **show.legend** does exactly what the name promises.
 
-```{r}
-#| echo: false
-#| message: false
-#| results: asis
-source("warning-ggmosaic-2025-09-12.R")
-```
+We can use this basic version as a basis for the final version. So let's also assign the plot to **plot_marimekko**.
 
 ```{r}
-#| echo: false
 #| message: false
 #| warning: false
 
-library(ggmosaic)
-```
-
-```{r}
-#| eval: false
-#| message: false
-#| warning: false
-
-library(ggmosaic) # for creating mosaic charts (for categorical data)
-library(ggplot2)  # for general plotting
+library(ggplot2)   # for general plotting
+library(marimekko) # for creating mosaic charts (for categorical data)
 
 # Build a mosaic plot of movie ratings (mpaa) vs. genres
-plot_ggmosaic <- ggplot(movies_ggmosaic) +
-  geom_mosaic(
-    aes(
-      
-      # x-axis shows mpaa rating categories
-      x    = product(mpaa),
-      
-      # Fill color represents movie genre
-      fill = genre
-    ),
+plot_marimekko <- ggplot(movies_marimekko) +
+  geom_marimekko(
+    
+    # Fill color represents movie genre
+    aes(fill = genre),
+    
+    # Formula defines the mosaic structure:
+    # mpaa on the x-axis, genre as fill segments
+    formula     = ~ mpaa | genre,
     
     # Add small spacing between tiles
-    offset      = 0.02,
+    gap         = 0.02,
     
     # Hide legend (optional)
     show.legend = FALSE
   )
 
 # Render the plot
-plot_ggmosaic
+plot_marimekko
 ```
-
-![](img/ggmosaic-2025-09-12-1.png){.lightbox}
 
 You get the idea. Next, let’s see what we need to do to get this into a more presentable state.
 
 -   Add text labels to show the counts of the different tiles (except the small ones)
 -   Change the color palette with ggthemes
--   Use a custom theme, `theme_ggmosaic()` that comes with ggmosaic
+-   Use a custom theme, `theme_marimekko()` that comes with marimekko
 
-First, let’s take a look at those text labels. ggmosaic comes with a `geom_mosaic_text()` function, but we'll use `geom_text()` from ggplot2 instead. Some of the tiles are so small it doesn't make sense to add labels to them. This way we have more control of the labels and we can decide not to show labels when the counts are too small (under 70 in this case).
+First, let's take a look at those text labels. marimekko comes with a `geom_marimekko_text()` function that reads tile positions automatically from the preceding `geom_marimekko()` layer. You only need to provide the **label** aesthetic. This is much simpler than the old approach, where you had to extract tile coordinates manually from the built plot object.
 
-We’re using the data from the plot_ggmosaic object. It’s a *list*, after all, containing all sorts of data we can use. We'll calculate the label positions, **xpos** and **ypos**. Then we'll count the combinations of mpaa and genre and combine the two into one tibble.
+We can reference computed variables via `after_stat()`. The computed variable **weight** gives us the aggregated count for each tile. Some of the tiles are so small it doesn't make sense to add labels to them. We'll use `after_stat()` to conditionally hide labels when the count is under 70.
 
-```{r}
-#| eval: false
-#| message: false
-#| warning: false
-
-library(dplyr) # for data manipulation
-library(purrr) # for pluck()
-
-# Extract built plot data (data for all geoms)
-p_built <- ggplot_build(plot_ggmosaic)
-
-# Get tile data for the first layer and compute tile centers
-tile_data <- p_built %>%
-  
-  # Extract data for first layer of plot
-  pluck("data", 1) %>%
-  
-  # Compute x and y centers of each tile
-  mutate(
-    xpos = (xmin + xmax) / 2,
-    ypos = (ymin + ymax) / 2
-  )
-
-# Count original observations for each (mpaa, genre) pair
-counts <- movies_ggmosaic %>%
-  count(mpaa, genre)
-
-# Join counts to tile data, add label only if count >= 70
-tile_data_with_counts <- tile_data %>%
-  left_join(
-    counts,
-    by = c(
-      "x__mpaa"        = "mpaa",
-      "x__fill__genre" = "genre"
-    )
-  ) %>%
-  
-  # Drop labels for small counts
-  mutate(n_label = if_else(n < 70, NA, n)) %>%
-  
-  # Keep only label and tile center coordinates
-  select(n_label, xpos, ypos)
-```
+We have as many as seven categories (genres). We’ll use `scale_fill_colorblind()` from ggthemes to create a nice colorblind-friendly color palette.
 
 ```{r}
-#| eval: false
-#| echo:    false
-#| message: false
-#| warning: false
-#| results: asis
-
-tile_data_with_counts  %>%
-  paged_table()
-```
-
-With our text labels ready, we can create the final visualization. We start with the plot_ggmosaic and start adding other layers on top.
-
-We have as many as seven categories (genres). We’ll use `scale_fill_colorblind()` from ggthemese to create a nice colorblind-friendly color palette.
-
-The custom theme, `theme_ggmosaic()` doesn't need any arguments.
-
-```{r}
-#| eval: false
 #| message: false
 #| warning: false
 
 library(ggthemes) # for the color scale
 
 # Add labels, colorblind palette, titles, and custom theme to the mosaic plot
-plot_ggmosaic +
+plot_marimekko +
   
-  # Add text labels to tiles, using the prepared center positions 
-  # and filtered counts
-  geom_text(
+  # Add text labels to tiles, using the computed weight (count)
+  # Only show labels where count >= 70
+  geom_marimekko_text(
     aes(
-      x     = xpos,     # x-position: tile center x
-      y     = ypos,     # y-position: tile center y
-      label = n_label   # Label: count (only if >= 70)
+      label = after_stat(
+        if_else(
+          weight < 70,
+          NA,
+          weight
+        )
+      )
     ),
-    data     = tile_data_with_counts,
-    color   = "white", # White text for contrast
+    colour   = "white",
     fontface = "bold",
-    size     = 5  
+    size     = 5,
+    na.rm    = TRUE
   ) +
   
   # Use a colorblind-friendly palette for fills
@@ -1417,8 +1344,8 @@ plot_ggmosaic +
     y        = ""
   ) +
   
-  # Apply a built-in mosaic theme as a base
-  theme_mosaic() +
+  # Apply the built-in marimekko theme as a base
+  theme_marimekko() +
   
   # Additional theme tweaks for text styling
   theme(
@@ -1446,7 +1373,7 @@ plot_ggmosaic +
   )
 ```
 
-![](img/ggmosaic-2025-09-12-2.png){.lightbox}
+The label code is much simpler compared to what we'd have needed before. With marimekko, we don't have to extract tile data from the built plot, calculate center positions, count the combinations, and join everything together. Instead, `geom_marimekko_text()` handles all of that internally.
 
 Mosaic chart isn’t meant for comparing small details. But it does give you a good overview of the proportions between the different category combinations.
 
