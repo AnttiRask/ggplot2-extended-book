@@ -1862,7 +1862,7 @@ fill_2 <- "#f4a582"
 
 #### Lines {#sec-lines}
 
-For our purposes, a line is a mark connecting two points. It doesn't have to be straight (see @sec-bezier-curves). These geoms are "parameterised versions of different line types" [@pedersen2025b], making it easier to draw them.
+For our purposes, a line is a mark connecting two points. It doesn't have to be straight (see [Bézier curve](https://en.wikipedia.org/wiki/B%C3%A9zier_curve)). These geoms are "parameterised versions of different line types" [@pedersen2025b], making it easier to draw them.
 
 ```{r}
 #| message: false
