@@ -201,7 +201,6 @@ install.packages(
     "ggdiagram",
     "ggforce",
     "ggHoriPlot",
-    # "ggmosaic", Deprecated 2026-04-04
     "ggplot2movies",
     "ggpp",
     "ggquickeda",
@@ -215,7 +214,6 @@ install.packages(
     "gifski", # Needed with gganimate
     "gt",
     "gtExtras",
-    # "labelled", Needed with ggmosaic / Deprecated 2026-04-04
     "marimekko",
     "naniar",
     "radiant",
@@ -346,7 +344,6 @@ pkgs <- c(
   "ggcorrplot",
   "ggforce",
   "ggHoriPlot",
-  "ggmosaic",
   "ggplot2",
   "ggplot2movies",
   "ggpp",
@@ -362,8 +359,8 @@ pkgs <- c(
   "gt",
   "gtExtras",
   "janitor",
-  "labelled",
   "lubridate",
+  "marimekko",
   "naniar",
   "purrr",
   "radiant",
