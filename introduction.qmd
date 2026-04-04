@@ -111,17 +111,19 @@ It doesn’t even matter if R isn’t your *native* language. You might find an 
 
 ## Who am I to write this book? {#sec-who-am-i-to-write-this-book}
 
-Hi! I’m Antti Rask, a data analyst if you had to choose one label. I’ve lived many lives and had many careers before finding my truest calling in data.
+Hi! I’m Antti Rask, a data specialist if you had to choose one label. I’ve lived many lives and had many careers before finding my truest calling in data.
 
 I’ve liked data visualizations longer than I’ve been using R (which I started in late 2019/early 2020). I made my first visualizations with Excel. At some point, I switched to Power BI. Which is still my main tool for visualization at work.
 
-You could say that I am an artistic type. Music has been the main avenue for my artistic self-expression for most of my life. But I’ve also liked to take photos of street art. I come across them on my adventures in Helsinki, or when I’m abroad.
+You could say that I am an artistic type. For most of my life, music has been the main avenue for my artistic self-expression. But I’ve also liked to take photos of street art in Helsinki, or when I’m travelling abroad.
 
 In visualizing data I find myself leaning more towards the **Stephen Few** school of thought. Less is usually more and you should avoid [chartjunk](https://en.wikipedia.org/wiki/Chartjunk) at all costs. Still, I’m not a purist, by any means.
 
 I’ve co-authored the **RandomWalker** [@sanderson2024] R package with **Steven Paul Sanderson II** ([\@spsanderson](https://github.com/spsanderson)). Specifically the function `RandomWalker::visualize_walks()`. It uses ggplot2 and some of the extensions found in this book.
 
-I also like to tinker with R Shiny and recently made an app called [TuneTeller](https://youcanbeapirate.shinyapps.io/TuneTeller/). It received an *honorable mention* in the 2024 [Shiny Contest](https://posit.co/blog/winners-of-the-2024-shiny-contest/).
+More recently I authored my first R package, **col2hex2col** [@rask2026] with the help of **Claude Code**. The package provides simple functions to convert between color names and hexadecimal color codes using an extensive database of over 32,000 colors.
+
+I also like to tinker with R Shiny. My app [TuneTeller](https://tuneteller.youcanbeapirate.com) received an *honorable mention* in the 2024 [Shiny Contest](https://posit.co/blog/winners-of-the-2024-shiny-contest/). I've since created others and you can find them all on my website [youcanbeapirate.com](https://youcanbeapirate.com/).
 
 ## R {#sec-r}
 
@@ -295,7 +297,7 @@ Next, it's practice, practice, practice. Recreate your favorite data visualizati
 
 ### Websites {#sec-websites}
 
--   [Packages (ggplot2) by Antti Rask](https://tinyurl.com/ggplot2packages/)
+-   [ggplot2 extended (companion) by Antti Rask](https://companion.ggplot2-extended-book.com)
 -   [R for Artists and Designers by Arvind Venkatadri](https://r-for-artists.netlify.app/)
 -   [R for the Rest of Us by David Keys](https://rfortherestofus.com/blog/)
 -   [R Graph Gallery by Yan Holtz](https://r-graph-gallery.com/)
