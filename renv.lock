@@ -2604,6 +2604,46 @@
       "Author": "Iker Rivas-González [aut, cre] (<https://orcid.org/0000-0002-0515-0628>)",
       "Repository": "CRAN"
     },
+    "ggTimeSeries": {
+      "Package": "ggTimeSeries",
+      "Version": "1.0.1",
+      "Source": "GitHub",
+      "Type": "Package",
+      "Title": "Time Series Visualisations Using the Grammar of Graphics",
+      "Date": "2018-08-17",
+      "Maintainer": "Aditya Kothari <aditya.kothari@atherenergy.com>",
+      "Author": "as.person(c( \"Aditya Kothari <aditya.kothari@atherenergy.com> [aut,cre]\",  \"Ather Energy <info@atherenergy.com> [cph]\",  \"Jesse Vent <cryptopackage@icloud.com> [ctb] (Ensuring the package met CRAN requirements)\" ))",
+      "Description": "Provides additional display mediums for time series visualisations.",
+      "URL": "https://github.com/Ather-Energy/ggTimeSeries",
+      "BugReports": "https://github.com/Ather-Energy/ggTimeSeries/issues",
+      "License": "MIT + file LICENSE",
+      "Encoding": "UTF-8",
+      "LazyData": "true",
+      "Depends": [
+        "R (>= 3.4.0)",
+        "ggplot2"
+      ],
+      "Imports": [
+        "data.table",
+        "stats",
+        "utils"
+      ],
+      "RoxygenNote": "6.1.0",
+      "Suggests": [
+        "knitr",
+        "rmarkdown",
+        "ggthemes",
+        "prettydoc"
+      ],
+      "VignetteBuilder": "knitr, rmarkdown",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "ggTimeSeries",
+      "RemoteUsername": "Ather-Energy",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "57b60a79f511beb07f39a5fc848f875dd375c1e9",
+      "NeedsCompilation": "no"
+    },
     "gganimate": {
       "Package": "gganimate",
       "Version": "1.0.11",
