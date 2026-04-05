@@ -9,7 +9,3 @@ source("warning.R")
 ```
 
 ## ggplot2’s descendants
-
-## Borrowing from Python with reticulate
-
-### Sunburst plot
