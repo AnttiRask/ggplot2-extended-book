@@ -229,14 +229,18 @@ Others you will have to install from GitHub:
 ```{r}
 #| eval: false
 
+# Install this once:
+# install.packages("pak")
+
 # For installing ggbraid
-# install.packages("remotes")
-remotes::install_github("nsgrantham/ggbraid")
+pak::pak("nsgrantham/ggbraid")
+
+# For installing ggTimeSeries
+pak::pak("AtherEnergy/ggTimeSeries")
 
 # For fully updating radiant
 options(repos = c(RSM = "https://radiant-rstats.github.io/minicran", CRAN = "https://cloud.r-project.org"))
-# install.packages("remotes")
-remotes::install_github("radiant-rstats/radiant.update", upgrade = "never")
+pak::pak("radiant-rstats/radiant.update", upgrade = FALSE)
 ```
 
 ### Others {#sec-others}
@@ -357,6 +361,7 @@ pkgs <- c(
   "ggstream",
   "ggtext",
   "ggthemes",
+  "ggtimeseries",
   "gifski",
   "gt",
   "gtExtras",

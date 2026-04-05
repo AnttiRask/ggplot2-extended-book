@@ -179,7 +179,7 @@ ggplot(temperature_hki) +
   ) +
   
   # Use a diverging color scale (red-blue), reversed so red = high temp
-  scale_fill_hcl(palette = 'RdBu', reverse = TRUE) +
+  scale_fill_hcl(palette = "RdBu", reverse = TRUE) +
   
   # Create one small horizon chart per year, stacked vertically
   facet_grid(vars(year)) +
@@ -216,7 +216,7 @@ ggplot(temperature_hki) +
   
   # Add informative plot title, subtitle, and data source caption
   labs(
-    title    = "Average daily temperature (Celsius) in Helsinki",
+    title    = "Average daily temperature (°C) in Helsinki",
     subtitle = "From 2000 to 2024",
     caption  = "Data: Finnish Meteorological Institute open data, weather observations (CC BY 4.0) | Visualization: Antti Rask",
     x        = NULL # remove x-axis title
@@ -1536,7 +1536,7 @@ add_sample <- function(x) {
   return(
     c(
       # Y-position just above the max
-      y = max(x) + .025,
+      y = max(x) + 0.025,
       # Sample size as label
       label = length(x)       
     )
@@ -1565,7 +1565,7 @@ ggplot(
   geom_rain(
     
     # Draw rain (density) on the right side
-    rain.side = 'r',
+    rain.side = "r",
     
     # Customize boxplot style
     boxplot.args = list(
@@ -1576,7 +1576,7 @@ ggplot(
     # Set point transparency
     point.args = list(alpha = 0.1),
     # Jitter points horizontally
-    point.args.pos = list(position = position_jitter(seed = 1, width = .06))
+    point.args.pos = list(position = position_jitter(seed = 1, width = 0.06))
   ) +
   
   # Add median values as text labels above each raincloud
@@ -1585,7 +1585,7 @@ ggplot(
       # Format median to 2 decimals
       label = round(after_stat(y), 2),
       # Darken text color slightly
-      color = stage(genre, after_scale = darken(color, .2, space = "HLS"))
+      color = stage(genre, after_scale = darken(color, 0.2, space = "HLS"))
     ),
     geom = "text",
     fun  = "median",
@@ -1597,7 +1597,7 @@ ggplot(
   stat_summary(
     aes(
       label = paste("n =", after_stat(label)),
-      color = stage(genre, after_scale = darken(color, .2, space = "HLS"))
+      color = stage(genre, after_scale = darken(color, 0.2, space = "HLS"))
     ),
     geom = "text",
     fun.data = add_sample,
@@ -1614,7 +1614,7 @@ ggplot(
   
   # Manually set fill colors (lightened versions of outline)
   scale_fill_manual(
-    values = lighten(colors_vis_7, .4, space = "HLS"),
+    values = lighten(colors_vis_7, 0.4, space = "HLS"),
     # Hide fill legend
     guide = "none"
   ) +
@@ -1640,7 +1640,7 @@ ggplot(
   # Customize text, grid, and spacing
   theme(
     axis.text.y = element_text(
-      color = darken(colors_vis_7_axis, .1, space = "HLS"),
+      color = darken(colors_vis_7_axis, 0.1, space = "HLS"),
       face  = "bold",
       size  = 12
     ),
@@ -2361,7 +2361,120 @@ However, ggdiagram operates outside the ggplot2 paradigm and only uses it to plo
 
 ## Heatmaps {#sec-heatmaps}
 
+One way to visualize amounts is by using *heatmaps*. We can "map the categories onto the x and y axis and show amounts by color" [@wilke2019].
+
+For basic heatmaps, ggplot2 offers `geom_bin_2d()` and `geom_hex()`, which work well for showing the density or distribution of two continuous variables. But there's a more specialized use case, visualizing daily time series data as a calendar, where those geoms don't quite fit. For that, we can turn to **ggTimeSeries** [@kothari2022].
+
 ### Calendar heatmap {#sec-calendar-heatmap}
+
+"A calendar heatmap is a great way to visualise daily data. Its structure makes it easy to detect weekly, monthly, or seasonal patterns" [@kothari2022].
+
+So let's take a look at what we can do with the Helsinki daily temperature data we have already. Let's first see what the data looks like for one year (2024) with just the mandatory parameters, **cDateColumnName** and **cValueColumnName**.
+
+```{r}
+#| message: false
+#| warning: false
+
+# Load required packages
+library(dplyr)
+library(ggTimeSeries)
+library(lubridate)
+library(readr)
+
+# Create a tibble that has only the 2024 temperature data
+temperature_hki_2024 <- temperature_hki %>%
+  filter(year == 2024) %>%
+  mutate(date = paste(year, month, day, sep = "-") %>% as_date()) %>%
+  select(date, avg_temperature_celsius, year)
+
+# Create a calendar heatmap from the 2024 temperature data
+ggplot_calendar_heatmap(
+  temperature_hki_2024,
+  cDateColumnName  = "date",
+  cValueColumnName = "avg_temperature_celsius"
+)
+```
+
+As you can see, the basic visualization is already quite neat. It's interesting how, in addition to days and months, you also see the weekly structure.
+
+However, the sequential color palette makes it hard to distinguish between positive and negative values. To make the chart more readable, we'll switch to a diverging palette. After all, we have a range of values from positive to negative with a meaningful baseline (0) in the middle.
+
+#### Viz #10: Helsinki temperatures, part V {#sec-viz-10-helsinki-temperatures-part-v}
+
+For the final version of the calendar heatmap, let's use some more data. I would love to show all 25 years, but that version was perhaps too busy and having a 5 x 5 grid didn't exactly make it easy to compare the years.
+
+So, I decided to pick 5 years from 2004 to 2024 to show the possible change over time.
+
+```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
+#| message: false
+#| warning: false
+
+# Load the required packages
+library(dplyr)
+library(ggplot2)
+library(ggTimeSeries)
+library(lubridate)
+
+# Create a proper date column from year, month, and day
+temperature_hki_cal <- temperature_hki %>%
+  filter(year %in% c(2004, 2009, 2014, 2019, 2024)) %>% 
+  mutate(date = paste(year, month, day, sep = "-") %>% as_date()) %>%
+  select(date, avg_temperature_celsius, year)
+
+# Create the calendar heatmap
+ggplot_calendar_heatmap(
+  dtDateValue            = temperature_hki_cal,
+  cDateColumnName        = "date",
+  cValueColumnName       = "avg_temperature_celsius",
+  vcGroupingColumnNames  = "year",
+  dayBorderSize          = 0.1,
+  dayBorderColour        = "grey30",
+  monthBorderSize        = 0.8,
+  monthBorderColour      = "grey30"
+) +
+  scale_fill_gradient2(
+    low      = "#125184",
+    mid      = "#ffffff",
+    high     = "#F36523",
+    midpoint = 0,
+    name     = "°C"
+  ) +
+  facet_wrap(vars(year), ncol = 1) +
+  labs(
+    title    = "Average daily temperature (°C) in Helsinki",
+    subtitle = "Every five years from 2004 to 2024",
+    caption  = "Data: Finnish Meteorological Institute open data, weather observations (CC BY 4.0) | Visualization: Antti Rask",
+    x        = NULL,
+    y        = NULL
+  ) +
+  theme(
+    axis.text.y       = element_blank(),
+    axis.ticks        = element_blank(),
+    legend.position   = "bottom",
+    legend.text       = element_text(color = "grey30"),
+    panel.background  = element_blank(),
+    panel.border      = element_blank(),
+    panel.grid        = element_blank(),
+    plot.caption      = element_text(
+      size  = 8,
+      hjust = 0.5,
+      color = "#777777"
+    ),
+    strip.background  = element_blank(),
+    strip.text        = element_text(
+      size  = 10,
+      hjust = 0
+    )
+  )
+```
+
+Calendar heatmaps are one of those chart types that feel almost obvious once you see one. Of course daily data should look like a calendar. The weekly rhythm jumps out immediately, and seasonal patterns become visible at a glance.
+
+What I find most interesting is how much the color scale matters here. A sequential palette technically works, but switching to a diverging one transformed the chart from *nice* to *informative*.
+
+It's a good reminder that choosing the right color scale isn't decoration! It's an editorial decision about what story your data tells.
 
 ## Intersection diagrams {#sec-intersection-diagrams}
 
