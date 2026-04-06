@@ -231,7 +231,7 @@ As the ggplot2 documentation tells us, an area chart is, in fact, a special case
 
 The ribbon chart, then, displays the area between two lines. `geom_ribbon()` gets the job done when the lines don’t meet. But as you’ll soon see, for those cases where they do, you need something called *braiding*. You can read more about it in the **ggbraid** [@grantham2025] [documentation](https://nsgrantham.github.io/ggbraid/articles/temps.html#the-unbraided-ribbon-problem).
 
-#### Viz #2: IMDB movies, Part I {#sec-viz-2-imdb-movies-part-i}
+#### Viz #2: IMDb movies, Part I {#sec-viz-2-imdb-movies-part-i}
 
 We’ll take a look at what the problem (and solution) looks like with real data. The question we'd like to answer here is which genre, comedy or drama, has produced more movies during the 20th century.
 
@@ -1211,9 +1211,9 @@ To create a mosaic chart, we’ll be using **marimekko** [@kałędkowski2026]. I
 
 **Note!** I wrote the first version of this chapter with **ggmosaic** [@jeppson2021] in mind. But it was archived from **CRAN** on 2025-11-10 (as issues remained uncorrected despite reminders). Even the version on GitHub isn't working currently. So I had to find a replacement. Marimekko is that package.
 
-#### Viz #6: IMDB movies, Part II {#sec-viz-6-imdb-movies-part-ii}
+#### Viz #6: IMDb movies, Part II {#sec-viz-6-imdb-movies-part-ii}
 
-We return to the IMDB movies data set. This time, looking at how many movies in each genre have a certain *MPAA rating* (among those movies that have a rating in the first place).
+We return to the IMDb movies data set. This time, looking at how many movies in each genre have a certain *MPAA rating* (among those movies that have a rating in the first place).
 
 We’ll use the already familiar movies_na data set. But we’ll have to make some adjustments to get it ready for marimekko.
 
@@ -1402,9 +1402,9 @@ You could create a raincloud chart using those individual geoms and mostly ggplo
 
 We have, however, a package, **ggrain** [@judd2024], that we can use for the same purpose. That there are numerous ways to accomplish the same task is both the beauty and the primary source of frustration with these tools. In any case, you get to choose which one works the best for you. You can also mix and match. You’ll see this when we reach the final visualization.
 
-#### Viz #7: IMDB movies, Part III {#sec-viz-7-imdb-movies-part-iii}
+#### Viz #7: IMDb movies, Part III {#sec-viz-7-imdb-movies-part-iii}
 
-We return, once again, to the IMDB movies data set. This time, looking at how the ratings for movies in three genres (Action, Documentary, and Short) are distributed. We’ll make some adjustments for ggrain. As you can see, data wrangling plays a significant role in the data visualization process. Context is key.
+We return, once again, to the IMDb movies data set. This time, looking at how the ratings for movies in three genres (Action, Documentary, and Short) are distributed. We’ll make some adjustments for ggrain. As you can see, data wrangling plays a significant role in the data visualization process. Context is key.
 
 ```{r}
 #| message: false
@@ -1624,8 +1624,8 @@ ggplot(
     x        = NULL,
     y        = NULL,
     title    = "Documentaries have, on average, the best ratings",
-    subtitle = "Distribution of IMDB ratings (from 2000 to 2005) by genre",
-    caption  = "Data: IMDB movies (1893-2005) | Visualization: Antti Rask"
+    subtitle = "Distribution of IMDb ratings (from 2000 to 2005) by genre",
+    caption  = "Data: IMDb movies (1893-2005) | Visualization: Antti Rask"
   ) +
   
   # Apply a clean minimal theme
@@ -2472,7 +2472,162 @@ It's a good reminder that choosing the right color scale isn't decoration! It's 
 
 ## Intersection diagrams {#sec-intersection-diagrams}
 
+Intersection diagrams, as the name suggests, are used to visualize intersecting data. Depending on your specific use case, you might want to choose either an **UpSet diagram** or a **Venn diagram**.
+
+There is a fun **Little Miss Data** [blog post](https://www.littlemissdata.com/blog/set-analysis) [@ellis2019] from 2019 that pits the two against each other. But as you’ll find out by reading the blog (spoilers), the two are for very different purposes.
+
+Let's take a look at the two separately.
+
 ### UpSet diagram {#sec-upset-diagram}
+
+An UpSet diagram is perfect for visualizing intersecting *sets*. The basic version uses a matrix with rows "corresponding to the sets, and the columns to the intersections between these sets (or vice versa). The size of the sets and of the intersections are shown as bar charts" [@wiki2026a].
+
+There are many R packages for creating UpSet diagrams, but for this book, we’ll use **ggupset** [@ahlmann-eltze2025]. It’s the most compatible with the ggplot2 syntax.
+
+But let’s start with the data. We’ll use the IMDb data once more. ggupset prefers the data in a specific format. We need to reshape the wide genre columns into a single list column, genres, that holds one or more values per film.
+
+```{r}
+#| message: false
+#| warning: false
+
+library(dplyr)
+library(ggplot2movies)
+library(tidyr)
+
+movies_upset <- movies %>%
+  pivot_longer(
+    cols      = Action:Short,
+    names_to  = "Genre",
+    values_to = "Value"
+  ) %>%
+  filter(
+    Value == 1,
+    between(year, 1900, 2000)
+  ) %>%
+  summarize(
+    genres  = list(Genre),
+    .by     = c(title, year)
+  )
+```
+
+Let's again start with the most simple version of the UpSet diagram. The only function we need for that is the `scale_x_upset()`.
+
+```{r}
+#| message: false
+#| warning: false
+
+library(ggplot2)
+library(ggupset)
+
+ggplot(movies_upset) +
+  geom_bar(aes(genres)) +
+  scale_x_upset() +
+  scale_y_continuous(
+    breaks = seq(0, 12500, by = 2500),
+    name   = NULL
+  )
+```
+
+Now, it’s mostly working as is. But as you can see, we have genre combinations with no or very few films attached.
+
+That's where the **n_intersections** parameter comes in. We'll use it to show only *n* combinations with the most values. Top 20 in this case.
+
+```{r}
+#| message: false
+#| warning: false
+
+ggplot(movies_upset) +
+  geom_bar(aes(genres)) +
+  scale_x_upset(n_intersections = 20) +
+  scale_y_continuous(
+    breaks = seq(0, 12500, by = 2500),
+    name   = NULL
+  )
+```
+
+Before creating the final version of this, I wish to highlight one alternative. As you know, there are many ways to order the data. And if you'd like to have them first ordered by the number of combined genres, you can use the **order_by = "degree"** argument.
+
+```{r}
+#| message: false
+#| warning: false
+
+ggplot(movies_upset) +
+  geom_bar(aes(genres)) +
+  scale_x_upset(
+    n_intersections = 20,
+    order_by        = "degree"
+  ) +
+  scale_y_continuous(
+    breaks = seq(0, 12500, by = 2500),
+    name   = NULL
+  )
+```
+
+There might be situations where this is useful. But for the final version of the visualization here, let's leave that parameter out.
+
+#### Viz #11: IMDb movies, Part IV {#sec-viz-11-imdb-movies-part-iv}
+
+At this point it’s mostly cleaning up that we need for the final version. Besides the regular ggplot2 theming, we use `theme_combmatrix()` to make the matrix look good.
+
+```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
+#| message: false
+#| warning: false
+
+library(ggplot2)
+library(ggupset)
+
+ggplot(movies_upset, aes(genres)) +
+  geom_bar(fill = "#40E0D0") +
+  scale_x_upset(n_intersections = 20) +
+  scale_y_continuous(
+    limits = c(0, 12500),
+    breaks = seq(0, 12500, by = 2500),
+    name   = "",
+    expand = c(0, 0)
+  ) +
+  theme_minimal() +
+  # Style the matrix panel (dots, lines, labels)
+  theme_combmatrix(
+    combmatrix.label.make_space       = FALSE,
+    combmatrix.panel.line.color       = "#FE5F00",
+    combmatrix.panel.line.size        = 1,
+    combmatrix.panel.point.color.fill = "#FE5F00"
+  ) +
+  theme(
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(
+      color     = "#141204",
+      linewidth = 0.1
+    ),
+    panel.grid.minor   = element_blank(),
+    plot.margin        = margin(5, 5, 5, 20),
+    plot.title         = element_text(margin = margin(10, 0, 5, 0)),
+    plot.subtitle      = element_text(
+      color  = "gray40",
+      margin = margin(0, 0, 20, 0)
+    ),
+    plot.caption       = element_text(
+      size   = 8,
+      color  = "#777777",
+      hjust  = 0.5,
+      margin = margin(10, 0, 0, 0)
+    )
+  ) +
+  labs(
+    title    = "Why be only a Drama or a Comedy when you can be both?!",
+    subtitle = "Genre combinations for movies in the 20th century",
+    caption  = "Data: IMDb movies (1893-2005) via {ggplot2movies} | Visualization: Antti Rask",
+    x        = NULL
+  )
+```
+
+We used ggupset here because it plays nicely with the ggplot2 grammar: you build a bar chart and swap in `scale_x_upset()`. That simplicity is its strength.
+
+If you need more power, annotation panels, built-in queries, or custom intersection-level plots, take a look at **ComplexUpset** [@krassowski2021]. It wraps UpSet plots in full ggplot2 while adding those features. **Note!** As of this writing, it has compatibility issues with ggplot2 4.0.0+.
+
+And if you prefer a more self-contained approach, **UpSetR** [@gehlenborg2019] is the original R implementation. It uses ggplot2 internally, but wraps everything in a single function call with its own parameters rather than exposing a ggplot object you can layer onto.
 
 ### Venn diagram {#sec-venn-diagram}
 

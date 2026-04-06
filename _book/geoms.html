@@ -638,7 +638,7 @@ div.csl-indent {
 <p>As the ggplot2 documentation tells us, an area chart is, in fact, a special case of a ribbon chart. That makes sense when you realize that every type of area chart has a <strong>ymin</strong> and <strong>ymax</strong>. In the basic area chart, ymin is zero, and ymax is <strong>y</strong>. <span class="citation" data-cites="wickham2024a">(<a href="references.html#ref-wickham2024a" role="doc-biblioref">Wickham et al. 2026</a>)</span></p>
 <p>The ribbon chart, then, displays the area between two lines. <code><a href="https://ggplot2.tidyverse.org/reference/geom_ribbon.html">geom_ribbon()</a></code> gets the job done when the lines don’t meet. But as you’ll soon see, for those cases where they do, you need something called <em>braiding</em>. You can read more about it in the <strong>ggbraid</strong> <span class="citation" data-cites="grantham2025">(<a href="references.html#ref-grantham2025" role="doc-biblioref">Grantham 2025</a>)</span> <a href="https://nsgrantham.github.io/ggbraid/articles/temps.html#the-unbraided-ribbon-problem">documentation</a>.</p>
 <section id="sec-viz-2-imdb-movies-part-i" class="level4" data-number="3.1.2.1"><h4 data-number="3.1.2.1" class="anchored" data-anchor-id="sec-viz-2-imdb-movies-part-i">
-<span class="header-section-number">3.1.2.1</span> Viz #2: IMDB movies, Part I</h4>
+<span class="header-section-number">3.1.2.1</span> Viz #2: IMDb movies, Part I</h4>
 <p>We’ll take a look at what the problem (and solution) looks like with real data. The question we’d like to answer here is which genre, comedy or drama, has produced more movies during the 20th century.</p>
 <p>But let’s first examine the data we’ll be using for this. Time series data works best for this type of chart. Let’s stick to the <strong>ggplot2movies</strong> <span class="citation" data-cites="wickham2015">(<a href="references.html#ref-wickham2015" role="doc-biblioref">Wickham 2015</a>)</span> data set that we first encountered in <a href="data.html#sec-imdb-movies-1893-2005" class="quarto-xref"><span>Section 2.1.2</span></a> and the <strong>movies_na</strong> tibble.</p>
 <p>We’ll perform some transformations to prepare the data for visualization. In this case, we’ll need the data in two <em>formats</em>, <strong>long</strong> and <strong>short</strong>.</p>
@@ -1477,8 +1477,8 @@ div.csl-indent {
 <p>To create a mosaic chart, we’ll be using <strong>marimekko</strong> <span class="citation" data-cites="kałędkowski2026">(<a href="references.html#ref-ka%C5%82%C4%99dkowski2026" role="doc-biblioref">Kałędkowski 2026</a>)</span>. It provides <code><a href="https://rdrr.io/pkg/marimekko/man/geom_marimekko.html">geom_marimekko()</a></code> as a native ggplot2 layer, so you can combine it with any other ggplot2 functionality (facets, themes, annotations, etc.).</p>
 <p><strong>Note!</strong> I wrote the first version of this chapter with <strong>ggmosaic</strong> <span class="citation" data-cites="jeppson2021">(<a href="references.html#ref-jeppson2021" role="doc-biblioref">Jeppson, Hofmann, and Cook 2021</a>)</span> in mind. But it was archived from <strong>CRAN</strong> on 2025-11-10 (as issues remained uncorrected despite reminders). Even the version on GitHub isn’t working currently. So I had to find a replacement. Marimekko is that package.</p>
 <section id="sec-viz-6-imdb-movies-part-ii" class="level4" data-number="3.2.2.1"><h4 data-number="3.2.2.1" class="anchored" data-anchor-id="sec-viz-6-imdb-movies-part-ii">
-<span class="header-section-number">3.2.2.1</span> Viz #6: IMDB movies, Part II</h4>
-<p>We return to the IMDB movies data set. This time, looking at how many movies in each genre have a certain <em>MPAA rating</em> (among those movies that have a rating in the first place).</p>
+<span class="header-section-number">3.2.2.1</span> Viz #6: IMDb movies, Part II</h4>
+<p>We return to the IMDb movies data set. This time, looking at how many movies in each genre have a certain <em>MPAA rating</em> (among those movies that have a rating in the first place).</p>
 <p>We’ll use the already familiar movies_na data set. But we’ll have to make some adjustments to get it ready for marimekko.</p>
 <p>The new function here is <code><a href="https://forcats.tidyverse.org/reference/fct_inorder.html">fct_infreq()</a></code>. It helps us order the factor levels by size, even though we don’t have a separate column for those counts.</p>
 <div class="cell">
@@ -1644,8 +1644,8 @@ div.csl-indent {
 <p>You could create a raincloud chart using those individual geoms and mostly ggplot2. <strong>Cédric Scherer</strong> demonstrates this <a href="https://gist.github.com/z3tt/8b2a06d05e8fae308abbf027ce357f01">here</a>, creating a raincloud chart using the Palmer Penguins data.</p>
 <p>We have, however, a package, <strong>ggrain</strong> <span class="citation" data-cites="judd2024">(<a href="references.html#ref-judd2024" role="doc-biblioref">Judd, van Langen, and Kievit 2026</a>)</span>, that we can use for the same purpose. That there are numerous ways to accomplish the same task is both the beauty and the primary source of frustration with these tools. In any case, you get to choose which one works the best for you. You can also mix and match. You’ll see this when we reach the final visualization.</p>
 <section id="sec-viz-7-imdb-movies-part-iii" class="level4" data-number="3.3.1.1"><h4 data-number="3.3.1.1" class="anchored" data-anchor-id="sec-viz-7-imdb-movies-part-iii">
-<span class="header-section-number">3.3.1.1</span> Viz #7: IMDB movies, Part III</h4>
-<p>We return, once again, to the IMDB movies data set. This time, looking at how the ratings for movies in three genres (Action, Documentary, and Short) are distributed. We’ll make some adjustments for ggrain. As you can see, data wrangling plays a significant role in the data visualization process. Context is key.</p>
+<span class="header-section-number">3.3.1.1</span> Viz #7: IMDb movies, Part III</h4>
+<p>We return, once again, to the IMDb movies data set. This time, looking at how the ratings for movies in three genres (Action, Documentary, and Short) are distributed. We’ll make some adjustments for ggrain. As you can see, data wrangling plays a significant role in the data visualization process. Context is key.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Load required packages</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span>          <span class="co"># For data manipulation</span></span>
@@ -1845,8 +1845,8 @@ div.csl-indent {
 <span>    x        <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>    y        <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>    title    <span class="op">=</span> <span class="st">"Documentaries have, on average, the best ratings"</span>,</span>
-<span>    subtitle <span class="op">=</span> <span class="st">"Distribution of IMDB ratings (from 2000 to 2005) by genre"</span>,</span>
-<span>    caption  <span class="op">=</span> <span class="st">"Data: IMDB movies (1893-2005) | Visualization: Antti Rask"</span></span>
+<span>    subtitle <span class="op">=</span> <span class="st">"Distribution of IMDb ratings (from 2000 to 2005) by genre"</span>,</span>
+<span>    caption  <span class="op">=</span> <span class="st">"Data: IMDb movies (1893-2005) | Visualization: Antti Rask"</span></span>
 <span>  <span class="op">)</span> <span class="op">+</span></span>
 <span>  </span>
 <span>  <span class="co"># Apply a clean minimal theme</span></span>
@@ -2634,9 +2634,151 @@ div.csl-indent {
 <p>It’s a good reminder that choosing the right color scale isn’t decoration! It’s an editorial decision about what story your data tells.</p>
 </section></section></section><section id="sec-intersection-diagrams" class="level2" data-number="3.6"><h2 data-number="3.6" class="anchored" data-anchor-id="sec-intersection-diagrams">
 <span class="header-section-number">3.6</span> Intersection diagrams</h2>
+<p>Intersection diagrams, as the name suggests, are used to visualize intersecting data. Depending on your specific use case, you might want to choose either an <strong>UpSet diagram</strong> or a <strong>Venn diagram</strong>.</p>
+<p>There is a fun <strong>Little Miss Data</strong> <a href="https://www.littlemissdata.com/blog/set-analysis">blog post</a> <span class="citation" data-cites="ellis2019">(<a href="references.html#ref-ellis2019" role="doc-biblioref">Ellis 2019</a>)</span> from 2019 that pits the two against each other. But as you’ll find out by reading the blog (spoilers), the two are for very different purposes.</p>
+<p>Let’s take a look at the two separately.</p>
 <section id="sec-upset-diagram" class="level3" data-number="3.6.1"><h3 data-number="3.6.1" class="anchored" data-anchor-id="sec-upset-diagram">
 <span class="header-section-number">3.6.1</span> UpSet diagram</h3>
-</section><section id="sec-venn-diagram" class="level3" data-number="3.6.2"><h3 data-number="3.6.2" class="anchored" data-anchor-id="sec-venn-diagram">
+<p>An UpSet diagram is perfect for visualizing intersecting <em>sets</em>. The basic version uses a matrix with rows “corresponding to the sets, and the columns to the intersections between these sets (or vice versa). The size of the sets and of the intersections are shown as bar charts” <span class="citation" data-cites="wiki2026a">(<a href="references.html#ref-wiki2026a" role="doc-biblioref">Wikipedia contributors 2026</a>)</span>.</p>
+<p>There are many R packages for creating UpSet diagrams, but for this book, we’ll use <strong>ggupset</strong> <span class="citation" data-cites="ahlmann-eltze2025">(<a href="references.html#ref-ahlmann-eltze2025" role="doc-biblioref">Ahlmann-Eltze 2025</a>)</span>. It’s the most compatible with the ggplot2 syntax.</p>
+<p>But let’s start with the data. We’ll use the IMDb data once more. ggupset prefers the data in a specific format. We need to reshape the wide genre columns into a single list column, genres, that holds one or more values per film.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">ggplot2movies</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyr.tidyverse.org">tidyr</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">movies_upset</span> <span class="op">&lt;-</span> <span class="va">movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">pivot_longer</a></span><span class="op">(</span></span>
+<span>    cols      <span class="op">=</span> <span class="va">Action</span><span class="op">:</span><span class="va">Short</span>,</span>
+<span>    names_to  <span class="op">=</span> <span class="st">"Genre"</span>,</span>
+<span>    values_to <span class="op">=</span> <span class="st">"Value"</span></span>
+<span>  <span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span></span>
+<span>    <span class="va">Value</span> <span class="op">==</span> <span class="fl">1</span>,</span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/between.html">between</a></span><span class="op">(</span><span class="va">year</span>, <span class="fl">1900</span>, <span class="fl">2000</span><span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span></span>
+<span>    genres  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="va">Genre</span><span class="op">)</span>,</span>
+<span>    .by     <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">title</span>, <span class="va">year</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Let’s again start with the most simple version of the UpSet diagram. The only function we need for that is the <code><a href="https://rdrr.io/pkg/ggupset/man/scale_x_upset.html">scale_x_upset()</a></code>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb45"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/const-ae/ggupset">ggupset</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">movies_upset</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">genres</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/ggupset/man/scale_x_upset.html">scale_x_upset</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous</a></span><span class="op">(</span></span>
+<span>    breaks <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">12500</span>, by <span class="op">=</span> <span class="fl">2500</span><span class="op">)</span>,</span>
+<span>    name   <span class="op">=</span> <span class="cn">NULL</span></span>
+<span>  <span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="geoms_files/figure-html/unnamed-chunk-62-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Now, it’s mostly working as is. But as you can see, we have genre combinations with no or very few films attached.</p>
+<p>That’s where the <strong>n_intersections</strong> parameter comes in. We’ll use it to show only <em>n</em> combinations with the most values. Top 20 in this case.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb46"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">movies_upset</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">genres</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/ggupset/man/scale_x_upset.html">scale_x_upset</a></span><span class="op">(</span>n_intersections <span class="op">=</span> <span class="fl">20</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous</a></span><span class="op">(</span></span>
+<span>    breaks <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">12500</span>, by <span class="op">=</span> <span class="fl">2500</span><span class="op">)</span>,</span>
+<span>    name   <span class="op">=</span> <span class="cn">NULL</span></span>
+<span>  <span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="geoms_files/figure-html/unnamed-chunk-63-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Before creating the final version of this, I wish to highlight one alternative. As you know, there are many ways to order the data. And if you’d like to have them first ordered by the number of combined genres, you can use the <strong>order_by = “degree”</strong> argument.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb47"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">movies_upset</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">genres</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/ggupset/man/scale_x_upset.html">scale_x_upset</a></span><span class="op">(</span></span>
+<span>    n_intersections <span class="op">=</span> <span class="fl">20</span>,</span>
+<span>    order_by        <span class="op">=</span> <span class="st">"degree"</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous</a></span><span class="op">(</span></span>
+<span>    breaks <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">12500</span>, by <span class="op">=</span> <span class="fl">2500</span><span class="op">)</span>,</span>
+<span>    name   <span class="op">=</span> <span class="cn">NULL</span></span>
+<span>  <span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="geoms_files/figure-html/unnamed-chunk-64-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>There might be situations where this is useful. But for the final version of the visualization here, let’s leave that parameter out.</p>
+<section id="sec-viz-11-imdb-movies-part-iv" class="level4" data-number="3.6.1.1"><h4 data-number="3.6.1.1" class="anchored" data-anchor-id="sec-viz-11-imdb-movies-part-iv">
+<span class="header-section-number">3.6.1.1</span> Viz #11: IMDb movies, Part IV</h4>
+<p>At this point it’s mostly cleaning up that we need for the final version. Besides the regular ggplot2 theming, we use <code><a href="https://rdrr.io/pkg/ggupset/man/theme_combmatrix.html">theme_combmatrix()</a></code> to make the matrix look good.</p>
+<div class="cell">
+<details class="code-fold"><summary>Show the code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb48"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/const-ae/ggupset">ggupset</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">movies_upset</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">genres</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="st">"#40E0D0"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/ggupset/man/scale_x_upset.html">scale_x_upset</a></span><span class="op">(</span>n_intersections <span class="op">=</span> <span class="fl">20</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous</a></span><span class="op">(</span></span>
+<span>    limits <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">12500</span><span class="op">)</span>,</span>
+<span>    breaks <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">12500</span>, by <span class="op">=</span> <span class="fl">2500</span><span class="op">)</span>,</span>
+<span>    name   <span class="op">=</span> <span class="st">""</span>,</span>
+<span>    expand <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="co"># Style the matrix panel (dots, lines, labels)</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/ggupset/man/theme_combmatrix.html">theme_combmatrix</a></span><span class="op">(</span></span>
+<span>    combmatrix.label.make_space       <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>    combmatrix.panel.line.color       <span class="op">=</span> <span class="st">"#FE5F00"</span>,</span>
+<span>    combmatrix.panel.line.size        <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>    combmatrix.panel.point.color.fill <span class="op">=</span> <span class="st">"#FE5F00"</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span></span>
+<span>    panel.grid.major.x <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    panel.grid.major.y <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_line</a></span><span class="op">(</span></span>
+<span>      color     <span class="op">=</span> <span class="st">"#141204"</span>,</span>
+<span>      linewidth <span class="op">=</span> <span class="fl">0.1</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    panel.grid.minor   <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    plot.margin        <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">margin</a></span><span class="op">(</span><span class="fl">5</span>, <span class="fl">5</span>, <span class="fl">5</span>, <span class="fl">20</span><span class="op">)</span>,</span>
+<span>    plot.title         <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>margin <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">margin</a></span><span class="op">(</span><span class="fl">10</span>, <span class="fl">0</span>, <span class="fl">5</span>, <span class="fl">0</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>    plot.subtitle      <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span></span>
+<span>      color  <span class="op">=</span> <span class="st">"gray40"</span>,</span>
+<span>      margin <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">margin</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">20</span>, <span class="fl">0</span><span class="op">)</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    plot.caption       <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span></span>
+<span>      size   <span class="op">=</span> <span class="fl">8</span>,</span>
+<span>      color  <span class="op">=</span> <span class="st">"#777777"</span>,</span>
+<span>      hjust  <span class="op">=</span> <span class="fl">0.5</span>,</span>
+<span>      margin <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">margin</a></span><span class="op">(</span><span class="fl">10</span>, <span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span></span>
+<span>    <span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span></span>
+<span>    title    <span class="op">=</span> <span class="st">"Why be only a Drama or a Comedy when you can be both?!"</span>,</span>
+<span>    subtitle <span class="op">=</span> <span class="st">"Genre combinations for movies in the 20th century"</span>,</span>
+<span>    caption  <span class="op">=</span> <span class="st">"Data: IMDb movies (1893-2005) via {ggplot2movies} | Visualization: Antti Rask"</span>,</span>
+<span>    x        <span class="op">=</span> <span class="cn">NULL</span></span>
+<span>  <span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="geoms_files/figure-html/unnamed-chunk-65-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>We used ggupset here because it plays nicely with the ggplot2 grammar: you build a bar chart and swap in <code><a href="https://rdrr.io/pkg/ggupset/man/scale_x_upset.html">scale_x_upset()</a></code>. That simplicity is its strength.</p>
+<p>If you need more power, annotation panels, built-in queries, or custom intersection-level plots, take a look at <strong>ComplexUpset</strong> <span class="citation" data-cites="krassowski2021">(<a href="references.html#ref-krassowski2021" role="doc-biblioref">Krassowski 2021</a>)</span>. It wraps UpSet plots in full ggplot2 while adding those features. <strong>Note!</strong> As of this writing, it has compatibility issues with ggplot2 4.0.0+.</p>
+<p>And if you prefer a more self-contained approach, <strong>UpSetR</strong> <span class="citation" data-cites="gehlenborg2019">(<a href="references.html#ref-gehlenborg2019" role="doc-biblioref">Gehlenborg 2019</a>)</span> is the original R implementation. It uses ggplot2 internally, but wraps everything in a single function call with its own parameters rather than exposing a ggplot object you can layer onto.</p>
+</section></section><section id="sec-venn-diagram" class="level3" data-number="3.6.2"><h3 data-number="3.6.2" class="anchored" data-anchor-id="sec-venn-diagram">
 <span class="header-section-number">3.6.2</span> Venn diagram</h3>
 </section></section><section id="sec-line-charts" class="level2" data-number="3.7"><h2 data-number="3.7" class="anchored" data-anchor-id="sec-line-charts">
 <span class="header-section-number">3.7</span> Line charts</h2>
@@ -2687,6 +2829,9 @@ div.csl-indent {
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-ahlmann-eltze2025" class="csl-entry" role="listitem">
+Ahlmann-Eltze, Constantin. 2025. <em>Ggupset: Combination Matrix Axis for ’Ggplot2’ to Create ’UpSet’ Plots</em>. <a href="https://github.com/const-ae/ggupset/">https://github.com/const-ae/ggupset/</a>.
+</div>
 <div id="ref-aphalo2025" class="csl-entry" role="listitem">
 Aphalo, Pedro J. 2026. <em>Ggpp: Grammar Extensions to ’Ggplot2’</em>. <a href="https://CRAN.R-project.org/package=ggpp">https://CRAN.R-project.org/package=ggpp</a>.
 </div>
@@ -2699,8 +2844,14 @@ Burns, Alvin C., and Ronald F. Bush. 2007. <em>Basic Marketing Research: Using M
 <div id="ref-csardi2025" class="csl-entry" role="listitem">
 Csárdi, Gábor, and Maëlle Salmon. 2025. <em>Pkgsearch: Search and Query CRAN r Packages</em>. <a href="https://CRAN.R-project.org/package=pkgsearch">https://CRAN.R-project.org/package=pkgsearch</a>.
 </div>
+<div id="ref-ellis2019" class="csl-entry" role="listitem">
+Ellis, Laura Grace. 2019. <span>“Set Analysis: A Face Off Between Venn Diagrams and UpSet Plots.”</span> <a href="https://www.littlemissdata.com/blog/set-analysis/">https://www.littlemissdata.com/blog/set-analysis/</a>.
+</div>
+<div id="ref-gehlenborg2019" class="csl-entry" role="listitem">
+Gehlenborg, Nils. 2019. <em>UpSetR: A More Scalable Alternative to Venn and Euler Diagrams for Visualizing Intersecting Sets</em>. <a href="https://CRAN.R-project.org/package=UpSetR">https://CRAN.R-project.org/package=UpSetR</a>.
+</div>
 <div id="ref-grantham2025" class="csl-entry" role="listitem">
-Grantham, Neal. 2025. <em>Ggbraid: Braid Ribbons in ’Ggplot2’</em>. <a href="https://github.com/nsgrantham/ggbraid">https://github.com/nsgrantham/ggbraid</a>.
+Grantham, Neal. 2025. <em>Ggbraid: Braid Ribbons in ’Ggplot2’</em>. <a href="https://github.com/nsgrantham/ggbraid/">https://github.com/nsgrantham/ggbraid/</a>.
 </div>
 <div id="ref-ihaka2024" class="csl-entry" role="listitem">
 Ihaka, Ross, Paul Murrell, Kurt Hornik, Jason C. Fisher, Reto Stauffer, Claus O. Wilke, Claire D. McWhite, and Achim Zeileis. 2024. <em>Colorspace: A Toolbox for Manipulating and Assessing Colors and Palettes</em>. <a href="https://CRAN.R-project.org/package=colorspace">https://CRAN.R-project.org/package=colorspace</a>.
@@ -2716,6 +2867,9 @@ Kałędkowski, Dawid. 2026. <em>Marimekko: Marimekko Plots for ’Ggplot2’</em
 </div>
 <div id="ref-kothari2022" class="csl-entry" role="listitem">
 Kothari, Aditya. 2022. <em>ggTimeSeries: Time Series Visualisations Using the Grammar of Graphics</em>. <a href="https://github.com/AtherEnergy/ggTimeSeries">https://github.com/AtherEnergy/ggTimeSeries</a>.
+</div>
+<div id="ref-krassowski2021" class="csl-entry" role="listitem">
+Krassowski, Michał. 2021. <em>ComplexUpset: Create Complex UpSet Plots Using ’Ggplot2’ Components</em>. <a href="https://github.com/krassowski/complex-upset">https://github.com/krassowski/complex-upset</a>.
 </div>
 <div id="ref-larmarange2025a" class="csl-entry" role="listitem">
 Larmarange, Joseph. 2026. <em>Ggstats: Extension to ’Ggplot2’ for Plotting Stats</em>. <a href="https://CRAN.R-project.org/package=ggstats">https://CRAN.R-project.org/package=ggstats</a>.
@@ -2770,6 +2924,9 @@ Wickham, Hadley. 2015. <em>Ggplot2movies: Movies Data</em>. <a href="https://CRA
 </div>
 <div id="ref-wickham2024a" class="csl-entry" role="listitem">
 Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, Dewey Dunnington, and Teun van den Brand. 2026. <em>Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics</em>. <a href="https://CRAN.R-project.org/package=ggplot2">https://CRAN.R-project.org/package=ggplot2</a>.
+</div>
+<div id="ref-wiki2026a" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026. <span>“UpSet Plot — <span>W</span>ikipedia<span>,</span> the Free Encyclopedia.”</span> <a href="https://en.wikipedia.org/wiki/UpSet_plot/">https://en.wikipedia.org/wiki/UpSet_plot/</a>.
 </div>
 <div id="ref-wilke2017" class="csl-entry" role="listitem">
 Wilke, Claus O. 2017. <span>“Goodbye Joyplots.”</span> <a href="https://clauswilke.com/blog/2017/09/15/goodbye-joyplots/">https://clauswilke.com/blog/2017/09/15/goodbye-joyplots/</a>.

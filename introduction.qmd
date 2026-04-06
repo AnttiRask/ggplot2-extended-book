@@ -213,6 +213,7 @@ install.packages(
     "ggstream",
     "ggtext",
     "ggthemes",
+    "ggupset",
     "gifski", # Needed with gganimate
     "gt",
     "gtExtras",
@@ -362,6 +363,7 @@ pkgs <- c(
   "ggtext",
   "ggthemes",
   "ggtimeseries",
+  "ggupset",
   "gifski",
   "gt",
   "gtExtras",
