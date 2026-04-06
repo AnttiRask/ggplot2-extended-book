@@ -642,7 +642,7 @@ A streamgraph is a stacked area chart where the areas are positioned around the 
 
 If you’ve read the book in chronological order, you’ve already encountered a streamgraph in @sec-landscape. We will use that visualization as the example in this section.
 
-The purpose of this visualization is to illustrate how the ggplot2 dependencies have evolved from a small speck in 2007 to their current state at the end of 2024. This is the exact use case for which I would use a streamgraph.
+The purpose of this visualization is to illustrate how the ggplot2 dependencies have evolved from a small speck in 2007 to their current state at the end of 2025. This is the exact use case for which I would use a streamgraph.
 
 Before we proceed, I want to mention **Georgios Karamanis**. Their [original visualization](https://github.com/gkaramanis/tidytuesday/tree/master/2023/2023-week_38) for [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday) (see Figure 3.1) was the inspiration for my version.
 
@@ -668,7 +668,7 @@ We'll cover these in more detail as we proceed.
 #| warning: false
 #| results: asis
 
-ggplot2_dependencies_by_year <- read_csv("data/ggplot2-dependencies-by-year-2025-06-21.csv")
+ggplot2_dependencies_by_year <- read_csv("data/ggplot2-dependencies-by-year-2025-12-31.csv")
 ```
 
 Let's take a look at the data we're working with. It was gathered with **pkgsearch** [@csardi2025].
@@ -683,7 +683,7 @@ ggplot2_dependencies_by_year %>%
   paged_table()
 ```
 
-We won’t reiterate the definitions of the different **types** (see @sec-landscape for them). But we can see that the *count* for each type starts small in 2007 and increases significantly by 2024.
+We won’t reiterate the definitions of the different **types** (see @sec-landscape for them). But we can see that the *count* for each type starts small in 2007 and increases significantly by 2025.
 
 Let’s first take a look at what the streamgraph would look like with default settings. We'll use `geom_stream()` from **ggstream** [@sjoberg2021] for that.
 
@@ -757,7 +757,7 @@ annotation_numbers <- ggplot2_dependencies_by_year %>%
   mutate(
     
     # Manually assign y-positions for labels
-    y = c(390, 75, -300),
+    y = c(440, 75, -350),
     
     # Create HTML-styled rich labels with colored numbers
     label = case_when(
@@ -807,64 +807,58 @@ ggplot(ggplot2_dependencies_by_year) +
   # Add a small point at the origin to anchor the first version label
   geom_point(
     aes(x = 2007, y = 0),
-    data = NULL,
-    size = 1.5,
-    stat = "unique",
+    data = tibble(),
+    size = 1.5
   ) +
   
   # Add a label for ggplot2 version 0.5 (2007)
   geom_label_repel(
     aes(x = 2007, y = 0, label = "{ggplot2}\nver 0.5"),
-    data          = NULL,
-    stat          = "unique",
-    nudge_y       = 75,
-    label.size    = NA,
-    lineheight    = 0.5,
-    family        = font_family
+    data        = tibble(),
+    nudge_y     = 75,
+    linewidth   = 0,
+    lineheight  = 0.9,
+    family      = font_family
   ) +
   
   # Add a label for ggplot2 version 1.0 (2014)
   geom_label_repel(
     aes(x = 2014, y = 50, label = "{ggplot2}\nver 1.0"),
-    data          = NULL,
-    stat          = "unique",
-    nudge_y       = 115,
-    label.size    = NA,
-    lineheight    = 0.5,
-    family        = font_family
+    data       = tibble(),
+    nudge_y    = 115,
+    linewidth  = 0,
+    lineheight = 0.9,
+    family     = font_family
   ) +
   
   # Add a label for ggplot2 version 2.0 (2015)
   geom_label_repel(
     aes(x = 2015, y = 125, label = "{ggplot2}\nver 2.0"),
-    data          = NULL,
-    stat          = "unique",
-    nudge_y       = 140,
-    label.size    = NA,
-    lineheight    = 0.5,
-    family        = font_family
+    data       = tibble(),
+    nudge_y    = 100,
+    linewidth  = 0,
+    lineheight = 0.9,
+    family     = font_family
   ) +
   
   # Add a label for ggplot2 version 3.0 (2018)
   geom_label_repel(
     aes(x = 2018, y = 100, label = "{ggplot2}\nver 3.0"),
-    data          = NULL,
-    stat          = "unique",
-    nudge_y       = 200,
-    label.size    = NA,
-    lineheight    = 0.5,
-    family        = font_family
+    data       = tibble(),
+    nudge_y    = 200,
+    linewidth  = 0,
+    lineheight = 0.9,
+    family     = font_family
   ) +
   
-  # Add a label for ggplot2 version 3.5 (2024)
+  # Add a label for ggplot2 version 4.0 (2025)
   geom_label_repel(
-    aes(x = 2024, y = 410, label = "{ggplot2}\nver 3.5"),
-    data          = NULL,
-    stat          = "unique",
-    nudge_y       = 75,
-    label.size    = NA,
-    lineheight    = 0.5,
-    family        = font_family
+    aes(x = 2025, y = 450, label = "{ggplot2}\nver 4.0"),
+    data       = tibble(),
+    nudge_y    = 100,
+    linewidth  = 0,
+    lineheight = 0.9,
+    family     = font_family
   ) +
   
   # Create a stream-like area chart showing the number of dependent 
@@ -887,11 +881,11 @@ ggplot(ggplot2_dependencies_by_year) +
   # Add annotations on the right side using rich text labels from ggtext
   geom_richtext(
     aes(
-      x     = 2024 + 0.2,
+      x     = 2025 + 0.2,
       y     = y,
       label = label
     ),
-    data = annotation_numbers,
+    data       = annotation_numbers,
     hjust      = 0,
     lineheight = 0.9,
     label.size = NA,
@@ -901,8 +895,8 @@ ggplot(ggplot2_dependencies_by_year) +
   
   # Configure the x-axis with major and minor breaks
   scale_x_continuous(
-    breaks       = seq(2008, 2024, 2),
-    minor_breaks = 2007:2024
+    breaks       = seq(2007, 2025, 2),
+    minor_breaks = 2007:2025
   ) +
   
   # Manually assign fill colors for the dependency types
@@ -913,9 +907,9 @@ ggplot(ggplot2_dependencies_by_year) +
   
   # Set plot titles and descriptions using inline color styling
   labs(
-    title = str_glue("Number of packages on CRAN in 2024 <span style='color:{color_1}'>depending on</span>, <span style='color:{color_2}'>importing</span>, or <span style='color:{color_3}'>suggesting</span> {{ggplot2}}"),
-    subtitle = "Aggregated by the initial package release years. Categories may change from one version to another and were taken from the latest versions.",
-    caption  = "Data: CRAN via {pkgsearch} | Visualization: Antti Rask | Updated: 2024-12-31"
+    title = str_glue("Number of packages on CRAN in 2025 <span style='color:{color_1}'>depending on</span>, <span style='color:{color_2}'>importing</span>, or <span style='color:{color_3}'>suggesting</span> {{ggplot2}}"),
+    subtitle = "Aggregated by the initial package release years. Categories may change from one version to another and were taken from the original versions.",
+    caption  = "Data: CRAN via {pkgsearch} | Visualization: Antti Rask | Updated: 2025-12-31"
   ) +
   
   # Apply a clean, minimal theme and customize text styling
@@ -933,10 +927,10 @@ ggplot(ggplot2_dependencies_by_year) +
     legend.position       = "none",
     panel.grid.major.y    = element_blank(),
     panel.grid.minor.y    = element_blank(),
-    plot.margin           = margin(10, 50, 10, 10),
+    plot.margin           = margin(10, 10, 10, 10),
     plot.title            = element_markdown(
       face  = "bold",
-      size  = 16,
+      size  = 20,
       hjust = 0.5
     ),
     plot.subtitle = element_text(
