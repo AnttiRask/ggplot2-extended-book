@@ -214,6 +214,7 @@ install.packages(
     "ggtext",
     "ggthemes",
     "ggupset",
+    "ggVennDiagram",
     "gifski", # Needed with gganimate
     "gt",
     "gtExtras",
@@ -364,6 +365,7 @@ pkgs <- c(
   "ggthemes",
   "ggtimeseries",
   "ggupset",
+  "ggVennDiagram",
   "gifski",
   "gt",
   "gtExtras",

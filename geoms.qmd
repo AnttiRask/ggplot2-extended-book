@@ -2631,6 +2631,158 @@ And if you prefer a more self-contained approach, **UpSetR** [@gehlenborg2019] i
 
 ### Venn diagram {#sec-venn-diagram}
 
+A Venn diagram has been around for a while to show "the logical relation between sets, popularized by John Venn (1834–1923) in the 1880s" [@wiki2026b].
+
+It works similarly to the UpSet diagram, but can accommodate only so many sets. **ggVennDiagram** [@gao2026] comes with a function `plot_shapes()` for plotting the available shapes. In some cases you can then choose which variation of a shape to use.
+
+```{r}
+#| echo:    false
+#| message: false
+#| warning: false
+#| results: asis
+
+library(ggVennDiagram)
+
+plot_shapes()
+```
+
+We can also take a look at the different shapes as a tibble:
+
+```{r}
+#| message: false
+#| warning: false
+
+get_shapes()
+```
+
+As you can see, seven seems to be the greatest number of sets. But let's take a look at a real use-case where we can also test those limits.
+
+For this, let's revisit the IMDb movies dataset. We'll first limit the number of sets to three, **Comedy**, **Drama**, and **Romance**. What we want for ggVennDiagram is a list that has three levels, one for each genre.
+
+```{r}
+#| message: false
+#| warning: false
+
+library(dplyr)
+library(ggplot2movies)
+library(purrr)
+
+movies_venn <- movies %>%
+  filter(between(year, 1900, 2000)) %>%
+  select(title, Comedy, Drama, Romance)
+
+genres <- c("Comedy", "Drama", "Romance")
+
+genre_sets <- genres %>%
+  set_names() %>%
+  map(~ movies_venn$title[movies_venn[[.x]] == 1])
+```
+
+Let's then try the `ggVennDiagram()` function with the default settings.
+
+```{r}
+#| message: false
+#| warning: false
+
+library(ggVennDiagram)
+
+ggVennDiagram(genre_sets)
+```
+
+That already looks pretty good. But what if we had more sets, more genres? Let’s try the same, with the same number as for the UpSet diagram earlier.
+
+```{r}
+#| echo:    false
+#| message: false
+#| warning: false
+#| results: asis
+
+movies_venn_all <- movies %>%
+  filter(between(year, 1900, 2000)) %>%
+  select(title, Action, Animation, Comedy, Documentary, Drama, Romance, Short)
+
+genres_all <- c("Action", "Animation", "Comedy", "Documentary", "Drama", "Romance", "Short")
+
+genre_sets_all <- genres_all %>%
+  set_names() %>%
+  map(~ movies_venn_all$title[movies_venn_all[[.x]] == 1])
+```
+
+```{r}
+#| message: false
+#| warning: false
+
+ggVennDiagram(genre_sets_all)
+```
+
+As you can see, that’s not the best way to visualize this data. Even if we turned off the annotations, it would still be much more confusing compared to the UpSet plot.
+
+And if we had even one more set, ggVennDiagram would actually fall back to plotting an UpSet plot instead! That's how close the two are to each other philosophically.
+
+#### Viz #12: IMDb movies, Part V {#sec-viz-12-imdb-movies-part-v}
+
+Let’s now create a more visually appealing visualization with only the three genres. Let's use all the parameters that make sense: **edge_size** for thinner lines, **label = "count"** to show only counts, **label_alpha = 0** to hide the label background, and **label_color = "#ffffff"** to make the label text white.
+
+```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
+#| message: false
+#| warning: false
+
+library(ggplot2)
+library(ggVennDiagram)
+library(stringr)
+
+ggVennDiagram(
+  genre_sets,
+  edge_size    = 0.5,
+  label        = "count",
+  label_alpha  = 0,
+  label_color  = "#ffffff"
+) +
+  scale_fill_gradient(
+    low  = "#78a9ff",
+    high = "#001d6c"
+  ) + 
+  scale_x_continuous(expand = expansion(mult = 0.1)) +
+  theme(
+    legend.position = "none",
+    plot.title      = element_text(
+      hjust  = 0.5,
+      margin = margin(20, 0, 5, 0)
+    ),
+    plot.subtitle   = element_text(
+      color  = "gray40",
+      hjust  = 0.5,
+      margin = margin(0, 0, 20, 0)
+    ),
+    plot.caption = element_text(
+      size   = 8,
+      color  = "#777777",
+      hjust  = 0.5,
+      margin = margin(10, 0, 5, 0)
+    ),
+    plot.margin = margin(0, 20, 0, 0)
+  ) +
+  labs(
+    title    = "Drama Is the Loneliest Genre",
+    subtitle = str_glue(
+      "The number of films in each genre 
+      combination in 20th century films"
+    ),
+    caption  = str_glue(
+      "Data: IMDb movies (1893-2005) 
+      via ggplot2movies | Visualization: Antti Rask"
+    )
+  )
+```
+
+A Venn diagram makes overlaps intuitive at a glance. You can immediately see that Drama has the largest exclusive slice, or that Comedy and Romance share more films than you might expect. That's something the UpSet diagram's bar-and-matrix layout doesn't communicate as viscerally.
+
+But the trade-off is clear. Three sets are comfortable, four are manageable. Beyond that, it falls apart fast, as the seven-genre version demonstrated. That’s not a weakness of ggVennDiagram, but a fundamental limitation of the format. When your sets outgrow the diagram, that’s your cue to reach for an UpSet plot instead.
+
+If you want a lighter alternative, **ggvenn** [@yan2025] offers a single `geom_venn()` that plugs straight into a ggplot call. It's less customizable but gets the job done for quick two- or three-set diagrams.
+
 ## Line charts {#sec-line-charts}
 
 ### Bump chart {#sec-bump-chart}

@@ -2639,7 +2639,7 @@ div.csl-indent {
 <p>Let’s take a look at the two separately.</p>
 <section id="sec-upset-diagram" class="level3" data-number="3.6.1"><h3 data-number="3.6.1" class="anchored" data-anchor-id="sec-upset-diagram">
 <span class="header-section-number">3.6.1</span> UpSet diagram</h3>
-<p>An UpSet diagram is perfect for visualizing intersecting <em>sets</em>. The basic version uses a matrix with rows “corresponding to the sets, and the columns to the intersections between these sets (or vice versa). The size of the sets and of the intersections are shown as bar charts” <span class="citation" data-cites="wiki2026a">(<a href="references.html#ref-wiki2026a" role="doc-biblioref">Wikipedia contributors 2026</a>)</span>.</p>
+<p>An UpSet diagram is perfect for visualizing intersecting <em>sets</em>. The basic version uses a matrix with rows “corresponding to the sets, and the columns to the intersections between these sets (or vice versa). The size of the sets and of the intersections are shown as bar charts” <span class="citation" data-cites="wiki2026a">(<a href="references.html#ref-wiki2026a" role="doc-biblioref">Wikipedia contributors 2026a</a>)</span>.</p>
 <p>There are many R packages for creating UpSet diagrams, but for this book, we’ll use <strong>ggupset</strong> <span class="citation" data-cites="ahlmann-eltze2025">(<a href="references.html#ref-ahlmann-eltze2025" role="doc-biblioref">Ahlmann-Eltze 2025</a>)</span>. It’s the most compatible with the ggplot2 syntax.</p>
 <p>But let’s start with the data. We’ll use the IMDb data once more. ggupset prefers the data in a specific format. We need to reshape the wide genre columns into a single list column, genres, that holds one or more values per film.</p>
 <div class="cell">
@@ -2780,7 +2780,132 @@ div.csl-indent {
 <p>And if you prefer a more self-contained approach, <strong>UpSetR</strong> <span class="citation" data-cites="gehlenborg2019">(<a href="references.html#ref-gehlenborg2019" role="doc-biblioref">Gehlenborg 2019</a>)</span> is the original R implementation. It uses ggplot2 internally, but wraps everything in a single function call with its own parameters rather than exposing a ggplot object you can layer onto.</p>
 </section></section><section id="sec-venn-diagram" class="level3" data-number="3.6.2"><h3 data-number="3.6.2" class="anchored" data-anchor-id="sec-venn-diagram">
 <span class="header-section-number">3.6.2</span> Venn diagram</h3>
-</section></section><section id="sec-line-charts" class="level2" data-number="3.7"><h2 data-number="3.7" class="anchored" data-anchor-id="sec-line-charts">
+<p>A Venn diagram has been around for a while to show “the logical relation between sets, popularized by John Venn (1834–1923) in the 1880s” <span class="citation" data-cites="wiki2026b">(<a href="references.html#ref-wiki2026b" role="doc-biblioref">Wikipedia contributors 2026b</a>)</span>.</p>
+<p>It works similarly to the UpSet diagram, but can accommodate only so many sets. <strong>ggVennDiagram</strong> <span class="citation" data-cites="gao2026">(<a href="references.html#ref-gao2026" role="doc-biblioref">Gao and Dusa 2026</a>)</span> comes with a function <code><a href="https://gaospecial.github.io/ggVennDiagram/reference/plot_shapes.html">plot_shapes()</a></code> for plotting the available shapes. In some cases you can then choose which variation of a shape to use.</p>
+<p><img src="geoms_files/figure-html/unnamed-chunk-66-1.png" class="img-fluid" width="672"></p>
+<p>We can also take a look at the different shapes as a tibble:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb49"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_shapes</span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 12 × 3
+   shape_id nsets type    
+   &lt;chr&gt;    &lt;int&gt; &lt;chr&gt;   
+ 1 101          1 circle  
+ 2 201f         2 circle  
+ 3 201          2 circle  
+ 4 301f         3 circle  
+ 5 301          3 circle  
+ 6 401f         4 ellipse 
+ 7 402          4 polygon 
+ 8 501          5 polygon 
+ 9 502          5 polygon 
+10 601t         6 triangle
+11 601          6 polygon 
+12 701          7 polygon </code></pre>
+</div>
+</div>
+<p>As you can see, seven seems to be the greatest number of sets. But let’s take a look at a real use-case where we can also test those limits.</p>
+<p>For this, let’s revisit the IMDb movies dataset. We’ll first limit the number of sets to three, <strong>Comedy</strong>, <strong>Drama</strong>, and <strong>Romance</strong>. What we want for ggVennDiagram is a list that has three levels, one for each genre.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb51"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">ggplot2movies</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://purrr.tidyverse.org/">purrr</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">movies_venn</span> <span class="op">&lt;-</span> <span class="va">movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/between.html">between</a></span><span class="op">(</span><span class="va">year</span>, <span class="fl">1900</span>, <span class="fl">2000</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">title</span>, <span class="va">Comedy</span>, <span class="va">Drama</span>, <span class="va">Romance</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">genres</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Comedy"</span>, <span class="st">"Drama"</span>, <span class="st">"Romance"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">genre_sets</span> <span class="op">&lt;-</span> <span class="va">genres</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://rlang.r-lib.org/reference/set_names.html">set_names</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span><span class="op">~</span> <span class="va">movies_venn</span><span class="op">$</span><span class="va">title</span><span class="op">[</span><span class="va">movies_venn</span><span class="op">[[</span><span class="va">.x</span><span class="op">]</span><span class="op">]</span> <span class="op">==</span> <span class="fl">1</span><span class="op">]</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Let’s then try the <code><a href="https://gaospecial.github.io/ggVennDiagram/reference/ggVennDiagram.html">ggVennDiagram()</a></code> function with the default settings.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb52"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/gaospecial/ggVennDiagram">ggVennDiagram</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://gaospecial.github.io/ggVennDiagram/reference/ggVennDiagram.html">ggVennDiagram</a></span><span class="op">(</span><span class="va">genre_sets</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="geoms_files/figure-html/unnamed-chunk-69-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>That already looks pretty good. But what if we had more sets, more genres? Let’s try the same, with the same number as for the UpSet diagram earlier.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb53"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://gaospecial.github.io/ggVennDiagram/reference/ggVennDiagram.html">ggVennDiagram</a></span><span class="op">(</span><span class="va">genre_sets_all</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="geoms_files/figure-html/unnamed-chunk-71-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>As you can see, that’s not the best way to visualize this data. Even if we turned off the annotations, it would still be much more confusing compared to the UpSet plot.</p>
+<p>And if we had even one more set, ggVennDiagram would actually fall back to plotting an UpSet plot instead! That’s how close the two are to each other philosophically.</p>
+<section id="sec-viz-12-imdb-movies-part-v" class="level4" data-number="3.6.2.1"><h4 data-number="3.6.2.1" class="anchored" data-anchor-id="sec-viz-12-imdb-movies-part-v">
+<span class="header-section-number">3.6.2.1</span> Viz #12: IMDb movies, Part V</h4>
+<p>Let’s now create a more visually appealing visualization with only the three genres. Let’s use all the parameters that make sense: <strong>edge_size</strong> for thinner lines, <strong>label = “count”</strong> to show only counts, <strong>label_alpha = 0</strong> to hide the label background, and <strong>label_color = “#ffffff”</strong> to make the label text white.</p>
+<div class="cell">
+<details class="code-fold"><summary>Show the code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb54"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/gaospecial/ggVennDiagram">ggVennDiagram</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://stringr.tidyverse.org">stringr</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://gaospecial.github.io/ggVennDiagram/reference/ggVennDiagram.html">ggVennDiagram</a></span><span class="op">(</span></span>
+<span>  <span class="va">genre_sets</span>,</span>
+<span>  edge_size    <span class="op">=</span> <span class="fl">0.5</span>,</span>
+<span>  label        <span class="op">=</span> <span class="st">"count"</span>,</span>
+<span>  label_alpha  <span class="op">=</span> <span class="fl">0</span>,</span>
+<span>  label_color  <span class="op">=</span> <span class="st">"#ffffff"</span></span>
+<span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_gradient.html">scale_fill_gradient</a></span><span class="op">(</span></span>
+<span>    low  <span class="op">=</span> <span class="st">"#78a9ff"</span>,</span>
+<span>    high <span class="op">=</span> <span class="st">"#001d6c"</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span>expand <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/expansion.html">expansion</a></span><span class="op">(</span>mult <span class="op">=</span> <span class="fl">0.1</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span></span>
+<span>    legend.position <span class="op">=</span> <span class="st">"none"</span>,</span>
+<span>    plot.title      <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span></span>
+<span>      hjust  <span class="op">=</span> <span class="fl">0.5</span>,</span>
+<span>      margin <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">margin</a></span><span class="op">(</span><span class="fl">20</span>, <span class="fl">0</span>, <span class="fl">5</span>, <span class="fl">0</span><span class="op">)</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    plot.subtitle   <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span></span>
+<span>      color  <span class="op">=</span> <span class="st">"gray40"</span>,</span>
+<span>      hjust  <span class="op">=</span> <span class="fl">0.5</span>,</span>
+<span>      margin <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">margin</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">20</span>, <span class="fl">0</span><span class="op">)</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    plot.caption <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span></span>
+<span>      size   <span class="op">=</span> <span class="fl">8</span>,</span>
+<span>      color  <span class="op">=</span> <span class="st">"#777777"</span>,</span>
+<span>      hjust  <span class="op">=</span> <span class="fl">0.5</span>,</span>
+<span>      margin <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">margin</a></span><span class="op">(</span><span class="fl">10</span>, <span class="fl">0</span>, <span class="fl">5</span>, <span class="fl">0</span><span class="op">)</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    plot.margin <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">margin</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">20</span>, <span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span></span>
+<span>    title    <span class="op">=</span> <span class="st">"Drama Is the Loneliest Genre"</span>,</span>
+<span>    subtitle <span class="op">=</span> <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_glue.html">str_glue</a></span><span class="op">(</span></span>
+<span>      <span class="st">"The number of films in each genre </span></span>
+<span><span class="st">      combination in 20th century films"</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    caption  <span class="op">=</span> <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_glue.html">str_glue</a></span><span class="op">(</span></span>
+<span>      <span class="st">"Data: IMDb movies (1893-2005) </span></span>
+<span><span class="st">      via ggplot2movies | Visualization: Antti Rask"</span></span>
+<span>    <span class="op">)</span></span>
+<span>  <span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="geoms_files/figure-html/unnamed-chunk-72-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>A Venn diagram makes overlaps intuitive at a glance. You can immediately see that Drama has the largest exclusive slice, or that Comedy and Romance share more films than you might expect. That’s something the UpSet diagram’s bar-and-matrix layout doesn’t communicate as viscerally.</p>
+<p>But the trade-off is clear. Three sets are comfortable, four are manageable. Beyond that, it falls apart fast, as the seven-genre version demonstrated. That’s not a weakness of ggVennDiagram, but a fundamental limitation of the format. When your sets outgrow the diagram, that’s your cue to reach for an UpSet plot instead.</p>
+<p>If you want a lighter alternative, <strong>ggvenn</strong> <span class="citation" data-cites="yan2025">(<a href="references.html#ref-yan2025" role="doc-biblioref">Yan 2025</a>)</span> offers a single <code>geom_venn()</code> that plugs straight into a ggplot call. It’s less customizable but gets the job done for quick two- or three-set diagrams.</p>
+</section></section></section><section id="sec-line-charts" class="level2" data-number="3.7"><h2 data-number="3.7" class="anchored" data-anchor-id="sec-line-charts">
 <span class="header-section-number">3.7</span> Line charts</h2>
 <section id="sec-bump-chart" class="level3" data-number="3.7.1"><h3 data-number="3.7.1" class="anchored" data-anchor-id="sec-bump-chart">
 <span class="header-section-number">3.7.1</span> Bump chart</h3>
@@ -2846,6 +2971,9 @@ Csárdi, Gábor, and Maëlle Salmon. 2025. <em>Pkgsearch: Search and Query CRAN 
 </div>
 <div id="ref-ellis2019" class="csl-entry" role="listitem">
 Ellis, Laura Grace. 2019. <span>“Set Analysis: A Face Off Between Venn Diagrams and UpSet Plots.”</span> <a href="https://www.littlemissdata.com/blog/set-analysis/">https://www.littlemissdata.com/blog/set-analysis/</a>.
+</div>
+<div id="ref-gao2026" class="csl-entry" role="listitem">
+Gao, Chun-Hui, and Adrian Dusa. 2026. <em>ggVennDiagram: A ’Ggplot2’ Implement of Venn Diagram</em>. <a href="https://github.com/gaospecial/ggVennDiagram">https://github.com/gaospecial/ggVennDiagram</a>.
 </div>
 <div id="ref-gehlenborg2019" class="csl-entry" role="listitem">
 Gehlenborg, Nils. 2019. <em>UpSetR: A More Scalable Alternative to Venn and Euler Diagrams for Visualizing Intersecting Sets</em>. <a href="https://CRAN.R-project.org/package=UpSetR">https://CRAN.R-project.org/package=UpSetR</a>.
@@ -2926,7 +3054,10 @@ Wickham, Hadley. 2015. <em>Ggplot2movies: Movies Data</em>. <a href="https://CRA
 Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, Dewey Dunnington, and Teun van den Brand. 2026. <em>Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics</em>. <a href="https://CRAN.R-project.org/package=ggplot2">https://CRAN.R-project.org/package=ggplot2</a>.
 </div>
 <div id="ref-wiki2026a" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026. <span>“UpSet Plot — <span>W</span>ikipedia<span>,</span> the Free Encyclopedia.”</span> <a href="https://en.wikipedia.org/wiki/UpSet_plot/">https://en.wikipedia.org/wiki/UpSet_plot/</a>.
+Wikipedia contributors. 2026a. <span>“UpSet Plot — <span>W</span>ikipedia<span>,</span> the Free Encyclopedia.”</span> <a href="https://en.wikipedia.org/wiki/UpSet_plot/">https://en.wikipedia.org/wiki/UpSet_plot/</a>.
+</div>
+<div id="ref-wiki2026b" class="csl-entry" role="listitem">
+———. 2026b. <span>“Venn Diagram — <span>W</span>ikipedia<span>,</span> the Free Encyclopedia.”</span> <a href="https://en.wikipedia.org/wiki/Venn_diagram/">https://en.wikipedia.org/wiki/Venn_diagram/</a>.
 </div>
 <div id="ref-wilke2017" class="csl-entry" role="listitem">
 Wilke, Claus O. 2017. <span>“Goodbye Joyplots.”</span> <a href="https://clauswilke.com/blog/2017/09/15/goodbye-joyplots/">https://clauswilke.com/blog/2017/09/15/goodbye-joyplots/</a>.
@@ -2939,6 +3070,9 @@ Wilke, Claus O. 2017. <span>“Goodbye Joyplots.”</span> <a href="https://clau
 </div>
 <div id="ref-wilke2022" class="csl-entry" role="listitem">
 Wilke, Claus O., and Brenton M. Wiernik. 2022. <em>Ggtext: Improved Text Rendering Support for ’Ggplot2’</em>. <a href="https://CRAN.R-project.org/package=ggtext">https://CRAN.R-project.org/package=ggtext</a>.
+</div>
+<div id="ref-yan2025" class="csl-entry" role="listitem">
+Yan, Linlin. 2025. <em>Ggvenn: Draw Venn Diagram by ’Ggplot2’</em>. <a href="https://yanlinlin82.github.io/ggvenn/">https://yanlinlin82.github.io/ggvenn/</a>.
 </div>
 </div>
 </section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
