@@ -467,10 +467,10 @@
     },
     "Rcpp": {
       "Package": "Rcpp",
-      "Version": "1.1.1",
+      "Version": "1.1.1-1",
       "Source": "Repository",
       "Title": "Seamless R and C++ Integration",
-      "Date": "2026-01-07",
+      "Date": "2026-04-02",
       "Authors@R": "c(person(\"Dirk\", \"Eddelbuettel\", role = c(\"aut\", \"cre\"), email = \"edd@debian.org\", comment = c(ORCID = \"0000-0001-6419-907X\")), person(\"Romain\", \"Francois\", role = \"aut\", comment = c(ORCID = \"0000-0002-2444-4226\")), person(\"JJ\", \"Allaire\", role = \"aut\", comment = c(ORCID = \"0000-0003-0174-9868\")), person(\"Kevin\", \"Ushey\", role = \"aut\", comment = c(ORCID = \"0000-0003-2880-7407\")), person(\"Qiang\", \"Kou\", role = \"aut\", comment = c(ORCID = \"0000-0001-6786-5453\")), person(\"Nathan\", \"Russell\", role = \"aut\"), person(\"Iñaki\", \"Ucar\", role = \"aut\", comment = c(ORCID = \"0000-0001-6403-5550\")), person(\"Doug\", \"Bates\", role = \"aut\", comment = c(ORCID = \"0000-0001-8316-9503\")), person(\"John\", \"Chambers\", role = \"aut\"))",
       "Description": "The 'Rcpp' package provides R functions as well as C++ classes which offer a seamless integration of R and C++. Many R data types and objects can be mapped back and forth to C++ equivalents which facilitates both writing of new code as well as easier integration of third-party libraries. Documentation about 'Rcpp' is provided by several vignettes included in this package, via the 'Rcpp Gallery' site at <https://gallery.rcpp.org>, the paper by Eddelbuettel and Francois (2011, <doi:10.18637/jss.v040.i08>), the book by Eddelbuettel (2013, <doi:10.1007/978-1-4614-6868-4>) and the paper by Eddelbuettel and Balamuta (2018, <doi:10.1080/00031305.2017.1375990>); see 'citation(\"Rcpp\")' for details.",
       "Depends": [
@@ -610,7 +610,7 @@
     },
     "S7": {
       "Package": "S7",
-      "Version": "0.2.1",
+      "Version": "0.2.1-1",
       "Source": "Repository",
       "Title": "An Object Oriented System Meant to Become a Successor to S3 and S4",
       "Authors@R": "c( person(\"Object-Oriented Programming Working Group\", role = \"cph\"), person(\"Davis\", \"Vaughan\", role = \"aut\"), person(\"Jim\", \"Hester\", role = \"aut\", comment = c(ORCID = \"0000-0002-2739-7082\")), person(\"Tomasz\", \"Kalinowski\", role = \"aut\"), person(\"Will\", \"Landau\", role = \"aut\"), person(\"Michael\", \"Lawrence\", role = \"aut\"), person(\"Martin\", \"Maechler\", role = \"aut\", comment = c(ORCID = \"0000-0002-8685-9910\")), person(\"Luke\", \"Tierney\", role = \"aut\"), person(\"Hadley\", \"Wickham\", , \"hadley@posit.co\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0003-4757-117X\")) )",
@@ -711,7 +711,7 @@
     },
     "V8": {
       "Package": "V8",
-      "Version": "8.0.1",
+      "Version": "8.1.0",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Embedded JavaScript and WebAssembly Engine for R",
@@ -1487,10 +1487,10 @@
     },
     "cli": {
       "Package": "cli",
-      "Version": "3.6.5",
+      "Version": "3.6.6",
       "Source": "Repository",
       "Title": "Helpers for Developing Command Line Interfaces",
-      "Authors@R": "c( person(\"Gábor\", \"Csárdi\", , \"gabor@posit.co\", role = c(\"aut\", \"cre\")), person(\"Hadley\", \"Wickham\", role = \"ctb\"), person(\"Kirill\", \"Müller\", role = \"ctb\"), person(\"Salim\", \"Brüggemann\", , \"salim-b@pm.me\", role = \"ctb\", comment = c(ORCID = \"0000-0002-5329-5987\")), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")) )",
+      "Authors@R": "c( person(\"Gábor\", \"Csárdi\", , \"gabor@posit.co\", role = c(\"aut\", \"cre\")), person(\"Hadley\", \"Wickham\", role = \"ctb\"), person(\"Kirill\", \"Müller\", role = \"ctb\"), person(\"Salim\", \"Brüggemann\", , \"salim-b@pm.me\", role = \"ctb\", comment = c(ORCID = \"0000-0002-5329-5987\")), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"), comment = c(ROR = \"03wc8by49\")) )",
       "Description": "A suite of tools to build attractive command line interfaces ('CLIs'), from semantic elements: headings, lists, alerts, paragraphs, etc. Supports custom themes via a 'CSS'-like language. It also contains a number of lower level 'CLI' elements: rules, boxes, trees, and 'Unicode' symbols with 'ASCII' alternatives. It support ANSI colors and text styles as well.",
       "License": "MIT + file LICENSE",
       "URL": "https://cli.r-lib.org, https://github.com/r-lib/cli",
@@ -1525,12 +1525,13 @@
       ],
       "Config/Needs/website": "r-lib/asciicast, bench, brio, cpp11, decor, desc, fansi, prettyunits, sessioninfo, tidyverse/tidytemplate, usethis, vctrs",
       "Config/testthat/edition": "3",
+      "Config/usethis/last-upkeep": "2025-04-25",
       "Encoding": "UTF-8",
-      "RoxygenNote": "7.3.2",
+      "RoxygenNote": "7.3.2.9000",
       "NeedsCompilation": "yes",
-      "Author": "Gábor Csárdi [aut, cre], Hadley Wickham [ctb], Kirill Müller [ctb], Salim Brüggemann [ctb] (<https://orcid.org/0000-0002-5329-5987>), Posit Software, PBC [cph, fnd]",
+      "Author": "Gábor Csárdi [aut, cre], Hadley Wickham [ctb], Kirill Müller [ctb], Salim Brüggemann [ctb] (ORCID: <https://orcid.org/0000-0002-5329-5987>), Posit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
       "Maintainer": "Gábor Csárdi <gabor@posit.co>",
-      "Repository": "CRAN"
+      "Repository": "https://packagemanager.posit.co/cran/__linux__/noble/latest"
     },
     "clipr": {
       "Package": "clipr",
@@ -2804,6 +2805,39 @@
       "NeedsCompilation": "no",
       "Author": "Neal Grantham [aut, cre]",
       "Maintainer": "Neal Grantham <neal@nsgrantham.com>"
+    },
+    "ggbump": {
+      "Package": "ggbump",
+      "Version": "0.1.99999",
+      "Source": "GitHub",
+      "Type": "Package",
+      "Title": "Bump Chart and Sigmoid Curves",
+      "Author": "David Sjoberg",
+      "Maintainer": "David Sjoberg <dav.sjob@gmail.com>",
+      "Description": "A geom for ggplot to create bump plots. Can be good to use for showing rank over time.",
+      "License": "MIT + file LICENSE",
+      "Encoding": "UTF-8",
+      "URL": "https://github.com/davidsjoberg/ggbump",
+      "BugReports": "https://github.com/davidsjoberg/ggbump/issues",
+      "Imports": [
+        "ggplot2",
+        "dplyr",
+        "purrr",
+        "tidyr",
+        "magrittr"
+      ],
+      "RoxygenNote": "7.2.1",
+      "Suggests": [
+        "testthat (>= 2.1.0)"
+      ],
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "ggbump",
+      "RemoteUsername": "davidsjoberg",
+      "RemotePkgRef": "davidsjoberg/ggbump",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "fe6d5c7a974d4ae421b295cf81974394df481111",
+      "NeedsCompilation": "no"
     },
     "ggcorrplot": {
       "Package": "ggcorrplot",
@@ -5166,10 +5200,10 @@
     },
     "mvtnorm": {
       "Package": "mvtnorm",
-      "Version": "1.3-6",
+      "Version": "1.3-7",
       "Source": "Repository",
       "Title": "Multivariate Normal and t Distributions",
-      "Date": "2026-03-13",
+      "Date": "2026-04-14",
       "Authors@R": "c(person(\"Alan\", \"Genz\", role = \"aut\"), person(\"Frank\", \"Bretz\", role = \"aut\"), person(\"Tetsuhisa\", \"Miwa\", role = \"aut\"), person(\"Xuefei\", \"Mi\", role = \"aut\"), person(\"Friedrich\", \"Leisch\", role = \"ctb\"), person(\"Fabian\", \"Scheipl\", role = \"ctb\"), person(\"Bjoern\", \"Bornkamp\", role = \"ctb\", comment = c(ORCID = \"0000-0002-6294-8185\")), person(\"Martin\", \"Maechler\", role = \"ctb\", comment = c(ORCID = \"0000-0002-8685-9910\")), person(\"Torsten\", \"Hothorn\", role = c(\"aut\", \"cre\"), email = \"Torsten.Hothorn@R-project.org\", comment = c(ORCID = \"0000-0001-8301-0471\")))",
       "Description": "Computes multivariate normal and t probabilities, quantiles, random deviates,  and densities. Log-likelihoods for multivariate Gaussian models and Gaussian copulae  parameterised by Cholesky factors of covariance or precision matrices are implemented  for interval-censored and exact data, or a mix thereof. Score functions for these  log-likelihoods are available. A class representing multiple lower triangular matrices  and corresponding methods are part of this package.",
       "Imports": [
@@ -5416,7 +5450,7 @@
     },
     "openssl": {
       "Package": "openssl",
-      "Version": "2.3.5",
+      "Version": "2.4.0",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Toolkit for Encryption, Signatures and Certificates Based on OpenSSL",
@@ -6176,7 +6210,7 @@
     },
     "purrr": {
       "Package": "purrr",
-      "Version": "1.2.1",
+      "Version": "1.2.2",
       "Source": "Repository",
       "Title": "Functional Programming Tools",
       "Authors@R": "c( person(\"Hadley\", \"Wickham\", , \"hadley@posit.co\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0003-4757-117X\")), person(\"Lionel\", \"Henry\", , \"lionel@posit.co\", role = \"aut\"), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"), comment = c(ROR = \"https://ror.org/03wc8by49\")) )",
@@ -6748,7 +6782,7 @@
     },
     "renv": {
       "Package": "renv",
-      "Version": "1.2.0",
+      "Version": "1.2.2",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Project Environments",
@@ -6790,13 +6824,13 @@
         "webfakes"
       ],
       "Encoding": "UTF-8",
-      "NeedsCompilation": "yes",
       "RoxygenNote": "7.3.3",
       "VignetteBuilder": "knitr",
       "Config/Needs/website": "tidyverse/tidytemplate",
       "Config/testthat/edition": "3",
       "Config/testthat/parallel": "true",
       "Config/testthat/start-first": "bioconductor,python,install,restore,snapshot,retrieve,remotes",
+      "NeedsCompilation": "no",
       "Author": "Kevin Ushey [aut, cre] (ORCID: <https://orcid.org/0000-0003-2880-7407>), Hadley Wickham [aut] (ORCID: <https://orcid.org/0000-0003-4757-117X>), Posit Software, PBC [cph, fnd]",
       "Maintainer": "Kevin Ushey <kevin@rstudio.com>",
       "Repository": "CRAN"
@@ -8351,7 +8385,7 @@
     },
     "vctrs": {
       "Package": "vctrs",
-      "Version": "0.7.2",
+      "Version": "0.7.3",
       "Source": "Repository",
       "Title": "Vector Helpers",
       "Authors@R": "c( person(\"Hadley\", \"Wickham\", , \"hadley@posit.co\", role = \"aut\"), person(\"Lionel\", \"Henry\", , \"lionel@posit.co\", role = \"aut\"), person(\"Davis\", \"Vaughan\", , \"davis@posit.co\", role = c(\"aut\", \"cre\")), person(\"data.table team\", role = \"cph\", comment = \"Radix sort based on data.table's forder() and their contribution to R's order()\"), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")) )",
@@ -8391,6 +8425,7 @@
       "Config/testthat/edition": "3",
       "Config/testthat/parallel": "true",
       "Encoding": "UTF-8",
+      "KeepSource": "true",
       "Language": "en-GB",
       "RoxygenNote": "7.3.3",
       "NeedsCompilation": "yes",
