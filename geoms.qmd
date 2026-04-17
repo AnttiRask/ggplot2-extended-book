@@ -39,7 +39,7 @@ We use color to show whether the values are positive or negative. But also for t
 
 As Jonathan Schwabish points out in their book, Better Data Visualizations [@schwabish2021], "the purpose of the horizon chart is not necessarily to enable readers to pick out specific values, but instead to easily spot general trends and identify extreme values".
 
-#### Viz #1: Helsinki temperatures, part I {#sec-viz-1-helsinki-temperatures-part-i}
+#### Viz #1: Helsinki temperatures, part I - ggHoriPlot {#sec-viz-1-helsinki-temperatures-part-i-gghoriplot}
 
 For the horizon chart, we'll be using **ggHoriPlot** [@rivas-gonzalez2022]. The package includes various example data sets. But we'll be using weather data from the **Finnish Meteorological Institute** (FMI). Its open data, weather observations are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
@@ -231,7 +231,7 @@ As the ggplot2 documentation tells us, an area chart is, in fact, a special case
 
 The ribbon chart, then, displays the area between two lines. `geom_ribbon()` gets the job done when the lines don’t meet. But as you’ll soon see, for those cases where they do, you need something called *braiding*. You can read more about it in the **ggbraid** [@grantham2025] [documentation](https://nsgrantham.github.io/ggbraid/articles/temps.html#the-unbraided-ribbon-problem).
 
-#### Viz #2: IMDb movies, Part I {#sec-viz-2-imdb-movies-part-i}
+#### Viz #2: IMDb movies, Part I - ggbraid {#sec-viz-2-imdb-movies-part-i-ggbraid}
 
 We’ll take a look at what the problem (and solution) looks like with real data. The question we'd like to answer here is which genre, comedy or drama, has produced more movies during the 20th century.
 
@@ -459,7 +459,7 @@ ggplot() +
 
 I'm not an expert on this topic either. Based on this data set, however, there appears to be a correlation between major wars (WWI, WWII, and the Vietnam War) and the production of more comedies than dramas.
 
-#### Viz #3: Helsinki temperatures, part II {#sec-viz-3-helsinki-temperatures-part-ii}
+#### Viz #3: Helsinki temperatures, part II - ggbraid {#sec-viz-3-helsinki-temperatures-part-ii-ggbraid}
 
 Let's take a look at another ribbon chart. We can use the data set from @sec-horizon-chart, which contains average daily temperatures in Helsinki from 2000 to 2024. We'll compare the two years, 2000 and 2024. Which one had more warmer days?
 
@@ -638,7 +638,7 @@ And so we have another perspective on the Helsinki temperature data set.
 
 A streamgraph is a stacked area chart where the areas are positioned around the central axis.
 
-#### Viz #4: ggplot2 dependencies {#sec-viz-4-ggplot2-dependencies}
+#### Viz #4: ggplot2 dependencies (ggstream) {#sec-viz-4-ggplot2-dependencies-ggstream}
 
 If you’ve read the book in chronological order, you’ve already encountered a streamgraph in @sec-landscape. We will use that visualization as the example in this section.
 
@@ -962,7 +962,7 @@ A Likert chart is a diverging stacked bar chart. It’s used to visualize respon
 
 For Likert charts, **ggstats** [@larmarange2025a] is my package of choice. It also has other functionalities, which we’ll return to in @sec-ggstats.
 
-#### Viz #5: PISA 2022 Questionnaire {#sec-viz-5-pisa-2022-questionnaire}
+#### Viz #5: PISA 2022 Questionnaire (gglikert) {#sec-viz-5-pisa-2022-questionnaire-gglikert}
 
 I was thinking of a good, open data source for the Likert chart. Most packages (ggstats included) use older **PISA** (Programme for International Student Assessment) questionnaires for the example data. I was able to find more recent data and selected seven statements from the PISA 2022 Student Questionnaire [@oecd2023]. There was a lot of data to choose from, but I selected the statements that a) dealt with creativity and b) had the fewest number of NAs in the answers.
 
@@ -1211,7 +1211,7 @@ To create a mosaic chart, we’ll be using **marimekko** [@kałędkowski2026]. I
 
 **Note!** I wrote the first version of this chapter with **ggmosaic** [@jeppson2021] in mind. But it was archived from **CRAN** on 2025-11-10 (as issues remained uncorrected despite reminders). Even the version on GitHub isn't working currently. So I had to find a replacement. Marimekko is that package.
 
-#### Viz #6: IMDb movies, Part II {#sec-viz-6-imdb-movies-part-ii}
+#### Viz #6: IMDb movies, Part II - marimekko {#sec-viz-6-imdb-movies-part-ii-marimekko}
 
 We return to the IMDb movies data set. This time, looking at how many movies in each genre have a certain *MPAA rating* (among those movies that have a rating in the first place).
 
@@ -1402,7 +1402,7 @@ You could create a raincloud chart using those individual geoms and mostly ggplo
 
 We have, however, a package, **ggrain** [@judd2024], that we can use for the same purpose. That there are numerous ways to accomplish the same task is both the beauty and the primary source of frustration with these tools. In any case, you get to choose which one works the best for you. You can also mix and match. You’ll see this when we reach the final visualization.
 
-#### Viz #7: IMDb movies, Part III {#sec-viz-7-imdb-movies-part-iii}
+#### Viz #7: IMDb movies, Part III - ggrain {#sec-viz-7-imdb-movies-part-iii-ggrain}
 
 We return, once again, to the IMDb movies data set. This time, looking at how the ratings for movies in three genres (Action, Documentary, and Short) are distributed. We’ll make some adjustments for ggrain. As you can see, data wrangling plays a significant role in the data visualization process. Context is key.
 
@@ -1667,7 +1667,7 @@ A ridgeline chart is a good alternative to the violin plot. They "tend to work p
 
 We will use **ggridges** [@wilke2024] to create our ridgeline chart. If you're familiar with ggplot2 extensions, you might have known a package called [**ggjoy**](https://github.com/clauswilke/ggjoy) that did the same. It was *deprecated*, though, and you should update your old scripts to use ggridges instead.
 
-#### Viz #8: Helsinki temperatures, part III {#sec-viz-8-helsinki-temperatures-part-iii}
+#### Viz #8: Helsinki temperatures, part III - ggridges {#sec-viz-8-helsinki-temperatures-part-iii-ggridges}
 
 Since the ridgeline chart works well for distributions over time, let's use the Helsinki temperatures data. I'm interested in seeing how the daily average temperatures are distributed by month in 2024.
 
@@ -2142,7 +2142,7 @@ catalog
 
 Now that we've seen what the geometric primitives building blocks are, let's build something interesting with some of them.
 
-#### Viz #9: Helsinki temperatures, part IV {#sec-viz-9-helsinki-temperatures-part-iv}
+#### Viz #9: Helsinki temperatures, part IV - ggforce {#sec-viz-9-helsinki-temperatures-part-iv-ggforce}
 
 We already looked at the Helsinki temperatures data set from different angles. But here's one more. Let's build a radial chart comparing the monthly average temperatures in Helsinki in 2000 and 2024.
 
@@ -2393,7 +2393,7 @@ As you can see, the basic visualization is already quite neat. It's interesting 
 
 However, the sequential color palette makes it hard to distinguish between positive and negative values. To make the chart more readable, we'll switch to a diverging palette. After all, we have a range of values from positive to negative with a meaningful baseline (0) in the middle.
 
-#### Viz #10: Helsinki temperatures, part V {#sec-viz-10-helsinki-temperatures-part-v}
+#### Viz #10: Helsinki temperatures, part V - ggTimeSeries {#sec-viz-10-helsinki-temperatures-part-v-ggtimeseries}
 
 For the final version of the calendar heatmap, let's use some more data. I would love to show all 25 years, but that version was perhaps too busy and having a 5 x 5 grid didn't exactly make it easy to compare the years.
 
@@ -2565,7 +2565,7 @@ ggplot(movies_upset) +
 
 There might be situations where this is useful. But for the final version of the visualization here, let's leave that parameter out.
 
-#### Viz #11: IMDb movies, Part IV {#sec-viz-11-imdb-movies-part-iv}
+#### Viz #11: IMDb movies, Part IV - ggupset {#sec-viz-11-imdb-movies-part-iv-ggupset}
 
 At this point it’s mostly cleaning up that we need for the final version. Besides the regular ggplot2 theming, we use `theme_combmatrix()` to make the matrix look good.
 
@@ -2657,7 +2657,7 @@ get_shapes()
 
 As you can see, seven seems to be the greatest number of sets. But let's take a look at a real use-case where we can also test those limits.
 
-For this, let's revisit the IMDb movies dataset. We'll first limit the number of sets to three, **Comedy**, **Drama**, and **Romance**. What we want for ggVennDiagram is a list that has three levels, one for each genre.
+For this, let's revisit the IMDb movies data set. We'll first limit the number of sets to three, **Comedy**, **Drama**, and **Romance**. What we want for ggVennDiagram is a list that has three levels, one for each genre.
 
 ```{r}
 #| message: false
@@ -2719,7 +2719,7 @@ As you can see, that’s not the best way to visualize this data. Even if we tur
 
 And if we had even one more set, ggVennDiagram would actually fall back to plotting an UpSet plot instead! That's how close the two are to each other philosophically.
 
-#### Viz #12: IMDb movies, Part V {#sec-viz-12-imdb-movies-part-v}
+#### Viz #12: IMDb movies, Part V - ggVennDiagram {#sec-viz-12-imdb-movies-part-v-ggVennDiagram}
 
 Let’s now create a more visually appealing visualization with only the three genres. Let's use all the parameters that make sense: **edge_size** for thinner lines, **label = "count"** to show only counts, **label_alpha = 0** to hide the label background, and **label_color = "#ffffff"** to make the label text white.
 
@@ -2781,11 +2781,155 @@ A Venn diagram makes overlaps intuitive at a glance. You can immediately see tha
 
 But the trade-off is clear. Three sets are comfortable, four are manageable. Beyond that, it falls apart fast, as the seven-genre version demonstrated. That’s not a weakness of ggVennDiagram, but a fundamental limitation of the format. When your sets outgrow the diagram, that’s your cue to reach for an UpSet plot instead.
 
-If you want a lighter alternative, **ggvenn** [@yan2025] offers a single `geom_venn()` that plugs straight into a ggplot call. It's less customizable but gets the job done for quick two- or three-set diagrams.
+  If you want a lighter alternative, **ggvenn** [@yan2025] offers a single `geom_venn()` that plugs straight into a ggplot call. It's less customizable but gets the job done for quick two- or three-set diagrams.
 
 ## Line charts {#sec-line-charts}
 
+Line charts are the bread and butter of data visualization. And as with bar charts, ggplot2 handles most types out of the box. And as with bar charts, there are specific use cases for these more specialized line charts.
+
+In this section, we’ll take a look at the **bump chart**, the **dumbbell and lollipop chart**, the **line chart with a neon glow or shadow effects**, and the **slope chart**.
+
 ### Bump chart {#sec-bump-chart}
+
+A bump chart is a type of line chart used to visualize changes in rankings of categorical data over time. To create one, we'll use the extension **ggbump** [@sjoberg2026].
+
+We'll once again use the IMDb movie dataset. This time, we'll summarize the data by genre and decade, starting from the 1930s. Before that, some genres have only a handful of films, making average ratings unreliable.
+
+```{r}
+#| message: false
+#| warning: false
+
+library(dplyr)
+library(ggplot2movies)
+library(tidyr)
+
+movies_ggbump <- movies %>%
+  pivot_longer(Action:Short, names_to = "genre") %>%
+  filter(value != 0) %>%
+  mutate(decade = floor(year / 10) * 10) %>%
+  filter(decade %in% seq(1930, 2000, 10)) %>%
+  summarize(
+    rating_avg = mean(rating),
+    .by        = c(genre, decade)
+  ) %>%
+  mutate(
+    rank = rank(-rating_avg, ties.method = "first"),
+    .by  = decade
+  ) %>%
+  arrange(decade, rank)
+```
+
+```{r}
+#| echo:    false
+#| message: false
+#| warning: false
+#| results: asis
+
+movies_ggbump %>% 
+  paged_table()
+```
+
+Let's start with the basic version with default settings.
+
+```{r}
+#| message: false
+#| warning: false
+
+library(ggbump)
+library(ggplot2)
+
+movies_ggbump %>%
+  ggplot(aes(decade, rank, color = genre)) +
+  geom_bump()
+```
+
+We can already see what the chart is about. The movie genres are in the ranking order, but the order is upside down. Next, let's fix that and make other changes to make the chart more presentable.
+
+#### Viz #13: IMDb movies, Part VI - ggbump {#sec-viz-13-imdb-movies-part-vi-ggbump}
+
+We'll add the points first. They act as anchors for the viewer's gaze. Then we'll add the genres using `geom_text()`. Direct labeling is a nice touch and more intuitive than using a legend.
+
+In this book, color as a storytelling tool is a recurring theme. And it was a conscious storytelling decision to highlight the Documentaries genre. We can use `scale_color_manual()` to specify only one genre's color, while ggplot2 uses its default palette for the rest.
+
+Finally, we need to fix the ranking order using `scale_y_reverse()`.
+
+```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
+#| message: false
+#| warning: false
+
+library(ggbump)
+library(ggplot2)
+
+movies_ggbump %>%
+  ggplot(aes(decade, rank, color = genre)) +
+  geom_point(size = 5) +
+  geom_text(
+    aes(
+      x     = decade - 2,
+      label = genre
+    ),
+    data     = movies_ggbump %>% filter(decade == min(decade)),
+    size     = 4,
+    hjust    = 1,
+    fontface = "bold"
+  ) +
+  geom_text(
+    aes(
+      x     = decade + 2,
+      label = genre
+    ),
+    data     = movies_ggbump %>% filter(decade == max(decade)),
+    size     = 4,
+    hjust    = 0,
+    fontface = "bold"
+  ) +
+  geom_bump(
+    linewidth = 1.2,
+    smooth    = 8
+  ) +
+  scale_color_manual(values = c("Documentary" = "#CC4C00")) +
+  scale_x_continuous(
+    breaks = seq(1930, 2000, 10),
+    expand = expansion(mult = c(0.15, 0.15))
+  ) +
+  scale_y_reverse() +
+  labs(
+    title    = "Documentaries Are the Best",
+    subtitle = "Genres ranked by their average IMDb rating",
+    caption  = "Data: IMDb movies (1893-2005) via ggplot2movies | Visualization: Antti Rask",
+    x        = NULL,
+    y        = NULL
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x      = element_text(size = 10),
+    axis.text.y      = element_blank(),
+    legend.position  = "none",
+    plot.title       = element_text(
+      face  = "bold",
+      hjust = 0.5
+    ),
+    plot.subtitle    = element_text(
+      hjust  = 0.5,
+      margin = margin(0, 0, 10, 0)
+    ),
+    plot.caption     = element_text(
+      hjust  = 0.5,
+      color  = "#777777",
+      size   = 9,
+      margin = margin(20, 25, 0, 25)
+    ),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    plot.margin      = margin(20, 0, 10, 0)
+  )
+```
+
+We made some bold choices, but now we have a chart that tells one of the stories buried within the data. Bump charts work best when you have a handful of categories competing across discrete time steps, and you care about relative position rather than absolute values.
+
+The ranking abstraction strips away the noise and lets the audience focus on who's rising and who's falling. And in this case, the answer is clear.
 
 ### Dumbbell and lollipop chart {#sec-dumbbell-and-lollipop-chart}
 

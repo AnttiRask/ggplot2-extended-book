@@ -234,15 +234,20 @@ Others you will have to install from GitHub:
 # Install this once:
 # install.packages("pak")
 
+library(pak)
+
+# For installing ggbump
+pak("davidsjoberg/ggbump")
+
 # For installing ggbraid
-pak::pak("nsgrantham/ggbraid")
+pak("nsgrantham/ggbraid")
 
 # For installing ggTimeSeries
-pak::pak("AtherEnergy/ggTimeSeries")
+pak("AtherEnergy/ggTimeSeries")
 
 # For fully updating radiant
 options(repos = c(RSM = "https://radiant-rstats.github.io/minicran", CRAN = "https://cloud.r-project.org"))
-pak::pak("radiant-rstats/radiant.update", upgrade = FALSE)
+pak("radiant-rstats/radiant.update", upgrade = FALSE)
 ```
 
 ### Others {#sec-others}
@@ -349,6 +354,7 @@ pkgs <- c(
   "GGally",
   "gganimate",
   "ggbraid",
+  "ggbump",
   "ggcorrplot",
   "ggforce",
   "ggHoriPlot",

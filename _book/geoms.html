@@ -514,8 +514,8 @@ div.csl-indent {
 <p>Often, when you have both positive and negative values, they lie on both sides of the x-axis. In a horizon chart, the negative values are on the same side as the positive ones.</p>
 <p>We use color to show whether the values are positive or negative. But also for the magnitude of those values.</p>
 <p>As Jonathan Schwabish points out in their book, Better Data Visualizations <span class="citation" data-cites="schwabish2021">(<a href="references.html#ref-schwabish2021" role="doc-biblioref">Schwabish 2021</a>)</span>, “the purpose of the horizon chart is not necessarily to enable readers to pick out specific values, but instead to easily spot general trends and identify extreme values”.</p>
-<section id="sec-viz-1-helsinki-temperatures-part-i" class="level4" data-number="3.1.1.1"><h4 data-number="3.1.1.1" class="anchored" data-anchor-id="sec-viz-1-helsinki-temperatures-part-i">
-<span class="header-section-number">3.1.1.1</span> Viz #1: Helsinki temperatures, part I</h4>
+<section id="sec-viz-1-helsinki-temperatures-part-i-gghoriplot" class="level4" data-number="3.1.1.1"><h4 data-number="3.1.1.1" class="anchored" data-anchor-id="sec-viz-1-helsinki-temperatures-part-i-gghoriplot">
+<span class="header-section-number">3.1.1.1</span> Viz #1: Helsinki temperatures, part I - ggHoriPlot</h4>
 <p>For the horizon chart, we’ll be using <strong>ggHoriPlot</strong> <span class="citation" data-cites="rivas-gonzalez2022">(<a href="references.html#ref-rivas-gonzalez2022" role="doc-biblioref">Rivas-González 2022</a>)</span>. The package includes various example data sets. But we’ll be using weather data from the <strong>Finnish Meteorological Institute</strong> (FMI). Its open data, weather observations are licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
 <p>Using the <a href="https://en.ilmatieteenlaitos.fi/open-data">FMI API</a> (Application Programming Interface), I retrieved the average temperatures in <strong>Helsinki</strong> (Kaisaniemi weather station) for the years 2000-2024. You can take a look at the data below.</p>
 <div data-pagedtable="false">
@@ -637,8 +637,8 @@ div.csl-indent {
 <span class="header-section-number">3.1.2</span> Ribbon chart (improved)</h3>
 <p>As the ggplot2 documentation tells us, an area chart is, in fact, a special case of a ribbon chart. That makes sense when you realize that every type of area chart has a <strong>ymin</strong> and <strong>ymax</strong>. In the basic area chart, ymin is zero, and ymax is <strong>y</strong>. <span class="citation" data-cites="wickham2024a">(<a href="references.html#ref-wickham2024a" role="doc-biblioref">Wickham et al. 2026</a>)</span></p>
 <p>The ribbon chart, then, displays the area between two lines. <code><a href="https://ggplot2.tidyverse.org/reference/geom_ribbon.html">geom_ribbon()</a></code> gets the job done when the lines don’t meet. But as you’ll soon see, for those cases where they do, you need something called <em>braiding</em>. You can read more about it in the <strong>ggbraid</strong> <span class="citation" data-cites="grantham2025">(<a href="references.html#ref-grantham2025" role="doc-biblioref">Grantham 2025</a>)</span> <a href="https://nsgrantham.github.io/ggbraid/articles/temps.html#the-unbraided-ribbon-problem">documentation</a>.</p>
-<section id="sec-viz-2-imdb-movies-part-i" class="level4" data-number="3.1.2.1"><h4 data-number="3.1.2.1" class="anchored" data-anchor-id="sec-viz-2-imdb-movies-part-i">
-<span class="header-section-number">3.1.2.1</span> Viz #2: IMDb movies, Part I</h4>
+<section id="sec-viz-2-imdb-movies-part-i-ggbraid" class="level4" data-number="3.1.2.1"><h4 data-number="3.1.2.1" class="anchored" data-anchor-id="sec-viz-2-imdb-movies-part-i-ggbraid">
+<span class="header-section-number">3.1.2.1</span> Viz #2: IMDb movies, Part I - ggbraid</h4>
 <p>We’ll take a look at what the problem (and solution) looks like with real data. The question we’d like to answer here is which genre, comedy or drama, has produced more movies during the 20th century.</p>
 <p>But let’s first examine the data we’ll be using for this. Time series data works best for this type of chart. Let’s stick to the <strong>ggplot2movies</strong> <span class="citation" data-cites="wickham2015">(<a href="references.html#ref-wickham2015" role="doc-biblioref">Wickham 2015</a>)</span> data set that we first encountered in <a href="data.html#sec-imdb-movies-1893-2005" class="quarto-xref"><span>Section 2.1.2</span></a> and the <strong>movies_na</strong> tibble.</p>
 <p>We’ll perform some transformations to prepare the data for visualization. In this case, we’ll need the data in two <em>formats</em>, <strong>long</strong> and <strong>short</strong>.</p>
@@ -818,8 +818,8 @@ div.csl-indent {
 </div>
 </div>
 <p>I’m not an expert on this topic either. Based on this data set, however, there appears to be a correlation between major wars (WWI, WWII, and the Vietnam War) and the production of more comedies than dramas.</p>
-</section><section id="sec-viz-3-helsinki-temperatures-part-ii" class="level4" data-number="3.1.2.2"><h4 data-number="3.1.2.2" class="anchored" data-anchor-id="sec-viz-3-helsinki-temperatures-part-ii">
-<span class="header-section-number">3.1.2.2</span> Viz #3: Helsinki temperatures, part II</h4>
+</section><section id="sec-viz-3-helsinki-temperatures-part-ii-ggbraid" class="level4" data-number="3.1.2.2"><h4 data-number="3.1.2.2" class="anchored" data-anchor-id="sec-viz-3-helsinki-temperatures-part-ii-ggbraid">
+<span class="header-section-number">3.1.2.2</span> Viz #3: Helsinki temperatures, part II - ggbraid</h4>
 <p>Let’s take a look at another ribbon chart. We can use the data set from <a href="#sec-horizon-chart" class="quarto-xref"><span>Section 3.1.1</span></a>, which contains average daily temperatures in Helsinki from 2000 to 2024. We’ll compare the two years, 2000 and 2024. Which one had more warmer days?</p>
 <p>First, we’ll perform similar transformations as before and convert the data into both long and wide formats.</p>
 <p>One minor detail to note here is that we’ll need to turn the year column from <em>numeric</em> to <em>factor</em> format. It won’t work as a category for the <strong>linetype</strong> argument otherwise. We’ll again use the forcats package to do that.</p>
@@ -981,8 +981,8 @@ div.csl-indent {
 </section></section><section id="sec-streamgraph" class="level3" data-number="3.1.3"><h3 data-number="3.1.3" class="anchored" data-anchor-id="sec-streamgraph">
 <span class="header-section-number">3.1.3</span> Streamgraph</h3>
 <p>A streamgraph is a stacked area chart where the areas are positioned around the central axis.</p>
-<section id="sec-viz-4-ggplot2-dependencies" class="level4" data-number="3.1.3.1"><h4 data-number="3.1.3.1" class="anchored" data-anchor-id="sec-viz-4-ggplot2-dependencies">
-<span class="header-section-number">3.1.3.1</span> Viz #4: ggplot2 dependencies</h4>
+<section id="sec-viz-4-ggplot2-dependencies-ggstream" class="level4" data-number="3.1.3.1"><h4 data-number="3.1.3.1" class="anchored" data-anchor-id="sec-viz-4-ggplot2-dependencies-ggstream">
+<span class="header-section-number">3.1.3.1</span> Viz #4: ggplot2 dependencies (ggstream)</h4>
 <p>If you’ve read the book in chronological order, you’ve already encountered a streamgraph in <a href="preface.html#sec-landscape" class="quarto-xref"><span>Section 1</span></a>. We will use that visualization as the example in this section.</p>
 <p>The purpose of this visualization is to illustrate how the ggplot2 dependencies have evolved from a small speck in 2007 to their current state at the end of 2025. This is the exact use case for which I would use a streamgraph.</p>
 <p>Before we proceed, I want to mention <strong>Georgios Karamanis</strong>. Their <a href="https://github.com/gkaramanis/tidytuesday/tree/master/2023/2023-week_38">original visualization</a> for <a href="https://github.com/rfordatascience/tidytuesday">Tidy Tuesday</a> (see Figure 3.1) was the inspiration for my version.</p>
@@ -1260,8 +1260,8 @@ div.csl-indent {
 <span class="header-section-number">3.2.1</span> Likert chart</h3>
 <p>A Likert chart is a diverging stacked bar chart. It’s used to visualize responses to a questionnaire using the Likert (or similar) scale format. The “respondents are asked to indicate their degree of agreement or disagreement on a symmetric agree-disagree scale for each of a series of statements” <span class="citation" data-cites="burns2007">(<a href="references.html#ref-burns2007" role="doc-biblioref">Burns and Bush 2007</a>)</span>.</p>
 <p>For Likert charts, <strong>ggstats</strong> <span class="citation" data-cites="larmarange2025a">(<a href="references.html#ref-larmarange2025a" role="doc-biblioref">Larmarange 2026</a>)</span> is my package of choice. It also has other functionalities, which we’ll return to in <a href="stats.html#sec-ggstats" class="quarto-xref"><span>Section 4.14.1</span></a>.</p>
-<section id="sec-viz-5-pisa-2022-questionnaire" class="level4" data-number="3.2.1.1"><h4 data-number="3.2.1.1" class="anchored" data-anchor-id="sec-viz-5-pisa-2022-questionnaire">
-<span class="header-section-number">3.2.1.1</span> Viz #5: PISA 2022 Questionnaire</h4>
+<section id="sec-viz-5-pisa-2022-questionnaire-gglikert" class="level4" data-number="3.2.1.1"><h4 data-number="3.2.1.1" class="anchored" data-anchor-id="sec-viz-5-pisa-2022-questionnaire-gglikert">
+<span class="header-section-number">3.2.1.1</span> Viz #5: PISA 2022 Questionnaire (gglikert)</h4>
 <p>I was thinking of a good, open data source for the Likert chart. Most packages (ggstats included) use older <strong>PISA</strong> (Programme for International Student Assessment) questionnaires for the example data. I was able to find more recent data and selected seven statements from the PISA 2022 Student Questionnaire <span class="citation" data-cites="oecd2023">(<a href="references.html#ref-oecd2023" role="doc-biblioref">OECD 2023</a>)</span>. There was a lot of data to choose from, but I selected the statements that a) dealt with creativity and b) had the fewest number of NAs in the answers.</p>
 <p>I chose three countries to compare. Canada, Finland and Great Britain. I would’ve been interested in seeing a comparison between the US as well, but sadly the data was all NAs for these statements.</p>
 <p>Let’s first take a look at the data we have.</p>
@@ -1476,8 +1476,8 @@ div.csl-indent {
 <p>A mosaic chart is a special type of stacked bar chart. It differs from a normal one in that “the heights and widths of individual shaded areas vary” <span class="citation" data-cites="wilke2019">(<a href="references.html#ref-wilke2019" role="doc-biblioref">Wilke 2019</a>)</span>.</p>
 <p>To create a mosaic chart, we’ll be using <strong>marimekko</strong> <span class="citation" data-cites="kałędkowski2026">(<a href="references.html#ref-ka%C5%82%C4%99dkowski2026" role="doc-biblioref">Kałędkowski 2026</a>)</span>. It provides <code><a href="https://rdrr.io/pkg/marimekko/man/geom_marimekko.html">geom_marimekko()</a></code> as a native ggplot2 layer, so you can combine it with any other ggplot2 functionality (facets, themes, annotations, etc.).</p>
 <p><strong>Note!</strong> I wrote the first version of this chapter with <strong>ggmosaic</strong> <span class="citation" data-cites="jeppson2021">(<a href="references.html#ref-jeppson2021" role="doc-biblioref">Jeppson, Hofmann, and Cook 2021</a>)</span> in mind. But it was archived from <strong>CRAN</strong> on 2025-11-10 (as issues remained uncorrected despite reminders). Even the version on GitHub isn’t working currently. So I had to find a replacement. Marimekko is that package.</p>
-<section id="sec-viz-6-imdb-movies-part-ii" class="level4" data-number="3.2.2.1"><h4 data-number="3.2.2.1" class="anchored" data-anchor-id="sec-viz-6-imdb-movies-part-ii">
-<span class="header-section-number">3.2.2.1</span> Viz #6: IMDb movies, Part II</h4>
+<section id="sec-viz-6-imdb-movies-part-ii-marimekko" class="level4" data-number="3.2.2.1"><h4 data-number="3.2.2.1" class="anchored" data-anchor-id="sec-viz-6-imdb-movies-part-ii-marimekko">
+<span class="header-section-number">3.2.2.1</span> Viz #6: IMDb movies, Part II - marimekko</h4>
 <p>We return to the IMDb movies data set. This time, looking at how many movies in each genre have a certain <em>MPAA rating</em> (among those movies that have a rating in the first place).</p>
 <p>We’ll use the already familiar movies_na data set. But we’ll have to make some adjustments to get it ready for marimekko.</p>
 <p>The new function here is <code><a href="https://forcats.tidyverse.org/reference/fct_inorder.html">fct_infreq()</a></code>. It helps us order the factor levels by size, even though we don’t have a separate column for those counts.</p>
@@ -1643,8 +1643,8 @@ div.csl-indent {
 <p>A raincloud chart isn’t a geom. It contains three different geoms, <strong>boxplot</strong>, <strong>violin</strong> (or at least half of one), and <strong>point</strong>. They were “presented in 2019 as an approach to overcome issues of hiding the true data distribution when plotting bars with errorbars — also known as dynamite plots or barbarplots — or box plots” <span class="citation" data-cites="scherer2021">(<a href="references.html#ref-scherer2021" role="doc-biblioref">Scherer 2021</a>)</span>.</p>
 <p>You could create a raincloud chart using those individual geoms and mostly ggplot2. <strong>Cédric Scherer</strong> demonstrates this <a href="https://gist.github.com/z3tt/8b2a06d05e8fae308abbf027ce357f01">here</a>, creating a raincloud chart using the Palmer Penguins data.</p>
 <p>We have, however, a package, <strong>ggrain</strong> <span class="citation" data-cites="judd2024">(<a href="references.html#ref-judd2024" role="doc-biblioref">Judd, van Langen, and Kievit 2026</a>)</span>, that we can use for the same purpose. That there are numerous ways to accomplish the same task is both the beauty and the primary source of frustration with these tools. In any case, you get to choose which one works the best for you. You can also mix and match. You’ll see this when we reach the final visualization.</p>
-<section id="sec-viz-7-imdb-movies-part-iii" class="level4" data-number="3.3.1.1"><h4 data-number="3.3.1.1" class="anchored" data-anchor-id="sec-viz-7-imdb-movies-part-iii">
-<span class="header-section-number">3.3.1.1</span> Viz #7: IMDb movies, Part III</h4>
+<section id="sec-viz-7-imdb-movies-part-iii-ggrain" class="level4" data-number="3.3.1.1"><h4 data-number="3.3.1.1" class="anchored" data-anchor-id="sec-viz-7-imdb-movies-part-iii-ggrain">
+<span class="header-section-number">3.3.1.1</span> Viz #7: IMDb movies, Part III - ggrain</h4>
 <p>We return, once again, to the IMDb movies data set. This time, looking at how the ratings for movies in three genres (Action, Documentary, and Short) are distributed. We’ll make some adjustments for ggrain. As you can see, data wrangling plays a significant role in the data visualization process. Context is key.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Load required packages</span></span>
@@ -1890,8 +1890,8 @@ div.csl-indent {
 <span class="header-section-number">3.3.2</span> Ridgeline chart</h3>
 <p>A ridgeline chart is a good alternative to the violin plot. They “tend to work particularly well if [you] want to show trends in distributions over time. […] The purpose of the [chart] is not to show specific density values but instead to allow for easy comparison of density shapes and relative heights across groups” <span class="citation" data-cites="wilke2019">(<a href="references.html#ref-wilke2019" role="doc-biblioref">Wilke 2019</a>)</span>.</p>
 <p>We will use <strong>ggridges</strong> <span class="citation" data-cites="wilke2024">(<a href="references.html#ref-wilke2024" role="doc-biblioref">Wilke 2025</a>)</span> to create our ridgeline chart. If you’re familiar with ggplot2 extensions, you might have known a package called <a href="https://github.com/clauswilke/ggjoy"><strong>ggjoy</strong></a> that did the same. It was <em>deprecated</em>, though, and you should update your old scripts to use ggridges instead.</p>
-<section id="sec-viz-8-helsinki-temperatures-part-iii" class="level4" data-number="3.3.2.1"><h4 data-number="3.3.2.1" class="anchored" data-anchor-id="sec-viz-8-helsinki-temperatures-part-iii">
-<span class="header-section-number">3.3.2.1</span> Viz #8: Helsinki temperatures, part III</h4>
+<section id="sec-viz-8-helsinki-temperatures-part-iii-ggridges" class="level4" data-number="3.3.2.1"><h4 data-number="3.3.2.1" class="anchored" data-anchor-id="sec-viz-8-helsinki-temperatures-part-iii-ggridges">
+<span class="header-section-number">3.3.2.1</span> Viz #8: Helsinki temperatures, part III - ggridges</h4>
 <p>Since the ridgeline chart works well for distributions over time, let’s use the Helsinki temperatures data. I’m interested in seeing how the daily average temperatures are distributed by month in 2024.</p>
 <p>Let’s start by getting the data ready. The one new trick is using <strong>month.abb</strong>. It’s a constant built into R. We have the month numbers in the data set and can use them in combination.</p>
 <p><code><a href="https://forcats.tidyverse.org/reference/fct_rev.html">fct_rev()</a></code> is the newest forcats function we get to use. It just reverses the order of factor levels. If we didn’t use it, the order of months in the plot would be from December to January. And it feels more natural to have them from January to December.</p>
@@ -2320,8 +2320,8 @@ div.csl-indent {
 <p>And here’s the visual catalog showing us some of the possibilities:</p>
 <p><img src="geoms_files/figure-html/unnamed-chunk-57-1.png" class="img-fluid" width="672"></p>
 <p>Now that we’ve seen what the geometric primitives building blocks are, let’s build something interesting with some of them.</p>
-</section><section id="sec-viz-9-helsinki-temperatures-part-iv" class="level4" data-number="3.4.1.3"><h4 data-number="3.4.1.3" class="anchored" data-anchor-id="sec-viz-9-helsinki-temperatures-part-iv">
-<span class="header-section-number">3.4.1.3</span> Viz #9: Helsinki temperatures, part IV</h4>
+</section><section id="sec-viz-9-helsinki-temperatures-part-iv-ggforce" class="level4" data-number="3.4.1.3"><h4 data-number="3.4.1.3" class="anchored" data-anchor-id="sec-viz-9-helsinki-temperatures-part-iv-ggforce">
+<span class="header-section-number">3.4.1.3</span> Viz #9: Helsinki temperatures, part IV - ggforce</h4>
 <p>We already looked at the Helsinki temperatures data set from different angles. But here’s one more. Let’s build a radial chart comparing the monthly average temperatures in Helsinki in 2000 and 2024.</p>
 <p>Why use primitives for something like this? As the ggforce docs note, <code><a href="https://ggforce.data-imaginist.com/reference/geom_arc_bar.html">geom_arc_bar()</a></code> “makes it possible to draw arcs and wedges as known from pie and donut charts” <span class="citation" data-cites="pedersen2025b">(<a href="references.html#ref-pedersen2025b" role="doc-biblioref">Pedersen 2025</a>)</span> without <code><a href="https://ggplot2.tidyverse.org/reference/coord_radial.html">coord_polar()</a></code>. This gives us full control over positioning, layering, and annotations that would be difficult or downright impossible with <code><a href="https://ggplot2.tidyverse.org/reference/coord_radial.html">coord_polar()</a></code>.</p>
 <p>We’ll use <code><a href="https://ggforce.data-imaginist.com/reference/geom_arc_bar.html">geom_arc_bar()</a></code> for the temperature wedges, <code><a href="https://ggforce.data-imaginist.com/reference/geom_circle.html">geom_circle()</a></code> for the center disc and the ring separator, and <code><a href="https://ggplot2.tidyverse.org/reference/geom_text.html">geom_text()</a></code> for month labels around the outside.</p>
@@ -2560,8 +2560,8 @@ div.csl-indent {
 </div>
 <p>As you can see, the basic visualization is already quite neat. It’s interesting how, in addition to days and months, you also see the weekly structure.</p>
 <p>However, the sequential color palette makes it hard to distinguish between positive and negative values. To make the chart more readable, we’ll switch to a diverging palette. After all, we have a range of values from positive to negative with a meaningful baseline (0) in the middle.</p>
-<section id="sec-viz-10-helsinki-temperatures-part-v" class="level4" data-number="3.5.1.1"><h4 data-number="3.5.1.1" class="anchored" data-anchor-id="sec-viz-10-helsinki-temperatures-part-v">
-<span class="header-section-number">3.5.1.1</span> Viz #10: Helsinki temperatures, part V</h4>
+<section id="sec-viz-10-helsinki-temperatures-part-v-ggtimeseries" class="level4" data-number="3.5.1.1"><h4 data-number="3.5.1.1" class="anchored" data-anchor-id="sec-viz-10-helsinki-temperatures-part-v-ggtimeseries">
+<span class="header-section-number">3.5.1.1</span> Viz #10: Helsinki temperatures, part V - ggTimeSeries</h4>
 <p>For the final version of the calendar heatmap, let’s use some more data. I would love to show all 25 years, but that version was perhaps too busy and having a 5 x 5 grid didn’t exactly make it easy to compare the years.</p>
 <p>So, I decided to pick 5 years from 2004 to 2024 to show the possible change over time.</p>
 <div class="cell">
@@ -2718,8 +2718,8 @@ div.csl-indent {
 </div>
 </div>
 <p>There might be situations where this is useful. But for the final version of the visualization here, let’s leave that parameter out.</p>
-<section id="sec-viz-11-imdb-movies-part-iv" class="level4" data-number="3.6.1.1"><h4 data-number="3.6.1.1" class="anchored" data-anchor-id="sec-viz-11-imdb-movies-part-iv">
-<span class="header-section-number">3.6.1.1</span> Viz #11: IMDb movies, Part IV</h4>
+<section id="sec-viz-11-imdb-movies-part-iv-ggupset" class="level4" data-number="3.6.1.1"><h4 data-number="3.6.1.1" class="anchored" data-anchor-id="sec-viz-11-imdb-movies-part-iv-ggupset">
+<span class="header-section-number">3.6.1.1</span> Viz #11: IMDb movies, Part IV - ggupset</h4>
 <p>At this point it’s mostly cleaning up that we need for the final version. Besides the regular ggplot2 theming, we use <code><a href="https://rdrr.io/pkg/ggupset/man/theme_combmatrix.html">theme_combmatrix()</a></code> to make the matrix look good.</p>
 <div class="cell">
 <details class="code-fold"><summary>Show the code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb48"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
@@ -2805,7 +2805,7 @@ div.csl-indent {
 </div>
 </div>
 <p>As you can see, seven seems to be the greatest number of sets. But let’s take a look at a real use-case where we can also test those limits.</p>
-<p>For this, let’s revisit the IMDb movies dataset. We’ll first limit the number of sets to three, <strong>Comedy</strong>, <strong>Drama</strong>, and <strong>Romance</strong>. What we want for ggVennDiagram is a list that has three levels, one for each genre.</p>
+<p>For this, let’s revisit the IMDb movies data set. We’ll first limit the number of sets to three, <strong>Comedy</strong>, <strong>Drama</strong>, and <strong>Romance</strong>. What we want for ggVennDiagram is a list that has three levels, one for each genre.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb51"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">ggplot2movies</span><span class="op">)</span></span>
@@ -2845,8 +2845,8 @@ div.csl-indent {
 </div>
 <p>As you can see, that’s not the best way to visualize this data. Even if we turned off the annotations, it would still be much more confusing compared to the UpSet plot.</p>
 <p>And if we had even one more set, ggVennDiagram would actually fall back to plotting an UpSet plot instead! That’s how close the two are to each other philosophically.</p>
-<section id="sec-viz-12-imdb-movies-part-v" class="level4" data-number="3.6.2.1"><h4 data-number="3.6.2.1" class="anchored" data-anchor-id="sec-viz-12-imdb-movies-part-v">
-<span class="header-section-number">3.6.2.1</span> Viz #12: IMDb movies, Part V</h4>
+<section id="sec-viz-12-imdb-movies-part-v-ggVennDiagram" class="level4" data-number="3.6.2.1"><h4 data-number="3.6.2.1" class="anchored" data-anchor-id="sec-viz-12-imdb-movies-part-v-ggVennDiagram">
+<span class="header-section-number">3.6.2.1</span> Viz #12: IMDb movies, Part V - ggVennDiagram</h4>
 <p>Let’s now create a more visually appealing visualization with only the three genres. Let’s use all the parameters that make sense: <strong>edge_size</strong> for thinner lines, <strong>label = “count”</strong> to show only counts, <strong>label_alpha = 0</strong> to hide the label background, and <strong>label_color = “#ffffff”</strong> to make the label text white.</p>
 <div class="cell">
 <details class="code-fold"><summary>Show the code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb54"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
@@ -2907,9 +2907,135 @@ div.csl-indent {
 <p>If you want a lighter alternative, <strong>ggvenn</strong> <span class="citation" data-cites="yan2025">(<a href="references.html#ref-yan2025" role="doc-biblioref">Yan 2025</a>)</span> offers a single <code>geom_venn()</code> that plugs straight into a ggplot call. It’s less customizable but gets the job done for quick two- or three-set diagrams.</p>
 </section></section></section><section id="sec-line-charts" class="level2" data-number="3.7"><h2 data-number="3.7" class="anchored" data-anchor-id="sec-line-charts">
 <span class="header-section-number">3.7</span> Line charts</h2>
+<p>Line charts are the bread and butter of data visualization. And as with bar charts, ggplot2 handles most types out of the box. And as with bar charts, there are specific use cases for these more specialized line charts.</p>
+<p>In this section, we’ll take a look at the <strong>bump chart</strong>, the <strong>dumbbell and lollipop chart</strong>, the <strong>line chart with a neon glow or shadow effects</strong>, and the <strong>slope chart</strong>.</p>
 <section id="sec-bump-chart" class="level3" data-number="3.7.1"><h3 data-number="3.7.1" class="anchored" data-anchor-id="sec-bump-chart">
 <span class="header-section-number">3.7.1</span> Bump chart</h3>
-</section><section id="sec-dumbbell-and-lollipop-chart" class="level3" data-number="3.7.2"><h3 data-number="3.7.2" class="anchored" data-anchor-id="sec-dumbbell-and-lollipop-chart">
+<p>A bump chart is a type of line chart used to visualize changes in rankings of categorical data over time. To create one, we’ll use the extension <strong>ggbump</strong> <span class="citation" data-cites="sjoberg2026">(<a href="references.html#ref-sjoberg2026" role="doc-biblioref">Sjoberg 2026</a>)</span>.</p>
+<p>We’ll once again use the IMDb movie dataset. This time, we’ll summarize the data by genre and decade, starting from the 1930s. Before that, some genres have only a handful of films, making average ratings unreliable.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb55"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">ggplot2movies</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyr.tidyverse.org">tidyr</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">movies_ggbump</span> <span class="op">&lt;-</span> <span class="va">movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">pivot_longer</a></span><span class="op">(</span><span class="va">Action</span><span class="op">:</span><span class="va">Short</span>, names_to <span class="op">=</span> <span class="st">"genre"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">value</span> <span class="op">!=</span> <span class="fl">0</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>decade <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">floor</a></span><span class="op">(</span><span class="va">year</span> <span class="op">/</span> <span class="fl">10</span><span class="op">)</span> <span class="op">*</span> <span class="fl">10</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">decade</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">1930</span>, <span class="fl">2000</span>, <span class="fl">10</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span></span>
+<span>    rating_avg <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">rating</span><span class="op">)</span>,</span>
+<span>    .by        <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">genre</span>, <span class="va">decade</span><span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
+<span>    rank <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rank.html">rank</a></span><span class="op">(</span><span class="op">-</span><span class="va">rating_avg</span>, ties.method <span class="op">=</span> <span class="st">"first"</span><span class="op">)</span>,</span>
+<span>    .by  <span class="op">=</span> <span class="va">decade</span></span>
+<span>  <span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="va">decade</span>, <span class="va">rank</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["genre"],"name":[1],"type":["chr"],"align":["left"]},{"label":["decade"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["rating_avg"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["rank"],"name":[4],"type":["int"],"align":["right"]}],"data":[{"1":"Animation","2":"1930","3":"6.408455","4":"1"},{"1":"Short","2":"1930","3":"6.383391","4":"2"},{"1":"Comedy","2":"1930","3":"6.338358","4":"3"},{"1":"Drama","2":"1930","3":"6.190528","4":"4"},{"1":"Romance","2":"1930","3":"6.186267","4":"5"},{"1":"Action","2":"1930","3":"6.108602","4":"6"},{"1":"Documentary","2":"1930","3":"5.967500","4":"7"},{"1":"Animation","2":"1940","3":"6.772930","4":"1"},{"1":"Romance","2":"1940","3":"6.614512","4":"2"},{"1":"Short","2":"1940","3":"6.601338","4":"3"},{"1":"Action","2":"1940","3":"6.504321","4":"4"},{"1":"Drama","2":"1940","3":"6.500271","4":"5"},{"1":"Comedy","2":"1940","3":"6.494707","4":"6"},{"1":"Documentary","2":"1940","3":"6.304575","4":"7"},{"1":"Animation","2":"1950","3":"6.807895","4":"1"},{"1":"Short","2":"1950","3":"6.452232","4":"2"},{"1":"Comedy","2":"1950","3":"6.366500","4":"3"},{"1":"Romance","2":"1950","3":"6.355831","4":"4"},{"1":"Drama","2":"1950","3":"6.310020","4":"5"},{"1":"Action","2":"1950","3":"5.876163","4":"6"},{"1":"Documentary","2":"1950","3":"5.820930","4":"7"},{"1":"Documentary","2":"1960","3":"6.473423","4":"1"},{"1":"Romance","2":"1960","3":"6.416887","4":"2"},{"1":"Animation","2":"1960","3":"6.240166","4":"3"},{"1":"Short","2":"1960","3":"6.217774","4":"4"},{"1":"Drama","2":"1960","3":"6.181957","4":"5"},{"1":"Comedy","2":"1960","3":"5.883847","4":"6"},{"1":"Action","2":"1960","3":"5.608709","4":"7"},{"1":"Animation","2":"1970","3":"6.688304","4":"1"},{"1":"Documentary","2":"1970","3":"6.569182","4":"2"},{"1":"Short","2":"1970","3":"6.525926","4":"3"},{"1":"Romance","2":"1970","3":"6.112186","4":"4"},{"1":"Drama","2":"1970","3":"5.841569","4":"5"},{"1":"Comedy","2":"1970","3":"5.434425","4":"6"},{"1":"Action","2":"1970","3":"5.414286","4":"7"},{"1":"Animation","2":"1980","3":"6.835662","4":"1"},{"1":"Documentary","2":"1980","3":"6.731250","4":"2"},{"1":"Short","2":"1980","3":"6.596288","4":"3"},{"1":"Drama","2":"1980","3":"6.025827","4":"4"},{"1":"Romance","2":"1980","3":"5.994643","4":"5"},{"1":"Comedy","2":"1980","3":"5.445530","4":"6"},{"1":"Action","2":"1980","3":"5.005987","4":"7"},{"1":"Documentary","2":"1990","3":"6.483896","4":"1"},{"1":"Animation","2":"1990","3":"6.351087","4":"2"},{"1":"Short","2":"1990","3":"6.217671","4":"3"},{"1":"Drama","2":"1990","3":"5.948772","4":"4"},{"1":"Romance","2":"1990","3":"5.890671","4":"5"},{"1":"Comedy","2":"1990","3":"5.589835","4":"6"},{"1":"Action","2":"1990","3":"4.862913","4":"7"},{"1":"Documentary","2":"2000","3":"7.092589","4":"1"},{"1":"Short","2":"2000","3":"6.894250","4":"2"},{"1":"Animation","2":"2000","3":"6.564563","4":"3"},{"1":"Drama","2":"2000","3":"6.365864","4":"4"},{"1":"Comedy","2":"2000","3":"6.146673","4":"5"},{"1":"Romance","2":"2000","3":"6.144742","4":"6"},{"1":"Action","2":"2000","3":"5.621059","4":"7"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<p>Let’s start with the basic version with default settings.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb56"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/davidsjoberg/ggbump">ggbump</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">movies_ggbump</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">decade</span>, <span class="va">rank</span>, color <span class="op">=</span> <span class="va">genre</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/ggbump/man/geom_bump.html">geom_bump</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="geoms_files/figure-html/unnamed-chunk-75-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>We can already see what the chart is about. The movie genres are in the ranking order, but the order is upside down. Next, let’s fix that and make other changes to make the chart more presentable.</p>
+<section id="sec-viz-13-imdb-movies-part-vi-ggbump" class="level4" data-number="3.7.1.1"><h4 data-number="3.7.1.1" class="anchored" data-anchor-id="sec-viz-13-imdb-movies-part-vi-ggbump">
+<span class="header-section-number">3.7.1.1</span> Viz #13: IMDb movies, Part VI - ggbump</h4>
+<p>We’ll add the points first. They act as anchors for the viewer’s gaze. Then we’ll add the genres using <code><a href="https://ggplot2.tidyverse.org/reference/geom_text.html">geom_text()</a></code>. Direct labeling is a nice touch and more intuitive than using a legend.</p>
+<p>In this book, color as a storytelling tool is a recurring theme. And it was a conscious storytelling decision to highlight the Documentaries genre. We can use <code><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_color_manual()</a></code> to specify only one genre’s color, while ggplot2 uses its default palette for the rest.</p>
+<p>Finally, we need to fix the ranking order using <code><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_reverse()</a></code>.</p>
+<div class="cell">
+<details class="code-fold"><summary>Show the code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb57"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/davidsjoberg/ggbump">ggbump</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">movies_ggbump</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">decade</span>, <span class="va">rank</span>, color <span class="op">=</span> <span class="va">genre</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">5</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_text.html">geom_text</a></span><span class="op">(</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span></span>
+<span>      x     <span class="op">=</span> <span class="va">decade</span> <span class="op">-</span> <span class="fl">2</span>,</span>
+<span>      label <span class="op">=</span> <span class="va">genre</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    data     <span class="op">=</span> <span class="va">movies_ggbump</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">decade</span> <span class="op">==</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">decade</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>    size     <span class="op">=</span> <span class="fl">4</span>,</span>
+<span>    hjust    <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>    fontface <span class="op">=</span> <span class="st">"bold"</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_text.html">geom_text</a></span><span class="op">(</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span></span>
+<span>      x     <span class="op">=</span> <span class="va">decade</span> <span class="op">+</span> <span class="fl">2</span>,</span>
+<span>      label <span class="op">=</span> <span class="va">genre</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    data     <span class="op">=</span> <span class="va">movies_ggbump</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">decade</span> <span class="op">==</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">decade</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>    size     <span class="op">=</span> <span class="fl">4</span>,</span>
+<span>    hjust    <span class="op">=</span> <span class="fl">0</span>,</span>
+<span>    fontface <span class="op">=</span> <span class="st">"bold"</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/ggbump/man/geom_bump.html">geom_bump</a></span><span class="op">(</span></span>
+<span>    linewidth <span class="op">=</span> <span class="fl">1.2</span>,</span>
+<span>    smooth    <span class="op">=</span> <span class="fl">8</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_color_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Documentary"</span> <span class="op">=</span> <span class="st">"#CC4C00"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span></span>
+<span>    breaks <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">1930</span>, <span class="fl">2000</span>, <span class="fl">10</span><span class="op">)</span>,</span>
+<span>    expand <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/expansion.html">expansion</a></span><span class="op">(</span>mult <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.15</span>, <span class="fl">0.15</span><span class="op">)</span><span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_reverse</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span></span>
+<span>    title    <span class="op">=</span> <span class="st">"Documentaries Are the Best"</span>,</span>
+<span>    subtitle <span class="op">=</span> <span class="st">"Genres ranked by their average IMDb rating"</span>,</span>
+<span>    caption  <span class="op">=</span> <span class="st">"Data: IMDb movies (1893-2005) via ggplot2movies | Visualization: Antti Rask"</span>,</span>
+<span>    x        <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>    y        <span class="op">=</span> <span class="cn">NULL</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span></span>
+<span>    axis.text.x      <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">10</span><span class="op">)</span>,</span>
+<span>    axis.text.y      <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    legend.position  <span class="op">=</span> <span class="st">"none"</span>,</span>
+<span>    plot.title       <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span></span>
+<span>      face  <span class="op">=</span> <span class="st">"bold"</span>,</span>
+<span>      hjust <span class="op">=</span> <span class="fl">0.5</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    plot.subtitle    <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span></span>
+<span>      hjust  <span class="op">=</span> <span class="fl">0.5</span>,</span>
+<span>      margin <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">margin</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">10</span>, <span class="fl">0</span><span class="op">)</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    plot.caption     <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span></span>
+<span>      hjust  <span class="op">=</span> <span class="fl">0.5</span>,</span>
+<span>      color  <span class="op">=</span> <span class="st">"#777777"</span>,</span>
+<span>      size   <span class="op">=</span> <span class="fl">9</span>,</span>
+<span>      margin <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">margin</a></span><span class="op">(</span><span class="fl">20</span>, <span class="fl">25</span>, <span class="fl">0</span>, <span class="fl">25</span><span class="op">)</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    panel.grid.major <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    panel.grid.minor <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    plot.margin      <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">margin</a></span><span class="op">(</span><span class="fl">20</span>, <span class="fl">0</span>, <span class="fl">10</span>, <span class="fl">0</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="geoms_files/figure-html/unnamed-chunk-76-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>We made some bold choices, but now we have a chart that tells one of the stories buried within the data. Bump charts work best when you have a handful of categories competing across discrete time steps, and you care about relative position rather than absolute values.</p>
+<p>The ranking abstraction strips away the noise and lets the audience focus on who’s rising and who’s falling. And in this case, the answer is clear.</p>
+</section></section><section id="sec-dumbbell-and-lollipop-chart" class="level3" data-number="3.7.2"><h3 data-number="3.7.2" class="anchored" data-anchor-id="sec-dumbbell-and-lollipop-chart">
 <span class="header-section-number">3.7.2</span> Dumbbell and lollipop chart</h3>
 </section><section id="sec-line-chart-with-neon-glow-or-shadow-effects" class="level3" data-number="3.7.3"><h3 data-number="3.7.3" class="anchored" data-anchor-id="sec-line-chart-with-neon-glow-or-shadow-effects">
 <span class="header-section-number">3.7.3</span> Line chart (with neon glow or shadow effects)</h3>
@@ -3028,6 +3154,9 @@ Schwabish, Jonathan A. 2021. <em>Better Data Visualizations: A Guide for Scholar
 </div>
 <div id="ref-sjoberg2021" class="csl-entry" role="listitem">
 Sjoberg, David. 2021. <em>Ggstream: Create Streamplots in ’Ggplot2’</em>. <a href="https://CRAN.R-project.org/package=ggstream">https://CRAN.R-project.org/package=ggstream</a>.
+</div>
+<div id="ref-sjoberg2026" class="csl-entry" role="listitem">
+———. 2026. <em>Ggbump: Bump Chart and Sigmoid Curves</em>. <a href="https://github.com/davidsjoberg/ggbump">https://github.com/davidsjoberg/ggbump</a>.
 </div>
 <div id="ref-slowikowski2024" class="csl-entry" role="listitem">
 Slowikowski, Kamil. 2026. <em>Ggrepel: Automatically Position Non-Overlapping Text Labels with ’Ggplot2’</em>. <a href="https://CRAN.R-project.org/package=ggrepel">https://CRAN.R-project.org/package=ggrepel</a>.
