@@ -11,20 +11,19 @@ Animated data visualizations incorporate motion to convey information. Unlike st
 
 Animation can make data stories more engaging and help audiences grasp transitions or trends that unfold over time. However, using animation requires understanding when it aids comprehension and when it might hinder it.
 
-__ggplot2__ [@wickham2024a] out of the package doesn't come with animation capabilities.
-In this chapter, we'll see how different packages have approached the challenge.
+**ggplot2** [@wickham2024a] out of the package doesn't come with animation capabilities. In this chapter, we'll see how different packages have approached the challenge.
 
 ## camcorder {#sec-gif-camcorder}
 
 ## gganimate {#sec-gganimate}
 
-Using __gganimate__ [@pedersen2025a] is a nice, easy way to animate your visualizations. You can always start with a static visualization and add the animation elements. It "extends the grammar of graphics as implemented by ggplot2 to include the description of animation. It does this by providing a range of new grammar classes that can be added to the plot object in order to customise how it should change with time."
+Using **gganimate** [@pedersen2025a] is a nice, easy way to animate your visualizations. You can always start with a static visualization and add the animation elements. It "extends the grammar of graphics as implemented by ggplot2 to include the description of animation. It does this by providing a range of new grammar classes that can be added to the plot object in order to customise how it should change with time."
 
-Of course, we need to render the animation somehow. We'll be using the default, __gifski__ [@ooms2025], but it's good to know that there are other options available.
+Of course, we need to render the animation somehow. We'll be using the default, **gifski** [@ooms2025], but it's good to know that there are other options available.
 
 #### Viz #n: Helsinki temperatures, part n {#sec-viz-n-helsinki-temperatures-part-n}
 
-For this example, we'll be revisiting the Helsinki temperatures visualization from @sec-viz-8-helsinki-temperatures-part-iii. Since you can revisit that section, we'll only go through what needs to be added for the animation.
+For this example, we'll be revisiting the Helsinki temperatures visualization from @sec-viz-8-helsinki-temperatures-part-iii-ggridges. Since you can revisit that section, we'll only go through what needs to be added for the animation.
 
 The original static visualization showed monthly temperature data for 2024. What we’d like to see is the same, but for each year between 2000 and 2024. Starting with the data, the only change we need to make is to remove the year filter and include the year as a column.
 
@@ -73,7 +72,7 @@ temperature_ggridges %>%
   paged_table()
 ```
 
-Similarly, for the ggplot2 code, there are only two small changes that need to be made. We'll save the ggplot object as __plot_ggridges__. And we've added the argument __subtitle = "Year: {closest_state}"__ inside the `labs()` function. That's it.
+Similarly, for the ggplot2 code, there are only two small changes that need to be made. We'll save the ggplot object as **plot_ggridges**. And we've added the argument **subtitle = "Year: {closest_state}"** inside the `labs()` function. That's it.
 
 ```{r}
 #| echo:    false
@@ -142,9 +141,9 @@ library(gganimate)
 
 Starting with the plot_ggridges we can now add the animation layer. We'll do this in three easy steps:
 
-1. `transition_states()` defines how the data should be spread out and how it relates to itself across time
-2. `enter_fade()` defines how new data should appear...
-3. ...and `exit_fade()` defines how old data should disappear during the course of the animation [@pedersen2025a]
+1.  `transition_states()` defines how the data should be spread out and how it relates to itself across time
+2.  `enter_fade()` defines how new data should appear...
+3.  ...and `exit_fade()` defines how old data should disappear during the course of the animation [@pedersen2025a]
 
 ```{r}
 #| eval: false
@@ -173,7 +172,7 @@ plot_animated <- plot_ggridges +
   exit_fade()
 ```
 
-Now that we have the animated plot in plot_animated, we still need to do the rendering. We select the __number of frames__, __frames per second__, __width__, __height__, and, finally, the __renderer__.
+Now that we have the animated plot in plot_animated, we still need to do the rendering. We select the **number of frames**, **frames per second**, **width**, **height**, and, finally, the **renderer**.
 
 ```{r}
 #| eval: false

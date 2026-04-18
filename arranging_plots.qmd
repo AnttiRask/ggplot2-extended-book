@@ -7,8 +7,8 @@
 source("warning.R")
 ```
 
-## Arranging multiple plots
+## Arranging multiple plots {#sec-arranging-multiple-plots}
 
-## Side panels
+## Side panels {#sec-side-panels}
 
-## Converting base R plots to ggplot2
+## Converting base R plots to ggplot2 {#sec-converting-base-r-plots-to-ggplot2}

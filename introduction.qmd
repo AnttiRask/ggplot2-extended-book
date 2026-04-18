@@ -220,6 +220,7 @@ install.packages(
     "gtExtras",
     "marimekko",
     "naniar",
+    "patchwork",
     "radiant",
     "showtext"
   )
@@ -379,6 +380,7 @@ pkgs <- c(
   "lubridate",
   "marimekko",
   "naniar",
+  "patchwork",
   "purrr",
   "radiant",
   "readr",
