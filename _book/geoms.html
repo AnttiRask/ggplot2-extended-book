@@ -2,11 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.9.36">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Antti Rask">
 <title>3&nbsp; Geoms – ggplot2 extended</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -57,7 +60,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -87,15 +89,14 @@ div.csl-indent {
 <link href="./cover.jpg" rel="icon" type="image/jpeg">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-4629e7eef7b60ee973ddd10e1ba5b1c0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-0c46a550243460c6d24ea211b73e8011.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
@@ -143,9 +144,7 @@ div.csl-indent {
     </div>
   </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="./index.html" class="sidebar-logo-link">
-      </a>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">ggplot2 extended</a> 
         <div class="sidebar-tools-main">
@@ -502,7 +501,7 @@ div.csl-indent {
 </div>
 </div>
 <p>A <strong>geom</strong> (short for geometric object) is a component that defines how data is visually represented in a plot. Geoms determine the type of visualization or the graphical shape that will be drawn.</p>
-<p>“These geoms are the fundamental building blocks of <strong>ggplot2</strong> <span class="citation" data-cites="wickham2024a">(<a href="references.html#ref-wickham2024a" role="doc-biblioref">Wickham et al. 2026</a>)</span>. They are useful in their own right, but are also used to construct more complex geoms. Most of these geoms are associated with a named [chart]: when that geom is used by itself in a [chart], that [chart] has a special name.” <span class="citation" data-cites="wickham2016">(<a href="references.html#ref-wickham2016" role="doc-biblioref">Wickham 2016</a>)</span></p>
+<p>“These geoms are the fundamental building blocks of <strong>ggplot2</strong> <span class="citation" data-cites="wickham2024a">(<a href="references.html#ref-wickham2024a" role="doc-biblioref"><span class="nocase">Wickham et al.</span> 2026</a>)</span>. They are useful in their own right, but are also used to construct more complex geoms. Most of these geoms are associated with a named [chart]: when that geom is used by itself in a [chart], that [chart] has a special name.” <span class="citation" data-cites="wickham2016">(<a href="references.html#ref-wickham2016" role="doc-biblioref">Wickham 2016</a>)</span></p>
 <p>ggplot2 already has a <a href="https://ggplot2.tidyverse.org/reference/index.html#geoms">long list of geoms</a>. We won’t be discussing those unless there is an extension package that is an improvement to the original. Primarily, this chapter focuses on the geoms that ggplot2 does not include.</p>
 <section id="sec-area-charts" class="level2" data-number="3.1"><h2 data-number="3.1" class="anchored" data-anchor-id="sec-area-charts">
 <span class="header-section-number">3.1</span> Area charts</h2>
@@ -618,7 +617,7 @@ div.csl-indent {
 <p>I’m not a climatologist, but it does seem like there is a trend, over time, of Helsinki having milder winters. The summer temperatures are less clear-cut and will need a closer look.</p>
 </section></section><section id="sec-ribbon-chart-improved" class="level3" data-number="3.1.2"><h3 data-number="3.1.2" class="anchored" data-anchor-id="sec-ribbon-chart-improved">
 <span class="header-section-number">3.1.2</span> Ribbon chart (improved)</h3>
-<p>As the ggplot2 documentation tells us, an area chart is, in fact, a special case of a ribbon chart. That makes sense when you realize that every type of area chart has a <strong>ymin</strong> and <strong>ymax</strong>. In the basic area chart, ymin is zero, and ymax is <strong>y</strong>. <span class="citation" data-cites="wickham2024a">(<a href="references.html#ref-wickham2024a" role="doc-biblioref">Wickham et al. 2026</a>)</span></p>
+<p>As the ggplot2 documentation tells us, an area chart is, in fact, a special case of a ribbon chart. That makes sense when you realize that every type of area chart has a <strong>ymin</strong> and <strong>ymax</strong>. In the basic area chart, ymin is zero, and ymax is <strong>y</strong>. <span class="citation" data-cites="wickham2024a">(<a href="references.html#ref-wickham2024a" role="doc-biblioref"><span class="nocase">Wickham et al.</span> 2026</a>)</span></p>
 <p>The ribbon chart, then, displays the area between two lines. <code><a href="https://ggplot2.tidyverse.org/reference/geom_ribbon.html">geom_ribbon()</a></code> gets the job done when the lines don’t meet. But as you’ll soon see, for those cases where they do, you need something called <em>braiding</em>. You can read more about it in the <strong>ggbraid</strong> <span class="citation" data-cites="grantham2025">(<a href="references.html#ref-grantham2025" role="doc-biblioref">Grantham 2025</a>)</span> <a href="https://nsgrantham.github.io/ggbraid/articles/temps.html#the-unbraided-ribbon-problem">documentation</a>.</p>
 <section id="sec-viz-2-imdb-movies-part-i-ggbraid" class="level4" data-number="3.1.2.1"><h4 data-number="3.1.2.1" class="anchored" data-anchor-id="sec-viz-2-imdb-movies-part-i-ggbraid">
 <span class="header-section-number">3.1.2.1</span> Viz #2: IMDb movies, Part I - ggbraid</h4>
@@ -809,7 +808,7 @@ div.csl-indent {
 <p>Looks like 2024 has more days (60.4%) that were, on average, warmer than 2000 (39.6%).</p>
 <p>The visualization itself is like the movie example. The most significant difference is the use of two packages from the tidyverse family.</p>
 <p><code><a href="https://stringr.tidyverse.org/reference/str_glue.html">str_glue()</a></code> from <strong>stringr</strong> <span class="citation" data-cites="wickham2023g">(<a href="references.html#ref-wickham2023g" role="doc-biblioref">Wickham 2025b</a>)</span> features a convenient implicit line break functionality. We’ll also use it to add the degree Celsius symbol (°C) to the y-axis.</p>
-<p><code><a href="https://lubridate.tidyverse.org/reference/as_date.html">as_date()</a></code> from <strong>lubridate</strong> <span class="citation" data-cites="spinu2024">(<a href="references.html#ref-spinu2024" role="doc-biblioref">Spinu, Grolemund, and Wickham 2026</a>)</span> allows us to use the date in <em>character</em> format to map it to the x-axis. This helps us place the annotations in the correct position.</p>
+<p><code><a href="https://lubridate.tidyverse.org/reference/as_date.html">as_date()</a></code> from <strong>lubridate</strong> <span class="citation" data-cites="spinu2024">(<a href="references.html#ref-spinu2024" role="doc-biblioref">Spinu et al. 2026</a>)</span> allows us to use the date in <em>character</em> format to map it to the x-axis. This helps us place the annotations in the correct position.</p>
 <div class="cell">
 <details class="code-fold"><summary>Show the code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://nsgrantham.github.io/ggbraid/">ggbraid</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
@@ -1362,7 +1361,7 @@ div.csl-indent {
 <span class="header-section-number">3.2.2</span> Mosaic chart</h3>
 <p>A mosaic chart is a special type of stacked bar chart. It differs from a normal one in that “the heights and widths of individual shaded areas vary” <span class="citation" data-cites="wilke2019">(<a href="references.html#ref-wilke2019" role="doc-biblioref">Wilke 2019</a>)</span>.</p>
 <p>To create a mosaic chart, we’ll be using <strong>marimekko</strong> <span class="citation" data-cites="kałędkowski2026">(<a href="references.html#ref-ka%C5%82%C4%99dkowski2026" role="doc-biblioref">Kałędkowski 2026</a>)</span>. It provides <code><a href="https://rdrr.io/pkg/marimekko/man/geom_marimekko.html">geom_marimekko()</a></code> as a native ggplot2 layer, so you can combine it with any other ggplot2 functionality (facets, themes, annotations, etc.).</p>
-<p><strong>Note!</strong> I wrote the first version of this chapter with <strong>ggmosaic</strong> <span class="citation" data-cites="jeppson2021">(<a href="references.html#ref-jeppson2021" role="doc-biblioref">Jeppson, Hofmann, and Cook 2021</a>)</span> in mind. But it was archived from <strong>CRAN</strong> on 2025-11-10 (as issues remained uncorrected despite reminders). Even the version on GitHub isn’t working currently. So I had to find a replacement. Marimekko is that package.</p>
+<p><strong>Note!</strong> I wrote the first version of this chapter with <strong>ggmosaic</strong> <span class="citation" data-cites="jeppson2021">(<a href="references.html#ref-jeppson2021" role="doc-biblioref">Jeppson et al. 2021</a>)</span> in mind. But it was archived from <strong>CRAN</strong> on 2025-11-10 (as issues remained uncorrected despite reminders). Even the version on GitHub isn’t working currently. So I had to find a replacement. Marimekko is that package.</p>
 <section id="sec-viz-6-imdb-movies-part-ii-marimekko" class="level4" data-number="3.2.2.1"><h4 data-number="3.2.2.1" class="anchored" data-anchor-id="sec-viz-6-imdb-movies-part-ii-marimekko">
 <span class="header-section-number">3.2.2.1</span> Viz #6: IMDb movies, Part II - marimekko</h4>
 <p>We return to the IMDb movies data set. This time, looking at how many movies in each genre have a certain <em>MPAA rating</em> (among those movies that have a rating in the first place).</p>
@@ -1491,7 +1490,7 @@ div.csl-indent {
 <span class="header-section-number">3.3.1</span> Raincloud chart</h3>
 <p>A raincloud chart isn’t a geom. It contains three different geoms, <strong>boxplot</strong>, <strong>violin</strong> (or at least half of one), and <strong>point</strong>. They were “presented in 2019 as an approach to overcome issues of hiding the true data distribution when plotting bars with errorbars — also known as dynamite plots or barbarplots — or box plots” <span class="citation" data-cites="scherer2021">(<a href="references.html#ref-scherer2021" role="doc-biblioref">Scherer 2021</a>)</span>.</p>
 <p>You could create a raincloud chart using those individual geoms and mostly ggplot2. <strong>Cédric Scherer</strong> demonstrates this <a href="https://gist.github.com/z3tt/8b2a06d05e8fae308abbf027ce357f01">here</a>, creating a raincloud chart using the Palmer Penguins data.</p>
-<p>We have, however, a package, <strong>ggrain</strong> <span class="citation" data-cites="judd2024">(<a href="references.html#ref-judd2024" role="doc-biblioref">Judd, van Langen, and Kievit 2026</a>)</span>, that we can use for the same purpose. That there are numerous ways to accomplish the same task is both the beauty and the primary source of frustration with these tools. In any case, you get to choose which one works the best for you. You can also mix and match. You’ll see this when we reach the final visualization.</p>
+<p>We have, however, a package, <strong>ggrain</strong> <span class="citation" data-cites="judd2024">(<a href="references.html#ref-judd2024" role="doc-biblioref"><span class="nocase">Judd et al.</span> 2026</a>)</span>, that we can use for the same purpose. That there are numerous ways to accomplish the same task is both the beauty and the primary source of frustration with these tools. In any case, you get to choose which one works the best for you. You can also mix and match. You’ll see this when we reach the final visualization.</p>
 <section id="sec-viz-7-imdb-movies-part-iii-ggrain" class="level4" data-number="3.3.1.1"><h4 data-number="3.3.1.1" class="anchored" data-anchor-id="sec-viz-7-imdb-movies-part-iii-ggrain">
 <span class="header-section-number">3.3.1.1</span> Viz #7: IMDb movies, Part III - ggrain</h4>
 <p>We return, once again, to the IMDb movies data set. This time, looking at how the ratings for movies in three genres (Action, Documentary, and Short) are distributed. We’ll make some adjustments for ggrain. As you can see, data wrangling plays a significant role in the data visualization process. Context is key.</p>
@@ -2850,7 +2849,7 @@ div.csl-indent {
 <span class="header-section-number">3.12.4</span> Voronoi diagram</h3>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
 <div id="ref-ahlmann-eltze2025" class="csl-entry" role="listitem">
 Ahlmann-Eltze, Constantin. 2025. <em>Ggupset: Combination Matrix Axis for ’Ggplot2’ to Create ’UpSet’ Plots</em>. <a href="https://github.com/const-ae/ggupset/">https://github.com/const-ae/ggupset/</a>.
 </div>
@@ -2867,7 +2866,7 @@ Burns, Alvin C., and Ronald F. Bush. 2007. <em>Basic Marketing Research: Using M
 Csárdi, Gábor, and Maëlle Salmon. 2025. <em>Pkgsearch: Search and Query CRAN r Packages</em>. <a href="https://CRAN.R-project.org/package=pkgsearch">https://CRAN.R-project.org/package=pkgsearch</a>.
 </div>
 <div id="ref-ellis2019" class="csl-entry" role="listitem">
-Ellis, Laura Grace. 2019. <span>“Set Analysis: A Face Off Between Venn Diagrams and UpSet Plots.”</span> <a href="https://www.littlemissdata.com/blog/set-analysis/">https://www.littlemissdata.com/blog/set-analysis/</a>.
+Ellis, Laura Grace. 2019. <em>Set Analysis: A Face Off Between Venn Diagrams and UpSet Plots</em>. <a href="https://www.littlemissdata.com/blog/set-analysis/">https://www.littlemissdata.com/blog/set-analysis/</a>.
 </div>
 <div id="ref-gao2026" class="csl-entry" role="listitem">
 Gao, Chun-Hui, and Adrian Dusa. 2026. <em>ggVennDiagram: A ’Ggplot2’ Implement of Venn Diagram</em>. <a href="https://github.com/gaospecial/ggVennDiagram">https://github.com/gaospecial/ggVennDiagram</a>.
@@ -2879,13 +2878,13 @@ Gehlenborg, Nils. 2019. <em>UpSetR: A More Scalable Alternative to Venn and Eule
 Grantham, Neal. 2025. <em>Ggbraid: Braid Ribbons in ’Ggplot2’</em>. <a href="https://github.com/nsgrantham/ggbraid/">https://github.com/nsgrantham/ggbraid/</a>.
 </div>
 <div id="ref-ihaka2024" class="csl-entry" role="listitem">
-Ihaka, Ross, Paul Murrell, Kurt Hornik, Jason C. Fisher, Reto Stauffer, Claus O. Wilke, Claire D. McWhite, and Achim Zeileis. 2024. <em>Colorspace: A Toolbox for Manipulating and Assessing Colors and Palettes</em>. <a href="https://CRAN.R-project.org/package=colorspace">https://CRAN.R-project.org/package=colorspace</a>.
+Ihaka, Ross, Paul Murrell, Kurt Hornik, et al. 2024. <em>Colorspace: A Toolbox for Manipulating and Assessing Colors and Palettes</em>. <a href="https://CRAN.R-project.org/package=colorspace">https://CRAN.R-project.org/package=colorspace</a>.
 </div>
 <div id="ref-jeppson2021" class="csl-entry" role="listitem">
 Jeppson, Haley, Heike Hofmann, and Di Cook. 2021. <em>Ggmosaic: Mosaic Plots in the ’Ggplot2’ Framework</em>. <a href="https://github.com/haleyjeppson/ggmosaic">https://github.com/haleyjeppson/ggmosaic</a>.
 </div>
 <div id="ref-judd2024" class="csl-entry" role="listitem">
-Judd, Nicholas, Jordy van Langen, and Rogier Kievit. 2026. <em>Ggrain: A Rainclouds Geom for ’Ggplot2’</em>. <a href="https://CRAN.R-project.org/package=ggrain">https://CRAN.R-project.org/package=ggrain</a>.
+<span class="nocase">Judd, Nicholas, Jordy van Langen, and Rogier Kievit</span>. 2026. <em>Ggrain: A Rainclouds Geom for ’Ggplot2’</em>. <a href="https://CRAN.R-project.org/package=ggrain">https://CRAN.R-project.org/package=ggrain</a>.
 </div>
 <div id="ref-kałędkowski2026" class="csl-entry" role="listitem">
 Kałędkowski, Dawid. 2026. <em>Marimekko: Marimekko Plots for ’Ggplot2’</em>. <a href="https://CRAN.R-project.org/package=marimekko">https://CRAN.R-project.org/package=marimekko</a>.
@@ -2909,7 +2908,7 @@ OECD. 2023. <em>PISA 2022 Assessment and Analytical Framework</em>. 1st ed. PISA
 Pedersen, Thomas Lin. 2025a. <em>Ggforce: Accelerating ’Ggplot2’</em>. <a href="https://CRAN.R-project.org/package=ggforce">https://CRAN.R-project.org/package=ggforce</a>.
 </div>
 <div id="ref-pedersen2025c" class="csl-entry" role="listitem">
-———. 2025b. <em>Patchwork: The Composer of Plots</em>. <a href="https://CRAN.R-project.org/package=patchwork">https://CRAN.R-project.org/package=patchwork</a>.
+Pedersen, Thomas Lin. 2025b. <em>Patchwork: The Composer of Plots</em>. <a href="https://CRAN.R-project.org/package=patchwork">https://CRAN.R-project.org/package=patchwork</a>.
 </div>
 <div id="ref-qiu2024" class="csl-entry" role="listitem">
 Qiu, Yixuan. 2026. <em>Showtext: Using Fonts More Easily in r Graphs</em>. <a href="https://CRAN.R-project.org/package=showtext">https://CRAN.R-project.org/package=showtext</a>.
@@ -2918,7 +2917,7 @@ Qiu, Yixuan. 2026. <em>Showtext: Using Fonts More Easily in r Graphs</em>. <a hr
 Rivas-González, Iker. 2022. <em>ggHoriPlot: Horizon Plots for ’Ggplot2’</em>. <a href="https://CRAN.R-project.org/package=ggHoriPlot">https://CRAN.R-project.org/package=ggHoriPlot</a>.
 </div>
 <div id="ref-scherer2021" class="csl-entry" role="listitem">
-Scherer, Cédric. 2021. <span>“Visualizing Distributions with Raincloud Plots (and How to Create Them with Ggplot2).”</span> <a href="https://www.cedricscherer.com/2021/06/06/visualizing-distributions-with-raincloud-plots-and-how-to-create-them-with-ggplot2/">https://www.cedricscherer.com/2021/06/06/visualizing-distributions-with-raincloud-plots-and-how-to-create-them-with-ggplot2/</a>.
+Scherer, Cédric. 2021. <em>Visualizing Distributions with Raincloud Plots (and How to Create Them with Ggplot2)</em>. <a href="https://www.cedricscherer.com/2021/06/06/visualizing-distributions-with-raincloud-plots-and-how-to-create-them-with-ggplot2/">https://www.cedricscherer.com/2021/06/06/visualizing-distributions-with-raincloud-plots-and-how-to-create-them-with-ggplot2/</a>.
 </div>
 <div id="ref-schneider2025" class="csl-entry" role="listitem">
 Schneider, W. Joel. 2025. <em>Ggdiagram: Object-Oriented Diagram Plots with ’Ggplot2’</em>. <a href="https://CRAN.R-project.org/package=ggdiagram">https://CRAN.R-project.org/package=ggdiagram</a>.
@@ -2930,7 +2929,7 @@ Schwabish, Jonathan A. 2021. <em>Better Data Visualizations: A Guide for Scholar
 Sjoberg, David. 2021. <em>Ggstream: Create Streamplots in ’Ggplot2’</em>. <a href="https://CRAN.R-project.org/package=ggstream">https://CRAN.R-project.org/package=ggstream</a>.
 </div>
 <div id="ref-sjoberg2026" class="csl-entry" role="listitem">
-———. 2026. <em>Ggbump: Bump Chart and Sigmoid Curves</em>. <a href="https://github.com/davidsjoberg/ggbump">https://github.com/davidsjoberg/ggbump</a>.
+Sjoberg, David. 2026. <em>Ggbump: Bump Chart and Sigmoid Curves</em>. <a href="https://github.com/davidsjoberg/ggbump">https://github.com/davidsjoberg/ggbump</a>.
 </div>
 <div id="ref-slowikowski2024" class="csl-entry" role="listitem">
 Slowikowski, Kamil. 2026. <em>Ggrepel: Automatically Position Non-Overlapping Text Labels with ’Ggplot2’</em>. <a href="https://CRAN.R-project.org/package=ggrepel">https://CRAN.R-project.org/package=ggrepel</a>.
@@ -2942,34 +2941,34 @@ Spinu, Vitalie, Garrett Grolemund, and Hadley Wickham. 2026. <em>Lubridate: Make
 Wickham, Hadley. 2015. <em>Ggplot2movies: Movies Data</em>. <a href="https://CRAN.R-project.org/package=ggplot2movies">https://CRAN.R-project.org/package=ggplot2movies</a>.
 </div>
 <div id="ref-wickham2016" class="csl-entry" role="listitem">
-———. 2016. <em>Ggplot2: Elegant Graphics for Data Analysis</em>. 2nd ed. Springer-Verlag New York. <a href="https://ggplot2-book.org/">https://ggplot2-book.org/</a>.
+Wickham, Hadley. 2016. <em>Ggplot2: Elegant Graphics for Data Analysis</em>. 2nd ed. Springer-Verlag New York. <a href="https://ggplot2-book.org/">https://ggplot2-book.org/</a>.
 </div>
 <div id="ref-wickham2023b" class="csl-entry" role="listitem">
-———. 2023. <em>Tidyverse: Easily Install and Load the ’Tidyverse’</em>. <a href="https://CRAN.R-project.org/package=tidyverse">https://CRAN.R-project.org/package=tidyverse</a>.
+Wickham, Hadley. 2023. <em>Tidyverse: Easily Install and Load the ’Tidyverse’</em>. <a href="https://CRAN.R-project.org/package=tidyverse">https://CRAN.R-project.org/package=tidyverse</a>.
 </div>
 <div id="ref-wickham2023h" class="csl-entry" role="listitem">
-———. 2025a. <em>Forcats: Tools for Working with Categorical Variables (Factors)</em>. <a href="https://CRAN.R-project.org/package=forcats">https://CRAN.R-project.org/package=forcats</a>.
+Wickham, Hadley. 2025a. <em>Forcats: Tools for Working with Categorical Variables (Factors)</em>. <a href="https://CRAN.R-project.org/package=forcats">https://CRAN.R-project.org/package=forcats</a>.
 </div>
 <div id="ref-wickham2023g" class="csl-entry" role="listitem">
-———. 2025b. <em>Stringr: Simple, Consistent Wrappers for Common String Operations</em>. <a href="https://CRAN.R-project.org/package=stringr">https://CRAN.R-project.org/package=stringr</a>.
+Wickham, Hadley. 2025b. <em>Stringr: Simple, Consistent Wrappers for Common String Operations</em>. <a href="https://CRAN.R-project.org/package=stringr">https://CRAN.R-project.org/package=stringr</a>.
 </div>
 <div id="ref-wickham2024a" class="csl-entry" role="listitem">
-Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, Dewey Dunnington, and Teun van den Brand. 2026. <em>Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics</em>. <a href="https://CRAN.R-project.org/package=ggplot2">https://CRAN.R-project.org/package=ggplot2</a>.
+<span class="nocase">Wickham, Hadley, Winston Chang, Lionel Henry, et al.</span> 2026. <em>Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics</em>. <a href="https://CRAN.R-project.org/package=ggplot2">https://CRAN.R-project.org/package=ggplot2</a>.
 </div>
 <div id="ref-wiki2026a" class="csl-entry" role="listitem">
-Wikipedia contributors. 2026a. <span>“UpSet Plot — <span>W</span>ikipedia<span>,</span> the Free Encyclopedia.”</span> <a href="https://en.wikipedia.org/wiki/UpSet_plot/">https://en.wikipedia.org/wiki/UpSet_plot/</a>.
+Wikipedia contributors. 2026a. <em>UpSet Plot — <span>W</span>ikipedia<span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/UpSet_plot/">https://en.wikipedia.org/wiki/UpSet_plot/</a>.
 </div>
 <div id="ref-wiki2026b" class="csl-entry" role="listitem">
-———. 2026b. <span>“Venn Diagram — <span>W</span>ikipedia<span>,</span> the Free Encyclopedia.”</span> <a href="https://en.wikipedia.org/wiki/Venn_diagram/">https://en.wikipedia.org/wiki/Venn_diagram/</a>.
+Wikipedia contributors. 2026b. <em>Venn Diagram — <span>W</span>ikipedia<span>,</span> the Free Encyclopedia</em>. <a href="https://en.wikipedia.org/wiki/Venn_diagram/">https://en.wikipedia.org/wiki/Venn_diagram/</a>.
 </div>
 <div id="ref-wilke2017" class="csl-entry" role="listitem">
-Wilke, Claus O. 2017. <span>“Goodbye Joyplots.”</span> <a href="https://clauswilke.com/blog/2017/09/15/goodbye-joyplots/">https://clauswilke.com/blog/2017/09/15/goodbye-joyplots/</a>.
+Wilke, Claus O. 2017. <em>Goodbye Joyplots</em>. <a href="https://clauswilke.com/blog/2017/09/15/goodbye-joyplots/">https://clauswilke.com/blog/2017/09/15/goodbye-joyplots/</a>.
 </div>
 <div id="ref-wilke2019" class="csl-entry" role="listitem">
-———. 2019. <em>Fundamentals of Data Visualization: A Primer on Making Informative and Compelling Figures</em>. 1st ed. O’Reilly. <a href="https://clauswilke.com/dataviz/">https://clauswilke.com/dataviz/</a>.
+Wilke, Claus O. 2019. <em>Fundamentals of Data Visualization: A Primer on Making Informative and Compelling Figures</em>. 1st ed. O’Reilly. <a href="https://clauswilke.com/dataviz/">https://clauswilke.com/dataviz/</a>.
 </div>
 <div id="ref-wilke2024" class="csl-entry" role="listitem">
-———. 2025. <em>Ggridges: Ridgeline Plots in ’Ggplot2’</em>. <a href="https://CRAN.R-project.org/package=ggridges">https://CRAN.R-project.org/package=ggridges</a>.
+Wilke, Claus O. 2025. <em>Ggridges: Ridgeline Plots in ’Ggplot2’</em>. <a href="https://CRAN.R-project.org/package=ggridges">https://CRAN.R-project.org/package=ggridges</a>.
 </div>
 <div id="ref-wilke2022" class="csl-entry" role="listitem">
 Wilke, Claus O., and Brenton M. Wiernik. 2022. <em>Ggtext: Improved Text Rendering Support for ’Ggplot2’</em>. <a href="https://CRAN.R-project.org/package=ggtext">https://CRAN.R-project.org/package=ggtext</a>.
