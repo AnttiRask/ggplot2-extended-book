@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.25">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Antti Rask">
 <title>Preface – ggplot2 extended</title>
@@ -52,14 +52,15 @@ div.csl-indent {
 <link href="./cover.jpg" rel="icon" type="image/jpeg">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-7104e6f5f77a0dbbacb28eb376617911.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-4629e7eef7b60ee973ddd10e1ba5b1c0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
@@ -106,7 +107,9 @@ div.csl-indent {
     </div>
   </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="./">ggplot2 extended</a> 
         <div class="sidebar-tools-main">
@@ -367,7 +370,7 @@ div.csl-indent {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-This chapter is now done!
+<span class="screen-reader-only">Note</span>This chapter is now done!
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -380,8 +383,8 @@ This chapter is now done!
 <section id="sec-landscape" class="level2"><h2 class="anchored" data-anchor-id="sec-landscape">Landscape</h2>
 <p>Look at the figure. The amount of R packages <em>depending</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, <em>importing</em><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, or <em>suggesting</em><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> <span class="citation" data-cites="wickham2023f">(<a href="references.html#ref-wickham2023f" role="doc-biblioref">Wickham and Bryan 2023</a>)</span> ggplot2 is increasing:</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/ggplot2_dependencies_2024-12-31.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="ggplot2 dependencies between 2007-2024"><img src="img/ggplot2_dependencies_2024-12-31.png" class="img-fluid figure-img" alt="ggplot2 dependencies between 2007-2024"></a></p>
-<figcaption><strong>ggplot2</strong> dependencies between 2007-2024</figcaption></figure>
+<figure class="figure"><p><a href="img/ggplot2_dependencies_2025-12-31.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="ggplot2 dependencies between 2007-2025"><img src="img/ggplot2_dependencies_2025-12-31.png" class="img-fluid figure-img" alt="ggplot2 dependencies between 2007-2025"></a></p>
+<figcaption><strong>ggplot2</strong> dependencies between 2007-2025</figcaption></figure>
 </div>
 <p>Among these thousands of packages are also hundreds of ggplot2 extensions. And these are the ones that are on <a href="https://cran.r-project.org/">CRAN</a> (The Comprehensive R Archive Network). There are also packages on <a href="https://github.com/">GitHub</a> and similar platforms. Packages that no one have yet added to CRAN. Or those that have once been there, but CRAN has since archived for one reason or another.</p>
 
@@ -447,13 +450,14 @@ Wickham, Hadley, and Jennifer Bryan. 2023. <em>R Packages: Organize, Test, Docum
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

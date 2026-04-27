@@ -6,4 +6,5 @@
 /.quarto/
 
 muistio.txt
+**/*.quarto_ipynb
 .positai

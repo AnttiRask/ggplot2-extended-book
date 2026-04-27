@@ -39,7 +39,7 @@ We use color to show whether the values are positive or negative. But also for t
 
 As Jonathan Schwabish points out in their book, Better Data Visualizations [@schwabish2021], "the purpose of the horizon chart is not necessarily to enable readers to pick out specific values, but instead to easily spot general trends and identify extreme values".
 
-#### Viz #1: Helsinki temperatures, part I {#sec-viz-1-helsinki-temperatures-part-i}
+#### Viz #1: Helsinki temperatures, part I - ggHoriPlot {#sec-viz-1-helsinki-temperatures-part-i-gghoriplot}
 
 For the horizon chart, we'll be using **ggHoriPlot** [@rivas-gonzalez2022]. The package includes various example data sets. But we'll be using weather data from the **Finnish Meteorological Institute** (FMI). Its open data, weather observations are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
@@ -112,26 +112,21 @@ Fifteen outliers were filtered out, and we can continue. Next, we’ll calculate
 #| warning: false
 #| results: asis
 
-# Calculate the midpoint of the temperature range for use in horizon chart
 origin <- cutpoints %>%
   summarize(origin = mean(range(avg_temperature_celsius))) %>% 
   pull(origin)
 
-# Create the scale vector:
-# 7 evenly spaced values across the filtered temperature range.
-# Drop the 4th value (the midpoint), as required by gghoriplot scale input
+# 7 evenly spaced values across the temperature range, minus the midpoint
+# (ggHoriPlot's scale input expects an even number of cutpoints)
 scale <- cutpoints %>%
   summarize(
     min_val = min(avg_temperature_celsius),
     max_val = max(avg_temperature_celsius)
   ) %>%
-  # Generate 7 evenly spaced values
   with(seq(min_val, max_val, length.out = 7)) %>% 
-  # Convert to tibble to use dplyr::slice()
+  # round-trip to tibble so we can use dplyr::slice()
   tibble() %>%
-  # Remove the middle value (4th out of 7)
   slice(-4) %>% 
-  # Return as plain numeric vector
   pull(.)
 ```
 
@@ -154,70 +149,60 @@ Now we’re ready for the visualization itself. Besides ggHoriPlot and ggplot2, 
 We're using `geom_horizon()` to create the horizon chart. The arguments to pay attention to are **fill** (inside `aes()`), **origin**, and **horizonscale**. They are all using the origin and scale we calculated earlier. `scale_fill_hcl()` is also available in the ggHoriPlot package. Otherwise, we’re using basic ggplot2 functionalities.
 
 ```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
 #| message: false
 #| warning: false
 #| results: asis
 
-library(ggHoriPlot) # for geom_horizon() to create horizon plots
-library(ggplot2)    # for general plotting functions
-library(ggthemes)   # for additional themes like theme_few()
+library(ggHoriPlot)
+library(ggplot2)
+library(ggthemes)
 
-# Create the horizon chart
 ggplot(temperature_hki) +
   
-  # Horizon chart layer, mapping x, y, and fill aesthetics
   geom_horizon(
     aes(
-      date_dummy,              # x-axis: typically date
-      avg_temperature_celsius, # y-axis: temperature variable
-      fill = ..Cutpoints..     # fill determined by horizon chart cutpoints
+      date_dummy,
+      avg_temperature_celsius,
+      fill = ..Cutpoints..
     ), 
-    origin       = origin, # baseline (e.g., 0°C); defines neutral midpoint
-    horizonscale = scale   # vertical scale; controls how bands are split
+    origin       = origin,
+    horizonscale = scale
   ) +
+
+  # Diverging palette, reversed so red = warm, blue = cold
+  scale_fill_hcl(palette = "RdBu", reverse = TRUE) +
   
-  # Use a diverging color scale (red-blue), reversed so red = high temp
-  scale_fill_hcl(palette = 'RdBu', reverse = TRUE) +
-  
-  # Create one small horizon chart per year, stacked vertically
   facet_grid(vars(year)) +
   
-  # Use a clean, simple theme based on the rules and examples from Stephen
-  # Few's Show Me the Numbers and Practical Rules for Using Color in Charts
   theme_few() +
   
-  # Customize appearance
   theme(
-    # Customize x-axis labels
     axis.text.x     = element_text(size = 10),
-    # Remove unnecessary labels
-    axis.text.y     = element_blank(),                   
-    axis.title.y    = element_blank(),                   
-    axis.ticks.y    = element_blank(),                   
-    panel.border    = element_blank(),                   
-    # Remove vertical space between facets
-    panel.spacing.y = unit(0, "lines"),                  
-    # Subtle caption style
+    axis.text.y     = element_blank(),
+    axis.title.y    = element_blank(),
+    axis.ticks.y    = element_blank(),
+    panel.border    = element_blank(),
+    # No vertical space between yearly facets
+    panel.spacing.y = unit(0, "lines"),
     plot.caption    = element_text(size = 8, hjust = 0, color = "#777777"),
-    # Adjust margins because otherwise Jan is too close to the left edge
+    # Left margin bumped up so "Jan" isn't clipped
     plot.margin     = margin(10, 10, 10, 15),             
-    # Customize facet labels
     strip.text.y    = element_text(size = 8, angle = 0, hjust = 0)  
   ) +
   
-  # Format x-axis to show months (with short names) without expansion
   scale_x_date(
     expand      = c(0, 0),
     date_breaks = "1 month", 
     date_labels = "%b"
   ) +
   
-  # Add informative plot title, subtitle, and data source caption
   labs(
-    title    = "Average daily temperature (Celsius) in Helsinki",
+    title    = "Average daily temperature (°C) in Helsinki",
     subtitle = "From 2000 to 2024",
     caption  = "Data: Finnish Meteorological Institute open data, weather observations (CC BY 4.0) | Visualization: Antti Rask",
-    x        = NULL # remove x-axis title
+    x        = NULL
   )
 ```
 
@@ -229,7 +214,7 @@ As the ggplot2 documentation tells us, an area chart is, in fact, a special case
 
 The ribbon chart, then, displays the area between two lines. `geom_ribbon()` gets the job done when the lines don’t meet. But as you’ll soon see, for those cases where they do, you need something called *braiding*. You can read more about it in the **ggbraid** [@grantham2025] [documentation](https://nsgrantham.github.io/ggbraid/articles/temps.html#the-unbraided-ribbon-problem).
 
-#### Viz #2: IMDB movies, Part I {#sec-viz-2-imdb-movies-part-i}
+#### Viz #2: IMDb movies, Part I - ggbraid {#sec-viz-2-imdb-movies-part-i-ggbraid}
 
 We’ll take a look at what the problem (and solution) looks like with real data. The question we'd like to answer here is which genre, comedy or drama, has produced more movies during the 20th century.
 
@@ -240,6 +225,8 @@ But let’s first examine the data we’ll be using for this. Time series data w
 #| warning: false
 #| echo:    false
 
+library(dplyr)
+library(rmarkdown)
 library(ggplot2movies)
 
 movies_na <- movies %>%
@@ -264,27 +251,14 @@ One minor detail to note here is that we’ll turn the genre column from *charac
 library(forcats)
 library(tidyr)
 
-# Transform and filter the `movies_na` data set
 movies_na_long <- movies_na %>%
-  
-  # Pivot genre columns (from Action to Short) into long format:
-  # Creates two columns: "genre" and "value"
   pivot_longer(Action:Short, names_to = "genre") %>%
-  
-  # Filter to keep only:
-  # - rows where the movie is flagged in that genre (value != 0)
-  # - only the genres Comedy and Drama
-  # - movies released between 1900 and 2000
   filter(
     value != 0,
     genre %in% c("Comedy", "Drama"),
     between(year, 1900, 2000)
   ) %>%
-  
-  # Convert genre to a factor
   mutate(genre = as_factor(genre)) %>%
-  
-  # Count the number of movies per genre per year
   count(genre, year)
 ```
 
@@ -306,19 +280,12 @@ We’ll also be adding a **fill_condition** column. We’ll use that later to de
 #| message: false
 #| warning: false
 
-# Convert long-format genre counts back to wide format and compare values
 movies_na_wide <- movies_na_long %>%
-  
-  # Pivot genre counts from long to wide:
-  # Each genre becomes its own column (e.g., Comedy, Drama),
-  # with yearly counts as values
   pivot_wider(
     names_from  = genre,
     values_from = n
   ) %>%
-  
-  # Create a new logical column indicating whether
-  # Comedy had fewer movies than Drama in that year
+  # fill_condition = TRUE when Drama outpaced Comedy that year
   mutate(fill_condition = Comedy < Drama)
 ```
 
@@ -340,6 +307,8 @@ Here’s what the basic visualization would look like with `geom_ribbon()` from 
 #| message: false
 #| warning: false
 
+library(ggplot2)
+
 ggplot() +
   geom_line(
     aes(year, n, linetype = genre),
@@ -359,28 +328,27 @@ But that's where ggbraid's `geom_braid()` comes to the rescue. The basic code is
 The rest of the code is to make the visualization more presentable. Note that we'll move the legend inside the plot. We'll use the **legend.position** argument inside the `theme()` function to do that. There's enough *white space* inside the plot to accommodate the legend. This way, we gain more space to showcase the time series element of the plot.
 
 ```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
 #| message: false
 #| warning: false
 
-library(ggbraid) # for geom_braid() to visualize overlapping time series
-library(ggplot2) # for general plotting functions
+library(ggbraid)
+library(ggplot2)
 
 ggplot() +
   
-  # Line plot for number of movies per genre per year
   geom_line(
     aes(year, n, linetype = genre),
     data = movies_na_long
   ) +
   
-  # Braid layer to highlight which genre had more movies per year
   geom_braid(
     aes(year, ymin = Comedy, ymax = Drama, fill = fill_condition),
     data  = movies_na_wide,
     alpha = 0.7
   ) +
   
-  # Text annotation when comedies dominated
   annotate(
     "text",
     x     = 1938,
@@ -391,7 +359,6 @@ ggplot() +
     color = "#F36523"
   ) +
   
-  # Text annotation when dramas dominated
   annotate(
     "text",
     x     = 1975,
@@ -402,27 +369,23 @@ ggplot() +
     color = "#125184"
   ) +
   
-  # Manually set fill colors for the braid based on fill condition
   scale_fill_manual(values = c("#F36523", "#125184")) +
   
-  # Customize x-axis: limit, spacing, and ticks
   scale_x_continuous(
     expand = c(0, 1),
     limits = c(1899, 2001),
     breaks = seq(1900, 2000, by = 10)
   ) +
   
-  # Customize y-axis: limit, spacing, and ticks
   scale_y_continuous(
     expand = c(0, 1),
     limits = c(0, 800),
     breaks = seq(0, 800, by = 100)
   ) +
   
-  # Hide fill legend (keep linetype legend only)
+  # Hide the fill legend; keep only the linetype legend for genre
   guides(fill = "none") +
   
-  # Add plot title, subtitle, and axis labels
   labs(
     linetype = NULL,
     title    = "100 years of cinema",
@@ -432,10 +395,8 @@ ggplot() +
     y        = NULL
   ) +
   
-  # Use a clean black-and-white theme as a base
   theme_bw() +
   
-  # Custom legend appearance and positioning
   theme(
     legend.direction = "horizontal",
     legend.box.background = element_rect(
@@ -451,7 +412,7 @@ ggplot() +
 
 I'm not an expert on this topic either. Based on this data set, however, there appears to be a correlation between major wars (WWI, WWII, and the Vietnam War) and the production of more comedies than dramas.
 
-#### Viz #3: Helsinki temperatures, part II {#sec-viz-3-helsinki-temperatures-part-ii}
+#### Viz #3: Helsinki temperatures, part II - ggbraid {#sec-viz-3-helsinki-temperatures-part-ii-ggbraid}
 
 Let's take a look at another ribbon chart. We can use the data set from @sec-horizon-chart, which contains average daily temperatures in Helsinki from 2000 to 2024. We'll compare the two years, 2000 and 2024. Which one had more warmer days?
 
@@ -464,14 +425,8 @@ One minor detail to note here is that we’ll need to turn the year column from 
 #| warning: false
 
 temperature_hki_long <- temperature_hki %>%
-  
-  # Filter data to include only the years 2000 and 2024
   filter(year %in% c(2000, 2024)) %>%
-  
-  # Convert `year` to a factor (useful for plotting or grouping)
   mutate(year = as_factor(year)) %>%
-  
-  # Keep only the necessary columns for analysis or visualization
   select(avg_temperature_celsius, year, date_dummy)
 ```
 
@@ -481,19 +436,13 @@ In this next transformation, note the use of the **names_prefix** argument. A co
 #| message: false
 #| warning: false
 
-# Pivot data from long to wide format
 temperature_hki_wide <- temperature_hki_long %>%
-  
-  # Creates one column per year (e.g., year_2000, year_2024),
-  # using temperature values as the content
   pivot_wider(
     names_from   = year,
     names_prefix = "year_",
     values_from  = avg_temperature_celsius
   ) %>%
-  
-  # Create a new logical column to compare the two years:
-  # TRUE if 2024 temp > 2000 temp for that date
+  # fill_condition = TRUE when 2024 was warmer than 2000 that day
   mutate(fill_condition = year_2000 < year_2024)
 ```
 
@@ -504,11 +453,7 @@ We’ll also count the number (and percentage of total) of days where the averag
 #| warning: false
 
 temperature_hki_wide %>%
-  
-  # Count how many days had each condition (TRUE/FALSE)
   count(fill_condition) %>%
-  
-  # Calculate the percentage for each group
   mutate(n_pct = round(n / sum(n), 3))
 ```
 
@@ -521,24 +466,23 @@ The visualization itself is like the movie example. The most significant differe
 `as_date()` from **lubridate** [@spinu2024] allows us to use the date in *character* format to map it to the x-axis. This helps us place the annotations in the correct position.
 
 ```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
 #| message: false
 #| warning: false
 
-library(ggbraid)   # for geom_braid(), visualizing area between two lines
-library(ggplot2)   # for general plotting functions
-library(lubridate) # for working with date types
-library(stringr)   # for string manipulation like str_glue()
+library(ggbraid)
+library(ggplot2)
+library(lubridate)
+library(stringr)
 
 ggplot() +
   
-  # Add temperature lines for each year (2000 and 2024)
   geom_line(
     aes(date_dummy, avg_temperature_celsius, linetype = year),
     data = temperature_hki_long
   ) +
   
-  # Add braided area showing difference between 2000 and 2024
-  # Fill based on which year was warmer (fill_condition)
   geom_braid(
     aes(
       date_dummy,
@@ -550,7 +494,6 @@ ggplot() +
     alpha = 0.7
   ) +
   
-  # Annotate area where 2000 was warmer
   annotate(
     "text",
     x     = as_date("2024-03-01"),
@@ -564,7 +507,6 @@ ggplot() +
     color = "#125184"
   ) +
   
-  # Annotate area where 2024 was warmer
   annotate(
     "text",
     x     = as_date("2024-11-15"),
@@ -578,23 +520,21 @@ ggplot() +
     color = "#F36523"
   ) +
   
-  # Manual fill colors: blue for 2000 warmer, orange for 2024 warmer
+  # Blue for 2000 warmer, orange for 2024 warmer
   scale_fill_manual(values = c("#125184", "#F36523")) +
   
-  # Format x-axis: monthly ticks, short month labels
   scale_x_date(
     date_breaks = "1 month",
     date_labels = "%b",
     expand      = c(0, 0.1)
   ) +
   
-  # Format y-axis: show temperature with °C symbol
+  # Append °C symbol to y-axis labels
   scale_y_continuous(labels = ~ str_glue("{.x} °C")) +
   
-  # Hide fill legend (keep linetype legend only)
+  # Hide the fill legend; keep only the linetype legend for year
   guides(fill = "none") +
   
-  # Add plot title, subtitle, and caption
   labs(
     linetype = NULL,
     title    = "Is the temperature rising?",
@@ -604,10 +544,8 @@ ggplot() +
     y        = NULL
   ) +
   
-  # Use a clean, minimal black-and-white theme
   theme_bw() +
   
-  # Customize legend and caption styling
   theme(
     legend.direction = "horizontal",
     legend.box.background = element_rect(
@@ -616,7 +554,7 @@ ggplot() +
       linewidth = 0.5
     ),
     legend.key.size  = unit(2, "line"),
-    legend.position  = c(0.83, 0.12), # bottom-right position
+    legend.position  = c(0.83, 0.12), # relative position inside plot
     legend.text      = element_text(size = 10),
     plot.caption     = element_text(size = 8, hjust = 1, color = "#777777")
   )
@@ -628,11 +566,11 @@ And so we have another perspective on the Helsinki temperature data set.
 
 A streamgraph is a stacked area chart where the areas are positioned around the central axis.
 
-#### Viz #4: ggplot2 dependencies {#sec-viz-4-ggplot2-dependencies}
+#### Viz #4: ggplot2 dependencies (ggstream) {#sec-viz-4-ggplot2-dependencies-ggstream}
 
 If you’ve read the book in chronological order, you’ve already encountered a streamgraph in @sec-landscape. We will use that visualization as the example in this section.
 
-The purpose of this visualization is to illustrate how the ggplot2 dependencies have evolved from a small speck in 2007 to their current state at the end of 2024. This is the exact use case for which I would use a streamgraph.
+The purpose of this visualization is to illustrate how the ggplot2 dependencies have evolved from a small speck in 2007 to their current state at the end of 2025. This is the exact use case for which I would use a streamgraph.
 
 Before we proceed, I want to mention **Georgios Karamanis**. Their [original visualization](https://github.com/gkaramanis/tidytuesday/tree/master/2023/2023-week_38) for [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday) (see Figure 3.1) was the inspiration for my version.
 
@@ -658,7 +596,7 @@ We'll cover these in more detail as we proceed.
 #| warning: false
 #| results: asis
 
-ggplot2_dependencies_by_year <- read_csv("data/ggplot2-dependencies-by-year-2025-06-21.csv")
+ggplot2_dependencies_by_year <- read_csv("data/ggplot2-dependencies-by-year-2025-12-31.csv")
 ```
 
 Let's take a look at the data we're working with. It was gathered with **pkgsearch** [@csardi2025].
@@ -673,7 +611,7 @@ ggplot2_dependencies_by_year %>%
   paged_table()
 ```
 
-We won’t reiterate the definitions of the different **types** (see @sec-landscape for them). But we can see that the *count* for each type starts small in 2007 and increases significantly by 2024.
+We won’t reiterate the definitions of the different **types** (see @sec-landscape for them). But we can see that the *count* for each type starts small in 2007 and increases significantly by 2025.
 
 Let’s first take a look at what the streamgraph would look like with default settings. We'll use `geom_stream()` from **ggstream** [@sjoberg2021] for that.
 
@@ -734,22 +672,16 @@ The labels are in an HTML-style format. To be used later with **ggtext** [@wilke
 #| warning: false
 
 annotation_numbers <- ggplot2_dependencies_by_year %>%
-  
-  # Total number of packages per dependency type
   summarize(
     n   = sum(n),
     .by = type
   ) %>%
-  
-  # Ensure consistent vertical stacking order
+  # sort alphabetically so the manual y-positions below line up
   arrange(type) %>%
-  
   mutate(
-    
-    # Manually assign y-positions for labels
-    y = c(390, 75, -300),
-    
-    # Create HTML-styled rich labels with colored numbers
+    # manual y-positions matched to each stream layer's vertical center
+    y = c(440, 75, -350),
+    # HTML spans for ggtext::geom_richtext() to render with per-type colors
     label = case_when(
       type == "Depends" ~
         str_glue("**<span style='color:{color_1}'>{n}</span>**"),
@@ -777,139 +709,120 @@ Usually, you would start with the main geom for the plot. But we must begin with
 
 The new packages we haven't mentioned before are **colorspace** [@ihaka2024] and **ggrepel** [@slowikowski2024].
 
-We get back to them both in detail later, but colorspace (see more in @sec-colorspace)) is used for color manipulation. In this graph, we're making the borders of the areas slightly darker than the areas themselves. ggrepel (see more in @sec-repel-overlapping-labels-and-text) is used for creating labels that don't overlap.
+We get back to them both in detail later, but colorspace (see more in @sec-colorspace) is used for color manipulation. In this graph, we're making the borders of the areas slightly darker than the areas themselves. ggrepel (see more in @sec-repel-overlapping-labels-and-text) is used for creating labels that don't overlap.
 
 ```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
 #| message: false
 #| warning: false
 
-library(colorspace) # for color manipulation like darken()
-library(ggplot2)    # for general plotting functions
-library(ggrepel)    # for placing non-overlapping labels
-library(ggstream)   # for creating streamgraphs
-library(ggtext)     # for text manipulation
-library(stringr)    # for string manipulation like str_glue()
+library(colorspace)
+library(ggplot2)
+library(ggrepel)
+library(ggstream)
+library(ggtext)
+library(stringr)
 
 ggplot(ggplot2_dependencies_by_year) +
   
-  # Add a small point at the origin to anchor the first version label
+  # Anchor point for the first version label
   geom_point(
     aes(x = 2007, y = 0),
-    data = NULL,
-    size = 1.5,
-    stat = "unique",
+    data = tibble(),
+    size = 1.5
   ) +
   
-  # Add a label for ggplot2 version 0.5 (2007)
+  # Version markers along the streamgraph (manually positioned)
   geom_label_repel(
     aes(x = 2007, y = 0, label = "{ggplot2}\nver 0.5"),
-    data          = NULL,
-    stat          = "unique",
-    nudge_y       = 75,
-    label.size    = NA,
-    lineheight    = 0.5,
-    family        = font_family
+    data        = tibble(),
+    nudge_y     = 75,
+    linewidth   = 0,
+    lineheight  = 0.9,
+    family      = font_family
   ) +
   
-  # Add a label for ggplot2 version 1.0 (2014)
   geom_label_repel(
     aes(x = 2014, y = 50, label = "{ggplot2}\nver 1.0"),
-    data          = NULL,
-    stat          = "unique",
-    nudge_y       = 115,
-    label.size    = NA,
-    lineheight    = 0.5,
-    family        = font_family
+    data       = tibble(),
+    nudge_y    = 115,
+    linewidth  = 0,
+    lineheight = 0.9,
+    family     = font_family
   ) +
   
-  # Add a label for ggplot2 version 2.0 (2015)
   geom_label_repel(
     aes(x = 2015, y = 125, label = "{ggplot2}\nver 2.0"),
-    data          = NULL,
-    stat          = "unique",
-    nudge_y       = 140,
-    label.size    = NA,
-    lineheight    = 0.5,
-    family        = font_family
+    data       = tibble(),
+    nudge_y    = 100,
+    linewidth  = 0,
+    lineheight = 0.9,
+    family     = font_family
   ) +
   
-  # Add a label for ggplot2 version 3.0 (2018)
   geom_label_repel(
     aes(x = 2018, y = 100, label = "{ggplot2}\nver 3.0"),
-    data          = NULL,
-    stat          = "unique",
-    nudge_y       = 200,
-    label.size    = NA,
-    lineheight    = 0.5,
-    family        = font_family
+    data       = tibble(),
+    nudge_y    = 200,
+    linewidth  = 0,
+    lineheight = 0.9,
+    family     = font_family
   ) +
   
-  # Add a label for ggplot2 version 3.5 (2024)
   geom_label_repel(
-    aes(x = 2024, y = 410, label = "{ggplot2}\nver 3.5"),
-    data          = NULL,
-    stat          = "unique",
-    nudge_y       = 75,
-    label.size    = NA,
-    lineheight    = 0.5,
-    family        = font_family
+    aes(x = 2025, y = 450, label = "{ggplot2}\nver 4.0"),
+    data       = tibble(),
+    nudge_y    = 100,
+    linewidth  = 0,
+    lineheight = 0.9,
+    family     = font_family
   ) +
   
-  # Create a stream-like area chart showing the number of dependent 
-  # packages by type and year
   geom_stream(
     aes(
       x     = year,
       y     = n,
       fill  = type,
-      # Slightly darken stream borders for contrast
-      color = after_scale(darken(fill))
+      color = after_scale(darken(fill)) # borders slightly darker than fills
     ),
-    # bw means bandwidth of kernel density estimation
-    # This is the argument you can control the waviness with
-    # The closer the value is to 1, the less wavy the graph
+    # bw controls waviness (bandwidth for kernel density); closer to 1 = less wavy
     bw        = 1,
     linewidth = 0.1
   ) +
-  
-  # Add annotations on the right side using rich text labels from ggtext
+
   geom_richtext(
     aes(
-      x     = 2024 + 0.2,
+      x     = 2025 + 0.2,
       y     = y,
       label = label
     ),
-    data = annotation_numbers,
+    data       = annotation_numbers,
     hjust      = 0,
     lineheight = 0.9,
     label.size = NA,
     size       = 5,
     family     = font_family
   ) +
-  
-  # Configure the x-axis with major and minor breaks
+
   scale_x_continuous(
-    breaks       = seq(2008, 2024, 2),
-    minor_breaks = 2007:2024
+    breaks       = seq(2007, 2025, 2),
+    minor_breaks = 2007:2025
   ) +
   
-  # Manually assign fill colors for the dependency types
   scale_fill_manual(values = colors_viz_4) +
   
   # Allow annotations to extend outside the plot area
   coord_cartesian(clip = "off") +
   
-  # Set plot titles and descriptions using inline color styling
   labs(
-    title = str_glue("Number of packages on CRAN in 2024 <span style='color:{color_1}'>depending on</span>, <span style='color:{color_2}'>importing</span>, or <span style='color:{color_3}'>suggesting</span> {{ggplot2}}"),
-    subtitle = "Aggregated by the initial package release years. Categories may change from one version to another and were taken from the latest versions.",
-    caption  = "Data: CRAN via {pkgsearch} | Visualization: Antti Rask | Updated: 2024-12-31"
+    title = str_glue("Number of packages on CRAN in 2025 <span style='color:{color_1}'>depending on</span>, <span style='color:{color_2}'>importing</span>, or <span style='color:{color_3}'>suggesting</span> {{ggplot2}}"),
+    subtitle = "Aggregated by the initial package release years. Categories may change from one version to another and were taken from the original versions.",
+    caption  = "Data: CRAN via {pkgsearch} | Visualization: Antti Rask | Updated: 2025-12-31"
   ) +
   
-  # Apply a clean, minimal theme and customize text styling
   theme_minimal(base_family = font_family) +
   
-  # Customize title and caption styling
   theme(
     axis.text.x = element_text(
       size   = 14,
@@ -921,10 +834,10 @@ ggplot(ggplot2_dependencies_by_year) +
     legend.position       = "none",
     panel.grid.major.y    = element_blank(),
     panel.grid.minor.y    = element_blank(),
-    plot.margin           = margin(10, 50, 10, 10),
+    plot.margin           = margin(10, 10, 10, 10),
     plot.title            = element_markdown(
       face  = "bold",
-      size  = 16,
+      size  = 20,
       hjust = 0.5
     ),
     plot.subtitle = element_text(
@@ -956,7 +869,7 @@ A Likert chart is a diverging stacked bar chart. It’s used to visualize respon
 
 For Likert charts, **ggstats** [@larmarange2025a] is my package of choice. It also has other functionalities, which we’ll return to in @sec-ggstats.
 
-#### Viz #5: PISA 2022 Questionnaire {#sec-viz-5-pisa-2022-questionnaire}
+#### Viz #5: PISA 2022 Questionnaire (gglikert) {#sec-viz-5-pisa-2022-questionnaire-gglikert}
 
 I was thinking of a good, open data source for the Likert chart. Most packages (ggstats included) use older **PISA** (Programme for International Student Assessment) questionnaires for the example data. I was able to find more recent data and selected seven statements from the PISA 2022 Student Questionnaire [@oecd2023]. There was a lot of data to choose from, but I selected the statements that a) dealt with creativity and b) had the fewest number of NAs in the answers.
 
@@ -1120,48 +1033,31 @@ We can facet the rows using the statements as the upper level. And then use the 
 The rest of the code is primarily used to make the visualization more presentable.
 
 ```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
 #| message: false
 #| warning: false
 
-library(ggplot2) # for general plotting functions
-library(ggstats) # for Likert charts
+library(ggplot2)
+library(ggstats)
 
-# Create a Likert chart for PISA 2022 student statements, faceted by statement
 gglikert(
-  
-  # Data
   pisa_2022_statements_refactored,
-  
-  # Include all columns except 'country'
-  include = -country,
-  
-  # y-axis shows countries
-  y = "country",
-  
-  # Use custom labels for statements
+  include         = -country,
+  y               = "country",
   variable_labels = pisa_2022_labels_vector,
-  
-  # Sort responses in descending order
-  sort = "descending",
-  
-  # Facet rows by statement variable
-  facet_rows = vars(.question)
+  sort            = "descending",
+  facet_rows      = vars(.question)
 ) +
   
-  # Adjust facet grid layout: wrap statement labels and move to the left side
+  # Override the default facet layout: move statement labels to the left and wrap them
   facet_grid(
-    
-    # Facet rows by statement variable
     rows     = vars(.question),
-    
-    # Switch facet labels to the left side
     switch   = "y",
-    
-    # Wrap long labels at 30 characters
-    labeller = label_wrap_gen(30)
+    labeller = label_wrap_gen(30) # wrap long labels at ~30 chars
   ) +
   
-  # Manually set Likert scale colors for each response level
+  # Diverging red-to-blue palette mirrors the disagree-to-agree axis
   scale_fill_manual(
     values = c(
       "Strongly disagree" = "#ca0020",
@@ -1171,19 +1067,18 @@ gglikert(
     )
   ) +
   
-  # Add title, subtitle, and caption to the plot
   labs(
     title    = "The majority of respondents in Canada, Finland, and Great Britain feel creative, even if they don't all express themselves through art",
     subtitle = "PISA 2022 Student Questionnaire - a sample of 7 statements",
     caption  = "Data: OECD | Visualization: Antti Rask"
   ) +
   
-  # Apply custom theme styling for text, facets, and layout
   theme(
     text                  = element_text(family = "wqy-microhei"),
     axis.text             = element_text(color = "#333333"),
     strip.background.y    = element_rect(fill = "#FFD166"),
-    strip.placement.y     = "top", # Place facet labels on top, or in this case, left
+    # "top" here means outside the panels — in this left-facet layout, that's the left edge
+    strip.placement.y     = "top",
     strip.text.y.left     = element_text(angle = 0, hjust = 0.5, color = "#333333"),
     legend.margin         = margin(0, 0, 0, 0),
     plot.caption          = element_text(hjust = 0, color = "#333333"),
@@ -1199,15 +1094,15 @@ The kids seem to be alright! At least when it comes to feeling creative. There a
 
 A mosaic chart is a special type of stacked bar chart. It differs from a normal one in that “the heights and widths of individual shaded areas vary” [@wilke2019].
 
-To create a mosaic chart, we’ll be using **ggmosaic** [@jeppson2021]. You can use it to create bar charts, stacked bar charts, mosaic charts, and double-decker charts. But we’ll be concentrating on the mosaic chart.
+To create a mosaic chart, we’ll be using **marimekko** [@kałędkowski2026]. It provides `geom_marimekko()` as a native ggplot2 layer, so you can combine it with any other ggplot2 functionality (facets, themes, annotations, etc.).
 
-To use ggmosaic, you’ll also have to install **labelled** [@larmarange2025b]. If you don’t, ggmosaic will remind you of this fact when you try to run your code for the first time.
+**Note!** I wrote the first version of this chapter with **ggmosaic** [@jeppson2021] in mind. But it was archived from **CRAN** on 2025-11-10 (as issues remained uncorrected despite reminders). Even the version on GitHub isn't working currently. So I had to find a replacement. Marimekko is that package.
 
-#### Viz #6: IMDB movies, Part II {#sec-viz-6-imdb-movies-part-ii}
+#### Viz #6: IMDb movies, Part II - marimekko {#sec-viz-6-imdb-movies-part-ii-marimekko}
 
-We return to the IMDB movies data set. This time looking at how many movies in each genre have a certain *MPAA rating* (among those movies that have a rating in the first place).
+We return to the IMDb movies data set. This time, looking at how many movies in each genre have a certain *MPAA rating* (among those movies that have a rating in the first place).
 
-We’ll use the already familiar movies_na data set. But we’ll have to make some adjustments to get it ready for ggmosaic.
+We’ll use the already familiar movies_na data set. But we’ll have to make some adjustments to get it ready for marimekko.
 
 The new function here is `fct_infreq()`. It helps us order the factor levels by size, even though we don’t have a separate column for those counts.
 
@@ -1215,34 +1110,18 @@ The new function here is `fct_infreq()`. It helps us order the factor levels by 
 #| message: false
 #| warning: false
 
-# Transform and filter the `movies_na` data set
-movies_ggmosaic <- movies_na %>%
-  
-  # Pivot genre columns (from Action to Short) into long format:
-  # Creates two columns: "genre" and "value"
+movies_marimekko <- movies_na %>%
   pivot_longer(Action:Short, names_to = "genre") %>%
-  
-  # Filter to keep only:
-  # - rows where the movie is flagged in that genre
-  # - rows where the mpaa value is not NA
   filter(
     value != 0,
     !is.na(mpaa)
   ) %>%
-  
-  # Select only the mpaa and genre columns
   select(mpaa, genre) %>%
-  
-  # Convert both columns to a factor
   mutate(
-    
-    # For mpaa the levels and their order is clear
+    # MPAA levels ordered by restrictiveness, not alphabetically
     mpaa = mpaa %>% factor(levels = c("PG", "PG-13", "R", "NC-17")),
-    
-    # For genre, we'll use fct_infreq to order the levels by number of 
-    # observations with each level (largest first)
+    # fct_infreq() orders genre levels by frequency, largest first
     genre = genre %>% as_factor() %>% fct_infreq(.)
-    
   )
 ```
 
@@ -1252,163 +1131,72 @@ movies_ggmosaic <- movies_na %>%
 #| warning: false
 #| results: asis
 
-movies_ggmosaic %>%
+movies_marimekko %>%
   paged_table()
 ```
 
-That’s all we need to take a look at the basic functionality of `geom_mosaic()`.
+That’s all we need to take a look at the basic functionality of `geom_marimekko()`.
 
-We’ll wrap mpaa with a helper function, `product()` to prepare it for the x-axis. Then assign genre to the **fill** argument. **Offset** lets us set the space between the tiles and **show.legend** does exactly what the name promises.
+Marimekko differs from the old ggmosaic approach in that it uses a formula to specify the variables instead of wrapping them in `product()`. The formula `~ mpaa | genre` tells Marimekko to use MPAA for the columns and genre for the segments within each column.
 
-We can use this basic version as a basis for the final version. So let’s also assign the plot to **plot_ggmosaic**.
+Then we assign genre to the **fill** aesthetic. The **gap** parameter controls the space between the tiles. And **show.legend** does exactly what the name promises.
 
-```{r}
-#| echo: false
-#| message: false
-#| results: asis
-source("warning-ggmosaic-2025-09-12.R")
-```
+We can use this basic version as a basis for the final version. So let's also assign the plot to **plot_marimekko**.
 
 ```{r}
-#| echo: false
 #| message: false
 #| warning: false
 
-library(ggmosaic)
-```
+library(ggplot2)
+library(marimekko)
 
-```{r}
-#| eval: false
-#| message: false
-#| warning: false
-
-library(ggmosaic) # for creating mosaic charts (for categorical data)
-library(ggplot2)  # for general plotting
-
-# Build a mosaic plot of movie ratings (mpaa) vs. genres
-plot_ggmosaic <- ggplot(movies_ggmosaic) +
-  geom_mosaic(
-    aes(
-      
-      # x-axis shows mpaa rating categories
-      x    = product(mpaa),
-      
-      # Fill color represents movie genre
-      fill = genre
-    ),
-    
-    # Add small spacing between tiles
-    offset      = 0.02,
-    
-    # Hide legend (optional)
+plot_marimekko <- ggplot(movies_marimekko) +
+  geom_marimekko(
+    aes(fill = genre),
+    formula     = ~ mpaa | genre,
+    gap         = 0.02,
     show.legend = FALSE
   )
 
-# Render the plot
-plot_ggmosaic
+plot_marimekko
 ```
-
-![](img/ggmosaic-2025-09-12-1.png){.lightbox}
 
 You get the idea. Next, let’s see what we need to do to get this into a more presentable state.
 
 -   Add text labels to show the counts of the different tiles (except the small ones)
 -   Change the color palette with ggthemes
--   Use a custom theme, `theme_ggmosaic()` that comes with ggmosaic
+-   Use a custom theme, `theme_marimekko()` that comes with marimekko
 
-First, let’s take a look at those text labels. ggmosaic comes with a `geom_mosaic_text()` function, but we'll use `geom_text()` from ggplot2 instead. Some of the tiles are so small it doesn't make sense to add labels to them. This way we have more control of the labels and we can decide not to show labels when the counts are too small (under 70 in this case).
+First, let's take a look at those text labels. Marimekko comes with a `geom_marimekko_text()` function. It reads tile positions from the preceding `geom_marimekko()` layer. You only need to provide the **label** aesthetic. This is much simpler than the old approach. Before, you had to extract tile coordinates manually from the built plot object.
 
-We’re using the data from the plot_ggmosaic object. It’s a *list*, after all, containing all sorts of data we can use. We'll calculate the label positions, **xpos** and **ypos**. Then we'll count the combinations of mpaa and genre and combine the two into one tibble.
+We can reference computed variables via `after_stat()`. The computed variable **weight** gives us the aggregated count for each tile. Some of the tiles are so small that it doesn't make sense to add labels to them. We'll use `after_stat()` to hide labels conditionally when the count is under 70.
+
+We have as many as seven categories (genres). We’ll use `scale_fill_colorblind()` from ggthemes to create a nice colorblind-friendly color palette.
 
 ```{r}
-#| eval: false
+#| code-fold: true
+#| code-summary: "Show the code"
 #| message: false
 #| warning: false
 
-library(dplyr) # for data manipulation
-library(purrr) # for pluck()
+library(ggthemes)
 
-# Extract built plot data (data for all geoms)
-p_built <- ggplot_build(plot_ggmosaic)
-
-# Get tile data for the first layer and compute tile centers
-tile_data <- p_built %>%
+plot_marimekko +
   
-  # Extract data for first layer of plot
-  pluck("data", 1) %>%
-  
-  # Compute x and y centers of each tile
-  mutate(
-    xpos = (xmin + xmax) / 2,
-    ypos = (ymin + ymax) / 2
-  )
-
-# Count original observations for each (mpaa, genre) pair
-counts <- movies_ggmosaic %>%
-  count(mpaa, genre)
-
-# Join counts to tile data, add label only if count >= 70
-tile_data_with_counts <- tile_data %>%
-  left_join(
-    counts,
-    by = c(
-      "x__mpaa"        = "mpaa",
-      "x__fill__genre" = "genre"
-    )
-  ) %>%
-  
-  # Drop labels for small counts
-  mutate(n_label = if_else(n < 70, NA, n)) %>%
-  
-  # Keep only label and tile center coordinates
-  select(n_label, xpos, ypos)
-```
-
-```{r}
-#| eval: false
-#| echo:    false
-#| message: false
-#| warning: false
-#| results: asis
-
-tile_data_with_counts  %>%
-  paged_table()
-```
-
-With our text labels ready, we can create the final visualization. We start with the plot_ggmosaic and start adding other layers on top.
-
-We have as many as seven categories (genres). We’ll use `scale_fill_colorblind()` from ggthemese to create a nice colorblind-friendly color palette.
-
-The custom theme, `theme_ggmosaic()` doesn't need any arguments.
-
-```{r}
-#| eval: false
-#| message: false
-#| warning: false
-
-library(ggthemes) # for the color scale
-
-# Add labels, colorblind palette, titles, and custom theme to the mosaic plot
-plot_ggmosaic +
-  
-  # Add text labels to tiles, using the prepared center positions 
-  # and filtered counts
-  geom_text(
+  geom_marimekko_text(
     aes(
-      x     = xpos,     # x-position: tile center x
-      y     = ypos,     # y-position: tile center y
-      label = n_label   # Label: count (only if >= 70)
+      label = after_stat(
+        if_else(weight < 70, NA, weight) # hide labels on small tiles
+      )
     ),
-    data     = tile_data_with_counts,
-    color   = "white", # White text for contrast
+    colour   = "white",
     fontface = "bold",
-    size     = 5  
+    size     = 5,
+    na.rm    = TRUE
   ) +
   
-  # Use a colorblind-friendly palette for fills
   scale_fill_colorblind() +
   
-  # Add title, subtitle, and caption
   labs(
     title    = '"Yes More Drama in My Life"',
     subtitle = "A count of different combinations of genre and MPAA ratings",
@@ -1417,10 +1205,8 @@ plot_ggmosaic +
     y        = ""
   ) +
   
-  # Apply a built-in mosaic theme as a base
-  theme_mosaic() +
+  theme_marimekko() +
   
-  # Additional theme tweaks for text styling
   theme(
     axis.text = element_text(
       size   = 14,
@@ -1430,23 +1216,24 @@ plot_ggmosaic +
       face  = "bold",
       size  = 16,
       hjust = 0.5,
-      margin = margin(20, 0, 10, 0)
+      margin = margin(20, 0, 5, 0)
     ),
     plot.subtitle = element_text(
       size  = 14,
       hjust  = 0.5,
-      margin = margin(0, 0, 0, 0)
+      margin = margin(0, 0, 10, 0)
     ),
     plot.caption = element_text(
       size   = 10,
       color  = "darkgrey",
       hjust  = 0.5,
-      margin = margin(10, 0, 10, 0)
-    )
+      margin = margin(0, 0, 10, 0)
+    ),
+    plot.margin = margin(0, 10, 0, 0)
   )
 ```
 
-![](img/ggmosaic-2025-09-12-2.png){.lightbox}
+The label code is much simpler than what we'd have needed before. `geom_marimekko_text()` handles many things that I had to calculate manually when using ggmosaic.
 
 Mosaic chart isn’t meant for comparing small details. But it does give you a good overview of the proportions between the different category combinations.
 
@@ -1464,39 +1251,25 @@ You could create a raincloud chart using those individual geoms and mostly ggplo
 
 We have, however, a package, **ggrain** [@judd2024], that we can use for the same purpose. That there are numerous ways to accomplish the same task is both the beauty and the primary source of frustration with these tools. In any case, you get to choose which one works the best for you. You can also mix and match. You’ll see this when we reach the final visualization.
 
-#### Viz #7: IMDB movies, Part III {#sec-viz-7-imdb-movies-part-iii}
+#### Viz #7: IMDb movies, Part III - ggrain {#sec-viz-7-imdb-movies-part-iii-ggrain}
 
-We return, once again, to the IMDB movies data set. This time, looking at how the ratings for movies in three genres (Action, Documentary, and Short) are distributed. We’ll make some adjustments for ggrain. As you can see, data wrangling plays a significant role in the data visualization process. Context is key.
+We return, once again, to the IMDb movies data set. This time, looking at how the ratings for movies in three genres (Action, Documentary, and Short) are distributed. We’ll make some adjustments for ggrain. As you can see, data wrangling plays a significant role in the data visualization process. Context is key.
 
 ```{r}
 #| message: false
 #| warning: false
 
-# Load required packages
-library(dplyr)          # For data manipulation
-library(ggplot2movies)  # Contains the 'movies' dataset
-library(tidyr)          # For pivoting functions like pivot_longer()
+library(dplyr)
+library(tidyr)
 
-# Prepare movie data for plotting or analysis
-movies_ggrain <- movies %>%
-  
-  # Reshape genre columns (Action to Short) into long format:
-  # each row becomes one movie-genre pair with value 0 or 1
+movies_ggrain <- movies_na %>%
   pivot_longer(Action:Short, names_to = "genre") %>%
-  
-  # Filter rows:
   filter(
-    # Keep only selected genres
     genre %in% c("Action", "Documentary", "Short"),
-    # Remove unusually long films
-    length < 500,
-    # Keep only genres that apply (value == 1)
+    length < 500, # drop unusually long films (outliers)
     value != 0,
-    # Focus on movies released after 2000
     year > 2000
-  ) %>% 
-  
-  # Keep only the genre and rating columns for further use
+  ) %>%
   select(genre, rating)
 ```
 
@@ -1516,10 +1289,8 @@ We're left with a lot of genre-rating pairings. Here's what they look like using
 #| message: false
 #| warning: false
 
-# For raincloud-style plots (combining density, boxplot, and raw data)
 library(ggrain)
 
-# Create a raincloud plot showing rating distributions by genre
 movies_ggrain %>%
   ggplot(aes(genre, rating, fill = genre)) +
   geom_rain()
@@ -1535,28 +1306,25 @@ The **cov** argument is used to assign a covariate to color the dots by. **boxpl
 #| message: false
 #| warning: false
 
-# For advanced position adjustments (e.g., position_dodgenudge)
 library(ggpp)
 
-# Create a raincloud plot with dodged and nudged boxplots for each genre
 movies_ggrain %>%
-  ggplot(aes(x = 1, y = rating, fill = genre)) +
+  ggplot(
+    aes(
+      x    = 1,
+      y    = rating,
+      fill = genre
+      )
+  ) +
   geom_rain(
-    
-    # Group by 'genre' for separate rainclouds at the same x-position
-    cov = "genre",
-    
-    # Pass custom positioning to the internal boxplot layer
+    # cov groups rainclouds by genre while sharing x = 1 in the aes
+    cov              = "genre",
     boxplot.args.pos = list(
-      # Slightly separate boxplots by genre
       position = position_dodgenudge(
-        # Nudge boxplots sideways
-        x = 0.1,
-        # Control dodge width (how far apart they spread)
+        x     = 0.1,
         width = 0.1
-      ), 
-      # Width of individual boxplots
-      width = 0.1
+      ),
+      width = 0.1 # boxplot width (separate from the dodge width above)
     )
   )
 ```
@@ -1572,135 +1340,115 @@ We’ll use the `stat_summary()` functions to foreshadow @sec-stats. One for cou
 Since we are showing all the points in the plot, there’s no need to show the outliers in the boxplot. That is done by assigning *NA* to the **outlier.shape** argument.
 
 ```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
 #| message: false
 #| warning: false
 
-# Define custom fill colors for each genre
+library(colorspace)
+library(forcats)
+library(ggplot2)
+library(ggrain)
+
 colors_vis_7 <- c(
   "Action"      = "#f487b6",
   "Documentary" = "#3772FF", 
   "Short"       = "#43B929"
 ) 
 
-# Define axis label color order (to match reordered factor levels)
+# Axis label colors, ordered to match the factor levels after fct_reorder()
 colors_vis_7_axis <- c("#3772FF", "#43B929", "#f487b6")
 
-# Define custom summary function to display sample sizes for each genre
+# Summary function for stat_summary: positions sample-size label above each group
 add_sample <- function(x) {
   return(
     c(
-      # Y-position just above the max
-      y = max(x) + .025,
-      # Sample size as label
+      y     = max(x) + 0.025, # nudge above the highest point
       label = length(x)       
     )
   )
 }
 
-# Load required packages
-library(colorspace) # For color manipulation (darken/lighten)
-library(forcats)    # For factor reordering with fct_reorder()
-library(ggplot2)    # For base plotting
-library(ggrain)     # For raincloud-style plots
-
-# Create the raincloud plot
 ggplot(
   movies_ggrain,
   aes(
-    # Reorder genres by median rating
-    fct_reorder(genre, rating, .desc = TRUE),
+    fct_reorder(genre, rating, .desc = TRUE), # order genres by median rating
     rating,
     fill  = genre,
     color = genre
   )
 ) +
   
-  # Add raincloud plot (half density + boxplot + jittered points)
   geom_rain(
-    
-    # Draw rain (density) on the right side
-    rain.side = 'r',
-    
-    # Customize boxplot style
+    rain.side    = "r", # density ("rain") on the right
     boxplot.args = list(
-      color = "black",
-      # Hide outlier dots
-      outlier.shape = NA
+      color         = "black",
+      outlier.shape = NA # hide outliers — all points are already shown
     ),
-    # Set point transparency
-    point.args = list(alpha = 0.1),
-    # Jitter points horizontally
-    point.args.pos = list(position = position_jitter(seed = 1, width = .06))
+    point.args     = list(alpha = 0.1),
+    point.args.pos = list(position = position_jitter(seed = 1, width = 0.06))
   ) +
   
-  # Add median values as text labels above each raincloud
+  # Median value, printed above each raincloud
   stat_summary(
     aes(
-      # Format median to 2 decimals
       label = round(after_stat(y), 2),
-      # Darken text color slightly
-      color = stage(genre, after_scale = darken(color, .2, space = "HLS"))
+      # stage() + after_scale() darkens the text relative to each group's color
+      color = stage(genre, after_scale = darken(color, 0.2, space = "HLS"))
     ),
-    geom = "text",
-    fun  = "median",
+    geom  = "text",
+    fun   = "median",
     size  = 3.5,
     vjust = -5
   ) +
   
-  # Add sample size (n =) labels using custom summary function
+  # Sample size, printed beside each raincloud
   stat_summary(
     aes(
       label = paste("n =", after_stat(label)),
-      color = stage(genre, after_scale = darken(color, .2, space = "HLS"))
+      color = stage(genre, after_scale = darken(color, 0.2, space = "HLS"))
     ),
-    geom = "text",
+    geom     = "text",
     fun.data = add_sample,
-    size  = 3.5,
-    hjust = -0.25
+    size     = 3.5,
+    hjust    = -0.25
   ) +
   
-  # Manually set outline (color) values — darker than fill
   scale_color_manual(
     values = colors_vis_7,
-    # Hide color legend
-    guide = "none"
+    guide  = "none"
   ) +
   
-  # Manually set fill colors (lightened versions of outline)
+  # Fills are lighter variants of the outlines for contrast
   scale_fill_manual(
-    values = lighten(colors_vis_7, .4, space = "HLS"),
-    # Hide fill legend
+    values = lighten(colors_vis_7, 0.4, space = "HLS"),
     guide = "none"
   ) +
   
-  # Set y-axis ticks at whole rating points (1 to 10)
   scale_y_continuous(breaks = seq(1, 10, by = 1)) +
   
-  # Flip axes for horizontal layout. Allow text to extend outside plot area
+  # Horizontal layout; clip = "off" lets the "n =" labels extend past the panel
   coord_flip(xlim = c(1.4, NA), clip = "off") +
   
-  # Add plot labels
   labs(
     x        = NULL,
     y        = NULL,
     title    = "Documentaries have, on average, the best ratings",
-    subtitle = "Distribution of IMDB ratings (from 2000 to 2005) by genre",
-    caption  = "Data: IMDB movies (1893-2005) | Visualization: Antti Rask"
+    subtitle = "Distribution of IMDb ratings (from 2000 to 2005) by genre",
+    caption  = "Data: IMDb movies (1893-2005) | Visualization: Antti Rask"
   ) +
   
-  # Apply a clean minimal theme
   theme_minimal() +
   
-  # Customize text, grid, and spacing
   theme(
     axis.text.y = element_text(
-      color = darken(colors_vis_7_axis, .1, space = "HLS"),
+      color = darken(colors_vis_7_axis, 0.1, space = "HLS"),
       face  = "bold",
       size  = 12
     ),
     panel.grid.major.y = element_blank(),
-    panel.grid.minor = element_blank(),
-    plot.title = element_text(
+    panel.grid.minor   = element_blank(),
+    plot.title         = element_text(
       face = "bold",
       size = 14
     ),
@@ -1727,7 +1475,7 @@ A ridgeline chart is a good alternative to the violin plot. They "tend to work p
 
 We will use **ggridges** [@wilke2024] to create our ridgeline chart. If you're familiar with ggplot2 extensions, you might have known a package called [**ggjoy**](https://github.com/clauswilke/ggjoy) that did the same. It was *deprecated*, though, and you should update your old scripts to use ggridges instead.
 
-#### Viz #8: Helsinki temperatures, part III {#sec-viz-8-helsinki-temperatures-part-iii}
+#### Viz #8: Helsinki temperatures, part III - ggridges {#sec-viz-8-helsinki-temperatures-part-iii-ggridges}
 
 Since the ridgeline chart works well for distributions over time, let's use the Helsinki temperatures data. I'm interested in seeing how the daily average temperatures are distributed by month in 2024.
 
@@ -1739,33 +1487,20 @@ Let's start by getting the data ready. The one new trick is using **month.abb**.
 #| message: false
 #| warning: false
 
-# Load required packages
-library(dplyr)    # For data manipulation
-library(forcats)  # For working with factor levels (e.g., fct_rev)
-library(readr)    # For reading CSV files efficiently
+library(dplyr)
+library(forcats)
 
-# Read and preprocess temperature data for ridgeline plot
-temperature_ggridges <- read_csv("data/temperature-hki-2025-06-13.csv") %>%
-  
-  # Filter for data from the year 2024 only
+temperature_ggridges <- temperature_hki %>%
   filter(year == 2024) %>%
-  
   mutate(
-    # Create a month_name factor (Jan–Dec)
     month_name = factor(
-      # Convert month number to 3-letter abbreviation (e.g., Jan)
-      month.abb[month],
-      # Set order Jan–Dec
+      month.abb[month], # month.abb is base R: c("Jan", "Feb", ..., "Dec")
       levels  = month.abb,
-      # Ensure it's an ordered factor
       ordered = TRUE
     ) %>%
-      
-      # Reverse order: Jan at top, Dec at bottom
+      # Reverse so Jan ends up at the top of the ridgeline (y axis is bottom-up)
       fct_rev()
   ) %>%
-  
-  # Keep only columns needed for plotting
   select(avg_temperature_celsius, month_name)
 ```
 
@@ -1785,21 +1520,17 @@ Let's again start with the most simple version of the visualization. ggridges co
 #| message: false
 #| warning: false
 
-# Load ggridges for ridgeline (joyplot-style) visualizations
+library(ggplot2)
 library(ggridges)
 
-# Create a ridgeline chart of average temperatures by month
-temperature_ggridges %>%
-  ggplot(
-    aes(
-      # x-axis: average daily temperature
-      avg_temperature_celsius,
-      # y-axis: month (ordered and reversed earlier)
-      month_name
-    )
-  ) +
+ggplot(
+  temperature_ggridges,
+  aes(
+    avg_temperature_celsius,
+    month_name
+  )
+) +
   
-  # Plot density ridges for each month
   geom_density_ridges()
 ```
 
@@ -1808,42 +1539,32 @@ Simple, yet effective. I even like the grayscale feel. But we can help the reade
 We'll switch the geom to `geom_density_ridges_gradient()`, because we want to add some color. **option = "H"** from `scale_fill_viridis_c()` seems like an intuitive color scale for temperature data. ggridges comes with the `theme_ridges()` function that works well with the rest of the functions, as expected.
 
 ```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
 #| message: false
 #| warning: false
 
-# Load required libraries
-library(ggplot2)    # Core plotting library
-library(ggridges)   # For ridge/density plots with vertical layout
+library(ggplot2)
+library(ggridges)
 
-# Create a gradient ridgeline plot showing Helsinki temperatures by month
 ggplot(
+  temperature_ggridges,
   aes(
-    # x-axis: average daily temperature
     avg_temperature_celsius,
-    # y-axis: month (already ordered and reversed)
     month_name,
-    # Use x (temperature) value to control fill gradient
-    fill = after_stat(x)
-  ),
-  # Data frame prepared earlier
-  data = temperature_ggridges
+    fill = after_stat(x) # map fill to the x value (temperature) for a gradient
+  ) 
 ) +
   
-  # Add gradient ridgelines — fill color based on temperature (x value)
   geom_density_ridges_gradient() +
   
-  # Customize x-axis: temperature range with regular tick marks
   scale_x_continuous(
-    # Show ticks every 5 degrees
     breaks = seq(-20, 25, by = 5),
-    # Slight padding on left and right
     expand = c(0.01, 0.01)
   ) +
   
-  # Use viridis "H" color palette (visually perceptible, colorblind-safe)
   scale_fill_viridis_c(option = "H") +
   
-  # Add labels and title (no axis labels for minimalist look)
   labs(
     x        = NULL,
     y        = NULL,
@@ -1851,10 +1572,8 @@ ggplot(
     caption  = "Data: Finnish Meteorological Institute open data, weather observations (CC BY 4.0) | Visualization: Antti Rask"
   ) +
   
-  # Apply ridges-specific theme with grid lines disabled
   theme_ridges(grid = FALSE) +
   
-  # Additional theme customizations
   theme(
     axis.ticks      = element_blank(),
     legend.position = "null",
@@ -1877,19 +1596,1111 @@ Of course, it would be nice to see how the distributions have changed over the y
 
 ## Geometric primitives {#sec-geometric-primitives}
 
+There comes a time when you need a geometric primitive for your visualization. It is possible to create them using only ggplot2. But, to be honest, it isn't very easy.
+
+In this section, I'll introduce you to **ggforce** [@pedersen2025b]. It's a package that, among other things, lets you draw a variety of geometric primitives. We can file them under two main categories: **lines** and **shapes**.
+
+Let's first create a Geometric Primitives Visual Catalog. It's a single composite figure showing all ggforce primitives at a glance. We'll use **patchwork** [@pedersen2025c] to combine the multiple plots into one visualization (see @sec-arranging-multiple-plots for more).
+
+### The Visual Catalog {#sec-the-visual-catalog}
+
+Before we begin, we are aware that we'll be incorporating the same theme elements into all the plots. Let's create a function to do that so we don't have to repeat the same code.
+
+```{r}
+#| message: false
+#| warning: false
+
+library(dplyr)
+library(ggforce)
+library(ggplot2)
+library(patchwork)
+library(tibble)
+
+# Helper: shared minimal theme for catalog tiles
+tile_theme <- function(subtitle) {
+  list(
+    coord_fixed(clip = "off"),
+    labs(subtitle = subtitle),
+    theme_void(),
+    theme(
+      legend.position = "none",
+      plot.subtitle   = element_text(
+        hjust  = 0.5,
+        face   = "bold",
+        size   = 11,
+        margin = margin(0, 0, 5, 0)
+      ),
+      plot.background = element_rect(
+        fill      = "#fafafa",
+        color     = "#e0e0e0",
+        linewidth = 0.4
+      ),
+      plot.margin = margin(8, 8, 8, 8)
+    )
+  )
+}
+
+# Shared colors
+accent <- "#125184"
+fill_1 <- "#92c5de"
+fill_2 <- "#f4a582"
+```
+
+#### Lines {#sec-lines}
+
+For our purposes, a line is a mark connecting two points. It doesn't have to be straight (see [Bézier curve](https://en.wikipedia.org/wiki/B%C3%A9zier_curve)). These geoms are "parameterised versions of different line types" [@pedersen2025b], making it easier to draw them.
+
+```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
+#| message: false
+#| warning: false
+
+# Arc
+p_arc <- ggplot() +
+  geom_arc(
+    aes(x0 = 0, y0 = 0, r = 1, start = 0, end = 3 * pi / 2),
+    color     = accent,
+    linewidth = 1.2
+  ) +
+  geom_point(aes(x = 0, y = 0), size = 2, color = accent) +
+  tile_theme("geom_arc")
+
+# B-spline
+bspline_pts <- tibble(
+  x = c(-2, -1, 0, 1, 2),
+  y = c(0, 2, -1, 2, 0)
+)
+
+p_bspline <- ggplot(bspline_pts) +
+  geom_bspline(
+    aes(x = x, y = y),
+    color     = accent,
+    linewidth = 1.2
+  ) +
+  geom_point(
+    aes(x = x, y = y),
+    color = fill_2,
+    size  = 2.5
+  ) +
+  tile_theme("geom_bspline")
+
+# Bezier
+bezier_pts <- tibble(
+  x = c(0, 0.5, 1.5, 2),
+  y = c(0, 2, -1, 1)
+)
+
+p_bezier <- ggplot(bezier_pts) +
+  geom_bezier(
+    aes(x = x, y = y),
+    color     = accent,
+    linewidth = 1.2
+  ) +
+  geom_point(
+    aes(x = x, y = y),
+    color = fill_2,
+    size  = 2.5
+  ) +
+  tile_theme("geom_bezier")
+
+# Diagonal
+p_diagonal <- ggplot() +
+  geom_diagonal(
+    aes(x = 0, y = 0, xend = 3, yend = 2),
+    color     = accent,
+    linewidth = 1.2
+  ) +
+  geom_diagonal(
+    aes(x = 0, y = 0, xend = 3, yend = -1),
+    color     = fill_2,
+    linewidth = 1.2
+  ) +
+  geom_point(aes(x = 0, y = 0), size = 2.5, color = accent) +
+  tile_theme("geom_diagonal")
+
+# Link (improved paths)
+p_link <- ggplot() +
+  geom_link(
+    aes(
+      x         = 0,
+      y         = 0,
+      xend      = 3,
+      yend      = 2,
+      alpha     = after_stat(index),
+      linewidth = after_stat(index)
+    ),
+    color = accent
+  ) +
+  tile_theme("geom_link")
+```
+
+#### Shapes {#sec-shapes}
+
+For our purposes, a shape is a two-dimensional, flat area with a defined boundary made of lines, curves, or points.
+
+"These geoms allow you to draw different types of parameterised shapes, all taking advantage of the benefit of the `geom_shape()` improvements to `ggplot2::geom_polygon()`." [@pedersen2025b]
+
+```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
+#| message: false
+#| warning: false
+
+# Arc bar (wedge)
+wedge_data <- tibble(
+  start = c(0, pi / 2, pi, 3 * pi / 2),
+  end   = c(pi / 2, pi, 3 * pi / 2, 2 * pi),
+  fill  = c("a", "b", "c", "d")
+)
+
+p_arc_bar <- ggplot(wedge_data) +
+  geom_arc_bar(
+    aes(
+      x0    = 0,
+      y0    = 0,
+      r0    = 0.4,
+      r     = 1,
+      start = start,
+      end   = end,
+      fill  = fill
+    ),
+    color = "white"
+  ) +
+  scale_fill_manual(values = c(fill_1, accent, fill_2, "#2E8B57")) +
+  tile_theme("geom_arc_bar")
+
+# Circle
+circle_data <- tibble(
+  x0 = c(-1, 0.5, 0),
+  y0 = c(0, 0.5, -0.5),
+  r  = c(0.8, 0.6, 0.5)
+)
+
+p_circle <- ggplot(circle_data) +
+  geom_circle(
+    aes(x0 = x0, y0 = y0, r = r, fill = factor(r)),
+    alpha = 0.6,
+    color = accent
+  ) +
+  scale_fill_manual(values = c(fill_1, fill_2, "#2E8B57")) +
+  tile_theme("geom_circle")
+
+# Ellipse
+p_ellipse <- ggplot() +
+  # Regular ellipse
+  geom_ellipse(
+    aes(x0 = 0, y0 = 0, a = 2, b = 1, angle = pi / 6),
+    fill      = fill_1,
+    alpha     = 0.5,
+    color     = accent,
+    linewidth = 1
+  ) +
+  # Superellipse
+  geom_ellipse(
+    aes(x0 = 0, y0 = 0, a = 2, b = 1, angle = pi / 6, m1 = 3),
+    fill      = fill_2,
+    alpha     = 0.4,
+    color     = accent,
+    linewidth = 1,
+    linetype  = "dashed"
+  ) +
+  tile_theme("geom_ellipse")
+
+# Shape (improved polygon)
+shape_pts <- tibble(
+  x = c(0, 1, 0.8, 0.2),
+  y = c(0, 0, 1, 0.8)
+)
+
+p_shape <- ggplot(shape_pts, aes(x, y)) +
+  geom_shape(
+    expand = unit(0.2, "cm"),
+    radius = unit(0.2, "cm"),
+    fill   = fill_1,
+    color  = accent
+  ) +
+  geom_polygon(fill = fill_2, alpha = 0.7) +
+  tile_theme("geom_shape")
+
+# Regular polygon (regon)
+regon_data <- tibble(
+  x0    = c(-1.5, 0, 1.5),
+  y0    = 0,
+  sides = c(3, 5, 6),
+  r     = 0.7,
+  angle = 0
+)
+
+p_regon <- ggplot(regon_data) +
+  geom_regon(
+    aes(
+      x0    = x0, y0 = y0,
+      sides = sides, r = r, angle = angle,
+      fill  = factor(sides)
+    ),
+    color = accent
+  ) +
+  scale_fill_manual(values = c(fill_1, fill_2, "#2E8B57")) +
+  tile_theme("geom_regon")
+
+# Compose the catalog with patchwork
+
+# Row labels as text plots
+label_lines <- ggplot() +
+  annotate(
+    "text",
+    x        = 0.5,
+    y        = 0.5,
+    label    = "Lines",
+    fontface = "bold",
+    size     = 5,
+    color    = accent
+  ) +
+  theme_void() +
+  theme(plot.margin = margin(0, 0, 0, 0))
+
+label_shapes <- ggplot() +
+  annotate(
+    "text",
+    x        = 0.5,
+    y        = 0.5,
+    label    = "Shapes",
+    fontface = "bold",
+    size     = 5,
+    color    = accent
+  ) +
+  theme_void() +
+  theme(plot.margin = margin(0, 0, 0, 0))
+
+catalog <- (
+  # Row 1: Lines
+  label_lines + p_arc + p_bspline + p_bezier + p_diagonal + p_link +
+    plot_layout(ncol = 6, widths = c(0.6, 1, 1, 1, 1, 1))
+) / (
+  # Row 2: Shapes
+  label_shapes + p_arc_bar + p_circle + p_ellipse + p_shape + p_regon +
+    plot_layout(ncol = 6, widths = c(0.6, 1, 1, 1, 1, 1))
+) +
+  plot_annotation(
+    title    = "ggforce Geometric Primitives at a Glance",
+    subtitle = "Lines Connect Points, Shapes Define Bounded Areas",
+    theme    = theme(
+      plot.title = element_text(
+        face  = "bold",
+        size  = 18,
+        hjust = 0.5
+      ),
+      plot.subtitle = element_text(
+        size   = 12,
+        hjust  = 0.5,
+        color  = "grey40",
+        margin = margin(0, 0, 10, 0)
+      )
+    )
+  )
+```
+
+And here's the visual catalog showing us some of the possibilities:
+
+```{r}
+#| echo:    false
+#| message: false
+#| warning: false
+#| results: asis
+
+catalog
+```
+
+Now that we've seen what the geometric primitives building blocks are, let's build something interesting with some of them.
+
+#### Viz #9: Helsinki temperatures, part IV - ggforce {#sec-viz-9-helsinki-temperatures-part-iv-ggforce}
+
+We already looked at the Helsinki temperatures data set from different angles. But here's one more. Let's build a radial chart comparing the monthly average temperatures in Helsinki in 2000 and 2024.
+
+Why use primitives for something like this? As the ggforce docs note, `geom_arc_bar()` "makes it possible to draw arcs and wedges as known from pie and donut charts" [@pedersen2025b] without `coord_polar()`. This gives us full control over positioning, layering, and annotations that would be difficult or downright impossible with `coord_polar()`.
+
+We'll use `geom_arc_bar()` for the temperature wedges, `geom_circle()` for the center disc and the ring separator, and `geom_text()` for month labels around the outside.
+
+```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
+#| message: false
+#| warning: false
+
+library(dplyr)
+library(ggforce)
+library(ggplot2)
+library(stringr)
+library(tibble)
+
+# Monthly averages for 2000 and 2024
+temperature_radial <- temperature_hki %>%
+  filter(year %in% c(2000, 2024)) %>%
+  summarise(
+    avg_temp = mean(avg_temperature_celsius, na.rm = TRUE),
+    .by      = c(year, month)
+  ) %>%
+  # Each month occupies 1/12 of the circle (pi/6 radians). We start at the
+  # top (12 o'clock = pi/2) and go clockwise, which is decreasing angle in
+  # standard math convention. The offset nudges the wedges 2 months
+  # counterclockwise so they align with the month labels.
+  mutate(
+    month_width = 2 * pi / 12,
+    offset      = -2 * month_width,
+    start       = pi / 2 - (month - 1) * month_width + offset,
+    end         = pi / 2 - month * month_width + offset,
+    year        = factor(year)
+  )
+
+# Inner ring = 2000, outer ring = 2024. The gap between r = 2.0 and r0 = 2.2 
+# is the visual separator between rings.
+ring_2000 <- temperature_radial %>%
+  filter(year == 2000) %>%
+  mutate(
+    r0 = 1.0,
+    r  = 2.0
+  )
+
+ring_2024 <- temperature_radial %>%
+  filter(year == 2024) %>%
+  mutate(
+    r0 = 2.2,
+    r  = 3.2
+  )
+
+radial_data <- bind_rows(ring_2000, ring_2024)
+
+# Month labels positioned just outside the outer ring
+month_labels <- tibble(
+  month     = 1:12,
+  label     = month.abb,
+  # Point to the CENTER of each wedge — hence (month - 0.5)
+  angle_rad = pi / 2 - (month - 0.5) * (2 * pi / 12),
+  x         = 3.7 * cos(angle_rad),
+  y         = 3.7 * sin(angle_rad)
+)
+
+ggplot() +
+
+  # Temperature wedges first, so the center disc can cover their inner edges
+  geom_arc_bar(
+    data = radial_data,
+    aes(
+      x0    = 0,
+      y0    = 0,
+      r0    = r0,
+      r     = r,
+      start = start,
+      end   = end,
+      fill  = avg_temp
+    ),
+    color     = "white",
+    linewidth = 0.5
+  ) +
+
+  # White disc covers the inner hole created by r0 = 1.0 on the first ring
+  geom_circle(
+    aes(x0 = 0, y0 = 0, r = 0.9),
+    fill  = "white",
+    color = NA
+  ) +
+
+  # Center text, year labels, and month labels
+  annotate(
+    "text",
+    x        = 0,
+    y        = 0.15,
+    label    = "Helsinki",
+    size     = 5,
+    fontface = "bold",
+    color    = "#333333"
+  ) +
+
+  annotate(
+    "text",
+    x          = 0,
+    y          = -0.3,
+    label      = "Monthly Avg.\nTemperature (\u00B0C)",
+    size       = 3,
+    color      = "#777777",
+    lineheight = 0.9
+  ) +
+
+  annotate(
+    "text",
+    x        = 0,
+    y        = 0.75,
+    label    = "2000",
+    size     = 4.5,
+    fontface = "bold",
+    hjust    = 0.5,
+    color    = "#555555"
+  ) +
+
+  annotate(
+    "text",
+    x        = 0,
+    y        = 3.4,
+    label    = "2024",
+    size     = 4.5,
+    fontface = "bold",
+    hjust    = 0.5,
+    color    = "#555555"
+  ) +
+
+  # Month labels stay horizontal — no rotation around the circle
+  geom_text(
+    data = month_labels,
+    aes(x = x, y = y, label = label),
+    size     = 3.5,
+    fontface = "bold",
+    color    = "#333333"
+  ) +
+
+  scale_fill_viridis_c(
+    option = "H",
+    name   = "\u00B0C",
+    breaks = seq(-10, 20, by = 5)
+  ) +
+
+  coord_fixed(clip = "off") +
+
+  labs(
+    title    = "Is the Temperature Rising?",
+    subtitle = str_glue(
+      "Average monthly temperatures (Celsius) in Helsinki,
+      2000 (inner ring) vs. 2024 (outer ring)"
+    ),
+    caption = str_glue(
+      "Data: Finnish Meteorological Institute open data, ",
+      "weather observations (CC BY 4.0) | Visualization: Antti Rask"
+    )
+  ) +
+  theme_void() +
+  theme(
+    legend.position   = "bottom",
+    legend.key.width  = unit(2, "cm"),
+    legend.key.height = unit(0.4, "cm"),
+    legend.title      = element_text(vjust = 0.8),
+    plot.title = element_text(
+      face   = "bold",
+      size   = 16,
+      hjust  = 0.5,
+      margin = margin(10, 0, 5, 0)
+    ),
+    plot.subtitle = element_text(
+      size   = 11,
+      hjust  = 0.5,
+      color  = "grey40",
+      margin = margin(0, 0, 15, 0)
+    ),
+    plot.caption = element_text(
+      size   = 8,
+      hjust  = 0.5,
+      color  = "#777777",
+      margin = margin(15, 0, 0, 0)
+    ),
+    plot.margin = margin(10, 60, 10, 20)
+  )
+```
+
+And there we have it, a fourth perspective on the Helsinki temperature data. Comparing the two rings, 2024 appears warmer across most months, particularly in summer and spring. The radial layout makes it easy to spot these seasonal patterns at a glance.
+
+Geometric primitives aren't something you'll reach for every day. But when you need precise control over shapes and positions, such as in radial charts, custom annotations, and schematic diagrams, they're invaluable. And as we've seen, `coord_polar()` isn't the only way to think in circles.
+
+### ggdiagram {#sec-ggdiagram}
+
+Before moving on from geometric shapes, I want to mention a relatively new package, **ggdiagram** [@schneider2025]. It provides an alternate way to produce many of them.
+
+However, ggdiagram operates outside the ggplot2 paradigm and only uses it to plot the results, so we won't go further into the package here. If you are interested in learning more, check out the package's [documentation](https://wjschne.github.io/ggdiagram/).
+
 ## Heatmaps {#sec-heatmaps}
+
+One way to visualize amounts is by using *heatmaps*. We can "map the categories onto the x and y axis and show amounts by color" [@wilke2019].
+
+For basic heatmaps, ggplot2 offers `geom_bin_2d()` and `geom_hex()`, which work well for showing the density or distribution of two continuous variables. But there's a more specialized use case, visualizing daily time series data as a calendar, where those geoms don't quite fit. For that, we can turn to **ggTimeSeries** [@kothari2022].
 
 ### Calendar heatmap {#sec-calendar-heatmap}
 
+"A calendar heatmap is a great way to visualise daily data. Its structure makes it easy to detect weekly, monthly, or seasonal patterns" [@kothari2022].
+
+So let's take a look at what we can do with the Helsinki daily temperature data we have already. Let's first see what the data looks like for one year (2024) with just the mandatory parameters, **cDateColumnName** and **cValueColumnName**.
+
+#### Viz #10: Helsinki temperatures, part V - ggTimeSeries {#sec-viz-10-helsinki-temperatures-part-v-ggtimeseries}
+
+```{r}
+#| message: false
+#| warning: false
+
+library(dplyr)
+library(ggTimeSeries)
+library(lubridate)
+
+temperature_hki_2024 <- temperature_hki %>%
+  filter(year == 2024) %>%
+  mutate(date = paste(year, month, day, sep = "-") %>% as_date()) %>%
+  select(date, avg_temperature_celsius, year)
+
+ggplot_calendar_heatmap(
+  temperature_hki_2024,
+  cDateColumnName  = "date",
+  cValueColumnName = "avg_temperature_celsius"
+)
+```
+
+As you can see, the basic visualization is already quite neat. It's interesting how, in addition to days and months, you also see the weekly structure.
+
+However, the sequential color palette makes it hard to distinguish between positive and negative values. To make the chart more readable, we'll switch to a diverging palette. After all, we have a range of values from positive to negative with a meaningful baseline (0) in the middle.
+
+For the final version of the calendar heatmap, let's use some more data. I would love to show all 25 years, but that version was perhaps too busy and having a 5 x 5 grid didn't exactly make it easy to compare the years.
+
+So, I decided to pick 5 years from 2004 to 2024 to show the possible change over time.
+
+```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
+#| message: false
+#| warning: false
+
+library(dplyr)
+library(ggplot2)
+library(ggTimeSeries)
+library(lubridate)
+
+temperature_hki_cal <- temperature_hki %>%
+  filter(year %in% c(2004, 2009, 2014, 2019, 2024)) %>% 
+  mutate(date = paste(year, month, day, sep = "-") %>% as_date()) %>%
+  select(date, avg_temperature_celsius, year)
+
+ggplot_calendar_heatmap(
+  dtDateValue            = temperature_hki_cal,
+  cDateColumnName        = "date",
+  cValueColumnName       = "avg_temperature_celsius",
+  vcGroupingColumnNames  = "year",
+  dayBorderSize          = 0.1,
+  dayBorderColour        = "grey30",
+  monthBorderSize        = 0.8,
+  monthBorderColour      = "grey30"
+) +
+  
+  scale_fill_gradient2(
+    low      = "#125184",
+    mid      = "#ffffff",
+    high     = "#F36523",
+    midpoint = 0,
+    name     = "°C"
+  ) +
+  
+  facet_wrap(vars(year), ncol = 1) +
+  
+  labs(
+    title    = "Average daily temperature (°C) in Helsinki",
+    subtitle = "Every five years from 2004 to 2024",
+    caption  = "Data: Finnish Meteorological Institute open data, weather observations (CC BY 4.0) | Visualization: Antti Rask",
+    x        = NULL,
+    y        = NULL
+  ) +
+  
+  theme(
+    axis.text.y       = element_blank(),
+    axis.ticks        = element_blank(),
+    legend.position   = "bottom",
+    legend.text       = element_text(color = "grey30"),
+    panel.background  = element_blank(),
+    panel.border      = element_blank(),
+    panel.grid        = element_blank(),
+    plot.caption      = element_text(
+      size  = 8,
+      hjust = 0.5,
+      color = "#777777"
+    ),
+    strip.background  = element_blank(),
+    strip.text        = element_text(
+      size  = 10,
+      hjust = 0
+    )
+  )
+```
+
+Calendar heatmaps are one of those chart types that feel almost obvious once you see one. Of course daily data should look like a calendar. The weekly rhythm jumps out immediately, and seasonal patterns become visible at a glance.
+
+What I find most interesting is how much the color scale matters here. A sequential palette technically works, but switching to a diverging one transformed the chart from *nice* to *informative*.
+
+It's a good reminder that choosing the right color scale isn't decoration! It's an editorial decision about what story your data tells.
+
 ## Intersection diagrams {#sec-intersection-diagrams}
+
+Intersection diagrams, as the name suggests, are used to visualize intersecting data. Depending on your specific use case, you might want to choose either an **UpSet diagram** or a **Venn diagram**.
+
+There is a fun **Little Miss Data** [blog post](https://www.littlemissdata.com/blog/set-analysis) [@ellis2019] that pits the two against each other. But as you’ll find out by reading the blog (spoilers), the two are for very different purposes.
+
+Let's take a look at the two separately.
 
 ### UpSet diagram {#sec-upset-diagram}
 
+An UpSet diagram is perfect for visualizing intersecting *sets*. The basic version uses a matrix with rows "corresponding to the sets, and the columns to the intersections between these sets (or vice versa). The size of the sets and of the intersections are shown as bar charts" [@wiki2026a].
+
+There are many R packages for creating UpSet diagrams, but for this book, we’ll use **ggupset** [@ahlmann-eltze2025]. It’s the most compatible with the ggplot2 syntax.
+
+But let’s start with the data. We’ll use the IMDb data once more. ggupset prefers the data in a specific format. We need to reshape the wide genre columns into a single list column, genres, that holds one or more values per film.
+
+```{r}
+#| message: false
+#| warning: false
+
+library(dplyr)
+library(tidyr)
+
+movies_ggupset <- movies_na %>%
+  pivot_longer(
+    cols      = Action:Short,
+    names_to  = "genre"
+  ) %>%
+  filter(
+    value != 0,
+    between(year, 1900, 2000)
+  ) %>%
+  summarize(
+    genres  = list(genre),
+    .by     = c(title, year)
+  )
+```
+
+Let's again start with the most simple version of the UpSet diagram. The only function we need for that is the `scale_x_upset()`.
+
+```{r}
+#| message: false
+#| warning: false
+
+library(ggplot2)
+library(ggupset)
+
+ggplot(movies_ggupset) +
+  geom_bar(aes(genres)) +
+  scale_x_upset() +
+  scale_y_continuous(
+    breaks = seq(0, 12500, by = 2500),
+    name   = NULL
+  )
+```
+
+Now, it’s mostly working as is. But as you can see, we have genre combinations with no or very few films attached.
+
+That's where the **n_intersections** parameter comes in. We'll use it to show only *n* combinations with the most values. Top 20 in this case.
+
+```{r}
+#| message: false
+#| warning: false
+
+ggplot(movies_ggupset) +
+  geom_bar(aes(genres)) +
+  scale_x_upset(n_intersections = 20) +
+  scale_y_continuous(
+    breaks = seq(0, 12500, by = 2500),
+    name   = NULL
+  )
+```
+
+Before creating the final version of this, I wish to highlight one alternative. As you know, there are many ways to order the data. And if you'd like to have them first ordered by the number of combined genres, you can use the **order_by = "degree"** argument.
+
+```{r}
+#| message: false
+#| warning: false
+
+ggplot(movies_ggupset) +
+  geom_bar(aes(genres)) +
+  scale_x_upset(
+    n_intersections = 20,
+    order_by        = "degree"
+  ) +
+  scale_y_continuous(
+    breaks = seq(0, 12500, by = 2500),
+    name   = NULL
+  )
+```
+
+There might be situations where this is useful. But for the final version of the visualization here, let's leave that parameter out.
+
+#### Viz #11: IMDb movies, Part IV - ggupset {#sec-viz-11-imdb-movies-part-iv-ggupset}
+
+At this point it’s mostly cleaning up that we need for the final version. Besides the regular ggplot2 theming, we use `theme_combmatrix()` to make the matrix look good.
+
+```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
+#| message: false
+#| warning: false
+
+library(ggplot2)
+library(ggupset)
+
+ggplot(movies_ggupset, aes(genres)) +
+  geom_bar(fill = "#40E0D0") +
+  scale_x_upset(n_intersections = 20) +
+  scale_y_continuous(
+    limits = c(0, 12500),
+    breaks = seq(0, 12500, by = 2500),
+    name   = "",
+    expand = c(0, 0)
+  ) +
+  theme_minimal() +
+  # Style the matrix panel (dots, lines, labels)
+  theme_combmatrix(
+    combmatrix.label.make_space       = FALSE,
+    combmatrix.panel.line.color       = "#FE5F00",
+    combmatrix.panel.line.size        = 1,
+    combmatrix.panel.point.color.fill = "#FE5F00"
+  ) +
+  theme(
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(
+      color     = "#141204",
+      linewidth = 0.1
+    ),
+    panel.grid.minor   = element_blank(),
+    plot.margin        = margin(5, 5, 5, 20),
+    plot.title         = element_text(margin = margin(10, 0, 5, 0)),
+    plot.subtitle      = element_text(
+      color  = "gray40",
+      margin = margin(0, 0, 20, 0)
+    ),
+    plot.caption       = element_text(
+      size   = 8,
+      color  = "#777777",
+      hjust  = 0.5,
+      margin = margin(10, 0, 0, 0)
+    )
+  ) +
+  labs(
+    title    = "Why be only a Drama or a Comedy when you can be both?!",
+    subtitle = "Genre combinations for movies in the 20th century",
+    caption  = "Data: IMDb movies (1893-2005) via {ggplot2movies} | Visualization: Antti Rask",
+    x        = NULL
+  )
+```
+
+We used ggupset here because it plays nicely with the ggplot2 grammar: you build a bar chart and swap in `scale_x_upset()`. That simplicity is its strength.
+
+If you need more power, annotation panels, built-in queries, or custom intersection-level plots, take a look at **ComplexUpset** [@krassowski2021]. It wraps UpSet plots in full ggplot2 while adding those features. **Note!** As of this writing, it has compatibility issues with ggplot2 4.0.0+.
+
+And if you prefer a more self-contained approach, **UpSetR** [@gehlenborg2019] is the original R implementation. It uses ggplot2 internally, but wraps everything in a single function call with its own parameters rather than exposing a ggplot object you can layer onto.
+
 ### Venn diagram {#sec-venn-diagram}
+
+A Venn diagram has been around for a while to show "the logical relation between sets, popularized by John Venn (1834–1923) in the 1880s" [@wiki2026b].
+
+It works similarly to the UpSet diagram, but can accommodate only so many sets. **ggVennDiagram** [@gao2026] comes with a function `plot_shapes()` for plotting the available shapes. In some cases you can then choose which variation of a shape to use.
+
+```{r}
+#| echo:    false
+#| message: false
+#| warning: false
+#| results: asis
+
+library(ggVennDiagram)
+
+plot_shapes()
+```
+
+We can also take a look at the different shapes as a tibble:
+
+```{r}
+#| message: false
+#| warning: false
+
+get_shapes()
+```
+
+As you can see, seven seems to be the greatest number of sets. But let's take a look at a real use-case where we can also test those limits.
+
+#### Viz #12: IMDb movies, Part V - ggVennDiagram {#sec-viz-12-imdb-movies-part-v-ggVennDiagram}
+
+For this, let's revisit the IMDb movies data set. We'll first limit the number of sets to three, **Comedy**, **Drama**, and **Romance**. What we want for ggVennDiagram is a list that has three levels, one for each genre.
+
+```{r}
+#| message: false
+#| warning: false
+
+library(dplyr)
+library(purrr)
+
+movies_ggvenndiagram <- movies_na %>%
+  filter(between(year, 1900, 2000)) %>%
+  select(title, Comedy, Drama, Romance)
+
+genres <- c("Comedy", "Drama", "Romance")
+
+genre_sets <- genres %>%
+  set_names() %>%
+  map(~ movies_ggvenndiagram$title[movies_ggvenndiagram[[.x]] == 1])
+```
+
+Let's then try the `ggVennDiagram()` function with the default settings.
+
+```{r}
+#| message: false
+#| warning: false
+
+library(ggVennDiagram)
+
+ggVennDiagram(genre_sets)
+```
+
+That already looks pretty good. But what if we had more sets, more genres? Let’s try the same, with the same number as for the UpSet diagram earlier.
+
+```{r}
+#| echo:    false
+#| message: false
+#| warning: false
+#| results: asis
+
+movies_ggvenndiagram_all <- movies_na %>%
+  filter(between(year, 1900, 2000)) %>%
+  select(title, Action, Animation, Comedy, Documentary, Drama, Romance, Short)
+
+genres_all <- c("Action", "Animation", "Comedy", "Documentary", "Drama", "Romance", "Short")
+
+genre_sets_all <- genres_all %>%
+  set_names() %>%
+  map(~ movies_ggvenndiagram_all$title[movies_ggvenndiagram_all[[.x]] == 1])
+```
+
+```{r}
+#| message: false
+#| warning: false
+
+ggVennDiagram(genre_sets_all)
+```
+
+As you can see, that’s not the best way to visualize this data. Even if we turned off the annotations, it would still be much more confusing compared to the UpSet plot.
+
+And if we had even one more set, ggVennDiagram would actually fall back to plotting an UpSet plot instead! That's how close the two are to each other philosophically.
+
+Let’s now create a more visually appealing visualization with only the three genres. Let's use all the parameters that make sense: **edge_size** for thinner lines, **label = "count"** to show only counts, **label_alpha = 0** to hide the label background, and **label_color = "#ffffff"** to make the label text white.
+
+```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
+#| message: false
+#| warning: false
+
+library(ggplot2)
+library(ggVennDiagram)
+library(stringr)
+
+ggVennDiagram(
+  genre_sets,
+  edge_size    = 0.5,
+  label        = "count",
+  label_alpha  = 0,
+  label_color  = "#ffffff"
+) +
+  
+  scale_fill_gradient(
+    low  = "#78a9ff",
+    high = "#001d6c"
+  ) +
+  
+  # Extra horizontal padding so the outer set labels don't get clipped
+  scale_x_continuous(expand = expansion(mult = 0.1)) +
+  
+  theme(
+    legend.position = "none",
+    plot.title      = element_text(
+      hjust  = 0.5,
+      margin = margin(20, 0, 5, 0)
+    ),
+    plot.subtitle   = element_text(
+      color  = "gray40",
+      hjust  = 0.5,
+      margin = margin(0, 0, 20, 0)
+    ),
+    plot.caption = element_text(
+      size   = 8,
+      color  = "#777777",
+      hjust  = 0.5,
+      margin = margin(10, 0, 5, 0)
+    ),
+    plot.margin = margin(0, 20, 0, 0)
+  ) +
+  
+  labs(
+    title    = "Drama Is the Loneliest Genre",
+    subtitle = str_glue(
+      "The number of films in each genre 
+      combination in 20th century films"
+    ),
+    caption  = str_glue(
+      "Data: IMDb movies (1893-2005) 
+      via ggplot2movies | Visualization: Antti Rask"
+    )
+  )
+```
+
+A Venn diagram makes overlaps intuitive at a glance. You can immediately see that Drama has the largest exclusive slice, or that Comedy and Romance share more films than you might expect. That's something the UpSet diagram's bar-and-matrix layout doesn't communicate as viscerally.
+
+But the trade-off is clear. Three sets are comfortable, four are manageable. Beyond that, it falls apart fast, as the seven-genre version demonstrated. That’s not a weakness of ggVennDiagram, but a fundamental limitation of the format. When your sets outgrow the diagram, that’s your cue to reach for an UpSet plot instead.
+
+If you want a lighter alternative, **ggvenn** [@yan2025] offers a single `geom_venn()` that plugs straight into a ggplot call. It's less customizable but gets the job done for quick two- or three-set diagrams.
 
 ## Line charts {#sec-line-charts}
 
+Line charts are the bread and butter of data visualization. And as with bar charts, ggplot2 handles most types out of the box. And as with bar charts, there are specific use cases for these more specialized line charts.
+
+In this section, we’ll take a look at the **bump chart**, the **dumbbell and lollipop chart**, the **line chart with neon glow or shadow effects**, and the **slope chart**.
+
 ### Bump chart {#sec-bump-chart}
+
+A bump chart is a type of line chart used to visualize changes in rankings of categorical data over time. To create one, we'll use the extension **ggbump** [@sjoberg2026].
+
+We'll once again use the IMDb movie dataset. This time, we'll summarize the data by genre and decade, starting from the 1930s. Before that, some genres have only a handful of films, making average ratings unreliable.
+
+#### Viz #13: IMDb movies, Part VI - ggbump {#sec-viz-13-imdb-movies-part-vi-ggbump}
+
+```{r}
+#| message: false
+#| warning: false
+
+library(dplyr)
+library(tidyr)
+
+movies_ggbump <- movies_na %>%
+  pivot_longer(Action:Short, names_to = "genre") %>%
+  filter(value != 0) %>%
+  filter(decade %in% seq(1930, 2000, 10)) %>%
+  summarize(
+    rating_avg = mean(rating),
+    .by        = c(genre, decade)
+  ) %>%
+  mutate(
+    rank = rank(-rating_avg, ties.method = "first"),
+    .by  = decade
+  ) %>%
+  arrange(decade, rank)
+```
+
+```{r}
+#| echo:    false
+#| message: false
+#| warning: false
+#| results: asis
+
+movies_ggbump %>% 
+  paged_table()
+```
+
+Let's start with the basic version with default settings.
+
+```{r}
+#| message: false
+#| warning: false
+
+library(ggbump)
+library(ggplot2)
+
+movies_ggbump %>%
+  ggplot(aes(decade, rank, color = genre)) +
+  geom_bump()
+```
+
+We can already see what the chart is about. The movie genres are in the ranking order, but the order is upside down. Next, let's fix that and make other changes to make the chart more presentable.
+
+We'll add the points first. They act as anchors for the viewer's gaze. Then we'll add the genres using `geom_text()`. Direct labeling is a nice touch and more intuitive than using a legend.
+
+In this book, color as a storytelling tool is a recurring theme. And it was a conscious storytelling decision to highlight the Documentaries genre. We can use `scale_color_manual()` to specify only one genre's color, while ggplot2 uses its default palette for the rest.
+
+Finally, we need to fix the ranking order using `scale_y_reverse()`.
+
+```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
+#| message: false
+#| warning: false
+
+library(ggbump)
+library(ggplot2)
+
+movies_ggbump %>%
+  
+  ggplot(aes(decade, rank, color = genre)) +
+  
+  geom_point(size = 5) +
+  
+  geom_text(
+    aes(
+      x     = decade - 2,
+      label = genre
+    ),
+    data     = movies_ggbump %>% filter(decade == min(decade)),
+    size     = 4,
+    hjust    = 1,
+    fontface = "bold"
+  ) +
+  
+  geom_text(
+    aes(
+      x     = decade + 2,
+      label = genre
+    ),
+    data     = movies_ggbump %>% filter(decade == max(decade)),
+    size     = 4,
+    hjust    = 0,
+    fontface = "bold"
+  ) +
+  
+  geom_bump(
+    linewidth = 1.2,
+    smooth    = 8 # higher = smoother curves
+  ) +
+  
+  scale_color_manual(values = c("Documentary" = "#CC4C00")) +
+  
+  scale_x_continuous(
+    breaks = seq(1930, 2000, 10),
+    # Extra horizontal padding on both sides for the direct labels
+    expand = expansion(mult = c(0.15, 0.15))
+  ) +
+  
+  scale_y_reverse() +
+  
+  labs(
+    title    = "Documentaries Are the Best",
+    subtitle = "Genres ranked by their average IMDb rating",
+    caption  = "Data: IMDb movies (1893-2005) via ggplot2movies | Visualization: Antti Rask",
+    x        = NULL,
+    y        = NULL
+  ) +
+  
+  theme_minimal() +
+  
+  theme(
+    axis.text.x      = element_text(size = 10),
+    axis.text.y      = element_blank(),
+    legend.position  = "none",
+    plot.title       = element_text(
+      face  = "bold",
+      hjust = 0.5
+    ),
+    plot.subtitle    = element_text(
+      hjust  = 0.5,
+      margin = margin(0, 0, 10, 0)
+    ),
+    plot.caption     = element_text(
+      hjust  = 0.5,
+      color  = "#777777",
+      size   = 9,
+      margin = margin(20, 25, 0, 25)
+    ),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    plot.margin      = margin(20, 0, 10, 0)
+  )
+```
+
+We made some bold choices, but now we have a chart that tells one of the stories buried within the data. Bump charts work best when you have a handful of categories competing across discrete time steps, and you care about relative position rather than absolute values.
+
+The ranking abstraction strips away the noise and lets the audience focus on who's rising and who's falling. And in this case, the answer is clear.
 
 ### Dumbbell and lollipop chart {#sec-dumbbell-and-lollipop-chart}
 
@@ -1926,6 +2737,8 @@ Of course, it would be nice to see how the distributions have changed over the y
 ## Tree diagrams {#sec-tree-diagrams}
 
 ### Dendrogram {#sec-dendrogram}
+
+### Sunburst diagram {#sec-sunburst-diagram}
 
 ### Treemap diagram {#sec-treemap-diagram}
 

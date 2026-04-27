@@ -855,7 +855,7 @@ It's time to add Drama as color for the matrix. And also do some customizations:
 library(ggplot2)
 
 # 1) Choose your colors
-manual_colors = c("darkorange3","darkturquoise")
+manual_colors <- c("darkorange3","darkturquoise")
 
 # 2) Create functions for the lower half and the diagonal of the matrix
 lower_function <- function(data, mapping) {
