@@ -238,7 +238,7 @@ Others you will have to install from GitHub:
 library(pak)
 
 # For installing ggalt
-pak("davidsjoberg/ggalt")
+pak("hrbrmstr/ggalt")
 
 # For installing ggbump
 pak("davidsjoberg/ggbump")
