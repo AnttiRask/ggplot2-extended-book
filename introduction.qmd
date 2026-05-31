@@ -250,7 +250,13 @@ pak("nsgrantham/ggbraid")
 pak("AtherEnergy/ggTimeSeries")
 
 # For fully updating radiant
-options(repos = c(RSM = "https://radiant-rstats.github.io/minicran", CRAN = "https://cloud.r-project.org"))
+options(
+  repos = c(
+    RSM  = "https://radiant-rstats.github.io/minicran",
+    CRAN = "https://cloud.r-project.org"
+    )
+  )
+
 pak("radiant-rstats/radiant.update", upgrade = FALSE)
 ```
 

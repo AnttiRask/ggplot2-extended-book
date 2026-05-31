@@ -1189,7 +1189,7 @@ plot_marimekko +
         if_else(weight < 70, NA, weight) # hide labels on small tiles
       )
     ),
-    colour   = "white",
+    color   = "white",
     fontface = "bold",
     size     = 5,
     na.rm    = TRUE
@@ -2703,6 +2703,282 @@ We made some bold choices, but now we have a chart that tells one of the stories
 The ranking abstraction strips away the noise and lets the audience focus on who's rising and who's falling. And in this case, the answer is clear.
 
 ### Dumbbell and lollipop chart {#sec-dumbbell-and-lollipop-chart}
+
+Bar charts do a lot of heavy lifting, but aren't always the right tool. When all you need is to mark a single value per category, a full bar can feel like a lot of ink for one number. That's where the *lollipop chart* comes in, swapping the bar for a thin stem and a dot.
+
+And when you want to show how a value *changed* between two states, before and after, then and now, the *dumbbell chart* draws both points and connects them, so the gap itself becomes the message.
+
+**ggalt** [@rudis2026] gives us `geom_lollipop()` and `geom_dumbbell()` for exactly these jobs. We'll build up in three steps, all on the Helsinki temperature data: a plain lollipop of 2024's monthly means, the same months measured as anomalies against the previous two decades, and finally a dumbbell comparing two years twenty years apart.
+
+#### Viz #14: Helsinki temperatures, part VI - ggalt {#sec-viz-14-helsinki-temperatures-part-vi-ggalt}
+
+The lollipops use 2024, but the second one needs something to compare against. We first build a per-month baseline from every prior year on record (2000–2023), then average 2024 by month and attach that baseline, so the **anomaly** column holds each month's departure from its own historical normal. Both lollipop charts draw from this one tibble. The first uses **temp_avg**, the second, anomaly.
+
+```{r}
+#| message: false
+#| warning: false
+
+library(dplyr)
+
+temperature_baseline <- temperature_hki %>%
+  filter(year < 2024) %>%
+  summarize(
+    temp_base = mean(avg_temperature_celsius),
+    .by       = month
+  )
+
+temperature_lollipop <- temperature_hki %>%
+  filter(year == 2024) %>%
+  summarize(
+    temp_avg = mean(avg_temperature_celsius),
+    .by      = month
+  ) %>%
+  left_join(temperature_baseline, by = "month") %>%
+  mutate(
+    temp_anomaly = temp_avg - temp_base,
+    month        = factor(month.abb[month], levels = month.abb)
+  )
+```
+
+```{r}
+#| echo:    false
+#| message: false
+#| warning: false
+#| results: asis
+
+library(rmarkdown)
+
+temperature_lollipop %>%
+  paged_table()
+```
+
+As we can see, BLAH BLAH BLAH...
+
+Let's take a look at the first two charts, BLAH BLAH BLAH...
+
+Let's start with the simplest thing the `geom_lollipop()`can do: one dot per month, placed at its average temperature, with a stem dropping to zero. Because we're plotting actual temperatures, that baseline is literally freezing. The winter months hang below it while summer reaches up toward twenty.
+
+```{r}
+#| message: false
+#| warning: false
+
+library(ggalt)
+library(ggplot2)
+
+ggplot(
+  temperature_lollipop, 
+  aes(month, temp_avg)
+  ) +
+  geom_lollipop()
+```
+
+BLAH, BLAH, BLAH...
+
+```{r}
+#| message: false
+#| warning: false
+
+library(scales)
+
+ggplot(temperature_lollipop, aes(month, temp_avg, color = temp_avg >= 0)) +
+  geom_lollipop(point.size = 3) +
+  scale_color_distiller(palette = "RdBu", direction = -1, guide = "none") + 
+  scale_y_continuous(labels = label_number(suffix = " °C")) +
+  labs(
+    title    = "Average monthly temperature in Helsinki for 2024",
+    subtitle = "A lollipop marks each month's mean",
+    x        = NULL,
+    y        = NULL,
+    caption  = "Data: Finnish Meteorological Institute open data, weather observations (CC BY 4.0) | Visualization: Antti Rask"
+  ) +
+  theme_minimal() +
+  theme(
+    panel.grid.major.x  = element_blank(),
+    panel.grid.minor    = element_blank(),
+    plot.title          = element_text(face = "bold"),
+    plot.subtitle       = element_text(margin = margin(b = 20)),
+    plot.caption        = element_text(
+      hjust  = 0.5,
+      color  = "#777777",
+      size   = 9, 
+      margin = margin(t = 15)
+    ),
+    plot.title.position = "plot"
+  )
+```
+
+BLAH, BLAH, BLAH...
+
+Now the more interesting question: not how warm each month *was*, but how warm it was *compared with the past*. Subtracting each month's 2000-2023 average turns the chart into a record of where 2024 ran warmer or cooler than its own history. Zero is the long-term normal.
+
+```{r}
+#| message: false
+#| warning: false
+
+ggplot(
+  temperature_lollipop,
+  aes(month, temp_anomaly)) +
+  geom_hline(yintercept = 0) +
+  geom_lollipop()
+```
+
+And with the finalized version, red months beat the long-term normal, blue months fell short. As before, leaving `point.color` unset lets the dot inherit the color mapped in `aes()`, so stem and dot move together.
+
+```{r}
+temperature_lollipop %>%
+  ggplot(aes(month, temp_anomaly, color = temp_anomaly >= 0)) +
+  geom_hline(
+    yintercept = 0,
+    color     = "grey60",
+    linewidth  = 0.25
+  ) +
+  geom_lollipop(point.size = 3) +
+  scale_color_distiller(palette = "RdBu", direction = -1, guide = "none") +
+  scale_y_continuous(
+    labels = label_number(suffix = " °C")
+  ) +
+  labs(
+    title    = "Most months in 2024 were warmer than the same months during the previous two decades",
+    subtitle = "Each month against its 2000–2023 average",
+    x        = NULL,
+    y        = NULL,
+    caption  = "Data: Finnish Meteorological Institute open data, weather observations (CC BY 4.0) | Visualization: Antti Rask"
+  ) +
+  theme_minimal() +
+  theme(
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor   = element_blank(),
+    plot.title         = element_text(face = "bold"),
+    plot.subtitle      = element_text(margin = margin(b = 10)),
+    plot.caption        = element_text(
+      hjust  = 0.5,
+      color  = "#777777",
+      size   = 9, 
+      margin = margin(t = 15)
+    ),
+    plot.title.position = "plot"
+  )
+```
+
+BLAH, BLAH, BLAH...
+
+The lollipop shows one moment; the dumbbell shows movement. Each month now gets two dots: its 2004 mean and its 2024 mean, joined by a segment whose length *is* the change.
+
+To get the right data, we pivot to a wide shape, one column per year, keeping the months in calendar order.
+
+```{r}
+#| message: false
+#| warning: false
+
+library(tidyr)
+
+temperature_dumbbell <- temperature_hki %>%
+  filter(year %in% c(2004, 2024)) %>%
+  summarize(
+    temp_avg = mean(avg_temperature_celsius),
+    .by      = c(year, month)
+  ) %>%
+  pivot_wider(
+    names_from   = "year",
+    names_prefix = "temp_avg_",
+    values_from  = "temp_avg"
+  ) %>%
+  mutate(
+    month = factor(month.abb[month], levels = month.abb)
+  )
+```
+
+```{r}
+#| echo:    false
+#| message: false
+#| warning: false
+#| results: asis
+#| 
+temperature_dumbbell %>%
+  paged_table()
+```
+
+We keep the months in calendar order rather than reordering by value: with a lollipop a ranking can illuminate, but a dumbbell's story is the gap, and calendar order lets the eye scan the seasons and notice which months have the widest gap.
+
+```{r}
+#| message: false
+#| warning: false
+
+ggplot(
+  temperature_dumbbell,
+    aes(
+      x     = temp_avg_2004,
+      xend  = temp_avg_2024,
+      y     = month,
+      group = month
+    )
+  ) +
+  geom_dumbbell() +
+  geom_point(aes(x = temp_avg_2004, color = "2004"), size = 3) +
+  geom_point(aes(x = temp_avg_2024, color = "2024"), size = 3) +
+  labs(
+    color = NULL,
+    x     = NULL
+  )
+```
+
+The two years live in the subtitle as colored text via ggtext, which means we can keep the plot itself free of a legend.
+
+```{r}
+#| message: false
+#| warning: false
+
+library(ggtext)
+
+ggplot(
+  temperature_dumbbell,
+  aes(
+    x     = temp_avg_2004,
+    xend  = temp_avg_2024,
+    y     = month,
+    group = month
+    )
+  ) +
+  geom_dumbbell(
+    color          = "#a3c4dc",
+    colour_xend    = "#0e668b",
+    dot_guide      = TRUE,
+    dot_guide_size = 0.15,
+    size           = 1.5,
+    size_x         = 3,
+    size_xend      = 3
+  ) +
+  scale_x_continuous(
+    labels = label_number(suffix = " °C")
+  ) +
+  scale_y_discrete(
+    limits = rev(month.abb)
+  ) +
+  labs(
+    title    = "Change of the average monthly temperature in Helsinki",
+    subtitle = "From <span style = 'color:#a3c4dc;'>**2004**</span> to <span style = 'color:#0e668b;'>**2024**</span>",
+    caption  = "Data: Finnish Meteorological Institute open data, weather observations (CC BY 4.0) | Visualization: Antti Rask",
+    x        = NULL,
+    y        = NULL
+  ) +
+  theme_minimal() +
+  theme(
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor   = element_blank(),
+    plot.title         = element_text(face = "bold"),
+    plot.subtitle      = element_markdown(),
+    plot.caption       = element_text(
+      hjust  = 0.5,
+      color  = "#777777",
+      size   = 9, 
+      margin = margin(t = 15)
+    ),
+    plot.margin         = margin(r = 10),
+    plot.title.position = "plot"
+  )
+```
+
+Both geoms are conveniences worth seeing through: a lollipop is a `geom_segment()` to zero plus a `geom_point()`, and a dumbbell is a segment between two values with a dot at each end. You could build either from base ggplot2 if you'd rather not take the dependency.
 
 ### Line chart (with neon glow or shadow effects) {#sec-line-chart-with-neon-glow-or-shadow-effects}
 
