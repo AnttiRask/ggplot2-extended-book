@@ -899,11 +899,11 @@ pisa_2022_statements %>%
 
 There is a **country** column, but the other columns each have answers to one of the statements. They all have a technical ID as a name (e.g., **ST339Q04JA**) and these possible values:
 
--   Strongly disagree
--   Disagree
--   Agree
--   Strongly agree
--   NA
+- Strongly disagree
+- Disagree
+- Agree
+- Strongly agree
+- NA
 
 We can already take a look at what this data would look like visualized with one function, `gglikert()`. We don't want to include the country column yet.
 
@@ -1163,9 +1163,9 @@ plot_marimekko
 
 You get the idea. Next, let’s see what we need to do to get this into a more presentable state.
 
--   Add text labels to show the counts of the different tiles (except the small ones)
--   Change the color palette with ggthemes
--   Use a custom theme, `theme_marimekko()` that comes with marimekko
+- Add text labels to show the counts of the different tiles (except the small ones)
+- Change the color palette with ggthemes
+- Use a custom theme, `theme_marimekko()` that comes with marimekko
 
 First, let's take a look at those text labels. Marimekko comes with a `geom_marimekko_text()` function. It reads tile positions from the preceding `geom_marimekko()` layer. You only need to provide the **label** aesthetic. This is much simpler than the old approach. Before, you had to extract tile coordinates manually from the built plot object.
 
@@ -2940,8 +2940,8 @@ ggplot(
     )
   ) +
   geom_dumbbell(
-    color          = "#a3c4dc",
-    colour_xend    = "#0e668b",
+    color          = "#9FD4D6",
+    colour_xend    = "#0F6E70",
     dot_guide      = TRUE,
     dot_guide_size = 0.15,
     size           = 1.5,
@@ -2955,8 +2955,8 @@ ggplot(
     limits = rev(month.abb)
   ) +
   labs(
-    title    = "Change of the average monthly temperature in Helsinki",
-    subtitle = "From <span style = 'color:#a3c4dc;'>**2004**</span> to <span style = 'color:#0e668b;'>**2024**</span>",
+    title    = "Most of the average monthly temperatures in Helsinki have risen in 20 years",
+    subtitle = "From <span style = 'color:#9FD4D6;'>**2004**</span> to <span style = 'color:#0F6E70;'>**2024**</span>",
     caption  = "Data: Finnish Meteorological Institute open data, weather observations (CC BY 4.0) | Visualization: Antti Rask",
     x        = NULL,
     y        = NULL
@@ -2973,7 +2973,7 @@ ggplot(
       size   = 9, 
       margin = margin(t = 15)
     ),
-    plot.margin         = margin(10, 10, 10, 10),
+    plot.margin         = margin(15, 15, 15, 15),
     plot.title.position = "plot"
   )
 ```
