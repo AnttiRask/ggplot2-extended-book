@@ -2973,7 +2973,7 @@ ggplot(
       size   = 9, 
       margin = margin(t = 15)
     ),
-    plot.margin         = margin(r = 10),
+    plot.margin         = margin(10, 10, 10, 10),
     plot.title.position = "plot"
   )
 ```
